@@ -22,10 +22,10 @@ import {
 import { useEffect, useState } from 'react'
 
 const tools = [
-  { icon: CreditCard, kicker: 'Cards', title: 'Credit Card Finder', text: 'Compare cards by cashback, rewards, annual fee and your actual spending pattern.', tag: 'Coming soon' },
-  { icon: Calculator, kicker: 'Calculator', title: 'Cashback Calculator', text: 'See your effective reward rate after caps, exclusions and annual fees.', tag: 'Build 01' },
-  { icon: Fuel, kicker: 'Fuel', title: 'Fuel Card Optimizer', text: 'Compare surcharge waiver, reward points and fuel-app benefits in one view.', tag: 'Build 02' },
-  { icon: LineChart, kicker: 'Investing', title: 'MF Portfolio Tracker', text: 'Track portfolio changes across mutual-fund factsheets month by month.', tag: 'Build 03' },
+  { icon: CreditCard, kicker: 'Cards', title: 'Credit Card Finder', text: 'Compare cards by cashback, rewards, annual fee and your actual spending pattern.', tag: 'Coming soon', href: '#' },
+  { icon: Calculator, kicker: 'Calculator', title: 'Cashback Calculator', text: 'See your effective reward rate after caps, exclusions and annual fees.', tag: 'Live', href: '/tools/cashback-calculator' },
+  { icon: Fuel, kicker: 'Fuel', title: 'Fuel Card Optimizer', text: 'Compare surcharge waiver, reward points and fuel-app benefits in one view.', tag: 'Build 02', href: '#' },
+  { icon: LineChart, kicker: 'Investing', title: 'MF Portfolio Tracker', text: 'Track portfolio changes across mutual-fund factsheets month by month.', tag: 'Build 03', href: '#' },
 ]
 
 const guides = [
@@ -132,7 +132,7 @@ export default function Home() {
               <span className="kicker">0{i + 1} / {t.kicker}</span>
               <h3>{t.title}</h3>
               <p>{t.text}</p>
-              <button className="ghost">View project <ArrowUpRight size={16}/></button>
+              <a className="ghost" href={t.href}>View project <ArrowUpRight size={16}/></a>
             </article>
           ))}
         </div>
