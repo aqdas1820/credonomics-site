@@ -1,5 +1,5 @@
 'use client'
-import { ArrowUpRight, Calculator, CreditCard, Fuel, LineChart, Mail, Menu, Moon, Search, ShieldCheck, Sparkles, Sun, X } from 'lucide-react'
+import { ArrowUpRight, Calculator, CreditCard, Fuel, LineChart, Mail, Menu, Moon, Phone, ShieldCheck, Sparkles, Sun, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 const tools = [
@@ -21,9 +21,12 @@ export default function Home(){
   useEffect(()=>{ document.documentElement.dataset.theme = dark ? 'dark':'light' },[dark])
   return <main>
     <header className="nav wrap">
-      <a className="brand" href="#top"><span className="brandMark">C</span><span>CredoNomics</span></a>
+      <a className="brand brandLogo" href="#top" aria-label="CredoNomics home">
+        <img src="/credonomics-logo.png" alt="CredoNomics Investment Solutions" />
+      </a>
       <nav className={open?'links show':'links'}>
         <a href="#tools" onClick={()=>setOpen(false)}>Tools</a><a href="#research" onClick={()=>setOpen(false)}>Research</a><a href="#about" onClick={()=>setOpen(false)}>About</a>
+        <a className="phoneLink" href="tel:02562455327"><Phone size={15}/> 02562 455327</a>
         <a className="pill small" href="mailto:hello@credonomics.in">Contact <ArrowUpRight size={15}/></a>
       </nav>
       <div className="navActions">
@@ -33,10 +36,19 @@ export default function Home(){
     </header>
 
     <section id="top" className="hero wrap">
-      <div className="eyebrow"><Sparkles size={15}/> Independent finance tools & research</div>
-      <h1>Make smarter decisions<br/>with your money.</h1>
-      <p className="lede">CredoNomics breaks down credit cards, cashback, banking and investing into clear, usable decisions — without the noise.</p>
-      <div className="heroCtas"><a className="pill" href="#tools">Explore tools <ArrowUpRight size={17}/></a><a className="textLink" href="#research">Read the research <ArrowUpRight size={16}/></a></div>
+      <div className="heroLayout">
+        <div className="heroCopy">
+          <div className="eyebrow"><Sparkles size={15}/> Independent finance tools & research</div>
+          <h1>Make smarter decisions<br/>with your money.</h1>
+          <p className="lede">CredoNomics breaks down credit cards, cashback, banking and investing into clear, usable decisions — without the noise.</p>
+          <div className="heroCtas"><a className="pill" href="#tools">Explore tools <ArrowUpRight size={17}/></a><a className="textLink" href="#research">Read the research <ArrowUpRight size={16}/></a></div>
+        </div>
+        <div className="heroBrand" aria-label="CredoNomics Investment Solutions">
+          <div className="logoGlow"></div>
+          <img src="/credonomics-logo.png" alt="CredoNomics Investment Solutions — Learn, Invest, Grow" />
+          <div className="brandNote">Learn <span>•</span> Invest <span>•</span> Grow</div>
+        </div>
+      </div>
       <div className="miniGrid">
         <div><b>India-first</b><span>Built around Indian cards, banks and offers.</span></div>
         <div><b>Numbers-first</b><span>Effective returns, caps, fees and real outcomes.</span></div>
@@ -46,7 +58,7 @@ export default function Home(){
 
     <section id="tools" className="section wrap">
       <div className="sectionHead"><div><span className="overline">Products</span><h2>Tools I’m building</h2></div><p>Simple utilities for decisions that are usually buried in terms, PDFs and reward tables.</p></div>
-      <div className="cards">{tools.map((t,i)=><article className="card" key={t.title}>
+      <div className="cards">{tools.map((t)=><article className="card" key={t.title}>
         <div className="cardTop"><span className="toolIcon"><t.icon size={21}/></span><span className="tag">{t.tag}</span></div>
         <span className="kicker">{t.kicker}</span><h3>{t.title}</h3><p>{t.text}</p><button className="ghost">View project <ArrowUpRight size={16}/></button>
       </article>)}</div>
@@ -67,10 +79,10 @@ export default function Home(){
     </section>
 
     <section className="wrap newsletter">
-      <div><span className="overline">Stay in the loop</span><h2>New tools. Better comparisons. Less guesswork.</h2></div>
+      <div><span className="overline">Stay in the loop</span><h2>New tools. Better comparisons. Less guesswork.</h2><a className="newsletterPhone" href="tel:02562455327"><Phone size={17}/> 02562 455327</a></div>
       <a className="pill inverted" href="mailto:hello@credonomics.in?subject=CredoNomics updates"><Mail size={17}/> Get updates</a>
     </section>
 
-    <footer className="footer wrap"><div className="brand"><span className="brandMark">C</span><span>CredoNomics</span></div><p>Independent research. Not financial advice.</p><div><a href="#">YouTube</a><a href="#">X / Twitter</a><a href="mailto:hello@credonomics.in">Email</a></div></footer>
+    <footer className="footer wrap"><div className="footerBrand"><img src="/credonomics-logo.png" alt="CredoNomics"/></div><p>Independent research. Not financial advice.</p><div><a href="tel:02562455327">02562 455327</a><a href="#">YouTube</a><a href="#">X / Twitter</a><a href="mailto:hello@credonomics.in">Email</a></div></footer>
   </main>
 }
