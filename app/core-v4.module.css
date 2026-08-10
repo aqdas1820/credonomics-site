@@ -108,15 +108,25 @@
   min-width:max-content;
 }
 .brand img{
-  width:38px;
-  height:38px;
+  width:44px;
+  height:44px;
   object-fit:contain;
+  display:block;
   background:transparent !important;
   border:none !important;
   border-radius:0 !important;
   padding:0 !important;
+  margin:0 !important;
   box-shadow:none !important;
   filter:none !important;
+  outline:none !important;
+}
+
+@media(max-width:620px){
+  .brand img{
+    width:40px;
+    height:40px;
+  }
 }
 .brandWords{display:grid;gap:2px}
 .brandWords strong{
