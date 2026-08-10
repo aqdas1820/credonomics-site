@@ -159,7 +159,7 @@ export default function Home() {
           <article className={styles.contentCard}>
             <span className={styles.iconTile}><BarChart3 size={21}/></span>
             <h3>Source-backed database</h3>
-            <p>The public registry only accepts card records carrying official sources and a verification date.</p>
+            <p>Real-card rankings now use normalized official-source terms; the automated catalogue is only a discovery/update layer.</p>
             <a className={styles.textLink} href="/cards">Visit card intelligence <ArrowRight size={14}/></a>
           </article>
         </div>

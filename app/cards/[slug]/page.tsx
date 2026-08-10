@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { CalendarCheck, ExternalLink, Layers3, ShieldCheck } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
 import CategoryComparator from '../components/CategoryComparator'
+import RealCardRanking from '../components/RealCardRanking'
 import { cardCategories, cardCategoryMap, isCardCategorySlug } from '../../data/card-categories'
 import { verifiedCards } from '../../data/card-database'
 import styles from '../../core-v4.module.css'
@@ -51,7 +52,14 @@ export default function Page({ params }: { params: { slug: string } }) {
         </section>
 
         <section className={`${styles.wrap} ${styles.pageBody}`}>
-          <CategoryComparator categorySlug={category.slug}/>
+          <RealCardRanking categorySlug={category.slug}/>
+          <section className={styles.researchArticleSection}>
+            <div className={styles.sectionHead}>
+              <div><span className={styles.overline}>Custom terms sandbox</span><h2>Want to compare a card that is not normalized yet?</h2></div>
+              <p>Use the calculator below to enter the card terms manually. The verified real-card ranking above remains the primary comparison.</p>
+            </div>
+            <CategoryComparator categorySlug={category.slug}/>
+          </section>
 
           <section className={styles.researchArticleSection}>
             <div className={styles.sectionHead}>

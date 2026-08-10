@@ -1,7 +1,9 @@
 import { ArrowRight, BarChart3, Database, FileCheck2, Gauge, GitCompareArrows, Layers3, ShieldCheck } from 'lucide-react'
 import SiteFrame from '../components/SiteFrame'
 import { cardCategories } from '../data/card-categories'
-import { cardDatabaseStatus, verifiedCards } from '../data/card-database'
+import { autoCardCatalogMeta } from '../data/auto-card-utils'
+import { verifiedRealCards, realCardsForCategory } from '../data/verified-real-cards'
+import { verifiedCards } from '../data/card-database'
 import styles from '../core-v4.module.css'
 import local from './cards.module.css'
 
@@ -31,8 +33,8 @@ export default function CardsPage() {
 
       <section className={`${styles.wrap} ${styles.pageBody} ${local.shell}`}>
         <div className={local.statGrid}>
-          <article><Database size={19}/><small>Public verified records</small><strong>{cardDatabaseStatus.publicVerifiedRecords}</strong><p>No real card is published until current official sources are checked.</p></article>
-          <article><BarChart3 size={19}/><small>Category engines</small><strong>{cardCategories.length}</strong><p>Different category math for different product use-cases.</p></article>
+          <article><Database size={19}/><small>Normalized real cards</small><strong>{verifiedRealCards.length}</strong><p>Official-source card records currently ready for live annual-value ranking.</p></article>
+          <article><BarChart3 size={19}/><small>Discovery catalogue</small><strong>{autoCardCatalogMeta.recordCount}</strong><p>Automatically detected candidates used to expand and monitor the verified database.</p></article>
           <article><Gauge size={19}/><small>Transparent ranking</small><strong>100</strong><p>Category Fit Score with visible component-level points.</p></article>
         </div>
 
@@ -48,7 +50,8 @@ export default function CardsPage() {
                 <span>0{index + 1}</span>
                 <h3>{category.shortTitle}</h3>
                 <p>{category.description}</p>
-                <b>Compare {category.shortTitle} →</b>
+                <small>{realCardsForCategory(category.slug).length} real cards ready to rank</small>
+                <b>View Top 15 + compare →</b>
               </a>
             ))}
           </div>
@@ -69,10 +72,9 @@ export default function CardsPage() {
           {verifiedCards.length === 0 ? (
             <div className={local.emptyRegistry}>
               <FileCheck2 size={25}/>
-              <h3>Engine first. Verified catalogue second.</h3>
+              <h3>Verified rankings first. Discovery automation second.</h3>
               <p>
-                All category comparison engines are functional with user-entered terms.
-                Real Indian card records will appear only after current official issuer documentation is verified.
+                Real Indian card records now power the live rankings. The automated crawler remains a background discovery/update checker for cards that still need normalization.
               </p>
             </div>
           ) : (

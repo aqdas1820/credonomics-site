@@ -25,3 +25,5 @@
 @media(max-width:1000px){.categoryGrid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:760px){.categoryGrid{grid-template-columns:repeat(2,1fr)}.methodGridV8{grid-template-columns:1fr}}
 @media(max-width:500px){.categoryGrid{grid-template-columns:1fr}}
+
+.categoryGrid a>small{margin-top:11px;color:var(--teal);font-size:8px;font-weight:800}

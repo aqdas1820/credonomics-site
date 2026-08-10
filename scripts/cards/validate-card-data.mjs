@@ -3,7 +3,11 @@ import path from 'node:path'
 
 const dir = path.join(process.cwd(), 'public', 'data', 'cards')
 const files = fs.existsSync(dir)
-  ? fs.readdirSync(dir).filter((name) => name.endsWith('.json') && !name.startsWith('_'))
+  ? fs.readdirSync(dir).filter((name) =>
+      name.endsWith('.json') &&
+      !name.startsWith('_') &&
+      !name.startsWith('auto-')
+    )
   : []
 
 let failed = false
@@ -43,7 +47,7 @@ for (const file of files) {
 }
 
 if (files.length === 0) {
-  console.log('No production card JSON records found. Template excluded. Validation passed.')
+  console.log('No manual production card JSON records found. Templates/generated catalogues excluded. Validation passed.')
 }
 
 if (failed) process.exit(1)
