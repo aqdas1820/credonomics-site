@@ -108,10 +108,15 @@
   min-width:max-content;
 }
 .brand img{
-  width:35px;
-  height:35px;
+  width:38px;
+  height:38px;
   object-fit:contain;
-  filter:drop-shadow(0 7px 14px rgba(27,115,166,.14));
+  background:transparent !important;
+  border:none !important;
+  border-radius:0 !important;
+  padding:0 !important;
+  box-shadow:none !important;
+  filter:none !important;
 }
 .brandWords{display:grid;gap:2px}
 .brandWords strong{
@@ -877,3 +882,384 @@
     transition-duration:.001ms!important;
   }
 }
+
+/* === CREDONOMICS_READABILITY_PATCH_BEGIN === */
+/* =========================================================
+   CredoNomics V4 — Readability & Typography Upgrade
+   Makes public-site text clearer without changing layout logic
+   ========================================================= */
+
+/* Top bar + header */
+.utilityBar{
+  min-height: 38px;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.brandWords strong{
+  font-size: 15px;
+}
+
+.brandWords small{
+  font-size: 9.5px;
+  line-height: 1.35;
+}
+
+.navLinks a{
+  font-size: 14px;
+}
+
+.socialMini{
+  font-size: 10.5px;
+}
+
+/* Hero */
+.eyebrow,
+.pageKicker{
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.heroLead,
+.pageHeroLead{
+  font-size: 19px;
+  line-height: 1.72;
+}
+
+.trustRow span{
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+/* Decision engine */
+.engineHeader small{
+  font-size: 9px;
+}
+
+.engineHeader b{
+  font-size: 13px;
+}
+
+.engineStatus{
+  font-size: 9px;
+}
+
+.engineBody > small{
+  font-size: 9px;
+}
+
+.engineBody h2{
+  font-size: 28px;
+}
+
+.engineCell small{
+  font-size: 9px;
+}
+
+.engineCell p{
+  font-size: 9px;
+}
+
+.engineCell b{
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.engineOutput span{
+  font-size: 10px;
+}
+
+.engineOutput b{
+  font-size: 12px;
+}
+
+.engineFooter b{
+  font-size: 10px;
+}
+
+.engineFooter small{
+  font-size: 8.5px;
+  line-height: 1.4;
+}
+
+/* Proof strip */
+.proofStrip strong{
+  font-size: 13px;
+}
+
+.proofStrip span{
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+/* Section headings + text */
+.overline{
+  font-size: 10px;
+}
+
+.sectionHead > p,
+.splitIntro > p,
+.disclosurePanel > p{
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+/* Tool cards */
+.statusPill{
+  font-size: 9px;
+}
+
+.cardLabel{
+  font-size: 9px;
+}
+
+.toolCard h3{
+  font-size: 24px;
+}
+
+.toolCard p{
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.cardFooter{
+  font-size: 10.5px;
+}
+
+/* Methodology cards */
+.textLink{
+  font-size: 12px;
+}
+
+.stepCardTop span{
+  font-size: 10px;
+}
+
+.stepCard h3{
+  font-size: 20px;
+}
+
+.stepCard p{
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+/* Principle band */
+.principleBand small{
+  font-size: 9px;
+}
+
+.principleBand h2{
+  font-size: 27px;
+}
+
+.principleBand > p{
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+/* Research cards */
+.contentCard h3{
+  font-size: 22px;
+}
+
+.contentCard p{
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+.contentCard li{
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+/* Trust / disclosures */
+.disclosurePoints b{
+  font-size: 11px;
+}
+
+.disclosurePoints small{
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.contactPanel h3{
+  font-size: 29px;
+}
+
+.contactPanel > p{
+  font-size: 12px;
+}
+
+.contactItem small{
+  font-size: 9px;
+}
+
+.contactItem b{
+  font-size: 12px;
+}
+
+/* Inner pages */
+.breadcrumbs{
+  font-size: 10px;
+}
+
+.sideTitle p{
+  font-size: 13px;
+  line-height: 1.72;
+}
+
+.infoCard h3{
+  font-size: 19px;
+}
+
+.infoCard p{
+  font-size: 12.5px;
+  line-height: 1.72;
+}
+
+.infoCard li{
+  font-size: 11px;
+}
+
+.policyCard h2{
+  font-size: 20px;
+}
+
+.policyCard p{
+  font-size: 12.5px;
+  line-height: 1.72;
+}
+
+.notice h2{
+  font-size: 19px;
+}
+
+.notice p{
+  font-size: 11.5px;
+  line-height: 1.7;
+}
+
+.formulaBox{
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.rankRow h3{
+  font-size: 13px;
+}
+
+.rankRow p{
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.contactCard small{
+  font-size: 9px;
+}
+
+.contactCard h2{
+  font-size: 20px;
+}
+
+.contactCard p{
+  font-size: 11px;
+}
+
+.contactCard strong{
+  font-size: 12px;
+}
+
+/* Footer */
+.footerIntro p{
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.footerColumn b{
+  font-size: 10px;
+}
+
+.footerColumn a{
+  font-size: 11px;
+}
+
+.footerBottom{
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+/* 404 */
+.notFoundCard small{
+  font-size: 10px;
+}
+
+.notFoundCard p{
+  font-size: 13px;
+}
+
+/* Slightly roomier desktop nav */
+@media(min-width: 831px){
+  .nav{
+    min-height: 78px;
+  }
+}
+
+/* Mobile readability */
+@media(max-width: 620px){
+  .utilityBar{
+    font-size: 9.5px;
+    padding: 7px 12px;
+  }
+
+  .brandWords strong{
+    font-size: 12.5px;
+  }
+
+  .brandWords small{
+    font-size: 8px;
+  }
+
+  .navLinks a{
+    font-size: 15px;
+  }
+
+  .heroLead,
+  .pageHeroLead{
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .trustRow span{
+    font-size: 10px;
+  }
+
+  .sectionHead > p,
+  .splitIntro > p,
+  .disclosurePanel > p{
+    font-size: 14px;
+  }
+
+  .toolCard p,
+  .contentCard p,
+  .stepCard p,
+  .policyCard p,
+  .infoCard p{
+    font-size: 12.5px;
+  }
+
+  .contentCard li,
+  .infoCard li{
+    font-size: 10.5px;
+  }
+
+  .footerIntro p,
+  .footerColumn a{
+    font-size: 10.5px;
+  }
+
+  .footerBottom{
+    font-size: 9.5px;
+  }
+}
+/* === CREDONOMICS_READABILITY_PATCH_END === */
