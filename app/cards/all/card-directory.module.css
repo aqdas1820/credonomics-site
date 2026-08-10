@@ -1,0 +1,21 @@
+.directory{
+  --ink:#0a2035;--muted:#617488;--line:#dce6ee;--surface:#fff;--soft:#f4f8fb;--teal:#0ca6a3;--blue:#2867f0;
+  color:var(--ink)
+}
+:global(html[data-theme='dark']) .directory{--ink:#edf7ff;--muted:#9eb4c6;--line:#20394f;--surface:#0b1d2f;--soft:#10273b}
+.controls{padding:12px;display:grid;grid-template-columns:1.5fr .8fr .8fr;gap:8px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.search{min-height:42px;display:flex;align-items:center;gap:8px;padding:0 11px;border:1px solid var(--line);border-radius:9px;background:var(--soft)}.search svg{color:var(--muted)}.search input{width:100%;border:0;outline:0;background:transparent;color:var(--ink);font:inherit;font-size:11px}
+.controls select{height:42px;padding:0 10px;border:1px solid var(--line);border-radius:9px;background:var(--soft);color:var(--ink);font:inherit;font-size:10px}
+.summary{padding:11px 2px;color:var(--muted);font-size:9px}.summary b{color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.card{min-height:220px;padding:17px;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;background:var(--surface);transition:transform .18s ease,border-color .18s ease}.card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--teal) 45%,var(--line))}.card>small{color:var(--teal);font-size:8px;font-weight:850;text-transform:uppercase;letter-spacing:.07em}.card h2{margin:7px 0 10px;font-size:16px;line-height:1.25}.categories{display:flex;flex-wrap:wrap;gap:5px}.categories span{padding:4px 6px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:7px;background:var(--soft)}.meta{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:6px}.meta span{padding:8px;border:1px solid var(--line);border-radius:8px;color:var(--muted);font-size:7px}.meta b{display:block;margin-top:2px;color:var(--ink);font-size:8.5px}.card>strong{margin-top:auto;padding-top:14px;color:var(--blue);font-size:8.5px}.empty{padding:35px;text-align:center;border:1px dashed var(--line);border-radius:13px;color:var(--muted);font-size:10px}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.controls{grid-template-columns:1fr 1fr}.search{grid-column:1/-1}}
+@media(max-width:560px){.grid,.controls{grid-template-columns:1fr}.search{grid-column:auto}}
+
+
+/* CredoNomics V13 directory */
+.directory{--ink:#081827;--muted:#5e6d7b;--line:#d9e1e7;--surface:#fff;--soft:#f0f3f6;--teal:#00a79d;--blue:#1769ff}
+:global(html[data-theme='dark']) .directory{--ink:#f4f7fa;--muted:#9aa9b7;--line:#25303d;--surface:#0e141d;--soft:#121a25;--teal:#45d2c8;--blue:#6b9bff}
+.controls{padding:13px;border-radius:16px;box-shadow:0 8px 25px rgba(8,24,39,.025)}
+.card{min-height:235px;padding:19px;border-radius:18px;box-shadow:0 8px 25px rgba(8,24,39,.025)}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 45px rgba(8,24,39,.065)}
+.card h2{font-size:18px}

@@ -70,3 +70,21 @@
 .safetyGrid>div{padding:17px;border:1px solid var(--line,#dce6ee);border-radius:14px;background:var(--surface,#fff)}
 .safetyGrid svg{color:#0ca6a3}.safetyGrid b{display:block;margin-top:8px;font-size:11px}.safetyGrid p{margin:5px 0 0;color:#617488;font-size:10px;line-height:1.6}
 @media(max-width:620px){.safetyGrid{grid-template-columns:1fr}}
+
+
+/* CredoNomics V13 analyzer visual layer */
+.workspace{
+  --ink:#081827;--muted:#5e6d7b;--line:#d9e1e7;--surface:#fff;--soft:#f0f3f6;--blue:#1769ff;--teal:#00a79d;--navy:#081827;
+  gap:13px
+}
+:global(html[data-theme='dark']) .workspace{
+  --ink:#f4f7fa;--muted:#9aa9b7;--line:#25303d;--surface:#0e141d;--soft:#121a25;--blue:#6b9bff;--teal:#45d2c8;--navy:#070b11
+}
+.spendPanel,.cardsPanel,.resultsPanel{border-radius:20px;box-shadow:0 8px 28px rgba(8,24,39,.03)}
+.panelHead h2{font-size:25px}.panelHead>div>span{font-size:9px}
+.spendGrid label>span,.coreInputs label>span{font-size:10px}
+.spendGrid label>div,.coreInputs input,.ruleRow input{background:color-mix(in srgb,var(--soft) 55%,var(--surface))}
+.modelCard{border-radius:16px;background:color-mix(in srgb,var(--soft) 60%,var(--surface))}
+.rankCard{border-radius:18px;background:color-mix(in srgb,var(--soft) 55%,var(--surface))}
+.rankTop h3{font-size:20px}.netValue b{font-size:21px}
+.metricGrid b{font-size:11px}

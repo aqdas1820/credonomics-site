@@ -1,52 +1,64 @@
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
+import {
+  organizationId,
+  siteIdentity,
+  websiteId,
+} from './data/site-identity'
 
 const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.credonomics.in'),
+  metadataBase: new URL(siteIdentity.canonicalUrl),
   title: {
-    default: 'CredoNomics — Financial Research & Decision Tools for India',
+    default: 'CredoNomics — Indian Credit Card Intelligence & Financial Tools',
     template: '%s | CredoNomics',
   },
   description:
-    'Independent India-focused financial research and decision tools for credit cards, cashback, fuel economics and banking product terms.',
-  applicationName: 'CredoNomics',
-  authors: [{ name: 'CredoNomics Investment Solutions' }],
-  creator: 'CredoNomics Investment Solutions',
-  publisher: 'CredoNomics Investment Solutions',
+    'Compare real Indian credit cards by spending profile, annual fees, reward caps and source-linked issuer terms.',
+  applicationName: siteIdentity.name,
+  authors: [{ name: siteIdentity.name, url: siteIdentity.canonicalUrl }],
+  creator: siteIdentity.name,
+  publisher: siteIdentity.name,
   keywords: [
     'CredoNomics',
-    'financial tools India',
-    'credit card finder India',
-    'cashback calculator India',
-    'fuel card calculator India',
+    'CredoNomics India',
+    'credit card comparison India',
+    'best credit card calculator India',
+    'cashback credit cards India',
+    'fuel credit cards India',
+    'travel credit cards India',
+    'UPI credit cards India',
+    'forex credit cards India',
     'credit card rewards calculator',
+    'credit card annual fee calculator',
     'financial product research India',
-    'cashback cap calculator',
-    'fuel surcharge waiver calculator India',
-    'credit card annual fee break even calculator',
-    'reward point value calculator',
-    'banking product comparison India',
   ],
   alternates: { canonical: '/' },
   icons: {
-    icon: '/credonomics-mark.png',
-    apple: '/credonomics-mark.png',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon-96.png', sizes: '96x96', type: 'image/png' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
   openGraph: {
-    title: 'CredoNomics — Financial Research & Decision Tools for India',
+    title: 'CredoNomics — Indian Credit Card Intelligence & Financial Tools',
     description:
-      'Understand the fine print and quantify the real value of credit cards, cashback, fuel and banking products.',
-    url: 'https://www.credonomics.in',
-    siteName: 'CredoNomics',
+      'Compare real Indian credit cards using annual net value, category-specific calculations and source-linked issuer terms.',
+    url: siteIdentity.canonicalUrl,
+    siteName: siteIdentity.name,
     locale: 'en_IN',
     type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'CredoNomics' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CredoNomics — Financial Research & Decision Tools',
-    description: 'India-focused financial research and calculators.',
+    title: 'CredoNomics — Indian Credit Card Intelligence',
+    description:
+      'Real Indian credit-card rankings, category comparisons and source-linked issuer research.',
+    images: ['/twitter-image'],
   },
   robots: {
     index: true,
@@ -74,30 +86,52 @@ export const viewport: Viewport = {
   ],
 }
 
-const organizationSchema = {
+const entityGraph = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'CredoNomics Investment Solutions',
-  alternateName: 'CredoNomics',
-  url: 'https://www.credonomics.in',
-  logo: 'https://www.credonomics.in/credonomics-mark.png',
-  sameAs: ['https://www.instagram.com/credonomics.in/'],
-  contactPoint: {
-    '@type': 'ContactPoint',
-    telephone: '+91-2562-455327',
-    email: 'hello@credonomics.in',
-    contactType: 'customer support',
-    areaServed: 'IN',
-    availableLanguage: ['en'],
-  },
-}
-
-const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'CredoNomics',
-  url: 'https://www.credonomics.in',
-  description: 'India-focused financial research and decision tools.',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': organizationId,
+      name: siteIdentity.name,
+      alternateName: siteIdentity.alternateName,
+      url: siteIdentity.canonicalUrl,
+      description: siteIdentity.description,
+      logo: {
+        '@type': 'ImageObject',
+        url: siteIdentity.logoUrl,
+        contentUrl: siteIdentity.logoUrl,
+        width: 512,
+        height: 512,
+      },
+      email: siteIdentity.email,
+      telephone: siteIdentity.phoneInternational,
+      areaServed: {
+        '@type': 'Country',
+        name: 'India',
+      },
+      sameAs: [siteIdentity.instagram],
+      knowsAbout: [
+        'Indian credit cards',
+        'credit card rewards',
+        'cashback',
+        'fuel credit cards',
+        'travel credit cards',
+        'UPI credit cards',
+        'foreign exchange markup',
+        'financial product comparison',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': websiteId,
+      url: siteIdentity.canonicalUrl,
+      name: siteIdentity.name,
+      alternateName: siteIdentity.alternateName,
+      description: siteIdentity.description,
+      publisher: { '@id': organizationId },
+      inLanguage: 'en-IN',
+    },
+  ],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -107,11 +141,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(entityGraph) }}
         />
       </body>
     </html>

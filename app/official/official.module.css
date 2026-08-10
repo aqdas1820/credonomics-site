@@ -1,0 +1,18 @@
+.shell{
+  --ink:#0a2035;--muted:#617488;--line:#dce6ee;--surface:#fff;--soft:#f4f8fb;--teal:#0ca6a3;--blue:#2867f0;
+  color:var(--ink)
+}
+:global(html[data-theme='dark']) .shell{--ink:#edf7ff;--muted:#9eb4c6;--line:#20394f;--surface:#0b1d2f;--soft:#10273b}
+.identityCard{padding:22px;display:flex;align-items:center;gap:17px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+.identityCard img{width:68px;height:68px;object-fit:contain}.identityCard small{color:var(--teal);font-size:8px;font-weight:850;text-transform:uppercase;letter-spacing:.09em}.identityCard h2{margin:4px 0 4px;font-size:25px}.identityCard p{margin:0;color:var(--muted);font-size:11px}
+.channelGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}.channelGrid a{min-height:145px;padding:18px;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:15px;background:var(--surface)}.channelGrid svg{color:var(--teal)}.channelGrid small{margin-top:14px;color:var(--muted);font-size:8px;text-transform:uppercase;letter-spacing:.07em}.channelGrid strong{margin-top:4px;font-size:15px}.channelGrid span{margin-top:auto;padding-top:11px;display:flex;align-items:center;gap:5px;color:var(--blue);font-size:8px;font-weight:750}
+.disambiguation{margin-top:12px;padding:17px;display:flex;gap:10px;border:1px solid var(--line);border-radius:15px;background:var(--soft)}.disambiguation svg{min-width:21px;color:var(--teal)}.disambiguation h2{margin:0;font-size:14px}.disambiguation p{margin:5px 0 0;color:var(--muted);font-size:10px;line-height:1.65}
+@media(max-width:640px){.channelGrid{grid-template-columns:1fr}}
+
+
+/* CredoNomics V13 official identity */
+.shell{--ink:#081827;--muted:#5e6d7b;--line:#d9e1e7;--surface:#fff;--soft:#f0f3f6;--teal:#00a79d;--blue:#1769ff}
+:global(html[data-theme='dark']) .shell{--ink:#f4f7fa;--muted:#9aa9b7;--line:#25303d;--surface:#0e141d;--soft:#121a25}
+.identityCard{padding:25px;border-radius:20px;box-shadow:0 10px 30px rgba(8,24,39,.035)}
+.channelGrid a{min-height:155px;padding:20px;border-radius:18px}
+.disambiguation{padding:19px;border-radius:18px}

@@ -162,3 +162,14 @@
 }
 
 .methodGrid p b{color:var(--ink);font-size:11px}
+
+
+/* CredoNomics V13 trust surface */
+.shell{
+  --ink:#081827;--muted:#5e6d7b;--line:#d9e1e7;--surface:#fff;--surface2:#f0f3f6;--blue:#1769ff;--teal:#00a79d;
+  background:#f7f8fa
+}
+:global(html[data-theme='dark']) .shell{--ink:#f4f7fa;--muted:#9aa9b7;--line:#25303d;--surface:#0e141d;--surface2:#121a25;--blue:#6b9bff;--teal:#45d2c8;background:#070b11}
+.inner{max-width:1180px;padding:28px;border-radius:22px;box-shadow:0 14px 40px rgba(8,24,39,.05)}
+.heading h2{font-size:34px}.heading p{font-size:14px}
+.methodGrid>div{border-radius:13px}

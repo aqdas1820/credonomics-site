@@ -1,4 +1,4 @@
-import { BadgeIndianRupee, FileSearch, ShieldCheck, Target } from 'lucide-react'
+import { BadgeIndianRupee, ExternalLink, FileSearch, Globe2, ShieldCheck, Target } from 'lucide-react'
 import SiteFrame from '../components/SiteFrame'
 import styles from '../core-v4.module.css'
 
@@ -26,6 +26,19 @@ export default function AboutPage() {
           <article className={styles.policyCard}><span><FileSearch size={20}/></span><h2>Research standard</h2><p>Prefer current official documents, make assumptions visible and separate product rules from anecdotal experience.</p></article>
           <article className={styles.policyCard}><span><BadgeIndianRupee size={20}/></span><h2>India-first</h2><p>Design tools around Indian rupee outcomes, issuer rules, GST, surcharge mechanics and local product structures.</p></article>
           <article className={styles.policyCard}><span><ShieldCheck size={20}/></span><h2>Clear boundaries</h2><p>CredoNomics provides general information and calculators, not personalized investment advice or guaranteed outcomes.</p></article>
+        </div>
+
+
+        <div className={styles.notice}>
+          <Globe2 size={22}/>
+          <div>
+            <h2>Official CredoNomics identity</h2>
+            <p>
+              The canonical CredoNomics website is <b>www.credonomics.in</b>. CredoNomics is not affiliated
+              with similarly named websites or companies unless that relationship is explicitly disclosed here.
+              <a href="/official"> Verify official channels <ExternalLink size={12}/></a>
+            </p>
+          </div>
         </div>
 
         <div className={styles.notice}>

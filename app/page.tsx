@@ -19,6 +19,8 @@ import {
   Layers3,
 } from 'lucide-react'
 import SiteFrame from './components/SiteFrame'
+import { verifiedRealCards } from './data/verified-real-cards'
+import { issuerRegistry } from './data/issuer-registry'
 import styles from './core-v4.module.css'
 
 const tools = [
@@ -64,22 +66,22 @@ export default function Home() {
 
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
-            <span className={styles.eyebrow}><Sparkles size={13} /> Built for Indian financial decisions</span>
+            <span className={styles.eyebrow}><Sparkles size={13} /> Independent Indian card intelligence</span>
             <h1>
-              Understand the fine print.
-              <span> Quantify the real value.</span>
+              Find the right Indian credit card
+              <span> for your actual spending.</span>
             </h1>
             <p className={styles.heroLead}>
-              Independent, India-focused research tools for credit cards, cashback, fuel and banking — built to turn product fine print into numbers you can inspect before deciding.
+              Rank real Indian credit cards around how you actually spend. See annual fees, reward caps, waivers and source-linked terms before you decide.
             </p>
             <div className={styles.heroActions}>
-              <a className={styles.primaryButton} href="/tools">Explore live tools <ArrowRight size={16} /></a>
-              <a className={styles.secondaryButton} href="/research">Visit research desk <ArrowUpRight size={15} /></a>
+              <a className={styles.primaryButton} href="/cards">Compare credit cards <ArrowRight size={16} /></a>
+              <a className={styles.secondaryButton} href="/cards/all">Browse verified cards <ArrowUpRight size={15} /></a>
             </div>
             <div className={styles.trustRow}>
-              <span><ShieldCheck size={15} /> Independent educational research</span>
-              <span><BadgeIndianRupee size={15} /> India-first calculations</span>
-              <span><Search size={15} /> Assumptions stay visible</span>
+              <span><ShieldCheck size={15} /> Official-source records</span>
+              <span><BadgeIndianRupee size={15} /> Annual net-value ranking</span>
+              <span><Search size={15} /> Every assumption stays visible</span>
             </div>
           </div>
 
@@ -87,15 +89,15 @@ export default function Home() {
             <div className={styles.engineGrid} />
             <div className={styles.engineHeader}>
               <div>
-                <small>CREDONOMICS / DECISION MODEL</small>
-                <b>Product economics workspace</b>
+                <small>CREDONOMICS / INTELLIGENCE ENGINE</small>
+                <b>Live decision workspace</b>
               </div>
-              <span className={styles.engineStatus}><i /> Research mode</span>
+              <span className={styles.engineStatus}><i /> Source-linked</span>
             </div>
 
             <div className={styles.engineBody}>
-              <small>Decision framework</small>
-              <h2>Move from a product promise to a number you can audit.</h2>
+              <small>Annual value model</small>
+              <h2>Headline rewards are not the answer. Net value is.</h2>
               <div className={styles.engineEquation}>
                 <div className={styles.engineCell}>
                   <small>01</small><p>Benefits</p><b>Rewards · cashback · waivers</b>
@@ -110,31 +112,31 @@ export default function Home() {
                 </div>
               </div>
               <div className={styles.engineOutput}>
-                <span>OUTPUT / decision-ready comparison</span>
-                <b>Effective product value</b>
+                <span>OUTPUT / personalized ranking</span>
+                <b>Real cards ranked by net annual value</b>
               </div>
             </div>
 
             <div className={styles.engineFooter}>
-              <div><CreditCard size={17} /><span><b>Cards</b><small>Fit & reward economics</small></span></div>
-              <div><Fuel size={17} /><span><b>Fuel</b><small>Waiver & reward value</small></span></div>
-              <div><FileSearch size={17} /><span><b>Research</b><small>Primary-source first</small></span></div>
+              <div><CreditCard size={17} /><span><b>{verifiedRealCards.length} cards</b><small>Normalized real-card records</small></span></div>
+              <div><Landmark size={17} /><span><b>{new Set(verifiedRealCards.map((card) => card.issuer)).size} issuers</b><small>Currently in live rankings</small></span></div>
+              <div><Layers3 size={17} /><span><b>16 categories</b><small>Category-specific economics</small></span></div>
             </div>
           </div>
         </div>
 
         <div className={styles.proofStrip}>
-          <div><strong>3 live tools</strong><span>Finished public calculators</span></div>
-          <div><strong>₹-first</strong><span>Indian product economics</span></div>
-          <div><strong>Document-led</strong><span>Terms before conclusions</span></div>
-          <div><strong>No promises</strong><span>Compare trade-offs, not guaranteed outcomes</span></div>
+          <div><strong>{verifiedRealCards.length} real-card records</strong><span>Normalized for live rankings</span></div>
+          <div><strong>{new Set(verifiedRealCards.map((card) => card.issuer)).size} issuers live</strong><span>Growing toward {issuerRegistry.length}-issuer coverage</span></div>
+          <div><strong>16 category engines</strong><span>Different math for different card use-cases</span></div>
+          <div><strong>Source-linked</strong><span>Verification before conclusions</span></div>
         </div>
       </section>
 
       <section className={`${styles.wrap} ${styles.section}`}>
         <div className={styles.sectionHead}>
           <div>
-            <span className={styles.overline}>V7 / Credit Card Intelligence</span>
+            <span className={styles.overline}>Flagship / Credit Card Intelligence</span>
             <h2>Model a card around your spending — then inspect every deduction.</h2>
           </div>
           <p>

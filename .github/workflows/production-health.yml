@@ -1,0 +1,20 @@
+name: CredoNomics Production Health
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 3 * * *'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check live production routes
+        run: node scripts/site/check-live-production.mjs

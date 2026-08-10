@@ -15,7 +15,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 18
 
     steps:
       - name: Checkout
@@ -26,22 +26,26 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Refresh official-source card catalogue
+      - name: Refresh official-source discovery catalogue
         run: node scripts/cards/refresh-card-catalog.mjs
 
-      - name: Validate structured card records
+      - name: Build human review queue
+        run: node scripts/cards/build-card-review-queue.mjs
+
+      - name: Validate manual structured card records
         run: node scripts/cards/validate-card-data.mjs
 
-      - name: Commit refreshed catalogue
+      - name: Commit refreshed research signals
         shell: bash
         run: |
-          if git diff --quiet -- app/data/auto-card-catalog.generated.ts public/data/cards/auto-catalog.json; then
-            echo "No catalogue changes."
+          FILES="app/data/auto-card-catalog.generated.ts public/data/cards/auto-catalog.json app/data/card-review-queue.generated.ts public/data/cards/review-queue.json"
+          if git diff --quiet -- $FILES; then
+            echo "No research-signal changes."
             exit 0
           fi
 
           git config user.name "credonomics-research-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -- app/data/auto-card-catalog.generated.ts public/data/cards/auto-catalog.json
-          git commit -m "Refresh official credit card catalogue"
+          git add -- $FILES
+          git commit -m "Refresh card discovery and review queue"
           git push
