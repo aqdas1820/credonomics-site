@@ -32,7 +32,7 @@ export default function SiteHeader() {
       <a className={styles.skipLink} href="#main-content">Skip to content</a>
       <div className={styles.utilityBar}>
         <ShieldCheck size={12} />
-        General educational research & calculators — not personalized investment advice
+        Independent educational research · Not SEBI-registered · Not NISM-certified
       </div>
       <header className={styles.navShell}>
         <div className={styles.nav}>

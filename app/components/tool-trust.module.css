@@ -160,3 +160,5 @@
   .shell{background:#fff;padding:18px 0}
   .inner{box-shadow:none}
 }
+
+.methodGrid p b{color:var(--ink);font-size:11px}

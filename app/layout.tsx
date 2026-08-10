@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: '%s | CredoNomics',
   },
   description:
-    'India-focused financial research and calculators for credit cards, cashback, fuel-card economics and banking product terms.',
+    'Independent India-focused financial research and decision tools for credit cards, cashback, fuel economics and banking product terms.',
   applicationName: 'CredoNomics',
   authors: [{ name: 'CredoNomics Investment Solutions' }],
   creator: 'CredoNomics Investment Solutions',
@@ -23,6 +23,10 @@ export const metadata: Metadata = {
     'fuel card calculator India',
     'credit card rewards calculator',
     'financial product research India',
+    'cashback cap calculator',
+    'fuel surcharge waiver calculator India',
+    'credit card annual fee break even calculator',
+    'reward point value calculator',
     'banking product comparison India',
   ],
   alternates: { canonical: '/' },
@@ -40,7 +44,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'CredoNomics — Financial Research & Decision Tools',
     description: 'India-focused financial research and calculators.',
   },

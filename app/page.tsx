@@ -67,15 +67,14 @@ export default function Home() {
               <span> Quantify the real value.</span>
             </h1>
             <p className={styles.heroLead}>
-              CredoNomics turns credit-card, cashback, fuel and banking product terms
-              into transparent research and calculators you can inspect before making a decision.
+              Independent, India-focused research tools for credit cards, cashback, fuel and banking — built to turn product fine print into numbers you can inspect before deciding.
             </p>
             <div className={styles.heroActions}>
               <a className={styles.primaryButton} href="/tools">Explore live tools <ArrowRight size={16} /></a>
               <a className={styles.secondaryButton} href="/research">Visit research desk <ArrowUpRight size={15} /></a>
             </div>
             <div className={styles.trustRow}>
-              <span><ShieldCheck size={15} /> General educational research</span>
+              <span><ShieldCheck size={15} /> Independent educational research</span>
               <span><BadgeIndianRupee size={15} /> India-first calculations</span>
               <span><Search size={15} /> Assumptions stay visible</span>
             </div>
@@ -167,6 +166,19 @@ export default function Home() {
             <p>Learn how to verify fees, reward rules, surcharge mechanics and product conditions before trusting a calculation.</p>
             <div className={styles.cardFooter}><span>Methodology & verification</span><ArrowUpRight size={16} /></div>
           </a>
+        </div>
+      </section>
+
+      <section className={`${styles.wrap} ${styles.section}`}>
+        <div className={styles.sectionHead}>
+          <div><span className={styles.overline}>Quick research calculators</span><h2>Answer the smaller questions that can change a card decision.</h2></div>
+          <p>Use focused calculators for annual-fee break-even, cashback caps, fuel surcharge waivers and reward-point value.</p>
+        </div>
+        <div className={styles.toolGrid}>
+          <a className={styles.toolCard} href="/tools/annual-fee-break-even"><span className={styles.cardLabel}>Card economics</span><h3>Annual Fee Break-Even</h3><p>Estimate how much spending is needed for a paid card’s extra rewards to recover its annual cost.</p><div className={styles.cardFooter}><span>Calculate break-even</span><ArrowUpRight size={16}/></div></a>
+          <a className={styles.toolCard} href="/tools/cashback-cap"><span className={styles.cardLabel}>Cashback</span><h3>Cashback Cap</h3><p>See how a monthly reward ceiling changes your effective cashback rate.</p><div className={styles.cardFooter}><span>Model the cap</span><ArrowUpRight size={16}/></div></a>
+          <a className={styles.toolCard} href="/tools/fuel-surcharge-waiver"><span className={styles.cardLabel}>Fuel economics</span><h3>Fuel Surcharge Waiver</h3><p>Estimate monthly and annual waiver value without mixing it with fuel reward points.</p><div className={styles.cardFooter}><span>Estimate waiver</span><ArrowUpRight size={16}/></div></a>
+          <a className={styles.toolCard} href="/tools/reward-point-value"><span className={styles.cardLabel}>Reward economics</span><h3>Reward Point Value</h3><p>Convert points to rupees using the redemption path you actually plan to use.</p><div className={styles.cardFooter}><span>Value points</span><ArrowUpRight size={16}/></div></a>
         </div>
       </section>
 

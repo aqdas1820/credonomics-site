@@ -33,21 +33,7 @@ export default function Image() {
         />
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', width: '100%' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
-            <div
-              style={{
-                width: 54,
-                height: 54,
-                borderRadius: 15,
-                background: 'linear-gradient(145deg, #45d2c8, #2867f0)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontWeight: 900,
-                fontSize: 22,
-              }}
-            >
-              C
-            </div>
+            <img src="https://www.credonomics.in/credonomics-mark.png" width="58" height="58" style={{ objectFit: 'contain' }} />
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <div style={{ fontSize: 25, fontWeight: 800, letterSpacing: 2 }}>CREDONOMICS</div>
               <div style={{ fontSize: 15, color: '#9fd9df', marginTop: 3 }}>Financial Research & Decision Tools</div>

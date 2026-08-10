@@ -31,6 +31,7 @@ export default function SiteFooter() {
           <a href="/about">About</a>
           <a href="/contact">Contact</a>
           <a href="/disclosures">Disclosures</a>
+          <a href="/corrections">Corrections</a>
         </div>
 
         <div className={styles.footerColumn}>

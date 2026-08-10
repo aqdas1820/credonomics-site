@@ -1,6 +1,7 @@
 import { ArrowUpRight, FileSearch, ShieldCheck } from 'lucide-react'
 import SiteFrame from '../components/SiteFrame'
 import { PUBLIC_REVIEW_DATE, publicTools } from '../data/tool-registry'
+import { quickCalculators } from '../data/quick-calculators'
 import styles from '../core-v4.module.css'
 
 export const metadata = {
@@ -47,6 +48,13 @@ export default function ToolsPage() {
           </a>
         </div>
 
+
+        <section className={styles.researchArticleSection}>
+          <div className={styles.sectionHead}><div><span className={styles.overline}>Focused calculators</span><h2>Model one product rule at a time.</h2></div><p>These compact tools are designed for high-impact questions that often get lost inside a full card comparison.</p></div>
+          <div className={styles.articleCardGrid}>
+            {quickCalculators.map((item) => <a className={styles.articleCard} href={`/tools/${item.slug}`} key={item.slug}><span>{item.category}</span><h3>{item.title}</h3><p>{item.description}</p><div><small>Interactive calculator</small><ArrowUpRight size={16}/></div></a>)}
+          </div>
+        </section>
         <div className={styles.notice}>
           <ShieldCheck size={22}/>
           <div><h2>Calculator results are informational.</h2><p>Always verify current issuer or bank terms, eligibility, merchant classification, fees and applicable taxes before relying on a result.</p></div>

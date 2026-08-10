@@ -82,6 +82,14 @@ export default function ResearchPage() {
           </div>
         </section>
 
+
+        <section className={styles.researchArticleSection}>
+          <div className={styles.sectionHead}><div><span className={styles.overline}>Research infrastructure</span><h2>Trust also depends on how data is stored and corrected.</h2></div><p>CredoNomics is building explicit rules for source-backed card records and visible correction handling.</p></div>
+          <div className={styles.articleCardGrid}>
+            <a className={styles.articleCard} href="/research/credit-card-data-standard"><span>Data standard</span><h3>Credit Card Data Standard</h3><p>See the fields and verification rules behind the planned structured Indian card database.</p><div><small>Research infrastructure</small><ArrowUpRight size={16}/></div></a>
+            <a className={styles.articleCard} href="/corrections"><span>Transparency</span><h3>Corrections & Updates</h3><p>Report an outdated fee, cap, exclusion, effective date or calculation rule with an official source.</p><div><small>Source-backed corrections</small><ArrowUpRight size={16}/></div></a>
+          </div>
+        </section>
         <div className={styles.notice}>
           <ShieldCheck size={22}/>
           <div>
