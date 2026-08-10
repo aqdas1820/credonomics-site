@@ -1,17 +1,32 @@
 import { notFound } from 'next/navigation'
-import { CalendarCheck, ExternalLink, ShieldCheck } from 'lucide-react'
+import { CalendarCheck, ExternalLink, Layers3, ShieldCheck } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
+import CategoryComparator from '../components/CategoryComparator'
+import { cardCategories, cardCategoryMap, isCardCategorySlug } from '../../data/card-categories'
 import { verifiedCards } from '../../data/card-database'
 import styles from '../../core-v4.module.css'
 import local from '../cards.module.css'
 
 export function generateStaticParams() {
-  return verifiedCards.map((card) => ({ slug: card.slug }))
+  return [
+    ...cardCategories.map((category) => ({ slug: category.slug })),
+    ...verifiedCards.map((card) => ({ slug: card.slug })),
+  ]
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
+  if (isCardCategorySlug(params.slug)) {
+    const category = cardCategoryMap[params.slug]
+    return {
+      title: category.seoTitle,
+      description: category.seoDescription,
+      alternates: { canonical: `/cards/${category.slug}` },
+    }
+  }
+
   const card = verifiedCards.find((item) => item.slug === params.slug)
   if (!card) return {}
+
   return {
     title: `${card.productName} — ${card.issuer}`,
     description: `Source-backed CredoNomics research record for ${card.productName}.`,
@@ -20,6 +35,40 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 }
 
 export default function Page({ params }: { params: { slug: string } }) {
+  if (isCardCategorySlug(params.slug)) {
+    const category = cardCategoryMap[params.slug]
+
+    return (
+      <SiteFrame>
+        <section className={`${styles.wrap} ${styles.pageHero}`}>
+          <div className={styles.breadcrumbs}><a href="/">Home</a><span>/</span><a href="/cards">Cards</a><span>/</span><span>{category.shortTitle}</span></div>
+          <span className={styles.pageKicker}><Layers3 size={14}/> {category.eyebrow}</span>
+          <h1>{category.title}</h1>
+          <p className={styles.pageHeroLead}>{category.description}</p>
+          <div className={local.heroActions}>
+            <a className={styles.secondaryButton} href="/cards/compare">Switch comparison category</a>
+          </div>
+        </section>
+
+        <section className={`${styles.wrap} ${styles.pageBody}`}>
+          <CategoryComparator categorySlug={category.slug}/>
+
+          <section className={styles.researchArticleSection}>
+            <div className={styles.sectionHead}>
+              <div><span className={styles.overline}>How this category is modeled</span><h2>Category-specific math, not one universal score.</h2></div>
+              <p>Each category has its own benefit and cost structure. The result remains driven by the values entered by the user.</p>
+            </div>
+            <div className={local.methodGridV8}>
+              {category.methodology.map((item, index) => (
+                <article key={item}><span>0{index + 1}</span><p>{item}</p></article>
+              ))}
+            </div>
+          </section>
+        </section>
+      </SiteFrame>
+    )
+  }
+
   const card = verifiedCards.find((item) => item.slug === params.slug)
   if (!card) notFound()
 

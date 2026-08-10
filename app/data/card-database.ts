@@ -24,6 +24,7 @@ export type VerifiedCard = {
   slug: string
   issuer: string
   productName: string
+  productCategories?: string[]
   status: 'verified'
   network?: string
   annualFeeRupees: number

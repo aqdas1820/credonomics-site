@@ -38,5 +38,8 @@
       "effectiveDate": "YYYY-MM-DD"
     }
   ],
-  "lastVerified": "YYYY-MM-DD"
+  "lastVerified": "YYYY-MM-DD",
+  "productCategories": [
+    "cashback"
+  ]
 }
