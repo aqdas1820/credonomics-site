@@ -1,6 +1,8 @@
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
 
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.credonomics.in'),
   title: {
@@ -54,6 +56,9 @@ export const metadata: Metadata = {
     },
   },
   category: 'finance',
+  ...(googleSiteVerification
+    ? { verification: { google: googleSiteVerification } }
+    : {}),
 }
 
 export const viewport: Viewport = {

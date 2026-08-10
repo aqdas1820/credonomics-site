@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ToolTrustPanel from '../../components/ToolTrustPanel'
 
 export const metadata: Metadata = {
   title: 'Credit Card Finder',
@@ -7,5 +8,10 @@ export const metadata: Metadata = {
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      {children}
+      <ToolTrustPanel slug='credit-card-finder' />
+    </>
+  )
 }

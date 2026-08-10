@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
+import ToolTrustPanel from '../../components/ToolTrustPanel'
 
 export const metadata: Metadata = {
   title: 'Cashback Calculator',
-  description: 'Estimate effective cashback after caps, exclusions, annual fee and GST.',
+  description: 'Estimate effective cashback after caps, exclusions, annual fee and applicable taxes.',
   alternates: { canonical: '/tools/cashback-calculator' },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      {children}
+      <ToolTrustPanel slug='cashback-calculator' />
+    </>
+  )
 }

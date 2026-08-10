@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { researchArticles } from './data/research-articles'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://www.credonomics.in'
@@ -17,9 +18,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
   ]
 
-  return routes.map((route) => ({
+  const pages = routes.map((route) => ({
     url: `${base}${route}`,
-    lastModified: new Date(),
+    lastModified: new Date('2026-08-10T00:00:00+05:30'),
     priority: route === '' ? 1 : route.startsWith('/tools/') ? 0.85 : 0.7,
   }))
+
+  const articles = researchArticles.map((article) => ({
+    url: `${base}/research/articles/${article.slug}`,
+    lastModified: new Date(article.reviewed + 'T00:00:00+05:30'),
+    priority: 0.75,
+  }))
+
+  return [...pages, ...articles]
 }

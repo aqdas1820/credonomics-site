@@ -1,0 +1,18 @@
+GOOGLE SEARCH CONSOLE — CREDONOMICS
+==================================
+
+The site is prepared for Search Console, but Google ownership verification
+requires a token generated specifically for your Google account/property.
+
+Recommended setup:
+1. Add https://www.credonomics.in as a property in Google Search Console.
+2. Choose the HTML tag verification method if you want to use the site's
+   built-in environment-variable support.
+3. Copy only the verification token (the content value).
+4. In Vercel, add this environment variable:
+   NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=<your-token>
+5. Redeploy.
+6. Submit:
+   https://www.credonomics.in/sitemap.xml
+
+Do not invent or reuse someone else's verification token.

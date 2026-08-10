@@ -1,5 +1,6 @@
-import { CheckCircle2, CreditCard, FileSearch, Fuel, Landmark, Search, ShieldCheck } from 'lucide-react'
+import { ArrowUpRight, CheckCircle2, CreditCard, FileSearch, Fuel, Landmark, ShieldCheck } from 'lucide-react'
 import SiteFrame from '../components/SiteFrame'
+import { RESEARCH_REVIEW_DATE, researchArticles } from '../data/research-articles'
 import styles from '../core-v4.module.css'
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function ResearchPage() {
           CredoNomics focuses on the product rules that materially change real-world value:
           fees, exclusions, caps, transaction ranges, eligibility and timing.
         </p>
+        <div className={styles.researchReviewStamp}>Research framework reviewed {RESEARCH_REVIEW_DATE}</div>
       </section>
 
       <section className={`${styles.wrap} ${styles.pageBody}`}>
@@ -29,10 +31,9 @@ export default function ResearchPage() {
             <ul>
               <li><CheckCircle2 size={14}/> Identify eligible and excluded categories</li>
               <li><CheckCircle2 size={14}/> Apply monthly or annual reward caps</li>
-              <li><CheckCircle2 size={14}/> Include annual fee and GST</li>
+              <li><CheckCircle2 size={14}/> Include annual fee and applicable taxes</li>
               <li><CheckCircle2 size={14}/> Separate fee waiver from rewards</li>
             </ul>
-            <div className={styles.formulaBox}>net value = eligible rewards − annual fee − applicable taxes</div>
           </article>
 
           <article className={styles.contentCard}>
@@ -45,7 +46,6 @@ export default function ResearchPage() {
               <li><CheckCircle2 size={14}/> Convert points to realistic rupee value</li>
               <li><CheckCircle2 size={14}/> Treat promotional benefits separately</li>
             </ul>
-            <div className={styles.formulaBox}>fuel value = rewards + valid waiver − fees − benefit leakage</div>
           </article>
 
           <article className={styles.contentCard}>
@@ -61,23 +61,33 @@ export default function ResearchPage() {
           </article>
         </div>
 
-        <section className={`${styles.section} ${styles.twoCol}`}>
-          <div className={styles.sideTitle}>
-            <span className={styles.overline}>Evidence hierarchy</span>
-            <h2>Not every source deserves the same weight.</h2>
-            <p>Community reports can expose edge cases, but they should not override current official documentation.</p>
+        <section className={styles.researchArticleSection}>
+          <div className={styles.sectionHead}>
+            <div>
+              <span className={styles.overline}>Evergreen research</span>
+              <h2>Practical articles built around the maths behind the product.</h2>
+            </div>
+            <p>These articles explain reusable frameworks rather than pretending a product’s current terms will stay unchanged forever.</p>
           </div>
-          <div className={styles.rankList}>
-            <div className={styles.rankRow}><span>A</span><div><h3>Primary documentation</h3><p>Issuer, bank or official product pages, MITC/fee schedules, terms, notices and current official documents.</p></div></div>
-            <div className={styles.rankRow}><span>B</span><div><h3>Official support material</h3><p>FAQs, help-centre articles and product-specific operational guidance from the provider.</p></div></div>
-            <div className={styles.rankRow}><span>C</span><div><h3>Independent reporting</h3><p>Useful for context and changes, but product mechanics should be checked against primary sources.</p></div></div>
-            <div className={styles.rankRow}><span>D</span><div><h3>Community experience</h3><p>Helpful for identifying real-world edge cases; anecdotal experience is not the official product rule.</p></div></div>
+
+          <div className={styles.articleCardGrid}>
+            {researchArticles.map((article) => (
+              <a className={styles.articleCard} href={`/research/articles/${article.slug}`} key={article.slug}>
+                <span>{article.category}</span>
+                <h3>{article.title}</h3>
+                <p>{article.description}</p>
+                <div><small>{article.readTime}</small><ArrowUpRight size={16}/></div>
+              </a>
+            ))}
           </div>
         </section>
 
         <div className={styles.notice}>
           <ShieldCheck size={22}/>
-          <div><h2>Research should age visibly.</h2><p>Financial-product terms change. Re-check the effective date and official source before applying an older calculation or comparison to a current decision.</p></div>
+          <div>
+            <h2>Research should age visibly.</h2>
+            <p>Financial-product terms change. Re-check the effective date and official source before applying an older calculation or comparison to a current decision.</p>
+          </div>
         </div>
       </section>
     </SiteFrame>
