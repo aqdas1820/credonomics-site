@@ -1,12 +1,7 @@
-'use client'
-
 import {
-  Activity,
   ArrowRight,
   ArrowUpRight,
   BadgeIndianRupee,
-  BarChart3,
-  BookOpen,
   Calculator,
   CheckCircle2,
   CreditCard,
@@ -15,469 +10,269 @@ import {
   Instagram,
   Landmark,
   Mail,
-  Menu,
-  Moon,
-  Phone,
   Search,
   ShieldCheck,
   Sparkles,
-  Sun,
   Target,
-  TrendingUp,
-  WalletCards,
-  X,
 } from 'lucide-react'
-import { useEffect, useState } from 'react'
-import styles from './site-v3.module.css'
+import SiteFrame from './components/SiteFrame'
+import styles from './core-v4.module.css'
 
-const solutions = [
+const tools = [
   {
     icon: CreditCard,
-    eyebrow: 'Card selection',
+    label: '01 / Card selection',
     title: 'Credit Card Finder',
-    text: 'Compare card fit around your actual spending pattern instead of choosing from headline reward rates.',
+    text: 'Start from how you spend, then compare the value after fees, reward caps and practical restrictions.',
     href: '/tools/credit-card-finder',
-    metric: 'Spend-fit analysis',
+    output: 'Spend-fit comparison',
   },
   {
     icon: Calculator,
-    eyebrow: 'Reward economics',
+    label: '02 / Reward economics',
     title: 'Cashback Calculator',
-    text: 'Model cashback after caps, excluded spends, annual fees and GST to see the effective return.',
+    text: 'Turn an advertised cashback rate into a net figure after caps, exclusions, annual fee and GST.',
     href: '/tools/cashback-calculator',
-    metric: 'Net reward rate',
+    output: 'Effective cashback rate',
   },
   {
     icon: Fuel,
-    eyebrow: 'Fuel economics',
+    label: '03 / Fuel economics',
     title: 'Fuel Card Optimizer',
-    text: 'Separate rewards, surcharge waiver and partner benefits to estimate the real annual fuel value.',
+    text: 'Separate reward value, surcharge waiver and transaction rules to estimate true fuel savings.',
     href: '/tools/fuel-card-optimizer',
-    metric: 'True annual savings',
-  },
-]
-
-const decisionPaths = [
-  {
-    label: 'Choose a card',
-    icon: CreditCard,
-    title: 'Find the card that fits your spending.',
-    text: 'Start from how you spend, then compare reward structure, fees, caps and practical acceptance.',
-    href: '/tools/credit-card-finder',
-    cta: 'Open Card Finder',
-    checks: ['Spending-pattern fit', 'Fee recovery', 'Reward caps & exclusions'],
-  },
-  {
-    label: 'Measure cashback',
-    icon: Calculator,
-    title: 'Convert advertised cashback into effective value.',
-    text: 'Use your own monthly spend and include the costs that marketing headlines usually leave out.',
-    href: '/tools/cashback-calculator',
-    cta: 'Open Cashback Calculator',
-    checks: ['Eligible spend', 'Monthly/annual caps', 'Annual fee + GST'],
-  },
-  {
-    label: 'Optimize fuel',
-    icon: Fuel,
-    title: 'Know what a fuel card really saves.',
-    text: 'Compare surcharge waiver, reward points and fuel-app benefits without double-counting them.',
-    href: '/tools/fuel-card-optimizer',
-    cta: 'Open Fuel Optimizer',
-    checks: ['Surcharge mechanics', 'Reward value', 'Outlet & transaction rules'],
+    output: 'Net annual fuel value',
   },
 ]
 
 const method = [
-  {
-    icon: FileSearch,
-    no: '01',
-    title: 'Source',
-    text: 'Start from issuer documents, fee schedules, terms, product pages and other primary material.',
-  },
-  {
-    icon: Search,
-    no: '02',
-    title: 'Normalize',
-    text: 'Separate the headline benefit from eligibility rules, caps, exclusions and transaction conditions.',
-  },
-  {
-    icon: BadgeIndianRupee,
-    no: '03',
-    title: 'Calculate',
-    text: 'Convert the rules into ₹ outcomes using transparent inputs and visible assumptions.',
-  },
-  {
-    icon: BarChart3,
-    no: '04',
-    title: 'Explain',
-    text: 'Show the practical result, the trade-offs and what should still be verified before a decision.',
-  },
+  [FileSearch, '01', 'Source', 'Begin with official product pages, fee schedules, terms and issuer documentation.'],
+  [Search, '02', 'Normalize', 'Separate headline benefits from eligibility rules, exclusions, caps and timing conditions.'],
+  [BadgeIndianRupee, '03', 'Calculate', 'Convert the rules into comparable ₹ outcomes using visible assumptions.'],
+  [Target, '04', 'Stress-test', 'Check what changes when spending mix, fees or product conditions move.'],
 ]
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [dark, setDark] = useState(false)
-  const [path, setPath] = useState(0)
-
-  useEffect(() => {
-    try {
-      const saved = window.localStorage.getItem('credonomics-theme')
-      if (saved === 'dark') setDark(true)
-    } catch {}
-  }, [])
-
-  const toggleTheme = () => {
-    setDark((current) => {
-      const next = !current
-      try {
-        window.localStorage.setItem('credonomics-theme', next ? 'dark' : 'light')
-      } catch {}
-      return next
-    })
-  }
-
-  const active = decisionPaths[path]
-  const ActiveIcon = active.icon
-
   return (
-    <main className={`${styles.site} ${dark ? styles.dark : ''}`}>
-      <div className={styles.progressRail} aria-hidden="true">
-        <span />
-      </div>
-
-      <header className={styles.navShell}>
-        <div className={styles.nav}>
-          <a className={styles.brand} href="#top" aria-label="CredoNomics home">
-            <img src="/credonomics-mark.png" alt="" />
-            <span>
-              <strong>CREDONOMICS</strong>
-              <small>Investment Solutions</small>
-            </span>
-          </a>
-
-          <nav className={`${styles.navLinks} ${menuOpen ? styles.navLinksOpen : ''}`}>
-            <a href="#solutions" onClick={() => setMenuOpen(false)}>Solutions</a>
-            <a href="/research" onClick={() => setMenuOpen(false)}>Research</a>
-            <a href="#methodology" onClick={() => setMenuOpen(false)}>Methodology</a>
-            <a href="/disclosures" onClick={() => setMenuOpen(false)}>Disclosures</a>
-          </nav>
-
-          <div className={styles.navActions}>
-            <a className={styles.navPhone} href="tel:02562455327">
-              <Phone size={15} />
-              02562 455327
-            </a>
-            <button className={styles.iconButton} onClick={toggleTheme} aria-label="Toggle colour theme">
-              {dark ? <Sun size={17} /> : <Moon size={17} />}
-            </button>
-            <button
-              className={`${styles.iconButton} ${styles.menuButton}`}
-              onClick={() => setMenuOpen((value) => !value)}
-              aria-label="Toggle navigation"
-            >
-              {menuOpen ? <X size={18} /> : <Menu size={18} />}
-            </button>
-          </div>
-        </div>
-      </header>
-
-      <section id="top" className={styles.hero}>
+    <SiteFrame>
+      <section className={`${styles.wrap} ${styles.hero}`}>
         <div className={styles.heroGlowA} />
         <div className={styles.heroGlowB} />
 
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
-            <div className={styles.eyebrow}>
-              <Sparkles size={14} />
-              Financial research & decision tools for India
-            </div>
-
+            <span className={styles.eyebrow}><Sparkles size={13} /> Built for Indian financial decisions</span>
             <h1>
-              Financial decisions deserve
-              <span> more than a headline number.</span>
+              Understand the fine print.
+              <span> Quantify the real value.</span>
             </h1>
-
             <p className={styles.heroLead}>
-              CredoNomics turns product terms, fees, reward structures and eligibility rules
-              into transparent calculations you can inspect before making a decision.
+              CredoNomics turns credit-card, cashback, fuel and banking product terms
+              into transparent research and calculators you can inspect before making a decision.
             </p>
-
             <div className={styles.heroActions}>
-              <a className={styles.primaryButton} href="#solutions">
-                Explore solutions <ArrowRight size={17} />
-              </a>
-              <a className={styles.secondaryButton} href="/research">
-                Visit research desk <ArrowUpRight size={16} />
-              </a>
+              <a className={styles.primaryButton} href="/tools">Explore live tools <ArrowRight size={16} /></a>
+              <a className={styles.secondaryButton} href="/research">Visit research desk <ArrowUpRight size={15} /></a>
             </div>
-
             <div className={styles.trustRow}>
-              <span><ShieldCheck size={16} /> Independent research</span>
-              <span><BadgeIndianRupee size={16} /> India-first calculations</span>
-              <span><Search size={16} /> Visible assumptions</span>
+              <span><ShieldCheck size={15} /> General educational research</span>
+              <span><BadgeIndianRupee size={15} /> India-first calculations</span>
+              <span><Search size={15} /> Assumptions stay visible</span>
             </div>
           </div>
 
-          <div className={styles.console}>
-            <div className={styles.consoleGrid} aria-hidden="true" />
-            <div className={styles.consoleHeader}>
+          <div className={styles.engine} aria-label="CredoNomics decision model">
+            <div className={styles.engineGrid} />
+            <div className={styles.engineHeader}>
               <div>
-                <span className={styles.consoleKicker}>CREDONOMICS / DECISION ENGINE</span>
+                <small>CREDONOMICS / DECISION MODEL</small>
                 <b>Product economics workspace</b>
               </div>
-              <span className={styles.systemStatus}><i /> Research mode</span>
+              <span className={styles.engineStatus}><i /> Research mode</span>
             </div>
 
-            <div className={styles.consoleMain}>
-              <div className={styles.consoleTitleRow}>
-                <div>
-                  <small>Decision framework</small>
-                  <h2>From product promise to net value.</h2>
+            <div className={styles.engineBody}>
+              <small>Decision framework</small>
+              <h2>Move from a product promise to a number you can audit.</h2>
+              <div className={styles.engineEquation}>
+                <div className={styles.engineCell}>
+                  <small>01</small><p>Benefits</p><b>Rewards · cashback · waivers</b>
                 </div>
-                <Activity size={21} />
-              </div>
-
-              <div className={styles.flow}>
-                <div>
-                  <span>01</span>
-                  <p>Headline benefit</p>
-                  <b>Rewards / cashback</b>
+                <span className={styles.operator}>−</span>
+                <div className={styles.engineCell}>
+                  <small>02</small><p>Friction</p><b>Caps · exclusions · eligibility</b>
                 </div>
-                <i />
-                <div>
-                  <span>02</span>
-                  <p>Rules & friction</p>
-                  <b>Caps / exclusions</b>
-                </div>
-                <i />
-                <div>
-                  <span>03</span>
-                  <p>Real cost</p>
-                  <b>Fees / GST</b>
+                <span className={styles.operator}>−</span>
+                <div className={styles.engineCell}>
+                  <small>03</small><p>Costs</p><b>Fees · GST · opportunity cost</b>
                 </div>
               </div>
-
-              <div className={styles.netValue}>
-                <div>
-                  <small>OUTPUT</small>
-                  <span>Effective product value</span>
-                </div>
-                <b>Benefit − friction − cost</b>
+              <div className={styles.engineOutput}>
+                <span>OUTPUT / decision-ready comparison</span>
+                <b>Effective product value</b>
               </div>
             </div>
 
-            <div className={styles.consoleMetrics}>
-              <div><WalletCards size={18} /><span><b>Cards</b><small>Fit & rewards</small></span></div>
-              <div><Fuel size={18} /><span><b>Fuel</b><small>Net savings</small></span></div>
-              <div><BookOpen size={18} /><span><b>Research</b><small>Primary-source first</small></span></div>
+            <div className={styles.engineFooter}>
+              <div><CreditCard size={17} /><span><b>Cards</b><small>Fit & reward economics</small></span></div>
+              <div><Fuel size={17} /><span><b>Fuel</b><small>Waiver & reward value</small></span></div>
+              <div><FileSearch size={17} /><span><b>Research</b><small>Primary-source first</small></span></div>
             </div>
           </div>
         </div>
 
-        <div className={styles.heroStrip}>
-          <div><strong>3</strong><span>live decision tools</span></div>
-          <div><strong>₹ first</strong><span>Indian product economics</span></div>
-          <div><strong>Document-led</strong><span>terms before conclusions</span></div>
-          <div><strong>Independent</strong><span>research-oriented approach</span></div>
+        <div className={styles.proofStrip}>
+          <div><strong>3 live tools</strong><span>Finished public calculators</span></div>
+          <div><strong>₹-first</strong><span>Indian product economics</span></div>
+          <div><strong>Document-led</strong><span>Terms before conclusions</span></div>
+          <div><strong>No promises</strong><span>Compare trade-offs, not guaranteed outcomes</span></div>
         </div>
       </section>
 
-      <section id="solutions" className={styles.section}>
-        <div className={styles.sectionHeader}>
+      <section className={`${styles.wrap} ${styles.section}`}>
+        <div className={styles.sectionHead}>
           <div>
-            <span className={styles.overline}>Live solutions</span>
+            <span className={styles.overline}>Live decision tools</span>
             <h2>Start with the financial question you actually need to answer.</h2>
           </div>
           <p>
-            Each tool focuses on a practical decision and keeps the important
-            assumptions visible instead of hiding them behind a single score.
+            Each tool is designed around a practical decision and keeps the
+            important inputs visible rather than hiding them behind a single score.
           </p>
         </div>
 
-        <div className={styles.solutionGrid}>
-          {solutions.map((solution, index) => {
-            const Icon = solution.icon
+        <div className={styles.toolGrid}>
+          {tools.map((tool) => {
+            const Icon = tool.icon
             return (
-              <a className={styles.solutionCard} href={solution.href} key={solution.title}>
-                <div className={styles.solutionCardTop}>
-                  <span className={styles.solutionIcon}><Icon size={23} /></span>
-                  <span className={styles.liveBadge}><i /> Live</span>
+              <a className={styles.toolCard} href={tool.href} key={tool.title}>
+                <div className={styles.cardTop}>
+                  <span className={styles.iconTile}><Icon size={22} /></span>
+                  <span className={styles.statusPill}><i className={styles.liveDot} /> Live</span>
                 </div>
-                <span className={styles.cardNumber}>0{index + 1} / {solution.eyebrow}</span>
-                <h3>{solution.title}</h3>
-                <p>{solution.text}</p>
-                <div className={styles.solutionFooter}>
-                  <span>{solution.metric}</span>
-                  <ArrowUpRight size={17} />
-                </div>
+                <span className={styles.cardLabel}>{tool.label}</span>
+                <h3>{tool.title}</h3>
+                <p>{tool.text}</p>
+                <div className={styles.cardFooter}><span>{tool.output}</span><ArrowUpRight size={16} /></div>
               </a>
             )
           })}
-
-          <a className={`${styles.solutionCard} ${styles.researchCard}`} href="/research">
-            <div className={styles.solutionCardTop}>
-              <span className={styles.solutionIcon}><BookOpen size={23} /></span>
-              <span className={styles.researchBadge}>Research</span>
+          <a className={`${styles.toolCard} ${styles.researchCard}`} href="/research">
+            <div className={styles.cardTop}>
+              <span className={styles.iconTile}><FileSearch size={22} /></span>
+              <span className={styles.statusPill}>Research</span>
             </div>
-            <span className={styles.cardNumber}>04 / Research desk</span>
+            <span className={styles.cardLabel}>04 / Research desk</span>
             <h3>Research Frameworks</h3>
-            <p>
-              Learn how to check reward terms, surcharge mechanics, fee schedules
-              and product conditions before relying on a calculation.
-            </p>
-            <div className={styles.solutionFooter}>
-              <span>Methodology & verification</span>
-              <ArrowUpRight size={17} />
-            </div>
+            <p>Learn how to verify fees, reward rules, surcharge mechanics and product conditions before trusting a calculation.</p>
+            <div className={styles.cardFooter}><span>Methodology & verification</span><ArrowUpRight size={16} /></div>
           </a>
         </div>
       </section>
 
-      <section className={`${styles.section} ${styles.pathSection}`}>
-        <div className={styles.sectionHeader}>
-          <div>
-            <span className={styles.overline}>Decision paths</span>
-            <h2>Choose your goal. CredoNomics shows where to start.</h2>
-          </div>
-          <p>
-            A product comparison becomes easier when the objective is defined first.
-            Pick the result you are trying to improve.
-          </p>
-        </div>
-
-        <div className={styles.pathWorkspace}>
-          <div className={styles.pathTabs}>
-            {decisionPaths.map((item, index) => {
-              const Icon = item.icon
-              return (
-                <button
-                  key={item.label}
-                  onClick={() => setPath(index)}
-                  className={path === index ? styles.pathTabActive : ''}
-                >
-                  <Icon size={18} />
-                  <span>{item.label}</span>
-                  <ArrowRight size={16} />
-                </button>
-              )
-            })}
-          </div>
-
-          <div className={styles.pathDetail}>
-            <div className={styles.pathDetailIcon}><ActiveIcon size={27} /></div>
-            <span className={styles.overline}>Recommended workflow</span>
-            <h3>{active.title}</h3>
-            <p>{active.text}</p>
-            <div className={styles.pathChecks}>
-              {active.checks.map((check) => (
-                <span key={check}><CheckCircle2 size={16} /> {check}</span>
-              ))}
-            </div>
-            <a className={styles.primaryButton} href={active.href}>
-              {active.cta} <ArrowRight size={17} />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="methodology" className={`${styles.section} ${styles.methodSection}`}>
-        <div className={styles.methodIntro}>
+      <section className={`${styles.wrap} ${styles.section} ${styles.splitSection}`}>
+        <div className={styles.splitIntro}>
           <span className={styles.overline}>CredoNomics methodology</span>
-          <h2>A repeatable process from source document to decision.</h2>
+          <h2>The conclusion matters. So does the path to it.</h2>
           <p>
-            Good financial analysis is not only about the final number. The path from
-            product terms to that number should be understandable too.
+            Professional financial research should make it possible to see where
+            the inputs came from, how the calculation works and what could change the result.
           </p>
-          <a href="/research" className={styles.textLink}>
-            Read the research methodology <ArrowRight size={16} />
-          </a>
+          <a className={styles.textLink} href="/methodology">Read full methodology <ArrowRight size={15} /></a>
         </div>
 
-        <div className={styles.methodGrid}>
-          {method.map((item) => {
-            const Icon = item.icon
-            return (
-              <article key={item.no} className={styles.methodCard}>
-                <div><span>{item.no}</span><Icon size={20} /></div>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            )
-          })}
+        <div className={styles.stepGrid}>
+          {method.map(([Icon, no, title, text]: any) => (
+            <article className={styles.stepCard} key={no}>
+              <div className={styles.stepCardTop}><span>{no}</span><Icon size={19} /></div>
+              <h3>{title}</h3><p>{text}</p>
+            </article>
+          ))}
         </div>
       </section>
 
-      <section className={styles.intelligenceBand}>
+      <section className={`${styles.wrap} ${styles.principleBand}`}>
         <div>
-          <span className={styles.bandIcon}><Target size={22} /></span>
+          <span className={styles.bandIcon}><Target size={21} /></span>
           <div>
             <small>THE CREDONOMICS PRINCIPLE</small>
             <h2>Calculate first. Verify the fine print. Decide with context.</h2>
           </div>
         </div>
-        <p>
-          The goal is not to make a financial product look better or worse.
-          It is to make the trade-offs easier to see.
-        </p>
+        <p>The objective is not to make a product look good or bad. It is to make the trade-offs easier to see.</p>
       </section>
 
-      <section className={`${styles.section} ${styles.trustSection}`}>
-        <div className={styles.trustPanel}>
+      <section className={`${styles.wrap} ${styles.section}`}>
+        <div className={styles.sectionHead}>
           <div>
-            <span className={styles.overline}>Trust & transparency</span>
-            <h2>Research should be clear about what it is—and what it is not.</h2>
-            <p>
-              CredoNomics provides informational research, comparisons and calculation tools.
-              It does not provide personalized investment advice.
-            </p>
+            <span className={styles.overline}>Research desk</span>
+            <h2>Research the rule that changes the outcome.</h2>
           </div>
+          <p>Evergreen frameworks focused on the parts of financial products most likely to be misunderstood or double-counted.</p>
+        </div>
 
-          <div className={styles.trustList}>
-            <span><ShieldCheck size={18} /><b>Independent methodology</b><small>Calculations are designed around disclosed rules and visible assumptions.</small></span>
-            <span><FileSearch size={18} /><b>Primary-source preference</b><small>Official product documents should take priority when terms conflict.</small></span>
-            <span><TrendingUp size={18} /><b>No return promises</b><small>Tools explain product economics; they do not guarantee financial outcomes.</small></span>
+        <div className={styles.researchGrid}>
+          <article className={styles.contentCard}>
+            <span className={styles.iconTile}><CreditCard size={21} /></span>
+            <h3>Credit-card economics</h3>
+            <p>Move from an advertised reward rate to a realistic net value.</p>
+            <ul>
+              <li><CheckCircle2 size={14}/> Eligible vs excluded spend</li>
+              <li><CheckCircle2 size={14}/> Reward caps and fee recovery</li>
+              <li><CheckCircle2 size={14}/> Annual fee + GST</li>
+            </ul>
+          </article>
+          <article className={styles.contentCard}>
+            <span className={styles.iconTile}><Fuel size={21} /></span>
+            <h3>Fuel-card economics</h3>
+            <p>Keep surcharge waiver and reward earnings separate before combining them.</p>
+            <ul>
+              <li><CheckCircle2 size={14}/> Waiver ceiling and transaction range</li>
+              <li><CheckCircle2 size={14}/> Reward-point rupee value</li>
+              <li><CheckCircle2 size={14}/> Outlet and app eligibility</li>
+            </ul>
+          </article>
+          <article className={styles.contentCard}>
+            <span className={styles.iconTile}><Landmark size={21} /></span>
+            <h3>Banking product terms</h3>
+            <p>Operational rules can matter as much as the headline feature.</p>
+            <ul>
+              <li><CheckCircle2 size={14}/> Fees and service charges</li>
+              <li><CheckCircle2 size={14}/> Eligibility and restrictions</li>
+              <li><CheckCircle2 size={14}/> Current official documentation</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section className={`${styles.wrap} ${styles.section} ${styles.disclosureGrid}`}>
+        <div className={styles.disclosurePanel}>
+          <span className={styles.overline}>Trust & transparency</span>
+          <h2>Clear tools need clear boundaries.</h2>
+          <p>
+            CredoNomics publishes general educational research and calculators.
+            It does not provide personalized investment advice or guarantee financial outcomes.
+          </p>
+          <div className={styles.disclosurePoints}>
+            <div><ShieldCheck size={17}/><b>Regulatory status disclosed</b><small>CredoNomics is not SEBI-registered and is not NISM-certified.</small></div>
+            <div><FileSearch size={17}/><b>Primary-source preference</b><small>Current official terms should take priority when information conflicts.</small></div>
+            <div><Target size={17}/><b>No guaranteed outcomes</b><small>Tools help structure comparisons; actual eligibility and benefits can differ.</small></div>
           </div>
-
-          <a className={styles.secondaryButton} href="/disclosures">
-            Read disclosures <ArrowUpRight size={16} />
-          </a>
+          <a className={styles.secondaryButton} href="/disclosures">Read disclosures <ArrowUpRight size={15}/></a>
         </div>
 
         <div className={styles.contactPanel}>
-          <span className={styles.overline}>Contact CredoNomics</span>
-          <h3>Working through a confusing product term?</h3>
-          <p>Share the official terms or the financial question you are trying to understand.</p>
-          <a href="tel:02562455327"><Phone size={18} /><span><small>Call</small><b>02562 455327</b></span></a>
-          <a href="mailto:hello@credonomics.in"><Mail size={18} /><span><small>Email</small><b>hello@credonomics.in</b></span></a>
-          <a href="https://www.instagram.com/credonomics.in/" target="_blank" rel="noreferrer">
-            <Instagram size={18} /><span><small>Instagram</small><b>@credonomics.in</b></span>
+          <span className={styles.overline}>Official channels</span>
+          <h3>Follow or contact CredoNomics.</h3>
+          <p>Use official channels for research questions, corrections and website feedback.</p>
+          <a className={styles.contactItem} href="https://www.instagram.com/credonomics.in/" target="_blank" rel="noreferrer">
+            <Instagram size={17}/><span><small>Instagram</small><b>@credonomics.in</b></span>
+          </a>
+          <a className={styles.contactItem} href="mailto:hello@credonomics.in">
+            <Mail size={17}/><span><small>Email</small><b>hello@credonomics.in</b></span>
           </a>
         </div>
       </section>
-
-      <footer className={styles.footer}>
-        <div className={styles.footerTop}>
-          <a className={styles.brand} href="#top">
-            <img src="/credonomics-mark.png" alt="" />
-            <span>
-              <strong>CREDONOMICS</strong>
-              <small>Investment Solutions</small>
-            </span>
-          </a>
-          <p>Independent financial research and decision tools for India.</p>
-        </div>
-
-        <div className={styles.footerBottom}>
-          <span>© {new Date().getFullYear()} CredoNomics Investment Solutions</span>
-          <nav>
-            <a href="#solutions">Solutions</a>
-            <a href="/research">Research</a>
-            <a href="/disclosures">Disclosures</a>
-            <a href="https://www.instagram.com/credonomics.in/" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="mailto:hello@credonomics.in">Contact</a>
-          </nav>
-        </div>
-      </footer>
-    </main>
+    </SiteFrame>
   )
 }

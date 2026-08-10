@@ -1,4 +1,18 @@
 import type { MetadataRoute } from 'next'
+
 export default function robots(): MetadataRoute.Robots {
-  return { rules: { userAgent: '*', allow: '/' }, sitemap: 'https://www.credonomics.in/sitemap.xml' }
+  return {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: [
+          '/tools/mf-portfolio-tracker',
+          '/data/mf-intelligence/',
+        ],
+      },
+    ],
+    sitemap: 'https://www.credonomics.in/sitemap.xml',
+    host: 'https://www.credonomics.in',
+  }
 }
