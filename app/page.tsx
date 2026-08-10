@@ -14,6 +14,9 @@ import {
   ShieldCheck,
   Sparkles,
   Target,
+  BarChart3,
+  Gauge,
+  Layers3,
 } from 'lucide-react'
 import SiteFrame from './components/SiteFrame'
 import styles from './core-v4.module.css'
@@ -125,6 +128,40 @@ export default function Home() {
           <div><strong>₹-first</strong><span>Indian product economics</span></div>
           <div><strong>Document-led</strong><span>Terms before conclusions</span></div>
           <div><strong>No promises</strong><span>Compare trade-offs, not guaranteed outcomes</span></div>
+        </div>
+      </section>
+
+      <section className={`${styles.wrap} ${styles.section}`}>
+        <div className={styles.sectionHead}>
+          <div>
+            <span className={styles.overline}>V7 / Credit Card Intelligence</span>
+            <h2>Model a card around your spending — then inspect every deduction.</h2>
+          </div>
+          <p>
+            Compare up to four card structures using category-wise spending, reward caps,
+            annual fees and fee-waiver thresholds. No unexplained ranking.
+          </p>
+        </div>
+
+        <div className={styles.researchGrid}>
+          <article className={styles.contentCard}>
+            <span className={styles.iconTile}><Layers3 size={21}/></span>
+            <h3>Spend-profile engine</h3>
+            <p>Your spending mix drives the result rather than a generic “best card” label.</p>
+            <a className={styles.textLink} href="/cards/analyzer">Open analyzer <ArrowRight size={14}/></a>
+          </article>
+          <article className={styles.contentCard}>
+            <span className={styles.iconTile}><Gauge size={21}/></span>
+            <h3>Transparent Fit Score</h3>
+            <p>Reward potential, fee efficiency, cap efficiency, base-rate resilience and spend fit.</p>
+            <a className={styles.textLink} href="/research/card-scoring">See scoring method <ArrowRight size={14}/></a>
+          </article>
+          <article className={styles.contentCard}>
+            <span className={styles.iconTile}><BarChart3 size={21}/></span>
+            <h3>Source-backed database</h3>
+            <p>The public registry only accepts card records carrying official sources and a verification date.</p>
+            <a className={styles.textLink} href="/cards">Visit card intelligence <ArrowRight size={14}/></a>
+          </article>
         </div>
       </section>
 

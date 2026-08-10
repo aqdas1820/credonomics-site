@@ -22,6 +22,7 @@ export default function SiteFooter() {
         <div className={styles.footerColumn}>
           <b>Explore</b>
           <a href="/tools">Tools</a>
+              <a href="/cards">Card Intelligence</a>
           <a href="/research">Research</a>
           <a href="/methodology">Methodology</a>
         </div>

@@ -1,0 +1,42 @@
+{
+  "_instructions": [
+    "Template only. Rename the file before publishing.",
+    "Do not publish a card unless official issuer sources have been checked.",
+    "Dates use YYYY-MM-DD."
+  ],
+  "slug": "issuer-product-slug",
+  "issuer": "Issuer name",
+  "productName": "Product name",
+  "status": "draft",
+  "network": "",
+  "annualFeeRupees": 0,
+  "annualFeeTaxRatePercent": 18,
+  "feeWaiverAnnualSpendRupees": 0,
+  "baseRewardRatePercent": 0,
+  "categoryRules": [
+    {
+      "category": "online",
+      "ratePercent": 0,
+      "monthlyCapRupees": 0
+    }
+  ],
+  "exclusions": [],
+  "forexMarkupPercent": 0,
+  "fuelSurchargeWaiver": {
+    "ratePercent": 0,
+    "minTransactionRupees": 0,
+    "maxTransactionRupees": 0,
+    "monthlyCapRupees": 0
+  },
+  "loungeNotes": [],
+  "milestoneBenefits": [],
+  "officialSources": [
+    {
+      "label": "Official product page or MITC",
+      "url": "https://",
+      "checkedAt": "YYYY-MM-DD",
+      "effectiveDate": "YYYY-MM-DD"
+    }
+  ],
+  "lastVerified": "YYYY-MM-DD"
+}

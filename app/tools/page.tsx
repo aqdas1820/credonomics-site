@@ -50,6 +50,25 @@ export default function ToolsPage() {
 
 
         <section className={styles.researchArticleSection}>
+          <div className={styles.sectionHead}>
+            <div><span className={styles.overline}>Flagship analysis</span><h2>Credit Card Intelligence Analyzer</h2></div>
+            <p>Compare up to four card structures against one category-wise spend profile and rank them by modeled annual net value.</p>
+          </div>
+          <div className={styles.articleCardGrid}>
+            <a className={styles.articleCard} href="/cards/analyzer">
+              <span>Credit-card intelligence</span><h3>Spend-profile Card Analyzer</h3>
+              <p>Model reward rates, monthly caps, annual fee, GST and fee waiver. See net annual value, cap leakage and a transparent Fit Score.</p>
+              <div><small>Interactive intelligence engine</small><ArrowUpRight size={16}/></div>
+            </a>
+            <a className={styles.articleCard} href="/cards">
+              <span>Research infrastructure</span><h3>Verified Card Registry</h3>
+              <p>View the source-backed database standard and card records as current official terms are verified.</p>
+              <div><small>Source-backed records only</small><ArrowUpRight size={16}/></div>
+            </a>
+          </div>
+        </section>
+
+        <section className={styles.researchArticleSection}>
           <div className={styles.sectionHead}><div><span className={styles.overline}>Focused calculators</span><h2>Model one product rule at a time.</h2></div><p>These compact tools are designed for high-impact questions that often get lost inside a full card comparison.</p></div>
           <div className={styles.articleCardGrid}>
             {quickCalculators.map((item) => <a className={styles.articleCard} href={`/tools/${item.slug}`} key={item.slug}><span>{item.category}</span><h3>{item.title}</h3><p>{item.description}</p><div><small>Interactive calculator</small><ArrowUpRight size={16}/></div></a>)}
