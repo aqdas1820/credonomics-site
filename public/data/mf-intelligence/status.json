@@ -1,6 +1,6 @@
 {
-  "dataset": "CredoNomics HDFC Core Equity Scheme Intelligence",
-  "scope": "Six selected actively managed HDFC equity schemes",
+  "dataset": "CredoNomics Core Equity Portfolio Intelligence",
+  "scope": "Selected HDFC active equity schemes; precision-first public dataset",
   "years": [
     2025,
     2026
@@ -44,22 +44,25 @@
     "HDFC Flexi Cap Fund",
     "HDFC Small Cap Fund"
   ],
-  "categories": [
-    "Flexi Cap",
-    "Mid Cap",
-    "Small Cap",
-    "Large & Mid Cap",
-    "Multi Cap",
-    "Focused"
-  ],
-  "excludedSources": [
-    "Index Solutions Factsheet",
-    "Index Funds & ETFs Factsheet"
-  ],
   "counts": {
-    "holdings": 1086,
+    "holdings": 995,
     "schemes": 4,
-    "stocks": 252,
+    "stocks": 232,
     "amcs": 1
+  },
+  "qualityAudit": {
+    "sourceWorkbookRows": 73194,
+    "publishedHoldings": 995,
+    "canonicalNamesAvailable": 0,
+    "repairedCompanyNames": 0,
+    "droppedSuspiciousCompanyFragments": 382,
+    "explicitCoreEquityRecoveries": 0,
+    "isinCoveragePct": 0.0
+  },
+  "methodology": {
+    "securityIdentity": "ISIN when available; canonical source name fallback",
+    "companyNameRepair": "Best full company name observed for the same ISIN across selected history",
+    "duplicateRule": "Maximum reported weight retained for duplicate source copies",
+    "indexOnlyFactsheets": "Excluded"
   }
 }
