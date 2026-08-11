@@ -77,10 +77,62 @@ export type IpoSubscription = {
   updatedAt?: string
   qib?: number
   nii?: number
+  sNii?: number
+  bNii?: number
   retail?: number
   employee?: number
+  shareholder?: number
   total?: number
   sourceUrl?: string
+}
+
+export type IpoReservation = {
+  qibPercent?: number
+  anchorPercent?: number
+  niiPercent?: number
+  retailPercent?: number
+  employeePercent?: number
+  shareholderPercent?: number
+}
+
+export type IpoApplication = {
+  retailMinLots?: number
+  retailMinShares?: number
+  retailMinAmount?: number
+  retailMaxLots?: number
+  retailMaxShares?: number
+  retailMaxAmount?: number
+  sNiiMinLots?: number
+  sNiiMinShares?: number
+  sNiiMinAmount?: number
+  bNiiMinLots?: number
+  bNiiMinShares?: number
+  bNiiMinAmount?: number
+}
+
+export type IpoAnchor = {
+  bidDate?: string
+  amountCr?: number
+  shares?: number
+  lockIn50PercentEndDate?: string
+  lockInRemainingEndDate?: string
+}
+
+export type IpoListing = {
+  finalIssuePrice?: number
+  nseSymbol?: string
+  bseCode?: string
+  isin?: string
+  openPrice?: number
+  highPrice?: number
+  lowPrice?: number
+  closePrice?: number
+}
+
+export type IpoCompanyProfile = {
+  promoters?: string[]
+  website?: string
+  employeeCount?: number
 }
 
 export type VerifiedIpoRecord = {
@@ -96,6 +148,11 @@ export type VerifiedIpoRecord = {
   valuation?: IpoValuation
   quality?: IpoQualityMetrics
   subscription?: IpoSubscription
+  reservation?: IpoReservation
+  application?: IpoApplication
+  anchor?: IpoAnchor
+  listing?: IpoListing
+  company?: IpoCompanyProfile
   riskFlags?: string[]
   sources: IpoSource[]
   lastVerified: string

@@ -2,6 +2,7 @@ import { Calculator } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
 import styles from '../../core-v4.module.css'
 import IpoAnalyzer from './IpoAnalyzer'
+import IpoSubnav from '../components/IpoSubnav'
 
 export const metadata = {
   title: 'IPO Data Score Analyzer',
@@ -22,6 +23,7 @@ export default function IpoAnalyzerPage() {
           the same fixed statistical framework used for source-backed IPO records.
         </p>
       </section>
+      <IpoSubnav active="Analyzer"/>
       <section className={`${styles.wrap} ${styles.pageBody}`}>
         <IpoAnalyzer/>
       </section>

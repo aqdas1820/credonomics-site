@@ -83,5 +83,49 @@
       "sourceType": "SEBI"
     }
   ],
-  "lastVerified": "YYYY-MM-DD"
+  "lastVerified": "YYYY-MM-DD",
+  "reservation": {
+    "qibPercent": 0,
+    "anchorPercent": 0,
+    "niiPercent": 0,
+    "retailPercent": 0,
+    "employeePercent": 0,
+    "shareholderPercent": 0
+  },
+  "application": {
+    "retailMinLots": 0,
+    "retailMinShares": 0,
+    "retailMinAmount": 0,
+    "retailMaxLots": 0,
+    "retailMaxShares": 0,
+    "retailMaxAmount": 0,
+    "sNiiMinLots": 0,
+    "sNiiMinShares": 0,
+    "sNiiMinAmount": 0,
+    "bNiiMinLots": 0,
+    "bNiiMinShares": 0,
+    "bNiiMinAmount": 0
+  },
+  "anchor": {
+    "bidDate": "YYYY-MM-DD",
+    "amountCr": 0,
+    "shares": 0,
+    "lockIn50PercentEndDate": "YYYY-MM-DD",
+    "lockInRemainingEndDate": "YYYY-MM-DD"
+  },
+  "listing": {
+    "finalIssuePrice": 0,
+    "nseSymbol": "",
+    "bseCode": "",
+    "isin": "",
+    "openPrice": 0,
+    "highPrice": 0,
+    "lowPrice": 0,
+    "closePrice": 0
+  },
+  "company": {
+    "promoters": [],
+    "website": "",
+    "employeeCount": 0
+  }
 }

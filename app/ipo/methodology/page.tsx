@@ -2,6 +2,7 @@ import { BarChart3, FileSearch, Gauge, Scale, ShieldCheck, TriangleAlert } from 
 import SiteFrame from '../../components/SiteFrame'
 import styles from '../../core-v4.module.css'
 import local from '../ipo.module.css'
+import IpoSubnav from '../components/IpoSubnav'
 
 export const metadata = {
   title: 'IPO Data Score Methodology',
@@ -37,6 +38,7 @@ export default function IpoMethodologyPage() {
         </p>
       </section>
 
+      <IpoSubnav/>
       <section className={`${styles.wrap} ${styles.pageBody} ${local.shell}`}>
         <div className={local.methodIntro}>
           <article><FileSearch size={20}/><h2>Source first</h2><p>Normalize from the current DRHP/RHP/prospectus and relevant exchange/registrar documents. Discovery records alone are never scored.</p></article>
