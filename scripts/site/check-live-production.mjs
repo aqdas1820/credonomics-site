@@ -5,6 +5,8 @@ const targets = [
   ['cashback', 'https://www.credonomics.in/cards/cashback', 'Cashback Credit Cards'],
   ['fuel', 'https://www.credonomics.in/cards/fuel', 'Fuel Credit Cards'],
   ['coverage', 'https://www.credonomics.in/cards/coverage', 'actually verified'],
+  ['ipo intelligence', 'https://www.credonomics.in/ipo', 'IPO Intelligence'],
+  ['ipo analyzer', 'https://www.credonomics.in/ipo/analyzer', 'IPO Data Score'],
   ['official identity', 'https://www.credonomics.in/official', 'www.credonomics.in'],
   ['robots', 'https://www.credonomics.in/robots.txt', 'sitemap.xml'],
   ['sitemap', 'https://www.credonomics.in/sitemap.xml', '/cards/cashback'],

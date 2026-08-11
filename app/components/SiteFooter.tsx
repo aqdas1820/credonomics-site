@@ -34,6 +34,7 @@ export default function SiteFooter() {
           <a href="/cards/all">All Verified Cards</a>
           <a href="/cards/coverage">Coverage</a>
           <a href="/cards/compare">Head-to-Head</a>
+          <a href="/ipo">IPO Intelligence</a>
         </div>
 
         <div className={styles.footerColumn}>

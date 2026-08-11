@@ -1,0 +1,51 @@
+name: Refresh IPO Intelligence Discovery
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 3,9 * * 1-5'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ipo-intelligence-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Refresh SEBI public-issue discovery
+        run: node scripts/ipo/refresh-ipo-discovery.mjs
+
+      - name: Validate normalized IPO records
+        run: node scripts/ipo/validate-ipo-data.mjs
+
+      - name: Build public normalized IPO module
+        run: node scripts/ipo/build-verified-ipos.mjs
+
+      - name: Commit research-data changes
+        shell: bash
+        run: |
+          FILES="app/data/ipo-discovery.generated.ts public/data/ipo/discovery.json app/data/verified-ipos.generated.ts"
+          if git diff --quiet -- $FILES; then
+            echo "No IPO discovery/data changes."
+            exit 0
+          fi
+
+          git config user.name "credonomics-research-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -- $FILES
+          git commit -m "Refresh IPO discovery intelligence"
+          git push

@@ -48,6 +48,7 @@ export default function SiteHeader() {
 
           <nav className={`${styles.navLinks} ${open ? styles.navLinksOpen : ''}`} aria-label="Primary navigation">
             <a href="/cards" onClick={() => setOpen(false)}>Compare Cards</a>
+            <a href="/ipo" onClick={() => setOpen(false)}>IPOs</a>
             <a href="/cards/all" onClick={() => setOpen(false)}>Card Directory</a>
             <a href="/research" onClick={() => setOpen(false)}>Research</a>
             <a href="/tools" onClick={() => setOpen(false)}>Tools</a>

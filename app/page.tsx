@@ -167,6 +167,41 @@ export default function Home() {
         </div>
       </section>
 
+
+      <section className={`${styles.wrap} ${styles.section}`}>
+        <div className={styles.sectionHead}>
+          <div>
+            <span className={styles.overline}>New / IPO Intelligence</span>
+            <h2>Investigate public offers with the same source-first discipline.</h2>
+          </div>
+          <p>
+            Track recent SEBI filings, normalize offer-document financials and compare a transparent
+            quantitative Data Score without subscribe/avoid calls or listing-gain forecasts.
+          </p>
+        </div>
+
+        <div className={styles.researchGrid}>
+          <article className={styles.contentCard}>
+            <span className={styles.iconTile}><FileSearch size={21}/></span>
+            <h3>SEBI filing discovery</h3>
+            <p>Recent DRHP, RHP, prospectus and amendment records flow into an automated IPO research queue.</p>
+            <a className={styles.textLink} href="/ipo">Open IPO Intelligence <ArrowRight size={14}/></a>
+          </article>
+          <article className={styles.contentCard}>
+            <span className={styles.iconTile}><BarChart3 size={21}/></span>
+            <h3>Quantitative Data Score</h3>
+            <p>Growth, returns, cash conversion, leverage, peer valuation and issue structure use fixed public weights.</p>
+            <a className={styles.textLink} href="/ipo/analyzer">Open IPO analyzer <ArrowRight size={14}/></a>
+          </article>
+          <article className={styles.contentCard}>
+            <span className={styles.iconTile}><ShieldCheck size={21}/></span>
+            <h3>Clear regulatory boundary</h3>
+            <p>No Subscribe/Avoid label, price target or GMP-driven fundamental score. Every result stays statistical and source-linked.</p>
+            <a className={styles.textLink} href="/ipo/methodology">Read IPO methodology <ArrowRight size={14}/></a>
+          </article>
+        </div>
+      </section>
+
       <section className={`${styles.wrap} ${styles.section}`}>
         <div className={styles.sectionHead}>
           <div>

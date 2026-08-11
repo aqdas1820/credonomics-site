@@ -23,6 +23,7 @@ export default function DisclosuresPage() {
           <article className={styles.policyCard}><span><FileSearch size={20}/></span><h2>General information</h2><p>Research, comparisons and calculators are general educational and informational content. They are not a recommendation to buy, sell, hold or subscribe to a security or financial product.</p></article>
           <article className={styles.policyCard}><span><Scale size={20}/></span><h2>Model limitations</h2><p>Outputs depend on inputs and assumptions. Merchant classification, exclusions, taxes, caps, issuer interpretation, eligibility and timing can materially change actual results.</p></article>
           <article className={styles.policyCard}><span><Target size={20}/></span><h2>No guarantee</h2><p>CredoNomics does not guarantee approvals, rewards, savings, returns, eligibility or any other financial outcome. Product providers make their own decisions under their current terms.</p></article>
+          <article className={styles.policyCard}><span><Scale size={20}/></span><h2>IPO / public-offer content</h2><p>IPO Intelligence is designed as general statistical and educational information. CredoNomics does not publish Subscribe/Avoid calls, price targets, personalized IPO advice or assurances about allotment, listing gains or future returns.</p></article>
         </div>
 
         <div className={styles.notice}>

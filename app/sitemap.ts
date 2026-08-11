@@ -4,6 +4,7 @@ import { cardCategories } from './data/card-categories'
 import { quickCalculators } from './data/quick-calculators'
 import { issuerRegistry } from './data/issuer-registry'
 import { verifiedRealCards } from './data/verified-real-cards'
+import { verifiedIpos } from './data/verified-ipos.generated'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://www.credonomics.in'
@@ -16,6 +17,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/cards/coverage`, lastModified: updated, priority: 0.9 },
     { url: `${base}/cards/compare`, lastModified: updated, priority: 0.86 },
     { url: `${base}/cards/analyzer`, lastModified: updated, priority: 0.8 },
+    { url: `${base}/ipo`, lastModified: updated, priority: 0.9 },
+    { url: `${base}/ipo/analyzer`, lastModified: updated, priority: 0.82 },
+    { url: `${base}/ipo/methodology`, lastModified: updated, priority: 0.75 },
     { url: `${base}/tools`, lastModified: updated, priority: 0.82 },
     { url: `${base}/research`, lastModified: updated, priority: 0.78 },
     { url: `${base}/methodology`, lastModified: updated, priority: 0.72 },
@@ -41,6 +45,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${base}/cards/${card.id}`,
       lastModified: new Date(`${card.verifiedAt}T00:00:00+05:30`),
       priority: 0.86,
+    })
+  }
+
+  for (const ipo of verifiedIpos) {
+    entries.push({
+      url: `${base}/ipo/${ipo.slug}`,
+      lastModified: new Date(`${ipo.lastVerified}T00:00:00+05:30`),
+      priority: 0.82,
     })
   }
 

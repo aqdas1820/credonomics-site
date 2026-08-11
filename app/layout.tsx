@@ -33,6 +33,10 @@ export const metadata: Metadata = {
     'credit card rewards calculator',
     'credit card annual fee calculator',
     'financial product research India',
+    'IPO analysis India',
+    'upcoming IPO India',
+    'IPO financial analysis',
+    'IPO valuation comparison',
   ],
   alternates: { canonical: '/' },
   icons: {

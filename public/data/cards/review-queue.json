@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-08-10T16:44:41.445Z",
-    "itemCount": 175,
-    "newCardCandidates": 167,
+    "generatedAt": "2026-08-11T08:12:30.152Z",
+    "itemCount": 192,
+    "newCardCandidates": 184,
     "possibleFeeChanges": 8,
     "reviewDue": 0
   },
@@ -437,6 +437,142 @@
       "issuer": "Axis Bank",
       "name": "SpiceJet Axis Bank Voyage Credit Card",
       "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "2d1dc98ec8d4",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Additional details about Add-on Card ?",
+      "sourceUrl": "https://www.federal.bank.in/add-on-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "ddae892ac916",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Can I cancel my credit card at any time?",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "fd4b7026f4eb",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Credit Card Application",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "222a7aa822c5",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Credit Card Debt Settlement Process- How it Works",
+      "sourceUrl": "https://www.federal.bank.in/credit-card-debt-settlement-process-how-it-works",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "bcaba0357615",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Credit Card Features & Benefits",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "15b570d31e1d",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Debit Cards Vs Credit Cards",
+      "sourceUrl": "https://www.federal.bank.in/difference-between-debit-cards-and-credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "29f29fff34a0",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Documents Required for Credit Card",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "a5e4d19e0ab2",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Everything you should know about Add-On Credit Cards",
+      "sourceUrl": "https://www.federal.bank.in/everything-you-should-know-about-add-on-credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "a377313fa1c4",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Federal Bank Credit Card Charges, Fees & Interest Rates",
+      "sourceUrl": "https://www.federal.bank.in/how-to-use-credit-cards-wisely",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "0c026fdb02ee",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Federal Bank Credit Card EMI",
+      "sourceUrl": "https://www.federal.bank.in/credit-card-emi",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "07c5ae0c3521",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Lost your federal bank card? Here are the ways to block it.",
+      "sourceUrl": "https://www.federal.bank.in/ways-to-block-a-lost-federal-bank-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "7a4a67290ad0",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Prevent your Credit Card from unauthorised use",
+      "sourceUrl": "https://www.federal.bank.in/prevent-your-credit-card-from-unauthorised-use",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "efed675a2dd9",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Secured Credit Cards",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "e38662f71875",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Step-by-Step Process to Apply for Credit Card",
+      "sourceUrl": "https://www.federal.bank.in/credit-card-activation",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "f0837eb064a9",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Things to Know Before Applying for a Credit Card",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards-mitc",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "eeb8652d258a",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Understand the Components of your Credit Card",
+      "sourceUrl": "https://www.federal.bank.in/understand-the-components-of-your-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "607a3c6bcdef",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Unlocking the Secret of Credit Card EMI- How to Buy Now and Pay Later",
+      "sourceUrl": "https://www.federal.bank.in/unlocking-the-secret-of-credit-card-emi-how-to-buy-now-and-pay-later",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {

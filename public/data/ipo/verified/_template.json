@@ -1,0 +1,87 @@
+{
+  "slug": "_replace-with-company-slug",
+  "companyName": "Company Limited",
+  "marketSegment": "mainboard",
+  "status": "upcoming",
+  "sector": "Example sector",
+  "industry": "Example industry",
+  "summary": "Neutral factual business summary from offer documents.",
+  "issue": {
+    "issueSizeCr": 0,
+    "freshIssueCr": 0,
+    "ofsCr": 0,
+    "priceBandLow": 0,
+    "priceBandHigh": 0,
+    "lotSize": 0,
+    "faceValue": 0,
+    "preIssuePromoterHoldingPercent": 0,
+    "postIssuePromoterHoldingPercent": 0,
+    "openDate": "YYYY-MM-DD",
+    "closeDate": "YYYY-MM-DD",
+    "listingDate": "YYYY-MM-DD",
+    "exchange": [
+      "NSE",
+      "BSE"
+    ],
+    "registrar": "",
+    "leadManagers": [],
+    "useOfProceeds": []
+  },
+  "financials": [
+    {
+      "period": "FY24",
+      "revenueCr": 0,
+      "ebitdaCr": 0,
+      "patCr": 0,
+      "netWorthCr": 0,
+      "totalDebtCr": 0,
+      "cfoCr": 0
+    },
+    {
+      "period": "FY25",
+      "revenueCr": 0,
+      "ebitdaCr": 0,
+      "patCr": 0,
+      "netWorthCr": 0,
+      "totalDebtCr": 0,
+      "cfoCr": 0
+    },
+    {
+      "period": "FY26",
+      "revenueCr": 0,
+      "ebitdaCr": 0,
+      "patCr": 0,
+      "netWorthCr": 0,
+      "totalDebtCr": 0,
+      "cfoCr": 0
+    }
+  ],
+  "valuation": {
+    "marketCapAtUpperBandCr": 0,
+    "peAtUpperBand": 0,
+    "peerMedianPe": 0,
+    "pbAtUpperBand": 0,
+    "peerMedianPb": 0
+  },
+  "quality": {
+    "roePercent": 0,
+    "rocePercent": 0,
+    "debtEquity": 0,
+    "cfoPat": 0,
+    "topCustomerRevenuePercent": 0,
+    "promoterPledgePercent": 0,
+    "contingentLiabilitiesCr": 0,
+    "relatedPartyTransactionsCr": 0,
+    "materialLitigationCount": 0
+  },
+  "riskFlags": [],
+  "sources": [
+    {
+      "label": "SEBI RHP / DRHP",
+      "url": "https://www.sebi.gov.in/",
+      "checkedAt": "YYYY-MM-DD",
+      "sourceType": "SEBI"
+    }
+  ],
+  "lastVerified": "YYYY-MM-DD"
+}

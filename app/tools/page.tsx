@@ -1,4 +1,4 @@
-﻿import { ArrowUpRight, FileSearch, ShieldCheck } from 'lucide-react'
+import { ArrowUpRight, FileSearch, ShieldCheck } from 'lucide-react'
 import SiteFrame from '../components/SiteFrame'
 import { PUBLIC_REVIEW_DATE, publicTools } from '../data/tool-registry'
 import { quickCalculators } from '../data/quick-calculators'
@@ -6,7 +6,7 @@ import styles from '../core-v4.module.css'
 
 export const metadata = {
   title: 'Financial Tools',
-  description: 'CredoNomics tools for credit-card decisions, cashback and fuel economics, plus mutual-fund portfolio intelligence in India.',
+  description: 'CredoNomics calculators for credit-card selection, cashback economics and fuel-card savings in India.',
 }
 
 export default function ToolsPage() {
@@ -39,21 +39,11 @@ export default function ToolsPage() {
             )
           })}
 
-          <a className={styles.toolCard} href="/tools/mf-portfolio-tracker">
-            <div className={styles.cardTop}>
-              <span className={styles.iconTile}><FileSearch size={22}/></span>
-              <span className={styles.statusPill}><i className={styles.liveDot}/> Live</span>
-            </div>
-            <span className={styles.cardLabel}>04 / Mutual Fund Intelligence</span>
-            <h3>MF Portfolio Tracker</h3>
-            <p>Track HDFC mutual fund portfolio holdings across 2025 and 2026, compare schemes and months, and study stock and sector changes.</p>
-            <div className={styles.cardFooter}><span>Portfolio intelligence</span><ArrowUpRight size={16}/></div>
-          </a>
           <a className={`${styles.toolCard} ${styles.researchCard}`} href="/methodology">
             <div className={styles.cardTop}><span className={styles.iconTile}><FileSearch size={22}/></span><span className={styles.statusPill}>Method</span></div>
-            <span className={styles.cardLabel}>05 / Verification</span>
+            <span className={styles.cardLabel}>04 / Verification</span>
             <h3>How calculations are built</h3>
-            <p>Review CredoNomicsâ€™ source hierarchy, normalization rules and approach to assumptions.</p>
+            <p>Review CredoNomics’ source hierarchy, normalization rules and approach to assumptions.</p>
             <div className={styles.cardFooter}><span>Read methodology</span><ArrowUpRight size={16}/></div>
           </a>
         </div>
@@ -92,4 +82,3 @@ export default function ToolsPage() {
     </SiteFrame>
   )
 }
-
