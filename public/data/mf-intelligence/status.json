@@ -1,5 +1,6 @@
 {
-  "dataset": "CredoNomics HDFC MF Portfolio Intelligence",
+  "dataset": "CredoNomics HDFC Core Equity Scheme Intelligence",
+  "scope": "Six selected actively managed HDFC equity schemes",
   "years": [
     2025,
     2026
@@ -25,14 +26,40 @@
     "2026-06"
   ],
   "latestMonth": "2026-06",
+  "coreSchemes": [
+    "HDFC Flexi Cap Fund",
+    "HDFC Mid-Cap Opportunities Fund",
+    "HDFC Small Cap Fund",
+    "HDFC Large and Mid Cap Fund",
+    "HDFC Multi Cap Fund",
+    "HDFC Focused 30 Fund"
+  ],
+  "presentCoreSchemes": [
+    "HDFC Mid-Cap Opportunities Fund",
+    "HDFC Large and Mid Cap Fund",
+    "HDFC Multi Cap Fund",
+    "HDFC Focused 30 Fund"
+  ],
+  "missingCoreSchemes": [
+    "HDFC Flexi Cap Fund",
+    "HDFC Small Cap Fund"
+  ],
+  "categories": [
+    "Flexi Cap",
+    "Mid Cap",
+    "Small Cap",
+    "Large & Mid Cap",
+    "Multi Cap",
+    "Focused"
+  ],
   "excludedSources": [
     "Index Solutions Factsheet",
     "Index Funds & ETFs Factsheet"
   ],
   "counts": {
-    "holdings": 2138,
-    "schemes": 60,
-    "stocks": 486,
+    "holdings": 1086,
+    "schemes": 4,
+    "stocks": 252,
     "amcs": 1
   }
 }
