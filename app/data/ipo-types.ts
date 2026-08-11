@@ -169,3 +169,52 @@ export type IpoDiscoveryRecord = {
   firstSeen: string
   lastSeen: string
 }
+
+
+export type IpoMarketRecord = {
+  slug: string
+  companyName: string
+  symbol?: string
+  marketSegment: IpoMarketSegment
+  status: IpoLifecycleStatus
+  securityType?: string
+  issue: IpoIssueStructure
+  subscription?: IpoSubscription
+  sharesOffered?: number
+  sharesBid?: number
+  estimatedIssueValueCr?: number
+  marketSource: 'NSE' | 'BSE' | 'NSE+BSE'
+  sourceUrl: string
+  issueInfoUrl?: string
+  fetchedAt: string
+}
+
+export type PublicIpoResearchState = 'exchange-live' | 'normalized'
+
+export type PublicIpoRecord = {
+  slug: string
+  companyName: string
+  symbol?: string
+  marketSegment: IpoMarketSegment
+  status: IpoLifecycleStatus
+  sector?: string
+  industry?: string
+  summary?: string
+  issue: IpoIssueStructure
+  financials: IpoFinancialPeriod[]
+  valuation?: IpoValuation
+  quality?: IpoQualityMetrics
+  subscription?: IpoSubscription
+  reservation?: IpoReservation
+  application?: IpoApplication
+  anchor?: IpoAnchor
+  listing?: IpoListing
+  company?: IpoCompanyProfile
+  riskFlags?: string[]
+  sources: IpoSource[]
+  lastUpdated: string
+  researchState: PublicIpoResearchState
+  sharesOffered?: number
+  sharesBid?: number
+  estimatedIssueValueCr?: number
+}

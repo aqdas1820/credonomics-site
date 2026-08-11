@@ -1,6 +1,6 @@
 import { CalendarDays, Database } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
-import { verifiedIpos } from '../../data/verified-ipos.generated'
+import { publicIpos } from '../../data/ipo-public'
 import styles from '../../core-v4.module.css'
 import local from '../ipo.module.css'
 import IpoSubnav from '../components/IpoSubnav'
@@ -12,7 +12,7 @@ export const metadata = {
 }
 
 export default function IpoCalendarPage() {
-  const records = verifiedIpos
+  const records = publicIpos
     .filter((ipo) => ipo.issue.openDate || ipo.issue.closeDate || ipo.issue.allotmentDate || ipo.issue.listingDate)
     .sort((a, b) => String(a.issue.openDate || a.issue.listingDate || '').localeCompare(String(b.issue.openDate || b.issue.listingDate || '')))
 

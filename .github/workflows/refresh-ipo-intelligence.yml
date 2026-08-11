@@ -1,4 +1,4 @@
-name: Refresh IPO Intelligence Discovery
+name: Refresh IPO Intelligence
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 18
 
     steps:
       - name: Checkout
@@ -26,26 +26,32 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Refresh SEBI public-issue discovery
+      - name: Refresh exchange IPO market master
+        run: node scripts/ipo/refresh-ipo-market-master.mjs
+
+      - name: Validate exchange IPO market master
+        run: node scripts/ipo/validate-ipo-market-master.mjs
+
+      - name: Refresh SEBI offer-document discovery
         run: node scripts/ipo/refresh-ipo-discovery.mjs
 
-      - name: Validate normalized IPO records
+      - name: Validate normalized IPO research
         run: node scripts/ipo/validate-ipo-data.mjs
 
-      - name: Build public normalized IPO module
+      - name: Build normalized IPO research module
         run: node scripts/ipo/build-verified-ipos.mjs
 
-      - name: Commit research-data changes
+      - name: Commit IPO data changes
         shell: bash
         run: |
-          FILES="app/data/ipo-discovery.generated.ts public/data/ipo/discovery.json app/data/verified-ipos.generated.ts"
+          FILES="app/data/ipo-market-master.generated.ts public/data/ipo/market-master.json app/data/ipo-discovery.generated.ts public/data/ipo/discovery.json app/data/verified-ipos.generated.ts"
           if git diff --quiet -- $FILES; then
-            echo "No IPO discovery/data changes."
+            echo "No IPO data changes."
             exit 0
           fi
 
           git config user.name "credonomics-research-bot"
           git config user.email "actions@users.noreply.github.com"
           git add -- $FILES
-          git commit -m "Refresh IPO discovery intelligence"
+          git commit -m "Refresh IPO market and filing intelligence"
           git push

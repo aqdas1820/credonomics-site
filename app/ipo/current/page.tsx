@@ -1,20 +1,20 @@
 import SiteFrame from '../../components/SiteFrame'
-import { verifiedIpos } from '../../data/verified-ipos.generated'
+import { publicIpos } from '../../data/ipo-public'
 import styles from '../../core-v4.module.css'
 import local from '../ipo.module.css'
 import IpoExplorer from '../components/IpoExplorer'
 import IpoSubnav from '../components/IpoSubnav'
+import IpoMarketStatus from '../components/IpoMarketStatus'
 
 export const metadata = {
   title: 'Current IPOs',
-  description: 'Browse current ipos in the CredoNomics source-backed IPO Intelligence database.',
+  description: 'Browse current ipos using the CredoNomics exchange market master and normalized IPO research database.',
   alternates: { canonical: '/ipo/current' },
 }
 
 export default function Page() {
-  const records = verifiedIpos
+  const records = publicIpos
     .filter((ipo) => ipo.status === 'open')
-    .filter((ipo) => true)
     .sort((a, b) => String(a.issue.openDate || a.issue.listingDate || '').localeCompare(String(b.issue.openDate || b.issue.listingDate || '')))
 
   return (
@@ -23,13 +23,18 @@ export default function Page() {
         <div className={styles.breadcrumbs}><a href="/">Home</a><span>/</span><a href="/ipo">IPO Intelligence</a><span>/</span><span>Current IPOs</span></div>
         <span className={styles.pageKicker}>IPO Intelligence / Current IPOs</span>
         <h1>Current IPOs</h1>
-        <p className={styles.pageHeroLead}>Source-backed issue terms, dates and quantitative data — with every record separated from unverified discovery signals.</p>
+        <p className={styles.pageHeroLead}>Exchange-backed issue status first; deeper financial research is layered in only after offer-document normalization.</p>
       </section>
 
-      <IpoSubnav active="Open"/>
+      <IpoSubnav active="Current"/>
 
       <section className={`${styles.wrap} ${styles.pageBody} ${local.shell}`}>
-        <IpoExplorer records={records} emptyTitle="No currently-open normalized IPOs." emptyText="A current IPO appears here only after its open/close dates and issue terms are source-backed in the normalized database."/>
+        <IpoExplorer
+          records={records}
+          emptyTitle="No IPO is open on the current exchange feed."
+          emptyText="That can be a genuine market state. The panels below still show upcoming exchange issues, recently closed issues and recent RHP/prospectus filings."
+        />
+        <IpoMarketStatus/>
       </section>
     </SiteFrame>
   )

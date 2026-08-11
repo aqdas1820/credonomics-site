@@ -9,6 +9,7 @@ const targets = [
   ['ipo analyzer', 'https://www.credonomics.in/ipo/analyzer', 'IPO Data Score'],
   ['ipo documents', 'https://www.credonomics.in/ipo/documents', 'IPO Documents'],
   ['ipo calendar', 'https://www.credonomics.in/ipo/calendar', 'IPO Calendar'],
+  ['ipo market master', 'https://www.credonomics.in/data/ipo/market-master.json', '"records"'],
   ['official identity', 'https://www.credonomics.in/official', 'www.credonomics.in'],
   ['robots', 'https://www.credonomics.in/robots.txt', 'sitemap.xml'],
   ['sitemap', 'https://www.credonomics.in/sitemap.xml', '/cards/cashback'],

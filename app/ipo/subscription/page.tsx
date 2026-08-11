@@ -1,6 +1,6 @@
 import { BarChart3, Database, ExternalLink } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
-import { verifiedIpos } from '../../data/verified-ipos.generated'
+import { publicIpos } from '../../data/ipo-public'
 import styles from '../../core-v4.module.css'
 import local from '../ipo.module.css'
 import IpoSubnav from '../components/IpoSubnav'
@@ -16,7 +16,7 @@ function x(value?: number) {
 }
 
 export default function SubscriptionPage() {
-  const records = verifiedIpos.filter((ipo) => ipo.subscription && (
+  const records = publicIpos.filter((ipo) => ipo.subscription && (
     ipo.subscription.total !== undefined ||
     ipo.subscription.qib !== undefined ||
     ipo.subscription.nii !== undefined ||

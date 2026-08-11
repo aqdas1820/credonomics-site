@@ -4,7 +4,7 @@ import { cardCategories } from './data/card-categories'
 import { quickCalculators } from './data/quick-calculators'
 import { issuerRegistry } from './data/issuer-registry'
 import { verifiedRealCards } from './data/verified-real-cards'
-import { verifiedIpos } from './data/verified-ipos.generated'
+import { publicIpos } from './data/ipo-public'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://www.credonomics.in'
@@ -55,10 +55,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   }
 
-  for (const ipo of verifiedIpos) {
+  for (const ipo of publicIpos) {
     entries.push({
       url: `${base}/ipo/${ipo.slug}`,
-      lastModified: new Date(`${ipo.lastVerified}T00:00:00+05:30`),
+      lastModified: new Date(ipo.lastUpdated),
       priority: 0.82,
     })
   }

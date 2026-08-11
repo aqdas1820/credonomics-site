@@ -7,6 +7,7 @@ import {
 import SiteFrame from '../components/SiteFrame'
 import { ipoDiscovery } from '../data/ipo-discovery.generated'
 import { verifiedIpos } from '../data/verified-ipos.generated'
+import { publicIpos, ipoMarketMasterMeta } from '../data/ipo-public'
 import styles from '../core-v4.module.css'
 import local from './ipo.module.css'
 import IpoDashboardOverview from './components/IpoDashboardOverview'
@@ -69,7 +70,7 @@ export default function IpoPage() {
         <div className={local.regulatoryNotice}>
           <ShieldCheck size={20}/>
           <p>
-            <b>Research boundary:</b> {verifiedIpos.length} normalized IPO record(s) currently meet the public data schema.
+            <b>Research boundary:</b> {publicIpos.length} exchange/normalized IPO record(s) are visible in the market layer; {verifiedIpos.length} currently meet the stricter financial research schema.
             CredoNomics does not convert its statistical Data Score into Subscribe/Avoid/Buy calls, price targets or
             listing-gain predictions.
           </p>

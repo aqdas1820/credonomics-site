@@ -1,5 +1,5 @@
 import SiteFrame from '../../components/SiteFrame'
-import { verifiedIpos } from '../../data/verified-ipos.generated'
+import { publicIpos } from '../../data/ipo-public'
 import styles from '../../core-v4.module.css'
 import local from '../ipo.module.css'
 import IpoExplorer from '../components/IpoExplorer'
@@ -7,13 +7,12 @@ import IpoSubnav from '../components/IpoSubnav'
 
 export const metadata = {
   title: 'SME IPOs',
-  description: 'Browse sme ipos in the CredoNomics source-backed IPO Intelligence database.',
+  description: 'Browse sme ipos using the CredoNomics exchange market master and normalized IPO research database.',
   alternates: { canonical: '/ipo/sme' },
 }
 
 export default function Page() {
-  const records = verifiedIpos
-    .filter((ipo) => true)
+  const records = publicIpos
     .filter((ipo) => ipo.marketSegment === 'sme')
     .sort((a, b) => String(a.issue.openDate || a.issue.listingDate || '').localeCompare(String(b.issue.openDate || b.issue.listingDate || '')))
 
@@ -23,13 +22,17 @@ export default function Page() {
         <div className={styles.breadcrumbs}><a href="/">Home</a><span>/</span><a href="/ipo">IPO Intelligence</a><span>/</span><span>SME IPOs</span></div>
         <span className={styles.pageKicker}>IPO Intelligence / SME IPOs</span>
         <h1>SME IPOs</h1>
-        <p className={styles.pageHeroLead}>Source-backed issue terms, dates and quantitative data — with every record separated from unverified discovery signals.</p>
+        <p className={styles.pageHeroLead}>Exchange-backed issue status first; deeper financial research is layered in only after offer-document normalization.</p>
       </section>
 
       <IpoSubnav active="SME"/>
 
       <section className={`${styles.wrap} ${styles.pageBody} ${local.shell}`}>
-        <IpoExplorer records={records} emptyTitle="No normalized SME IPO records yet." emptyText="SME issues use the same source-first architecture but remain clearly separated from Mainboard issues."/>
+        <IpoExplorer
+          records={records}
+          emptyTitle="No SME exchange record is available yet."
+          emptyText="The exchange market master refreshes automatically and keeps SME records separate from Mainboard issues."
+        />
       </section>
     </SiteFrame>
   )
