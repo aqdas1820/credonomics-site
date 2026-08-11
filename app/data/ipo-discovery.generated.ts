@@ -2,7 +2,7 @@
 import type { IpoDiscoveryRecord } from './ipo-types'
 
 export const ipoDiscoveryMeta = {
-  "generatedAt": "2026-08-11T09:10:22.205Z",
+  "generatedAt": "2026-08-11T11:34:18.413Z",
   "source": "SEBI Public Issues",
   "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
   "recordCount": 13,
@@ -58,7 +58,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentStage": "corrigendum",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-11T00:00:00.000Z",
-    "lastSeen": "2026-08-11T09:10:22.205Z",
+    "lastSeen": "2026-08-11T11:34:18.413Z",
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/hero-motors-limited-corrigendum-to-drhp_103180.html"
   },
   {
@@ -109,7 +109,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentStage": "addendum",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-11T00:00:00.000Z",
-    "lastSeen": "2026-08-11T09:10:22.205Z",
+    "lastSeen": "2026-08-11T11:34:18.413Z",
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/jul-2026/fusion-cx-limited-addendum-to-drhp_102992.html"
   },
   {
@@ -130,7 +130,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentStage": "corrigendum",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-11T00:00:00.000Z",
-    "lastSeen": "2026-08-11T09:10:22.205Z",
+    "lastSeen": "2026-08-11T11:34:18.413Z",
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/jul-2026/behari-lal-engineering-limited-corrigendum-to-drhp_102871.html"
   },
   {
@@ -142,6 +142,6 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/jul-2026/jesons-industries-limited-addendum-to-drhp_102564.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-11T09:10:22.205Z",
-    "lastSeen": "2026-08-11T09:10:22.205Z"
+    "lastSeen": "2026-08-11T11:34:18.413Z"
   }
 ]

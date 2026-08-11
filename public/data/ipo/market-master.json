@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generatedAt": "2026-08-11T09:10:19.208Z",
-    "recordCount": 29,
+    "generatedAt": "2026-08-11T11:34:06.691Z",
+    "recordCount": 7,
     "nseCount": 7,
-    "bseCount": 22,
+    "bseCount": 0,
     "activeCount": 7,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 7 · BSE SME 22 · BSE mainboard 0"
+    "sourceStatus": "NSE API 7 · BSE SME unavailable · BSE mainboard 0"
   },
   "records": [
     {
@@ -26,17 +26,17 @@
         ]
       },
       "subscription": {
-        "total": 2.522501273678495,
-        "updatedAt": "2026-08-11T09:10:19.208Z",
+        "total": 6.7092025179027,
+        "updatedAt": "2026-08-11T11:34:06.691Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=LEAP&type=Active"
       },
       "sharesOffered": 114991735,
-      "sharesBid": 290066798,
+      "sharesBid": 771502838,
       "estimatedIssueValueCr": 1828.37,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=LEAP&type=Active",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
+      "fetchedAt": "2026-08-11T11:34:06.691Z"
     },
     {
       "slug": "optimystix-entertainment-india-ltd-33daf2c",
@@ -53,16 +53,16 @@
         ]
       },
       "subscription": {
-        "total": 1.34,
-        "updatedAt": "2026-08-11T09:10:19.208Z",
+        "total": 1.91,
+        "updatedAt": "2026-08-11T11:34:06.691Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=OPTIMYSTIX&type=Active"
       },
       "sharesOffered": 4529600,
-      "sharesBid": 6087200,
+      "sharesBid": 8650400,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=OPTIMYSTIX&type=Active",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
+      "fetchedAt": "2026-08-11T11:34:06.691Z"
     },
     {
       "slug": "technocraft-ventures-ltd-2f4c36a",
@@ -81,17 +81,17 @@
         ]
       },
       "subscription": {
-        "total": 16.485629160810323,
-        "updatedAt": "2026-08-11T09:10:19.208Z",
+        "total": 29.950023986466583,
+        "updatedAt": "2026-08-11T11:34:06.691Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TECHNOCRAF&type=Active"
       },
       "sharesOffered": 8317190,
-      "sharesBid": 137114110,
+      "sharesBid": 249100040,
       "estimatedIssueValueCr": 176.32,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TECHNOCRAF&type=Active",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
+      "fetchedAt": "2026-08-11T11:34:06.691Z"
     },
     {
       "slug": "dhoot-transmission-ltd-9609d0c",
@@ -110,17 +110,17 @@
         ]
       },
       "subscription": {
-        "total": 2.3558233625628864,
-        "updatedAt": "2026-08-11T09:10:19.208Z",
+        "total": 3.0370511921148124,
+        "updatedAt": "2026-08-11T11:34:06.691Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=DHOOTTRANS&type=Active"
       },
       "sharesOffered": 24956363,
-      "sharesBid": 58792783,
+      "sharesBid": 75793752,
       "estimatedIssueValueCr": 2173.7,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=DHOOTTRANS&type=Active",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
+      "fetchedAt": "2026-08-11T11:34:06.691Z"
     },
     {
       "slug": "molbio-diagnostics-ltd-50a0755",
@@ -139,17 +139,17 @@
         ]
       },
       "subscription": {
-        "total": 1.5889717374296273,
-        "updatedAt": "2026-08-11T09:10:19.208Z",
+        "total": 2.05074174523373,
+        "updatedAt": "2026-08-11T11:34:06.691Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MOLBIO&type=Active"
       },
       "sharesOffered": 8158529,
-      "sharesBid": 12963672,
+      "sharesBid": 16731036,
       "estimatedIssueValueCr": 658.39,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MOLBIO&type=Active",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
+      "fetchedAt": "2026-08-11T11:34:06.691Z"
     },
     {
       "slug": "fascinate-textiles-ltd-5c29ab4",
@@ -166,16 +166,16 @@
         ]
       },
       "subscription": {
-        "total": 0.02,
-        "updatedAt": "2026-08-11T09:10:19.208Z",
+        "total": 0.05,
+        "updatedAt": "2026-08-11T11:34:06.691Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=FASCINATE&type=Active"
       },
       "sharesOffered": 4293600,
-      "sharesBid": 105600,
+      "sharesBid": 204800,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=FASCINATE&type=Active",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
+      "fetchedAt": "2026-08-11T11:34:06.691Z"
     },
     {
       "slug": "milky-mist-dairy-food-ltd-e7bdb5b",
@@ -194,457 +194,17 @@
         ]
       },
       "subscription": {
-        "total": 0.3721089905059576,
-        "updatedAt": "2026-08-11T09:10:19.208Z",
+        "total": 0.5315724992825029,
+        "updatedAt": "2026-08-11T11:34:06.691Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MILKYMIST&type=Active"
       },
       "sharesOffered": 81798244,
-      "sharesBid": 30437862,
+      "sharesBid": 43481697,
       "estimatedIssueValueCr": 1145.18,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MILKYMIST&type=Active",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "crazy-snacks-ltd-b4274a4",
-      "companyName": "Crazy Snacks Limited",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 39,
-        "priceBandHigh": 42,
-        "faceValue": 10,
-        "openDate": "2026-06-25",
-        "closeDate": "2026-06-30",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "adon-agro-commodities-ltd-8d89da8",
-      "companyName": "Adon Agro Commodities Limited",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 66,
-        "priceBandHigh": 70,
-        "faceValue": 10,
-        "openDate": "2026-06-29",
-        "closeDate": "2026-07-01",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "twinkle-papers-ltd-dece8e7",
-      "companyName": "Twinkle Papers Limited",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 64,
-        "priceBandHigh": 69,
-        "faceValue": 10,
-        "openDate": "2026-06-29",
-        "closeDate": "2026-06-30",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "atharva-poly-plast-ltd-d5e8492",
-      "companyName": "ATHARVA POLY-PLAST LIMITED",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 55,
-        "priceBandHigh": 60,
-        "faceValue": 10,
-        "openDate": "2026-06-30",
-        "closeDate": "2026-07-02",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "kratikal-tech-ltd-f2ae939",
-      "companyName": "KRATIKAL TECH LIMITED",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 128,
-        "priceBandHigh": 135,
-        "faceValue": 10,
-        "openDate": "2026-06-30",
-        "closeDate": "2026-07-02",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "sampark-india-logistics-ltd-4993749",
-      "companyName": "Sampark India Logistics Limited",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 80,
-        "priceBandHigh": 84,
-        "faceValue": 10,
-        "openDate": "2026-06-30",
-        "closeDate": "2026-07-02",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "seemax-resources-ltd-61880da",
-      "companyName": "Seemax Resources Limited",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 134,
-        "priceBandHigh": 141,
-        "faceValue": 10,
-        "openDate": "2026-06-30",
-        "closeDate": "2026-07-02",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "devson-catalyst-ltd-a275d60",
-      "companyName": "DEVSON CATALYST LIMITED",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 112,
-        "priceBandHigh": 118,
-        "faceValue": 10,
-        "openDate": "2026-07-09",
-        "closeDate": "2026-07-13",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "millworks-technologies-ltd-5db54b2",
-      "companyName": "Millworks Technologies Limited",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 315,
-        "priceBandHigh": 331,
-        "faceValue": 10,
-        "openDate": "2026-07-14",
-        "closeDate": "2026-07-16",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "sotefin-bharat-ltd-a45a927",
-      "companyName": "Sotefin Bharat Limited",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 178,
-        "priceBandHigh": 187,
-        "faceValue": 10,
-        "openDate": "2026-07-16",
-        "closeDate": "2026-07-20",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "gulf-lloyds-india-ltd-a8262e3",
-      "companyName": "GULF LLOYDS INDIA LIMITED",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 100,
-        "priceBandHigh": 100,
-        "faceValue": 10,
-        "openDate": "2026-07-20",
-        "closeDate": "2026-07-22",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "shree-balaji-mala-textiles-ltd-4ba1afc",
-      "companyName": "Shree Balaji (Mala) Textiles Limited",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 66,
-        "priceBandHigh": 70,
-        "faceValue": 10,
-        "openDate": "2026-07-22",
-        "closeDate": "2026-07-24",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "silverstorm-parks-and-resorts-ltd-623a372",
-      "companyName": "SILVERSTORM PARKS AND RESORTS LIMITED",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 123,
-        "priceBandHigh": 133,
-        "faceValue": 10,
-        "openDate": "2026-07-24",
-        "closeDate": "2026-07-28",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "advance-technoforge-ltd-20e1335",
-      "companyName": "ADVANCE TECHNOFORGE LIMITED",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 95,
-        "priceBandHigh": 95,
-        "faceValue": 10,
-        "openDate": "2026-07-27",
-        "closeDate": "2026-07-29",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "poojaa-precision-engg-ltd-371c23c",
-      "companyName": "POOJAA PRECISION ENGG LIMITED",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 285,
-        "priceBandHigh": 301,
-        "faceValue": 10,
-        "openDate": "2026-07-28",
-        "closeDate": "2026-07-30",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "h-r-hygiene-products-ltd-fada3f0",
-      "companyName": "H. R. Hygiene Products Limited",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 83,
-        "priceBandHigh": 88,
-        "faceValue": 10,
-        "openDate": "2026-07-29",
-        "closeDate": "2026-07-31",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "dhaval-packaging-ltd-6f16b5f",
-      "companyName": "DHAVAL PACKAGING LIMITED",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 92,
-        "priceBandHigh": 97,
-        "faceValue": 10,
-        "openDate": "2026-07-30",
-        "closeDate": "2026-08-03",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "oneindig-technologies-ltd-3f45d81",
-      "companyName": "Oneindig Technologies Limited",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 91,
-        "priceBandHigh": 96,
-        "faceValue": 10,
-        "openDate": "2026-07-30",
-        "closeDate": "2026-08-03",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "fusion-klassroom-edutech-ltd-2443a9c",
-      "companyName": "Fusion Klassroom Edutech Limited",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 151,
-        "priceBandHigh": 159,
-        "faceValue": 10,
-        "openDate": "2026-07-31",
-        "closeDate": "2026-08-04",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "g-v-electricals-ltd-0787444",
-      "companyName": "G V Electricals Ltd",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 123,
-        "priceBandHigh": 130,
-        "faceValue": 10,
-        "openDate": "2026-07-31",
-        "closeDate": "2026-08-07",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "aegeus-technologies-ltd-b6b680d",
-      "companyName": "Aegeus Technologies Limited",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 100,
-        "priceBandHigh": 105,
-        "faceValue": 10,
-        "openDate": "2026-08-04",
-        "closeDate": "2026-08-06",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
-    },
-    {
-      "slug": "lapl-automotive-ltd-8618aca",
-      "companyName": "LAPL AUTOMOTIVE LIMITED",
-      "marketSegment": "sme",
-      "status": "closed",
-      "securityType": "SME",
-      "issue": {
-        "priceBandLow": 88,
-        "priceBandHigh": 94,
-        "faceValue": 10,
-        "openDate": "2026-08-06",
-        "closeDate": "2026-08-10",
-        "exchange": [
-          "BSE"
-        ]
-      },
-      "marketSource": "BSE",
-      "sourceUrl": "https://www.bsesme.com/PublicIssues/PublicIssues.aspx?id=2",
-      "fetchedAt": "2026-08-11T09:10:19.208Z"
+      "fetchedAt": "2026-08-11T11:34:06.691Z"
     }
   ]
 }
