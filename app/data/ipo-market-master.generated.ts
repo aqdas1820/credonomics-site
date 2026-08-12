@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-08-12T08:05:07.960Z",
+  "generatedAt": "2026-08-12T11:56:14.613Z",
   "recordCount": 7,
   "nseCount": 7,
   "bseCount": 0,
@@ -31,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 10.253988451762783,
-      "updatedAt": "2026-08-12T08:05:07.960Z",
+      "total": 50.02996370104089,
+      "updatedAt": "2026-08-12T11:56:14.613Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=DHOOTTRANS&type=Active"
     },
     "sharesOffered": 24956363,
-    "sharesBid": 255902258,
+    "sharesBid": 1248565935,
     "estimatedIssueValueCr": 2173.7,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=DHOOTTRANS&type=Active",
-    "fetchedAt": "2026-08-12T08:05:07.960Z"
+    "fetchedAt": "2026-08-12T11:56:14.613Z"
   },
   {
     "slug": "molbio-diagnostics-ltd-50a0755",
@@ -60,17 +60,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 10.985421514098926,
-      "updatedAt": "2026-08-12T08:05:07.960Z",
+      "total": 43.068579397094744,
+      "updatedAt": "2026-08-12T11:56:14.613Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MOLBIO&type=Active"
     },
     "sharesOffered": 8158529,
-    "sharesBid": 89624880,
+    "sharesBid": 351376254,
     "estimatedIssueValueCr": 658.39,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MOLBIO&type=Active",
-    "fetchedAt": "2026-08-12T08:05:07.960Z"
+    "fetchedAt": "2026-08-12T11:56:14.613Z"
   },
   {
     "slug": "fascinate-textiles-ltd-5c29ab4",
@@ -87,16 +87,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.1,
-      "updatedAt": "2026-08-12T08:05:07.960Z",
+      "total": 0.16,
+      "updatedAt": "2026-08-12T11:56:14.613Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=FASCINATE&type=Active"
     },
     "sharesOffered": 4293600,
-    "sharesBid": 408000,
+    "sharesBid": 699200,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=FASCINATE&type=Active",
-    "fetchedAt": "2026-08-12T08:05:07.960Z"
+    "fetchedAt": "2026-08-12T11:56:14.613Z"
   },
   {
     "slug": "milky-mist-dairy-food-ltd-e7bdb5b",
@@ -115,17 +115,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 1.1970980086076175,
-      "updatedAt": "2026-08-12T08:05:07.960Z",
+      "total": 1.5902111052652914,
+      "updatedAt": "2026-08-12T11:56:14.613Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MILKYMIST&type=Active"
     },
     "sharesOffered": 81798244,
-    "sharesBid": 97920515,
+    "sharesBid": 130076476,
     "estimatedIssueValueCr": 1145.18,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MILKYMIST&type=Active",
-    "fetchedAt": "2026-08-12T08:05:07.960Z"
+    "fetchedAt": "2026-08-12T11:56:14.613Z"
   },
   {
     "slug": "behari-lal-engineering-ltd-bdf7897",
@@ -144,17 +144,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.6943440433662509,
-      "updatedAt": "2026-08-12T08:05:07.960Z",
+      "total": 1.3527015343389224,
+      "updatedAt": "2026-08-12T11:56:14.613Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BLEL&type=Active"
     },
     "sharesOffered": 7412769,
-    "sharesBid": 5147012,
+    "sharesBid": 10027264,
     "estimatedIssueValueCr": 211.26,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BLEL&type=Active",
-    "fetchedAt": "2026-08-12T08:05:07.960Z"
+    "fetchedAt": "2026-08-12T11:56:14.613Z"
   },
   {
     "slug": "pramodini-medicare-ltd-b00113a",
@@ -171,16 +171,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.57,
-      "updatedAt": "2026-08-12T08:05:07.960Z",
+      "total": 0.69,
+      "updatedAt": "2026-08-12T11:56:14.613Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=PRAMODINI&type=Active"
     },
     "sharesOffered": 4490400,
-    "sharesBid": 2550000,
+    "sharesBid": 3120000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=PRAMODINI&type=Active",
-    "fetchedAt": "2026-08-12T08:05:07.960Z"
+    "fetchedAt": "2026-08-12T11:56:14.613Z"
   },
   {
     "slug": "shiprocket-ltd-2d92882",
@@ -199,16 +199,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.3725280277029858,
-      "updatedAt": "2026-08-12T08:05:07.960Z",
+      "total": 0.6980664689102242,
+      "updatedAt": "2026-08-12T11:56:14.613Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHIPROCKET&type=Active"
     },
     "sharesOffered": 94436030,
-    "sharesBid": 35180068,
+    "sharesBid": 65922626,
     "estimatedIssueValueCr": 916.03,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHIPROCKET&type=Active",
-    "fetchedAt": "2026-08-12T08:05:07.960Z"
+    "fetchedAt": "2026-08-12T11:56:14.613Z"
   }
 ]
