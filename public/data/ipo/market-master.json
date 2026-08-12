@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-08-11T11:34:06.691Z",
+    "generatedAt": "2026-08-12T08:05:07.960Z",
     "recordCount": 7,
     "nseCount": 7,
     "bseCount": 0,
@@ -9,90 +9,6 @@
     "sourceStatus": "NSE API 7 · BSE SME unavailable · BSE mainboard 0"
   },
   "records": [
-    {
-      "slug": "leap-india-ltd-7aca743",
-      "companyName": "Leap India Limited",
-      "symbol": "LEAP",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 151,
-        "priceBandHigh": 159,
-        "openDate": "2026-08-07",
-        "closeDate": "2026-08-11",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 6.7092025179027,
-        "updatedAt": "2026-08-11T11:34:06.691Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=LEAP&type=Active"
-      },
-      "sharesOffered": 114991735,
-      "sharesBid": 771502838,
-      "estimatedIssueValueCr": 1828.37,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=LEAP&type=Active",
-      "fetchedAt": "2026-08-11T11:34:06.691Z"
-    },
-    {
-      "slug": "optimystix-entertainment-india-ltd-33daf2c",
-      "companyName": "Optimystix Entertainment India Limited",
-      "symbol": "OPTIMYSTIX",
-      "marketSegment": "sme",
-      "status": "open",
-      "securityType": "SME",
-      "issue": {
-        "openDate": "2026-08-07",
-        "closeDate": "2026-08-11",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 1.91,
-        "updatedAt": "2026-08-11T11:34:06.691Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=OPTIMYSTIX&type=Active"
-      },
-      "sharesOffered": 4529600,
-      "sharesBid": 8650400,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=OPTIMYSTIX&type=Active",
-      "fetchedAt": "2026-08-11T11:34:06.691Z"
-    },
-    {
-      "slug": "technocraft-ventures-ltd-2f4c36a",
-      "companyName": "Technocraft Ventures Limited",
-      "symbol": "TECHNOCRAF",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 200,
-        "priceBandHigh": 212,
-        "openDate": "2026-08-07",
-        "closeDate": "2026-08-11",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 29.950023986466583,
-        "updatedAt": "2026-08-11T11:34:06.691Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TECHNOCRAF&type=Active"
-      },
-      "sharesOffered": 8317190,
-      "sharesBid": 249100040,
-      "estimatedIssueValueCr": 176.32,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TECHNOCRAF&type=Active",
-      "fetchedAt": "2026-08-11T11:34:06.691Z"
-    },
     {
       "slug": "dhoot-transmission-ltd-9609d0c",
       "companyName": "Dhoot Transmission Limited",
@@ -110,17 +26,17 @@
         ]
       },
       "subscription": {
-        "total": 3.0370511921148124,
-        "updatedAt": "2026-08-11T11:34:06.691Z",
+        "total": 10.253988451762783,
+        "updatedAt": "2026-08-12T08:05:07.960Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=DHOOTTRANS&type=Active"
       },
       "sharesOffered": 24956363,
-      "sharesBid": 75793752,
+      "sharesBid": 255902258,
       "estimatedIssueValueCr": 2173.7,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=DHOOTTRANS&type=Active",
-      "fetchedAt": "2026-08-11T11:34:06.691Z"
+      "fetchedAt": "2026-08-12T08:05:07.960Z"
     },
     {
       "slug": "molbio-diagnostics-ltd-50a0755",
@@ -139,17 +55,17 @@
         ]
       },
       "subscription": {
-        "total": 2.05074174523373,
-        "updatedAt": "2026-08-11T11:34:06.691Z",
+        "total": 10.985421514098926,
+        "updatedAt": "2026-08-12T08:05:07.960Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MOLBIO&type=Active"
       },
       "sharesOffered": 8158529,
-      "sharesBid": 16731036,
+      "sharesBid": 89624880,
       "estimatedIssueValueCr": 658.39,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MOLBIO&type=Active",
-      "fetchedAt": "2026-08-11T11:34:06.691Z"
+      "fetchedAt": "2026-08-12T08:05:07.960Z"
     },
     {
       "slug": "fascinate-textiles-ltd-5c29ab4",
@@ -166,16 +82,16 @@
         ]
       },
       "subscription": {
-        "total": 0.05,
-        "updatedAt": "2026-08-11T11:34:06.691Z",
+        "total": 0.1,
+        "updatedAt": "2026-08-12T08:05:07.960Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=FASCINATE&type=Active"
       },
       "sharesOffered": 4293600,
-      "sharesBid": 204800,
+      "sharesBid": 408000,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=FASCINATE&type=Active",
-      "fetchedAt": "2026-08-11T11:34:06.691Z"
+      "fetchedAt": "2026-08-12T08:05:07.960Z"
     },
     {
       "slug": "milky-mist-dairy-food-ltd-e7bdb5b",
@@ -194,17 +110,101 @@
         ]
       },
       "subscription": {
-        "total": 0.5315724992825029,
-        "updatedAt": "2026-08-11T11:34:06.691Z",
+        "total": 1.1970980086076175,
+        "updatedAt": "2026-08-12T08:05:07.960Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MILKYMIST&type=Active"
       },
       "sharesOffered": 81798244,
-      "sharesBid": 43481697,
+      "sharesBid": 97920515,
       "estimatedIssueValueCr": 1145.18,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MILKYMIST&type=Active",
-      "fetchedAt": "2026-08-11T11:34:06.691Z"
+      "fetchedAt": "2026-08-12T08:05:07.960Z"
+    },
+    {
+      "slug": "behari-lal-engineering-ltd-bdf7897",
+      "companyName": "Behari Lal Engineering Limited",
+      "symbol": "BLEL",
+      "marketSegment": "mainboard",
+      "status": "open",
+      "securityType": "EQ",
+      "issue": {
+        "priceBandLow": 271,
+        "priceBandHigh": 285,
+        "openDate": "2026-08-12",
+        "closeDate": "2026-08-14",
+        "exchange": [
+          "NSE"
+        ]
+      },
+      "subscription": {
+        "total": 0.6943440433662509,
+        "updatedAt": "2026-08-12T08:05:07.960Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BLEL&type=Active"
+      },
+      "sharesOffered": 7412769,
+      "sharesBid": 5147012,
+      "estimatedIssueValueCr": 211.26,
+      "marketSource": "NSE",
+      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BLEL&type=Active",
+      "fetchedAt": "2026-08-12T08:05:07.960Z"
+    },
+    {
+      "slug": "pramodini-medicare-ltd-b00113a",
+      "companyName": "Pramodini Medicare Limited",
+      "symbol": "PRAMODINI",
+      "marketSegment": "sme",
+      "status": "open",
+      "securityType": "SME",
+      "issue": {
+        "openDate": "2026-08-12",
+        "closeDate": "2026-08-14",
+        "exchange": [
+          "NSE"
+        ]
+      },
+      "subscription": {
+        "total": 0.57,
+        "updatedAt": "2026-08-12T08:05:07.960Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=PRAMODINI&type=Active"
+      },
+      "sharesOffered": 4490400,
+      "sharesBid": 2550000,
+      "marketSource": "NSE",
+      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=PRAMODINI&type=Active",
+      "fetchedAt": "2026-08-12T08:05:07.960Z"
+    },
+    {
+      "slug": "shiprocket-ltd-2d92882",
+      "companyName": "Shiprocket Limited",
+      "symbol": "SHIPROCKET",
+      "marketSegment": "mainboard",
+      "status": "open",
+      "securityType": "EQ",
+      "issue": {
+        "priceBandLow": 92,
+        "priceBandHigh": 97,
+        "openDate": "2026-08-12",
+        "closeDate": "2026-08-14",
+        "exchange": [
+          "NSE"
+        ]
+      },
+      "subscription": {
+        "total": 0.3725280277029858,
+        "updatedAt": "2026-08-12T08:05:07.960Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHIPROCKET&type=Active"
+      },
+      "sharesOffered": 94436030,
+      "sharesBid": 35180068,
+      "estimatedIssueValueCr": 916.03,
+      "marketSource": "NSE",
+      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHIPROCKET&type=Active",
+      "fetchedAt": "2026-08-12T08:05:07.960Z"
     }
   ]
 }
