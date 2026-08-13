@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-08-11T09:10:29.715Z",
-    "itemCount": 175,
-    "newCardCandidates": 167,
+    "generatedAt": "2026-08-13T07:03:42.170Z",
+    "itemCount": 224,
+    "newCardCandidates": 216,
     "possibleFeeChanges": 8,
     "reviewDue": 0
   },
@@ -149,6 +149,254 @@
       "issuer": "American Express India",
       "name": "My Card",
       "sourceUrl": "https://www.americanexpress.com/in/benefits/card-selector.html?inav=en_in_menu_my_account_my_card_card_benefits",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "4527f98a32e9",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Add-On Credit Card",
+      "sourceUrl": "https://www.au.bank.in/cards/credit-cards/add-on-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "2b9d52a95e7b",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Altura Credit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/altura-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "a359c3d478c3",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Ananta Credit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/ananta-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "a9a6a0887849",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "AU CS Credit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/au-cs-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "6695b5702d07",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "AU Royale Business Debit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "ff8aebbf7727",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Block Lost/Stolen Card",
+      "sourceUrl": "https://www.au.bank.in/cards/credit-card/block-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "cf2ac8430a84",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Business Cashback Credit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/commercial-credit-cards/business-cashback-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "b9b710a773ff",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "CA Metal Credit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/ca-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "65388a6bfd3f",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Cards",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "ecf7a81c811d",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "CheQ AU Credit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/cheq-au-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "e340250277fd",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Corporate Credit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/commercial-credit-cards/corporate-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "8067dee4dc56",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Do I get Cashback or Reward Points for transactions done on my Add-on card?",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "a3acdf972642",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Go through the Credit Card MITC or Key Fact Statement for details of applicable fees and charges.",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "e22c59545519",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "I have not received my monthly Credit Card statement, what can I do?",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "5c9976ff51ca",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Is there any Annual fees applicable on my Credit Card?",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "f5fa786d110a",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Is there any charge applicable for doing International transaction on Credit Card?",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "5dcf80cdf8a6",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Is there any exception to the kind of FDs that can be used to apply for an FD based Credit Card?",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "9a4d27831fcd",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Laksya Credit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/laksya-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "310ce198fff2",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "LIT Credit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/lit-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "f081d61724d6",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Manage Features Of LIT Credit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "af060de591fe",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "NOMO Credit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/nomo-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "772c54788530",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Paytm AU Credit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/paytm-au-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "8961766a3013",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Prathama Credit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/prathama-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "35d51a7b50fa",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Presenting AU Credit Cards, A World of Limitless Possibilities.",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "03ee3d79098b",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Set/Reset PIN & Activate Card",
+      "sourceUrl": "https://www.au.bank.in/cards/credit-card/manage-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "eff30583b522",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Spont Credit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/au-spont-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "dce2697dbb1b",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Tejas Credit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/tejas-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "f80a2aa44483",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Traverse Credit Card for NRIs",
+      "sourceUrl": "https://www.au.bank.in/premium-banking/credit-cards/traverse-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "d202020e13a5",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Vetta Credit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/vetta-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "87378ac43f56",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Visa Business Gold Debit Card",
+      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "dc282f17cf9a",
+      "type": "new-card-candidate",
+      "issuer": "AU Small Finance Bank",
+      "name": "Zenith+ Credit Card",
+      "sourceUrl": "https://www.au.bank.in/premium-banking/credit-cards/zenith-plus-credit-card",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
@@ -440,6 +688,142 @@
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
+      "id": "2d1dc98ec8d4",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Additional details about Add-on Card ?",
+      "sourceUrl": "https://www.federal.bank.in/add-on-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "ddae892ac916",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Can I cancel my credit card at any time?",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "fd4b7026f4eb",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Credit Card Application",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "222a7aa822c5",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Credit Card Debt Settlement Process- How it Works",
+      "sourceUrl": "https://www.federal.bank.in/credit-card-debt-settlement-process-how-it-works",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "bcaba0357615",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Credit Card Features & Benefits",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "15b570d31e1d",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Debit Cards Vs Credit Cards",
+      "sourceUrl": "https://www.federal.bank.in/difference-between-debit-cards-and-credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "29f29fff34a0",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Documents Required for Credit Card",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "a5e4d19e0ab2",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Everything you should know about Add-On Credit Cards",
+      "sourceUrl": "https://www.federal.bank.in/everything-you-should-know-about-add-on-credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "a377313fa1c4",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Federal Bank Credit Card Charges, Fees & Interest Rates",
+      "sourceUrl": "https://www.federal.bank.in/how-to-use-credit-cards-wisely",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "0c026fdb02ee",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Federal Bank Credit Card EMI",
+      "sourceUrl": "https://www.federal.bank.in/credit-card-emi",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "07c5ae0c3521",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Lost your federal bank card? Here are the ways to block it.",
+      "sourceUrl": "https://www.federal.bank.in/ways-to-block-a-lost-federal-bank-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "7a4a67290ad0",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Prevent your Credit Card from unauthorised use",
+      "sourceUrl": "https://www.federal.bank.in/prevent-your-credit-card-from-unauthorised-use",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "efed675a2dd9",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Secured Credit Cards",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "e38662f71875",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Step-by-Step Process to Apply for Credit Card",
+      "sourceUrl": "https://www.federal.bank.in/credit-card-activation",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "f0837eb064a9",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Things to Know Before Applying for a Credit Card",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards-mitc",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "eeb8652d258a",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Understand the Components of your Credit Card",
+      "sourceUrl": "https://www.federal.bank.in/understand-the-components-of-your-credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "607a3c6bcdef",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Unlocking the Secret of Credit Card EMI- How to Buy Now and Pay Later",
+      "sourceUrl": "https://www.federal.bank.in/unlocking-the-secret-of-credit-card-emi-how-to-buy-now-and-pay-later",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
       "id": "71f5cbc7125d",
       "type": "new-card-candidate",
       "issuer": "HSBC India",
@@ -637,6 +1021,14 @@
       "issuer": "ICICI Bank",
       "name": "Get the best Credit Card",
       "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/sapphiro-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "61828576e214",
+      "type": "new-card-candidate",
+      "issuer": "ICICI Bank",
+      "name": "Personal Loan Credit Card",
+      "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/culinary-treat",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
