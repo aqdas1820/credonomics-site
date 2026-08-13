@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-08-13T08:06:47.456Z",
+    "generatedAt": "2026-08-13T11:56:59.963Z",
     "recordCount": 6,
     "nseCount": 6,
     "bseCount": 0,
@@ -18,22 +18,22 @@
       "securityType": "SME",
       "issue": {
         "openDate": "2026-08-11",
-        "closeDate": "2026-08-13",
+        "closeDate": "2026-08-19",
         "exchange": [
           "NSE"
         ]
       },
       "subscription": {
-        "total": 0.37,
-        "updatedAt": "2026-08-13T08:06:47.456Z",
+        "total": 0.44,
+        "updatedAt": "2026-08-13T11:56:59.963Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=FASCINATE&type=Active"
       },
       "sharesOffered": 4293600,
-      "sharesBid": 1569600,
+      "sharesBid": 1880000,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=FASCINATE&type=Active",
-      "fetchedAt": "2026-08-13T08:06:47.456Z"
+      "fetchedAt": "2026-08-13T11:56:59.963Z"
     },
     {
       "slug": "milky-mist-dairy-food-ltd-e7bdb5b",
@@ -52,17 +52,17 @@
         ]
       },
       "subscription": {
-        "total": 10.570887732015372,
-        "updatedAt": "2026-08-13T08:06:47.456Z",
+        "total": 41.16796564728211,
+        "updatedAt": "2026-08-13T11:56:59.963Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MILKYMIST&type=Active"
       },
       "sharesOffered": 81798244,
-      "sharesBid": 864680054,
+      "sharesBid": 3367467299,
       "estimatedIssueValueCr": 1145.18,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MILKYMIST&type=Active",
-      "fetchedAt": "2026-08-13T08:06:47.456Z"
+      "fetchedAt": "2026-08-13T11:56:59.963Z"
     },
     {
       "slug": "behari-lal-engineering-ltd-bdf7897",
@@ -81,17 +81,17 @@
         ]
       },
       "subscription": {
-        "total": 3.658464468540703,
-        "updatedAt": "2026-08-13T08:06:47.456Z",
+        "total": 5.438150305236815,
+        "updatedAt": "2026-08-13T11:56:59.963Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BLEL&type=Active"
       },
       "sharesOffered": 7412769,
-      "sharesBid": 27119352,
+      "sharesBid": 40311752,
       "estimatedIssueValueCr": 211.26,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BLEL&type=Active",
-      "fetchedAt": "2026-08-13T08:06:47.456Z"
+      "fetchedAt": "2026-08-13T11:56:59.963Z"
     },
     {
       "slug": "pramodini-medicare-ltd-b00113a",
@@ -108,16 +108,16 @@
         ]
       },
       "subscription": {
-        "total": 0.8,
-        "updatedAt": "2026-08-13T08:06:47.456Z",
+        "total": 0.91,
+        "updatedAt": "2026-08-13T11:56:59.963Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=PRAMODINI&type=Active"
       },
       "sharesOffered": 4490400,
-      "sharesBid": 3592800,
+      "sharesBid": 4096800,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=PRAMODINI&type=Active",
-      "fetchedAt": "2026-08-13T08:06:47.456Z"
+      "fetchedAt": "2026-08-13T11:56:59.963Z"
     },
     {
       "slug": "shiprocket-ltd-2d92882",
@@ -136,17 +136,17 @@
         ]
       },
       "subscription": {
-        "total": 1.5174790808126941,
-        "updatedAt": "2026-08-13T08:06:47.456Z",
+        "total": 2.2856997059279176,
+        "updatedAt": "2026-08-13T11:56:59.963Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHIPROCKET&type=Active"
       },
       "sharesOffered": 94436030,
-      "sharesBid": 143304700,
+      "sharesBid": 215852406,
       "estimatedIssueValueCr": 916.03,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHIPROCKET&type=Active",
-      "fetchedAt": "2026-08-13T08:06:47.456Z"
+      "fetchedAt": "2026-08-13T11:56:59.963Z"
     },
     {
       "slug": "credent-connect-n-care-ltd-ef82533",
@@ -163,16 +163,16 @@
         ]
       },
       "subscription": {
-        "total": 1.14,
-        "updatedAt": "2026-08-13T08:06:47.456Z",
+        "total": 1.99,
+        "updatedAt": "2026-08-13T11:56:59.963Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=CREDENT&type=Active"
       },
       "sharesOffered": 3564000,
-      "sharesBid": 4080600,
+      "sharesBid": 7110000,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=CREDENT&type=Active",
-      "fetchedAt": "2026-08-13T08:06:47.456Z"
+      "fetchedAt": "2026-08-13T11:56:59.963Z"
     }
   ]
 }
