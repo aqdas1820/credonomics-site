@@ -2,7 +2,7 @@
 import type { IpoDiscoveryRecord } from './ipo-types'
 
 export const ipoDiscoveryMeta = {
-  "generatedAt": "2026-08-14T08:02:14.704Z",
+  "generatedAt": "2026-08-14T11:33:50.219Z",
   "source": "SEBI Public Issues",
   "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
   "recordCount": 14,
@@ -19,7 +19,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/sillverton-industries-limited-addendum-ii_103621.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-14T08:02:14.704Z",
-    "lastSeen": "2026-08-14T08:02:14.704Z"
+    "lastSeen": "2026-08-14T11:33:50.219Z"
   },
   {
     "id": "arjun-jewellers-limited-drhp",
@@ -69,7 +69,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentStage": "corrigendum",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-11T00:00:00.000Z",
-    "lastSeen": "2026-08-14T08:02:14.704Z",
+    "lastSeen": "2026-08-14T11:33:50.219Z",
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/hero-motors-limited-corrigendum-to-drhp_103180.html"
   },
   {
@@ -120,7 +120,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentStage": "addendum",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-11T00:00:00.000Z",
-    "lastSeen": "2026-08-14T08:02:14.704Z",
+    "lastSeen": "2026-08-14T11:33:50.219Z",
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/jul-2026/fusion-cx-limited-addendum-to-drhp_102992.html"
   },
   {
@@ -141,7 +141,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentStage": "corrigendum",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-11T00:00:00.000Z",
-    "lastSeen": "2026-08-14T08:02:14.704Z",
+    "lastSeen": "2026-08-14T11:33:50.219Z",
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/jul-2026/behari-lal-engineering-limited-corrigendum-to-drhp_102871.html"
   },
   {
