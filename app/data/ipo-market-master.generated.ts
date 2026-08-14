@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-08-13T11:56:59.963Z",
+  "generatedAt": "2026-08-14T08:02:02.633Z",
   "recordCount": 6,
   "nseCount": 6,
   "bseCount": 0,
@@ -29,45 +29,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.44,
-      "updatedAt": "2026-08-13T11:56:59.963Z",
+      "total": 0.45,
+      "updatedAt": "2026-08-14T08:02:02.633Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=FASCINATE&type=Active"
     },
     "sharesOffered": 4293600,
-    "sharesBid": 1880000,
+    "sharesBid": 1944800,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=FASCINATE&type=Active",
-    "fetchedAt": "2026-08-13T11:56:59.963Z"
-  },
-  {
-    "slug": "milky-mist-dairy-food-ltd-e7bdb5b",
-    "companyName": "Milky Mist Dairy Food Limited",
-    "symbol": "MILKYMIST",
-    "marketSegment": "mainboard",
-    "status": "open",
-    "securityType": "EQ",
-    "issue": {
-      "priceBandLow": 133,
-      "priceBandHigh": 140,
-      "openDate": "2026-08-11",
-      "closeDate": "2026-08-13",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 41.16796564728211,
-      "updatedAt": "2026-08-13T11:56:59.963Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MILKYMIST&type=Active"
-    },
-    "sharesOffered": 81798244,
-    "sharesBid": 3367467299,
-    "estimatedIssueValueCr": 1145.18,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MILKYMIST&type=Active",
-    "fetchedAt": "2026-08-13T11:56:59.963Z"
+    "fetchedAt": "2026-08-14T08:02:02.633Z"
   },
   {
     "slug": "behari-lal-engineering-ltd-bdf7897",
@@ -86,17 +57,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 5.438150305236815,
-      "updatedAt": "2026-08-13T11:56:59.963Z",
+      "total": 31.77760591217668,
+      "updatedAt": "2026-08-14T08:02:02.633Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BLEL&type=Active"
     },
     "sharesOffered": 7412769,
-    "sharesBid": 40311752,
+    "sharesBid": 235560052,
     "estimatedIssueValueCr": 211.26,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BLEL&type=Active",
-    "fetchedAt": "2026-08-13T11:56:59.963Z"
+    "fetchedAt": "2026-08-14T08:02:02.633Z"
   },
   {
     "slug": "pramodini-medicare-ltd-b00113a",
@@ -113,16 +84,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.91,
-      "updatedAt": "2026-08-13T11:56:59.963Z",
+      "total": 1.34,
+      "updatedAt": "2026-08-14T08:02:02.633Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=PRAMODINI&type=Active"
     },
     "sharesOffered": 4490400,
-    "sharesBid": 4096800,
+    "sharesBid": 6009600,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=PRAMODINI&type=Active",
-    "fetchedAt": "2026-08-13T11:56:59.963Z"
+    "fetchedAt": "2026-08-14T08:02:02.633Z"
   },
   {
     "slug": "shiprocket-ltd-2d92882",
@@ -141,17 +112,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 2.2856997059279176,
-      "updatedAt": "2026-08-13T11:56:59.963Z",
+      "total": 22.062808633526842,
+      "updatedAt": "2026-08-14T08:02:02.633Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHIPROCKET&type=Active"
     },
     "sharesOffered": 94436030,
-    "sharesBid": 215852406,
+    "sharesBid": 2083524058,
     "estimatedIssueValueCr": 916.03,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHIPROCKET&type=Active",
-    "fetchedAt": "2026-08-13T11:56:59.963Z"
+    "fetchedAt": "2026-08-14T08:02:02.633Z"
   },
   {
     "slug": "credent-connect-n-care-ltd-ef82533",
@@ -168,15 +139,41 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 1.99,
-      "updatedAt": "2026-08-13T11:56:59.963Z",
+      "total": 7.28,
+      "updatedAt": "2026-08-14T08:02:02.633Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=CREDENT&type=Active"
     },
     "sharesOffered": 3564000,
-    "sharesBid": 7110000,
+    "sharesBid": 25940400,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=CREDENT&type=Active",
-    "fetchedAt": "2026-08-13T11:56:59.963Z"
+    "fetchedAt": "2026-08-14T08:02:02.633Z"
+  },
+  {
+    "slug": "skytech-infinite-platform-ltd-6401724",
+    "companyName": "Skytech Infinite Platform Limited",
+    "symbol": "SKYTECH",
+    "marketSegment": "sme",
+    "status": "open",
+    "securityType": "SME",
+    "issue": {
+      "openDate": "2026-08-14",
+      "closeDate": "2026-08-18",
+      "exchange": [
+        "NSE"
+      ]
+    },
+    "subscription": {
+      "total": 0.28,
+      "updatedAt": "2026-08-14T08:02:02.633Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SKYTECH&type=Active"
+    },
+    "sharesOffered": 2945600,
+    "sharesBid": 824000,
+    "marketSource": "NSE",
+    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SKYTECH&type=Active",
+    "fetchedAt": "2026-08-14T08:02:02.633Z"
   }
 ]
