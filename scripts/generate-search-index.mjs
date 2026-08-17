@@ -87,6 +87,7 @@ function classify(route) {
   if (route.startsWith('/reports')) return 'Reports'
   if (route.startsWith('/research')) return 'Research'
   if (route.startsWith('/ipo')) return 'IPO'
+  if (route === '/mutual-funds') return 'Mutual Funds'
   if (route.startsWith('/tools/mf-portfolio-tracker')) return 'Mutual Funds'
   if (route.startsWith('/cards')) return 'Cards'
   if (route.startsWith('/tools')) return 'Tools'
@@ -122,6 +123,7 @@ function priorityFor(route, category) {
   if (route === '/reports') return 96
   if (route === '/research') return 95
   if (route === '/ipo') return 94
+  if (route === '/mutual-funds') return 95
   if (route === '/tools/mf-portfolio-tracker') return 93
   if (route === '/cards') return 91
   if (route === '/tools') return 90

@@ -23,6 +23,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 100
   },
   {
+    "id": "route:/discover",
+    "title": "Intelligence Discovery",
+    "description": "Discover CredoNomics research reports, IPO intelligence, mutual-fund portfolio research, card intelligence and financial tools.",
+    "href": "/discover",
+    "category": "Discovery",
+    "source": "CredoNomics",
+    "updated": "",
+    "keywords": "discover Intelligence Discovery Discovery",
+    "priority": 99
+  },
+  {
     "id": "report:monthly-indian-equity-opportunity-report-august-2026",
     "title": "Monthly Indian Equity Opportunity Report - August 2026",
     "description": "A 26-page monthly market-strategy publication covering 12 priority research ideas, event windows, ownership signals, catalyst checkpoints, risk controls and explicit thesis invalidation rules.",
@@ -43,6 +54,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "updated": "",
     "keywords": "reports Research Reports Reports",
     "priority": 96
+  },
+  {
+    "id": "route:/mutual-funds",
+    "title": "Mutual Fund Intelligence",
+    "description": "Explore CredoNomics mutual-fund portfolio intelligence, scheme holdings, monthly portfolio changes, methodology and source-aware research workflows.",
+    "href": "/mutual-funds",
+    "category": "Mutual Funds",
+    "source": "Portfolio disclosures",
+    "updated": "",
+    "keywords": "mutual-funds Mutual Fund Intelligence Mutual Funds",
+    "priority": 95
   },
   {
     "id": "route:/research",

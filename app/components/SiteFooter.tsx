@@ -4,7 +4,7 @@ import styles from './site-footer.module.css'
 const investmentLinks = [
   { label: 'Research Desk', href: '/research' },
   { label: 'IPO Intelligence', href: '/ipo' },
-  { label: 'Mutual Fund Intelligence', href: '/tools/mf-portfolio-tracker' },
+  { label: 'Mutual Fund Intelligence', href: '/mutual-funds' },
   { label: 'Financial Tools', href: '/tools' },
 ]
 

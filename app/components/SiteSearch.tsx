@@ -198,7 +198,7 @@ export default function SiteSearch() {
               </button>
             </div>
 
-            <div className={styles.paletteMeta}>
+            <div className={styles.paletteMeta} aria-live="polite">
               <span>
                 {query.trim()
                   ? `${visibleEntries.length} best matches`

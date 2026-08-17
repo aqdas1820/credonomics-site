@@ -1,0 +1,376 @@
+.page{
+  width:min(1320px,calc(100% - 40px));
+  margin:0 auto;
+  padding:70px 0 108px;
+}
+
+.hero{
+  display:grid;
+  grid-template-columns:minmax(0,1.2fr) minmax(330px,.56fr);
+  align-items:end;
+  gap:68px;
+  padding-bottom:70px;
+}
+
+.eyebrow,
+.sectionLabel{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--teal,#0b9b91);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+}
+
+.heroCopy h1{
+  max-width:900px;
+  margin:18px 0;
+  color:var(--ink,#07172c);
+  font-size:clamp(50px,6vw,78px);
+  line-height:.98;
+  letter-spacing:-.055em;
+}
+
+.heroCopy h1 span{
+  color:var(--muted,#718092);
+}
+
+.heroCopy>p{
+  max-width:820px;
+  margin:0;
+  color:var(--muted,#687789);
+  font-size:17px;
+  line-height:1.72;
+}
+
+.heroActions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:29px;
+}
+
+.primary,
+.secondary{
+  min-height:46px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  padding:0 15px;
+  border-radius:9px;
+  font-size:12.5px;
+  font-weight:850;
+}
+
+.primary{
+  color:#03110b!important;
+  background:#43e3ae;
+}
+
+.secondary{
+  color:var(--ink,#07172c)!important;
+  border:1px solid var(--line,#dce4eb);
+  background:var(--surface,#fff);
+}
+
+.standardCard{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  padding:23px;
+  color:var(--teal,#0b9b91);
+  border:1px solid var(--line,#dce4eb);
+  border-radius:16px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      color-mix(in srgb,var(--teal,#0b9b91) 7%,transparent),
+      transparent 36%
+    ),
+    var(--surface,#fff);
+  box-shadow:0 20px 65px rgba(18,44,73,.06);
+}
+
+.standardCard>div{
+  display:grid;
+  gap:8px;
+}
+
+.standardLabel{
+  color:var(--teal,#0b9b91);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+
+.standardCard strong{
+  color:var(--ink,#07172c);
+  font-size:17px;
+  line-height:1.3;
+}
+
+.standardCard p{
+  margin:0;
+  color:var(--muted,#687789);
+  font-size:12px;
+  line-height:1.6;
+}
+
+.capabilitySection,
+.workflowSection{
+  padding-top:60px;
+  border-top:1px solid var(--line,#dce4eb);
+}
+
+.sectionHead{
+  display:grid;
+  grid-template-columns:1fr minmax(300px,.5fr);
+  align-items:end;
+  gap:42px;
+  margin-bottom:28px;
+}
+
+.sectionHead h2,
+.workflowCopy h2,
+.entryPanel h2{
+  max-width:800px;
+  margin:10px 0 0;
+  color:var(--ink,#07172c);
+  font-size:clamp(32px,4vw,46px);
+  line-height:1.05;
+  letter-spacing:-.04em;
+}
+
+.sectionHead>p,
+.workflowCopy>p,
+.entryPanel p{
+  margin:0;
+  color:var(--muted,#687789);
+  font-size:14px;
+  line-height:1.68;
+}
+
+.capabilityGrid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+}
+
+.capabilityCard{
+  min-width:0;
+  min-height:220px;
+  display:flex;
+  flex-direction:column;
+  padding:20px;
+  border:1px solid var(--line,#dce4eb);
+  border-radius:14px;
+  background:var(--surface,#fff);
+  box-shadow:0 13px 38px rgba(18,44,73,.04);
+}
+
+.cardTop{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  color:var(--teal,#0b9b91);
+}
+
+.cardTop span{
+  color:var(--muted,#687789);
+  font-size:9px;
+  font-weight:850;
+}
+
+.capabilityCard h3{
+  margin:34px 0 9px;
+  color:var(--ink,#07172c);
+  font-size:18px;
+}
+
+.capabilityCard p{
+  margin:0;
+  color:var(--muted,#687789);
+  font-size:12.5px;
+  line-height:1.65;
+}
+
+.workflowSection{
+  display:grid;
+  grid-template-columns:minmax(300px,.72fr) minmax(0,1.28fr);
+  gap:58px;
+  margin-top:72px;
+}
+
+.workflowCopy>p{
+  max-width:520px;
+  margin-top:13px;
+}
+
+.workflowSteps{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+}
+
+.workflowSteps>div{
+  min-height:160px;
+  padding:18px;
+  border:1px solid var(--line,#dce4eb);
+  border-radius:12px;
+  background:var(--surface,#fff);
+}
+
+.workflowSteps span{
+  color:var(--teal,#0b9b91);
+  font-size:9px;
+  font-weight:900;
+}
+
+.workflowSteps strong{
+  display:block;
+  margin:25px 0 6px;
+  color:var(--ink,#07172c);
+  font-size:14px;
+}
+
+.workflowSteps p{
+  margin:0;
+  color:var(--muted,#687789);
+  font-size:11.5px;
+  line-height:1.55;
+}
+
+.entryPanel{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:36px;
+  margin-top:76px;
+  padding:28px;
+  border:1px solid color-mix(in srgb,var(--teal,#0b9b91) 17%,var(--line,#dce4eb));
+  border-radius:17px;
+  background:
+    radial-gradient(
+      circle at 95% 10%,
+      color-mix(in srgb,var(--teal,#0b9b91) 8%,transparent),
+      transparent 36%
+    ),
+    var(--surface,#fff);
+}
+
+.entryPanel p{
+  max-width:780px;
+  margin-top:12px;
+}
+
+.entryPanel>a{
+  min-height:46px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  padding:0 15px;
+  color:#03110b!important;
+  border-radius:9px;
+  background:#43e3ae;
+  font-size:12px;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+:global(html[data-theme='dark']) .heroCopy h1,
+:global(html[data-theme='dark']) .standardCard strong,
+:global(html[data-theme='dark']) .sectionHead h2,
+:global(html[data-theme='dark']) .workflowCopy h2,
+:global(html[data-theme='dark']) .entryPanel h2,
+:global(html[data-theme='dark']) .capabilityCard h3,
+:global(html[data-theme='dark']) .workflowSteps strong{
+  color:#f2f6f9;
+}
+
+:global(html[data-theme='dark']) .secondary,
+:global(html[data-theme='dark']) .standardCard,
+:global(html[data-theme='dark']) .capabilityCard,
+:global(html[data-theme='dark']) .workflowSteps>div,
+:global(html[data-theme='dark']) .entryPanel{
+  border-color:rgba(255,255,255,.08);
+  background-color:#080d13;
+}
+
+@media(max-width:1000px){
+  .hero,
+  .workflowSection{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .standardCard{
+    max-width:650px;
+  }
+
+  .capabilityGrid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:680px){
+  .page{
+    width:min(100% - 22px,1320px);
+    padding:42px 0 72px;
+  }
+
+  .hero{
+    padding-bottom:48px;
+  }
+
+  .heroCopy h1{
+    font-size:clamp(38px,12vw,52px);
+  }
+
+  .heroCopy>p{
+    font-size:15.5px;
+  }
+
+  .heroActions{
+    display:grid;
+  }
+
+  .primary,
+  .secondary{
+    width:100%;
+  }
+
+  .sectionHead{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .capabilityGrid,
+  .workflowSteps{
+    grid-template-columns:1fr;
+  }
+
+  .capabilityCard,
+  .workflowSteps>div{
+    min-height:auto;
+  }
+
+  .workflowSection{
+    margin-top:52px;
+  }
+
+  .entryPanel{
+    grid-template-columns:1fr;
+    margin-top:54px;
+    padding:20px;
+  }
+
+  .entryPanel>a{
+    width:100%;
+  }
+}
