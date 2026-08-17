@@ -52,11 +52,14 @@ export default function HomePage() {
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <Link href="/" className={styles.brand} aria-label="CredoNomics home">
-            <img
-              src="/credonomics-mark.png"
-              alt=""
-              className={styles.brandMark}
-            />
+            <span className={styles.brandMarkShell}>
+              <img
+                src="/credonomics-mark.png"
+                alt=""
+                className={styles.brandMark}
+              />
+            </span>
+
             <span className={styles.brandText}>
               <strong>CredoNomics</strong>
               <small>Investment Solutions</small>
@@ -65,32 +68,58 @@ export default function HomePage() {
 
           <nav className={styles.nav} aria-label="Primary navigation">
             <Link href="/research">Research</Link>
-            <Link href="/ipo">IPO Intelligence</Link>
+            <Link href="/ipo">IPOs</Link>
             <Link href="/tools/mf-portfolio-tracker">Mutual Funds</Link>
             <Link href="/cards">Cards</Link>
             <Link href="/tools">Tools</Link>
             <Link href="/about">About</Link>
           </nav>
 
-          <ThemeModeToggle compact />
-          <Link href="/research" className={styles.headerCta}>
-            Explore Research <span>→</span>
-          </Link>
+          <div className={styles.headerActions}>
+            <Link href="/research" className={styles.headerCta}>
+              Research Desk <span>→</span>
+            </Link>
+          </div>
         </div>
       </header>
 
       <div className={styles.marketStrip}>
         <div className={styles.marketStripInner}>
-          <span className={styles.livePill}>
-            <i />
-            Research Platform
-          </span>
-          <span>Indian Equities</span>
-          <span>IPO Intelligence</span>
-          <span>Mutual Funds</span>
-          <span>Valuation</span>
-          <span>Market Research</span>
-          <span>Decision Tools</span>
+          <div className={styles.deskIdentity}>
+            <span className={styles.livePill}>
+              <i />
+              Intelligence Desk
+            </span>
+            <span className={styles.deskDivider} />
+            <span className={styles.deskStatus}>Research platform</span>
+          </div>
+
+          <nav className={styles.deskNav} aria-label="Intelligence shortcuts">
+            <Link href="/research">
+              Research
+              <small>Frameworks</small>
+            </Link>
+
+            <Link href="/ipo/calendar">
+              IPO Calendar
+              <small>Primary market</small>
+            </Link>
+
+            <Link href="/tools/mf-portfolio-tracker">
+              MF Intelligence
+              <small>Portfolio data</small>
+            </Link>
+
+            <Link href="/cards">
+              Card Intelligence
+              <small>Product economics</small>
+            </Link>
+
+            <Link href="/methodology">
+              Methodology
+              <small>How we research</small>
+            </Link>
+          </nav>
         </div>
       </div>
 

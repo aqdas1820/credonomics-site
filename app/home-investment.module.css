@@ -1222,3 +1222,390 @@
   color:#e9eef3;
 }
 /* === CREDONOMICS_V16_3_HOME_LIGHT_END === */
+/* === CREDONOMICS_V16_6_PREMIUM_HEADER_BEGIN === */
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:70;
+  border-bottom:1px solid rgba(255,255,255,.055);
+  background:rgba(5,7,11,.92);
+  box-shadow:0 10px 34px rgba(0,0,0,.14);
+  backdrop-filter:blur(22px) saturate(130%);
+  -webkit-backdrop-filter:blur(22px) saturate(130%);
+}
+
+.headerInner{
+  width:min(1320px,calc(100% - 40px));
+  min-height:76px;
+  gap:26px;
+}
+
+.brand{
+  gap:11px;
+}
+
+.brandMarkShell{
+  width:43px;
+  height:43px;
+  display:grid;
+  place-items:center;
+  flex:0 0 auto;
+  border:1px solid rgba(255,255,255,.065);
+  border-radius:12px;
+  background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.01));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 8px 24px rgba(0,0,0,.12);
+}
+
+.brandMark{
+  width:32px;
+  height:32px;
+}
+
+.brandText{
+  gap:4px;
+}
+
+.brandText strong{
+  font-size:17px;
+  letter-spacing:-.025em;
+}
+
+.brandText small{
+  color:#697583;
+  font-size:8px;
+  letter-spacing:.17em;
+}
+
+.nav{
+  gap:3px;
+  margin-left:auto;
+}
+
+.nav a{
+  min-height:38px;
+  display:inline-flex;
+  align-items:center;
+  padding:0 12px;
+  border-radius:8px;
+  color:#84909f;
+  font-size:11.5px;
+  font-weight:700;
+  letter-spacing:-.005em;
+  transition:color .18s ease,background .18s ease;
+}
+
+.nav a:hover{
+  color:#fff;
+  background:rgba(255,255,255,.045);
+}
+
+.headerActions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.headerCta{
+  min-height:39px;
+  padding:0 14px;
+  gap:9px;
+  border-radius:9px;
+  color:#06110d;
+  border:1px solid rgba(72,230,166,.72);
+  background:linear-gradient(135deg,#48e6a6,#6aebba);
+  box-shadow:0 9px 24px rgba(72,230,166,.10);
+  font-size:10.5px;
+  font-weight:900;
+  letter-spacing:.015em;
+}
+
+.headerCta span{
+  font-size:13px;
+  transition:transform .18s ease;
+}
+
+.headerCta:hover{
+  transform:translateY(-1px);
+  border-color:#7cf1c3;
+  background:linear-gradient(135deg,#61edb5,#83f2c9);
+}
+
+.headerCta:hover span{
+  transform:translateX(2px);
+}
+
+.marketStrip{
+  position:relative;
+  z-index:45;
+  border-bottom:1px solid rgba(255,255,255,.055);
+  background:linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.006));
+}
+
+.marketStripInner{
+  width:min(1320px,calc(100% - 40px));
+  min-height:56px;
+  gap:24px;
+  overflow:visible;
+  color:inherit;
+  font-size:inherit;
+  letter-spacing:normal;
+  text-transform:none;
+}
+
+.deskIdentity{
+  min-width:max-content;
+  display:flex;
+  align-items:center;
+  gap:11px;
+  padding-right:22px;
+  border-right:1px solid rgba(255,255,255,.065);
+}
+
+.livePill{
+  gap:8px;
+  color:#48e6a6;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+
+.livePill i{
+  width:6px;
+  height:6px;
+  background:#48e6a6;
+  box-shadow:0 0 0 4px rgba(72,230,166,.07),0 0 15px rgba(72,230,166,.35);
+}
+
+.deskDivider{
+  width:1px;
+  height:18px;
+  background:rgba(255,255,255,.075);
+}
+
+.deskStatus{
+  color:#606c79;
+  font-size:8.5px;
+  font-weight:800;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+
+.deskNav{
+  min-width:0;
+  flex:1;
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  align-items:stretch;
+}
+
+.deskNav a{
+  min-width:0;
+  min-height:55px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:3px;
+  padding:0 16px;
+  color:#a2acb7;
+  border-left:1px solid transparent;
+  border-right:1px solid transparent;
+  text-decoration:none;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.005em;
+  transition:color .18s ease,background .18s ease,border-color .18s ease;
+}
+
+.deskNav a:hover{
+  color:#f5f7fa;
+  border-color:rgba(255,255,255,.04);
+  background:rgba(255,255,255,.025);
+}
+
+.deskNav a::after{
+  content:"";
+  width:0;
+  height:1px;
+  margin-top:4px;
+  border-radius:99px;
+  background:linear-gradient(90deg,#48e6a6,#62a2ff);
+  transition:width .22s ease;
+}
+
+.deskNav a:hover::after{
+  width:28px;
+}
+
+.deskNav small{
+  overflow:hidden;
+  color:#596572;
+  font-size:7.5px;
+  font-weight:750;
+  letter-spacing:.07em;
+  text-overflow:ellipsis;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+:global(html[data-theme='light']) .header{
+  border-bottom-color:rgba(7,23,44,.08);
+  background:rgba(255,255,255,.93);
+  box-shadow:0 9px 30px rgba(18,44,73,.06);
+}
+
+:global(html[data-theme='light']) .brandMarkShell{
+  border-color:#e0e7ed;
+  background:linear-gradient(145deg,#fff,#f4f7f9);
+  box-shadow:inset 0 1px 0 #fff,0 7px 20px rgba(18,44,73,.06);
+}
+
+:global(html[data-theme='light']) .brandText strong{
+  color:#07172c;
+}
+
+:global(html[data-theme='light']) .brandText small{
+  color:#687789;
+}
+
+:global(html[data-theme='light']) .nav a{
+  color:#607084;
+}
+
+:global(html[data-theme='light']) .nav a:hover{
+  color:#07172c;
+  background:#f0f4f7;
+}
+
+:global(html[data-theme='light']) .marketStrip{
+  border-bottom-color:#dfe6ec;
+  background:linear-gradient(180deg,#f6f8fa,#f2f5f7);
+}
+
+:global(html[data-theme='light']) .deskIdentity{
+  border-right-color:#dce4ea;
+}
+
+:global(html[data-theme='light']) .deskDivider{
+  background:#dce4ea;
+}
+
+:global(html[data-theme='light']) .deskStatus{
+  color:#7a8795;
+}
+
+:global(html[data-theme='light']) .deskNav a{
+  color:#43546a;
+}
+
+:global(html[data-theme='light']) .deskNav a:hover{
+  color:#07172c;
+  border-color:#e1e8ed;
+  background:#ffffff;
+}
+
+:global(html[data-theme='light']) .deskNav small{
+  color:#7d8998;
+}
+
+@media(max-width:1100px){
+  .nav a{
+    padding:0 9px;
+    font-size:10.5px;
+  }
+
+  .deskIdentity{
+    padding-right:15px;
+  }
+
+  .deskNav a{
+    padding:0 10px;
+  }
+}
+
+@media(max-width:860px){
+  .headerInner{
+    min-height:70px;
+  }
+
+  .nav{
+    display:none;
+  }
+
+  .headerActions{
+    margin-left:auto;
+  }
+
+  .marketStripInner{
+    width:100%;
+    min-height:auto;
+    display:block;
+  }
+
+  .deskIdentity{
+    min-height:38px;
+    padding:0 14px;
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.05);
+  }
+
+  .deskNav{
+    display:flex;
+    overflow-x:auto;
+    overscroll-behavior-x:contain;
+    scrollbar-width:none;
+  }
+
+  .deskNav::-webkit-scrollbar{
+    display:none;
+  }
+
+  .deskNav a{
+    min-width:148px;
+    min-height:52px;
+    padding:0 14px;
+    flex:0 0 auto;
+  }
+
+  :global(html[data-theme='light']) .deskIdentity{
+    border-bottom-color:#e0e7ec;
+  }
+}
+
+@media(max-width:560px){
+  .headerInner{
+    width:min(100% - 24px,1320px);
+  }
+
+  .brandMarkShell{
+    width:39px;
+    height:39px;
+    border-radius:10px;
+  }
+
+  .brandMark{
+    width:29px;
+    height:29px;
+  }
+
+  .brandText strong{
+    font-size:15px;
+  }
+
+  .brandText small{
+    font-size:7px;
+  }
+
+  .headerCta{
+    min-height:37px;
+    padding:0 11px;
+    font-size:9px;
+  }
+
+  .deskStatus,
+  .deskDivider{
+    display:none;
+  }
+}
+/* === CREDONOMICS_V16_6_PREMIUM_HEADER_END === */
