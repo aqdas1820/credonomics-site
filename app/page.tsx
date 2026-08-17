@@ -1,364 +1,336 @@
-import {
-  ArrowRight,
-  ArrowUpRight,
-  BadgeIndianRupee,
-  Calculator,
-  CheckCircle2,
-  CreditCard,
-  FileSearch,
-  Fuel,
-  Instagram,
-  Landmark,
-  Mail,
-  Search,
-  ShieldCheck,
-  Sparkles,
-  Target,
-  BarChart3,
-  Gauge,
-  Layers3,
-} from 'lucide-react'
-import SiteFrame from './components/SiteFrame'
-import { verifiedRealCards } from './data/verified-real-cards'
-import { issuerRegistry } from './data/issuer-registry'
-import styles from './core-v4.module.css'
+import Link from "next/link";
+import styles from "./home-investment.module.css";
 
-const tools = [
+const capabilities = [
   {
-    icon: CreditCard,
-    label: '01 / Card selection',
-    title: 'Credit Card Finder',
-    text: 'Start from how you spend, then compare the value after fees, reward caps and practical restrictions.',
-    href: '/tools/credit-card-finder',
-    output: 'Spend-fit comparison',
+    eyebrow: "EQUITY RESEARCH",
+    title: "Indian Equity Opportunities",
+    text: "Fundamental research built around valuation, earnings quality, balance-sheet strength, catalysts and long-term business economics.",
+    href: "/research",
   },
   {
-    icon: Calculator,
-    label: '02 / Reward economics',
-    title: 'Cashback Calculator',
-    text: 'Turn an advertised cashback rate into a net figure after caps, exclusions, annual fee and GST.',
-    href: '/tools/cashback-calculator',
-    output: 'Effective cashback rate',
+    eyebrow: "IPO INTELLIGENCE",
+    title: "Primary Market Research",
+    text: "Explore IPO calendars, issue details, subscription trends and structured company research from the CredoNomics IPO platform.",
+    href: "/ipo",
   },
   {
-    icon: Fuel,
-    label: '03 / Fuel economics',
-    title: 'Fuel Card Optimizer',
-    text: 'Separate reward value, surcharge waiver and transaction rules to estimate true fuel savings.',
-    href: '/tools/fuel-card-optimizer',
-    output: 'Net annual fuel value',
+    eyebrow: "MUTUAL FUNDS",
+    title: "Portfolio Intelligence",
+    text: "Track schemes, portfolio holdings, allocation changes and fund-level intelligence through the CredoNomics mutual-fund research workflow.",
+    href: "/tools/mf-portfolio-tracker",
   },
-]
+  {
+    eyebrow: "FINANCIAL TOOLS",
+    title: "Decision Utilities",
+    text: "Use practical calculators and comparison tools designed to turn financial product data into clearer decisions.",
+    href: "/tools",
+  },
+];
 
-const method = [
-  [FileSearch, '01', 'Source', 'Begin with official product pages, fee schedules, terms and issuer documentation.'],
-  [Search, '02', 'Normalize', 'Separate headline benefits from eligibility rules, exclusions, caps and timing conditions.'],
-  [BadgeIndianRupee, '03', 'Calculate', 'Convert the rules into comparable ₹ outcomes using visible assumptions.'],
-  [Target, '04', 'Stress-test', 'Check what changes when spending mix, fees or product conditions move.'],
-]
+const framework = [
+  ["01", "Valuation", "We study price relative to business quality, growth, cash flows and realistic expectations."],
+  ["02", "Fundamentals", "Revenue quality, profitability, capital efficiency and balance-sheet resilience come first."],
+  ["03", "Catalysts", "Corporate events, earnings inflections and temporary market dislocations can create opportunity."],
+  ["04", "Risk", "Downside, uncertainty, execution risk and valuation risk are part of every research view."],
+];
 
-export default function Home() {
+const terminalRows = [
+  ["Fundamental Quality", "Business & financial strength", 92],
+  ["Valuation Discipline", "Price versus underlying value", 86],
+  ["Catalyst Analysis", "Events & changing expectations", 81],
+  ["Risk Assessment", "Downside & uncertainty", 89],
+];
+
+export default function HomePage() {
   return (
-    <SiteFrame>
-      <section className={`${styles.wrap} ${styles.hero}`}>
-        <div className={styles.heroGlowA} />
-        <div className={styles.heroGlowB} />
+    <main className={styles.page}>
+      <div className={styles.ambientOne} />
+      <div className={styles.ambientTwo} />
 
+      <header className={styles.header}>
+        <div className={styles.headerInner}>
+          <Link href="/" className={styles.brand} aria-label="CredoNomics home">
+            <img
+              src="/credonomics-mark.png"
+              alt=""
+              className={styles.brandMark}
+            />
+            <span className={styles.brandText}>
+              <strong>CredoNomics</strong>
+              <small>Investment Solutions</small>
+            </span>
+          </Link>
+
+          <nav className={styles.nav} aria-label="Primary navigation">
+            <Link href="/research">Research</Link>
+            <Link href="/ipo">IPO Intelligence</Link>
+            <Link href="/tools/mf-portfolio-tracker">Mutual Funds</Link>
+            <Link href="/tools">Tools</Link>
+            <Link href="/about">About</Link>
+          </nav>
+
+          <Link href="/research" className={styles.headerCta}>
+            Explore Research <span>â†’</span>
+          </Link>
+        </div>
+      </header>
+
+      <div className={styles.marketStrip}>
+        <div className={styles.marketStripInner}>
+          <span className={styles.livePill}>
+            <i />
+            Research Platform
+          </span>
+          <span>Indian Equities</span>
+          <span>IPO Intelligence</span>
+          <span>Mutual Funds</span>
+          <span>Valuation</span>
+          <span>Market Research</span>
+          <span>Decision Tools</span>
+        </div>
+      </div>
+
+      <section className={styles.hero}>
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
-            <span className={styles.eyebrow}><Sparkles size={13} /> Independent Indian card intelligence</span>
+            <div className={styles.kicker}>
+              <span />
+              Independent Market Intelligence
+            </div>
+
             <h1>
-              Find the right Indian credit card
-              <span> for your actual spending.</span>
+              Research beyond
+              <em>market noise.</em>
             </h1>
-            <p className={styles.heroLead}>
-              Rank real Indian credit cards around how you actually spend. See annual fees, reward caps, waivers and source-linked terms before you decide.
+
+            <p className={styles.heroText}>
+              CredoNomics Investment Solutions combines fundamental analysis,
+              valuation research, IPO intelligence, mutual-fund analytics and
+              practical financial tools in one research-focused platform.
             </p>
+
             <div className={styles.heroActions}>
-              <a className={styles.primaryButton} href="/cards">Compare credit cards <ArrowRight size={16} /></a>
-              <a className={styles.secondaryButton} href="/cards/all">Browse verified cards <ArrowUpRight size={15} /></a>
+              <Link href="/research" className={styles.primaryButton}>
+                Explore Research <span>â†’</span>
+              </Link>
+              <Link href="/tools" className={styles.secondaryButton}>
+                Open Research Tools
+              </Link>
             </div>
-            <div className={styles.trustRow}>
-              <span><ShieldCheck size={15} /> Official-source records</span>
-              <span><BadgeIndianRupee size={15} /> Annual net-value ranking</span>
-              <span><Search size={15} /> Every assumption stays visible</span>
-            </div>
-          </div>
 
-          <div className={styles.engine} aria-label="CredoNomics decision model">
-            <div className={styles.engineGrid} />
-            <div className={styles.engineHeader}>
+            <div className={styles.heroStats}>
               <div>
-                <small>CREDONOMICS / INTELLIGENCE ENGINE</small>
-                <b>Live decision workspace</b>
+                <strong>Equity</strong>
+                <span>Research</span>
               </div>
-              <span className={styles.engineStatus}><i /> Source-linked</span>
-            </div>
-
-            <div className={styles.engineBody}>
-              <small>Annual value model</small>
-              <h2>Headline rewards are not the answer. Net value is.</h2>
-              <div className={styles.engineEquation}>
-                <div className={styles.engineCell}>
-                  <small>01</small><p>Benefits</p><b>Rewards · cashback · waivers</b>
-                </div>
-                <span className={styles.operator}>−</span>
-                <div className={styles.engineCell}>
-                  <small>02</small><p>Friction</p><b>Caps · exclusions · eligibility</b>
-                </div>
-                <span className={styles.operator}>−</span>
-                <div className={styles.engineCell}>
-                  <small>03</small><p>Costs</p><b>Fees · GST · opportunity cost</b>
-                </div>
+              <div>
+                <strong>IPO</strong>
+                <span>Intelligence</span>
               </div>
-              <div className={styles.engineOutput}>
-                <span>OUTPUT / personalized ranking</span>
-                <b>Real cards ranked by net annual value</b>
+              <div>
+                <strong>MF</strong>
+                <span>Analytics</span>
+              </div>
+              <div>
+                <strong>Risk</strong>
+                <span>Focused</span>
               </div>
             </div>
-
-            <div className={styles.engineFooter}>
-              <div><CreditCard size={17} /><span><b>{verifiedRealCards.length} cards</b><small>Normalized real-card records</small></span></div>
-              <div><Landmark size={17} /><span><b>{new Set(verifiedRealCards.map((card) => card.issuer)).size} issuers</b><small>Currently in live rankings</small></span></div>
-              <div><Layers3 size={17} /><span><b>16 categories</b><small>Category-specific economics</small></span></div>
-            </div>
           </div>
-        </div>
 
-        <div className={styles.proofStrip}>
-          <div><strong>{verifiedRealCards.length} real-card records</strong><span>Normalized for live rankings</span></div>
-          <div><strong>{new Set(verifiedRealCards.map((card) => card.issuer)).size} issuers live</strong><span>Growing toward {issuerRegistry.length}-issuer coverage</span></div>
-          <div><strong>16 category engines</strong><span>Different math for different card use-cases</span></div>
-          <div><strong>Source-linked</strong><span>Verification before conclusions</span></div>
-        </div>
-      </section>
-
-      <section className={`${styles.wrap} ${styles.section}`}>
-        <div className={styles.sectionHead}>
-          <div>
-            <span className={styles.overline}>Flagship / Credit Card Intelligence</span>
-            <h2>Model a card around your spending — then inspect every deduction.</h2>
-          </div>
-          <p>
-            Compare up to four card structures using category-wise spending, reward caps,
-            annual fees and fee-waiver thresholds. No unexplained ranking.
-          </p>
-        </div>
-
-        <div className={styles.researchGrid}>
-          <article className={styles.contentCard}>
-            <span className={styles.iconTile}><Layers3 size={21}/></span>
-            <h3>Spend-profile engine</h3>
-            <p>Your spending mix drives the result rather than a generic “best card” label.</p>
-            <a className={styles.textLink} href="/cards/analyzer">Open analyzer <ArrowRight size={14}/></a>
-          </article>
-          <article className={styles.contentCard}>
-            <span className={styles.iconTile}><Gauge size={21}/></span>
-            <h3>Transparent Fit Score</h3>
-            <p>Reward potential, fee efficiency, cap efficiency, base-rate resilience and spend fit.</p>
-            <a className={styles.textLink} href="/research/card-scoring">See scoring method <ArrowRight size={14}/></a>
-          </article>
-          <article className={styles.contentCard}>
-            <span className={styles.iconTile}><BarChart3 size={21}/></span>
-            <h3>Source-backed database</h3>
-            <p>Real-card rankings now use normalized official-source terms; the automated catalogue is only a discovery/update layer.</p>
-            <a className={styles.textLink} href="/cards">Visit card intelligence <ArrowRight size={14}/></a>
-          </article>
-        </div>
-      </section>
-
-
-      <section className={`${styles.wrap} ${styles.section}`}>
-        <div className={styles.sectionHead}>
-          <div>
-            <span className={styles.overline}>New / IPO Intelligence</span>
-            <h2>Investigate public offers with the same source-first discipline.</h2>
-          </div>
-          <p>
-            Track recent SEBI filings, normalize offer-document financials and compare a transparent
-            quantitative Data Score without subscribe/avoid calls or listing-gain forecasts.
-          </p>
-        </div>
-
-        <div className={styles.researchGrid}>
-          <article className={styles.contentCard}>
-            <span className={styles.iconTile}><FileSearch size={21}/></span>
-            <h3>SEBI filing discovery</h3>
-            <p>Recent DRHP, RHP, prospectus and amendment records flow into an automated IPO research queue.</p>
-            <a className={styles.textLink} href="/ipo">Open IPO Intelligence <ArrowRight size={14}/></a>
-          </article>
-          <article className={styles.contentCard}>
-            <span className={styles.iconTile}><BarChart3 size={21}/></span>
-            <h3>Quantitative Data Score</h3>
-            <p>Growth, returns, cash conversion, leverage, peer valuation and issue structure use fixed public weights.</p>
-            <a className={styles.textLink} href="/ipo/analyzer">Open IPO analyzer <ArrowRight size={14}/></a>
-          </article>
-          <article className={styles.contentCard}>
-            <span className={styles.iconTile}><ShieldCheck size={21}/></span>
-            <h3>Clear regulatory boundary</h3>
-            <p>No Subscribe/Avoid label, price target or GMP-driven fundamental score. Every result stays statistical and source-linked.</p>
-            <a className={styles.textLink} href="/ipo/methodology">Read IPO methodology <ArrowRight size={14}/></a>
-          </article>
-        </div>
-      </section>
-
-      <section className={`${styles.wrap} ${styles.section}`}>
-        <div className={styles.sectionHead}>
-          <div>
-            <span className={styles.overline}>Live decision tools</span>
-            <h2>Start with the financial question you actually need to answer.</h2>
-          </div>
-          <p>
-            Each tool is designed around a practical decision and keeps the
-            important inputs visible rather than hiding them behind a single score.
-          </p>
-        </div>
-
-        <div className={styles.toolGrid}>
-          {tools.map((tool) => {
-            const Icon = tool.icon
-            return (
-              <a className={styles.toolCard} href={tool.href} key={tool.title}>
-                <div className={styles.cardTop}>
-                  <span className={styles.iconTile}><Icon size={22} /></span>
-                  <span className={styles.statusPill}><i className={styles.liveDot} /> Live</span>
+          <div className={styles.terminalWrap}>
+            <div className={styles.terminalGlow} />
+            <div className={styles.terminal}>
+              <div className={styles.terminalTop}>
+                <div className={styles.windowDots}>
+                  <i />
+                  <i />
+                  <i />
                 </div>
-                <span className={styles.cardLabel}>{tool.label}</span>
-                <h3>{tool.title}</h3>
-                <p>{tool.text}</p>
-                <div className={styles.cardFooter}><span>{tool.output}</span><ArrowUpRight size={16} /></div>
-              </a>
-            )
-          })}
-          <a className={`${styles.toolCard} ${styles.researchCard}`} href="/research">
-            <div className={styles.cardTop}>
-              <span className={styles.iconTile}><FileSearch size={22} /></span>
-              <span className={styles.statusPill}>Research</span>
+                <span>CredoNomics Research Terminal</span>
+              </div>
+
+              <div className={styles.terminalBody}>
+                <div className={styles.terminalTitleRow}>
+                  <div>
+                    <span className={styles.terminalEyebrow}>
+                      Market Research Framework
+                    </span>
+                    <h2>Opportunity Intelligence</h2>
+                  </div>
+                  <span className={styles.activeBadge}>ACTIVE</span>
+                </div>
+
+                <div className={styles.scoreList}>
+                  {terminalRows.map(([title, subtitle, score]) => (
+                    <div className={styles.scoreCard} key={String(title)}>
+                      <div className={styles.scoreHeader}>
+                        <div>
+                          <strong>{title}</strong>
+                          <span>{subtitle}</span>
+                        </div>
+                        <b>{score}</b>
+                      </div>
+                      <div className={styles.scoreTrack}>
+                        <span style={{ width: `${score}%` }} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className={styles.terminalTags}>
+                  <div>
+                    <b>VALUE</b>
+                    <span>Price</span>
+                  </div>
+                  <div>
+                    <b>QUALITY</b>
+                    <span>Business</span>
+                  </div>
+                  <div>
+                    <b>CATALYST</b>
+                    <span>Timing</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <span className={styles.cardLabel}>04 / Research desk</span>
-            <h3>Research Frameworks</h3>
-            <p>Learn how to verify fees, reward rules, surcharge mechanics and product conditions before trusting a calculation.</p>
-            <div className={styles.cardFooter}><span>Methodology & verification</span><ArrowUpRight size={16} /></div>
-          </a>
-        </div>
-      </section>
-
-      <section className={`${styles.wrap} ${styles.section}`}>
-        <div className={styles.sectionHead}>
-          <div><span className={styles.overline}>Quick research calculators</span><h2>Answer the smaller questions that can change a card decision.</h2></div>
-          <p>Use focused calculators for annual-fee break-even, cashback caps, fuel surcharge waivers and reward-point value.</p>
-        </div>
-        <div className={styles.toolGrid}>
-          <a className={styles.toolCard} href="/tools/annual-fee-break-even"><span className={styles.cardLabel}>Card economics</span><h3>Annual Fee Break-Even</h3><p>Estimate how much spending is needed for a paid card’s extra rewards to recover its annual cost.</p><div className={styles.cardFooter}><span>Calculate break-even</span><ArrowUpRight size={16}/></div></a>
-          <a className={styles.toolCard} href="/tools/cashback-cap"><span className={styles.cardLabel}>Cashback</span><h3>Cashback Cap</h3><p>See how a monthly reward ceiling changes your effective cashback rate.</p><div className={styles.cardFooter}><span>Model the cap</span><ArrowUpRight size={16}/></div></a>
-          <a className={styles.toolCard} href="/tools/fuel-surcharge-waiver"><span className={styles.cardLabel}>Fuel economics</span><h3>Fuel Surcharge Waiver</h3><p>Estimate monthly and annual waiver value without mixing it with fuel reward points.</p><div className={styles.cardFooter}><span>Estimate waiver</span><ArrowUpRight size={16}/></div></a>
-          <a className={styles.toolCard} href="/tools/reward-point-value"><span className={styles.cardLabel}>Reward economics</span><h3>Reward Point Value</h3><p>Convert points to rupees using the redemption path you actually plan to use.</p><div className={styles.cardFooter}><span>Value points</span><ArrowUpRight size={16}/></div></a>
-        </div>
-      </section>
-
-      <section className={`${styles.wrap} ${styles.section} ${styles.splitSection}`}>
-        <div className={styles.splitIntro}>
-          <span className={styles.overline}>CredoNomics methodology</span>
-          <h2>The conclusion matters. So does the path to it.</h2>
-          <p>
-            Professional financial research should make it possible to see where
-            the inputs came from, how the calculation works and what could change the result.
-          </p>
-          <a className={styles.textLink} href="/methodology">Read full methodology <ArrowRight size={15} /></a>
-        </div>
-
-        <div className={styles.stepGrid}>
-          {method.map(([Icon, no, title, text]: any) => (
-            <article className={styles.stepCard} key={no}>
-              <div className={styles.stepCardTop}><span>{no}</span><Icon size={19} /></div>
-              <h3>{title}</h3><p>{text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className={`${styles.wrap} ${styles.principleBand}`}>
-        <div>
-          <span className={styles.bandIcon}><Target size={21} /></span>
-          <div>
-            <small>THE CREDONOMICS PRINCIPLE</small>
-            <h2>Calculate first. Verify the fine print. Decide with context.</h2>
           </div>
         </div>
-        <p>The objective is not to make a product look good or bad. It is to make the trade-offs easier to see.</p>
       </section>
 
-      <section className={`${styles.wrap} ${styles.section}`}>
-        <div className={styles.sectionHead}>
-          <div>
-            <span className={styles.overline}>Research desk</span>
-            <h2>Research the rule that changes the outcome.</h2>
+      <section className={styles.capabilitiesSection}>
+        <div className={styles.sectionShell}>
+          <div className={styles.sectionHeading}>
+            <div>
+              <span className={styles.sectionEyebrow}>RESEARCH PLATFORM</span>
+              <h2>One platform. Multiple layers of intelligence.</h2>
+            </div>
+            <p>
+              CredoNomics is being built around research depth rather than
+              market noise â€” with tools and reports that help users understand
+              the context behind a financial decision.
+            </p>
           </div>
-          <p>Evergreen frameworks focused on the parts of financial products most likely to be misunderstood or double-counted.</p>
-        </div>
 
-        <div className={styles.researchGrid}>
-          <article className={styles.contentCard}>
-            <span className={styles.iconTile}><CreditCard size={21} /></span>
-            <h3>Credit-card economics</h3>
-            <p>Move from an advertised reward rate to a realistic net value.</p>
-            <ul>
-              <li><CheckCircle2 size={14}/> Eligible vs excluded spend</li>
-              <li><CheckCircle2 size={14}/> Reward caps and fee recovery</li>
-              <li><CheckCircle2 size={14}/> Annual fee + GST</li>
-            </ul>
-          </article>
-          <article className={styles.contentCard}>
-            <span className={styles.iconTile}><Fuel size={21} /></span>
-            <h3>Fuel-card economics</h3>
-            <p>Keep surcharge waiver and reward earnings separate before combining them.</p>
-            <ul>
-              <li><CheckCircle2 size={14}/> Waiver ceiling and transaction range</li>
-              <li><CheckCircle2 size={14}/> Reward-point rupee value</li>
-              <li><CheckCircle2 size={14}/> Outlet and app eligibility</li>
-            </ul>
-          </article>
-          <article className={styles.contentCard}>
-            <span className={styles.iconTile}><Landmark size={21} /></span>
-            <h3>Banking product terms</h3>
-            <p>Operational rules can matter as much as the headline feature.</p>
-            <ul>
-              <li><CheckCircle2 size={14}/> Fees and service charges</li>
-              <li><CheckCircle2 size={14}/> Eligibility and restrictions</li>
-              <li><CheckCircle2 size={14}/> Current official documentation</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section className={`${styles.wrap} ${styles.section} ${styles.disclosureGrid}`}>
-        <div className={styles.disclosurePanel}>
-          <span className={styles.overline}>Trust & transparency</span>
-          <h2>Clear tools need clear boundaries.</h2>
-          <p>
-            CredoNomics publishes general educational research and calculators.
-            It does not provide personalized investment advice or guarantee financial outcomes.
-          </p>
-          <div className={styles.disclosurePoints}>
-            <div><ShieldCheck size={17}/><b>Regulatory status disclosed</b><small>CredoNomics is not SEBI-registered and is not NISM-certified.</small></div>
-            <div><FileSearch size={17}/><b>Primary-source preference</b><small>Current official terms should take priority when information conflicts.</small></div>
-            <div><Target size={17}/><b>No guaranteed outcomes</b><small>Tools help structure comparisons; actual eligibility and benefits can differ.</small></div>
+          <div className={styles.capabilityGrid}>
+            {capabilities.map((item) => (
+              <Link href={item.href} className={styles.capabilityCard} key={item.title}>
+                <span className={styles.cardEyebrow}>{item.eyebrow}</span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+                <span className={styles.cardLink}>Explore <b>â†’</b></span>
+              </Link>
+            ))}
           </div>
-          <a className={styles.secondaryButton} href="/disclosures">Read disclosures <ArrowUpRight size={15}/></a>
-        </div>
-
-        <div className={styles.contactPanel}>
-          <span className={styles.overline}>Official channels</span>
-          <h3>Follow or contact CredoNomics.</h3>
-          <p>Use official channels for research questions, corrections and website feedback.</p>
-          <a className={styles.contactItem} href="https://www.instagram.com/credonomics.in/" target="_blank" rel="noreferrer">
-            <Instagram size={17}/><span><small>Instagram</small><b>@credonomics.in</b></span>
-          </a>
-          <a className={styles.contactItem} href="mailto:hello@credonomics.in">
-            <Mail size={17}/><span><small>Email</small><b>hello@credonomics.in</b></span>
-          </a>
         </div>
       </section>
-    </SiteFrame>
-  )
+
+      <section className={styles.frameworkSection}>
+        <div className={styles.sectionShell}>
+          <div className={styles.frameworkGrid}>
+            <div className={styles.frameworkIntro}>
+              <span className={styles.sectionEyebrow}>RESEARCH FRAMEWORK</span>
+              <h2>What matters before something becomes an opportunity.</h2>
+              <p>
+                A falling stock is not automatically undervalued. A growing
+                company is not automatically attractive. Research needs context,
+                discipline and a clear view of risk.
+              </p>
+            </div>
+
+            <div className={styles.frameworkCards}>
+              {framework.map(([number, title, text]) => (
+                <article key={number}>
+                  <span>{number}</span>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.reportsSection}>
+        <div className={styles.sectionShell}>
+          <div className={styles.reportPanel}>
+            <div>
+              <span className={styles.sectionEyebrow}>CREDONOMICS RESEARCH REPORTS</span>
+              <h2>Research that explains the opportunity â€” not just the ticker.</h2>
+              <p>
+                Structured reports can bring together business analysis,
+                financial trends, valuation, catalysts, risks and scenario
+                thinking in one place.
+              </p>
+            </div>
+            <Link href="/research" className={styles.secondaryButton}>
+              Research Library <span>â†’</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.identitySection}>
+        <div className={styles.sectionShell}>
+          <div className={styles.identityGrid}>
+            <div>
+              <span className={styles.sectionEyebrow}>
+                CREDONOMICS INVESTMENT SOLUTIONS
+              </span>
+              <h2>Data. Research. Perspective.</h2>
+            </div>
+            <p>
+              CredoNomics focuses on investment research, financial
+              intelligence and analytical tools designed to help users study
+              markets and financial products with greater context.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.disclaimerSection}>
+        <div className={styles.sectionShell}>
+          <div className={styles.disclaimer}>
+            <strong>Important Disclaimer</strong>
+            <p>
+              CredoNomics Investment Solutions is not a SEBI-registered
+              Investment Adviser or Research Analyst. Content is provided for
+              educational, informational and research purposes only and should
+              not be treated as personalized investment advice or a
+              recommendation to buy or sell any security. Investments in
+              securities markets are subject to market risks. Users should
+              conduct their own research and consult an appropriately qualified
+              professional where required.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer className={styles.footer}>
+        <div className={styles.footerInner}>
+          <div className={styles.footerBrand}>
+            <img src="/credonomics-mark.png" alt="" />
+            <div>
+              <strong>CredoNomics</strong>
+              <span>Investment Solutions</span>
+            </div>
+          </div>
+
+          <div className={styles.footerLinks}>
+            <Link href="/research">Research</Link>
+            <Link href="/ipo">IPO</Link>
+            <Link href="/tools">Tools</Link>
+            <Link href="/about">About</Link>
+            <Link href="/disclosures">Disclosures</Link>
+          </div>
+        </div>
+
+        <div className={styles.footerBottom}>
+          <span>Â© 2026 CredoNomics Investment Solutions</span>
+          <span>For educational and informational purposes only.</span>
+        </div>
+      </footer>
+    </main>
+  );
 }

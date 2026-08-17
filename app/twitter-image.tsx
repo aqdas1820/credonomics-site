@@ -1,64 +1,137 @@
-import { ImageResponse } from 'next/og'
+import { ImageResponse } from "next/og";
 
-export const alt = 'CredoNomics — Financial Research & Decision Tools'
-export const size = { width: 1200, height: 630 }
-export const contentType = 'image/png'
+export const runtime = "edge";
 
-export default function Image() {
+export const alt =
+  "CredoNomics Investment Solutions â€” Research beyond market noise";
+
+export const size = {
+  width: 1200,
+  height: 600,
+};
+
+export const contentType = "image/png";
+
+export default function TwitterImage() {
   return new ImageResponse(
     (
       <div
         style={{
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          position: 'relative',
-          overflow: 'hidden',
-          color: '#ecf7ff',
-          background: 'linear-gradient(135deg, #06192d 0%, #083b52 48%, #245fe7 100%)',
-          fontFamily: 'Arial, sans-serif',
-          padding: '72px',
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          padding: "58px 70px",
+          background:
+            "linear-gradient(135deg, #05070b 0%, #09120f 55%, #071018 100%)",
+          color: "#f7f8fa",
+          fontFamily: "Arial, sans-serif",
         }}
       >
         <div
           style={{
-            position: 'absolute',
-            width: 520,
-            height: 520,
-            borderRadius: 999,
-            right: -160,
-            top: -210,
-            background: 'radial-gradient(circle, rgba(68,215,201,.34), rgba(68,215,201,0))',
+            display: "flex",
+            alignItems: "center",
+            gap: 16,
           }}
-        />
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', width: '100%' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
-            <img src="https://www.credonomics.in/credonomics-mark.png" width="58" height="58" style={{ objectFit: 'contain' }} />
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontSize: 25, fontWeight: 800, letterSpacing: 2 }}>CREDONOMICS</div>
-              <div style={{ fontSize: 15, color: '#9fd9df', marginTop: 3 }}>Financial Research & Decision Tools</div>
-            </div>
+        >
+          <div
+            style={{
+              width: 54,
+              height: 54,
+              borderRadius: 15,
+              border: "1px solid rgba(72,230,166,.42)",
+              background: "rgba(72,230,166,.10)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "#48e6a6",
+              fontSize: 28,
+              fontWeight: 800,
+            }}
+          >
+            C
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', maxWidth: 900 }}>
-            <div style={{ fontSize: 62, lineHeight: 1.05, fontWeight: 800, letterSpacing: -2 }}>
-              Understand the fine print.
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 5,
+            }}
+          >
+            <div style={{ fontSize: 29, fontWeight: 800 }}>CredoNomics</div>
+            <div
+              style={{
+                color: "#8d96a5",
+                fontSize: 14,
+                letterSpacing: 4,
+                textTransform: "uppercase",
+              }}
+            >
+              Investment Solutions
             </div>
-            <div style={{ fontSize: 62, lineHeight: 1.05, fontWeight: 800, letterSpacing: -2, color: '#69e0d6' }}>
-              Quantify the real value.
-            </div>
-            <div style={{ fontSize: 22, color: '#b8cbda', marginTop: 24 }}>
-              Credit cards · Cashback · Fuel economics · Banking research
-            </div>
+          </div>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <div
+            style={{
+              color: "#48e6a6",
+              fontSize: 17,
+              letterSpacing: 4,
+              textTransform: "uppercase",
+              marginBottom: 20,
+            }}
+          >
+            Independent Market Intelligence
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'space-between', color: '#a6bfd2', fontSize: 17 }}>
-            <span>credonomics.in</span>
-            <span>India-first · Document-led · Transparent assumptions</span>
+          <div
+            style={{
+              fontSize: 66,
+              lineHeight: 1,
+              fontWeight: 800,
+              letterSpacing: -3,
+            }}
+          >
+            Research beyond
           </div>
+
+          <div
+            style={{
+              fontSize: 66,
+              lineHeight: 1,
+              fontWeight: 800,
+              letterSpacing: -3,
+              color: "#737d8a",
+            }}
+          >
+            market noise.
+          </div>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            borderTop: "1px solid rgba(255,255,255,.12)",
+            paddingTop: 21,
+            color: "#727b88",
+            fontSize: 15,
+          }}
+        >
+          <span>credonomics.in</span>
+          <span>Equity â€¢ IPO â€¢ Mutual Funds â€¢ Tools</span>
         </div>
       </div>
     ),
-    size,
-  )
+    size
+  );
 }
