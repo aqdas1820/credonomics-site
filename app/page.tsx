@@ -66,6 +66,7 @@ export default function HomePage() {
             <Link href="/research">Research</Link>
             <Link href="/ipo">IPO Intelligence</Link>
             <Link href="/tools/mf-portfolio-tracker">Mutual Funds</Link>
+            <Link href="/cards">Cards</Link>
             <Link href="/tools">Tools</Link>
             <Link href="/about">About</Link>
           </nav>
@@ -121,8 +122,8 @@ export default function HomePage() {
 
             <div className={styles.heroStats}>
               <div>
-                <strong>Equity</strong>
-                <span>Research</span>
+                <strong>Research</strong>
+                <span>Frameworks</span>
               </div>
               <div>
                 <strong>IPO</strong>

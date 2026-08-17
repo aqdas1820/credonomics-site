@@ -2685,3 +2685,419 @@
   }
 }
 /* === CREDONOMICS_V16_PRO_DARK_END === */
+/* === CREDONOMICS_V16_2_PRO_POLISH_BEGIN === */
+/* Institutional UX polish: dense, calm, legible, data-first */
+
+.siteShell{
+  font-feature-settings:"tnum" 1,"ss01" 1,"cv02" 1;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  --content-width:1320px;
+}
+
+.wrap,
+.nav{
+  max-width:var(--content-width);
+}
+
+.pageMain{
+  min-height:72vh;
+}
+
+/* Navigation: calmer, more institutional */
+.navShell{
+  padding-top:10px;
+}
+
+.nav{
+  min-height:70px;
+  border-radius:15px;
+}
+
+.navLinks{
+  gap:2px;
+}
+
+.navLinks a{
+  min-height:38px;
+  display:inline-flex;
+  align-items:center;
+  padding:0 12px;
+  letter-spacing:-.005em;
+}
+
+.navLinks a.navActive{
+  background:rgba(255,255,255,.055);
+}
+
+.navLinks a.navActive:before{
+  bottom:1px;
+  width:20px;
+  height:2px;
+}
+
+.brandWords strong{
+  letter-spacing:.115em;
+}
+
+.navActions{
+  gap:7px;
+}
+
+/* Professional inner-page framing */
+.pageHero{
+  padding-top:104px;
+  padding-bottom:74px;
+}
+
+.pageHero:before{
+  opacity:.55;
+  background-size:78px 78px;
+}
+
+.pageHero:after{
+  width:680px;
+  height:390px;
+  right:-220px;
+  top:-150px;
+  opacity:.85;
+}
+
+.pageHero h1{
+  max-width:1040px;
+  margin-top:22px;
+  font-size:clamp(50px,5.15vw,72px);
+  line-height:1.01;
+  letter-spacing:-.052em;
+}
+
+.pageHeroLead{
+  max-width:820px;
+  color:#929eac;
+  font-size:16px;
+  line-height:1.74;
+}
+
+.pageKicker{
+  min-height:30px;
+  padding:0 10px;
+  border:1px solid rgba(67,227,174,.12);
+  border-radius:999px;
+  background:rgba(67,227,174,.035);
+}
+
+.breadcrumbs{
+  margin-bottom:25px;
+}
+
+.researchReviewStamp{
+  min-height:32px;
+  padding:0 10px;
+  border-radius:7px;
+  background:#080d13;
+}
+
+.pageBody{
+  padding-top:52px;
+  padding-bottom:112px;
+}
+
+/* Section hierarchy */
+.sectionHead{
+  grid-template-columns:minmax(0,1fr) minmax(300px,500px);
+  gap:54px;
+  align-items:end;
+  margin-bottom:34px;
+}
+
+.sectionHead h2{
+  max-width:760px;
+  font-size:clamp(29px,3vw,43px);
+  line-height:1.06;
+  letter-spacing:-.04em;
+}
+
+.sectionHead>p{
+  font-size:13px;
+  line-height:1.78;
+}
+
+.researchArticleSection{
+  padding-top:82px;
+}
+
+/* Cards: quieter, sharper, information-first */
+.toolGrid,
+.researchGrid,
+.articleCardGrid,
+.policyGrid{
+  gap:14px;
+}
+
+.toolCard,
+.contentCard,
+.articleCard,
+.policyCard,
+.infoCard{
+  border-radius:16px;
+}
+
+.toolCard{
+  min-height:355px;
+  padding:24px;
+}
+
+.contentCard{
+  padding:25px;
+}
+
+.toolCard:after,
+.contentCard:after,
+.articleCard:after,
+.policyCard:after{
+  content:"";
+  position:absolute;
+  left:20px;
+  right:20px;
+  top:0;
+  height:1px;
+  opacity:0;
+  background:linear-gradient(90deg,transparent,#43e3ae,#62a2ff,transparent);
+  transition:opacity .22s ease;
+}
+
+.toolCard:hover:after,
+.contentCard:hover:after,
+.articleCard:hover:after,
+.policyCard:hover:after{
+  opacity:.75;
+}
+
+.toolCard:hover,
+.contentCard:hover,
+.articleCard:hover,
+.policyCard:hover{
+  transform:translateY(-3px);
+}
+
+.cardTop{
+  min-height:48px;
+}
+
+.iconTile{
+  width:45px;
+  height:45px;
+  border-radius:11px;
+}
+
+.statusPill{
+  min-height:25px;
+  border:1px solid rgba(67,227,174,.08);
+}
+
+.cardLabel{
+  margin-top:28px;
+  letter-spacing:.13em;
+}
+
+.toolCard h3{
+  margin-top:9px;
+  font-size:23px;
+  line-height:1.08;
+}
+
+.toolCard p{
+  margin-top:13px;
+  font-size:12.5px;
+  line-height:1.7;
+}
+
+.cardFooter{
+  min-height:44px;
+  margin-top:auto;
+}
+
+/* Research cards */
+.researchGrid .contentCard{
+  min-height:325px;
+}
+
+.researchGrid .contentCard h3{
+  font-size:20px;
+}
+
+.researchGrid .contentCard p{
+  font-size:12px;
+}
+
+.researchGrid .contentCard li{
+  font-size:10px;
+}
+
+/* Article library */
+.articleCard{
+  min-height:250px;
+  padding:25px;
+}
+
+.articleCard>span{
+  color:#43e3ae;
+  letter-spacing:.12em;
+}
+
+.articleCard h3{
+  font-size:21px;
+  line-height:1.12;
+}
+
+.articleCard p{
+  font-size:12px;
+  line-height:1.72;
+}
+
+.articleCard>div{
+  border-top-color:rgba(255,255,255,.055);
+}
+
+/* Notices and trust surfaces */
+.notice{
+  margin-top:72px;
+  border-radius:17px;
+  padding:25px;
+}
+
+.notice h2{
+  font-size:20px;
+}
+
+.notice p{
+  font-size:12px;
+  line-height:1.72;
+}
+
+/* Forms */
+.siteShell input,
+.siteShell select,
+.siteShell textarea{
+  min-height:44px;
+  border-radius:9px;
+}
+
+.siteShell button{
+  border-radius:9px;
+}
+
+/* Data tables */
+.siteShell table{
+  border-collapse:separate;
+  border-spacing:0;
+  overflow:hidden;
+  border:1px solid #172431;
+  border-radius:12px;
+  font-variant-numeric:tabular-nums;
+}
+
+.siteShell th{
+  padding:12px 13px;
+  color:#7f8d9c;
+  font-size:9px;
+  font-weight:850;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.siteShell td{
+  padding:13px;
+  font-size:11px;
+}
+
+.siteShell tbody tr{
+  transition:background .16s ease;
+}
+
+.siteShell tbody tr:hover{
+  background:rgba(255,255,255,.025);
+}
+
+/* Numeric / data feel */
+.siteShell strong,
+.siteShell b{
+  font-feature-settings:"tnum" 1;
+}
+
+/* Footer */
+.footerTopline{
+  padding-top:64px;
+}
+
+.footerMain{
+  gap:44px;
+}
+
+.footerColumn{
+  gap:10px;
+}
+
+.footerColumn a{
+  transition:color .18s ease,transform .18s ease;
+}
+
+.footerColumn a:hover{
+  transform:translateX(2px);
+}
+
+/* Fine focus treatment */
+.siteShell a:focus-visible,
+.siteShell button:focus-visible,
+.siteShell input:focus-visible,
+.siteShell select:focus-visible,
+.siteShell textarea:focus-visible{
+  outline:2px solid #43e3ae;
+  outline-offset:3px;
+}
+
+/* Motion discipline */
+@media(prefers-reduced-motion:reduce){
+  .toolCard,
+  .contentCard,
+  .articleCard,
+  .policyCard,
+  .footerColumn a{
+    transform:none!important;
+  }
+}
+
+@media(max-width:1080px){
+  .sectionHead{
+    grid-template-columns:1fr;
+    gap:13px;
+  }
+}
+
+@media(max-width:620px){
+  .pageHero{
+    padding-top:70px;
+    padding-bottom:52px;
+  }
+
+  .pageHero h1{
+    font-size:clamp(40px,12.5vw,58px);
+  }
+
+  .pageBody{
+    padding-top:36px;
+    padding-bottom:78px;
+  }
+
+  .researchArticleSection{
+    padding-top:62px;
+  }
+
+  .toolCard,
+  .contentCard,
+  .articleCard,
+  .policyCard{
+    border-radius:14px;
+  }
+}
+/* === CREDONOMICS_V16_2_PRO_POLISH_END === */

@@ -1702,3 +1702,48 @@ body{
   color:#f5f7fa;
 }
 /* === CREDONOMICS_V16_GLOBAL_DARK_END === */
+/* === CREDONOMICS_V16_2_GLOBAL_POLISH_BEGIN === */
+html{
+  scroll-behavior:smooth;
+  scrollbar-color:#25313d #05070b;
+  scrollbar-width:thin;
+}
+
+body{
+  margin:0;
+  min-width:320px;
+  overflow-x:hidden;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+}
+
+::selection{
+  color:#04110c;
+  background:#43e3ae;
+}
+
+::-webkit-scrollbar{
+  width:10px;
+  height:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#05070b;
+}
+
+::-webkit-scrollbar-thumb{
+  border:3px solid #05070b;
+  border-radius:999px;
+  background:#25313d;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:#354555;
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{
+    scroll-behavior:auto;
+  }
+}
+/* === CREDONOMICS_V16_2_GLOBAL_POLISH_END === */
