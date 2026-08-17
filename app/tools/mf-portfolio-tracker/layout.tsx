@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import SiteFrame from '../../components/SiteFrame'
 
 export const metadata: Metadata = {
   title: 'Mutual Fund Portfolio Intelligence',
@@ -14,5 +15,5 @@ export default function MutualFundPortfolioLayout({
 }: {
   children: React.ReactNode
 }) {
-  return children
+  return <SiteFrame>{children}</SiteFrame>
 }

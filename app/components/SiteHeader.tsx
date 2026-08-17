@@ -43,9 +43,9 @@ export default function SiteHeader() {
 
       <div className={styles.utilityBar}>
         <span>
-          Independent financial research Â· Source-linked data Â· India-focused
+          Independent financial research · Source-linked data · India-focused
         </span>
-        <a href="/disclosures">Disclosures â†’</a>
+        <a href="/disclosures">Disclosures →</a>
       </div>
 
       <header className={styles.navShell}>

@@ -372,19 +372,19 @@ export default function MFPortfolioTracker() {
 
   if (loading) {
     return (
-      <main className="mfV2Page">
+      <div className="mfV2Page">
         <div className="mfV2Loading">
           <div className="mfV2Pulse" />
           <strong>Loading CredoNomics Mutual Fund Intelligence</strong>
           <span>Building the clean security-level view…</span>
         </div>
         <style jsx>{styles}</style>
-      </main>
+      </div>
     );
   }
 
   return (
-    <main className="mfV2Page">
+    <div className="mfV2Page">
       <div className="mfV2Shell">
         <div className="mfV2Breadcrumbs">
           <Link href="/">CredoNomics</Link>
@@ -709,17 +709,13 @@ export default function MFPortfolioTracker() {
       </div>
 
       <style jsx>{styles}</style>
-    </main>
+    </div>
   );
 }
 
 const styles = `
-  :global(body) {
-    margin: 0;
-  }
-
-  .mfV2Page {
-    min-height: 100vh;
+.mfV2Page {
+    min-height: 72vh;
     background:
       radial-gradient(circle at 82% 4%, rgba(24, 174, 255, .10), transparent 28rem),
       radial-gradient(circle at 18% 0%, rgba(0, 193, 163, .08), transparent 24rem),
@@ -729,9 +725,9 @@ const styles = `
   }
 
   .mfV2Shell {
-    width: min(1480px, calc(100% - 36px));
+    width: min(1320px, calc(100% - 40px));
     margin: 0 auto;
-    padding: 34px 0 64px;
+    padding: 46px 0 78px;
   }
 
   .mfV2Breadcrumbs {

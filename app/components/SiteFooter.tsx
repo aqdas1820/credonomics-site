@@ -74,9 +74,9 @@ export default function SiteFooter() {
       </div>
 
       <div className={`${styles.wrap} ${styles.footerBottom}`}>
-        <span>Â© {new Date().getFullYear()} CredoNomics Investment Solutions</span>
+        <span>© {new Date().getFullYear()} CredoNomics Investment Solutions</span>
         <span>
-          Not a SEBI-registered Investment Adviser or Research Analyst Â·
+          Not a SEBI-registered Investment Adviser or Research Analyst ·
           General educational and informational content only
         </span>
       </div>
