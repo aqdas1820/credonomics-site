@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import styles from '../core-v4.module.css'
 import ThemeModeToggle from './ThemeModeToggle'
+import SiteSearch from './SiteSearch'
 
 const primaryNav = [
   { href: '/research', label: 'Research' },
@@ -94,6 +95,7 @@ export default function SiteHeader() {
           </nav>
 
           <div className={styles.globalHeaderActions}>
+            <SiteSearch />
             <ThemeModeToggle compact />
 
             <Link href="/research" className={styles.globalResearchCta}>

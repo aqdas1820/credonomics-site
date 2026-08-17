@@ -1,4 +1,5 @@
 import LatestReportBanner from './components/LatestReportBanner'
+import HomepageDiscovery from './components/HomepageDiscovery'
 import Link from "next/link";
 import SiteFrame from "./components/SiteFrame";
 import { publicIpos } from "./data/ipo-public";
@@ -73,6 +74,7 @@ export default function HomePage() {
       <div className={styles.ambientOne} />
       <div className={styles.ambientTwo} />
       <LatestReportBanner />
+      <HomepageDiscovery />
       <section className={styles.hero}>
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
