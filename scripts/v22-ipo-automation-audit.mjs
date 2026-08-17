@@ -33,6 +33,23 @@ if (!Array.isArray(data?.issues) || data.issues.length < 1) {
   errors.push('IPO intelligence dataset contains no issues')
 }
 
+const generatedRecordCount =
+  (generated.match(/"id": "auto:/g) ?? []).length
+
+if (
+  Array.isArray(data?.issues) &&
+  generatedRecordCount !== data.issues.length
+) {
+  errors.push(
+    `Dashboard adapter count mismatch: JSON has ${data.issues.length} issues, ` +
+      `generated adapter has ${generatedRecordCount}`,
+  )
+}
+
+if (generatedRecordCount < 1) {
+  errors.push('Generated dashboard adapter contains zero IPO records')
+}
+
 const sourceHealth = data?.sourceHealth ?? {}
 const healthySources = Object.values(sourceHealth)
   .filter((value) => typeof value === 'number' && value > 0)
@@ -77,9 +94,10 @@ if (!packageText.includes('"ipo:refresh"')) {
 }
 
 console.log('')
-console.log('CredoNomics V22.2 IPO Automation Audit')
+console.log('CredoNomics V22.4 IPO Automation Audit')
 console.log('====================================')
-console.log(`Issues: ${data?.issues?.length ?? 0}`)
+console.log(`JSON issues: ${data?.issues?.length ?? 0}`)
+console.log(`Dashboard adapter records: ${generatedRecordCount}`)
 console.log(`Healthy source layers: ${healthySources}`)
 console.log(`Errors: ${errors.length}`)
 
@@ -87,4 +105,4 @@ for (const error of errors) console.error(`  - ${error}`)
 
 if (errors.length) process.exit(1)
 
-console.log('V22.2 IPO automation audit PASSED.')
+console.log('V22.4 IPO automation audit PASSED.')

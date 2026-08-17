@@ -27,11 +27,11 @@ export type IPONavigationItem = {
 }
 
 export const ipoDashboardMeta = {
-  "generatedAt": "2026-08-17T14:33:12+00:00",
+  "generatedAt": "2026-08-17T14:46:03+00:00",
   "sourceHealth": {
     "nseIssueBoardRecords": 1,
     "nseTrackerRecords": 0,
-    "sebiFilingRecords": 49,
+    "sebiFilingRecords": 50,
     "bseIssueSummaryRecords": 0
   },
   "warnings": [
@@ -337,6 +337,27 @@ export const ipoDashboardRecords: readonly IPODashboardRecord[] =
     "sourceFile": "public/data/ipo-intelligence/index.json",
     "prospectusUrl": "",
     "financialExtractionStatus": "not_available"
+  },
+  {
+    "id": "auto:ifl-finance",
+    "slug": "ifl-finance",
+    "company": "IFL Finance Ltd.",
+    "board": "Mainboard",
+    "status": "Research",
+    "openDate": "",
+    "closeDate": "",
+    "listingDate": "",
+    "allotmentDate": "",
+    "priceBand": "",
+    "lotSize": "",
+    "issueSize": "",
+    "exchange": "",
+    "gmp": "",
+    "subscription": "",
+    "href": "/ipo/company/ifl-finance",
+    "sourceFile": "public/data/ipo-intelligence/index.json",
+    "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/IFL%20Finance%20Ltd-%20DAP_p.pdf",
+    "financialExtractionStatus": "auto_extracted_verify_with_prospectus"
   },
   {
     "id": "auto:indian-gas-exchange",
@@ -654,27 +675,6 @@ export const ipoDashboardRecords: readonly IPODashboardRecord[] =
     "financialExtractionStatus": "auto_extracted_verify_with_prospectus"
   },
   {
-    "id": "auto:stalwart-people-services-india",
-    "slug": "stalwart-people-services-india",
-    "company": "STALWART PEOPLE SERVICES INDIA LIMITED",
-    "board": "Mainboard",
-    "status": "Research",
-    "openDate": "",
-    "closeDate": "",
-    "listingDate": "",
-    "allotmentDate": "",
-    "priceBand": "",
-    "lotSize": "",
-    "issueSize": "",
-    "exchange": "",
-    "gmp": "",
-    "subscription": "",
-    "href": "/ipo/company/stalwart-people-services-india",
-    "sourceFile": "public/data/ipo-intelligence/index.json",
-    "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/jul-2026/Stalwart%20People%20Services%20India%20Limited%20-%20Abri_p.pdf",
-    "financialExtractionStatus": "auto_extracted_verify_with_prospectus"
-  },
-  {
     "id": "auto:sunshine-pictures",
     "slug": "sunshine-pictures",
     "company": "Sunshine Pictures Limited",
@@ -770,14 +770,14 @@ export const ipoDashboardRecords: readonly IPODashboardRecord[] =
     "allotmentDate": "",
     "priceBand": "",
     "lotSize": "",
-    "issueSize": "â‚¹,",
+    "issueSize": "",
     "exchange": "",
     "gmp": "",
     "subscription": "",
     "href": "/ipo/company/veritas-finance",
     "sourceFile": "public/data/ipo-intelligence/index.json",
-    "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Veritas%20Finance%20Limited%20-%20AP_p.pdf",
-    "financialExtractionStatus": "auto_extracted_verify_with_prospectus"
+    "prospectusUrl": "",
+    "financialExtractionStatus": "not_available"
   },
   {
     "id": "auto:yogiji-digi",
