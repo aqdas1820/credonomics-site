@@ -45,6 +45,7 @@ export default function SiteFooter() {
         <div className={styles.footerColumn}>
           <b>Investment intelligence</b>
           <a href="/research">Research Desk</a>
+          <a href="/reports">Research Reports</a>
           <a href="/ipo">IPO Intelligence</a>
           <a href="/tools/mf-portfolio-tracker">
             <BarChart3 size={12} /> Mutual Fund Intelligence
