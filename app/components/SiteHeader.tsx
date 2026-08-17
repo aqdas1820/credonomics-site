@@ -1,12 +1,13 @@
 'use client'
 
-import { BarChart3, Instagram, Menu, X } from 'lucide-react'
+import Link from 'next/link'
+import { Menu, X } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import styles from '../core-v4.module.css'
 import ThemeModeToggle from './ThemeModeToggle'
 
-const navItems = [
+const primaryNav = [
   { href: '/research', label: 'Research' },
   { href: '/ipo', label: 'IPOs' },
   { href: '/tools/mf-portfolio-tracker', label: 'Mutual Funds' },
@@ -15,9 +16,21 @@ const navItems = [
   { href: '/about', label: 'About' },
 ]
 
+const intelligenceNav = [
+  { href: '/research', title: 'Research', detail: 'Frameworks' },
+  { href: '/ipo/calendar', title: 'IPO Calendar', detail: 'Primary market' },
+  {
+    href: '/tools/mf-portfolio-tracker',
+    title: 'MF Intelligence',
+    detail: 'Portfolio data',
+  },
+  { href: '/cards', title: 'Card Intelligence', detail: 'Product economics' },
+  { href: '/methodology', title: 'Methodology', detail: 'Sources & limits' },
+]
+
 export default function SiteHeader() {
-  const [open, setOpen] = useState(false)
   const pathname = usePathname()
+  const [open, setOpen] = useState(false)
 
   const isActive = (href: string) => {
     if (href === '/tools/mf-portfolio-tracker') {
@@ -41,72 +54,92 @@ export default function SiteHeader() {
         Skip to content
       </a>
 
-      <div className={styles.utilityBar}>
-        <span>
-          Independent financial research · Source-linked data · India-focused
-        </span>
-        <a href="/disclosures">Disclosures →</a>
-      </div>
+      <header className={styles.globalHeader}>
+        <div className={styles.globalHeaderInner}>
+          <Link
+            href="/"
+            className={styles.globalBrand}
+            aria-label="CredoNomics home"
+            onClick={() => setOpen(false)}
+          >
+            <span className={styles.globalBrandMarkShell}>
+              <img src="/credonomics-mark.png" alt="" />
+            </span>
 
-      <header className={styles.navShell}>
-        <div className={styles.nav}>
-          <a className={styles.brand} href="/" aria-label="CredoNomics home">
-            <img src="/credonomics-mark.png" alt="" />
-            <span className={styles.brandWords}>
-              <strong>CREDONOMICS</strong>
+            <span className={styles.globalBrandWords}>
+              <strong>CredoNomics</strong>
               <small>Investment Solutions</small>
             </span>
-          </a>
+          </Link>
 
           <nav
-            className={`${styles.navLinks} ${open ? styles.navLinksOpen : ''}`}
+            className={`${styles.globalNav} ${
+              open ? styles.globalNavOpen : ''
+            }`}
             aria-label="Primary navigation"
           >
-            {navItems.map((item) => (
-              <a
+            {primaryNav.map((item) => (
+              <Link
                 key={item.href}
                 href={item.href}
-                className={isActive(item.href) ? styles.navActive : undefined}
+                className={
+                  isActive(item.href) ? styles.globalNavActive : undefined
+                }
                 aria-current={isActive(item.href) ? 'page' : undefined}
                 onClick={() => setOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
-          <div className={styles.navActions}>
-            <a
-              className={styles.navCoverage}
-              href="/tools/mf-portfolio-tracker"
-            >
-              <BarChart3 size={14} />
-              MF Intelligence
-            </a>
-
+          <div className={styles.globalHeaderActions}>
             <ThemeModeToggle compact />
 
-            <a
-              className={styles.iconButton}
-              href="https://www.instagram.com/credonomics.in/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="CredoNomics on Instagram"
-            >
-              <Instagram size={16} />
-            </a>
+            <Link href="/research" className={styles.globalResearchCta}>
+              Research Desk <span>â†’</span>
+            </Link>
 
             <button
-              className={`${styles.iconButton} ${styles.menuButton}`}
-              onClick={() => setOpen((value) => !value)}
+              type="button"
+              className={styles.globalMenuButton}
               aria-label="Toggle navigation"
               aria-expanded={open}
+              onClick={() => setOpen((value) => !value)}
             >
-              {open ? <X size={18} /> : <Menu size={18} />}
+              {open ? <X size={19} /> : <Menu size={19} />}
             </button>
           </div>
         </div>
       </header>
+
+      <div className={styles.intelligenceStrip}>
+        <div className={styles.intelligenceStripInner}>
+          <div className={styles.intelligenceIdentity}>
+            <span className={styles.intelligenceLive}>
+              <i />
+              Intelligence Desk
+            </span>
+
+            <span className={styles.intelligenceDivider} />
+            <span className={styles.intelligenceStatus}>
+              Source-aware research
+            </span>
+          </div>
+
+          <nav
+            className={styles.intelligenceNav}
+            aria-label="Intelligence shortcuts"
+          >
+            {intelligenceNav.map((item) => (
+              <Link href={item.href} key={item.href}>
+                <strong>{item.title}</strong>
+                <small>{item.detail}</small>
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </div>
     </>
   )
 }

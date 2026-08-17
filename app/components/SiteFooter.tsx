@@ -1,4 +1,9 @@
-import { ArrowUpRight, BarChart3, Instagram, ShieldCheck } from 'lucide-react'
+import {
+  ArrowUpRight,
+  BarChart3,
+  Instagram,
+  ShieldCheck,
+} from 'lucide-react'
 import styles from '../core-v4.module.css'
 
 export default function SiteFooter() {
@@ -20,7 +25,7 @@ export default function SiteFooter() {
           <a className={styles.brand} href="/">
             <img src="/credonomics-mark.png" alt="" />
             <span className={styles.brandWords}>
-              <strong>CREDONOMICS</strong>
+              <strong>CredoNomics</strong>
               <small>Investment Solutions</small>
             </span>
           </a>
@@ -74,9 +79,11 @@ export default function SiteFooter() {
       </div>
 
       <div className={`${styles.wrap} ${styles.footerBottom}`}>
-        <span>© {new Date().getFullYear()} CredoNomics Investment Solutions</span>
         <span>
-          Not a SEBI-registered Investment Adviser or Research Analyst ·
+          Â© {new Date().getFullYear()} CredoNomics Investment Solutions
+        </span>
+        <span>
+          Not a SEBI-registered Investment Adviser or Research Analyst Â·
           General educational and informational content only
         </span>
       </div>

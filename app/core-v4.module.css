@@ -3668,3 +3668,467 @@
   }
 }
 /* === CREDONOMICS_V17_TRUST_END === */
+
+/* === CREDONOMICS_V17_2_UNIFIED_SHELL_BEGIN === */
+
+/*
+  One header system for Home, Research, IPO, MF, Cards, Tools and About.
+  Visual direction intentionally matches the cleaner homepage header.
+*/
+
+.globalHeader{
+  position:sticky;
+  top:0;
+  z-index:120;
+  border-bottom:1px solid color-mix(in srgb,var(--line) 82%,transparent);
+  background:color-mix(in srgb,var(--surface) 94%,transparent);
+  box-shadow:0 8px 28px rgba(18,44,73,.055);
+  backdrop-filter:blur(22px) saturate(130%);
+  -webkit-backdrop-filter:blur(22px) saturate(130%);
+}
+
+.globalHeaderInner{
+  width:min(1370px,calc(100% - 40px));
+  min-height:70px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:28px;
+}
+
+.globalBrand{
+  min-width:max-content;
+  display:inline-flex;
+  align-items:center;
+  gap:11px;
+  color:var(--ink)!important;
+}
+
+.globalBrandMarkShell{
+  width:43px;
+  height:43px;
+  display:grid;
+  place-items:center;
+  flex:0 0 auto;
+  border:1px solid color-mix(in srgb,var(--line) 92%,transparent);
+  border-radius:12px;
+  background:linear-gradient(
+    145deg,
+    color-mix(in srgb,var(--surface) 98%,transparent),
+    color-mix(in srgb,var(--surface-2) 88%,transparent)
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.28),
+    0 7px 20px rgba(18,44,73,.05);
+}
+
+.globalBrandMarkShell img{
+  width:31px;
+  height:31px;
+  object-fit:contain;
+}
+
+.globalBrandWords{
+  display:grid;
+  gap:4px;
+}
+
+.globalBrandWords strong{
+  color:var(--ink);
+  font-size:18px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:-.025em;
+}
+
+.globalBrandWords small{
+  color:var(--muted);
+  font-size:9px;
+  line-height:1.1;
+  font-weight:750;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+.globalNav{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:3px;
+}
+
+.globalNav a{
+  position:relative;
+  min-height:38px;
+  display:inline-flex;
+  align-items:center;
+  padding:0 12px;
+  border-radius:8px;
+  color:var(--muted)!important;
+  font-size:13.5px;
+  font-weight:700;
+  letter-spacing:-.008em;
+  transition:
+    color .18s ease,
+    background .18s ease,
+    transform .18s ease;
+}
+
+.globalNav a:hover{
+  color:var(--ink)!important;
+  background:color-mix(in srgb,var(--surface-2) 66%,transparent);
+}
+
+.globalNavActive{
+  color:var(--ink)!important;
+  background:color-mix(in srgb,var(--surface-2) 72%,transparent);
+}
+
+.globalNavActive:after{
+  content:"";
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:2px;
+  height:2px;
+  border-radius:99px;
+  background:linear-gradient(90deg,var(--teal),var(--blue));
+}
+
+.globalHeaderActions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.globalResearchCta{
+  min-height:40px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:0 15px;
+  color:#03110b!important;
+  border:1px solid color-mix(in srgb,var(--teal) 70%,transparent);
+  border-radius:9px;
+  background:linear-gradient(
+    135deg,
+    #43e3ae,
+    color-mix(in srgb,#43e3ae 76%,#8ef2cc)
+  );
+  box-shadow:0 9px 25px rgba(30,190,145,.11);
+  font-size:12.5px;
+  font-weight:900;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+
+.globalResearchCta:hover{
+  transform:translateY(-1px);
+  box-shadow:0 13px 31px rgba(30,190,145,.16);
+}
+
+.globalResearchCta span{
+  font-size:14px;
+}
+
+.globalMenuButton{
+  width:39px;
+  min-height:39px;
+  display:none;
+  place-items:center;
+  padding:0;
+  color:var(--ink);
+  border:1px solid var(--line);
+  border-radius:9px;
+  background:var(--surface);
+  cursor:pointer;
+}
+
+/* Secondary research navigation */
+.intelligenceStrip{
+  position:relative;
+  z-index:95;
+  border-bottom:1px solid color-mix(in srgb,var(--line) 82%,transparent);
+  background:color-mix(in srgb,var(--surface-2) 52%,var(--surface));
+}
+
+.intelligenceStripInner{
+  width:min(1370px,calc(100% - 40px));
+  min-height:55px;
+  margin:0 auto;
+  display:flex;
+  align-items:stretch;
+  gap:22px;
+}
+
+.intelligenceIdentity{
+  min-width:max-content;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding-right:21px;
+  border-right:1px solid var(--line);
+}
+
+.intelligenceLive{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--teal);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+}
+
+.intelligenceLive i{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--teal);
+  box-shadow:0 0 0 4px color-mix(in srgb,var(--teal) 9%,transparent);
+}
+
+.intelligenceDivider{
+  width:1px;
+  height:18px;
+  background:var(--line);
+}
+
+.intelligenceStatus{
+  color:var(--muted);
+  font-size:9.5px;
+  font-weight:800;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+
+.intelligenceNav{
+  min-width:0;
+  flex:1;
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+}
+
+.intelligenceNav a{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:3px;
+  padding:0 14px;
+  color:var(--muted)!important;
+  border-left:1px solid transparent;
+  border-right:1px solid transparent;
+  transition:
+    color .18s ease,
+    background .18s ease,
+    border-color .18s ease;
+}
+
+.intelligenceNav a:hover{
+  color:var(--ink)!important;
+  border-color:color-mix(in srgb,var(--line) 55%,transparent);
+  background:color-mix(in srgb,var(--surface) 54%,transparent);
+}
+
+.intelligenceNav strong{
+  overflow:hidden;
+  color:inherit;
+  font-size:11.5px;
+  line-height:1.2;
+  font-weight:800;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.intelligenceNav small{
+  overflow:hidden;
+  color:color-mix(in srgb,var(--muted) 78%,transparent);
+  font-size:9px;
+  line-height:1.2;
+  font-weight:750;
+  letter-spacing:.055em;
+  text-overflow:ellipsis;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+/* Footer text should use the same CredoNomics brand hierarchy. */
+.footer .brandWords strong{
+  color:#f7fafc;
+  font-size:16px;
+  letter-spacing:-.018em;
+}
+
+.footer .brandWords small{
+  font-size:9px;
+  letter-spacing:.13em;
+}
+
+.footerIntro p{
+  font-size:13.5px;
+}
+
+.footerTrust{
+  font-size:10.5px;
+}
+
+.footerColumn b{
+  font-size:10.5px;
+}
+
+.footerColumn a{
+  font-size:13px;
+}
+
+.footerBottom{
+  font-size:11px;
+}
+
+/* Dark mode keeps the same geometry, only the palette changes. */
+:global(html[data-theme='dark']) .globalHeader{
+  background:rgba(6,9,14,.94);
+  box-shadow:0 10px 34px rgba(0,0,0,.18);
+}
+
+:global(html[data-theme='dark']) .globalBrandMarkShell{
+  border-color:rgba(255,255,255,.075);
+  background:linear-gradient(145deg,#0c1118,#080c12);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.035),
+    0 8px 24px rgba(0,0,0,.16);
+}
+
+:global(html[data-theme='dark']) .intelligenceStrip{
+  background:#080d13;
+}
+
+/* Mobile */
+@media(max-width:1040px){
+  .globalHeaderInner{
+    gap:16px;
+  }
+
+  .globalNav a{
+    padding:0 9px;
+    font-size:12.5px;
+  }
+
+  .intelligenceNav a{
+    padding:0 10px;
+  }
+}
+
+@media(max-width:880px){
+  .globalHeaderInner{
+    position:relative;
+    grid-template-columns:auto 1fr auto;
+  }
+
+  .globalNav{
+    display:none;
+    position:absolute;
+    z-index:150;
+    top:64px;
+    left:0;
+    right:0;
+    padding:8px;
+    flex-direction:column;
+    align-items:stretch;
+    border:1px solid var(--line);
+    border-radius:13px;
+    background:var(--surface);
+    box-shadow:var(--shadow);
+  }
+
+  .globalNavOpen{
+    display:flex;
+  }
+
+  .globalNav a{
+    min-height:44px;
+    justify-content:flex-start;
+    padding:0 13px;
+  }
+
+  .globalNavActive:after{
+    display:none;
+  }
+
+  .globalHeaderActions{
+    grid-column:3;
+  }
+
+  .globalMenuButton{
+    display:grid;
+  }
+
+  .intelligenceStripInner{
+    width:100%;
+    min-height:auto;
+    display:block;
+  }
+
+  .intelligenceIdentity{
+    min-height:38px;
+    padding:0 14px;
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .intelligenceNav{
+    display:flex;
+    overflow-x:auto;
+    overscroll-behavior-x:contain;
+    scrollbar-width:none;
+  }
+
+  .intelligenceNav::-webkit-scrollbar{
+    display:none;
+  }
+
+  .intelligenceNav a{
+    min-width:150px;
+    min-height:52px;
+    flex:0 0 auto;
+    padding:0 14px;
+  }
+}
+
+@media(max-width:620px){
+  .globalHeaderInner{
+    width:min(100% - 24px,1370px);
+    min-height:66px;
+  }
+
+  .globalBrandMarkShell{
+    width:39px;
+    height:39px;
+    border-radius:10px;
+  }
+
+  .globalBrandMarkShell img{
+    width:29px;
+    height:29px;
+  }
+
+  .globalBrandWords strong{
+    font-size:16px;
+  }
+
+  .globalBrandWords small{
+    font-size:7.5px;
+  }
+
+  .globalResearchCta{
+    display:none;
+  }
+
+  .intelligenceStatus,
+  .intelligenceDivider{
+    display:none;
+  }
+}
+/* === CREDONOMICS_V17_2_UNIFIED_SHELL_END === */

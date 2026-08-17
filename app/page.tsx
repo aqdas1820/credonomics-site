@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ThemeModeToggle from "./components/ThemeModeToggle";
+import SiteFrame from "./components/SiteFrame";
 import { publicIpos } from "./data/ipo-public";
 import { researchArticles } from "./data/research-articles";
 import { PUBLIC_REVIEW_DATE } from "./data/tool-registry";
@@ -67,80 +67,10 @@ function displayDate(value?: string) {
 
 export default function HomePage() {
   return (
-    <main className={styles.page}>
+    <SiteFrame>
+      <div className={styles.page}>
       <div className={styles.ambientOne} />
       <div className={styles.ambientTwo} />
-
-      <header className={styles.header}>
-        <div className={styles.headerInner}>
-          <Link href="/" className={styles.brand} aria-label="CredoNomics home">
-            <span className={styles.brandMarkShell}>
-              <img
-                src="/credonomics-mark.png"
-                alt=""
-                className={styles.brandMark}
-              />
-            </span>
-            <span className={styles.brandText}>
-              <strong>CredoNomics</strong>
-              <small>Investment Solutions</small>
-            </span>
-          </Link>
-
-          <nav className={styles.nav} aria-label="Primary navigation">
-            <Link href="/research">Research</Link>
-            <Link href="/ipo">IPOs</Link>
-            <Link href="/tools/mf-portfolio-tracker">Mutual Funds</Link>
-            <Link href="/cards">Cards</Link>
-            <Link href="/tools">Tools</Link>
-            <Link href="/about">About</Link>
-          </nav>
-
-          <div className={styles.headerActions}>
-            <ThemeModeToggle compact />
-            <Link href="/research" className={styles.headerCta}>
-              Research Desk <span>→</span>
-            </Link>
-          </div>
-        </div>
-      </header>
-
-      <div className={styles.marketStrip}>
-        <div className={styles.marketStripInner}>
-          <div className={styles.deskIdentity}>
-            <span className={styles.livePill}>
-              <i />
-              Intelligence Desk
-            </span>
-            <span className={styles.deskDivider} />
-            <span className={styles.deskStatus}>Source-aware research</span>
-          </div>
-
-          <nav className={styles.deskNav} aria-label="Intelligence shortcuts">
-            <Link href="/research">
-              Research
-              <small>Frameworks</small>
-            </Link>
-            <Link href="/ipo/calendar">
-              IPO Calendar
-              <small>Primary market</small>
-            </Link>
-            <Link href="/tools/mf-portfolio-tracker">
-              MF Intelligence
-              <small>Portfolio data</small>
-            </Link>
-            <Link href="/cards">
-              Card Intelligence
-              <small>Product economics</small>
-            </Link>
-            <Link href="/methodology">
-              Methodology
-              <small>Sources & limits</small>
-            </Link>
-          </nav>
-        </div>
-      </div>
-
       <section className={styles.hero}>
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
@@ -470,31 +400,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <footer className={styles.footer}>
-        <div className={styles.footerInner}>
-          <div className={styles.footerBrand}>
-            <img src="/credonomics-mark.png" alt="" />
-            <div>
-              <strong>CredoNomics</strong>
-              <span>Investment Solutions</span>
-            </div>
-          </div>
-          <div className={styles.footerLinks}>
-            <Link href="/research">Research</Link>
-            <Link href="/ipo">IPO</Link>
-            <Link href="/tools/mf-portfolio-tracker">Mutual Funds</Link>
-            <Link href="/cards">Cards</Link>
-            <Link href="/tools">Tools</Link>
-            <Link href="/about">About</Link>
-            <Link href="/disclosures">Disclosures</Link>
-          </div>
-        </div>
-        <div className={styles.footerBottom}>
-          <span>© 2026 CredoNomics Investment Solutions</span>
-          <span>For educational and informational purposes only.</span>
-        </div>
-      </footer>
-    </main>
+</div>
+    </SiteFrame>
   );
 }
