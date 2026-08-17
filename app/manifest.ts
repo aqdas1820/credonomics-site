@@ -2,10 +2,10 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'CredoNomics — Indian Credit Card Intelligence',
+    name: 'CredoNomics Investment Solutions',
     short_name: 'CredoNomics',
     description:
-      'Real Indian credit-card rankings and financial decision tools using transparent, source-linked calculations.',
+      'Financial research, IPO intelligence, mutual-fund portfolio analytics, credit-card economics and transparent decision tools for India.',
     start_url: '/',
     scope: '/',
     display: 'standalone',

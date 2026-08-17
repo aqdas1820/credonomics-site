@@ -3,9 +3,9 @@ import styles from "./home-investment.module.css";
 
 const capabilities = [
   {
-    eyebrow: "EQUITY RESEARCH",
-    title: "Indian Equity Opportunities",
-    text: "Fundamental research built around valuation, earnings quality, balance-sheet strength, catalysts and long-term business economics.",
+    eyebrow: "RESEARCH DESK",
+    title: "Financial Research & Frameworks",
+    text: "Source-linked research and reusable frameworks across markets, financial products, valuation and decision-making.",
     href: "/research",
   },
   {
@@ -71,7 +71,7 @@ export default function HomePage() {
           </nav>
 
           <Link href="/research" className={styles.headerCta}>
-            Explore Research <span>â†’</span>
+            Explore Research <span>→</span>
           </Link>
         </div>
       </header>
@@ -112,7 +112,7 @@ export default function HomePage() {
 
             <div className={styles.heroActions}>
               <Link href="/research" className={styles.primaryButton}>
-                Explore Research <span>â†’</span>
+                Explore Research <span>→</span>
               </Link>
               <Link href="/tools" className={styles.secondaryButton}>
                 Open Research Tools
@@ -208,7 +208,7 @@ export default function HomePage() {
             </div>
             <p>
               CredoNomics is being built around research depth rather than
-              market noise â€” with tools and reports that help users understand
+              market noise — with tools and reports that help users understand
               the context behind a financial decision.
             </p>
           </div>
@@ -219,7 +219,7 @@ export default function HomePage() {
                 <span className={styles.cardEyebrow}>{item.eyebrow}</span>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
-                <span className={styles.cardLink}>Explore <b>â†’</b></span>
+                <span className={styles.cardLink}>Explore <b>→</b></span>
               </Link>
             ))}
           </div>
@@ -257,7 +257,7 @@ export default function HomePage() {
           <div className={styles.reportPanel}>
             <div>
               <span className={styles.sectionEyebrow}>CREDONOMICS RESEARCH REPORTS</span>
-              <h2>Research that explains the opportunity â€” not just the ticker.</h2>
+              <h2>Research that explains the opportunity — not just the ticker.</h2>
               <p>
                 Structured reports can bring together business analysis,
                 financial trends, valuation, catalysts, risks and scenario
@@ -265,7 +265,7 @@ export default function HomePage() {
               </p>
             </div>
             <Link href="/research" className={styles.secondaryButton}>
-              Research Library <span>â†’</span>
+              Research Library <span>→</span>
             </Link>
           </div>
         </div>
@@ -327,7 +327,7 @@ export default function HomePage() {
         </div>
 
         <div className={styles.footerBottom}>
-          <span>Â© 2026 CredoNomics Investment Solutions</span>
+          <span>© 2026 CredoNomics Investment Solutions</span>
           <span>For educational and informational purposes only.</span>
         </div>
       </footer>

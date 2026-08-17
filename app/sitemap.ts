@@ -8,7 +8,7 @@ import { publicIpos } from './data/ipo-public'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://www.credonomics.in'
-  const updated = new Date('2026-08-10T00:00:00+05:30')
+  const updated = new Date('2026-08-17T00:00:00+05:30')
 
   const entries: MetadataRoute.Sitemap = [
     { url: `${base}/`, lastModified: updated, priority: 1 },
@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/cards/coverage`, lastModified: updated, priority: 0.9 },
     { url: `${base}/cards/compare`, lastModified: updated, priority: 0.86 },
     { url: `${base}/cards/analyzer`, lastModified: updated, priority: 0.8 },
+
     { url: `${base}/ipo`, lastModified: updated, priority: 0.9 },
     { url: `${base}/ipo/analyzer`, lastModified: updated, priority: 0.82 },
     { url: `${base}/ipo/methodology`, lastModified: updated, priority: 0.75 },
@@ -27,8 +28,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/ipo/mainboard`, lastModified: updated, priority: 0.84 },
     { url: `${base}/ipo/upcoming`, lastModified: updated, priority: 0.86 },
     { url: `${base}/ipo/current`, lastModified: updated, priority: 0.86 },
-    { url: `${base}/tools`, lastModified: updated, priority: 0.82 },
-    { url: `${base}/research`, lastModified: updated, priority: 0.78 },
+
+    { url: `${base}/tools`, lastModified: updated, priority: 0.84 },
+    {
+      url: `${base}/tools/mf-portfolio-tracker`,
+      lastModified: updated,
+      priority: 0.9,
+    },
+
+    { url: `${base}/research`, lastModified: updated, priority: 0.82 },
     { url: `${base}/methodology`, lastModified: updated, priority: 0.72 },
     { url: `${base}/about`, lastModified: updated, priority: 0.72 },
     { url: `${base}/official`, lastModified: updated, priority: 0.76 },
@@ -86,7 +94,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/research/credit-card-data-standard',
     '/research/card-scoring',
   ]) {
-    entries.push({ url: `${base}${route}`, lastModified: updated, priority: 0.8 })
+    entries.push({
+      url: `${base}${route}`,
+      lastModified: updated,
+      priority: 0.8,
+    })
   }
 
   for (const article of researchArticles) {

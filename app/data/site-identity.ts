@@ -4,7 +4,7 @@ export const siteIdentity = {
   canonicalUrl: 'https://www.credonomics.in',
   domain: 'www.credonomics.in',
   description:
-    'India-focused credit-card intelligence and financial decision tools using transparent calculations and source-linked issuer terms.',
+    'India-focused financial research platform covering equities, IPO intelligence, mutual-fund portfolio analytics, credit-card economics and transparent decision tools.',
   email: 'hello@credonomics.in',
   phoneDisplay: '02562 455327',
   phoneInternational: '+91-2562-455327',
