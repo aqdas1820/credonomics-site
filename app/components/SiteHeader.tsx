@@ -4,6 +4,7 @@ import { BarChart3, Instagram, Menu, X } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import styles from '../core-v4.module.css'
+import ThemeModeToggle from './ThemeModeToggle'
 
 const navItems = [
   { href: '/research', label: 'Research' },
@@ -19,22 +20,16 @@ export default function SiteHeader() {
   const pathname = usePathname()
 
   const isActive = (href: string) => {
-    if (href === '/cards') {
-      return pathname === '/cards' || pathname.startsWith('/cards/')
-    }
-
-    if (href === '/ipo') {
-      return pathname === '/ipo' || pathname.startsWith('/ipo/')
-    }
-
     if (href === '/tools/mf-portfolio-tracker') {
       return pathname.startsWith('/tools/mf-portfolio-tracker')
     }
 
     if (href === '/tools') {
-      return pathname === '/tools' ||
+      return (
+        pathname === '/tools' ||
         (pathname.startsWith('/tools/') &&
           !pathname.startsWith('/tools/mf-portfolio-tracker'))
+      )
     }
 
     return pathname === href || pathname.startsWith(`${href}/`)
@@ -88,6 +83,8 @@ export default function SiteHeader() {
               <BarChart3 size={14} />
               MF Intelligence
             </a>
+
+            <ThemeModeToggle compact />
 
             <a
               className={styles.iconButton}

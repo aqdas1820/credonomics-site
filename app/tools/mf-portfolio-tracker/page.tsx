@@ -1,6 +1,7 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
+import ThemeModeToggle from "../../components/ThemeModeToggle";
 import { useEffect, useMemo, useState } from "react";
 
 type Holding = {
@@ -375,7 +376,7 @@ export default function MFPortfolioTracker() {
         <div className="mfV2Loading">
           <div className="mfV2Pulse" />
           <strong>Loading CredoNomics Mutual Fund Intelligence</strong>
-          <span>Building the clean security-level viewâ€¦</span>
+          <span>Building the clean security-level view…</span>
         </div>
         <style jsx>{styles}</style>
       </main>
@@ -391,6 +392,9 @@ export default function MFPortfolioTracker() {
           <Link href="/tools">Tools</Link>
           <span>/</span>
           <strong>MF Intelligence</strong>
+            <span className="mfV2ThemeSlot">
+              <ThemeModeToggle />
+            </span>
         </div>
 
         <section className="mfV2Hero">
@@ -409,7 +413,7 @@ export default function MFPortfolioTracker() {
               before accumulation, exits and consensus are calculated.
             </p>
             <div className="mfV2HeroMeta">
-              <span>2025â€“2026 history</span>
+              <span>2025–2026 history</span>
               <span>{schemes.length} core schemes live</span>
               <span>Latest: {meta.latestMonth ?? currentMonth}</span>
             </div>
@@ -530,7 +534,7 @@ export default function MFPortfolioTracker() {
               <input
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search a company or sectorâ€¦"
+                placeholder="Search a company or sector…"
               />
               <span>{visibleStocks.length} securities</span>
             </div>
@@ -650,7 +654,7 @@ export default function MFPortfolioTracker() {
             <h2>Cleaner identity. Better signals.</h2>
 
             <div className="mfV2MethodItem">
-              <strong>01 Â· Security identity</strong>
+              <strong>01 · Security identity</strong>
               <p>
                 ISIN is the primary key where available, instead of raw PDF company
                 text. This prevents spelling fragments from becoming fake stocks.
@@ -658,7 +662,7 @@ export default function MFPortfolioTracker() {
             </div>
 
             <div className="mfV2MethodItem">
-              <strong>02 Â· Company repair</strong>
+              <strong>02 · Company repair</strong>
               <p>
                 The best complete company name observed for the same ISIN across
                 selected months is reused consistently.
@@ -666,7 +670,7 @@ export default function MFPortfolioTracker() {
             </div>
 
             <div className="mfV2MethodItem">
-              <strong>03 Â· Precision-first filtering</strong>
+              <strong>03 · Precision-first filtering</strong>
               <p>
                 Dedicated index-only factsheets and unrecoverable company fragments
                 are excluded from the public ranking.
@@ -674,7 +678,7 @@ export default function MFPortfolioTracker() {
             </div>
 
             <Link href="/methodology" className="mfV2MethodLink">
-              Read CredoNomics methodology â†’
+              Read CredoNomics methodology →
             </Link>
           </article>
         </section>
@@ -692,7 +696,7 @@ export default function MFPortfolioTracker() {
 
         <aside className="mfV2Disclaimer">
           <div>
-            <strong>Research tool â€” not investment advice</strong>
+            <strong>Research tool — not investment advice</strong>
             <p>
               CredoNomics is not SEBI-registered as an Investment Adviser or
               Research Analyst and is not NISM-certified. Portfolio data is
@@ -700,7 +704,7 @@ export default function MFPortfolioTracker() {
               extraction limitations. Verify material information with the AMC.
             </p>
           </div>
-          <Link href="/disclosures">Disclosures â†’</Link>
+          <Link href="/disclosures">Disclosures →</Link>
         </aside>
       </div>
 

@@ -3101,3 +3101,127 @@
   }
 }
 /* === CREDONOMICS_V16_2_PRO_POLISH_END === */
+/* === CREDONOMICS_V16_3_LIGHT_COMPAT_BEGIN === */
+:global(html[data-theme='light']) .siteShell{
+  --bg:#f7f9fb;
+  --surface:#ffffff;
+  --surface-2:#f0f4f7;
+  --ink:#07172c;
+  --muted:#667383;
+  --line:#dde5eb;
+  --navy:#07172c;
+  --blue:#2c72f6;
+  --blue-2:#4385fa;
+  --teal:#11b7b5;
+  --teal-2:#0b9b91;
+  --soft-blue:#edf4ff;
+  --soft-teal:#e9fbf8;
+  --amber:#b77a16;
+  --soft-amber:#fff7e8;
+  --shadow-sm:0 10px 30px rgba(18,44,73,.07);
+  --shadow:0 22px 70px rgba(18,44,73,.10);
+  --shadow-lg:0 36px 100px rgba(18,44,73,.14);
+  color-scheme:light;
+  color:#07172c;
+  background:
+    radial-gradient(circle at 12% -4%,rgba(17,183,181,.055),transparent 29%),
+    radial-gradient(circle at 92% 4%,rgba(44,114,246,.05),transparent 27%),
+    #f7f9fb;
+}
+
+:global(html[data-theme='light']) .nav{
+  border-color:rgba(7,23,44,.09);
+  background:rgba(255,255,255,.92);
+  box-shadow:
+    0 14px 42px rgba(18,44,73,.07),
+    inset 0 1px 0 rgba(255,255,255,.8);
+}
+
+:global(html[data-theme='light']) .brandWords strong{
+  color:#07172c;
+}
+
+:global(html[data-theme='light']) .brandWords small{
+  color:#69788a;
+}
+
+:global(html[data-theme='light']) .navLinks a{
+  color:#657486;
+}
+
+:global(html[data-theme='light']) .navLinks a:hover,
+:global(html[data-theme='light']) .navLinks a.navActive{
+  color:#07172c!important;
+  background:#eef2f5;
+}
+
+:global(html[data-theme='light']) .pageHero h1,
+:global(html[data-theme='light']) .sectionHead h2,
+:global(html[data-theme='light']) .splitIntro h2,
+:global(html[data-theme='light']) .sideTitle h2{
+  color:#07172c;
+}
+
+:global(html[data-theme='light']) .pageHeroLead,
+:global(html[data-theme='light']) .sectionHead>p,
+:global(html[data-theme='light']) .splitIntro>p,
+:global(html[data-theme='light']) .sideTitle p{
+  color:#687789;
+}
+
+:global(html[data-theme='light']) .toolCard,
+:global(html[data-theme='light']) .contentCard,
+:global(html[data-theme='light']) .infoCard,
+:global(html[data-theme='light']) .policyCard,
+:global(html[data-theme='light']) .contactCard,
+:global(html[data-theme='light']) .articleCard,
+:global(html[data-theme='light']) .disclosurePanel,
+:global(html[data-theme='light']) .contactPanel,
+:global(html[data-theme='light']) .stepCard{
+  color:#07172c;
+  border-color:rgba(7,23,44,.09);
+  background:#ffffff;
+  box-shadow:0 14px 42px rgba(18,44,73,.055);
+}
+
+:global(html[data-theme='light']) .toolCard h3,
+:global(html[data-theme='light']) .contentCard h3,
+:global(html[data-theme='light']) .policyCard h2,
+:global(html[data-theme='light']) .infoCard h3,
+:global(html[data-theme='light']) .articleCard h3{
+  color:#07172c;
+}
+
+:global(html[data-theme='light']) .toolCard p,
+:global(html[data-theme='light']) .contentCard p,
+:global(html[data-theme='light']) .contentCard li,
+:global(html[data-theme='light']) .policyCard p,
+:global(html[data-theme='light']) .infoCard p,
+:global(html[data-theme='light']) .articleCard p{
+  color:#6d7b8b;
+}
+
+:global(html[data-theme='light']) .siteShell input,
+:global(html[data-theme='light']) .siteShell select,
+:global(html[data-theme='light']) .siteShell textarea{
+  color:#07172c;
+  border-color:#dbe4eb;
+  background:#ffffff;
+}
+
+:global(html[data-theme='light']) .siteShell table{
+  color:#172b40;
+  border-color:#dbe4eb;
+  background:#ffffff;
+}
+
+:global(html[data-theme='light']) .siteShell th{
+  color:#687789;
+  background:#f2f5f8;
+}
+
+:global(html[data-theme='light']) .siteShell td,
+:global(html[data-theme='light']) .siteShell th{
+  border-color:#e2e8ed;
+}
+/* === CREDONOMICS_V16_3_LIGHT_COMPAT_END === */

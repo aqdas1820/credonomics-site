@@ -1747,3 +1747,214 @@ body{
   }
 }
 /* === CREDONOMICS_V16_2_GLOBAL_POLISH_END === */
+/* === CREDONOMICS_V16_3_THEME_BEGIN === */
+
+/* Explicit White / Black palettes */
+:root[data-theme='light']{
+  --bg:#f7f9fb;
+  --surface:#ffffff;
+  --surface2:#f0f4f7;
+  --text:#07172c;
+  --muted:#667383;
+  --line:#dde5eb;
+  --navy:#07172c;
+  --navy2:#0c2440;
+  --teal:#11b7b5;
+  --blue:#2c72f6;
+  --cyan:#35d1c7;
+  --white:#ffffff;
+  --shadow:0 22px 70px rgba(18,44,73,.10);
+  --shadow-sm:0 10px 30px rgba(18,44,73,.07);
+  color-scheme:light;
+}
+
+:root[data-theme='dark']{
+  --bg:#05070b;
+  --surface:#090d13;
+  --surface2:#0d141d;
+  --text:#f5f7fa;
+  --muted:#8d99a9;
+  --line:#1b2734;
+  --navy:#f5f7fa;
+  --navy2:#d6e7ff;
+  --teal:#43e3ae;
+  --blue:#62a2ff;
+  --cyan:#4de1d2;
+  --white:#ffffff;
+  --shadow:0 24px 70px rgba(0,0,0,.28);
+  --shadow-sm:0 12px 34px rgba(0,0,0,.20);
+  color-scheme:dark;
+}
+
+html[data-theme='light'],
+html[data-theme='light'] body{
+  background:#f7f9fb;
+  color:#07172c;
+}
+
+html[data-theme='dark'],
+html[data-theme='dark'] body{
+  background:#05070b;
+  color:#f5f7fa;
+}
+
+/* MF page theme control */
+.mfV2ThemeSlot{
+  margin-left:auto;
+  display:inline-flex;
+  align-items:center;
+}
+
+/* Mutual Fund page: BLACK MODE */
+html[data-theme='dark'] .mfV2Page{
+  color:#edf3f8!important;
+  background:
+    radial-gradient(circle at 82% 4%,rgba(98,162,255,.08),transparent 28rem),
+    radial-gradient(circle at 18% 0%,rgba(67,227,174,.075),transparent 24rem),
+    #05070b!important;
+}
+
+html[data-theme='dark'] .mfV2Breadcrumbs{
+  color:#748293!important;
+}
+
+html[data-theme='dark'] .mfV2Breadcrumbs a:hover{
+  color:#43e3ae!important;
+}
+
+html[data-theme='dark'] .mfV2HeroCopy,
+html[data-theme='dark'] .mfV2Controls,
+html[data-theme='dark'] .mfV2Panel{
+  border-color:rgba(255,255,255,.075)!important;
+  background:linear-gradient(180deg,#0a0f16,#080c12)!important;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.22),
+    inset 0 1px 0 rgba(255,255,255,.025)!important;
+}
+
+html[data-theme='dark'] .mfV2Hero h1,
+html[data-theme='dark'] .mfV2PanelHead h2,
+html[data-theme='dark'] .mfV2Method h2,
+html[data-theme='dark'] .mfV2Stock,
+html[data-theme='dark'] .mfV2Movement strong,
+html[data-theme='dark'] .mfV2MethodItem strong,
+html[data-theme='dark'] .mfV2Sector strong{
+  color:#f3f6f9!important;
+}
+
+html[data-theme='dark'] .mfV2HeroCopy>p,
+html[data-theme='dark'] .mfV2PanelHead p,
+html[data-theme='dark'] .mfV2Method p,
+html[data-theme='dark'] .mfV2Movement span,
+html[data-theme='dark'] .mfV2MoveRight small,
+html[data-theme='dark'] .mfV2Muted,
+html[data-theme='dark'] .mfV2Rank,
+html[data-theme='dark'] .mfV2Loading span{
+  color:#8491a1!important;
+}
+
+html[data-theme='dark'] .mfV2HeroMeta span{
+  color:#8d9bac!important;
+  border-color:#1c2936!important;
+  background:#0a1017!important;
+}
+
+html[data-theme='dark'] .mfV2Controls label>span{
+  color:#728194!important;
+}
+
+html[data-theme='dark'] .mfV2Controls select{
+  color:#edf3f8!important;
+  border-color:#1c2a38!important;
+  background:#070c12!important;
+}
+
+html[data-theme='dark'] .mfV2SearchWrap{
+  border-color:#1c2936!important;
+  background:#070c12!important;
+}
+
+html[data-theme='dark'] .mfV2SearchWrap input{
+  color:#edf3f8!important;
+}
+
+html[data-theme='dark'] .mfV2SearchWrap input::placeholder{
+  color:#5e6d7d!important;
+}
+
+html[data-theme='dark'] .mfV2TableWrap{
+  border-color:#1a2733!important;
+}
+
+html[data-theme='dark'] .mfV2TableWrap table{
+  color:#dce5ed!important;
+  background:#080d13!important;
+}
+
+html[data-theme='dark'] .mfV2TableWrap thead{
+  background:#0b1119!important;
+}
+
+html[data-theme='dark'] .mfV2TableWrap th{
+  color:#758497!important;
+}
+
+html[data-theme='dark'] .mfV2TableWrap td{
+  border-top-color:#17232e!important;
+}
+
+html[data-theme='dark'] .mfV2TableWrap tbody tr:hover{
+  background:rgba(255,255,255,.025)!important;
+}
+
+html[data-theme='dark'] .mfV2Movement{
+  border-bottom-color:#17232e!important;
+}
+
+html[data-theme='dark'] .mfV2Bar{
+  background:#182530!important;
+}
+
+html[data-theme='dark'] .mfV2Method{
+  background:
+    radial-gradient(circle at 100% 0%,rgba(67,227,174,.055),transparent 38%),
+    linear-gradient(180deg,#0a0f16,#080d13)!important;
+}
+
+html[data-theme='dark'] .mfV2MethodItem{
+  border-bottom-color:#17232e!important;
+}
+
+html[data-theme='dark'] .mfV2Notice{
+  border-color:rgba(239,180,95,.18)!important;
+  background:#21190d!important;
+  box-shadow:none!important;
+}
+
+html[data-theme='dark'] .mfV2Notice strong{
+  color:#efc16f!important;
+}
+
+html[data-theme='dark'] .mfV2Notice span{
+  color:#ab956e!important;
+}
+
+html[data-theme='dark'] .mfV2Disclaimer{
+  border-color:rgba(255,255,255,.075)!important;
+  background:#07131e!important;
+}
+
+html[data-theme='dark'] .mfV2Loading{
+  color:#f3f6f9!important;
+}
+
+/* Ensure the MF page remains intentionally clean in WHITE MODE */
+html[data-theme='light'] .mfV2Page{
+  color:#071629!important;
+  background:
+    radial-gradient(circle at 82% 4%,rgba(24,174,255,.10),transparent 28rem),
+    radial-gradient(circle at 18% 0%,rgba(0,193,163,.08),transparent 24rem),
+    #f5f7fa!important;
+}
+
+/* === CREDONOMICS_V16_3_THEME_END === */

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./home-investment.module.css";
+import ThemeModeToggle from "./components/ThemeModeToggle";
 
 const capabilities = [
   {
@@ -71,6 +72,7 @@ export default function HomePage() {
             <Link href="/about">About</Link>
           </nav>
 
+          <ThemeModeToggle compact />
           <Link href="/research" className={styles.headerCta}>
             Explore Research <span>→</span>
           </Link>
