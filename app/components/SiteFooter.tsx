@@ -1,4 +1,4 @@
-import { ArrowUpRight, Instagram, ShieldCheck } from 'lucide-react'
+import { ArrowUpRight, BarChart3, Instagram, ShieldCheck } from 'lucide-react'
 import styles from '../core-v4.module.css'
 
 export default function SiteFooter() {
@@ -6,11 +6,12 @@ export default function SiteFooter() {
     <footer className={styles.footer}>
       <div className={`${styles.wrap} ${styles.footerTopline}`}>
         <div>
-          <span>Research before decisions.</span>
-          <h2>See the data and context before you act.</h2>
+          <span>CredoNomics Investment Solutions</span>
+          <h2>Research the context before making the decision.</h2>
         </div>
-        <a href="/tools">
-          Explore financial tools <ArrowUpRight size={16} />
+
+        <a href="/research">
+          Research Desk <ArrowUpRight size={16} />
         </a>
       </div>
 
@@ -25,12 +26,14 @@ export default function SiteFooter() {
           </a>
 
           <p>
-            Financial research, IPO intelligence, mutual-fund portfolio analytics,
-            credit-card economics and practical decision tools for India.
+            India-focused financial intelligence across investment research,
+            IPOs, mutual-fund portfolios, credit-card economics and transparent
+            decision tools.
           </p>
 
           <div className={styles.footerTrust}>
-            <ShieldCheck size={14} /> Official domain: credonomics.in
+            <ShieldCheck size={14} />
+            Official domain: credonomics.in
           </div>
         </div>
 
@@ -38,16 +41,18 @@ export default function SiteFooter() {
           <b>Investment intelligence</b>
           <a href="/research">Research Desk</a>
           <a href="/ipo">IPO Intelligence</a>
-          <a href="/tools/mf-portfolio-tracker">Mutual Fund Intelligence</a>
+          <a href="/tools/mf-portfolio-tracker">
+            <BarChart3 size={12} /> Mutual Fund Intelligence
+          </a>
           <a href="/tools">Financial Tools</a>
         </div>
 
         <div className={styles.footerColumn}>
-          <b>Card intelligence</b>
-          <a href="/cards">Compare Cards</a>
-          <a href="/cards/all">Verified Cards</a>
-          <a href="/cards/coverage">Coverage</a>
+          <b>Financial products</b>
+          <a href="/cards">Credit Card Intelligence</a>
+          <a href="/cards/all">Card Directory</a>
           <a href="/cards/compare">Head-to-Head</a>
+          <a href="/methodology">Methodology</a>
         </div>
 
         <div className={styles.footerColumn}>
@@ -69,10 +74,10 @@ export default function SiteFooter() {
       </div>
 
       <div className={`${styles.wrap} ${styles.footerBottom}`}>
-        <span>(c) {new Date().getFullYear()} CredoNomics Investment Solutions</span>
+        <span>Â© {new Date().getFullYear()} CredoNomics Investment Solutions</span>
         <span>
-          Not a SEBI-registered Investment Adviser or Research Analyst. General
-          educational and informational content only.
+          Not a SEBI-registered Investment Adviser or Research Analyst Â·
+          General educational and informational content only
         </span>
       </div>
     </footer>

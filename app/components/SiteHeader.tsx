@@ -1,32 +1,43 @@
 'use client'
 
-import { Database, Instagram, Menu, Moon, Sun, X } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { BarChart3, Instagram, Menu, X } from 'lucide-react'
+import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 import styles from '../core-v4.module.css'
+
+const navItems = [
+  { href: '/research', label: 'Research' },
+  { href: '/ipo', label: 'IPOs' },
+  { href: '/tools/mf-portfolio-tracker', label: 'Mutual Funds' },
+  { href: '/cards', label: 'Cards' },
+  { href: '/tools', label: 'Tools' },
+  { href: '/about', label: 'About' },
+]
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false)
-  const [dark, setDark] = useState(false)
+  const pathname = usePathname()
 
-  useEffect(() => {
-    try {
-      const stored = window.localStorage.getItem('credonomics-theme')
-      const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches
-      const useDark = stored ? stored === 'dark' : Boolean(prefersDark)
-      setDark(useDark)
-      document.documentElement.dataset.theme = useDark ? 'dark' : 'light'
-    } catch {}
-  }, [])
+  const isActive = (href: string) => {
+    if (href === '/cards') {
+      return pathname === '/cards' || pathname.startsWith('/cards/')
+    }
 
-  const toggleTheme = () => {
-    setDark((value) => {
-      const next = !value
-      document.documentElement.dataset.theme = next ? 'dark' : 'light'
-      try {
-        window.localStorage.setItem('credonomics-theme', next ? 'dark' : 'light')
-      } catch {}
-      return next
-    })
+    if (href === '/ipo') {
+      return pathname === '/ipo' || pathname.startsWith('/ipo/')
+    }
+
+    if (href === '/tools/mf-portfolio-tracker') {
+      return pathname.startsWith('/tools/mf-portfolio-tracker')
+    }
+
+    if (href === '/tools') {
+      return pathname === '/tools' ||
+        (pathname.startsWith('/tools/') &&
+          !pathname.startsWith('/tools/mf-portfolio-tracker'))
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`)
   }
 
   return (
@@ -37,9 +48,9 @@ export default function SiteHeader() {
 
       <div className={styles.utilityBar}>
         <span>
-          Independent research | Source-linked data | General educational information
+          Independent financial research Â· Source-linked data Â· India-focused
         </span>
-        <a href="/disclosures">Disclosures -&gt;</a>
+        <a href="/disclosures">Disclosures â†’</a>
       </div>
 
       <header className={styles.navShell}>
@@ -56,23 +67,26 @@ export default function SiteHeader() {
             className={`${styles.navLinks} ${open ? styles.navLinksOpen : ''}`}
             aria-label="Primary navigation"
           >
-            <a href="/research" onClick={() => setOpen(false)}>Research</a>
-            <a href="/ipo" onClick={() => setOpen(false)}>IPOs</a>
-            <a href="/tools/mf-portfolio-tracker" onClick={() => setOpen(false)}>
-              Mutual Funds
-            </a>
-            <a href="/cards" onClick={() => setOpen(false)}>Cards</a>
-            <a href="/tools" onClick={() => setOpen(false)}>Tools</a>
-            <a href="/about" onClick={() => setOpen(false)}>About</a>
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className={isActive(item.href) ? styles.navActive : undefined}
+                aria-current={isActive(item.href) ? 'page' : undefined}
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </a>
+            ))}
           </nav>
 
           <div className={styles.navActions}>
             <a
               className={styles.navCoverage}
               href="/tools/mf-portfolio-tracker"
-              aria-label="Open mutual fund intelligence"
             >
-              <Database size={14} /> MF Intelligence
+              <BarChart3 size={14} />
+              MF Intelligence
             </a>
 
             <a
@@ -84,14 +98,6 @@ export default function SiteHeader() {
             >
               <Instagram size={16} />
             </a>
-
-            <button
-              className={styles.iconButton}
-              onClick={toggleTheme}
-              aria-label="Toggle colour theme"
-            >
-              {dark ? <Sun size={17} /> : <Moon size={17} />}
-            </button>
 
             <button
               className={`${styles.iconButton} ${styles.menuButton}`}
