@@ -1,0 +1,237 @@
+.footerShell{
+  margin-top:72px;
+  color:#f4f8fb;
+  background:
+    radial-gradient(circle at right top,rgba(22,214,176,.14),transparent 28%),
+    linear-gradient(180deg,#020b14 0%,#02101b 100%);
+  border-top:1px solid rgba(255,255,255,.05);
+}
+
+.footerWrap{
+  width:min(1320px,calc(100% - 48px));
+  margin:0 auto;
+  padding:56px 0 28px;
+}
+
+.ctaPanel{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:32px;
+  padding:0 0 38px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.kicker{
+  display:inline-block;
+  margin-bottom:16px;
+  color:#43e3ae;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.ctaCopy h2{
+  max-width:760px;
+  margin:0;
+  color:#f5f8fb;
+  font-size:clamp(42px,5.2vw,68px);
+  line-height:.98;
+  letter-spacing:-.05em;
+}
+
+.ctaButton{
+  min-height:54px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:0 18px;
+  border-radius:14px;
+  color:#02110b!important;
+  background:#43e3ae;
+  box-shadow:0 14px 38px rgba(67,227,174,.18);
+  font-size:14px;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+.footerGrid{
+  display:grid;
+  grid-template-columns:minmax(320px,1.25fr) repeat(3,minmax(180px,.8fr));
+  gap:46px;
+  padding:44px 0 34px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.brandColumn{
+  min-width:0;
+}
+
+.brandRow{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.logoPlate{
+  width:66px;
+  height:66px;
+  display:grid;
+  place-items:center;
+  flex:0 0 auto;
+  border-radius:18px;
+  background:rgba(255,255,255,.98);
+  box-shadow:0 14px 30px rgba(0,0,0,.28);
+}
+
+.logoPlate img{
+  width:42px;
+  height:42px;
+  display:block;
+  object-fit:contain;
+}
+
+.wordmark{
+  display:grid;
+  gap:4px;
+}
+
+.wordmark strong{
+  color:#f5f8fb;
+  font-size:32px;
+  line-height:1;
+  font-weight:850;
+  letter-spacing:-.04em;
+  text-transform:none;
+}
+
+.wordmark small{
+  color:#98aac0;
+  font-size:13px;
+  font-weight:850;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+.brandDescription{
+  max-width:430px;
+  margin:28px 0 0;
+  color:#a9b8c7;
+  font-size:16px;
+  line-height:1.75;
+}
+
+.domainBadge{
+  margin-top:18px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border:1px solid rgba(67,227,174,.24);
+  border-radius:999px;
+  color:#43e3ae!important;
+  background:rgba(67,227,174,.08);
+  font-size:13px;
+  font-weight:800;
+}
+
+.linkColumn{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.columnTitle{
+  margin-bottom:8px;
+  color:#7e8ea2;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+.linkColumn a{
+  color:#eef4f8!important;
+  font-size:16px;
+  font-weight:700;
+  line-height:1.35;
+  transition:color .18s ease,transform .18s ease;
+}
+
+.linkColumn a:hover{
+  color:#43e3ae!important;
+  transform:translateX(2px);
+}
+
+.footnoteRow{
+  padding-top:18px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.footnoteRow p{
+  margin:0;
+  color:#7f90a4;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.footnoteRow p:last-child{
+  max-width:640px;
+  text-align:right;
+}
+
+@media(max-width:1100px){
+  .footerGrid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .ctaPanel{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .footnoteRow{
+    flex-direction:column;
+  }
+
+  .footnoteRow p:last-child{
+    text-align:left;
+  }
+}
+
+@media(max-width:720px){
+  .footerWrap{
+    width:min(100% - 28px,1320px);
+    padding-top:40px;
+  }
+
+  .footerGrid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .brandRow{
+    align-items:center;
+  }
+
+  .wordmark strong{
+    font-size:28px;
+  }
+
+  .brandDescription{
+    font-size:15px;
+  }
+
+  .ctaCopy h2{
+    font-size:clamp(34px,12vw,52px);
+  }
+
+  .ctaButton{
+    width:100%;
+  }
+}
