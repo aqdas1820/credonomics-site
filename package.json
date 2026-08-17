@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "prebuild": "node scripts/generate-ipo-dashboard.mjs && node scripts/generate-search-index.mjs"
+    "prebuild": "node scripts/generate-ipo-dashboard.mjs && node scripts/generate-search-index.mjs",
+    "ipo:refresh": "python scripts/ipo_auto_fetch/fetch_ipo_intelligence.py",
+    "ipo:generate": "node scripts/generate-ipo-dashboard.mjs"
   },
   "dependencies": {
     "next": "14.2.5",

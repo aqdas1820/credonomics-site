@@ -1,0 +1,73 @@
+name: Refresh IPO Intelligence
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 2,8,14,20 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ipo-intelligence-refresh
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scripts/ipo_auto_fetch/requirements.txt
+
+      - name: Install IPO fetch dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scripts/ipo_auto_fetch/requirements.txt
+
+      - name: Fetch official IPO intelligence
+        run: python scripts/ipo_auto_fetch/fetch_ipo_intelligence.py
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install web dependencies
+        run: npm ci
+
+      - name: Generate IPO dashboard
+        run: node scripts/generate-ipo-dashboard.mjs
+
+      - name: Validate production build
+        run: npm run build
+
+      - name: Commit refreshed IPO intelligence
+        shell: bash
+        run: |
+          git config user.name "CredoNomics Data Bot"
+          git config user.email "actions@users.noreply.github.com"
+
+          git add \
+            public/data/ipo-intelligence/index.json \
+            app/data/ipo-dashboard.generated.ts
+
+          if git diff --cached --quiet; then
+            echo "No IPO data changes."
+            exit 0
+          fi
+
+          git commit -m "data: refresh IPO intelligence"
+          git pull --rebase origin main
+          git push origin HEAD:main
