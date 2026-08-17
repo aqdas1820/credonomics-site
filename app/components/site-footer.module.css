@@ -384,3 +384,18 @@
 }
 
 /* === CREDONOMICS_V17_5_FOOTER_MOBILE_END === */
+
+/* === CREDONOMICS_V17_5_1_BRAND_WEIGHT_BEGIN === */
+
+/* Refine footer wordmark to match the calmer brand tone. */
+.wordmark strong{
+  font-weight:780!important;
+  letter-spacing:-.032em!important;
+}
+
+.wordmark small{
+  font-weight:800!important;
+  letter-spacing:.16em!important;
+}
+
+/* === CREDONOMICS_V17_5_1_BRAND_WEIGHT_END === */

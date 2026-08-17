@@ -4495,3 +4495,18 @@
 }
 
 /* === CREDONOMICS_V17_5_CORE_MOBILE_END === */
+
+/* === CREDONOMICS_V17_5_1_BRAND_WEIGHT_BEGIN === */
+
+/* Refine header wordmark so it looks premium, not extra-bold. */
+.globalBrandWords strong{
+  font-weight:780!important;
+  letter-spacing:-.032em!important;
+}
+
+.globalBrandWords small{
+  font-weight:780!important;
+  letter-spacing:.15em!important;
+}
+
+/* === CREDONOMICS_V17_5_1_BRAND_WEIGHT_END === */
