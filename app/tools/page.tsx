@@ -1,11 +1,13 @@
 import {
   ArrowUpRight,
   BarChart3,
+  CreditCard,
   Database,
   FileSearch,
   Landmark,
   ShieldCheck,
 } from 'lucide-react'
+import ResearchProvenance from '../components/ResearchProvenance'
 import SiteFrame from '../components/SiteFrame'
 import { PUBLIC_REVIEW_DATE, publicTools } from '../data/tool-registry'
 import { quickCalculators } from '../data/quick-calculators'
@@ -75,6 +77,12 @@ export default function ToolsPage() {
       </section>
 
       <section className={`${styles.wrap} ${styles.pageBody}`}>
+        <ResearchProvenance
+          updated={`Tool framework reviewed ${PUBLIC_REVIEW_DATE}`}
+          source="Official filings, fund disclosures, exchange records and issuer terms"
+          period="Varies by tool; inputs and dates are shown where applicable"
+          limitations="Modeled outputs depend on user inputs and current source terms"
+        />
         <section className={styles.researchArticleSection}>
           <div className={styles.sectionHead}>
             <div>
@@ -119,24 +127,26 @@ export default function ToolsPage() {
 
             <a
               className={`${styles.toolCard} ${styles.researchCard}`}
-              href="/methodology"
+              href="/cards/analyzer"
             >
               <div className={styles.cardTop}>
                 <span className={styles.iconTile}>
-                  <FileSearch size={22} />
+                  <CreditCard size={22} />
                 </span>
-                <span className={styles.statusPill}>Method</span>
+                <span className={styles.statusPill}>
+                  <i className={styles.liveDot} /> Live
+                </span>
               </div>
 
-              <span className={styles.cardLabel}>04 / Verification</span>
-              <h3>How research is built</h3>
+              <span className={styles.cardLabel}>04 / Product economics</span>
+              <h3>Card Intelligence</h3>
               <p>
-                Review source hierarchy, normalization rules, assumptions and the
-                CredoNomics methodology.
+                Compare card structures, reward economics, fees, caps and
+                spend-profile fit through transparent calculations.
               </p>
 
               <div className={styles.cardFooter}>
-                <span>Read methodology</span>
+                <span>Open card analyzer</span>
                 <ArrowUpRight size={16} />
               </div>
             </a>

@@ -1,6 +1,9 @@
 import Link from "next/link";
-import styles from "./home-investment.module.css";
 import ThemeModeToggle from "./components/ThemeModeToggle";
+import { publicIpos } from "./data/ipo-public";
+import { researchArticles } from "./data/research-articles";
+import { PUBLIC_REVIEW_DATE } from "./data/tool-registry";
+import styles from "./home-investment.module.css";
 
 const capabilities = [
   {
@@ -37,11 +40,30 @@ const framework = [
 ];
 
 const terminalRows = [
-  ["Fundamental Quality", "Business & financial strength", 92],
-  ["Valuation Discipline", "Price versus underlying value", 86],
-  ["Catalyst Analysis", "Events & changing expectations", 81],
-  ["Risk Assessment", "Downside & uncertainty", 89],
+  ["Fundamental Quality", "Business & financial strength", "Quality"],
+  ["Valuation Discipline", "Price versus underlying value", "Value"],
+  ["Catalyst Analysis", "Events & changing expectations", "Catalyst"],
+  ["Risk Assessment", "Downside & uncertainty", "Risk"],
 ];
+
+const latestArticle = researchArticles[0];
+const featuredIpo =
+  publicIpos.find((ipo) => ipo.status === "open") ??
+  publicIpos.find((ipo) => ipo.status === "upcoming") ??
+  publicIpos[0];
+
+function displayDate(value?: string) {
+  if (!value) return "Date shown on source record";
+
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+
+  return new Intl.DateTimeFormat("en-IN", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  }).format(date);
+}
 
 export default function HomePage() {
   return (
@@ -59,7 +81,6 @@ export default function HomePage() {
                 className={styles.brandMark}
               />
             </span>
-
             <span className={styles.brandText}>
               <strong>CredoNomics</strong>
               <small>Investment Solutions</small>
@@ -92,7 +113,7 @@ export default function HomePage() {
               Intelligence Desk
             </span>
             <span className={styles.deskDivider} />
-            <span className={styles.deskStatus}>Research platform</span>
+            <span className={styles.deskStatus}>Source-aware research</span>
           </div>
 
           <nav className={styles.deskNav} aria-label="Intelligence shortcuts">
@@ -100,29 +121,26 @@ export default function HomePage() {
               Research
               <small>Frameworks</small>
             </Link>
-
             <Link href="/ipo/calendar">
               IPO Calendar
               <small>Primary market</small>
             </Link>
-
             <Link href="/tools/mf-portfolio-tracker">
               MF Intelligence
               <small>Portfolio data</small>
             </Link>
-
             <Link href="/cards">
               Card Intelligence
               <small>Product economics</small>
             </Link>
-
             <Link href="/methodology">
               Methodology
-              <small>How we research</small>
+              <small>Sources & limits</small>
             </Link>
           </nav>
         </div>
       </div>
+
       <section className={styles.hero}>
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
@@ -137,9 +155,10 @@ export default function HomePage() {
             </h1>
 
             <p className={styles.heroText}>
-              CredoNomics Investment Solutions combines fundamental analysis,
-              valuation research, IPO intelligence, mutual-fund analytics and
-              practical financial tools in one research-focused platform.
+              CredoNomics Investment Solutions combines valuation frameworks,
+              IPO intelligence, mutual-fund portfolio analytics, banking-product
+              economics and practical financial tools in one research-focused
+              platform.
             </p>
 
             <div className={styles.heroActions}>
@@ -187,25 +206,31 @@ export default function HomePage() {
                 <div className={styles.terminalTitleRow}>
                   <div>
                     <span className={styles.terminalEyebrow}>
-                      Market Research Framework
+                      Illustrative Research Framework
                     </span>
                     <h2>Opportunity Intelligence</h2>
                   </div>
-                  <span className={styles.activeBadge}>ACTIVE</span>
+                  <span className={styles.activeBadge}>FRAMEWORK</span>
                 </div>
 
+                <p className={styles.frameworkNotice}>
+                  These are research dimensions—not live security scores,
+                  recommendations or price targets.
+                </p>
+
                 <div className={styles.scoreList}>
-                  {terminalRows.map(([title, subtitle, score]) => (
+                  {terminalRows.map(([title, subtitle, factor]) => (
                     <div className={styles.scoreCard} key={String(title)}>
                       <div className={styles.scoreHeader}>
                         <div>
                           <strong>{title}</strong>
                           <span>{subtitle}</span>
                         </div>
-                        <b>{score}</b>
+                        <b className={styles.factorBadge}>{factor}</b>
                       </div>
-                      <div className={styles.scoreTrack}>
-                        <span style={{ width: `${score}%` }} />
+                      <div className={styles.factorMeta}>
+                        <span>Framework factor</span>
+                        <i />
                       </div>
                     </div>
                   ))}
@@ -231,22 +256,102 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={styles.trustRail} aria-label="CredoNomics research principles">
+      <section className={styles.trustRail}>
         <div className={styles.trustRailInner}>
           <div className={styles.trustLead}>
             <span>CredoNomics standard</span>
             <strong>Research with visible context.</strong>
           </div>
-
           <div className={styles.trustPoints}>
             <span><i /> Source-linked</span>
-            <span><i /> Transparent methodology</span>
-            <span><i /> India-focused</span>
-            <span><i /> Educational research</span>
+            <span><i /> Date-aware</span>
+            <span><i /> Methodology visible</span>
+            <span><i /> Limitations stated</span>
           </div>
         </div>
       </section>
-<section className={styles.capabilitiesSection}>
+
+      <section className={styles.latestSection}>
+        <div className={styles.sectionShell}>
+          <div className={styles.sectionHeading}>
+            <div>
+              <span className={styles.sectionEyebrow}>LATEST INTELLIGENCE</span>
+              <h2>What changed, what is current, and where to research next.</h2>
+            </div>
+            <p>
+              This section is built from CredoNomicsâ€™ existing research and
+              market-data records. It does not use decorative or fabricated
+              market prices.
+            </p>
+          </div>
+
+          <div className={styles.latestGrid}>
+            <Link
+              href={`/research/articles/${latestArticle.slug}`}
+              className={styles.latestCard}
+            >
+              <span className={styles.latestType}>Latest research</span>
+              <h3>{latestArticle.title}</h3>
+              <p>{latestArticle.description}</p>
+              <div className={styles.latestMeta}>
+                <span>Reviewed {displayDate(latestArticle.reviewed)}</span>
+                <b>{latestArticle.readTime}</b>
+              </div>
+            </Link>
+
+            {featuredIpo ? (
+              <Link
+                href={`/ipo/${featuredIpo.slug}`}
+                className={styles.latestCard}
+              >
+                <span className={styles.latestType}>
+                  IPO · {featuredIpo.status}
+                </span>
+                <h3>{featuredIpo.companyName}</h3>
+                <p>
+                  Open the source-linked IPO record for issue details,
+                  subscription context and the latest normalized market record.
+                </p>
+                <div className={styles.latestMeta}>
+                  <span>Updated {displayDate(featuredIpo.lastUpdated)}</span>
+                  <b>{featuredIpo.marketSegment}</b>
+                </div>
+              </Link>
+            ) : null}
+
+            <Link
+              href="/tools/mf-portfolio-tracker"
+              className={styles.latestCard}
+            >
+              <span className={styles.latestType}>Portfolio intelligence</span>
+              <h3>Mutual Fund Portfolio Intelligence</h3>
+              <p>
+                Explore scheme holdings, stock concentration, sectors and
+                portfolio changes with dataset period and coverage context.
+              </p>
+              <div className={styles.latestMeta}>
+                <span>Interactive dataset</span>
+                <b>MF research</b>
+              </div>
+            </Link>
+
+            <Link href="/tools" className={styles.latestCard}>
+              <span className={styles.latestType}>Decision tools</span>
+              <h3>Transparent Financial Tools</h3>
+              <p>
+                Use calculators and analyzers that keep assumptions, caps, fees
+                and methodology visible.
+              </p>
+              <div className={styles.latestMeta}>
+                <span>Framework reviewed {PUBLIC_REVIEW_DATE}</span>
+                <b>Tools hub</b>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.capabilitiesSection}>
         <div className={styles.sectionShell}>
           <div className={styles.sectionHeading}>
             <div>
@@ -255,14 +360,18 @@ export default function HomePage() {
             </div>
             <p>
               CredoNomics is being built around research depth rather than
-              market noise — with tools and reports that help users understand
+              market noise—with tools and reports that help users understand
               the context behind a financial decision.
             </p>
           </div>
 
           <div className={styles.capabilityGrid}>
             {capabilities.map((item, index) => (
-              <Link href={item.href} className={styles.capabilityCard} key={item.title}>
+              <Link
+                href={item.href}
+                className={styles.capabilityCard}
+                key={item.title}
+              >
                 <div className={styles.cardMeta}>
                   <span className={styles.cardIndex}>
                     {String(index + 1).padStart(2, "0")}
@@ -309,12 +418,14 @@ export default function HomePage() {
         <div className={styles.sectionShell}>
           <div className={styles.reportPanel}>
             <div>
-              <span className={styles.sectionEyebrow}>CREDONOMICS RESEARCH REPORTS</span>
-              <h2>Research that explains the opportunity — not just the ticker.</h2>
+              <span className={styles.sectionEyebrow}>
+                CREDONOMICS RESEARCH REPORTS
+              </span>
+              <h2>Research that explains the context—not just the ticker.</h2>
               <p>
                 Structured reports can bring together business analysis,
-                financial trends, valuation, catalysts, risks and scenario
-                thinking in one place.
+                financial trends, valuation, catalysts, risks, sources and
+                limitations in one place.
               </p>
             </div>
             <Link href="/research" className={styles.secondaryButton}>
@@ -334,7 +445,7 @@ export default function HomePage() {
               <h2>Data. Research. Perspective.</h2>
             </div>
             <p>
-              CredoNomics focuses on investment research, financial
+              CredoNomics focuses on financial research, source-linked
               intelligence and analytical tools designed to help users study
               markets and financial products with greater context.
             </p>
@@ -369,16 +480,16 @@ export default function HomePage() {
               <span>Investment Solutions</span>
             </div>
           </div>
-
           <div className={styles.footerLinks}>
             <Link href="/research">Research</Link>
             <Link href="/ipo">IPO</Link>
+            <Link href="/tools/mf-portfolio-tracker">Mutual Funds</Link>
+            <Link href="/cards">Cards</Link>
             <Link href="/tools">Tools</Link>
             <Link href="/about">About</Link>
             <Link href="/disclosures">Disclosures</Link>
           </div>
         </div>
-
         <div className={styles.footerBottom}>
           <span>© 2026 CredoNomics Investment Solutions</span>
           <span>For educational and informational purposes only.</span>

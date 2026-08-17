@@ -3,7 +3,7 @@ import { ImageResponse } from "next/og";
 export const runtime = "edge";
 
 export const alt =
-  "CredoNomics Investment Solutions â€” Research beyond market noise";
+  "CredoNomics Investment Solutions — Research beyond market noise";
 
 export const size = {
   width: 1200,

@@ -3415,3 +3415,256 @@
   }
 }
 /* === CREDONOMICS_V16_8_CORE_TYPE_END === */
+
+/* === CREDONOMICS_V17_TRUST_BEGIN === */
+
+.provenanceBar{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr)) auto;
+  align-items:stretch;
+  gap:1px;
+  margin:0 0 58px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:14px;
+  background:rgba(255,255,255,.045);
+  box-shadow:0 14px 42px rgba(0,0,0,.12);
+}
+
+.provenanceItem{
+  min-width:0;
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  gap:11px;
+  padding:14px 16px;
+  color:#43e3ae;
+  background:#080d13;
+}
+
+.provenanceItem span{
+  min-width:0;
+  display:grid;
+  gap:4px;
+}
+
+.provenanceItem small{
+  color:#697789;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.provenanceItem strong{
+  overflow:hidden;
+  color:#dce5ed;
+  font-size:12px;
+  font-weight:700;
+  line-height:1.4;
+  text-overflow:ellipsis;
+}
+
+.provenanceLink{
+  min-width:126px;
+  display:grid;
+  place-items:center;
+  padding:0 18px;
+  color:#06110d!important;
+  background:#43e3ae;
+  font-size:12px;
+  font-weight:900;
+}
+
+.researchDomainGrid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:12px;
+}
+
+.researchDomainCard{
+  min-height:315px;
+  display:flex;
+  flex-direction:column;
+  padding:22px;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:16px;
+  color:#edf2f7;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(98,162,255,.04),transparent 35%),
+    linear-gradient(180deg,#0a0f16,#080c12);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025);
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+
+.researchDomainCard:hover{
+  transform:translateY(-4px);
+  border-color:rgba(67,227,174,.20);
+  box-shadow:0 24px 65px rgba(0,0,0,.22);
+}
+
+.domainHead{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.domainTag{
+  color:#718093;
+  font-size:9px;
+  font-weight:850;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+
+.researchDomainCard h3{
+  margin:30px 0 10px;
+  color:#f3f6f9;
+  font-size:21px;
+  line-height:1.12;
+}
+
+.researchDomainCard p{
+  margin:0;
+  color:#8592a2;
+  font-size:14px;
+  line-height:1.68;
+}
+
+.domainFooter{
+  min-height:44px;
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:14px;
+  margin-top:auto;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.055);
+}
+
+.domainFooter small{
+  color:#6c7a8a;
+  font-size:10.5px;
+  line-height:1.4;
+}
+
+.domainFooter svg{
+  color:#43e3ae;
+}
+
+.mfServerIntro{
+  padding-top:44px;
+  padding-bottom:8px;
+}
+
+.mfServerTitle{
+  max-width:880px;
+  display:block;
+  margin-top:10px;
+  color:#f3f6f9;
+  font-size:clamp(26px,3vw,40px);
+  line-height:1.08;
+  letter-spacing:-.035em;
+}
+
+.mfServerLead{
+  max-width:920px;
+  margin:15px 0 26px;
+  color:#8592a2;
+  font-size:14.5px;
+  line-height:1.7;
+}
+
+.mfServerIntro .provenanceBar{
+  margin-bottom:18px;
+}
+
+:global(html[data-theme='light']) .provenanceBar{
+  border-color:#dce4eb;
+  background:#dfe6ec;
+  box-shadow:0 12px 35px rgba(18,44,73,.06);
+}
+
+:global(html[data-theme='light']) .provenanceItem{
+  color:#0b9b91;
+  background:#fff;
+}
+
+:global(html[data-theme='light']) .provenanceItem small{
+  color:#778596;
+}
+
+:global(html[data-theme='light']) .provenanceItem strong{
+  color:#1b3147;
+}
+
+:global(html[data-theme='light']) .provenanceLink{
+  color:#fff!important;
+  background:#07172c;
+}
+
+:global(html[data-theme='light']) .researchDomainCard{
+  color:#07172c;
+  border-color:rgba(7,23,44,.09);
+  background:#fff;
+  box-shadow:0 14px 42px rgba(18,44,73,.05);
+}
+
+:global(html[data-theme='light']) .researchDomainCard h3{
+  color:#07172c;
+}
+
+:global(html[data-theme='light']) .researchDomainCard p{
+  color:#687789;
+}
+
+:global(html[data-theme='light']) .domainFooter{
+  border-top-color:#e5ebf0;
+}
+
+:global(html[data-theme='light']) .mfServerTitle{
+  color:#07172c;
+}
+
+:global(html[data-theme='light']) .mfServerLead{
+  color:#687789;
+}
+
+@media(max-width:1180px){
+  .researchDomainGrid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+
+  .provenanceBar{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .provenanceLink{
+    min-height:50px;
+    grid-column:1/-1;
+  }
+}
+
+@media(max-width:720px){
+  .researchDomainGrid{
+    grid-template-columns:1fr;
+  }
+
+  .researchDomainCard{
+    min-height:auto;
+  }
+
+  .provenanceBar{
+    grid-template-columns:1fr;
+  }
+
+  .provenanceItem{
+    min-height:65px;
+  }
+
+  .mfServerIntro{
+    padding-top:28px;
+  }
+}
+/* === CREDONOMICS_V17_TRUST_END === */

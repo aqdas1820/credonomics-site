@@ -14,14 +14,14 @@ type Segment = "All" | "Mainboard" | "SME";
 type StatusFilter = "All" | "Open" | "Upcoming" | "Closed" | "Listed";
 
 function money(value: number | null, suffix = "") {
-  if (value === null || !Number.isFinite(value)) return "â€”";
+  if (value === null || !Number.isFinite(value)) return "—";
   return `â‚¹${value.toLocaleString("en-IN", {
     maximumFractionDigits: 2,
   })}${suffix}`;
 }
 
 function dateLabel(value: string | null) {
-  if (!value) return "â€”";
+  if (!value) return "—";
   const date = new Date(`${value}T00:00:00`);
   if (Number.isNaN(date.getTime())) return value;
   return new Intl.DateTimeFormat("en-IN", {
@@ -32,7 +32,7 @@ function dateLabel(value: string | null) {
 }
 
 function shortDate(value: string | null) {
-  if (!value) return "â€”";
+  if (!value) return "—";
   const date = new Date(`${value}T00:00:00`);
   if (Number.isNaN(date.getTime())) return value;
   return new Intl.DateTimeFormat("en-IN", {
@@ -42,11 +42,11 @@ function shortDate(value: string | null) {
 }
 
 function priceBand(ipo: NormalizedIPO) {
-  if (ipo.priceLow === null && ipo.priceHigh === null) return "â€”";
+  if (ipo.priceLow === null && ipo.priceHigh === null) return "—";
   if (ipo.priceLow === ipo.priceHigh || ipo.priceLow === null) {
     return money(ipo.priceHigh ?? ipo.priceLow);
   }
-  return `${money(ipo.priceLow)} â€“ ${money(ipo.priceHigh)}`;
+  return `${money(ipo.priceLow)} – ${money(ipo.priceHigh)}`;
 }
 
 function minInvestment(ipo: NormalizedIPO) {
@@ -195,7 +195,7 @@ export default function IPOHubClient({
             <p>
               Current and upcoming IPOs, issue economics, subscription demand,
               allotment and listing timelines, Mainboard/SME separation and
-              post-listing performance â€” structured for fast research.
+              post-listing performance — structured for fast research.
             </p>
 
             <div className="quickNav">
@@ -341,7 +341,7 @@ export default function IPOHubClient({
               <strong>{initialIPOs.length} normalized IPO records</strong>
               <b>{sourceFiles.length} source files</b>
               <small>
-                Missing fields remain blank â€” never inferred.
+                Missing fields remain blank — never inferred.
               </small>
             </article>
           </div>
@@ -402,7 +402,7 @@ export default function IPOHubClient({
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Search company, exchange, registrarâ€¦"
+              placeholder="Search company, exchange, registrar…"
             />
 
             <select value={sort} onChange={(event) => setSort(event.target.value)}>
@@ -444,33 +444,33 @@ export default function IPOHubClient({
                     </td>
                     <td className="dates">
                       <b>{shortDate(ipo.openDate)}</b>
-                      <span>â†’</span>
+                      <span>→</span>
                       <b>{shortDate(ipo.closeDate)}</b>
                     </td>
                     <td>{priceBand(ipo)}</td>
-                    <td>{ipo.lotSize?.toLocaleString("en-IN") ?? "â€”"}</td>
+                    <td>{ipo.lotSize?.toLocaleString("en-IN") ?? "—"}</td>
                     <td>
                       {minInvestment(ipo) !== null
                         ? money(minInvestment(ipo))
-                        : "â€”"}
+                        : "—"}
                     </td>
                     <td>
                       {ipo.issueSizeCr !== null
                         ? money(ipo.issueSizeCr, " Cr")
-                        : "â€”"}
+                        : "—"}
                     </td>
                     <td>
                       {ipo.subscription !== null ? (
                         <b className="sub">{ipo.subscription.toFixed(2)}x</b>
                       ) : (
-                        "â€”"
+                        "—"
                       )}
                     </td>
                     <td>
                       {ipo.gmp !== null ? (
                         <span className="gmp">{money(ipo.gmp)}</span>
                       ) : (
-                        "â€”"
+                        "—"
                       )}
                     </td>
                   </tr>
@@ -517,7 +517,7 @@ export default function IPOHubClient({
                     <div>
                       <strong>{ipo.company}</strong>
                       <small>
-                        {ipo.type} Â· {ipo.status}
+                        {ipo.type} · {ipo.status}
                       </small>
                     </div>
                     <b>{ipo.subscription!.toFixed(2)}x</b>
@@ -752,7 +752,7 @@ export default function IPOHubClient({
               <div>
                 <span>LOT SIZE</span>
                 <strong>
-                  {selected.lotSize?.toLocaleString("en-IN") ?? "â€”"}
+                  {selected.lotSize?.toLocaleString("en-IN") ?? "—"}
                 </strong>
               </div>
               <div>
@@ -760,7 +760,7 @@ export default function IPOHubClient({
                 <strong>
                   {minInvestment(selected) !== null
                     ? money(minInvestment(selected))
-                    : "â€”"}
+                    : "—"}
                 </strong>
               </div>
               <div>
@@ -768,7 +768,7 @@ export default function IPOHubClient({
                 <strong>
                   {selected.issueSizeCr !== null
                     ? money(selected.issueSizeCr, " Cr")
-                    : "â€”"}
+                    : "—"}
                 </strong>
               </div>
               <div>
@@ -776,13 +776,13 @@ export default function IPOHubClient({
                 <strong>
                   {selected.subscription !== null
                     ? `${selected.subscription.toFixed(2)}x`
-                    : "â€”"}
+                    : "—"}
                 </strong>
               </div>
               <div>
                 <span>GMP*</span>
                 <strong>
-                  {selected.gmp !== null ? money(selected.gmp) : "â€”"}
+                  {selected.gmp !== null ? money(selected.gmp) : "—"}
                 </strong>
               </div>
             </div>
@@ -800,11 +800,11 @@ export default function IPOHubClient({
             <div className="drawerSection">
               <h3>Issue structure</h3>
               <div className="detailRows">
-                <div><span>Issue type</span><strong>{selected.issueType ?? "â€”"}</strong></div>
-                <div><span>Fresh issue</span><strong>{selected.freshIssueCr !== null ? money(selected.freshIssueCr, " Cr") : "â€”"}</strong></div>
-                <div><span>Offer for sale</span><strong>{selected.ofsCr !== null ? money(selected.ofsCr, " Cr") : "â€”"}</strong></div>
-                <div><span>Lead manager</span><strong>{selected.leadManager ?? "â€”"}</strong></div>
-                <div><span>Registrar</span><strong>{selected.registrar ?? "â€”"}</strong></div>
+                <div><span>Issue type</span><strong>{selected.issueType ?? "—"}</strong></div>
+                <div><span>Fresh issue</span><strong>{selected.freshIssueCr !== null ? money(selected.freshIssueCr, " Cr") : "—"}</strong></div>
+                <div><span>Offer for sale</span><strong>{selected.ofsCr !== null ? money(selected.ofsCr, " Cr") : "—"}</strong></div>
+                <div><span>Lead manager</span><strong>{selected.leadManager ?? "—"}</strong></div>
+                <div><span>Registrar</span><strong>{selected.registrar ?? "—"}</strong></div>
               </div>
             </div>
 
