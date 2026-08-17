@@ -99,6 +99,25 @@ if (Array.isArray(data?.issues)) {
   }
 }
 
+const forbiddenDashboardRegressions = [
+  [
+    'legacy All filter',
+    /['"]All['"]\s*,\s*['"]All['"]/.test(dashboardClient),
+  ],
+  [
+    'legacy default All state',
+    /useState\(\s*['"]All['"]\s*\)/.test(dashboardClient),
+  ],
+  [
+    'legacy CredoNomics dataset label',
+    /CredoNomics dataset/i.test(dashboardClient),
+  ],
+]
+
+for (const [label, present] of forbiddenDashboardRegressions) {
+  if (present) errors.push(`IPO dashboard regression detected: ${label}`)
+}
+
 const dashboardQualityChecks = [
   [
     'Market filter option',
@@ -183,7 +202,7 @@ if (!packageText.includes('"ipo:refresh"')) {
 }
 
 console.log('')
-console.log('CredoNomics V22.7 IPO Automation Audit')
+console.log('CredoNomics V22.9 IPO Automation Audit')
 console.log('====================================')
 console.log(`JSON issues: ${data?.issues?.length ?? 0}`)
 console.log(`Dashboard adapter records: ${generatedRecordCount}`)
@@ -194,4 +213,4 @@ for (const error of errors) console.error(`  - ${error}`)
 
 if (errors.length) process.exit(1)
 
-console.log('V22.7 IPO automation audit PASSED.')
+console.log('V22.9 IPO automation audit PASSED.')

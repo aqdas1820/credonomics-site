@@ -31,10 +31,7 @@ function recentRecord(record: IPODashboardRecord) {
   return record.status === 'Closed' || record.status === 'Listed'
 }
 
-function displayValue(
-  value: string,
-  fallback = '\u2014',
-) {
+function displayValue(value: string, fallback = '\u2014') {
   const normalized = (value ?? '')
     .trim()
     .replace(/\u00e2\u20ac\u201d/g, '\u2014')
@@ -61,16 +58,21 @@ export default function IPODashboardClient() {
   const [query, setQuery] = useState('')
 
   const stats = useMemo(() => {
-    const open = ipoDashboardRecords.filter((item) => item.status === 'Open')
-      .length
+    const open = ipoDashboardRecords.filter(
+      (item) => item.status === 'Open',
+    ).length
+
     const upcoming = ipoDashboardRecords.filter(
       (item) => item.status === 'Upcoming',
     ).length
+
     const mainboard = ipoDashboardRecords.filter(
       (item) => item.board === 'Mainboard',
     ).length
-    const sme = ipoDashboardRecords.filter((item) => item.board === 'SME')
-      .length
+
+    const sme = ipoDashboardRecords.filter(
+      (item) => item.board === 'SME',
+    ).length
 
     return { open, upcoming, mainboard, sme }
   }, [])
@@ -81,23 +83,39 @@ export default function IPODashboardClient() {
     return ipoDashboardRecords.filter((record) => {
       const queryMatch =
         !normalizedQuery ||
-        `${record.company} ${record.board} ${statusLabel(record.status)} ${record.exchange}`
+        `${record.company} ${record.board} ${record.status} ${record.exchange}`
           .toLowerCase()
           .includes(normalizedQuery)
 
       let filterMatch = true
+
       if (filter === 'Market') {
         filterMatch = record.status !== 'Research'
       }
+
       if (filter === 'Research') {
         filterMatch = record.status === 'Research'
       }
 
-      if (filter === 'Open') filterMatch = record.status === 'Open'
-      if (filter === 'Upcoming') filterMatch = record.status === 'Upcoming'
-      if (filter === 'Recent') filterMatch = recentRecord(record)
-      if (filter === 'Mainboard') filterMatch = record.board === 'Mainboard'
-      if (filter === 'SME') filterMatch = record.board === 'SME'
+      if (filter === 'Open') {
+        filterMatch = record.status === 'Open'
+      }
+
+      if (filter === 'Upcoming') {
+        filterMatch = record.status === 'Upcoming'
+      }
+
+      if (filter === 'Recent') {
+        filterMatch = recentRecord(record)
+      }
+
+      if (filter === 'Mainboard') {
+        filterMatch = record.board === 'Mainboard'
+      }
+
+      if (filter === 'SME') {
+        filterMatch = record.board === 'SME'
+      }
 
       return queryMatch && filterMatch
     })
@@ -108,7 +126,8 @@ export default function IPODashboardClient() {
       ipoDashboardRecords
         .filter(
           (record) =>
-            record.status === 'Open' || record.status === 'Upcoming',
+            record.status === 'Open' ||
+            record.status === 'Upcoming',
         )
         .slice(0, 5),
     [],
@@ -116,7 +135,10 @@ export default function IPODashboardClient() {
 
   return (
     <>
-      <section className={styles.utilityBar} aria-label="IPO intelligence tools">
+      <section
+        className={styles.utilityBar}
+        aria-label="IPO intelligence tools"
+      >
         <div className={styles.utilityInner}>
           <span className={styles.utilityIdentity}>
             <span className={styles.liveDot} />
@@ -146,17 +168,17 @@ export default function IPODashboardClient() {
             </h1>
 
             <p>
-              Track current and upcoming IPOs, Mainboard and SME issues,
-              important dates, price bands and the research workflow around
-              each public issue. Data shown here comes from CredoNomics&apos;
-              existing IPO records; unavailable fields stay visibly
-              unavailable rather than being estimated.
+              Track live and recent IPOs separately from the broader SEBI
+              filing pipeline. Market-stage records come from available
+              exchange and final-offer documents; draft-stage companies remain
+              under Filed until the offer advances.
             </p>
 
             <div className={styles.heroActions}>
               <a className={styles.primary} href="/ipo/current">
                 Current IPOs <ArrowUpRight size={15} />
               </a>
+
               <a className={styles.secondary} href="/ipo/calendar">
                 IPO Calendar
               </a>
@@ -174,14 +196,17 @@ export default function IPODashboardClient() {
                 <span>Open now</span>
                 <strong>{stats.open}</strong>
               </div>
+
               <div>
                 <span>Upcoming</span>
                 <strong>{stats.upcoming}</strong>
               </div>
+
               <div>
                 <span>Mainboard</span>
                 <strong>{stats.mainboard}</strong>
               </div>
+
               <div>
                 <span>SME</span>
                 <strong>{stats.sme}</strong>
@@ -191,8 +216,9 @@ export default function IPODashboardClient() {
             <div className={styles.panelNote}>
               <Sparkles size={15} />
               <p>
-                GMP and subscription figures appear only when present in the
-                existing CredoNomics source record. They are never fabricated.
+                Missing or unverified market fields stay unavailable instead
+                of being estimated. Filing-stage companies are separated
+                under Filed.
               </p>
             </div>
           </div>
@@ -206,14 +232,15 @@ export default function IPODashboardClient() {
             </div>
 
             <p>
-              Use the filters like a primary-market terminal, then open an
-              issue for its detailed CredoNomics research record.
+              Use Market for actual issue-stage records and Filed for the
+              broader DRHP/RHP regulatory pipeline.
             </p>
           </div>
 
           <div className={styles.controlBar}>
             <label className={styles.searchBox}>
               <Search size={16} />
+
               <input
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
@@ -227,7 +254,9 @@ export default function IPODashboardClient() {
                 <button
                   key={value}
                   type="button"
-                  className={filter === value ? styles.filterActive : ''}
+                  className={
+                    filter === value ? styles.filterActive : ''
+                  }
                   onClick={() => setFilter(value)}
                 >
                   {label}
@@ -238,10 +267,13 @@ export default function IPODashboardClient() {
 
           <div className={styles.resultMeta}>
             <span>
-              <strong>{results.length}</strong> issues
+              <strong>{results.length}</strong>{' '}
+              {results.length === 1 ? 'issue' : 'issues'}
             </span>
+
             <span>
-              Unavailable fields are shown as a dash; filing-stage companies are under Filed.
+              Unavailable fields are shown as a dash; filing-stage companies
+              are under Filed.
             </span>
           </div>
 
@@ -265,14 +297,20 @@ export default function IPODashboardClient() {
                 {results.map((record) => (
                   <tr key={record.id}>
                     <td>
-                      <a className={styles.companyCell} href={record.href}>
+                      <a
+                        className={styles.companyCell}
+                        href={record.href}
+                      >
                         <strong>{record.company}</strong>
                         <span>
                           {record.board}
-                          {record.exchange ? ` · ${record.exchange}` : ''}
+                          {record.exchange
+                            ? ` · ${record.exchange}`
+                            : ''}
                         </span>
                       </a>
                     </td>
+
                     <td>
                       <span
                         className={`${styles.status} ${statusClass(
@@ -282,12 +320,14 @@ export default function IPODashboardClient() {
                         {statusLabel(record.status)}
                       </span>
                     </td>
+
                     <td>{displayValue(record.openDate)}</td>
                     <td>{displayValue(record.closeDate)}</td>
                     <td>{displayValue(record.priceBand)}</td>
                     <td>{displayValue(record.lotSize)}</td>
                     <td>{displayValue(record.issueSize)}</td>
                     <td>{displayValue(record.listingDate)}</td>
+
                     <td>
                       <a
                         className={styles.rowArrow}
@@ -305,7 +345,10 @@ export default function IPODashboardClient() {
 
           <div className={styles.mobileCards}>
             {results.map((record) => (
-              <article className={styles.mobileCard} key={record.id}>
+              <article
+                className={styles.mobileCard}
+                key={record.id}
+              >
                 <div className={styles.mobileCardHead}>
                   <div>
                     <span>{record.board}</span>
@@ -313,7 +356,9 @@ export default function IPODashboardClient() {
                   </div>
 
                   <span
-                    className={`${styles.status} ${statusClass(record.status)}`}
+                    className={`${styles.status} ${statusClass(
+                      record.status,
+                    )}`}
                   >
                     {statusLabel(record.status)}
                   </span>
@@ -324,14 +369,17 @@ export default function IPODashboardClient() {
                     <dt>Open</dt>
                     <dd>{displayValue(record.openDate)}</dd>
                   </div>
+
                   <div>
                     <dt>Close</dt>
                     <dd>{displayValue(record.closeDate)}</dd>
                   </div>
+
                   <div>
                     <dt>Price</dt>
                     <dd>{displayValue(record.priceBand)}</dd>
                   </div>
+
                   <div>
                     <dt>Lot</dt>
                     <dd>{displayValue(record.lotSize)}</dd>
@@ -349,7 +397,9 @@ export default function IPODashboardClient() {
             <div className={styles.empty}>
               <Search size={22} />
               <strong>No IPO matches this filter.</strong>
-              <span>Try Market, Open, Filed, Mainboard, SME or a company name.</span>
+              <span>
+                Try Market, Open, Filed, Mainboard, SME or a company name.
+              </span>
             </div>
           ) : null}
         </section>
@@ -361,6 +411,7 @@ export default function IPODashboardClient() {
                 <span className={styles.sectionLabel}>IPO timeline</span>
                 <h2>Important dates ahead.</h2>
               </div>
+
               <CalendarDays size={20} />
             </div>
 
@@ -369,20 +420,24 @@ export default function IPODashboardClient() {
                 nextEvents.map((record) => (
                   <a href={record.href} key={record.id}>
                     <span className={styles.timelineDate}>
-                      {record.openDate || record.closeDate || 'Date pending'}
+                      {record.openDate ||
+                        record.closeDate ||
+                        'Date pending'}
                     </span>
+
                     <span>
                       <strong>{record.company}</strong>
                       <small>
                         {statusLabel(record.status)} · {record.board}
                       </small>
                     </span>
+
                     <ChevronRight size={15} />
                   </a>
                 ))
               ) : (
                 <p className={styles.timelineEmpty}>
-                  No normalized open/upcoming dates are currently available.
+                  No confirmed open/upcoming dates are currently available.
                 </p>
               )}
             </div>
@@ -391,9 +446,12 @@ export default function IPODashboardClient() {
           <div className={styles.researchPanel}>
             <div className={styles.panelHeading}>
               <div>
-                <span className={styles.sectionLabel}>Research utilities</span>
+                <span className={styles.sectionLabel}>
+                  Research utilities
+                </span>
                 <h2>Go deeper than the IPO list.</h2>
               </div>
+
               <Building2 size={20} />
             </div>
 
@@ -410,13 +468,14 @@ export default function IPODashboardClient() {
 
         <section className={styles.disclosure}>
           <strong>CredoNomics IPO data standard</strong>
+
           <p>
-            IPO dates, price bands, subscription figures, allotment information
-            and listing schedules can change. CredoNomics presents research
-            information from its available records and does not convert missing
-            values into estimates. Verify current public-issue information with
-            the issuer, exchange and applicable regulatory filings before
-            acting on it. This page does not constitute an IPO recommendation.
+            IPO schedules, terms and subscription data can change. Draft-stage
+            SEBI filings are research-pipeline records, not active IPOs.
+            Auto-extracted prospectus values are published only when they pass
+            validation and should still be checked against the linked primary
+            filing. This page is informational and does not constitute an IPO
+            recommendation.
           </p>
         </section>
       </main>

@@ -47,14 +47,28 @@ jobs:
       - name: Install web dependencies
         run: npm ci
 
-      - name: Generate IPO dashboard
+      - name: Generate IPO dashboard adapter
         run: node scripts/generate-ipo-dashboard.mjs
 
-      - name: Preserve IPO dashboard data-quality presentation
-        run: node scripts/patch-v22-7-ipo-dashboard-quality.mjs
+      - name: Audit IPO data and UI contract
+        run: node scripts/v22-ipo-automation-audit.mjs
 
       - name: Validate production build
         run: npm run build
+
+      - name: Verify bot changes are data-only
+        shell: bash
+        run: |
+          unexpected="$(git status --porcelain --untracked-files=all | \
+            awk '{print $2}' | \
+            grep -v '^public/data/ipo-intelligence/index.json$' | \
+            grep -v '^app/data/ipo-dashboard.generated.ts$' || true)"
+
+          if [ -n "$unexpected" ]; then
+            echo "Unexpected non-data changes:"
+            echo "$unexpected"
+            exit 1
+          fi
 
       - name: Commit refreshed IPO intelligence
         shell: bash

@@ -27,7 +27,7 @@ export type IPONavigationItem = {
 }
 
 export const ipoDashboardMeta = {
-  "generatedAt": "2026-08-17T15:06:58+00:00",
+  "generatedAt": "2026-08-17T15:16:07+00:00",
   "sourceHealth": {
     "nseIssueBoardRecords": 1,
     "nseTrackerRecords": 0,
