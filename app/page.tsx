@@ -76,6 +76,7 @@ export default function HomePage() {
           </nav>
 
           <div className={styles.headerActions}>
+            <ThemeModeToggle compact />
             <Link href="/research" className={styles.headerCta}>
               Research Desk <span>→</span>
             </Link>
@@ -122,7 +123,6 @@ export default function HomePage() {
           </nav>
         </div>
       </div>
-
       <section className={styles.hero}>
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
@@ -231,7 +231,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={styles.capabilitiesSection}>
+      <section className={styles.trustRail} aria-label="CredoNomics research principles">
+        <div className={styles.trustRailInner}>
+          <div className={styles.trustLead}>
+            <span>CredoNomics standard</span>
+            <strong>Research with visible context.</strong>
+          </div>
+
+          <div className={styles.trustPoints}>
+            <span><i /> Source-linked</span>
+            <span><i /> Transparent methodology</span>
+            <span><i /> India-focused</span>
+            <span><i /> Educational research</span>
+          </div>
+        </div>
+      </section>
+<section className={styles.capabilitiesSection}>
         <div className={styles.sectionShell}>
           <div className={styles.sectionHeading}>
             <div>
@@ -246,8 +261,14 @@ export default function HomePage() {
           </div>
 
           <div className={styles.capabilityGrid}>
-            {capabilities.map((item) => (
+            {capabilities.map((item, index) => (
               <Link href={item.href} className={styles.capabilityCard} key={item.title}>
+                <div className={styles.cardMeta}>
+                  <span className={styles.cardIndex}>
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className={styles.cardStatus}>Research layer</span>
+                </div>
                 <span className={styles.cardEyebrow}>{item.eyebrow}</span>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
