@@ -2152,3 +2152,121 @@ html[data-theme='light'] .mfV2Disclaimer{
 }
 
 /* === CREDONOMICS_V16_5_MF_INTEGRATION_END === */
+
+/* === CREDONOMICS_V16_8_MF_TYPE_BEGIN === */
+
+/*
+  MF tracker has its own component-level styles.
+  These important overrides keep the research dashboard readable
+  without altering any fund data or calculations.
+*/
+
+.mfV2Breadcrumbs{
+  font-size:11px!important;
+}
+
+.mfV2Kicker,
+.mfV2SectionTag{
+  font-size:11px!important;
+}
+
+.mfV2Hero h1{
+  font-size:clamp(42px,4.5vw,64px)!important;
+  line-height:1.03!important;
+}
+
+.mfV2HeroCopy>p{
+  font-size:16px!important;
+  line-height:1.7!important;
+}
+
+.mfV2HeroMeta span{
+  font-size:10.5px!important;
+}
+
+.mfV2QualityHead strong{
+  font-size:16px!important;
+}
+
+.mfV2QualityCard small,
+.mfV2QualityGrid small{
+  font-size:11px!important;
+}
+
+.mfV2QualityGrid strong,
+.mfV2Stats strong{
+  font-size:18px!important;
+}
+
+.mfV2Controls label>span{
+  font-size:11px!important;
+}
+
+.mfV2Controls select,
+.mfV2SearchWrap input{
+  font-size:14px!important;
+}
+
+.mfV2PanelHead h2{
+  font-size:24px!important;
+}
+
+.mfV2PanelHead p{
+  font-size:14px!important;
+  line-height:1.6!important;
+}
+
+.mfV2TableWrap th{
+  font-size:10.5px!important;
+}
+
+.mfV2TableWrap td{
+  font-size:13px!important;
+  line-height:1.5!important;
+}
+
+.mfV2Stock,
+.mfV2Movement strong,
+.mfV2Sector strong{
+  font-size:14px!important;
+}
+
+.mfV2Movement span,
+.mfV2MoveRight small,
+.mfV2Sector small,
+.mfV2Muted,
+.mfV2Rank{
+  font-size:11.5px!important;
+  line-height:1.45!important;
+}
+
+.mfV2Method h2{
+  font-size:26px!important;
+}
+
+.mfV2MethodItem strong{
+  font-size:15px!important;
+}
+
+.mfV2MethodItem p,
+.mfV2Disclaimer p,
+.mfV2Notice span{
+  font-size:13px!important;
+  line-height:1.6!important;
+}
+
+.mfV2Disclaimer strong,
+.mfV2Notice strong{
+  font-size:13px!important;
+}
+
+@media(max-width:700px){
+  .mfV2HeroCopy>p{
+    font-size:15.5px!important;
+  }
+
+  .mfV2TableWrap td{
+    font-size:12.5px!important;
+  }
+}
+/* === CREDONOMICS_V16_8_MF_TYPE_END === */

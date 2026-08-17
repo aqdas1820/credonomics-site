@@ -3225,3 +3225,193 @@
   border-color:#e2e8ed;
 }
 /* === CREDONOMICS_V16_3_LIGHT_COMPAT_END === */
+
+/* === CREDONOMICS_V16_8_CORE_TYPE_BEGIN === */
+
+.siteShell{
+  font-size:16px;
+}
+
+.utilityBar{
+  font-size:11px;
+  line-height:1.4;
+}
+
+.brandWords strong{
+  font-size:15.5px;
+}
+
+.brandWords small{
+  font-size:9px;
+}
+
+.navLinks a{
+  font-size:13.5px;
+  line-height:1.3;
+}
+
+.navCoverage{
+  font-size:11px;
+}
+
+.breadcrumbs{
+  font-size:11px;
+}
+
+.pageKicker,
+.overline{
+  font-size:11px;
+}
+
+.pageHero h1{
+  font-size:clamp(50px,5.15vw,74px);
+}
+
+.pageHeroLead{
+  font-size:18px;
+  line-height:1.7;
+}
+
+.researchReviewStamp{
+  font-size:10.5px;
+}
+
+.sectionHead h2{
+  font-size:clamp(31px,3vw,45px);
+}
+
+.sectionHead>p,
+.splitIntro>p,
+.sideTitle p{
+  font-size:15.5px;
+  line-height:1.72;
+}
+
+.cardLabel{
+  font-size:10.5px;
+}
+
+.statusPill{
+  font-size:10px;
+}
+
+.toolCard h3{
+  font-size:24px;
+}
+
+.toolCard p{
+  font-size:14.5px;
+  line-height:1.68;
+}
+
+.cardFooter{
+  font-size:13px;
+}
+
+.contentCard h3,
+.infoCard h3,
+.articleCard h3{
+  font-size:21px;
+}
+
+.contentCard p,
+.contentCard li,
+.infoCard p,
+.infoCard li,
+.articleCard p,
+.policyCard p{
+  font-size:14.5px;
+  line-height:1.68;
+}
+
+.researchGrid .contentCard p{
+  font-size:14.5px;
+}
+
+.researchGrid .contentCard li{
+  font-size:13px;
+  line-height:1.55;
+}
+
+.articleCard>span{
+  font-size:10.5px;
+}
+
+.articleCard p{
+  font-size:14.5px;
+}
+
+.notice h2{
+  font-size:22px;
+}
+
+.notice p,
+.principleBand>p{
+  font-size:14.5px;
+  line-height:1.68;
+}
+
+.siteShell input,
+.siteShell select,
+.siteShell textarea,
+.siteShell button{
+  font-size:14px;
+}
+
+.siteShell th{
+  font-size:10.5px;
+}
+
+.siteShell td{
+  font-size:13px;
+  line-height:1.5;
+}
+
+.footerTopline span{
+  font-size:11px;
+}
+
+.footerIntro p{
+  font-size:13.5px;
+  line-height:1.65;
+}
+
+.footerColumn b{
+  font-size:11px;
+}
+
+.footerColumn a{
+  font-size:13px;
+  line-height:1.4;
+}
+
+.footerBottom{
+  font-size:11.5px;
+  line-height:1.55;
+}
+
+@media(max-width:620px){
+  .pageHeroLead{
+    font-size:16.5px;
+  }
+
+  .sectionHead>p,
+  .splitIntro>p,
+  .sideTitle p{
+    font-size:15px;
+  }
+
+  .toolCard p,
+  .contentCard p,
+  .contentCard li,
+  .infoCard p,
+  .articleCard p,
+  .policyCard p{
+    font-size:14px;
+  }
+
+  .siteShell td{
+    font-size:12.5px;
+  }
+}
+/* === CREDONOMICS_V16_8_CORE_TYPE_END === */
