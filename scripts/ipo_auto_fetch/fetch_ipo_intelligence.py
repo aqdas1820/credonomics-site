@@ -69,10 +69,35 @@ def now_utc_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
 
+def repair_mojibake(value: str) -> str:
+    if not value:
+        return ""
+
+    # Common UTF-8 -> Windows-1252 corruption produced when old Windows
+    # PowerShell reads UTF-8 source without a BOM.
+    replacements = {
+        "\u00e2\u20ac\u201d": "\u2014",  # em dash
+        "\u00e2\u20ac\u201c": "\u2013",  # en dash
+        "\u00e2\u201a\u00b9": "\u20b9",  # rupee sign
+        "\u00e2\u20ac\u2122": "\u2019",  # right apostrophe
+        "\u00e2\u20ac\u0153": "\u201c",  # left quote
+        "\u00e2\u20ac\u009d": "\u201d",  # right quote
+        "\u00c2": "",
+    }
+
+    repaired = value
+    for broken, correct in replacements.items():
+        repaired = repaired.replace(broken, correct)
+
+    return repaired
+
+
 def clean(value: Any) -> str:
     if value is None:
         return ""
-    return re.sub(r"\s+", " ", str(value)).strip()
+
+    repaired = repair_mojibake(str(value))
+    return re.sub(r"\s+", " ", repaired).strip()
 
 
 def slugify(value: str) -> str:
@@ -117,7 +142,7 @@ def date_display(value: str) -> str:
 
 
 def number_text(value: str) -> str:
-    return clean(value).replace("\u20b9", "â‚¹")
+    return clean(value).replace("\u20b9", "\u20b9")
 
 
 def first_number(value: str) -> float | None:
@@ -156,7 +181,7 @@ class FinancialMetric:
 class IssueRecord:
     slug: str
     company: str
-    board: str = "Mainboard"
+    board: str = "Unclassified"
     securityType: str = ""
     status: str = "Research"
     openDate: str = ""
@@ -492,7 +517,7 @@ def parse_sebi_listing(
             continue
 
         company = re.sub(
-            r"\s*[-â€“]\s*(?:addendum to |corrigendum to )?"
+            r"\s*[-–]\s*(?:addendum to |corrigendum to )?"
             r"(?:u?drhp|drhp|rhp|prospectus).*$",
             "",
             title,
@@ -503,7 +528,7 @@ def parse_sebi_listing(
             "",
             company,
             flags=re.I,
-        ).strip(" -â€“")
+        ).strip(" -–")
 
         results.append(
             {
@@ -675,34 +700,50 @@ def extract_issue_details(text: str) -> dict[str, str]:
     if not text:
         return {}
 
-    normalized = re.sub(r"[ \t]+", " ", text)
+    normalized = repair_mojibake(text)
+    normalized = re.sub(r"[ \t]+", " ", normalized)
     result: dict[str, str] = {}
+
+    currency = r"(?:\u20b9|rs\.?|inr)?"
 
     patterns: dict[str, list[str]] = {
         "priceBand": [
-            r"price\s+band.{0,100}?â‚¹\s*([\d,]+(?:\.\d+)?)"
-            r"\s*(?:to|[-â€“])\s*â‚¹?\s*([\d,]+(?:\.\d+)?)",
-            r"price\s+band.{0,100}?rs\.?\s*([\d,]+(?:\.\d+)?)"
-            r"\s*(?:to|[-â€“])\s*rs\.?\s*([\d,]+(?:\.\d+)?)",
+            rf"price\s+band.{{0,140}}?{currency}\s*"
+            r"([\d,]+(?:\.\d+)?)\s*(?:to|[-\u2013\u2014])\s*"
+            rf"{currency}\s*([\d,]+(?:\.\d+)?)",
+            rf"floor\s+price.{{0,100}}?{currency}\s*"
+            r"([\d,]+(?:\.\d+)?).{0,150}?"
+            rf"cap\s+price.{{0,100}}?{currency}\s*"
+            r"([\d,]+(?:\.\d+)?)",
         ],
         "lotSize": [
-            r"minimum\s+(?:bid\s+)?lot.{0,100}?(\d[\d,]*)\s+equity\s+shares",
-            r"bid\s+can\s+be\s+made.{0,100}?(\d[\d,]*)\s+equity\s+shares",
+            r"minimum\s+(?:bid\s+)?lot.{0,120}?(\d[\d,]*)"
+            r"\s+(?:equity\s+)?shares",
+            r"minimum\s+(?:application|bid).{0,120}?(\d[\d,]*)"
+            r"\s+(?:equity\s+)?shares",
+            r"bids?\s+(?:can|may)\s+be\s+made.{0,150}?"
+            r"(?:minimum\s+of\s+)?(\d[\d,]*)\s+(?:equity\s+)?shares",
         ],
         "faceValue": [
-            r"face\s+value.{0,80}?(?:â‚¹|rs\.?)\s*([\d,.]+)",
+            rf"face\s+value.{{0,100}}?{currency}\s*([\d,.]+)",
         ],
         "issueSize": [
-            r"(?:total\s+)?issue\s+size.{0,120}?"
-            r"(?:â‚¹|rs\.?)\s*([\d,.]+)\s*(crore|million|lakh)?",
+            rf"(?:total\s+)?(?:issue|offer)\s+size.{{0,180}}?"
+            rf"{currency}\s*([\d,.]+)\s*(crore|million|lakh)?",
+            r"(?:issue|offer)\s+size.{0,180}?([\d,.]+)\s+"
+            r"(crore|million|lakh)",
         ],
         "freshIssue": [
-            r"fresh\s+issue.{0,160}?"
-            r"(?:â‚¹|rs\.?)\s*([\d,.]+)\s*(crore|million|lakh)?",
+            rf"fresh\s+issue.{{0,200}}?"
+            rf"{currency}\s*([\d,.]+)\s*(crore|million|lakh)?",
+            r"fresh\s+issue.{0,200}?([\d,.]+)\s+"
+            r"(crore|million|lakh)",
         ],
         "offerForSale": [
-            r"offer\s+for\s+sale.{0,160}?"
-            r"(?:â‚¹|rs\.?)\s*([\d,.]+)\s*(crore|million|lakh)?",
+            rf"offer\s+for\s+sale.{{0,200}}?"
+            rf"{currency}\s*([\d,.]+)\s*(crore|million|lakh)?",
+            r"offer\s+for\s+sale.{0,200}?([\d,.]+)\s+"
+            r"(crore|million|lakh)",
         ],
     }
 
@@ -713,12 +754,23 @@ def extract_issue_details(text: str) -> dict[str, str]:
                 continue
 
             if key == "priceBand":
-                result[key] = f"â‚¹{match.group(1)} â€“ â‚¹{match.group(2)}"
+                result[key] = (
+                    "\u20b9"
+                    + match.group(1)
+                    + " \u2013 \u20b9"
+                    + match.group(2)
+                )
             elif key in ("issueSize", "freshIssue", "offerForSale"):
-                unit = clean(match.group(2) if match.lastindex and match.lastindex >= 2 else "")
-                result[key] = f"â‚¹{match.group(1)} {unit}".strip()
+                unit = clean(
+                    match.group(2)
+                    if match.lastindex and match.lastindex >= 2
+                    else ""
+                )
+                result[key] = (
+                    "\u20b9" + match.group(1) + (" " + unit if unit else "")
+                )
             elif key == "faceValue":
-                result[key] = f"â‚¹{match.group(1)}"
+                result[key] = "\u20b9" + match.group(1)
             else:
                 result[key] = match.group(1)
 
@@ -726,15 +778,19 @@ def extract_issue_details(text: str) -> dict[str, str]:
 
     date_patterns = {
         "openDate": [
-            r"(?:bid|issue)\s*/?\s*offer\s+opens?.{0,100}?"
+            r"(?:bid|issue)\s*/?\s*offer\s+opens?.{0,120}?"
             r"([A-Za-z]+\s+\d{1,2},?\s+\d{4})",
-            r"issue\s+opening\s+date.{0,80}?"
+            r"issue\s+opening\s+date.{0,100}?"
+            r"(\d{1,2}\s+[A-Za-z]+\s+\d{4})",
+            r"opening\s+date.{0,100}?"
             r"(\d{1,2}\s+[A-Za-z]+\s+\d{4})",
         ],
         "closeDate": [
-            r"(?:bid|issue)\s*/?\s*offer\s+closes?.{0,100}?"
+            r"(?:bid|issue)\s*/?\s*offer\s+closes?.{0,120}?"
             r"([A-Za-z]+\s+\d{1,2},?\s+\d{4})",
-            r"issue\s+closing\s+date.{0,80}?"
+            r"issue\s+closing\s+date.{0,100}?"
+            r"(\d{1,2}\s+[A-Za-z]+\s+\d{4})",
+            r"closing\s+date.{0,100}?"
             r"(\d{1,2}\s+[A-Za-z]+\s+\d{4})",
         ],
     }
@@ -749,6 +805,36 @@ def extract_issue_details(text: str) -> dict[str, str]:
     return result
 
 
+def detect_board_from_text(text: str) -> str:
+    if not text:
+        return ""
+
+    lower = clean(text[:250000]).lower()
+
+    sme_markers = (
+        "nse emerge",
+        "bse sme",
+        "sme platform",
+        "sme exchange",
+        "small and medium enterprises platform",
+    )
+
+    if any(marker in lower for marker in sme_markers):
+        return "SME"
+
+    mainboard_markers = (
+        "main board of bse",
+        "main board of nse",
+        "mainboard of bse",
+        "mainboard of nse",
+        "main board of the stock exchanges",
+    )
+
+    if any(marker in lower for marker in mainboard_markers):
+        return "Mainboard"
+
+    return ""
+
 def extract_periods(text: str) -> list[str]:
     if not text:
         return []
@@ -756,7 +842,7 @@ def extract_periods(text: str) -> list[str]:
     candidates: list[str] = []
 
     for match in re.finditer(
-        r"(?:March\s+31,?\s+20\d{2}|20\d{2}\s*[-â€“]\s*\d{2})",
+        r"(?:March\s+31,?\s+20\d{2}|20\d{2}\s*[-–]\s*\d{2})",
         text,
         flags=re.I,
     ):
@@ -865,12 +951,13 @@ def extract_financials(
     for label, terms in aliases:
         selected: list[str] = []
 
-        for line in lines:
+        for index, line in enumerate(lines):
             lower = line.lower()
             if not any(term in lower for term in terms):
                 continue
 
-            values = metric_values_from_line(line)
+            window = " ".join(lines[index:index + 3])
+            values = metric_values_from_line(window)
 
             if len(values) >= 2:
                 selected = values
@@ -897,7 +984,15 @@ def extract_financials(
 
 def board_from_security(value: str, company: str = "") -> str:
     text = f"{value} {company}".lower()
-    return "SME" if "sme" in text else "Mainboard"
+
+    if "sme" in text or "emerge" in text:
+        return "SME"
+
+    # NSE's public-issue page identifies Mainboard equity issues as EQ.
+    if re.search(r"\beq\b", text) or "mainboard" in text or "main board" in text:
+        return "Mainboard"
+
+    return "Unclassified"
 
 
 def status_from_dates(
@@ -1085,6 +1180,11 @@ def build_dataset() -> dict[str, Any]:
             warnings.extend(pdf_warnings)
 
             issue_details = extract_issue_details(text)
+
+            if record.board == "Unclassified":
+                prospectus_board = detect_board_from_text(text)
+                if prospectus_board:
+                    record.board = prospectus_board
 
             for field_name in (
                 "priceBand",

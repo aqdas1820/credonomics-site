@@ -18,10 +18,11 @@ import {
 import styles from './ipo-dashboard.module.css'
 
 const filters = [
-  ['All', 'All'],
+  ['Market', 'Market'],
   ['Open', 'Open'],
   ['Upcoming', 'Upcoming'],
   ['Recent', 'Recent'],
+  ['Filed', 'Research'],
   ['Mainboard', 'Mainboard'],
   ['SME', 'SME'],
 ] as const
@@ -30,8 +31,22 @@ function recentRecord(record: IPODashboardRecord) {
   return record.status === 'Closed' || record.status === 'Listed'
 }
 
-function displayValue(value: string, fallback = 'â€”') {
-  return value?.trim() || fallback
+function displayValue(
+  value: string,
+  fallback = '\u2014',
+) {
+  const normalized = (value ?? '')
+    .trim()
+    .replace(/\u00e2\u20ac\u201d/g, '\u2014')
+    .replace(/\u00e2\u20ac\u201c/g, '\u2013')
+    .replace(/\u00e2\u201a\u00b9/g, '\u20b9')
+    .replace(/\u00c2/g, '')
+
+  return normalized || fallback
+}
+
+function statusLabel(status: string) {
+  return status === 'Research' ? 'Filed / Research' : status
 }
 
 function statusClass(status: string) {
@@ -42,7 +57,7 @@ function statusClass(status: string) {
 }
 
 export default function IPODashboardClient() {
-  const [filter, setFilter] = useState('All')
+  const [filter, setFilter] = useState('Market')
   const [query, setQuery] = useState('')
 
   const stats = useMemo(() => {
@@ -66,11 +81,17 @@ export default function IPODashboardClient() {
     return ipoDashboardRecords.filter((record) => {
       const queryMatch =
         !normalizedQuery ||
-        `${record.company} ${record.board} ${record.status} ${record.exchange}`
+        `${record.company} ${record.board} ${statusLabel(record.status)} ${record.exchange}`
           .toLowerCase()
           .includes(normalizedQuery)
 
       let filterMatch = true
+      if (filter === 'Market') {
+        filterMatch = record.status !== 'Research'
+      }
+      if (filter === 'Research') {
+        filterMatch = record.status === 'Research'
+      }
 
       if (filter === 'Open') filterMatch = record.status === 'Open'
       if (filter === 'Upcoming') filterMatch = record.status === 'Upcoming'
@@ -145,7 +166,7 @@ export default function IPODashboardClient() {
           <div className={styles.heroPanel}>
             <div className={styles.panelTop}>
               <span>IPO Market Board</span>
-              <small>CredoNomics dataset</small>
+              <small>Official-source auto feed</small>
             </div>
 
             <div className={styles.statGrid}>
@@ -220,7 +241,7 @@ export default function IPODashboardClient() {
               <strong>{results.length}</strong> issues
             </span>
             <span>
-              Fields marked â€” are not available in the normalized public record.
+              Unavailable fields are shown as a dash; filing-stage companies are under Filed.
             </span>
           </div>
 
@@ -248,7 +269,7 @@ export default function IPODashboardClient() {
                         <strong>{record.company}</strong>
                         <span>
                           {record.board}
-                          {record.exchange ? ` Â· ${record.exchange}` : ''}
+                          {record.exchange ? ` · ${record.exchange}` : ''}
                         </span>
                       </a>
                     </td>
@@ -258,7 +279,7 @@ export default function IPODashboardClient() {
                           record.status,
                         )}`}
                       >
-                        {record.status}
+                        {statusLabel(record.status)}
                       </span>
                     </td>
                     <td>{displayValue(record.openDate)}</td>
@@ -294,7 +315,7 @@ export default function IPODashboardClient() {
                   <span
                     className={`${styles.status} ${statusClass(record.status)}`}
                   >
-                    {record.status}
+                    {statusLabel(record.status)}
                   </span>
                 </div>
 
@@ -353,7 +374,7 @@ export default function IPODashboardClient() {
                     <span>
                       <strong>{record.company}</strong>
                       <small>
-                        {record.status} Â· {record.board}
+                        {statusLabel(record.status)} · {record.board}
                       </small>
                     </span>
                     <ChevronRight size={15} />

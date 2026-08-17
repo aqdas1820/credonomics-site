@@ -21,9 +21,18 @@ function clean(value = '') {
 }
 
 function board(value = '') {
-  return clean(value).toLowerCase().includes('sme')
-    ? 'SME'
-    : 'Mainboard'
+  const normalized = clean(value).toLowerCase()
+
+  if (normalized.includes('sme')) return 'SME'
+  if (
+    normalized.includes('mainboard') ||
+    normalized.includes('main board') ||
+    normalized === 'eq'
+  ) {
+    return 'Mainboard'
+  }
+
+  return 'Unclassified'
 }
 
 function readAuto() {
@@ -86,7 +95,7 @@ const source = `export type IPODashboardRecord = {
   id: string
   slug: string
   company: string
-  board: 'Mainboard' | 'SME'
+  board: 'Mainboard' | 'SME' | 'Unclassified'
   status: string
   openDate: string
   closeDate: string

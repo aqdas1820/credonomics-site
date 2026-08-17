@@ -146,7 +146,7 @@ export default function IPOCompanyPage({
           <div>
             <span className={styles.eyebrow}>
               <Database size={15} />
-              {issue.board} Â· {issue.status}
+              {issue.board} · {issue.status}
             </span>
 
             <h1>{issue.company} IPO</h1>
@@ -196,7 +196,7 @@ export default function IPOCompanyPage({
               </p>
               <span>
                 {issue.sourceLabels?.length
-                  ? issue.sourceLabels.join(' Â· ')
+                  ? issue.sourceLabels.join(' · ')
                   : 'Official public sources'}
               </span>
             </div>

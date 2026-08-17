@@ -17,6 +17,7 @@ function read(relative) {
 
 const dataText = read('public/data/ipo-intelligence/index.json')
 const generated = read('app/data/ipo-dashboard.generated.ts')
+const dashboardClient = read('app/ipo/IPODashboardClient.tsx')
 const detail = read('app/ipo/company/[slug]/page.tsx')
 const workflow = read('.github/workflows/ipo-intelligence-refresh.yml')
 const packageText = read('package.json')
@@ -48,6 +49,46 @@ if (
 
 if (generatedRecordCount < 1) {
   errors.push('Generated dashboard adapter contains zero IPO records')
+}
+
+const dashboardQualityChecks = [
+  [
+    'Market filter option',
+    /['"]Market['"]\s*,\s*['"]Market['"]/.test(dashboardClient),
+  ],
+  [
+    'Filed filter option',
+    /['"]Filed['"]\s*,\s*['"]Research['"]/.test(dashboardClient),
+  ],
+  [
+    'Market default',
+    /useState\(\s*['"]Market['"]\s*\)/.test(dashboardClient),
+  ],
+  [
+    'Market behavior',
+    /filter\s*===\s*['"]Market['"]/.test(dashboardClient) &&
+      /record\.status\s*!==\s*['"]Research['"]/.test(dashboardClient),
+  ],
+  [
+    'Filed behavior',
+    /filter\s*===\s*['"]Research['"]/.test(dashboardClient) &&
+      /record\.status\s*===\s*['"]Research['"]/.test(dashboardClient),
+  ],
+  [
+    'Filed label helper',
+    dashboardClient.includes('function statusLabel(status: string)'),
+  ],
+]
+
+for (const [label, ok] of dashboardQualityChecks) {
+  if (!ok) errors.push(`IPO dashboard quality check failed: ${label}`)
+}
+
+if (
+  dashboardClient.includes('\u00e2\u20ac\u201d') ||
+  dashboardClient.includes('\u00e2\u201a\u00b9')
+) {
+  errors.push('IPO dashboard source still contains visible mojibake')
 }
 
 const sourceHealth = data?.sourceHealth ?? {}
@@ -94,7 +135,7 @@ if (!packageText.includes('"ipo:refresh"')) {
 }
 
 console.log('')
-console.log('CredoNomics V22.4 IPO Automation Audit')
+console.log('CredoNomics V22.6 IPO Automation Audit')
 console.log('====================================')
 console.log(`JSON issues: ${data?.issues?.length ?? 0}`)
 console.log(`Dashboard adapter records: ${generatedRecordCount}`)
@@ -105,4 +146,4 @@ for (const error of errors) console.error(`  - ${error}`)
 
 if (errors.length) process.exit(1)
 
-console.log('V22.4 IPO automation audit PASSED.')
+console.log('V22.6 IPO automation audit PASSED.')
