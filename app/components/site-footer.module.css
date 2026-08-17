@@ -235,3 +235,152 @@
     width:100%;
   }
 }
+
+/* === CREDONOMICS_V17_5_FOOTER_MOBILE_BEGIN === */
+
+@media(max-width:900px){
+  .footerWrap{
+    width:min(100% - 28px,1320px);
+  }
+
+  .ctaPanel{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:22px;
+  }
+
+  .ctaCopy h2{
+    max-width:100%;
+    font-size:clamp(38px,9vw,54px);
+  }
+
+  .footerGrid{
+    grid-template-columns:1fr 1fr;
+    gap:36px 28px;
+  }
+
+  .brandColumn{
+    grid-column:1/-1;
+  }
+
+  .brandDescription{
+    max-width:620px;
+  }
+
+  .footnoteRow{
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .footnoteRow p:last-child{
+    max-width:100%;
+    text-align:left;
+  }
+}
+
+@media(max-width:600px){
+  .footerShell{
+    margin-top:52px;
+  }
+
+  .footerWrap{
+    width:min(100% - 22px,1320px);
+    padding:38px 0 22px;
+  }
+
+  .ctaPanel{
+    padding-bottom:28px;
+  }
+
+  .kicker{
+    margin-bottom:12px;
+    font-size:9.5px;
+  }
+
+  .ctaCopy h2{
+    font-size:clamp(32px,10.5vw,44px);
+    line-height:1.02;
+  }
+
+  .ctaButton{
+    width:100%;
+    min-height:48px;
+  }
+
+  .footerGrid{
+    grid-template-columns:1fr;
+    gap:30px;
+    padding:32px 0 28px;
+  }
+
+  .brandColumn{
+    grid-column:auto;
+  }
+
+  .brandRow{
+    min-width:0;
+    gap:12px;
+  }
+
+  .logoPlate{
+    width:54px;
+    height:54px;
+    border-radius:14px;
+  }
+
+  .logoPlate img{
+    width:34px;
+    height:34px;
+  }
+
+  .wordmark{
+    min-width:0;
+  }
+
+  .wordmark strong{
+    font-size:24px;
+    white-space:nowrap;
+  }
+
+  .wordmark small{
+    font-size:9px;
+    letter-spacing:.12em;
+    white-space:nowrap;
+  }
+
+  .brandDescription{
+    margin-top:20px;
+    font-size:14.5px;
+    line-height:1.68;
+  }
+
+  .domainBadge{
+    max-width:100%;
+    font-size:11px;
+    white-space:normal;
+  }
+
+  .linkColumn{
+    gap:11px;
+  }
+
+  .linkColumn a{
+    font-size:15px;
+  }
+
+  .footnoteRow p{
+    font-size:11.5px;
+  }
+}
+
+@media(max-width:360px){
+  .wordmark strong{
+    font-size:21px;
+  }
+
+  .wordmark small{
+    font-size:8px;
+  }
+}
+
+/* === CREDONOMICS_V17_5_FOOTER_MOBILE_END === */

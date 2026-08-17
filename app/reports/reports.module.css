@@ -690,3 +690,175 @@
     height:520px;
   }
 }
+
+/* === CREDONOMICS_V17_5_REPORTS_MOBILE_BEGIN === */
+
+@media(max-width:980px){
+  .libraryPage,
+  .detailPage{
+    width:min(100% - 30px,1320px);
+  }
+
+  .libraryHero,
+  .detailHero,
+  .reportBodyGrid{
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+
+  .libraryHero{
+    align-items:start;
+  }
+
+  .libraryPrinciple{
+    max-width:620px;
+  }
+
+  .reportCard{
+    grid-template-columns:minmax(250px,330px) 1fr;
+  }
+
+  .reportCoverLarge{
+    width:min(100%,540px);
+  }
+
+  .provenanceGrid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .disclosurePanel{
+    position:relative;
+    top:auto;
+  }
+}
+
+@media(max-width:700px){
+  .libraryPage,
+  .detailPage{
+    width:min(100% - 22px,1320px);
+    padding-top:38px;
+    padding-bottom:70px;
+  }
+
+  .libraryHero{
+    padding-bottom:34px;
+  }
+
+  .libraryHero h1,
+  .detailCopy h1{
+    font-size:clamp(36px,11vw,50px);
+    line-height:1.01;
+  }
+
+  .libraryHero p,
+  .detailCopy>p{
+    font-size:15.5px;
+  }
+
+  .reportCard{
+    grid-template-columns:1fr;
+    border-radius:16px;
+  }
+
+  .reportCover{
+    min-height:320px;
+    padding:22px;
+    border-right:0;
+    border-bottom:1px solid #dfe6eb;
+  }
+
+  .coverType{
+    margin-top:38px;
+  }
+
+  .reportCover h2{
+    font-size:27px;
+  }
+
+  .reportCardBody{
+    padding:22px;
+  }
+
+  .reportCardBody h2{
+    margin-top:28px;
+    font-size:27px;
+  }
+
+  .cardFacts{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:7px;
+  }
+
+  .detailHero{
+    padding-top:28px;
+    padding-bottom:38px;
+  }
+
+  .detailActions{
+    display:grid;
+    grid-template-columns:1fr;
+    width:100%;
+  }
+
+  .primaryAction,
+  .secondaryAction{
+    width:100%;
+  }
+
+  .reportCoverLarge{
+    min-height:400px;
+    padding:24px;
+  }
+
+  .reportCoverLarge h2{
+    margin-top:44px;
+    font-size:31px;
+  }
+
+  .provenanceGrid{
+    grid-template-columns:1fr;
+  }
+
+  .provenanceGrid>div{
+    min-height:64px;
+  }
+
+  .contentSection{
+    padding-bottom:52px;
+  }
+
+  .contentSection h2,
+  .pdfSectionHead h2{
+    font-size:29px;
+  }
+
+  .highlightList,
+  .methodGrid{
+    grid-template-columns:1fr;
+  }
+
+  .pdfSectionHead{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .pdfFrame{
+    height:72dvh;
+    min-height:480px;
+    border-radius:10px;
+  }
+
+  .disclosurePanel{
+    padding:18px;
+  }
+}
+
+@media(max-width:390px){
+  .pdfFrame{
+    height:62dvh;
+    min-height:420px;
+  }
+}
+
+/* === CREDONOMICS_V17_5_REPORTS_MOBILE_END === */

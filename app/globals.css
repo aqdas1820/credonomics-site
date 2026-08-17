@@ -2270,3 +2270,214 @@ html[data-theme='light'] .mfV2Disclaimer{
   }
 }
 /* === CREDONOMICS_V16_8_MF_TYPE_END === */
+
+/* === CREDONOMICS_V17_5_GLOBAL_MOBILE_BEGIN === */
+
+/*
+  Global mobile guardrails.
+  These rules prevent accidental horizontal overflow and long-text collisions.
+  Desktop geometry is unchanged.
+*/
+
+html,
+body{
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+body{
+  min-width:0;
+}
+
+img,
+svg,
+video,
+canvas{
+  max-width:100%;
+}
+
+iframe{
+  max-width:100%;
+}
+
+button,
+input,
+select,
+textarea{
+  max-width:100%;
+}
+
+p,
+li,
+a,
+button,
+label,
+span,
+strong,
+small,
+td,
+th{
+  overflow-wrap:anywhere;
+}
+
+pre,
+code{
+  max-width:100%;
+  overflow-x:auto;
+}
+
+@media(max-width:820px){
+  html{
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+  }
+
+  body{
+    width:100%;
+  }
+
+  main,
+  section,
+  article,
+  aside,
+  header,
+  footer,
+  nav,
+  form{
+    min-width:0;
+  }
+
+  table{
+    max-width:none;
+  }
+
+  input,
+  select,
+  textarea{
+    font-size:16px;
+  }
+
+  button,
+  a{
+    -webkit-tap-highlight-color:transparent;
+  }
+}
+
+/* MF Intelligence uses global mfV2* class names. */
+@media(max-width:820px){
+  .mfV2Page,
+  .mfV2Shell,
+  .mfV2Hero,
+  .mfV2HeroCopy,
+  .mfV2QualityCard,
+  .mfV2Controls,
+  .mfV2Panel,
+  .mfV2Method,
+  .mfV2Disclaimer,
+  .mfV2Notice{
+    min-width:0!important;
+    max-width:100%!important;
+  }
+
+  .mfV2Shell{
+    width:min(100% - 24px,1320px)!important;
+    padding-top:26px!important;
+    padding-bottom:56px!important;
+  }
+
+  .mfV2Hero{
+    grid-template-columns:1fr!important;
+    gap:18px!important;
+  }
+
+  .mfV2Hero h1{
+    max-width:100%!important;
+    font-size:clamp(34px,10vw,48px)!important;
+    line-height:1.02!important;
+    letter-spacing:-.04em!important;
+  }
+
+  .mfV2HeroCopy>p{
+    max-width:100%!important;
+    font-size:15.5px!important;
+    line-height:1.65!important;
+  }
+
+  .mfV2HeroMeta{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    gap:7px!important;
+  }
+
+  .mfV2QualityGrid,
+  .mfV2Stats{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+
+  .mfV2Controls{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:12px!important;
+    padding:14px!important;
+  }
+
+  .mfV2Controls label{
+    min-width:0!important;
+    width:100%!important;
+  }
+
+  .mfV2Controls select,
+  .mfV2SearchWrap,
+  .mfV2SearchWrap input{
+    width:100%!important;
+    min-width:0!important;
+  }
+
+  .mfV2Panel{
+    padding:16px!important;
+  }
+
+  .mfV2PanelHead{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+  }
+
+  .mfV2TableWrap{
+    width:100%!important;
+    max-width:100%!important;
+    overflow-x:auto!important;
+    overscroll-behavior-x:contain!important;
+    -webkit-overflow-scrolling:touch!important;
+  }
+
+  .mfV2TableWrap table{
+    min-width:720px!important;
+  }
+
+  .mfV2Movement,
+  .mfV2Sector{
+    min-width:0!important;
+  }
+
+  .mfV2Method{
+    padding:18px!important;
+  }
+}
+
+@media(max-width:520px){
+  .mfV2QualityGrid,
+  .mfV2Stats{
+    grid-template-columns:1fr!important;
+  }
+
+  .mfV2Panel{
+    padding:13px!important;
+  }
+
+  .mfV2TableWrap table{
+    min-width:680px!important;
+  }
+}
+
+/* === CREDONOMICS_V17_5_GLOBAL_MOBILE_END === */

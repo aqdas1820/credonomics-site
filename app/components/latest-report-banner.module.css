@@ -155,3 +155,72 @@
     white-space:normal;
   }
 }
+
+/* === CREDONOMICS_V17_5_REPORT_BANNER_MOBILE_BEGIN === */
+
+@media(max-width:760px){
+  .inner{
+    width:min(100% - 22px,1370px);
+    min-height:auto;
+    grid-template-columns:auto 1fr;
+    gap:10px;
+    padding:11px 0;
+  }
+
+  .copy{
+    min-width:0;
+    grid-template-columns:1fr;
+    gap:3px;
+    padding:0;
+  }
+
+  .copy span{
+    grid-row:auto;
+    align-self:auto;
+    padding:0;
+    border-right:0;
+    font-size:8px;
+  }
+
+  .copy strong,
+  .copy small{
+    max-width:100%;
+    overflow:visible;
+    text-overflow:clip;
+    white-space:normal;
+  }
+
+  .copy strong{
+    font-size:12px;
+  }
+
+  .copy small{
+    font-size:9.5px;
+  }
+
+  .inner>a{
+    grid-column:2;
+    justify-self:start;
+    min-height:36px;
+    margin:0;
+    padding:0 11px;
+    font-size:10px;
+  }
+}
+
+@media(max-width:480px){
+  .icon{
+    display:none;
+  }
+
+  .inner{
+    grid-template-columns:1fr;
+  }
+
+  .inner>a{
+    grid-column:1;
+    width:100%;
+  }
+}
+
+/* === CREDONOMICS_V17_5_REPORT_BANNER_MOBILE_END === */
