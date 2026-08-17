@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-17T14:59:11+00:00",
+  "generatedAt": "2026-08-17T15:06:58+00:00",
   "timezone": "Asia/Kolkata",
   "sourceHealth": {
     "nseIssueBoardRecords": 1,
@@ -48,7 +48,7 @@
     {
       "slug": "lalithaa-jewellery-mart",
       "company": "Lalithaa Jewellery Mart Limited",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Open",
       "openDate": "17 Aug 2026",
@@ -59,9 +59,9 @@
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹5",
-      "issueSize": "₹5",
-      "freshIssue": "₹5",
-      "offerForSale": "₹5",
+      "issueSize": "₹1,200 Cr",
+      "freshIssue": "₹1,200 Cr",
+      "offerForSale": "₹1,200 Cr",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -73,7 +73,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "RHP",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lalithaa-jewellery-mart-limited-rhp_103513.html",
       "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Lalithaa%20Jewellery%20Mart%20Limited-AP_p.pdf",
       "financialPeriods": [
@@ -153,135 +153,7 @@
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/lalithaa-jewellery-mart-limited-rhp_103513.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Lalithaa%20Jewellery%20Mart%20Limited-AP_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
-      "warnings": [
-        "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
-      ]
-    },
-    {
-      "slug": "behari-lal-engineering",
-      "company": "Behari Lal Engineering Limited",
-      "board": "Unclassified",
-      "securityType": "",
-      "status": "Closed",
-      "openDate": "12 Aug 2026",
-      "closeDate": "14 Aug 2026",
-      "allotmentDate": "",
-      "listingDate": "",
-      "priceBand": "₹, – ₹,",
-      "issuePrice": "",
-      "lotSize": "",
-      "faceValue": "₹10",
-      "issueSize": "₹,",
-      "freshIssue": "₹,",
-      "offerForSale": "₹,",
-      "exchange": "",
-      "subscription": "",
-      "subscriptionRetail": "",
-      "subscriptionQib": "",
-      "subscriptionNii": "",
-      "listedPrice": "",
-      "listingDayClose": "",
-      "listingGain": "",
-      "ltp": "",
-      "returnSinceIssue": "",
-      "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
-      "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/behari-lal-engineering-limited-rhp_103498.html",
-      "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
-      "financialPeriods": [
-        "March 31, 2026",
-        "2020-20",
-        "2026-20",
-        "March 31, 2025"
-      ],
-      "financials": [
-        {
-          "label": "Revenue from operations",
-          "values": [
-            "5",
-            "5"
-          ],
-          "source": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
-          "confidence": "medium"
-        },
-        {
-          "label": "Profit after tax",
-          "values": [
-            "(6)",
-            "(7)",
-            "10"
-          ],
-          "source": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
-          "confidence": "medium"
-        },
-        {
-          "label": "Net worth",
-          "values": [
-            "(1)",
-            "3,060.99",
-            "2,416.16",
-            "1,936.59",
-            "5,340.25"
-          ],
-          "source": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
-          "confidence": "medium"
-        },
-        {
-          "label": "Total borrowings",
-          "values": [
-            "2",
-            "5.70"
-          ],
-          "source": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
-          "confidence": "medium"
-        },
-        {
-          "label": "Earnings per share",
-          "values": [
-            "(3)",
-            "10",
-            "33"
-          ],
-          "source": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
-          "confidence": "medium"
-        },
-        {
-          "label": "Return on net worth",
-          "values": [
-            "(6)",
-            "21.12",
-            "21.92",
-            "18.48",
-            "(7)"
-          ],
-          "source": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
-          "confidence": "medium"
-        },
-        {
-          "label": "Net asset value",
-          "values": [
-            "(7)",
-            "78.41",
-            "61.89",
-            "54.47"
-          ],
-          "source": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
-          "confidence": "medium"
-        }
-      ],
-      "financialExtractionStatus": "auto_extracted_verify_with_prospectus",
-      "sourceLabels": [
-        "SEBI RHP/Prospectus filings",
-        "SEBI prospectus document",
-        "SEBI DRHP filings"
-      ],
-      "sourceUrls": [
-        "https://www.sebi.gov.in/filings/public-issues/aug-2026/behari-lal-engineering-limited-rhp_103498.html",
-        "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
-        "https://www.sebi.gov.in/filings/public-issues/jul-2026/behari-lal-engineering-limited-corrigendum-to-drhp_102871.html"
-      ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -289,20 +161,20 @@
     {
       "slug": "dhoot-transmission",
       "company": "Dhoot Transmission Limited",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Closed",
       "openDate": "10 Aug 2026",
       "closeDate": "12 Aug 2026",
       "allotmentDate": "",
       "listingDate": "",
-      "priceBand": "₹, – ₹,",
+      "priceBand": "",
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹2",
-      "issueSize": "₹2",
-      "freshIssue": "₹2",
-      "offerForSale": "₹2",
+      "issueSize": "₹1,400 Cr",
+      "freshIssue": "₹1,400 Cr",
+      "offerForSale": "₹1,400 Cr",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -314,7 +186,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "RHP",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/dhoot-transmission-limited-rhp_103333.html",
       "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Dhoot%20Transmission%20Limited%20-%20AP_p.pdf",
       "financialPeriods": [
@@ -400,7 +272,7 @@
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/dhoot-transmission-limited-rhp_103333.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Dhoot%20Transmission%20Limited%20-%20AP_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -408,20 +280,20 @@
     {
       "slug": "advanced-sys-tek",
       "company": "Advanced Sys-Tek Limited",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
       "closeDate": "",
       "allotmentDate": "",
       "listingDate": "",
-      "priceBand": "₹, – ₹,",
+      "priceBand": "",
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹10",
-      "issueSize": "₹,",
-      "freshIssue": "₹,",
-      "offerForSale": "₹,",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -433,7 +305,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "DRHP",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/advanced-sys-tek-limited-drhp_103353.html",
       "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Advanced%20Sys-Tek%20Limited%20%20-%20DAP_p.pdf",
       "financialPeriods": [
@@ -528,7 +400,7 @@
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/advanced-sys-tek-limited-drhp_103353.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Advanced%20Sys-Tek%20Limited%20%20-%20DAP_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -536,7 +408,7 @@
     {
       "slug": "ags-health",
       "company": "AGS Health Limited",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
@@ -547,9 +419,9 @@
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹1",
-      "issueSize": "₹1",
-      "freshIssue": "₹1",
-      "offerForSale": "₹1",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -561,7 +433,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "DRHP",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/ags-health-limited-udrhp_103617.html",
       "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/AGS%20Health%20Limited%20-%20AP_p.pdf",
       "financialPeriods": [
@@ -659,7 +531,7 @@
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/ags-health-limited-udrhp_103617.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/AGS%20Health%20Limited%20-%20AP_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -667,20 +539,20 @@
     {
       "slug": "alpine-texworld",
       "company": "ALPINE TEXWORLD LIMITED",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
       "closeDate": "",
       "allotmentDate": "",
       "listingDate": "",
-      "priceBand": "₹, – ₹,",
+      "priceBand": "",
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹10",
-      "issueSize": "₹,",
-      "freshIssue": "₹,",
-      "offerForSale": "₹,",
+      "issueSize": "₹55.75 Cr",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -692,7 +564,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "Prospectus",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/alpine-texworld-limited-prospectus_103604.html",
       "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Abridged%20prospectus_p.pdf",
       "financialPeriods": [
@@ -793,7 +665,7 @@
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/alpine-texworld-limited-prospectus_103604.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Abridged%20prospectus_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -826,7 +698,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "Prospectus",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/ardee-industries-limited-prospectus_103457.html",
       "prospectusUrl": "",
       "financialPeriods": [],
@@ -838,13 +710,13 @@
       "sourceUrls": [
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/ardee-industries-limited-prospectus_103457.html"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": []
     },
     {
       "slug": "arjun-jewellers",
       "company": "Arjun Jewellers Limited",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
@@ -855,9 +727,9 @@
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹10",
-      "issueSize": "₹,",
-      "freshIssue": "₹,",
-      "offerForSale": "₹,",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -869,7 +741,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "DRHP",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/arjun-jewellers-limited-drhp_103462.html",
       "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Arjun%20Jewellers%20Limited%20-%20DAP_p.pdf",
       "financialPeriods": [
@@ -960,7 +832,7 @@
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/arjun-jewellers-limited-drhp_103462.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Arjun%20Jewellers%20Limited%20-%20DAP_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -968,20 +840,20 @@
     {
       "slug": "beauty-garage",
       "company": "BEAUTY GARAGE LIMITED",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
       "closeDate": "",
       "allotmentDate": "",
       "listingDate": "",
-      "priceBand": "₹, – ₹,",
+      "priceBand": "",
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹10",
-      "issueSize": "₹10",
-      "freshIssue": "₹10",
-      "offerForSale": "₹10",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -993,7 +865,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "DRHP",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/beauty-garage-limited-drhp_103479.html",
       "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/BEAUTY%20GARAGE%20LIMITED%20-%20AP_p.pdf",
       "financialPeriods": [
@@ -1085,7 +957,135 @@
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/beauty-garage-limited-drhp_103479.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/BEAUTY%20GARAGE%20LIMITED%20-%20AP_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
+      "warnings": [
+        "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
+      ]
+    },
+    {
+      "slug": "behari-lal-engineering",
+      "company": "Behari Lal Engineering Limited",
+      "board": "Mainboard",
+      "securityType": "",
+      "status": "Research",
+      "openDate": "",
+      "closeDate": "",
+      "allotmentDate": "",
+      "listingDate": "",
+      "priceBand": "",
+      "issuePrice": "",
+      "lotSize": "",
+      "faceValue": "₹10",
+      "issueSize": "",
+      "freshIssue": "₹93 Cr",
+      "offerForSale": "₹93 Cr",
+      "exchange": "",
+      "subscription": "",
+      "subscriptionRetail": "",
+      "subscriptionQib": "",
+      "subscriptionNii": "",
+      "listedPrice": "",
+      "listingDayClose": "",
+      "listingGain": "",
+      "ltp": "",
+      "returnSinceIssue": "",
+      "sebiFilingDate": "",
+      "sebiFilingType": "RHP",
+      "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/behari-lal-engineering-limited-rhp_103498.html",
+      "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
+      "financialPeriods": [
+        "March 31, 2026",
+        "2020-20",
+        "2026-20",
+        "March 31, 2025"
+      ],
+      "financials": [
+        {
+          "label": "Revenue from operations",
+          "values": [
+            "5",
+            "5"
+          ],
+          "source": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
+          "confidence": "medium"
+        },
+        {
+          "label": "Profit after tax",
+          "values": [
+            "(6)",
+            "(7)",
+            "10"
+          ],
+          "source": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
+          "confidence": "medium"
+        },
+        {
+          "label": "Net worth",
+          "values": [
+            "(1)",
+            "3,060.99",
+            "2,416.16",
+            "1,936.59",
+            "5,340.25"
+          ],
+          "source": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
+          "confidence": "medium"
+        },
+        {
+          "label": "Total borrowings",
+          "values": [
+            "2",
+            "5.70"
+          ],
+          "source": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
+          "confidence": "medium"
+        },
+        {
+          "label": "Earnings per share",
+          "values": [
+            "(3)",
+            "10",
+            "33"
+          ],
+          "source": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
+          "confidence": "medium"
+        },
+        {
+          "label": "Return on net worth",
+          "values": [
+            "(6)",
+            "21.12",
+            "21.92",
+            "18.48",
+            "(7)"
+          ],
+          "source": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
+          "confidence": "medium"
+        },
+        {
+          "label": "Net asset value",
+          "values": [
+            "(7)",
+            "78.41",
+            "61.89",
+            "54.47"
+          ],
+          "source": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
+          "confidence": "medium"
+        }
+      ],
+      "financialExtractionStatus": "auto_extracted_verify_with_prospectus",
+      "sourceLabels": [
+        "SEBI RHP/Prospectus filings",
+        "SEBI prospectus document",
+        "SEBI DRHP filings"
+      ],
+      "sourceUrls": [
+        "https://www.sebi.gov.in/filings/public-issues/aug-2026/behari-lal-engineering-limited-rhp_103498.html",
+        "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Behari%20Lal%20Engineering%20Limited%20-%20Abridged%20Prospectus_p.pdf",
+        "https://www.sebi.gov.in/filings/public-issues/jul-2026/behari-lal-engineering-limited-corrigendum-to-drhp_102871.html"
+      ],
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -1093,20 +1093,20 @@
     {
       "slug": "cult-fit",
       "company": "CULT.FIT LIMITED",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
       "closeDate": "",
       "allotmentDate": "",
       "listingDate": "",
-      "priceBand": "₹, – ₹,",
+      "priceBand": "",
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹1",
-      "issueSize": "₹1",
-      "freshIssue": "₹1",
-      "offerForSale": "₹1",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -1191,7 +1191,7 @@
         "https://www.sebi.gov.in/filings/public-issues/jul-2026/cult-fit-limited-drhp_102714.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/jul-2026/CULT.FIT%20Limited%20-%20AP_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -1199,20 +1199,20 @@
     {
       "slug": "encube-ethicals",
       "company": "Encube Ethicals Limited",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
       "closeDate": "",
       "allotmentDate": "",
       "listingDate": "",
-      "priceBand": "₹, – ₹,",
+      "priceBand": "",
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹1",
-      "issueSize": "₹1",
-      "freshIssue": "₹1",
-      "offerForSale": "₹1",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -1224,7 +1224,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "DRHP",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/encube-ethicals-limited-drhp_103383.html",
       "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Encube%20Ethicals%20Limited%20-%20AP_p.pdf",
       "financialPeriods": [
@@ -1315,7 +1315,7 @@
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/encube-ethicals-limited-drhp_103383.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Encube%20Ethicals%20Limited%20-%20AP_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -1348,7 +1348,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "DRHP",
+      "sebiFilingType": "DRHP Addendum",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/jul-2026/fusion-cx-limited-addendum-to-drhp_102992.html",
       "prospectusUrl": "",
       "financialPeriods": [],
@@ -1360,26 +1360,26 @@
       "sourceUrls": [
         "https://www.sebi.gov.in/filings/public-issues/jul-2026/fusion-cx-limited-addendum-to-drhp_102992.html"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": []
     },
     {
       "slug": "gni-infrastructure",
       "company": "GNI INFRASTRUCTURE LIMITED",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
       "closeDate": "",
       "allotmentDate": "",
       "listingDate": "",
-      "priceBand": "₹, – ₹,",
+      "priceBand": "",
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹10",
-      "issueSize": "₹21,029,642",
-      "freshIssue": "₹21,029,642",
-      "offerForSale": "₹21,029,642",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -1476,7 +1476,7 @@
         "https://www.sebi.gov.in/filings/public-issues/jul-2026/gni-infrastructure-limited-drhp_102874.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/jul-2026/GNI%20INFRASTRUCTURE%20LIMITED%20-%20DA_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -1509,7 +1509,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "DRHP",
+      "sebiFilingType": "DRHP Corrigendum",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/hero-motors-limited-corrigendum-to-drhp_103180.html",
       "prospectusUrl": "",
       "financialPeriods": [],
@@ -1521,7 +1521,7 @@
       "sourceUrls": [
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/hero-motors-limited-corrigendum-to-drhp_103180.html"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": []
     },
     {
@@ -1534,13 +1534,13 @@
       "closeDate": "",
       "allotmentDate": "",
       "listingDate": "",
-      "priceBand": "₹, – ₹,",
+      "priceBand": "",
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹10",
-      "issueSize": "₹16,710,000",
-      "freshIssue": "₹16,710,000",
-      "offerForSale": "₹16,710,000",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -1646,7 +1646,7 @@
         "https://www.sebi.gov.in/filings/public-issues/jul-2026/indian-gas-exchange-limited-drhp_102988.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/jul-2026/Indian%20Gas%20Exchange%20Limited_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -1654,20 +1654,20 @@
     {
       "slug": "innoterra",
       "company": "INNOTERRA LIMITED",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
       "closeDate": "",
       "allotmentDate": "",
       "listingDate": "",
-      "priceBand": "₹, – ₹,",
+      "priceBand": "",
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹5",
-      "issueSize": "₹1",
-      "freshIssue": "₹1",
-      "offerForSale": "₹,",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -1775,7 +1775,7 @@
         "https://www.sebi.gov.in/filings/public-issues/jul-2026/innoterra-limited-drhp_102678.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/jul-2026/INNOTERRA%20LIMITED%20-%20Abri_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -1820,7 +1820,7 @@
       "sourceUrls": [
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/j-pan-tubular-components-limited_103499.html"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": []
     },
     {
@@ -1852,7 +1852,7 @@
       "returnSinceIssue": "",
       "sebiFilingDate": "",
       "sebiFilingType": "RHP/Prospectus",
-      "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/leap-india-limited-prospectus_103511.html",
+      "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/leap-india-limited-addendum-cum-corrigendum_103427.html",
       "prospectusUrl": "",
       "financialPeriods": [],
       "financials": [],
@@ -1864,7 +1864,7 @@
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/leap-india-limited-prospectus_103511.html",
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/leap-india-limited-addendum-cum-corrigendum_103427.html"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": []
     },
     {
@@ -1895,7 +1895,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "Prospectus",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/manipal-health-enterprises-limited-prospectus_103300.html",
       "prospectusUrl": "",
       "financialPeriods": [],
@@ -1907,13 +1907,13 @@
       "sourceUrls": [
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/manipal-health-enterprises-limited-prospectus_103300.html"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": []
     },
     {
       "slug": "master-chains-n-jewels",
       "company": "MASTER CHAINS N JEWELS LIMITED",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
@@ -1924,9 +1924,9 @@
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹10",
-      "issueSize": "₹,",
-      "freshIssue": "₹,",
-      "offerForSale": "₹,",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -2048,7 +2048,7 @@
         "https://www.sebi.gov.in/filings/public-issues/jul-2026/master-chains-n-jewels-limited-drhp_103287.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Master%20Chains%20N%20Jewels%20Limited%20-%20AP_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -2081,8 +2081,8 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
-      "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/molbio-diagnostics-limited-addendum-to-rhp_103430.html",
+      "sebiFilingType": "RHP",
+      "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/molbio-diagnostics-limited-red-herring-prospectus_103428.html",
       "prospectusUrl": "",
       "financialPeriods": [],
       "financials": [],
@@ -2094,7 +2094,7 @@
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/molbio-diagnostics-limited-addendum-to-rhp_103430.html",
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/molbio-diagnostics-limited-red-herring-prospectus_103428.html"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": []
     },
     {
@@ -2137,7 +2137,7 @@
       "sourceUrls": [
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/muthoot-fincorp-limited_103697.html"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": []
     },
     {
@@ -2168,7 +2168,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "Prospectus",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/mv-electrosystems-limited-prospectus_103331.html",
       "prospectusUrl": "",
       "financialPeriods": [],
@@ -2180,7 +2180,7 @@
       "sourceUrls": [
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/mv-electrosystems-limited-prospectus_103331.html"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": []
     },
     {
@@ -2223,26 +2223,26 @@
       "sourceUrls": [
         "https://www.nseindia.com/market-data/all-upcoming-issues-ipo"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": []
     },
     {
       "slug": "pragyawan-technologies",
       "company": "Pragyawan Technologies Limited",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
       "closeDate": "",
       "allotmentDate": "",
       "listingDate": "",
-      "priceBand": "₹, – ₹,",
+      "priceBand": "",
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹2",
-      "issueSize": "₹,",
-      "freshIssue": "₹,",
-      "offerForSale": "₹,",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -2351,7 +2351,7 @@
         "https://www.sebi.gov.in/filings/public-issues/jul-2026/pragyawan-technologies-limited-drhp_102611.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/jul-2026/Pragyawan%20Technologies%20Limited%20-%20Abriged_p.PDF"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -2359,7 +2359,7 @@
     {
       "slug": "ratnadeep-retail",
       "company": "RATNADEEP RETAIL LIMITED",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
@@ -2370,9 +2370,9 @@
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹1",
-      "issueSize": "₹1",
-      "freshIssue": "₹1",
-      "offerForSale": "₹1",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -2486,7 +2486,7 @@
         "https://www.sebi.gov.in/filings/public-issues/jul-2026/ratnadeep-retail-limited-drhp_102720.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/jul-2026/Ratnadeep%20Retail%20Limited%20-%20DAP_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -2519,7 +2519,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "RHP",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/shiprocket-limited-rhp_103432.html",
       "prospectusUrl": "",
       "financialPeriods": [],
@@ -2531,7 +2531,7 @@
       "sourceUrls": [
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/shiprocket-limited-rhp_103432.html"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": []
     },
     {
@@ -2574,7 +2574,7 @@
       "sourceUrls": [
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/sillverton-industries-limited-addendum-ii_103621.html"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": []
     },
     {
@@ -2591,7 +2591,7 @@
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹10",
-      "issueSize": "",
+      "issueSize": "₹216.79 Cr",
       "freshIssue": "",
       "offerForSale": "",
       "exchange": "",
@@ -2605,7 +2605,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "RHP",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/skyways-air-services-limited-rhp_103523.html",
       "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Abrigded%20Prospectus_p.pdf",
       "financialPeriods": [
@@ -2705,7 +2705,7 @@
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/skyways-air-services-limited-rhp_103523.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Abrigded%20Prospectus_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -2713,20 +2713,20 @@
     {
       "slug": "stalwart-people-services-india",
       "company": "STALWART PEOPLE SERVICES INDIA LIMITED",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
       "closeDate": "",
       "allotmentDate": "",
       "listingDate": "",
-      "priceBand": "₹, – ₹,",
+      "priceBand": "",
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹5",
-      "issueSize": "₹5",
-      "freshIssue": "₹5",
-      "offerForSale": "₹5",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -2842,7 +2842,7 @@
         "https://www.sebi.gov.in/filings/public-issues/jul-2026/stalwart-people-services-india-limited-drhp_102607.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/jul-2026/Stalwart%20People%20Services%20India%20Limited%20-%20Abri_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -2875,7 +2875,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "RHP",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/sunshine-pictures-limited-rhp_103495.html",
       "prospectusUrl": "",
       "financialPeriods": [],
@@ -2887,13 +2887,13 @@
       "sourceUrls": [
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/sunshine-pictures-limited-rhp_103495.html"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": []
     },
     {
       "slug": "swara-baby-products",
       "company": "SWARA BABY PRODUCTS LIMITED",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
@@ -2904,9 +2904,9 @@
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹2",
-      "issueSize": "₹,",
-      "freshIssue": "₹,",
-      "offerForSale": "₹,",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -3005,7 +3005,7 @@
         "https://www.sebi.gov.in/filings/public-issues/jul-2026/swara-baby-products-limited-drhp_102609.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/jul-2026/SWARA%20Baby%20Products%20Limited%20-%20DAP_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -3013,20 +3013,20 @@
     {
       "slug": "tmc-transformers-india",
       "company": "TMC Transformers India Limited",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
       "closeDate": "",
       "allotmentDate": "",
       "listingDate": "",
-      "priceBand": "₹, – ₹,",
+      "priceBand": "",
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹10",
-      "issueSize": "₹10",
-      "freshIssue": "₹10",
-      "offerForSale": "₹10",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -3134,7 +3134,7 @@
         "https://www.sebi.gov.in/filings/public-issues/jul-2026/tmc-transformers-india-limited-drhp_102680.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/jul-2026/TMC%20Transformers%20India%20Limited%20-%20Abri_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -3142,20 +3142,20 @@
     {
       "slug": "tonbo-imaging-india",
       "company": "Tonbo Imaging India Limited",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
       "closeDate": "",
       "allotmentDate": "",
       "listingDate": "",
-      "priceBand": "₹, – ₹,",
+      "priceBand": "",
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹2",
-      "issueSize": "₹18,085,246",
-      "freshIssue": "₹18,085,246",
-      "offerForSale": "₹18,085,246",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -3167,7 +3167,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "DRHP",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/tonbo-imaging-india-limited-drhp_103625.html",
       "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Tonbo%20Imaging%20India%20Limited%20-%20DAP_p.pdf",
       "financialPeriods": [
@@ -3253,7 +3253,7 @@
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/tonbo-imaging-india-limited-drhp_103625.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Tonbo%20Imaging%20India%20Limited%20-%20DAP_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -3261,20 +3261,20 @@
     {
       "slug": "veritas-finance",
       "company": "Veritas Finance Limited",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
       "closeDate": "",
       "allotmentDate": "",
       "listingDate": "",
-      "priceBand": "₹, – ₹,",
+      "priceBand": "",
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹10",
-      "issueSize": "₹,",
-      "freshIssue": "₹,",
-      "offerForSale": "₹,",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -3286,9 +3286,9 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "RHP",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/veritas-finance-limited-rhp_103304.html",
-      "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Veritas%20Finance%20Limited%20-%20AP_p.pdf",
+      "prospectusUrl": "",
       "financialPeriods": [
         "March 31, 2026",
         "March 31, 2025",
@@ -3378,7 +3378,7 @@
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/veritas-finance-limited-drhp_103304.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Veritas%20Finance%20Limited%20-%20AP_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -3386,7 +3386,7 @@
     {
       "slug": "yogiji-digi",
       "company": "YOGIJI DIGI LIMITED",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
@@ -3397,9 +3397,9 @@
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹10",
-      "issueSize": "₹,",
-      "freshIssue": "₹,",
-      "offerForSale": "₹,",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -3506,7 +3506,7 @@
         "https://www.sebi.gov.in/filings/public-issues/jul-2026/yogiji-digi-limited-drhp_103106.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/jul-2026/YOGIJI%20DIGI%20LIMITED_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]
@@ -3514,20 +3514,20 @@
     {
       "slug": "zetwerk-manufacturing-businesses",
       "company": "Zetwerk Manufacturing Businesses Limited",
-      "board": "Unclassified",
+      "board": "Mainboard",
       "securityType": "",
       "status": "Research",
       "openDate": "",
       "closeDate": "",
       "allotmentDate": "",
       "listingDate": "",
-      "priceBand": "₹, – ₹,",
+      "priceBand": "",
       "issuePrice": "",
       "lotSize": "",
       "faceValue": "₹1",
-      "issueSize": "₹1",
-      "freshIssue": "₹1",
-      "offerForSale": "₹1",
+      "issueSize": "",
+      "freshIssue": "",
+      "offerForSale": "",
       "exchange": "",
       "subscription": "",
       "subscriptionRetail": "",
@@ -3539,7 +3539,7 @@
       "ltp": "",
       "returnSinceIssue": "",
       "sebiFilingDate": "",
-      "sebiFilingType": "RHP/Prospectus",
+      "sebiFilingType": "DRHP",
       "sebiPageUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/zetwerk-manufacturing-businesses-limited-udrhp_103643.html",
       "prospectusUrl": "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Zetwerk%20Manufacturing%20Businesses%20Limited%20-%20DAP_p.pdf",
       "financialPeriods": [
@@ -3619,7 +3619,7 @@
         "https://www.sebi.gov.in/filings/public-issues/aug-2026/zetwerk-manufacturing-businesses-limited-udrhp_103643.html",
         "https://www.sebi.gov.in/sebi_data/commondocs/aug-2026/Zetwerk%20Manufacturing%20Businesses%20Limited%20-%20DAP_p.pdf"
       ],
-      "sourceUpdatedAt": "2026-08-17T14:59:11+00:00",
+      "sourceUpdatedAt": "2026-08-17T15:06:58+00:00",
       "warnings": [
         "Financial metrics were auto-extracted from prospectus text and must be verified against the linked filing."
       ]

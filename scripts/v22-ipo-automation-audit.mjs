@@ -51,6 +51,54 @@ if (generatedRecordCount < 1) {
   errors.push('Generated dashboard adapter contains zero IPO records')
 }
 
+if (Array.isArray(data?.issues)) {
+  const badDraftMarketRecords = data.issues.filter((issue) => {
+    const filing = String(issue.sebiFilingType ?? '').toUpperCase()
+    const labels = Array.isArray(issue.sourceLabels)
+      ? issue.sourceLabels
+      : []
+
+    const marketSource =
+      labels.includes('NSE public issue board') ||
+      labels.includes('NSE IPO Tracker')
+
+    return (
+      filing.includes('DRHP') &&
+      !marketSource &&
+      issue.status !== 'Research'
+    )
+  })
+
+  if (badDraftMarketRecords.length) {
+    errors.push(
+      `DRHP-only records incorrectly appear as market IPOs: ` +
+        badDraftMarketRecords.map((item) => item.company).join(', '),
+    )
+  }
+
+  const malformed = data.issues.filter((issue) => {
+    const price = String(issue.priceBand ?? '').trim()
+    const size = String(issue.issueSize ?? '').trim()
+
+    const badPrice =
+      price &&
+      !/^\u20b9[\d,]+(?:\.\d+)?\s+[\u2013-]\s+\u20b9[\d,]+(?:\.\d+)?$/.test(price)
+
+    const badSize =
+      size &&
+      !/^\u20b9[\d,.]+\s+Cr$/i.test(size)
+
+    return badPrice || badSize
+  })
+
+  if (malformed.length) {
+    errors.push(
+      `Malformed IPO monetary fields remain: ` +
+        malformed.map((item) => item.company).join(', '),
+    )
+  }
+}
+
 const dashboardQualityChecks = [
   [
     'Market filter option',
@@ -135,7 +183,7 @@ if (!packageText.includes('"ipo:refresh"')) {
 }
 
 console.log('')
-console.log('CredoNomics V22.6 IPO Automation Audit')
+console.log('CredoNomics V22.7 IPO Automation Audit')
 console.log('====================================')
 console.log(`JSON issues: ${data?.issues?.length ?? 0}`)
 console.log(`Dashboard adapter records: ${generatedRecordCount}`)
@@ -146,4 +194,4 @@ for (const error of errors) console.error(`  - ${error}`)
 
 if (errors.length) process.exit(1)
 
-console.log('V22.6 IPO automation audit PASSED.')
+console.log('V22.7 IPO automation audit PASSED.')

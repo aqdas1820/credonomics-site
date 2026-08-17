@@ -351,9 +351,19 @@ def parse_nse_issue_board() -> tuple[list[dict[str, str]], list[str]]:
             records.append(
                 {
                     "company": company,
-                    "securityType": data[security_i]
-                    if 0 <= security_i < len(data)
-                    else "",
+                    "securityType": (
+                        data[security_i]
+                        if 0 <= security_i < len(data)
+                        else next(
+                            (
+                                cell
+                                for cell in data[:4]
+                                if clean(cell).upper()
+                                in ("EQ", "SME")
+                            ),
+                            "",
+                        )
+                    ),
                     "openDate": start,
                     "closeDate": end,
                     "status": status,
@@ -474,6 +484,68 @@ def parse_nse_tracker() -> tuple[list[dict[str, str]], list[str]]:
     return records, warnings
 
 
+def infer_sebi_filing_type(title: str, fallback: str = "") -> str:
+    lower = clean(title).lower()
+
+    if "drhp" in lower or "draft offer" in lower:
+        if "corrigendum" in lower:
+            return "DRHP Corrigendum"
+        if "addendum" in lower:
+            return "DRHP Addendum"
+        return "DRHP"
+
+    if "rhp" in lower or "red herring" in lower:
+        if "corrigendum" in lower:
+            return "RHP Corrigendum"
+        if "addendum" in lower:
+            return "RHP Addendum"
+        return "RHP"
+
+    if "prospectus" in lower:
+        return "Prospectus"
+
+    return clean(fallback) or "Public Issue Filing"
+
+
+def filing_rank(value: str) -> int:
+    upper = clean(value).upper()
+
+    if "PROSPECTUS" in upper and "DRHP" not in upper:
+        return 40
+    if "RHP" in upper and "DRHP" not in upper:
+        return 30
+    if "DRHP" in upper:
+        return 10
+
+    return 0
+
+
+def is_draft_filing(value: str) -> bool:
+    return "DRHP" in clean(value).upper()
+
+
+def is_final_offer_filing(value: str) -> bool:
+    upper = clean(value).upper()
+
+    if "DRHP" in upper:
+        return False
+
+    return (
+        "RHP" in upper
+        or "PROSPECTUS" in upper
+    )
+
+
+def has_market_source(record: IssueRecord) -> bool:
+    return any(
+        label in record.sourceLabels
+        for label in (
+            SOURCE_LABELS["nse_issue_board"],
+            SOURCE_LABELS["nse_ipo_tracker"],
+        )
+    )
+
+
 def parse_sebi_listing(
     url: str,
     filing_type: str,
@@ -536,7 +608,10 @@ def parse_sebi_listing(
                 "title": title,
                 "date": date_text,
                 "pageUrl": href,
-                "filingType": filing_type,
+                "filingType": infer_sebi_filing_type(
+                    title,
+                    filing_type,
+                ),
             }
         )
 
@@ -696,6 +771,89 @@ def pdf_text(url: str, company: str) -> tuple[str, list[str]]:
         return "", warnings
 
 
+def parse_decimal(value: str) -> float | None:
+    raw = clean(value).replace(",", "")
+
+    if not re.fullmatch(r"\d+(?:\.\d+)?", raw):
+        return None
+
+    try:
+        return float(raw)
+    except ValueError:
+        return None
+
+
+def format_number(value: float) -> str:
+    if value.is_integer():
+        return f"{int(value):,}"
+
+    return f"{value:,.2f}".rstrip("0").rstrip(".")
+
+
+def format_rupee_crore(amount: str, unit: str) -> str:
+    numeric = parse_decimal(amount)
+    normalized_unit = clean(unit).lower()
+
+    if numeric is None or numeric <= 0:
+        return ""
+
+    if normalized_unit.startswith("crore"):
+        crore = numeric
+    elif normalized_unit.startswith("million"):
+        crore = numeric / 10
+    elif normalized_unit.startswith("lakh"):
+        crore = numeric / 100
+    elif normalized_unit.startswith("billion"):
+        crore = numeric * 100
+    else:
+        # Never publish an alleged monetary issue size without a unit.
+        return ""
+
+    if crore <= 0 or crore > 100000:
+        return ""
+
+    return "\u20b9" + format_number(crore) + " Cr"
+
+
+def valid_price_band(low: str, high: str) -> str:
+    low_value = parse_decimal(low)
+    high_value = parse_decimal(high)
+
+    if low_value is None or high_value is None:
+        return ""
+
+    if not (1 <= low_value <= high_value <= 100000):
+        return ""
+
+    return (
+        "\u20b9"
+        + format_number(low_value)
+        + " \u2013 \u20b9"
+        + format_number(high_value)
+    )
+
+
+def valid_lot_size(value: str) -> str:
+    numeric = parse_decimal(value)
+
+    if numeric is None or not numeric.is_integer():
+        return ""
+
+    if not (1 <= numeric <= 1000000):
+        return ""
+
+    return str(int(numeric))
+
+
+def valid_face_value(value: str) -> str:
+    numeric = parse_decimal(value)
+
+    if numeric is None or not (0.1 <= numeric <= 100):
+        return ""
+
+    return "\u20b9" + format_number(numeric)
+
+
 def extract_issue_details(text: str) -> dict[str, str]:
     if not text:
         return {}
@@ -705,92 +863,113 @@ def extract_issue_details(text: str) -> dict[str, str]:
     result: dict[str, str] = {}
 
     currency = r"(?:\u20b9|rs\.?|inr)?"
+    number = r"(\d[\d,]*(?:\.\d+)?)"
+    unit = r"(crore|crores|million|millions|lakh|lakhs|billion|billions)"
 
-    patterns: dict[str, list[str]] = {
-        "priceBand": [
-            rf"price\s+band.{{0,140}}?{currency}\s*"
-            r"([\d,]+(?:\.\d+)?)\s*(?:to|[-\u2013\u2014])\s*"
-            rf"{currency}\s*([\d,]+(?:\.\d+)?)",
-            rf"floor\s+price.{{0,100}}?{currency}\s*"
-            r"([\d,]+(?:\.\d+)?).{0,150}?"
-            rf"cap\s+price.{{0,100}}?{currency}\s*"
-            r"([\d,]+(?:\.\d+)?)",
-        ],
-        "lotSize": [
-            r"minimum\s+(?:bid\s+)?lot.{0,120}?(\d[\d,]*)"
-            r"\s+(?:equity\s+)?shares",
-            r"minimum\s+(?:application|bid).{0,120}?(\d[\d,]*)"
-            r"\s+(?:equity\s+)?shares",
-            r"bids?\s+(?:can|may)\s+be\s+made.{0,150}?"
-            r"(?:minimum\s+of\s+)?(\d[\d,]*)\s+(?:equity\s+)?shares",
-        ],
-        "faceValue": [
-            rf"face\s+value.{{0,100}}?{currency}\s*([\d,.]+)",
-        ],
+    price_patterns = [
+        rf"price\s+band.{{0,160}}?{currency}\s*{number}"
+        rf"\s*(?:to|[-\u2013\u2014])\s*{currency}\s*{number}",
+        rf"floor\s+price.{{0,120}}?{currency}\s*{number}"
+        rf".{{0,180}}?cap\s+price.{{0,120}}?{currency}\s*{number}",
+        rf"price\s+band\s+of\s+{currency}\s*{number}"
+        rf"\s*(?:to|[-\u2013\u2014])\s*{currency}\s*{number}",
+    ]
+
+    for pattern in price_patterns:
+        match = re.search(pattern, normalized, flags=re.I | re.S)
+
+        if match:
+            price_band = valid_price_band(
+                match.group(1),
+                match.group(2),
+            )
+            if price_band:
+                result["priceBand"] = price_band
+                break
+
+    lot_patterns = [
+        r"minimum\s+(?:bid\s+)?lot.{0,140}?(\d[\d,]*)"
+        r"\s+(?:equity\s+)?shares",
+        r"minimum\s+(?:application|bid).{0,140}?(\d[\d,]*)"
+        r"\s+(?:equity\s+)?shares",
+        r"bids?\s+(?:can|may)\s+be\s+made.{0,170}?"
+        r"(?:minimum\s+of\s+)?(\d[\d,]*)\s+(?:equity\s+)?shares",
+    ]
+
+    for pattern in lot_patterns:
+        match = re.search(pattern, normalized, flags=re.I | re.S)
+
+        if match:
+            lot = valid_lot_size(match.group(1))
+            if lot:
+                result["lotSize"] = lot
+                break
+
+    face_patterns = [
+        rf"face\s+value.{{0,120}}?{currency}\s*{number}",
+    ]
+
+    for pattern in face_patterns:
+        match = re.search(pattern, normalized, flags=re.I | re.S)
+
+        if match:
+            face = valid_face_value(match.group(1))
+            if face:
+                result["faceValue"] = face
+                break
+
+    monetary_patterns: dict[str, list[str]] = {
         "issueSize": [
-            rf"(?:total\s+)?(?:issue|offer)\s+size.{{0,180}}?"
-            rf"{currency}\s*([\d,.]+)\s*(crore|million|lakh)?",
-            r"(?:issue|offer)\s+size.{0,180}?([\d,.]+)\s+"
-            r"(crore|million|lakh)",
+            rf"(?:total\s+)?(?:issue|offer)\s+size.{{0,220}}?"
+            rf"{currency}\s*{number}\s*{unit}",
+            rf"(?:aggregate|aggregating)\s+(?:up\s+)?to.{{0,160}}?"
+            rf"{currency}\s*{number}\s*{unit}",
         ],
         "freshIssue": [
-            rf"fresh\s+issue.{{0,200}}?"
-            rf"{currency}\s*([\d,.]+)\s*(crore|million|lakh)?",
-            r"fresh\s+issue.{0,200}?([\d,.]+)\s+"
-            r"(crore|million|lakh)",
+            rf"fresh\s+issue.{{0,240}}?"
+            rf"{currency}\s*{number}\s*{unit}",
+            rf"fresh\s+issue.{{0,240}}?(?:aggregate|aggregating)"
+            rf".{{0,100}}?{currency}\s*{number}\s*{unit}",
         ],
         "offerForSale": [
-            rf"offer\s+for\s+sale.{{0,200}}?"
-            rf"{currency}\s*([\d,.]+)\s*(crore|million|lakh)?",
-            r"offer\s+for\s+sale.{0,200}?([\d,.]+)\s+"
-            r"(crore|million|lakh)",
+            rf"offer\s+for\s+sale.{{0,240}}?"
+            rf"{currency}\s*{number}\s*{unit}",
+            rf"offer\s+for\s+sale.{{0,240}}?(?:aggregate|aggregating)"
+            rf".{{0,100}}?{currency}\s*{number}\s*{unit}",
         ],
     }
 
-    for key, variants in patterns.items():
-        for pattern in variants:
+    for key, patterns in monetary_patterns.items():
+        for pattern in patterns:
             match = re.search(pattern, normalized, flags=re.I | re.S)
+
             if not match:
                 continue
 
-            if key == "priceBand":
-                result[key] = (
-                    "\u20b9"
-                    + match.group(1)
-                    + " \u2013 \u20b9"
-                    + match.group(2)
-                )
-            elif key in ("issueSize", "freshIssue", "offerForSale"):
-                unit = clean(
-                    match.group(2)
-                    if match.lastindex and match.lastindex >= 2
-                    else ""
-                )
-                result[key] = (
-                    "\u20b9" + match.group(1) + (" " + unit if unit else "")
-                )
-            elif key == "faceValue":
-                result[key] = "\u20b9" + match.group(1)
-            else:
-                result[key] = match.group(1)
+            formatted = format_rupee_crore(
+                match.group(1),
+                match.group(2),
+            )
 
-            break
+            if formatted:
+                result[key] = formatted
+                break
 
     date_patterns = {
         "openDate": [
-            r"(?:bid|issue)\s*/?\s*offer\s+opens?.{0,120}?"
+            r"(?:bid|issue)\s*/?\s*offer\s+opens?.{0,140}?"
             r"([A-Za-z]+\s+\d{1,2},?\s+\d{4})",
-            r"issue\s+opening\s+date.{0,100}?"
+            r"issue\s+opening\s+date.{0,120}?"
             r"(\d{1,2}\s+[A-Za-z]+\s+\d{4})",
-            r"opening\s+date.{0,100}?"
+            r"opening\s+date.{0,120}?"
             r"(\d{1,2}\s+[A-Za-z]+\s+\d{4})",
         ],
         "closeDate": [
-            r"(?:bid|issue)\s*/?\s*offer\s+closes?.{0,120}?"
+            r"(?:bid|issue)\s*/?\s*offer\s+closes?.{0,140}?"
             r"([A-Za-z]+\s+\d{1,2},?\s+\d{4})",
-            r"issue\s+closing\s+date.{0,100}?"
+            r"issue\s+closing\s+date.{0,120}?"
             r"(\d{1,2}\s+[A-Za-z]+\s+\d{4})",
-            r"closing\s+date.{0,100}?"
+            r"closing\s+date.{0,120}?"
             r"(\d{1,2}\s+[A-Za-z]+\s+\d{4})",
         ],
     }
@@ -798,6 +977,7 @@ def extract_issue_details(text: str) -> dict[str, str]:
     for key, variants in date_patterns.items():
         for pattern in variants:
             match = re.search(pattern, normalized, flags=re.I | re.S)
+
             if match:
                 result[key] = date_display(match.group(1))
                 break
@@ -809,7 +989,7 @@ def detect_board_from_text(text: str) -> str:
     if not text:
         return ""
 
-    lower = clean(text[:250000]).lower()
+    lower = clean(text[:500000]).lower()
 
     sme_markers = (
         "nse emerge",
@@ -817,6 +997,7 @@ def detect_board_from_text(text: str) -> str:
         "sme platform",
         "sme exchange",
         "small and medium enterprises platform",
+        "emerge platform of nse",
     )
 
     if any(marker in lower for marker in sme_markers):
@@ -833,7 +1014,17 @@ def detect_board_from_text(text: str) -> str:
     if any(marker in lower for marker in mainboard_markers):
         return "Mainboard"
 
+    # Mainboard RHPs commonly name both full exchanges, while SME documents
+    # identify Emerge/BSE SME explicitly. Only apply this after the SME check.
+    if (
+        "bse limited" in lower
+        and "national stock exchange of india limited" in lower
+    ):
+        return "Mainboard"
+
     return ""
+
+
 
 def extract_periods(text: str) -> list[str]:
     if not text:
@@ -1145,13 +1336,18 @@ def build_dataset() -> dict[str, Any]:
         record.sebiFilingDate = (
             record.sebiFilingDate or date_display(detail.get("date", ""))
         )
-        record.sebiFilingType = (
-            record.sebiFilingType or clean(detail.get("filingType"))
-        )
-        record.sebiPageUrl = record.sebiPageUrl or detail.get("pageUrl", "")
-        record.prospectusUrl = (
-            record.prospectusUrl or detail.get("prospectusUrl", "")
-        )
+        incoming_filing_type = clean(detail.get("filingType"))
+
+        if (
+            filing_rank(incoming_filing_type)
+            >= filing_rank(record.sebiFilingType)
+        ):
+            record.sebiFilingType = incoming_filing_type
+            record.sebiPageUrl = detail.get("pageUrl", "") or record.sebiPageUrl
+            record.prospectusUrl = (
+                detail.get("prospectusUrl", "")
+                or record.prospectusUrl
+            )
         record.merge_source(
             SOURCE_LABELS[item["sourceKey"]],
             detail["pageUrl"],
@@ -1163,14 +1359,11 @@ def build_dataset() -> dict[str, Any]:
                 detail["prospectusUrl"],
             )
 
-        should_extract = (
-            detail.get("prospectusUrl")
-            and (
-                record.status in ("Open", "Upcoming", "Research")
-                or "RHP" in clean(detail.get("filingType"))
-                or "Prospectus" in clean(detail.get("filingType"))
-            )
+        final_offer_filing = is_final_offer_filing(
+            incoming_filing_type
         )
+
+        should_extract = bool(detail.get("prospectusUrl"))
 
         if should_extract and not record.financials:
             text, pdf_warnings = pdf_text(
@@ -1186,20 +1379,31 @@ def build_dataset() -> dict[str, Any]:
                 if prospectus_board:
                     record.board = prospectus_board
 
-            for field_name in (
-                "priceBand",
-                "lotSize",
-                "faceValue",
-                "issueSize",
-                "freshIssue",
-                "offerForSale",
-                "openDate",
-                "closeDate",
-            ):
+            # Offer dates / price band / lot / monetary issue size only belong
+            # in the market table when the document is an RHP/final prospectus.
+            if final_offer_filing:
+                for field_name in (
+                    "priceBand",
+                    "lotSize",
+                    "faceValue",
+                    "issueSize",
+                    "freshIssue",
+                    "offerForSale",
+                    "openDate",
+                    "closeDate",
+                ):
+                    apply_if_empty(
+                        record,
+                        field_name,
+                        issue_details.get(field_name, ""),
+                    )
+            else:
+                # A DRHP may still be useful for research/financials, but it
+                # must not manufacture market dates or an issue price.
                 apply_if_empty(
                     record,
-                    field_name,
-                    issue_details.get(field_name, ""),
+                    "faceValue",
+                    issue_details.get("faceValue", ""),
                 )
 
             periods, financials, extraction_status = extract_financials(
@@ -1212,6 +1416,25 @@ def build_dataset() -> dict[str, Any]:
                 record.financials = financials
 
             record.financialExtractionStatus = extraction_status
+
+        if (
+            is_draft_filing(incoming_filing_type)
+            and not has_market_source(record)
+        ):
+            record.status = "Research"
+            record.openDate = ""
+            record.closeDate = ""
+            record.listingDate = ""
+            record.priceBand = ""
+            record.lotSize = ""
+            record.issueSize = ""
+        else:
+            record.status = status_from_dates(
+                record.openDate,
+                record.closeDate,
+                record.listingDate,
+                record.status,
+            )
 
         record.status = status_from_dates(
             record.openDate,
@@ -1239,12 +1462,51 @@ def build_dataset() -> dict[str, Any]:
     result_records = list(records.values())
 
     for record in result_records:
-        record.status = status_from_dates(
-            record.openDate,
-            record.closeDate,
-            record.listingDate,
-            record.status,
-        )
+        if (
+            is_draft_filing(record.sebiFilingType)
+            and not has_market_source(record)
+        ):
+            record.status = "Research"
+            record.openDate = ""
+            record.closeDate = ""
+            record.listingDate = ""
+            record.priceBand = ""
+            record.lotSize = ""
+            record.issueSize = ""
+        else:
+            record.status = status_from_dates(
+                record.openDate,
+                record.closeDate,
+                record.listingDate,
+                record.status,
+            )
+
+        # Last-line validation: malformed extraction must become unavailable.
+        if record.priceBand:
+            band_match = re.fullmatch(
+                r"₹([\d,]+(?:\.\d+)?)\s+[–-]\s+"
+                r"₹([\d,]+(?:\.\d+)?)",
+                clean(record.priceBand),
+            )
+            record.priceBand = (
+                valid_price_band(
+                    band_match.group(1),
+                    band_match.group(2),
+                )
+                if band_match
+                else ""
+            )
+
+        if record.lotSize:
+            record.lotSize = valid_lot_size(record.lotSize)
+
+        if record.issueSize and not re.fullmatch(
+            r"₹[\d,.]+\s+Cr",
+            clean(record.issueSize),
+            flags=re.I,
+        ):
+            record.issueSize = ""
+
         record.sourceUpdatedAt = now_utc_iso()
 
         if record.financialExtractionStatus.startswith("auto_extracted"):

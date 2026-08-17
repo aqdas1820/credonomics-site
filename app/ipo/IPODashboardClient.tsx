@@ -349,7 +349,7 @@ export default function IPODashboardClient() {
             <div className={styles.empty}>
               <Search size={22} />
               <strong>No IPO matches this filter.</strong>
-              <span>Try All, Mainboard, SME or a shorter company name.</span>
+              <span>Try Market, Open, Filed, Mainboard, SME or a company name.</span>
             </div>
           ) : null}
         </section>

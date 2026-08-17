@@ -51,7 +51,7 @@ jobs:
         run: node scripts/generate-ipo-dashboard.mjs
 
       - name: Preserve IPO dashboard data-quality presentation
-        run: node scripts/patch-v22-6-ipo-dashboard-quality.mjs
+        run: node scripts/patch-v22-7-ipo-dashboard-quality.mjs
 
       - name: Validate production build
         run: npm run build
