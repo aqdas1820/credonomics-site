@@ -15,10 +15,10 @@ export default function LatestReportBanner() {
         <div className={styles.copy}>
           <span>New research publication</span>
           <strong>
-            {latestReport.title} Â· {latestReport.edition}
+            {latestReport.title} · {latestReport.edition}
           </strong>
           <small>
-            {latestReport.pages} pages Â· 12 priority research ideas Â· Data
+            {latestReport.pages} pages · 12 priority research ideas · Data
             through {latestReport.dataCutoff}
           </small>
         </div>

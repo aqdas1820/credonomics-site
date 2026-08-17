@@ -5,15 +5,19 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'CredoNomics Investment Solutions',
     short_name: 'CredoNomics',
     description:
-      'Financial research, IPO intelligence, mutual-fund portfolio analytics, credit-card economics and transparent decision tools for India.',
+      'Financial research, investment intelligence and transparent decision tools for India.',
     start_url: '/',
-    scope: '/',
     display: 'standalone',
-    background_color: '#f5f8fb',
-    theme_color: '#0ca6a3',
+    background_color: '#05080d',
+    theme_color: '#05080d',
+    orientation: 'portrait-primary',
+    categories: ['finance', 'business', 'productivity'],
     icons: [
-      { src: '/favicon-96.png', sizes: '96x96', type: 'image/png' },
-      { src: '/credonomics-mark.png', sizes: '512x512', type: 'image/png' },
+      {
+        src: '/credonomics-mark.png',
+        sizes: 'any',
+        type: 'image/png',
+      },
     ],
   }
 }

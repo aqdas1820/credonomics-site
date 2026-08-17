@@ -101,9 +101,9 @@ export default function SiteFooter() {
         </section>
 
         <section className={styles.footnoteRow}>
-          <p>Â© 2026 CredoNomics Investment Solutions</p>
+          <p>© 2026 CredoNomics Investment Solutions</p>
           <p>
-            Not a SEBI-registered Investment Adviser or Research Analyst Â·
+            Not a SEBI-registered Investment Adviser or Research Analyst ·
             General educational and informational content only
           </p>
         </section>

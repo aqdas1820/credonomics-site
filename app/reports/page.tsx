@@ -40,7 +40,7 @@ export default function ReportsPage() {
             <div>
               <strong>Publication standard</strong>
               <span>
-                Date-aware Â· source-aware Â· methodology-aware Â· limitations visible
+                Date-aware · source-aware · methodology-aware · limitations visible
               </span>
             </div>
           </div>

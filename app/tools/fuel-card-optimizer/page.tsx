@@ -115,7 +115,7 @@ export default function FuelOptimizer() {
   const reset = () => { setMonthlyFuel(10000); setAnnualRetailSpend(120000); setPreferred('Any'); setUseApp(true); setShowAll(true) }
 
   return <main className="toolPage">
-    <header className="calcNav wrap"><a className="brand" href="/"><img src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CREDONOMICS</strong><small>Investment Solutions</small></span></a><a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a></header>
+    <header className="calcNav wrap"><a className="brand" href="/"><img src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CredoNomics</strong><small>Investment Solutions</small></span></a><a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a></header>
 
     <section className="calcHero wrap fuelCompareHero"><div><div className="eyebrow"><Sparkles size={14}/> Indian fuel-card comparison engine</div><h1>Fuel Card <span>Comparator</span></h1><p>Enter your fuel spend once. CredoNomics ranks major IndianOil, BPCL and HPCL credit cards by estimated annual net savings after reward caps, surcharge waivers and annual fees.</p></div>{best && <div className="calcHeroBadge"><Trophy size={24}/><div><small>Current #1 match</small><b>{best.name}</b></div></div>}</section>
 

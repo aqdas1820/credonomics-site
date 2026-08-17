@@ -160,7 +160,7 @@ export default function August2026EquityReportPage() {
                 The publication prioritises opportunities where operating
                 evidence, valuation context, catalyst clarity and risk controls
                 reinforce one another. Scores are research-prioritisation
-                toolsâ€”not expected-return forecasts or target prices.
+                tools—not expected-return forecasts or target prices.
               </p>
 
               <div className={styles.highlightList}>

@@ -97,7 +97,7 @@ export default function SiteHeader() {
             <ThemeModeToggle compact />
 
             <Link href="/research" className={styles.globalResearchCta}>
-              Research Desk <span>â†’</span>
+              Research Desk <span>→</span>
             </Link>
 
             <button

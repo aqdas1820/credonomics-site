@@ -61,7 +61,7 @@ export default function CashbackCalculatorPage() {
   return (
     <main className="calcPage">
       <header className="calcNav wrap">
-        <a className="brand" href="/"><img src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CREDONOMICS</strong><small>Investment Solutions</small></span></a>
+        <a className="brand" href="/"><img src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CredoNomics</strong><small>Investment Solutions</small></span></a>
         <a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a>
       </header>
 

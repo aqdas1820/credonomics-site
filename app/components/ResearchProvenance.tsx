@@ -51,7 +51,7 @@ export default function ResearchProvenance({
       </div>
 
       <a className={styles.provenanceLink} href={methodologyHref}>
-        Methodology â†’
+        Methodology →
       </a>
     </aside>
   )

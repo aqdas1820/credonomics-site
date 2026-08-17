@@ -1,3 +1,4 @@
+import SiteStructuredData from './components/SiteStructuredData'
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
 import {
@@ -148,6 +149,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-IN" suppressHydrationWarning>
       <body>
+        <SiteStructuredData />
         <script
           id="credonomics-theme-init"
           dangerouslySetInnerHTML={{

@@ -34,7 +34,7 @@ export default function CreditCardFinder(){
     return {...c,gross,fee,net,effective,feeWaived}
   }).sort((a,b)=>b.net-a.net),[cards,monthlySpend])
   return <main className="toolPage">
-    <header className="calcNav wrap"><a className="brand" href="/"><img src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CREDONOMICS</strong><small>Investment Solutions</small></span></a><a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a></header>
+    <header className="calcNav wrap"><a className="brand" href="/"><img src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CredoNomics</strong><small>Investment Solutions</small></span></a><a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a></header>
     <section className="calcHero wrap"><div><div className="eyebrow"><Sparkles size={14}/> Live comparison tool</div><h1>Credit Card <span>Finder</span></h1><p>Compare up to three cards using your own reward rates, caps, fee waiver and spending pattern. No hidden product assumptions.</p></div><div className="calcHeroBadge"><CreditCard size={24}/><div><small>Comparison engine</small><b>Net annual value</b></div></div></section>
     <section className="finderShell wrap">
       <div className="calcPanel">
