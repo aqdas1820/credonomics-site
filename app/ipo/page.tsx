@@ -1,81 +1,73 @@
-import {
-  ArrowRight,
-  ExternalLink,
-  ShieldCheck,
-  TrendingUp,
-} from 'lucide-react'
+import type { Metadata } from 'next'
 import SiteFrame from '../components/SiteFrame'
-import { ipoDiscovery } from '../data/ipo-discovery.generated'
-import { verifiedIpos } from '../data/verified-ipos.generated'
-import { publicIpos, ipoMarketMasterMeta } from '../data/ipo-public'
-import styles from '../core-v4.module.css'
-import local from './ipo.module.css'
-import IpoDashboardOverview from './components/IpoDashboardOverview'
-import IpoDiscovery from './components/IpoDiscovery'
-import IpoSubnav from './components/IpoSubnav'
+import IPODashboardClient from './IPODashboardClient'
 
-export const metadata = {
-  title: 'IPO Intelligence India',
+export const metadata: Metadata = {
+  title: 'IPO Intelligence Dashboard',
   description:
-    'IPO dashboard for India with SEBI filing discovery, current and upcoming IPO research, Mainboard and SME filters, calendar, subscription data and transparent quantitative analysis.',
-  alternates: { canonical: '/ipo' },
+    'Track current and upcoming Indian IPOs, Mainboard and SME issues, price bands, important dates and CredoNomics primary-market research.',
+  alternates: {
+    canonical: '/ipo',
+  },
+  openGraph: {
+    title: 'CredoNomics IPO Intelligence Dashboard',
+    description:
+      'Current IPOs, upcoming issues, Mainboard and SME research, calendars and primary-market intelligence.',
+    url: '/ipo',
+  },
 }
 
-export default function IpoPage() {
+export default function IPOPage() {
+  const collectionPage = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'CredoNomics IPO Intelligence Dashboard',
+    url: 'https://www.credonomics.in/ipo',
+    description:
+      'Indian IPO intelligence, current and upcoming public issues, Mainboard and SME research.',
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'CredoNomics',
+      url: 'https://www.credonomics.in',
+    },
+  }
+
+  const breadcrumbs = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.credonomics.in/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'IPO Intelligence',
+        item: 'https://www.credonomics.in/ipo',
+      },
+    ],
+  }
+
   return (
     <SiteFrame>
-      <section className={`${styles.wrap} ${styles.pageHero} ${local.dashboardHero}`}>
-        <div className={styles.breadcrumbs}><a href="/">Home</a><span>/</span><span>IPO Intelligence</span></div>
-        <span className={styles.pageKicker}><TrendingUp size={14}/> CredoNomics IPO Command Center</span>
-        <h1>Every important IPO research surface, <span>without the clutter.</span></h1>
-        <p className={styles.pageHeroLead}>
-          Current and upcoming issues, Mainboard and SME research, calendars, subscription data,
-          offer documents, financials, valuation and a transparent quantitative Data Score.
-        </p>
-        <div className={local.heroActions}>
-          <a className={styles.primaryButton} href="/ipo/current">Current IPOs <ArrowRight size={15}/></a>
-          <a className={styles.secondaryButton} href="/ipo/analyzer">Analyze an IPO</a>
-          <a className={styles.secondaryButton} href="/ipo/documents">SEBI documents</a>
-        </div>
-      </section>
+      <IPODashboardClient />
 
-      <IpoSubnav active="Dashboard"/>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(collectionPage),
+        }}
+      />
 
-      <section className={`${styles.wrap} ${styles.pageBody} ${local.shell}`}>
-        <IpoDashboardOverview/>
-
-        <section className={local.commandSection}>
-          <div className={local.sectionHead}>
-            <div><span>Complete filing feed</span><h2>Search the latest SEBI public-issue documents.</h2></div>
-            <p>
-              This layer is intentionally broader than the ranked database. A new filing can appear
-              immediately while financial normalization and verification happen separately.
-            </p>
-          </div>
-          <IpoDiscovery records={ipoDiscovery}/>
-        </section>
-
-        <section className={local.sourcePanel}>
-          <div>
-            <small>Primary official sources</small>
-            <h2>CredoNomics links back to the official market record.</h2>
-          </div>
-          <div>
-            <a href="https://www.sebi.gov.in/filings/public-issues.html" target="_blank" rel="noreferrer">SEBI Public Issues <ExternalLink size={12}/></a>
-            <a href="https://www.nseindia.com/market-data/all-upcoming-issues-ipo" target="_blank" rel="noreferrer">NSE Public Issues <ExternalLink size={12}/></a>
-            <a href="https://www.nseindia.com/ipo-tracker?type=ipo_year" target="_blank" rel="noreferrer">NSE IPO Tracker <ExternalLink size={12}/></a>
-          </div>
-        </section>
-
-        <div className={local.regulatoryNotice}>
-          <ShieldCheck size={20}/>
-          <p>
-            <b>Research boundary:</b> {publicIpos.length} exchange/normalized IPO record(s) are visible in the market layer; {verifiedIpos.length} currently meet the stricter financial research schema.
-            CredoNomics does not convert its statistical Data Score into Subscribe/Avoid/Buy calls, price targets or
-            listing-gain predictions.
-          </p>
-        </div>
-      </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbs),
+        }}
+      />
     </SiteFrame>
   )
 }
