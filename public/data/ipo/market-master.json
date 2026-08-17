@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generatedAt": "2026-08-14T11:33:38.064Z",
-    "recordCount": 6,
-    "nseCount": 6,
+    "generatedAt": "2026-08-17T05:20:44.564Z",
+    "recordCount": 5,
+    "nseCount": 5,
     "bseCount": 0,
-    "activeCount": 6,
+    "activeCount": 5,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 6 · BSE SME unavailable · BSE mainboard 0"
+    "sourceStatus": "NSE API 5 · BSE SME unavailable · BSE mainboard 0"
   },
   "records": [
     {
@@ -24,100 +24,16 @@
         ]
       },
       "subscription": {
-        "total": 0.54,
-        "updatedAt": "2026-08-14T11:33:38.064Z",
+        "total": 0.56,
+        "updatedAt": "2026-08-17T05:20:44.564Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=FASCINATE&type=Active"
       },
       "sharesOffered": 4293600,
-      "sharesBid": 2304800,
+      "sharesBid": 2392800,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=FASCINATE&type=Active",
-      "fetchedAt": "2026-08-14T11:33:38.064Z"
-    },
-    {
-      "slug": "behari-lal-engineering-ltd-bdf7897",
-      "companyName": "Behari Lal Engineering Limited",
-      "symbol": "BLEL",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 271,
-        "priceBandHigh": 285,
-        "openDate": "2026-08-12",
-        "closeDate": "2026-08-14",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 81.62751813795897,
-        "updatedAt": "2026-08-14T11:33:38.064Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BLEL&type=Active"
-      },
-      "sharesOffered": 7412769,
-      "sharesBid": 605085936,
-      "estimatedIssueValueCr": 211.26,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BLEL&type=Active",
-      "fetchedAt": "2026-08-14T11:33:38.064Z"
-    },
-    {
-      "slug": "pramodini-medicare-ltd-b00113a",
-      "companyName": "Pramodini Medicare Limited",
-      "symbol": "PRAMODINI",
-      "marketSegment": "sme",
-      "status": "open",
-      "securityType": "SME",
-      "issue": {
-        "openDate": "2026-08-12",
-        "closeDate": "2026-08-14",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 3.66,
-        "updatedAt": "2026-08-14T11:33:38.064Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=PRAMODINI&type=Active"
-      },
-      "sharesOffered": 4490400,
-      "sharesBid": 16426800,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=PRAMODINI&type=Active",
-      "fetchedAt": "2026-08-14T11:33:38.064Z"
-    },
-    {
-      "slug": "shiprocket-ltd-2d92882",
-      "companyName": "Shiprocket Limited",
-      "symbol": "SHIPROCKET",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 92,
-        "priceBandHigh": 97,
-        "openDate": "2026-08-12",
-        "closeDate": "2026-08-14",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 68.64470685605907,
-        "updatedAt": "2026-08-14T11:33:38.064Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHIPROCKET&type=Active"
-      },
-      "sharesOffered": 94436030,
-      "sharesBid": 6482533596,
-      "estimatedIssueValueCr": 916.03,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHIPROCKET&type=Active",
-      "fetchedAt": "2026-08-14T11:33:38.064Z"
+      "fetchedAt": "2026-08-17T05:20:44.564Z"
     },
     {
       "slug": "credent-connect-n-care-ltd-ef82533",
@@ -134,16 +50,16 @@
         ]
       },
       "subscription": {
-        "total": 11.23,
-        "updatedAt": "2026-08-14T11:33:38.064Z",
+        "total": 23.55,
+        "updatedAt": "2026-08-17T05:20:44.564Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=CREDENT&type=Active"
       },
       "sharesOffered": 3564000,
-      "sharesBid": 40010400,
+      "sharesBid": 83928600,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=CREDENT&type=Active",
-      "fetchedAt": "2026-08-14T11:33:38.064Z"
+      "fetchedAt": "2026-08-17T05:20:44.564Z"
     },
     {
       "slug": "skytech-infinite-platform-ltd-6401724",
@@ -160,16 +76,74 @@
         ]
       },
       "subscription": {
-        "total": 0.42,
-        "updatedAt": "2026-08-14T11:33:38.064Z",
+        "total": 0.64,
+        "updatedAt": "2026-08-17T05:20:44.564Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SKYTECH&type=Active"
       },
       "sharesOffered": 2945600,
-      "sharesBid": 1238400,
+      "sharesBid": 1897600,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SKYTECH&type=Active",
-      "fetchedAt": "2026-08-14T11:33:38.064Z"
+      "fetchedAt": "2026-08-17T05:20:44.564Z"
+    },
+    {
+      "slug": "horizon-industrial-parks-ltd-3dace32",
+      "companyName": "Horizon Industrial Parks Limited",
+      "symbol": "HORIZONIND",
+      "marketSegment": "mainboard",
+      "status": "open",
+      "securityType": "EQ",
+      "issue": {
+        "priceBandLow": 57,
+        "priceBandHigh": 60,
+        "openDate": "2026-08-17",
+        "closeDate": "2026-08-19",
+        "exchange": [
+          "NSE"
+        ]
+      },
+      "subscription": {
+        "total": 0.009546210927467085,
+        "updatedAt": "2026-08-17T05:20:44.564Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HORIZONIND&type=Active"
+      },
+      "sharesOffered": 251356273,
+      "sharesBid": 2399500,
+      "estimatedIssueValueCr": 1508.14,
+      "marketSource": "NSE",
+      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HORIZONIND&type=Active",
+      "fetchedAt": "2026-08-17T05:20:44.564Z"
+    },
+    {
+      "slug": "lalithaa-jewellery-mart-ltd-dfd98a7",
+      "companyName": "Lalithaa Jewellery Mart Limited",
+      "symbol": "LALITHAA",
+      "marketSegment": "mainboard",
+      "status": "open",
+      "securityType": "EQ",
+      "issue": {
+        "priceBandLow": 190,
+        "priceBandHigh": 201,
+        "openDate": "2026-08-17",
+        "closeDate": "2026-08-19",
+        "exchange": [
+          "NSE"
+        ]
+      },
+      "subscription": {
+        "total": 0.08918946569757212,
+        "updatedAt": "2026-08-17T05:20:44.564Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=LALITHAA&type=Active"
+      },
+      "sharesOffered": 62761403,
+      "sharesBid": 5597656,
+      "estimatedIssueValueCr": 1261.5,
+      "marketSource": "NSE",
+      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=LALITHAA&type=Active",
+      "fetchedAt": "2026-08-17T05:20:44.564Z"
     }
   ]
 }
