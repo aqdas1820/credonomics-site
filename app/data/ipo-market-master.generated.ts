@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-08-17T05:20:44.564Z",
+  "generatedAt": "2026-08-17T10:52:18.029Z",
   "recordCount": 5,
   "nseCount": 5,
   "bseCount": 0,
@@ -29,16 +29,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.56,
-      "updatedAt": "2026-08-17T05:20:44.564Z",
+      "total": 0.86,
+      "updatedAt": "2026-08-17T10:52:18.029Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=FASCINATE&type=Active"
     },
     "sharesOffered": 4293600,
-    "sharesBid": 2392800,
+    "sharesBid": 3704000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=FASCINATE&type=Active",
-    "fetchedAt": "2026-08-17T05:20:44.564Z"
+    "fetchedAt": "2026-08-17T10:52:18.029Z"
   },
   {
     "slug": "credent-connect-n-care-ltd-ef82533",
@@ -55,16 +55,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 23.55,
-      "updatedAt": "2026-08-17T05:20:44.564Z",
+      "total": 141.61,
+      "updatedAt": "2026-08-17T10:52:18.029Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=CREDENT&type=Active"
     },
     "sharesOffered": 3564000,
-    "sharesBid": 83928600,
+    "sharesBid": 504696000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=CREDENT&type=Active",
-    "fetchedAt": "2026-08-17T05:20:44.564Z"
+    "fetchedAt": "2026-08-17T10:52:18.029Z"
   },
   {
     "slug": "skytech-infinite-platform-ltd-6401724",
@@ -81,16 +81,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.64,
-      "updatedAt": "2026-08-17T05:20:44.564Z",
+      "total": 0.9,
+      "updatedAt": "2026-08-17T10:52:18.029Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SKYTECH&type=Active"
     },
     "sharesOffered": 2945600,
-    "sharesBid": 1897600,
+    "sharesBid": 2657600,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SKYTECH&type=Active",
-    "fetchedAt": "2026-08-17T05:20:44.564Z"
+    "fetchedAt": "2026-08-17T10:52:18.029Z"
   },
   {
     "slug": "horizon-industrial-parks-ltd-3dace32",
@@ -109,17 +109,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.009546210927467085,
-      "updatedAt": "2026-08-17T05:20:44.564Z",
+      "total": 0.0319347510376238,
+      "updatedAt": "2026-08-17T10:52:18.029Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HORIZONIND&type=Active"
     },
     "sharesOffered": 251356273,
-    "sharesBid": 2399500,
+    "sharesBid": 8027000,
     "estimatedIssueValueCr": 1508.14,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HORIZONIND&type=Active",
-    "fetchedAt": "2026-08-17T05:20:44.564Z"
+    "fetchedAt": "2026-08-17T10:52:18.029Z"
   },
   {
     "slug": "lalithaa-jewellery-mart-ltd-dfd98a7",
@@ -138,16 +138,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.08918946569757212,
-      "updatedAt": "2026-08-17T05:20:44.564Z",
+      "total": 0.3783477880505635,
+      "updatedAt": "2026-08-17T10:52:18.029Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=LALITHAA&type=Active"
     },
     "sharesOffered": 62761403,
-    "sharesBid": 5597656,
+    "sharesBid": 23745638,
     "estimatedIssueValueCr": 1261.5,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=LALITHAA&type=Active",
-    "fetchedAt": "2026-08-17T05:20:44.564Z"
+    "fetchedAt": "2026-08-17T10:52:18.029Z"
   }
 ]
