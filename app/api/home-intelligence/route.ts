@@ -256,26 +256,123 @@ function latestReport(): ReportSummary | null {
   }
 }
 
-function mfSummary(data: JsonRecord | null) {
+function collectionCount(
+  data: unknown,
+  preferredKeys: string[] = [],
+): number {
   if (!data) {
-    return {
-      available: false,
-      count: 0,
-      label: 'Tracker available',
+    return 0
+  }
+
+  if (Array.isArray(data)) {
+    return data.length
+  }
+
+  if (typeof data !== 'object') {
+    return 0
+  }
+
+  const record = data as JsonRecord
+
+  for (const key of preferredKeys) {
+    const value = record[key]
+
+    if (Array.isArray(value)) {
+      return value.length
+    }
+
+    if (
+      value &&
+      typeof value === 'object' &&
+      !Array.isArray(value)
+    ) {
+      const count = Object.keys(
+        value as JsonRecord,
+      ).length
+
+      if (count > 0) {
+        return count
+      }
     }
   }
 
-  const schemeCount = countFirstArray(data, [
-    'schemes',
-    'funds',
-    'portfolios',
-  ])
+  const directKeys = Object.keys(record)
 
-  const holdingCount = countFirstArray(data, [
-    'holdings',
-    'holdingsPublic',
-    'holdings_public',
-  ])
+  if (
+    directKeys.length > 0 &&
+    !directKeys.every((key) =>
+      [
+        'generatedAt',
+        'generated_at',
+        'updatedAt',
+        'updated_at',
+        'asOf',
+        'as_of',
+        'version',
+        'meta',
+        'metadata',
+      ].includes(key),
+    )
+  ) {
+    return directKeys.length
+  }
+
+  return 0
+}
+
+function mfSummary(payloads: {
+  index: JsonRecord | null
+  schemes: JsonRecord | null
+  portfolios: JsonRecord | null
+  holdings: JsonRecord | null
+  latest: JsonRecord | null
+  manifest: JsonRecord | null
+}) {
+  const schemeCount = Math.max(
+    collectionCount(
+      payloads.schemes,
+      ['schemes', 'funds', 'data', 'items'],
+    ),
+    collectionCount(
+      payloads.index,
+      ['schemes', 'funds'],
+    ),
+  )
+
+  const portfolioCount = Math.max(
+    collectionCount(
+      payloads.portfolios,
+      ['portfolios', 'funds', 'data', 'items'],
+    ),
+    collectionCount(
+      payloads.index,
+      ['portfolios'],
+    ),
+  )
+
+  const holdingCount = Math.max(
+    collectionCount(
+      payloads.holdings,
+      ['holdings', 'data', 'items'],
+    ),
+    collectionCount(
+      payloads.index,
+      [
+        'holdings',
+        'holdingsPublic',
+        'holdings_public',
+      ],
+    ),
+  )
+
+  const available = Boolean(
+    payloads.index ||
+    payloads.schemes ||
+    payloads.portfolios ||
+    payloads.holdings ||
+    payloads.latest ||
+    payloads.manifest
+  )
 
   if (schemeCount > 0) {
     return {
@@ -285,6 +382,17 @@ function mfSummary(data: JsonRecord | null) {
         schemeCount === 1
           ? 'scheme indexed'
           : 'schemes indexed',
+    }
+  }
+
+  if (portfolioCount > 0) {
+    return {
+      available: true,
+      count: portfolioCount,
+      label:
+        portfolioCount === 1
+          ? 'portfolio indexed'
+          : 'portfolios indexed',
     }
   }
 
@@ -299,10 +407,18 @@ function mfSummary(data: JsonRecord | null) {
     }
   }
 
+  if (available) {
+    return {
+      available: true,
+      count: 0,
+      label: 'Portfolio dataset online',
+    }
+  }
+
   return {
-    available: true,
+    available: false,
     count: 0,
-    label: 'Portfolio dataset online',
+    label: 'Tracker available',
   }
 }
 
@@ -352,7 +468,15 @@ export async function GET(request: NextRequest) {
     (issue) => boardOf(issue.board) === 'sme',
   ).length
 
-  const [ipoMeta, mf] = await Promise.all([
+  const [
+    ipoMeta,
+    mfIndex,
+    mfSchemes,
+    mfPortfolios,
+    mfHoldings,
+    mfLatest,
+    mfManifest,
+  ] = await Promise.all([
     fetchPublicJson(
       request,
       '/data/ipo-intelligence/index.json',
@@ -360,6 +484,26 @@ export async function GET(request: NextRequest) {
     fetchPublicJson(
       request,
       '/data/mf-intelligence/index.json',
+    ),
+    fetchPublicJson(
+      request,
+      '/data/mf-intelligence/schemes.json',
+    ),
+    fetchPublicJson(
+      request,
+      '/data/mf-intelligence/portfolios_public.json',
+    ),
+    fetchPublicJson(
+      request,
+      '/data/mf-intelligence/holdings_public.json',
+    ),
+    fetchPublicJson(
+      request,
+      '/data/mf-intelligence/latest.json',
+    ),
+    fetchPublicJson(
+      request,
+      '/data/mf-intelligence/manifest.json',
     ),
   ])
 
@@ -386,13 +530,22 @@ export async function GET(request: NextRequest) {
   ).length
 
   const report = latestReport()
-  const mutualFunds = mfSummary(mf)
+  const mutualFunds = mfSummary({
+    index: mfIndex,
+    schemes: mfSchemes,
+    portfolios: mfPortfolios,
+    holdings: mfHoldings,
+    latest: mfLatest,
+    manifest: mfManifest,
+  })
 
   return NextResponse.json(
     {
       generatedAt:
         generatedAt(ipoMeta) ||
-        generatedAt(mf) ||
+        generatedAt(mfLatest) ||
+        generatedAt(mfManifest) ||
+        generatedAt(mfIndex) ||
         new Date().toISOString(),
       ipo: {
         total: issues.length,
