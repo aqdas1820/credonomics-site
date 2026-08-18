@@ -279,12 +279,11 @@ export default function HomeIntelligenceRail() {
               </span>
 
               <span>
-                {data
-                  ? numberOrDash(
+                {data?.ipo.healthySourceCount
+                  ? `${numberOrDash(
                       data.ipo.healthySourceCount,
-                    )
-                  : '--'}{' '}
-                source signals
+                    )} source signals`
+                  : 'Source-linked'}
               </span>
             </div>
           </a>

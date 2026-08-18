@@ -1,10 +1,12 @@
 import {
   existsSync,
-  readFileSync,
   readdirSync,
 } from 'node:fs'
 import path from 'node:path'
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
+import {
+  ipoDashboardRecords,
+} from '../../data/ipo-dashboard.generated'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -34,35 +36,6 @@ const MONTHS: Record<string, number> = {
   december: 12,
 }
 
-function readJson(relativePath: string): JsonRecord | null {
-  const fullPath = path.join(process.cwd(), relativePath)
-
-  if (!existsSync(fullPath)) {
-    return null
-  }
-
-  try {
-    return JSON.parse(
-      readFileSync(fullPath, 'utf8'),
-    ) as JsonRecord
-  } catch {
-    return null
-  }
-}
-
-function asArray(value: unknown): JsonRecord[] {
-  if (!Array.isArray(value)) {
-    return []
-  }
-
-  return value.filter(
-    (item): item is JsonRecord =>
-      Boolean(item) &&
-      typeof item === 'object' &&
-      !Array.isArray(item),
-  )
-}
-
 function stringValue(
   value: unknown,
   fallback = '',
@@ -72,12 +45,28 @@ function stringValue(
     : fallback
 }
 
-function statusOf(issue: JsonRecord): string {
-  return stringValue(issue.status).toLowerCase()
-}
+async function fetchPublicJson(
+  request: NextRequest,
+  pathname: string,
+): Promise<JsonRecord | null> {
+  try {
+    const url = new URL(pathname, request.nextUrl.origin)
 
-function boardOf(issue: JsonRecord): string {
-  return stringValue(issue.board).toLowerCase()
+    const response = await fetch(url, {
+      cache: 'no-store',
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+
+    if (!response.ok) {
+      return null
+    }
+
+    return (await response.json()) as JsonRecord
+  } catch {
+    return null
+  }
 }
 
 function countFirstArray(
@@ -317,22 +306,25 @@ function mfSummary(data: JsonRecord | null) {
   }
 }
 
-export async function GET() {
-  const ipo = readJson(
-    'public/data/ipo-intelligence/index.json',
-  )
-  const mf = readJson(
-    'public/data/mf-intelligence/index.json',
-  )
+function statusOf(status: unknown): string {
+  return stringValue(status).toLowerCase()
+}
 
-  const issues = asArray(ipo?.issues)
+function boardOf(board: unknown): string {
+  return stringValue(board).toLowerCase()
+}
+
+export async function GET(request: NextRequest) {
+  // Use the exact same generated records consumed by /ipo.
+  // This prevents homepage counts from diverging from the IPO dashboard.
+  const issues = ipoDashboardRecords
 
   const open = issues.filter(
-    (issue) => statusOf(issue) === 'open',
+    (issue) => statusOf(issue.status) === 'open',
   ).length
 
   const upcoming = issues.filter(
-    (issue) => statusOf(issue) === 'upcoming',
+    (issue) => statusOf(issue.status) === 'upcoming',
   ).length
 
   const filed = issues.filter((issue) =>
@@ -340,7 +332,7 @@ export async function GET() {
       'research',
       'filed',
       'filed / research',
-    ].includes(statusOf(issue)),
+    ].includes(statusOf(issue.status)),
   ).length
 
   const market = issues.filter(
@@ -349,30 +341,48 @@ export async function GET() {
         'research',
         'filed',
         'filed / research',
-      ].includes(statusOf(issue)),
+      ].includes(statusOf(issue.status)),
   ).length
 
   const mainboard = issues.filter(
-    (issue) => boardOf(issue) === 'mainboard',
+    (issue) => boardOf(issue.board) === 'mainboard',
   ).length
 
   const sme = issues.filter(
-    (issue) => boardOf(issue) === 'sme',
+    (issue) => boardOf(issue.board) === 'sme',
   ).length
 
+  const [ipoMeta, mf] = await Promise.all([
+    fetchPublicJson(
+      request,
+      '/data/ipo-intelligence/index.json',
+    ),
+    fetchPublicJson(
+      request,
+      '/data/mf-intelligence/index.json',
+    ),
+  ])
+
   const sourceHealth =
-    ipo &&
-    ipo.sourceHealth &&
-    typeof ipo.sourceHealth === 'object'
-      ? (ipo.sourceHealth as JsonRecord)
+    ipoMeta &&
+    ipoMeta.sourceHealth &&
+    typeof ipoMeta.sourceHealth === 'object'
+      ? (ipoMeta.sourceHealth as JsonRecord)
       : {}
 
-  const healthySourceCount = Object.values(
+  const healthySourceCount = Object.entries(
     sourceHealth,
   ).filter(
-    (value) =>
-      value === true ||
-      (typeof value === 'number' && value > 0),
+    ([key, value]) =>
+      (
+        value === true ||
+        (typeof value === 'number' && value > 0)
+      ) &&
+      (
+        key.toLowerCase().includes('api') ||
+        key.toLowerCase().includes('record') ||
+        key.toLowerCase().includes('source')
+      ),
   ).length
 
   const report = latestReport()
@@ -381,7 +391,7 @@ export async function GET() {
   return NextResponse.json(
     {
       generatedAt:
-        generatedAt(ipo) ||
+        generatedAt(ipoMeta) ||
         generatedAt(mf) ||
         new Date().toISOString(),
       ipo: {
