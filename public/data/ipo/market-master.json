@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-08-18T05:02:28.661Z",
+    "generatedAt": "2026-08-18T10:04:12.853Z",
     "recordCount": 6,
     "nseCount": 6,
     "bseCount": 0,
@@ -24,16 +24,16 @@
         ]
       },
       "subscription": {
-        "total": 0.89,
-        "updatedAt": "2026-08-18T05:02:28.661Z",
+        "total": 0.93,
+        "updatedAt": "2026-08-18T10:04:12.853Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=FASCINATE&type=Active"
       },
       "sharesOffered": 4293600,
-      "sharesBid": 3840800,
+      "sharesBid": 3999200,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=FASCINATE&type=Active",
-      "fetchedAt": "2026-08-18T05:02:28.661Z"
+      "fetchedAt": "2026-08-18T10:04:12.853Z"
     },
     {
       "slug": "skytech-infinite-platform-ltd-6401724",
@@ -50,16 +50,16 @@
         ]
       },
       "subscription": {
-        "total": 1.14,
-        "updatedAt": "2026-08-18T05:02:28.661Z",
+        "total": 1.92,
+        "updatedAt": "2026-08-18T10:04:12.853Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SKYTECH&type=Active"
       },
       "sharesOffered": 2945600,
-      "sharesBid": 3360000,
+      "sharesBid": 5660800,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SKYTECH&type=Active",
-      "fetchedAt": "2026-08-18T05:02:28.661Z"
+      "fetchedAt": "2026-08-18T10:04:12.853Z"
     },
     {
       "slug": "horizon-industrial-parks-ltd-3dace32",
@@ -78,17 +78,17 @@
         ]
       },
       "subscription": {
-        "total": 0.04535792906190966,
-        "updatedAt": "2026-08-18T05:02:28.661Z",
+        "total": 0.0744570635800285,
+        "updatedAt": "2026-08-18T10:04:12.853Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HORIZONIND&type=Active"
       },
       "sharesOffered": 251356273,
-      "sharesBid": 11401000,
+      "sharesBid": 18715250,
       "estimatedIssueValueCr": 1508.14,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HORIZONIND&type=Active",
-      "fetchedAt": "2026-08-18T05:02:28.661Z"
+      "fetchedAt": "2026-08-18T10:04:12.853Z"
     },
     {
       "slug": "lalithaa-jewellery-mart-ltd-dfd98a7",
@@ -107,17 +107,17 @@
         ]
       },
       "subscription": {
-        "total": 0.5980294927441313,
-        "updatedAt": "2026-08-18T05:02:28.661Z",
+        "total": 1.9084687447156017,
+        "updatedAt": "2026-08-18T10:04:12.853Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=LALITHAA&type=Active"
       },
       "sharesOffered": 62761403,
-      "sharesBid": 37533170,
+      "sharesBid": 119778176,
       "estimatedIssueValueCr": 1261.5,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=LALITHAA&type=Active",
-      "fetchedAt": "2026-08-18T05:02:28.661Z"
+      "fetchedAt": "2026-08-18T10:04:12.853Z"
     },
     {
       "slug": "shankesh-jewellers-ltd-f55fe92",
@@ -136,17 +136,17 @@
         ]
       },
       "subscription": {
-        "total": 0.046099850202985806,
-        "updatedAt": "2026-08-18T05:02:28.661Z",
+        "total": 0.2015471788228994,
+        "updatedAt": "2026-08-18T10:04:12.853Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHANKESH&type=Active"
       },
       "sharesOffered": 27637400,
-      "sharesBid": 1274080,
+      "sharesBid": 5570240,
       "estimatedIssueValueCr": 257.03,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHANKESH&type=Active",
-      "fetchedAt": "2026-08-18T05:02:28.661Z"
+      "fetchedAt": "2026-08-18T10:04:12.853Z"
     },
     {
       "slug": "sunshine-pictures-ltd-9ca6293",
@@ -165,17 +165,17 @@
         ]
       },
       "subscription": {
-        "total": 0.30760924388052535,
-        "updatedAt": "2026-08-18T05:02:28.661Z",
+        "total": 2.473616267876474,
+        "updatedAt": "2026-08-18T10:04:12.853Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SUNSHINE&type=Active"
       },
       "sharesOffered": 5486051,
-      "sharesBid": 1687560,
+      "sharesBid": 13570385,
       "estimatedIssueValueCr": 197.5,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SUNSHINE&type=Active",
-      "fetchedAt": "2026-08-18T05:02:28.661Z"
+      "fetchedAt": "2026-08-18T10:04:12.853Z"
     }
   ]
 }
