@@ -6,6 +6,7 @@ import { publicIpos } from "./data/ipo-public";
 import { researchArticles } from "./data/research-articles";
 import { PUBLIC_REVIEW_DATE } from "./data/tool-registry";
 import styles from "./home-investment.module.css";
+import HomeIntelligenceRail from './components/HomeIntelligenceRail'
 
 const capabilities = [
   {
@@ -405,6 +406,8 @@ export default function HomePage() {
         </div>
       </section>
 </div>
+    
+      <HomeIntelligenceRail />
     </SiteFrame>
   );
 }
