@@ -24,7 +24,13 @@ OUT = ROOT / "public" / "data" / "ipo-intelligence" / "index.json"
 CACHE = ROOT / ".cache" / "ipo-intelligence"
 
 NSE_HOME = "https://www.nseindia.com/"
+NSE_PRIME = "https://www.nseindia.com/option-chain"
 NSE_ISSUES = "https://www.nseindia.com/market-data/all-upcoming-issues-ipo"
+NSE_CURRENT_API = "https://www.nseindia.com/api/ipo-current-issue"
+NSE_UPCOMING_API = (
+    "https://www.nseindia.com/api/all-upcoming-issues?category=ipo"
+)
+NSE_DETAIL_API = "https://www.nseindia.com/api/ipo-detail"
 NSE_TRACKER = "https://www.nseindia.com/ipo-tracker?type=ipo_year"
 BSE_SUMMARY = "https://www.bseindia.com/markets/PublicIssues/Issuesummary.aspx"
 SEBI_RHP = (
@@ -58,11 +64,26 @@ HEADERS = {
 
 SOURCE_LABELS = {
     "nse_issue_board": "NSE public issue board",
+    "nse_current_api": "NSE current IPO feed",
+    "nse_upcoming_api": "NSE upcoming IPO feed",
+    "nse_ipo_detail": "NSE IPO detail",
     "nse_ipo_tracker": "NSE IPO Tracker",
     "sebi_rhp": "SEBI RHP/Prospectus filings",
     "sebi_drhp": "SEBI DRHP filings",
     "bse_issue_summary": "BSE issue summary",
 }
+
+
+NSE_DISCOVERY_HEALTH = {
+    "currentApiOk": False,
+    "upcomingApiOk": False,
+    "htmlFallbackUsed": False,
+    "currentApiRecords": 0,
+    "upcomingApiRecords": 0,
+    "detailApiSuccess": 0,
+}
+
+
 
 
 def now_utc_iso() -> str:
@@ -233,10 +254,28 @@ class Http:
     def warm_nse(self) -> None:
         if self.nse_warmed:
             return
-        try:
-            self.session.get(NSE_HOME, timeout=HTTP_TIMEOUT)
-        except requests.RequestException:
-            pass
+
+        prime_headers = {
+            "User-Agent": HEADERS["User-Agent"],
+            "Accept": (
+                "text/html,application/xhtml+xml,application/xml;q=0.9,"
+                "*/*;q=0.8"
+            ),
+            "Accept-Language": "en-IN,en;q=0.9",
+            "Referer": NSE_HOME,
+        }
+
+        for prime_url in (NSE_HOME, NSE_PRIME, NSE_ISSUES):
+            try:
+                self.session.get(
+                    prime_url,
+                    headers=prime_headers,
+                    timeout=HTTP_TIMEOUT,
+                    allow_redirects=True,
+                )
+            except requests.RequestException:
+                continue
+
         self.nse_warmed = True
 
     def get(
@@ -302,7 +341,625 @@ def find_header_index(headers: list[str], candidates: Iterable[str]) -> int:
     return -1
 
 
+
+def nse_api_json(
+    url: str,
+    *,
+    params: dict[str, str] | None = None,
+    attempts: int = 4,
+) -> Any:
+    api_headers = {
+        "User-Agent": HEADERS["User-Agent"],
+        "Accept": "application/json,text/plain,*/*",
+        "Accept-Language": "en-IN,en;q=0.9",
+        "Referer": NSE_ISSUES,
+        "Cache-Control": "no-cache",
+        "Pragma": "no-cache",
+    }
+
+    last: Exception | None = None
+
+    for attempt in range(attempts):
+        try:
+            HTTP.warm_nse()
+
+            response = HTTP.session.get(
+                url,
+                params=params,
+                headers=api_headers,
+                timeout=HTTP_TIMEOUT,
+                allow_redirects=True,
+            )
+
+            if response.status_code in (401, 403, 429):
+                HTTP.nse_warmed = False
+                time.sleep(1.0 + attempt)
+                continue
+
+            response.raise_for_status()
+
+            content_type = response.headers.get(
+                "content-type",
+                "",
+            ).lower()
+
+            if "json" not in content_type:
+                stripped = response.text.lstrip()
+                if not stripped.startswith(("{", "[")):
+                    raise RuntimeError(
+                        "NSE returned non-JSON content"
+                    )
+
+            return response.json()
+        except Exception as exc:
+            last = exc
+            HTTP.nse_warmed = False
+            time.sleep(1.3 * (attempt + 1))
+
+    raise RuntimeError(f"NSE JSON request failed for {url}: {last}")
+
+
+def flatten_json_dicts(payload: Any) -> list[dict[str, Any]]:
+    found: list[dict[str, Any]] = []
+
+    def walk(node: Any) -> None:
+        if isinstance(node, dict):
+            lowered = {
+                clean(key).lower(): value
+                for key, value in node.items()
+            }
+
+            company_keys = (
+                "companyname",
+                "company_name",
+                "company",
+                "issuername",
+                "issuer_name",
+                "issuer",
+            )
+
+            if any(key in lowered for key in company_keys):
+                found.append(node)
+
+            for value in node.values():
+                walk(value)
+
+        elif isinstance(node, list):
+            for value in node:
+                walk(value)
+
+    walk(payload)
+    return found
+
+
+def pick_json_value(
+    item: dict[str, Any],
+    aliases: Iterable[str],
+) -> str:
+    lowered = {
+        clean(key).lower(): value
+        for key, value in item.items()
+    }
+
+    for alias in aliases:
+        value = lowered.get(alias.lower())
+
+        if value is None:
+            continue
+
+        if isinstance(value, (str, int, float)):
+            result = clean(value)
+            if result and result.lower() not in (
+                "null",
+                "none",
+                "nan",
+                "na",
+                "n/a",
+                "-",
+            ):
+                return result
+
+    return ""
+
+
+def normalize_nse_price_band(item: dict[str, Any]) -> str:
+    direct = pick_json_value(
+        item,
+        (
+            "priceband",
+            "price_band",
+            "pricerange",
+            "price_range",
+        ),
+    )
+
+    if direct:
+        numbers = re.findall(
+            r"\d[\d,]*(?:\.\d+)?",
+            direct,
+        )
+
+        if len(numbers) >= 2:
+            return valid_price_band(
+                numbers[0],
+                numbers[1],
+            )
+
+        if len(numbers) == 1:
+            single = parse_decimal(numbers[0])
+            if single is not None and single > 0:
+                return "\u20b9" + format_number(single)
+
+    floor_price = pick_json_value(
+        item,
+        (
+            "floorprice",
+            "floor_price",
+            "minprice",
+            "min_price",
+            "lowerprice",
+        ),
+    )
+    cap_price = pick_json_value(
+        item,
+        (
+            "capprice",
+            "cap_price",
+            "maxprice",
+            "max_price",
+            "upperprice",
+        ),
+    )
+
+    if floor_price and cap_price:
+        return valid_price_band(
+            floor_price,
+            cap_price,
+        )
+
+    issue_price = pick_json_value(
+        item,
+        (
+            "issueprice",
+            "issue_price",
+            "offerprice",
+            "offer_price",
+        ),
+    )
+
+    if issue_price:
+        nums = re.findall(
+            r"\d[\d,]*(?:\.\d+)?",
+            issue_price,
+        )
+
+        if len(nums) >= 2:
+            return valid_price_band(
+                nums[0],
+                nums[1],
+            )
+
+        if len(nums) == 1:
+            value = parse_decimal(nums[0])
+            if value is not None and value > 0:
+                return "\u20b9" + format_number(value)
+
+    return ""
+
+
+def normalize_nse_issue_size(item: dict[str, Any]) -> str:
+    raw = pick_json_value(
+        item,
+        (
+            "issuesize",
+            "issue_size",
+            "issuesizecrore",
+            "issuesizecr",
+            "totalissuesize",
+            "total_issue_size",
+            "offeramount",
+            "issueamount",
+        ),
+    )
+
+    if not raw:
+        return ""
+
+    lower = raw.lower()
+    numbers = re.findall(
+        r"\d[\d,]*(?:\.\d+)?",
+        raw,
+    )
+
+    if not numbers:
+        return ""
+
+    numeric = parse_decimal(numbers[0])
+    if numeric is None or numeric <= 0:
+        return ""
+
+    if "million" in lower:
+        crore = numeric / 10
+    elif "lakh" in lower:
+        crore = numeric / 100
+    elif "billion" in lower:
+        crore = numeric * 100
+    elif "crore" in lower or " cr" in f" {lower}":
+        crore = numeric
+    else:
+        # NSE issue APIs commonly expose rupee-crore issue-size fields.
+        # Only accept a unitless number when the source key itself explicitly
+        # carries "crore" / "cr".
+        explicit_crore_key = any(
+            key.lower() in (
+                "issuesizecrore",
+                "issuesizecr",
+            )
+            for key in item.keys()
+        )
+        if not explicit_crore_key:
+            return ""
+        crore = numeric
+
+    if not (0 < crore <= 100000):
+        return ""
+
+    return "\u20b9" + format_number(crore) + " Cr"
+
+
+def normalize_nse_market_item(
+    item: dict[str, Any],
+    *,
+    source_status: str,
+) -> dict[str, str] | None:
+    company = pick_json_value(
+        item,
+        (
+            "companyname",
+            "company_name",
+            "company",
+            "issuername",
+            "issuer_name",
+            "issuer",
+        ),
+    )
+
+    if not company:
+        return None
+
+    symbol = pick_json_value(
+        item,
+        (
+            "symbol",
+            "issuesymbol",
+            "issue_symbol",
+        ),
+    )
+    security_type = pick_json_value(
+        item,
+        (
+            "securitytype",
+            "security_type",
+            "series",
+            "issuetype",
+            "issue_type",
+            "segment",
+        ),
+    )
+    open_date = pick_json_value(
+        item,
+        (
+            "issuestartdate",
+            "issue_start_date",
+            "startdate",
+            "start_date",
+            "issueopendate",
+            "issue_open_date",
+            "opendate",
+            "open_date",
+            "biddingstartdate",
+        ),
+    )
+    close_date = pick_json_value(
+        item,
+        (
+            "issueenddate",
+            "issue_end_date",
+            "enddate",
+            "end_date",
+            "issueclosedate",
+            "issue_close_date",
+            "closedate",
+            "close_date",
+            "biddingenddate",
+        ),
+    )
+    listing_date = pick_json_value(
+        item,
+        (
+            "listingdate",
+            "listing_date",
+            "tentativelistingdate",
+        ),
+    )
+    explicit_status = pick_json_value(
+        item,
+        (
+            "status",
+            "issuestatus",
+            "issue_status",
+        ),
+    )
+    subscription = pick_json_value(
+        item,
+        (
+            "nooftime",
+            "subscription",
+            "subscriptiontimes",
+            "subscription_times",
+            "timesubscribed",
+        ),
+    )
+    lot_size = pick_json_value(
+        item,
+        (
+            "lotsize",
+            "lot_size",
+            "minbidquantity",
+            "minimum bid quantity",
+            "minimumbidquantity",
+            "bidlot",
+            "bidlotsize",
+        ),
+    )
+
+    normalized_lot = valid_lot_size(lot_size) if lot_size else ""
+
+    if source_status == "Upcoming" and not explicit_status:
+        explicit_status = "Upcoming"
+
+    return {
+        "company": company,
+        "symbol": symbol,
+        "securityType": security_type,
+        "openDate": open_date,
+        "closeDate": close_date,
+        "listingDate": listing_date,
+        "status": explicit_status or source_status,
+        "subscription": subscription,
+        "lotSize": normalized_lot,
+        "priceBand": normalize_nse_price_band(item),
+        "issueSize": normalize_nse_issue_size(item),
+    }
+
+
+def fetch_nse_ipo_detail(
+    symbol: str,
+    security_type: str,
+) -> dict[str, str]:
+    symbol = clean(symbol).upper()
+
+    if not symbol:
+        return {}
+
+    series_candidates: list[str] = []
+
+    security_upper = clean(security_type).upper()
+
+    if security_upper:
+        series_candidates.append(security_upper)
+
+    for fallback in ("EQ", "SME"):
+        if fallback not in series_candidates:
+            series_candidates.append(fallback)
+
+    for series in series_candidates:
+        try:
+            payload = nse_api_json(
+                NSE_DETAIL_API,
+                params={
+                    "symbol": symbol,
+                    "series": series,
+                },
+                attempts=2,
+            )
+        except Exception:
+            continue
+
+        dicts = flatten_json_dicts(payload)
+
+        # Some detail responses are a single object without companyName.
+        if not dicts and isinstance(payload, dict):
+            dicts = [payload]
+
+        for item in dicts:
+            detail = {
+                "priceBand": normalize_nse_price_band(item),
+                "issueSize": normalize_nse_issue_size(item),
+                "lotSize": valid_lot_size(
+                    pick_json_value(
+                        item,
+                        (
+                            "lotsize",
+                            "lot_size",
+                            "minbidquantity",
+                            "minimumbidquantity",
+                            "bidlot",
+                            "bidlotsize",
+                        ),
+                    )
+                ),
+                "listingDate": pick_json_value(
+                    item,
+                    (
+                        "listingdate",
+                        "listing_date",
+                        "tentativelistingdate",
+                    ),
+                ),
+                "exchange": pick_json_value(
+                    item,
+                    (
+                        "exchange",
+                        "exchanges",
+                        "listingexchange",
+                    ),
+                ),
+            }
+
+            if any(detail.values()):
+                NSE_DISCOVERY_HEALTH["detailApiSuccess"] += 1
+                return detail
+
+    return {}
+
+
 def parse_nse_issue_board() -> tuple[list[dict[str, str]], list[str]]:
+    warnings: list[str] = []
+    records: list[dict[str, str]] = []
+
+    endpoint_specs = (
+        (
+            NSE_CURRENT_API,
+            "Open",
+            "currentApiOk",
+            "currentApiRecords",
+        ),
+        (
+            NSE_UPCOMING_API,
+            "Upcoming",
+            "upcomingApiOk",
+            "upcomingApiRecords",
+        ),
+    )
+
+    for (
+        url,
+        source_status,
+        ok_key,
+        count_key,
+    ) in endpoint_specs:
+        try:
+            payload = nse_api_json(url)
+            NSE_DISCOVERY_HEALTH[ok_key] = True
+
+            normalized: list[dict[str, str]] = []
+
+            for item in flatten_json_dicts(payload):
+                record = normalize_nse_market_item(
+                    item,
+                    source_status=source_status,
+                )
+
+                if record:
+                    normalized.append(record)
+
+            # Handle a top-level list/dict that contains issue objects but does
+            # not use one of our company-name keys at an intermediate level.
+            if not normalized and isinstance(payload, list):
+                for item in payload:
+                    if not isinstance(item, dict):
+                        continue
+                    record = normalize_nse_market_item(
+                        item,
+                        source_status=source_status,
+                    )
+                    if record:
+                        normalized.append(record)
+
+            if not normalized and isinstance(payload, dict):
+                record = normalize_nse_market_item(
+                    payload,
+                    source_status=source_status,
+                )
+                if record:
+                    normalized.append(record)
+
+            NSE_DISCOVERY_HEALTH[count_key] = len(normalized)
+
+            for record in normalized:
+                record["_sourceApi"] = (
+                    "current"
+                    if source_status == "Open"
+                    else "upcoming"
+                )
+                records.append(record)
+
+        except Exception as exc:
+            warnings.append(
+                f"NSE {source_status.lower()} JSON feed unavailable: {exc}"
+            )
+
+    # Deduplicate current/upcoming overlap by company key; prefer the record
+    # with dates and more populated market fields.
+    deduped: dict[str, dict[str, str]] = {}
+
+    def record_score(record: dict[str, str]) -> int:
+        return sum(
+            1
+            for key in (
+                "openDate",
+                "closeDate",
+                "priceBand",
+                "lotSize",
+                "issueSize",
+                "subscription",
+                "symbol",
+            )
+            if clean(record.get(key))
+        )
+
+    for record in records:
+        key = key_company(record["company"])
+        existing = deduped.get(key)
+
+        if existing is None or record_score(record) > record_score(existing):
+            deduped[key] = record
+        elif existing:
+            # Preserve upcoming/current source evidence even if one record wins.
+            if record.get("_sourceApi") == "current":
+                existing["_sourceApi"] = "current"
+
+    records = list(deduped.values())
+
+    # Enrich every currently relevant issue from NSE's issue-detail endpoint.
+    for record in records:
+        detail = fetch_nse_ipo_detail(
+            record.get("symbol", ""),
+            record.get("securityType", ""),
+        )
+
+        for key in (
+            "priceBand",
+            "issueSize",
+            "lotSize",
+            "listingDate",
+            "exchange",
+        ):
+            if detail.get(key) and not record.get(key):
+                record[key] = detail[key]
+
+    # If both JSON endpoints fail, retain the old NSE HTML scraper as a
+    # graceful fallback. The deployed dataset is not destroyed on transient
+    # exchange blocking.
+    if not (
+        NSE_DISCOVERY_HEALTH["currentApiOk"]
+        or NSE_DISCOVERY_HEALTH["upcomingApiOk"]
+    ):
+        fallback, fallback_warnings = parse_nse_issue_board_html()
+        warnings.extend(fallback_warnings)
+        NSE_DISCOVERY_HEALTH["htmlFallbackUsed"] = True
+        records.extend(fallback)
+
+    if not records:
+        warnings.append(
+            "NSE market discovery returned no current/upcoming records."
+        )
+
+    return records, warnings
+
+
+def parse_nse_issue_board_html() -> tuple[list[dict[str, str]], list[str]]:
     warnings: list[str] = []
 
     try:
@@ -1277,20 +1934,83 @@ def build_dataset() -> dict[str, Any]:
     for item in nse_issues:
         record = choose_record(records, item["company"])
         record.securityType = clean(item.get("securityType"))
-        record.board = board_from_security(
+
+        detected_board = board_from_security(
             record.securityType,
             record.company,
         )
-        apply_if_empty(record, "openDate", date_display(item.get("openDate", "")))
-        apply_if_empty(record, "closeDate", date_display(item.get("closeDate", "")))
-        apply_if_empty(record, "subscription", item.get("subscription", ""))
+        if detected_board != "Unclassified":
+            record.board = detected_board
+
+        apply_if_empty(
+            record,
+            "openDate",
+            date_display(item.get("openDate", "")),
+        )
+        apply_if_empty(
+            record,
+            "closeDate",
+            date_display(item.get("closeDate", "")),
+        )
+        apply_if_empty(
+            record,
+            "listingDate",
+            date_display(item.get("listingDate", "")),
+        )
+        apply_if_empty(
+            record,
+            "subscription",
+            item.get("subscription", ""),
+        )
+        apply_if_empty(
+            record,
+            "lotSize",
+            item.get("lotSize", ""),
+        )
+        apply_if_empty(
+            record,
+            "priceBand",
+            item.get("priceBand", ""),
+        )
+        apply_if_empty(
+            record,
+            "issueSize",
+            item.get("issueSize", ""),
+        )
+        apply_if_empty(
+            record,
+            "exchange",
+            item.get("exchange", ""),
+        )
+
         record.status = status_from_dates(
             record.openDate,
             record.closeDate,
             record.listingDate,
             item.get("status", ""),
         )
-        record.merge_source(SOURCE_LABELS["nse_issue_board"], NSE_ISSUES)
+
+        if item.get("_sourceApi") == "upcoming":
+            record.merge_source(
+                SOURCE_LABELS["nse_upcoming_api"],
+                NSE_UPCOMING_API,
+            )
+        elif item.get("_sourceApi") == "current":
+            record.merge_source(
+                SOURCE_LABELS["nse_current_api"],
+                NSE_CURRENT_API,
+            )
+        else:
+            record.merge_source(
+                SOURCE_LABELS["nse_issue_board"],
+                NSE_ISSUES,
+            )
+
+        if item.get("symbol"):
+            record.merge_source(
+                SOURCE_LABELS["nse_ipo_detail"],
+                NSE_DETAIL_API,
+            )
 
     nse_tracker, source_warnings = parse_nse_tracker()
     warnings.extend(source_warnings)
@@ -1547,6 +2267,24 @@ def build_dataset() -> dict[str, Any]:
 
     source_health = {
         "nseIssueBoardRecords": len(nse_issues),
+        "nseCurrentApiOk": bool(
+            NSE_DISCOVERY_HEALTH["currentApiOk"]
+        ),
+        "nseUpcomingApiOk": bool(
+            NSE_DISCOVERY_HEALTH["upcomingApiOk"]
+        ),
+        "nseCurrentApiRecords": int(
+            NSE_DISCOVERY_HEALTH["currentApiRecords"]
+        ),
+        "nseUpcomingApiRecords": int(
+            NSE_DISCOVERY_HEALTH["upcomingApiRecords"]
+        ),
+        "nseDetailApiSuccess": int(
+            NSE_DISCOVERY_HEALTH["detailApiSuccess"]
+        ),
+        "nseHtmlFallbackUsed": bool(
+            NSE_DISCOVERY_HEALTH["htmlFallbackUsed"]
+        ),
         "nseTrackerRecords": len(nse_tracker),
         "sebiFilingRecords": len(sebi_items),
         "bseIssueSummaryRecords": len(bse_items),
@@ -1559,9 +2297,32 @@ def build_dataset() -> dict[str, Any]:
         "sourceHealth": source_health,
         "sources": [
             {
+                "name": "NSE current IPO feed",
+                "url": NSE_CURRENT_API,
+                "purpose": (
+                    "live issues currently open for subscription"
+                ),
+            },
+            {
+                "name": "NSE upcoming IPO feed",
+                "url": NSE_UPCOMING_API,
+                "purpose": (
+                    "confirmed upcoming IPO discovery"
+                ),
+            },
+            {
+                "name": "NSE IPO detail",
+                "url": NSE_DETAIL_API,
+                "purpose": (
+                    "price, lot, listing and issue-detail enrichment"
+                ),
+            },
+            {
                 "name": "NSE public issue board",
                 "url": NSE_ISSUES,
-                "purpose": "current/upcoming issue dates and subscription",
+                "purpose": (
+                    "human-readable exchange page and HTML fallback"
+                ),
             },
             {
                 "name": "NSE IPO Tracker",
@@ -1636,17 +2397,40 @@ def main() -> int:
     # Multi-source redundancy is intentional.
     active_sources = sum(
         1
-        for value in health.values()
-        if isinstance(value, int) and value > 0
+        for key, value in health.items()
+        if (
+            isinstance(value, int)
+            and not isinstance(value, bool)
+            and value > 0
+            and key.endswith("Records")
+        )
     )
 
-    if active_sources < 2:
+    nse_live_ok = bool(
+        health.get("nseCurrentApiOk")
+        or health.get("nseUpcomingApiOk")
+    )
+    fallback_ok = bool(
+        health.get("nseHtmlFallbackUsed")
+        and health.get("nseIssueBoardRecords", 0) > 0
+    )
+
+    if not (nse_live_ok or fallback_ok):
         print(
-            "ERROR: fewer than two official source layers returned data; "
-            "refusing to publish a weak refresh.",
+            "ERROR: NSE current/upcoming discovery is unavailable; "
+            "refusing to replace the deployed market board with a "
+            "potentially stale filing-only dataset.",
             file=sys.stderr,
         )
         return 3
+
+    if active_sources < 2:
+        print(
+            "ERROR: fewer than two independent data layers returned "
+            "records; refusing to publish a weak refresh.",
+            file=sys.stderr,
+        )
+        return 4
 
     return 0
 

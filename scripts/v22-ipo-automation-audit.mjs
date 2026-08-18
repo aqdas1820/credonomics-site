@@ -159,9 +159,28 @@ if (
 }
 
 const sourceHealth = data?.sourceHealth ?? {}
-const healthySources = Object.values(sourceHealth)
-  .filter((value) => typeof value === 'number' && value > 0)
+const healthySources = Object.entries(sourceHealth)
+  .filter(
+    ([key, value]) =>
+      typeof value === 'number' &&
+      value > 0 &&
+      key.endsWith('Records'),
+  )
   .length
+
+const nseDiscoveryOk =
+  sourceHealth.nseCurrentApiOk === true ||
+  sourceHealth.nseUpcomingApiOk === true ||
+  (
+    sourceHealth.nseHtmlFallbackUsed === true &&
+    Number(sourceHealth.nseIssueBoardRecords ?? 0) > 0
+  )
+
+if (!nseDiscoveryOk) {
+  errors.push(
+    'NSE live current/upcoming discovery is not healthy',
+  )
+}
 
 if (healthySources < 2) {
   errors.push('Fewer than two official source layers are healthy')
@@ -202,15 +221,25 @@ if (!packageText.includes('"ipo:refresh"')) {
 }
 
 console.log('')
-console.log('CredoNomics V22.9 IPO Automation Audit')
+console.log('CredoNomics V23 IPO Automation Audit')
 console.log('====================================')
 console.log(`JSON issues: ${data?.issues?.length ?? 0}`)
 console.log(`Dashboard adapter records: ${generatedRecordCount}`)
 console.log(`Healthy source layers: ${healthySources}`)
+console.log(
+  `NSE current API: ${
+    sourceHealth.nseCurrentApiOk ? 'OK' : 'DOWN'
+  } (${sourceHealth.nseCurrentApiRecords ?? 0} records)`,
+)
+console.log(
+  `NSE upcoming API: ${
+    sourceHealth.nseUpcomingApiOk ? 'OK' : 'DOWN'
+  } (${sourceHealth.nseUpcomingApiRecords ?? 0} records)`,
+)
 console.log(`Errors: ${errors.length}`)
 
 for (const error of errors) console.error(`  - ${error}`)
 
 if (errors.length) process.exit(1)
 
-console.log('V22.9 IPO automation audit PASSED.')
+console.log('V23 IPO automation audit PASSED.')
