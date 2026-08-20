@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-08-20T05:06:18.846Z",
+    "generatedAt": "2026-08-20T10:52:10.694Z",
     "recordCount": 4,
     "nseCount": 4,
     "bseCount": 0,
@@ -26,17 +26,17 @@
         ]
       },
       "subscription": {
-        "total": 0.776518775282769,
-        "updatedAt": "2026-08-20T05:06:18.846Z",
+        "total": 2.1372719575647494,
+        "updatedAt": "2026-08-20T10:52:10.694Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHANKESH&type=Active"
       },
       "sharesOffered": 27637400,
-      "sharesBid": 21460960,
+      "sharesBid": 59068640,
       "estimatedIssueValueCr": 257.03,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHANKESH&type=Active",
-      "fetchedAt": "2026-08-20T05:06:18.846Z"
+      "fetchedAt": "2026-08-20T10:52:10.694Z"
     },
     {
       "slug": "sunshine-pictures-ltd-9ca6293",
@@ -55,17 +55,17 @@
         ]
       },
       "subscription": {
-        "total": 17.98267496966397,
-        "updatedAt": "2026-08-20T05:06:18.846Z",
+        "total": 81.45805917589902,
+        "updatedAt": "2026-08-20T10:52:10.694Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SUNSHINE&type=Active"
       },
       "sharesOffered": 5486051,
-      "sharesBid": 98653872,
+      "sharesBid": 446883067,
       "estimatedIssueValueCr": 197.5,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SUNSHINE&type=Active",
-      "fetchedAt": "2026-08-20T05:06:18.846Z"
+      "fetchedAt": "2026-08-20T10:52:10.694Z"
     },
     {
       "slug": "gaja-alternative-asset-management-ltd-852039f",
@@ -84,17 +84,17 @@
         ]
       },
       "subscription": {
-        "total": 0.6474398500435036,
-        "updatedAt": "2026-08-20T05:06:18.846Z",
+        "total": 1.3553927984212213,
+        "updatedAt": "2026-08-20T10:52:10.694Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=GAJA&type=Active"
       },
       "sharesOffered": 25328946,
-      "sharesBid": 16398969,
+      "sharesBid": 34330671,
       "estimatedIssueValueCr": 405.26,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=GAJA&type=Active",
-      "fetchedAt": "2026-08-20T05:06:18.846Z"
+      "fetchedAt": "2026-08-20T10:52:10.694Z"
     },
     {
       "slug": "tempsens-instruments-india-ltd-10b3ec3",
@@ -113,17 +113,17 @@
         ]
       },
       "subscription": {
-        "total": 0.4736304649548696,
-        "updatedAt": "2026-08-20T05:06:18.846Z",
+        "total": 3.285867750886645,
+        "updatedAt": "2026-08-20T10:52:10.694Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TEMPSENS&type=Active"
       },
       "sharesOffered": 15181667,
-      "sharesBid": 7190500,
+      "sharesBid": 49884950,
       "estimatedIssueValueCr": 455.45,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TEMPSENS&type=Active",
-      "fetchedAt": "2026-08-20T05:06:18.846Z"
+      "fetchedAt": "2026-08-20T10:52:10.694Z"
     }
   ]
 }
