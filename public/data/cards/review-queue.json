@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-08-17T04:27:17.312Z",
-    "itemCount": 224,
-    "newCardCandidates": 216,
+    "generatedAt": "2026-08-20T04:22:23.838Z",
+    "itemCount": 227,
+    "newCardCandidates": 219,
     "possibleFeeChanges": 8,
     "reviewDue": 0
   },
@@ -688,139 +688,163 @@
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "2d1dc98ec8d4",
+      "id": "14c4327242b8",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Additional details about Add-on Card ?",
-      "sourceUrl": "https://www.federal.bank.in/add-on-cards",
+      "issuer": "HDFC Bank",
+      "name": "Business Credit Cards",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "ddae892ac916",
+      "id": "7750c218e82c",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Can I cancel my credit card at any time?",
-      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "issuer": "HDFC Bank",
+      "name": "Card Membership Fee Condition",
+      "sourceUrl": "https://www.hdfcbank.com/credit-cards/services/fee-waiver-condition",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "fd4b7026f4eb",
+      "id": "a2a7adf7f901",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Credit Card Application",
-      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "issuer": "HDFC Bank",
+      "name": "Credit Card Policy",
+      "sourceUrl": "https://www.hdfcbank.com/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards-services/credit-card-policy.pdf",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "222a7aa822c5",
+      "id": "7b427fd74a16",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Credit Card Debt Settlement Process- How it Works",
-      "sourceUrl": "https://www.federal.bank.in/credit-card-debt-settlement-process-how-it-works",
+      "issuer": "HDFC Bank",
+      "name": "Diners ClubMiles Credit Card",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "bcaba0357615",
+      "id": "5b3bb1db93da",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Credit Card Features & Benefits",
-      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "issuer": "HDFC Bank",
+      "name": "HDFC Bank UPI RuPay Credit Card",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "15b570d31e1d",
+      "id": "c7f09cf7dfe2",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Debit Cards Vs Credit Cards",
-      "sourceUrl": "https://www.federal.bank.in/difference-between-debit-cards-and-credit-cards",
+      "issuer": "HDFC Bank",
+      "name": "IndianOil Credit Card",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "29f29fff34a0",
+      "id": "2f9e05a94618",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Documents Required for Credit Card",
-      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "issuer": "HDFC Bank",
+      "name": "InterMiles HDFC Bank Diners Club Credit Card",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "a5e4d19e0ab2",
+      "id": "ea307ba7415a",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Everything you should know about Add-On Credit Cards",
-      "sourceUrl": "https://www.federal.bank.in/everything-you-should-know-about-add-on-credit-cards",
+      "issuer": "HDFC Bank",
+      "name": "InterMiles HDFC Bank Platinum Credit Card",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "a377313fa1c4",
+      "id": "e6d76332b164",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Federal Bank Credit Card Charges, Fees & Interest Rates",
-      "sourceUrl": "https://www.federal.bank.in/how-to-use-credit-cards-wisely",
+      "issuer": "HDFC Bank",
+      "name": "InterMiles HDFC Bank Signature Credit Card",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "0c026fdb02ee",
+      "id": "95dc26b6d266",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Federal Bank Credit Card EMI",
-      "sourceUrl": "https://www.federal.bank.in/credit-card-emi",
+      "issuer": "HDFC Bank",
+      "name": "Marriott Bonvoy HDFC Bank Credit Card",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "07c5ae0c3521",
+      "id": "72bef223c387",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Lost your federal bank card? Here are the ways to block it.",
-      "sourceUrl": "https://www.federal.bank.in/ways-to-block-a-lost-federal-bank-card",
+      "issuer": "HDFC Bank",
+      "name": "PhonePe HDFC Bank Ultimo Credit Card",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "7a4a67290ad0",
+      "id": "c684c2e7f7a7",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Prevent your Credit Card from unauthorised use",
-      "sourceUrl": "https://www.federal.bank.in/prevent-your-credit-card-from-unauthorised-use",
+      "issuer": "HDFC Bank",
+      "name": "PhonePe HDFC Bank Uno Credit Card",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "efed675a2dd9",
+      "id": "1cad9790ddc7",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Secured Credit Cards",
-      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "issuer": "HDFC Bank",
+      "name": "Pine Labs HDFC Bank Credit Card",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "e38662f71875",
+      "id": "d24a903cc9c5",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Step-by-Step Process to Apply for Credit Card",
-      "sourceUrl": "https://www.federal.bank.in/credit-card-activation",
+      "issuer": "HDFC Bank",
+      "name": "Platinum Plus Credit Card",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "f0837eb064a9",
+      "id": "efc3b312dd9c",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Things to Know Before Applying for a Credit Card",
-      "sourceUrl": "https://www.federal.bank.in/credit-cards-mitc",
+      "issuer": "HDFC Bank",
+      "name": "Regalia Activ HDFC Bank Credit Card",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "eeb8652d258a",
+      "id": "2ad33cb44f4a",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Understand the Components of your Credit Card",
-      "sourceUrl": "https://www.federal.bank.in/understand-the-components-of-your-credit-card",
+      "issuer": "HDFC Bank",
+      "name": "Shoppers Stop Black HDFC Bank Credit Card",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "607a3c6bcdef",
+      "id": "1cfc5a0eec9d",
       "type": "new-card-candidate",
-      "issuer": "Federal Bank",
-      "name": "Unlocking the Secret of Credit Card EMI- How to Buy Now and Pay Later",
-      "sourceUrl": "https://www.federal.bank.in/unlocking-the-secret-of-credit-card-emi-how-to-buy-now-and-pay-later",
+      "issuer": "HDFC Bank",
+      "name": "Shoppers Stop HDFC Bank Credit Card",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "1dd89add003d",
+      "type": "new-card-candidate",
+      "issuer": "HDFC Bank",
+      "name": "Tata Neu Plus Credit Card",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "d37ea541383f",
+      "type": "new-card-candidate",
+      "issuer": "HDFC Bank",
+      "name": "Types of Credit Cards",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "a45f49ce5c56",
+      "type": "new-card-candidate",
+      "issuer": "HDFC Bank",
+      "name": "Visa Signature Credit Card",
+      "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
@@ -1320,10 +1344,10 @@
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "6a0bb6e205b3",
+      "id": "22d9a598f374",
       "type": "new-card-candidate",
       "issuer": "IndusInd Bank",
-      "name": "Club Vistara Explorer Credit Card",
+      "name": "Club Vistara Explorer Credit Card (Discontinued)",
       "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/club-vistara-indusInd-bank-explorer-credit-card.html",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
@@ -1480,34 +1504,34 @@
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "31d812e7193e",
+      "id": "333455a62d59",
       "type": "new-card-candidate",
       "issuer": "IndusInd Bank",
-      "name": "InterMiles Odyssey Amex Credit Card",
+      "name": "InterMiles Odyssey Amex Credit Card (Discontinued)",
       "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-odyssey-amex-credit-card.html",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "8c90c56b4701",
+      "id": "5b3b2afd69a7",
       "type": "new-card-candidate",
       "issuer": "IndusInd Bank",
-      "name": "InterMiles Odyssey Visa Credit Card",
+      "name": "InterMiles Odyssey Visa Credit Card (Discontinued)",
       "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-odyssey-visa-credit-card.html",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "3968eaddb88c",
+      "id": "5a578382053b",
       "type": "new-card-candidate",
       "issuer": "IndusInd Bank",
-      "name": "InterMiles Voyage Amex Credit Card",
+      "name": "InterMiles Voyage Amex Credit Card (Discontinued)",
       "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-voyage-amex-credit-card.html",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "24eff4989347",
+      "id": "99ad4aab9cb8",
       "type": "new-card-candidate",
       "issuer": "IndusInd Bank",
-      "name": "Intermiles Voyage Visa Credit Card",
+      "name": "Intermiles Voyage Visa Credit Card (Discontinued)",
       "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-voyage-visa-credit-card.html",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
@@ -1584,10 +1608,10 @@
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "00eb97b69797",
+      "id": "88f64754a302",
       "type": "new-card-candidate",
       "issuer": "IndusInd Bank",
-      "name": "Poonawalla Fincorp IndusInd Bank eLITE RuPay Credit Card",
+      "name": "Poonawalla Fincorp IndusInd Bank eLITE RuPay Credit Card (Discontinued)",
       "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/poonawalla-platinum-rupay-credit-card.html",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
