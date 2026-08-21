@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-08-21T05:06:36.848Z",
+  "generatedAt": "2026-08-21T10:53:21.383Z",
   "recordCount": 3,
   "nseCount": 3,
   "bseCount": 0,
@@ -31,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 1.9940316111061234,
-      "updatedAt": "2026-08-21T05:06:36.848Z",
+      "total": 15.422589791142514,
+      "updatedAt": "2026-08-21T10:53:21.383Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=GAJA&type=Active"
     },
     "sharesOffered": 25328946,
-    "sharesBid": 50506719,
+    "sharesBid": 390637944,
     "estimatedIssueValueCr": 405.26,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=GAJA&type=Active",
-    "fetchedAt": "2026-08-21T05:06:36.848Z"
+    "fetchedAt": "2026-08-21T10:53:21.383Z"
   },
   {
     "slug": "tempsens-instruments-india-ltd-10b3ec3",
@@ -60,17 +60,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 4.9355943586432245,
-      "updatedAt": "2026-08-21T05:06:36.848Z",
+      "total": 12.848707589225874,
+      "updatedAt": "2026-08-21T10:53:21.383Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TEMPSENS&type=Active"
     },
     "sharesOffered": 15181667,
-    "sharesBid": 74930550,
+    "sharesBid": 195064800,
     "estimatedIssueValueCr": 455.45,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TEMPSENS&type=Active",
-    "fetchedAt": "2026-08-21T05:06:36.848Z"
+    "fetchedAt": "2026-08-21T10:53:21.383Z"
   },
   {
     "slug": "augmont-enterprises-ltd-561dd1f",
@@ -89,16 +89,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.22767745304269738,
-      "updatedAt": "2026-08-21T05:06:36.848Z",
+      "total": 1.6466151693384097,
+      "updatedAt": "2026-08-21T10:53:21.383Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=AUGMONT&type=Active"
     },
     "sharesOffered": 7715999,
-    "sharesBid": 1756759,
+    "sharesBid": 12705281,
     "estimatedIssueValueCr": 608.02,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=AUGMONT&type=Active",
-    "fetchedAt": "2026-08-21T05:06:36.848Z"
+    "fetchedAt": "2026-08-21T10:53:21.383Z"
   }
 ]
