@@ -1,72 +1,14 @@
 {
   "meta": {
-    "generatedAt": "2026-08-20T10:52:10.694Z",
-    "recordCount": 4,
-    "nseCount": 4,
+    "generatedAt": "2026-08-21T05:06:36.848Z",
+    "recordCount": 3,
+    "nseCount": 3,
     "bseCount": 0,
-    "activeCount": 4,
+    "activeCount": 3,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 4 · BSE SME unavailable · BSE mainboard 0"
+    "sourceStatus": "NSE API 3 · BSE SME unavailable · BSE mainboard 0"
   },
   "records": [
-    {
-      "slug": "shankesh-jewellers-ltd-f55fe92",
-      "companyName": "Shankesh Jewellers Limited",
-      "symbol": "SHANKESH",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 88,
-        "priceBandHigh": 93,
-        "openDate": "2026-08-18",
-        "closeDate": "2026-08-20",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 2.1372719575647494,
-        "updatedAt": "2026-08-20T10:52:10.694Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHANKESH&type=Active"
-      },
-      "sharesOffered": 27637400,
-      "sharesBid": 59068640,
-      "estimatedIssueValueCr": 257.03,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHANKESH&type=Active",
-      "fetchedAt": "2026-08-20T10:52:10.694Z"
-    },
-    {
-      "slug": "sunshine-pictures-ltd-9ca6293",
-      "companyName": "Sunshine Pictures Limited",
-      "symbol": "SUNSHINE",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 342,
-        "priceBandHigh": 360,
-        "openDate": "2026-08-18",
-        "closeDate": "2026-08-20",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 81.45805917589902,
-        "updatedAt": "2026-08-20T10:52:10.694Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SUNSHINE&type=Active"
-      },
-      "sharesOffered": 5486051,
-      "sharesBid": 446883067,
-      "estimatedIssueValueCr": 197.5,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SUNSHINE&type=Active",
-      "fetchedAt": "2026-08-20T10:52:10.694Z"
-    },
     {
       "slug": "gaja-alternative-asset-management-ltd-852039f",
       "companyName": "Gaja Alternative Asset Management Limited",
@@ -84,17 +26,17 @@
         ]
       },
       "subscription": {
-        "total": 1.3553927984212213,
-        "updatedAt": "2026-08-20T10:52:10.694Z",
+        "total": 1.9940316111061234,
+        "updatedAt": "2026-08-21T05:06:36.848Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=GAJA&type=Active"
       },
       "sharesOffered": 25328946,
-      "sharesBid": 34330671,
+      "sharesBid": 50506719,
       "estimatedIssueValueCr": 405.26,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=GAJA&type=Active",
-      "fetchedAt": "2026-08-20T10:52:10.694Z"
+      "fetchedAt": "2026-08-21T05:06:36.848Z"
     },
     {
       "slug": "tempsens-instruments-india-ltd-10b3ec3",
@@ -113,17 +55,46 @@
         ]
       },
       "subscription": {
-        "total": 3.285867750886645,
-        "updatedAt": "2026-08-20T10:52:10.694Z",
+        "total": 4.9355943586432245,
+        "updatedAt": "2026-08-21T05:06:36.848Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TEMPSENS&type=Active"
       },
       "sharesOffered": 15181667,
-      "sharesBid": 49884950,
+      "sharesBid": 74930550,
       "estimatedIssueValueCr": 455.45,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TEMPSENS&type=Active",
-      "fetchedAt": "2026-08-20T10:52:10.694Z"
+      "fetchedAt": "2026-08-21T05:06:36.848Z"
+    },
+    {
+      "slug": "augmont-enterprises-ltd-561dd1f",
+      "companyName": "Augmont Enterprises Limited",
+      "symbol": "AUGMONT",
+      "marketSegment": "mainboard",
+      "status": "open",
+      "securityType": "EQ",
+      "issue": {
+        "priceBandLow": 750,
+        "priceBandHigh": 788,
+        "openDate": "2026-08-21",
+        "closeDate": "2026-08-25",
+        "exchange": [
+          "NSE"
+        ]
+      },
+      "subscription": {
+        "total": 0.22767745304269738,
+        "updatedAt": "2026-08-21T05:06:36.848Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=AUGMONT&type=Active"
+      },
+      "sharesOffered": 7715999,
+      "sharesBid": 1756759,
+      "estimatedIssueValueCr": 608.02,
+      "marketSource": "NSE",
+      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=AUGMONT&type=Active",
+      "fetchedAt": "2026-08-21T05:06:36.848Z"
     }
   ]
 }

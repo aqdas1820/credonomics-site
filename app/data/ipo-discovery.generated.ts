@@ -2,7 +2,7 @@
 import type { IpoDiscoveryRecord } from './ipo-types'
 
 export const ipoDiscoveryMeta = {
-  "generatedAt": "2026-08-20T10:52:22.920Z",
+  "generatedAt": "2026-08-21T05:06:48.439Z",
   "source": "SEBI Public Issues",
   "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
   "recordCount": 15,
@@ -19,7 +19,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-corrigendum-to-drhp_103755.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-19T10:04:47.322Z",
-    "lastSeen": "2026-08-20T10:52:22.920Z"
+    "lastSeen": "2026-08-21T05:06:48.439Z"
   },
   {
     "id": "sillverton-industries-limited-addendum-9129fa",
@@ -30,7 +30,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/sillverton-industries-limited-addendum-ii_103621.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-14T08:02:14.704Z",
-    "lastSeen": "2026-08-20T10:52:22.920Z"
+    "lastSeen": "2026-08-21T05:06:48.439Z"
   },
   {
     "id": "arjun-jewellers-limited-drhp",
@@ -80,7 +80,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentStage": "corrigendum",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-11T00:00:00.000Z",
-    "lastSeen": "2026-08-20T10:52:22.920Z",
+    "lastSeen": "2026-08-21T05:06:48.439Z",
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/hero-motors-limited-corrigendum-to-drhp_103180.html"
   },
   {
@@ -131,7 +131,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentStage": "addendum",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-11T00:00:00.000Z",
-    "lastSeen": "2026-08-20T10:52:22.920Z",
+    "lastSeen": "2026-08-21T05:06:48.439Z",
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/jul-2026/fusion-cx-limited-addendum-to-drhp_102992.html"
   },
   {
@@ -152,7 +152,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentStage": "corrigendum",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-11T00:00:00.000Z",
-    "lastSeen": "2026-08-20T10:52:22.920Z",
+    "lastSeen": "2026-08-21T05:06:48.439Z",
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/jul-2026/behari-lal-engineering-limited-corrigendum-to-drhp_102871.html"
   },
   {
