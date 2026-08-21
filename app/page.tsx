@@ -1,3 +1,4 @@
+import { mergeHomeMetadata } from './seo/site'
 import LatestReportBanner from './components/LatestReportBanner'
 import HomepageDiscovery from './components/HomepageDiscovery'
 import Link from "next/link";
@@ -411,3 +412,5 @@ export default function HomePage() {
     </SiteFrame>
   );
 }
+
+export const metadata = mergeHomeMetadata()

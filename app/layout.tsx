@@ -1,3 +1,4 @@
+import { mergeRootMetadata } from './seo/site'
 import SiteStructuredData from './components/SiteStructuredData'
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
@@ -9,7 +10,7 @@ import {
 
 const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
 
-export const metadata: Metadata = {
+const credonomicsBaseMetadata: Metadata = {
   metadataBase: new URL(siteIdentity.canonicalUrl),
   title: {
     default: 'CredoNomics Investment Solutions | Financial Research & Decision Tools',
@@ -165,3 +166,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   )
 }
+
+export const metadata = mergeRootMetadata(credonomicsBaseMetadata)
