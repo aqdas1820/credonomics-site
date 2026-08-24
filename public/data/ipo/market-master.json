@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generatedAt": "2026-08-24T05:25:03.405Z",
+    "generatedAt": "2026-08-24T11:02:04.847Z",
     "recordCount": 7,
     "nseCount": 7,
     "bseCount": 0,
     "activeCount": 7,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 7 · BSE SME unavailable · BSE mainboard unavailable"
+    "sourceStatus": "NSE API 7 · BSE SME unavailable · BSE mainboard 0"
   },
   "records": [
     {
@@ -26,17 +26,17 @@
         ]
       },
       "subscription": {
-        "total": 28.166840966805555,
-        "updatedAt": "2026-08-24T05:25:03.405Z",
+        "total": 130.67088087230474,
+        "updatedAt": "2026-08-24T11:02:04.847Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TEMPSENS&type=Active"
       },
       "sharesOffered": 15181667,
-      "sharesBid": 427619600,
+      "sharesBid": 1983801800,
       "estimatedIssueValueCr": 455.45,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TEMPSENS&type=Active",
-      "fetchedAt": "2026-08-24T05:25:03.405Z"
+      "fetchedAt": "2026-08-24T11:02:04.847Z"
     },
     {
       "slug": "augmont-enterprises-ltd-561dd1f",
@@ -55,17 +55,17 @@
         ]
       },
       "subscription": {
-        "total": 4.148769718606754,
-        "updatedAt": "2026-08-24T05:25:03.405Z",
+        "total": 10.43566763033536,
+        "updatedAt": "2026-08-24T11:02:04.847Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=AUGMONT&type=Active"
       },
       "sharesOffered": 7715999,
-      "sharesBid": 32011903,
+      "sharesBid": 80521601,
       "estimatedIssueValueCr": 608.02,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=AUGMONT&type=Active",
-      "fetchedAt": "2026-08-24T05:25:03.405Z"
+      "fetchedAt": "2026-08-24T11:02:04.847Z"
     },
     {
       "slug": "abh-healthcare-ltd-9013175",
@@ -82,16 +82,16 @@
         ]
       },
       "subscription": {
-        "total": 0.04,
-        "updatedAt": "2026-08-24T05:25:03.405Z",
+        "total": 0.35,
+        "updatedAt": "2026-08-24T11:02:04.847Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=ABH&type=Active"
       },
       "sharesOffered": 3429600,
-      "sharesBid": 136800,
+      "sharesBid": 1194000,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=ABH&type=Active",
-      "fetchedAt": "2026-08-24T05:25:03.405Z"
+      "fetchedAt": "2026-08-24T11:02:04.847Z"
     },
     {
       "slug": "hy-tech-engineers-ltd-9057d1b",
@@ -110,17 +110,17 @@
         ]
       },
       "subscription": {
-        "total": 1.0028222570495253,
-        "updatedAt": "2026-08-24T05:25:03.405Z",
+        "total": 5.130895886264545,
+        "updatedAt": "2026-08-24T11:02:04.847Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HTEL&type=Active"
       },
       "sharesOffered": 18145406,
-      "sharesBid": 18196617,
+      "sharesBid": 93102189,
       "estimatedIssueValueCr": 96.17,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HTEL&type=Active",
-      "fetchedAt": "2026-08-24T05:25:03.405Z"
+      "fetchedAt": "2026-08-24T11:02:04.847Z"
     },
     {
       "slug": "madhur-knit-crafts-ltd-9d0b8dd",
@@ -137,16 +137,16 @@
         ]
       },
       "subscription": {
-        "total": 0.02,
-        "updatedAt": "2026-08-24T05:25:03.405Z",
+        "total": 0.29,
+        "updatedAt": "2026-08-24T11:02:04.847Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=MADHURKNIT&type=Active"
       },
       "sharesOffered": 5024400,
-      "sharesBid": 105600,
+      "sharesBid": 1441200,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=MADHURKNIT&type=Active",
-      "fetchedAt": "2026-08-24T05:25:03.405Z"
+      "fetchedAt": "2026-08-24T11:02:04.847Z"
     },
     {
       "slug": "skyways-air-services-ltd-80753ac",
@@ -165,17 +165,17 @@
         ]
       },
       "subscription": {
-        "total": 0.17344069011208912,
-        "updatedAt": "2026-08-24T05:25:03.405Z",
+        "total": 0.7152679187117187,
+        "updatedAt": "2026-08-24T11:02:04.847Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SKYWAYS&type=Active"
       },
       "sharesOffered": 29583600,
-      "sharesBid": 5131000,
+      "sharesBid": 21160200,
       "estimatedIssueValueCr": 408.25,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SKYWAYS&type=Active",
-      "fetchedAt": "2026-08-24T05:25:03.405Z"
+      "fetchedAt": "2026-08-24T11:02:04.847Z"
     },
     {
       "slug": "symbiotec-pharmalab-ltd-1e6db9d",
@@ -194,17 +194,17 @@
         ]
       },
       "subscription": {
-        "total": 0.09445993955472064,
-        "updatedAt": "2026-08-24T05:25:03.405Z",
+        "total": 0.5864374580616779,
+        "updatedAt": "2026-08-24T11:02:04.847Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SYMBIOTEC&type=Active"
       },
       "sharesOffered": 13124929,
-      "sharesBid": 1239780,
+      "sharesBid": 7696950,
       "estimatedIssueValueCr": 1296.74,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SYMBIOTEC&type=Active",
-      "fetchedAt": "2026-08-24T05:25:03.405Z"
+      "fetchedAt": "2026-08-24T11:02:04.847Z"
     }
   ]
 }
