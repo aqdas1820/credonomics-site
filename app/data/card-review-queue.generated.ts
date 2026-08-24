@@ -10,7 +10,7 @@ export type CardReviewQueueItem = {
 }
 
 export const cardReviewQueueMeta = {
-  "generatedAt": "2026-08-20T04:22:23.838Z",
+  "generatedAt": "2026-08-24T04:32:29.734Z",
   "itemCount": 227,
   "newCardCandidates": 219,
   "possibleFeeChanges": 8,
@@ -1719,7 +1719,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "type": "new-card-candidate",
     "issuer": "Kotak Mahindra Bank",
     "name": "Types of Credit Cards in India Offered by Kotak Mahindra Bank",
-    "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
+    "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards/get-movie-credit-cards.html",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
