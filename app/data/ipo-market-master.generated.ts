@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-08-25T05:07:37.467Z",
+  "generatedAt": "2026-08-25T10:57:18.466Z",
   "recordCount": 8,
   "nseCount": 8,
   "bseCount": 0,
@@ -31,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 14.082850580981153,
-      "updatedAt": "2026-08-25T05:07:37.467Z",
+      "total": 79.61859676238942,
+      "updatedAt": "2026-08-25T10:57:18.466Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=AUGMONT&type=Active"
     },
     "sharesOffered": 7715999,
-    "sharesBid": 108663261,
+    "sharesBid": 614337013,
     "estimatedIssueValueCr": 608.02,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=AUGMONT&type=Active",
-    "fetchedAt": "2026-08-25T05:07:37.467Z"
+    "fetchedAt": "2026-08-25T10:57:18.466Z"
   },
   {
     "slug": "abh-healthcare-ltd-9013175",
@@ -58,16 +58,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.4,
-      "updatedAt": "2026-08-25T05:07:37.467Z",
+      "total": 0.83,
+      "updatedAt": "2026-08-25T10:57:18.466Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=ABH&type=Active"
     },
     "sharesOffered": 3429600,
-    "sharesBid": 1387200,
+    "sharesBid": 2839200,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=ABH&type=Active",
-    "fetchedAt": "2026-08-25T05:07:37.467Z"
+    "fetchedAt": "2026-08-25T10:57:18.466Z"
   },
   {
     "slug": "hy-tech-engineers-ltd-9057d1b",
@@ -86,17 +86,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 6.898541867842472,
-      "updatedAt": "2026-08-25T05:07:37.467Z",
+      "total": 12.079049374811454,
+      "updatedAt": "2026-08-25T10:57:18.466Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HTEL&type=Active"
     },
     "sharesOffered": 18145406,
-    "sharesBid": 125176843,
+    "sharesBid": 219179255,
     "estimatedIssueValueCr": 96.17,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HTEL&type=Active",
-    "fetchedAt": "2026-08-25T05:07:37.467Z"
+    "fetchedAt": "2026-08-25T10:57:18.466Z"
   },
   {
     "slug": "madhur-knit-crafts-ltd-9d0b8dd",
@@ -113,16 +113,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.34,
-      "updatedAt": "2026-08-25T05:07:37.467Z",
+      "total": 0.43,
+      "updatedAt": "2026-08-25T10:57:18.466Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=MADHURKNIT&type=Active"
     },
     "sharesOffered": 5024400,
-    "sharesBid": 1700400,
+    "sharesBid": 2160000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=MADHURKNIT&type=Active",
-    "fetchedAt": "2026-08-25T05:07:37.467Z"
+    "fetchedAt": "2026-08-25T10:57:18.466Z"
   },
   {
     "slug": "skyways-air-services-ltd-80753ac",
@@ -141,17 +141,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.9211116970213227,
-      "updatedAt": "2026-08-25T05:07:37.467Z",
+      "total": 1.5435038332048838,
+      "updatedAt": "2026-08-25T10:57:18.466Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SKYWAYS&type=Active"
     },
     "sharesOffered": 29583600,
-    "sharesBid": 27249800,
+    "sharesBid": 45662400,
     "estimatedIssueValueCr": 408.25,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SKYWAYS&type=Active",
-    "fetchedAt": "2026-08-25T05:07:37.467Z"
+    "fetchedAt": "2026-08-25T10:57:18.466Z"
   },
   {
     "slug": "symbiotec-pharmalab-ltd-1e6db9d",
@@ -170,17 +170,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.7465663242825923,
-      "updatedAt": "2026-08-25T05:07:37.467Z",
+      "total": 1.266045705847247,
+      "updatedAt": "2026-08-25T10:57:18.466Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SYMBIOTEC&type=Active"
     },
     "sharesOffered": 13124929,
-    "sharesBid": 9798630,
+    "sharesBid": 16616760,
     "estimatedIssueValueCr": 1296.74,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SYMBIOTEC&type=Active",
-    "fetchedAt": "2026-08-25T05:07:37.467Z"
+    "fetchedAt": "2026-08-25T10:57:18.466Z"
   },
   {
     "slug": "annu-projects-ltd-c8948a3",
@@ -199,17 +199,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.008769835435163716,
-      "updatedAt": "2026-08-25T05:07:37.467Z",
+      "total": 0.21881892212859808,
+      "updatedAt": "2026-08-25T10:57:18.466Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ANNU&type=Active"
     },
     "sharesOffered": 17683000,
-    "sharesBid": 155077,
+    "sharesBid": 3869375,
     "estimatedIssueValueCr": 175.06,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ANNU&type=Active",
-    "fetchedAt": "2026-08-25T05:07:37.467Z"
+    "fetchedAt": "2026-08-25T10:57:18.466Z"
   },
   {
     "slug": "sumax-engineering-ltd-6a15dfb",
@@ -226,15 +226,15 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.35,
-      "updatedAt": "2026-08-25T05:07:37.467Z",
+      "total": 2.6,
+      "updatedAt": "2026-08-25T10:57:18.466Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SUMAX&type=Active"
     },
     "sharesOffered": 3852000,
-    "sharesBid": 1365600,
+    "sharesBid": 10008000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SUMAX&type=Active",
-    "fetchedAt": "2026-08-25T05:07:37.467Z"
+    "fetchedAt": "2026-08-25T10:57:18.466Z"
   }
 ]
