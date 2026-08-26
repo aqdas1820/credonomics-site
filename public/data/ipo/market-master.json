@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-08-26T05:07:42.136Z",
+    "generatedAt": "2026-08-26T11:00:48.920Z",
     "recordCount": 7,
     "nseCount": 7,
     "bseCount": 0,
@@ -24,16 +24,16 @@
         ]
       },
       "subscription": {
-        "total": 0.88,
-        "updatedAt": "2026-08-26T05:07:42.136Z",
+        "total": 0.98,
+        "updatedAt": "2026-08-26T11:00:48.920Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=ABH&type=Active"
       },
       "sharesOffered": 3429600,
-      "sharesBid": 3027600,
+      "sharesBid": 3369600,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=ABH&type=Active",
-      "fetchedAt": "2026-08-26T05:07:42.136Z"
+      "fetchedAt": "2026-08-26T11:00:48.920Z"
     },
     {
       "slug": "hy-tech-engineers-ltd-9057d1b",
@@ -52,17 +52,17 @@
         ]
       },
       "subscription": {
-        "total": 15.550365585647409,
-        "updatedAt": "2026-08-26T05:07:42.136Z",
+        "total": 29.001867965919306,
+        "updatedAt": "2026-08-26T11:00:48.920Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HTEL&type=Active"
       },
       "sharesOffered": 18145406,
-      "sharesBid": 282167697,
+      "sharesBid": 526250669,
       "estimatedIssueValueCr": 96.17,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HTEL&type=Active",
-      "fetchedAt": "2026-08-26T05:07:42.136Z"
+      "fetchedAt": "2026-08-26T11:00:48.920Z"
     },
     {
       "slug": "madhur-knit-crafts-ltd-9d0b8dd",
@@ -79,16 +79,16 @@
         ]
       },
       "subscription": {
-        "total": 0.51,
-        "updatedAt": "2026-08-26T05:07:42.136Z",
+        "total": 0.7,
+        "updatedAt": "2026-08-26T11:00:48.920Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=MADHURKNIT&type=Active"
       },
       "sharesOffered": 5024400,
-      "sharesBid": 2547600,
+      "sharesBid": 3528000,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=MADHURKNIT&type=Active",
-      "fetchedAt": "2026-08-26T05:07:42.136Z"
+      "fetchedAt": "2026-08-26T11:00:48.920Z"
     },
     {
       "slug": "skyways-air-services-ltd-80753ac",
@@ -107,17 +107,17 @@
         ]
       },
       "subscription": {
-        "total": 1.8984572533430684,
-        "updatedAt": "2026-08-26T05:07:42.136Z",
+        "total": 3.15846955745751,
+        "updatedAt": "2026-08-26T11:00:48.920Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SKYWAYS&type=Active"
       },
       "sharesOffered": 29583600,
-      "sharesBid": 56163200,
+      "sharesBid": 93438900,
       "estimatedIssueValueCr": 408.25,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SKYWAYS&type=Active",
-      "fetchedAt": "2026-08-26T05:07:42.136Z"
+      "fetchedAt": "2026-08-26T11:00:48.920Z"
     },
     {
       "slug": "symbiotec-pharmalab-ltd-1e6db9d",
@@ -136,17 +136,17 @@
         ]
       },
       "subscription": {
-        "total": 1.6140944457680495,
-        "updatedAt": "2026-08-26T05:07:42.136Z",
+        "total": 3.5046498156294787,
+        "updatedAt": "2026-08-26T11:00:48.920Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SYMBIOTEC&type=Active"
       },
       "sharesOffered": 13124929,
-      "sharesBid": 21184875,
+      "sharesBid": 45998280,
       "estimatedIssueValueCr": 1296.74,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SYMBIOTEC&type=Active",
-      "fetchedAt": "2026-08-26T05:07:42.136Z"
+      "fetchedAt": "2026-08-26T11:00:48.920Z"
     },
     {
       "slug": "annu-projects-ltd-c8948a3",
@@ -165,17 +165,17 @@
         ]
       },
       "subscription": {
-        "total": 0.2532748967935305,
-        "updatedAt": "2026-08-26T05:07:42.136Z",
+        "total": 0.300761805123565,
+        "updatedAt": "2026-08-26T11:00:48.920Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ANNU&type=Active"
       },
       "sharesOffered": 17683000,
-      "sharesBid": 4478660,
+      "sharesBid": 5318371,
       "estimatedIssueValueCr": 175.06,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ANNU&type=Active",
-      "fetchedAt": "2026-08-26T05:07:42.136Z"
+      "fetchedAt": "2026-08-26T11:00:48.920Z"
     },
     {
       "slug": "sumax-engineering-ltd-6a15dfb",
@@ -192,16 +192,16 @@
         ]
       },
       "subscription": {
-        "total": 4.51,
-        "updatedAt": "2026-08-26T05:07:42.136Z",
+        "total": 8.71,
+        "updatedAt": "2026-08-26T11:00:48.920Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SUMAX&type=Active"
       },
       "sharesOffered": 3852000,
-      "sharesBid": 17358000,
+      "sharesBid": 33554400,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SUMAX&type=Active",
-      "fetchedAt": "2026-08-26T05:07:42.136Z"
+      "fetchedAt": "2026-08-26T11:00:48.920Z"
     }
   ]
 }
