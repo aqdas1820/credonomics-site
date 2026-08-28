@@ -4,208 +4,101 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-08-26T11:00:48.920Z",
-  "recordCount": 7,
-  "nseCount": 7,
+  "generatedAt": "2026-08-28T21:14:31.988Z",
+  "recordCount": 3,
+  "nseCount": 3,
   "bseCount": 0,
-  "activeCount": 7,
+  "activeCount": 3,
   "upcomingCount": 0,
-  "sourceStatus": "NSE API 7 · BSE SME unavailable · BSE mainboard 0"
+  "sourceStatus": "NSE API 3 · BSE SME unavailable · BSE mainboard 0"
 } as const
 
 export const ipoMarketMaster: IpoMarketRecord[] = [
   {
-    "slug": "abh-healthcare-ltd-9013175",
-    "companyName": "ABH Healthcare Limited",
-    "symbol": "ABH",
-    "marketSegment": "sme",
-    "status": "open",
-    "securityType": "SME",
-    "issue": {
-      "openDate": "2026-08-24",
-      "closeDate": "2026-08-27",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 0.98,
-      "updatedAt": "2026-08-26T11:00:48.920Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=ABH&type=Active"
-    },
-    "sharesOffered": 3429600,
-    "sharesBid": 3369600,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=ABH&type=Active",
-    "fetchedAt": "2026-08-26T11:00:48.920Z"
-  },
-  {
-    "slug": "hy-tech-engineers-ltd-9057d1b",
-    "companyName": "Hy-Tech Engineers Limited",
-    "symbol": "HTEL",
+    "slug": "lumino-industries-ltd-cd2f090",
+    "companyName": "Lumino Industries Limited",
+    "symbol": "LUMINO",
     "marketSegment": "mainboard",
     "status": "open",
     "securityType": "EQ",
     "issue": {
-      "priceBandLow": 50,
-      "priceBandHigh": 53,
-      "openDate": "2026-08-24",
-      "closeDate": "2026-08-27",
+      "priceBandLow": 78,
+      "priceBandHigh": 82,
+      "openDate": "2026-08-27",
+      "closeDate": "2026-08-31",
       "exchange": [
         "NSE"
       ]
     },
     "subscription": {
-      "total": 29.001867965919306,
-      "updatedAt": "2026-08-26T11:00:48.920Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HTEL&type=Active"
+      "total": 2.858714515358857,
+      "updatedAt": "2026-08-28T21:14:31.988Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=LUMINO&type=Active"
     },
-    "sharesOffered": 18145406,
-    "sharesBid": 526250669,
-    "estimatedIssueValueCr": 96.17,
+    "sharesOffered": 63205127,
+    "sharesBid": 180685414,
+    "estimatedIssueValueCr": 518.28,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HTEL&type=Active",
-    "fetchedAt": "2026-08-26T11:00:48.920Z"
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=LUMINO&type=Active",
+    "fetchedAt": "2026-08-28T21:14:31.988Z"
   },
   {
-    "slug": "madhur-knit-crafts-ltd-9d0b8dd",
-    "companyName": "Madhur Knit Crafts Limited",
-    "symbol": "MADHURKNIT",
-    "marketSegment": "sme",
-    "status": "open",
-    "securityType": "SME",
-    "issue": {
-      "openDate": "2026-08-24",
-      "closeDate": "2026-08-27",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 0.7,
-      "updatedAt": "2026-08-26T11:00:48.920Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=MADHURKNIT&type=Active"
-    },
-    "sharesOffered": 5024400,
-    "sharesBid": 3528000,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=MADHURKNIT&type=Active",
-    "fetchedAt": "2026-08-26T11:00:48.920Z"
-  },
-  {
-    "slug": "skyways-air-services-ltd-80753ac",
-    "companyName": "Skyways Air Services Limited",
-    "symbol": "SKYWAYS",
+    "slug": "esds-software-solution-ltd-c5f3c5e",
+    "companyName": "ESDS Software Solution Limited",
+    "symbol": "ESDS",
     "marketSegment": "mainboard",
     "status": "open",
     "securityType": "EQ",
     "issue": {
-      "priceBandLow": 131,
-      "priceBandHigh": 138,
-      "openDate": "2026-08-24",
-      "closeDate": "2026-08-27",
+      "priceBandLow": 408,
+      "priceBandHigh": 429,
+      "openDate": "2026-08-28",
+      "closeDate": "2026-09-01",
       "exchange": [
         "NSE"
       ]
     },
     "subscription": {
-      "total": 3.15846955745751,
-      "updatedAt": "2026-08-26T11:00:48.920Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SKYWAYS&type=Active"
+      "total": 1.5433727447275314,
+      "updatedAt": "2026-08-28T21:14:31.988Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ESDS&type=Active"
     },
-    "sharesOffered": 29583600,
-    "sharesBid": 93438900,
-    "estimatedIssueValueCr": 408.25,
+    "sharesOffered": 12352942,
+    "sharesBid": 19065194,
+    "estimatedIssueValueCr": 529.94,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SKYWAYS&type=Active",
-    "fetchedAt": "2026-08-26T11:00:48.920Z"
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ESDS&type=Active",
+    "fetchedAt": "2026-08-28T21:14:31.988Z"
   },
   {
-    "slug": "symbiotec-pharmalab-ltd-1e6db9d",
-    "companyName": "Symbiotec Pharmalab Limited",
-    "symbol": "SYMBIOTEC",
+    "slug": "priority-jewels-ltd-835c013",
+    "companyName": "Priority Jewels Limited",
+    "symbol": "PRIORITY",
     "marketSegment": "mainboard",
     "status": "open",
     "securityType": "EQ",
     "issue": {
-      "priceBandLow": 938,
-      "priceBandHigh": 988,
-      "openDate": "2026-08-24",
-      "closeDate": "2026-08-27",
+      "priceBandLow": 190,
+      "priceBandHigh": 200,
+      "openDate": "2026-08-28",
+      "closeDate": "2026-09-01",
       "exchange": [
         "NSE"
       ]
     },
     "subscription": {
-      "total": 3.5046498156294787,
-      "updatedAt": "2026-08-26T11:00:48.920Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SYMBIOTEC&type=Active"
+      "total": 1.367704918032787,
+      "updatedAt": "2026-08-28T21:14:31.988Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PRIORITY&type=Active"
     },
-    "sharesOffered": 13124929,
-    "sharesBid": 45998280,
-    "estimatedIssueValueCr": 1296.74,
+    "sharesOffered": 3202500,
+    "sharesBid": 4380075,
+    "estimatedIssueValueCr": 64.05,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SYMBIOTEC&type=Active",
-    "fetchedAt": "2026-08-26T11:00:48.920Z"
-  },
-  {
-    "slug": "annu-projects-ltd-c8948a3",
-    "companyName": "Annu Projects Limited",
-    "symbol": "ANNU",
-    "marketSegment": "mainboard",
-    "status": "open",
-    "securityType": "EQ",
-    "issue": {
-      "priceBandLow": 94,
-      "priceBandHigh": 99,
-      "openDate": "2026-08-25",
-      "closeDate": "2026-08-28",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 0.300761805123565,
-      "updatedAt": "2026-08-26T11:00:48.920Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ANNU&type=Active"
-    },
-    "sharesOffered": 17683000,
-    "sharesBid": 5318371,
-    "estimatedIssueValueCr": 175.06,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ANNU&type=Active",
-    "fetchedAt": "2026-08-26T11:00:48.920Z"
-  },
-  {
-    "slug": "sumax-engineering-ltd-6a15dfb",
-    "companyName": "Sumax Engineering Limited",
-    "symbol": "SUMAX",
-    "marketSegment": "sme",
-    "status": "open",
-    "securityType": "SME",
-    "issue": {
-      "openDate": "2026-08-25",
-      "closeDate": "2026-08-28",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 8.71,
-      "updatedAt": "2026-08-26T11:00:48.920Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SUMAX&type=Active"
-    },
-    "sharesOffered": 3852000,
-    "sharesBid": 33554400,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SUMAX&type=Active",
-    "fetchedAt": "2026-08-26T11:00:48.920Z"
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PRIORITY&type=Active",
+    "fetchedAt": "2026-08-28T21:14:31.988Z"
   }
 ]
