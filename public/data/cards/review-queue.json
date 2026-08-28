@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-08-24T04:32:29.734Z",
-    "itemCount": 227,
-    "newCardCandidates": 219,
+    "generatedAt": "2026-08-28T07:06:51.567Z",
+    "itemCount": 233,
+    "newCardCandidates": 225,
     "possibleFeeChanges": 8,
     "reviewDue": 0
   },
@@ -416,6 +416,14 @@
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
+      "id": "39359f3914ad",
+      "type": "new-card-candidate",
+      "issuer": "Axis Bank",
+      "name": "Axis Bank Credit Cards. Power meets privilege.",
+      "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
       "id": "108cccfcd144",
       "type": "new-card-candidate",
       "issuer": "Axis Bank",
@@ -685,6 +693,86 @@
       "issuer": "Axis Bank",
       "name": "SpiceJet Axis Bank Voyage Credit Card",
       "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "2d1dc98ec8d4",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Additional details about Add-on Card ?",
+      "sourceUrl": "https://www.federal.bank.in/add-on-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "ddae892ac916",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Can I cancel my credit card at any time?",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "fd4b7026f4eb",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Credit Card Application",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "bcaba0357615",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Credit Card Features & Benefits",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "29f29fff34a0",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Documents Required for Credit Card",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "a377313fa1c4",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Federal Bank Credit Card Charges, Fees & Interest Rates",
+      "sourceUrl": "https://www.federal.bank.in/how-to-use-credit-cards-wisely",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "0c026fdb02ee",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Federal Bank Credit Card EMI",
+      "sourceUrl": "https://www.federal.bank.in/credit-card-emi",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "efed675a2dd9",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Secured Credit Cards",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "e38662f71875",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Step-by-Step Process to Apply for Credit Card",
+      "sourceUrl": "https://www.federal.bank.in/credit-card-activation",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "f0837eb064a9",
+      "type": "new-card-candidate",
+      "issuer": "Federal Bank",
+      "name": "Things to Know Before Applying for a Credit Card",
+      "sourceUrl": "https://www.federal.bank.in/credit-cards-mitc",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
@@ -1120,51 +1208,19 @@
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "c3741f2d44cf",
-      "type": "new-card-candidate",
-      "issuer": "IDFC FIRST Bank",
-      "name": "Are there any EMI conversion charges on my IDFC FIRST Bank Credit Card",
-      "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-    },
-    {
-      "id": "8eacd9a8a2ad",
-      "type": "new-card-candidate",
-      "issuer": "IDFC FIRST Bank",
-      "name": "Can I apply for an add-on card?",
-      "sourceUrl": "https://www.idfcfirstbank.com/credit-card/add-on-credit-card",
-      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-    },
-    {
-      "id": "d42933134180",
-      "type": "new-card-candidate",
-      "issuer": "IDFC FIRST Bank",
-      "name": "Can I pay my Credit Card bill online via NEFT?",
-      "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-    },
-    {
-      "id": "4e0eb9e3112c",
-      "type": "new-card-candidate",
-      "issuer": "IDFC FIRST Bank",
-      "name": "Can I use my Credit Card for international transactions?",
-      "sourceUrl": "https://www.idfcfirstbank.com/credit-card/wow",
-      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-    },
-    {
-      "id": "81953f4b054f",
-      "type": "new-card-candidate",
-      "issuer": "IDFC FIRST Bank",
-      "name": "Can I withdraw cash using my Credit Card?",
-      "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/key-factors-for-credit-card-cash-withdrawal",
-      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-    },
-    {
       "id": "21f75dc32768",
       "type": "new-card-candidate",
       "issuer": "IDFC FIRST Bank",
       "name": "Compare Credit Card Fees & Benefits",
       "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "41dbfd25efc7",
+      "type": "new-card-candidate",
+      "issuer": "IDFC FIRST Bank",
+      "name": "Credit Card EMI Calculator",
+      "sourceUrl": "https://www.idfcfirstbank.com/calculators/credit-card-emi-calculator?utm_source=website&utm_medium=PDPCCSQL&utm_campaign=CCEMICalc",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
@@ -1200,19 +1256,19 @@
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "89dccd023eb1",
-      "type": "new-card-candidate",
-      "issuer": "IDFC FIRST Bank",
-      "name": "I already have an IDFC FIRST Bank Credit Card. Can I apply for another one?",
-      "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-    },
-    {
       "id": "9264410619ac",
       "type": "new-card-candidate",
       "issuer": "IDFC FIRST Bank",
       "name": "IndiGo IDFC Dual Cards",
       "sourceUrl": "https://www.idfcfirstbank.com/credit-card/indigo-credit-card?utm_source=website&utm_medium=PDPIndigoIDFCFIRST&utm_campaign=Knowmore",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "721c365802f6",
+      "type": "new-card-candidate",
+      "issuer": "IDFC FIRST Bank",
+      "name": "Instant Loan on Credit Card",
+      "sourceUrl": "https://www.idfcfirstbank.com/credit-card/Quick-Cash?utm_source=website&utm_medium=PDPLAC&utm_campaign=ExploreNow",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
@@ -1285,14 +1341,6 @@
       "issuer": "IDFC FIRST Bank",
       "name": "Quantum+ Credit Card",
       "sourceUrl": "https://www.idfcfirstbank.com/credit-card/quantum-plus-credit-card?utm_source=website&utm_medium=PDPQuantum+&utm_campaign=Knowmore",
-      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-    },
-    {
-      "id": "f16f66de090b",
-      "type": "new-card-candidate",
-      "issuer": "IDFC FIRST Bank",
-      "name": "Things to keep in mind when applying for a credit card online",
-      "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
