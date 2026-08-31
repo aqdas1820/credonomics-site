@@ -2,14 +2,25 @@
 import type { IpoDiscoveryRecord } from './ipo-types'
 
 export const ipoDiscoveryMeta = {
-  "generatedAt": "2026-08-31T03:17:40.452Z",
+  "generatedAt": "2026-08-31T09:17:41.391Z",
   "source": "SEBI Public Issues",
   "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
-  "recordCount": 18,
+  "recordCount": 19,
   "note": "Discovery layer only. Financial ranking requires separately normalized offer-document data."
 } as const
 
 export const ipoDiscovery: IpoDiscoveryRecord[] = [
+  {
+    "id": "hero-motors-limited-addendum-123d67",
+    "companyName": "HERO MOTORS LIMITED",
+    "filingTitle": "HERO MOTORS LIMITED - Addendum to DRHP",
+    "filingDate": "2026-08-31",
+    "documentStage": "addendum",
+    "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/hero-motors-limited-addendum-to-drhp_104121.html",
+    "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
+    "firstSeen": "2026-08-31T09:17:41.391Z",
+    "lastSeen": "2026-08-31T09:17:41.391Z"
+  },
   {
     "id": "karamtara-engineering-limited-addendum-9fb3c4",
     "companyName": "KARAMTARA ENGINEERING LIMITED",
@@ -30,7 +41,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/t-c-terrytex-limited-addendum-cum-corrigendum-to-drhp_103904.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-24T11:02:16.253Z",
-    "lastSeen": "2026-08-31T03:17:40.452Z"
+    "lastSeen": "2026-08-31T09:17:41.391Z"
   },
   {
     "id": "lumino-industries-limited-corrigendum-9e4344",
@@ -41,7 +52,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-corrigendum-to-drhp_103755.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-19T10:04:47.322Z",
-    "lastSeen": "2026-08-31T03:17:40.452Z"
+    "lastSeen": "2026-08-31T09:17:41.391Z"
   },
   {
     "id": "german-green-steel-and-power-ltd-addendum-bf8abd",
@@ -52,7 +63,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/german-green-steel-and-power-ltd-addendum-to-drhp_103895.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-24T11:02:16.253Z",
-    "lastSeen": "2026-08-31T03:17:40.452Z"
+    "lastSeen": "2026-08-31T09:17:41.391Z"
   },
   {
     "id": "sillverton-industries-limited-addendum-9129fa",
@@ -63,7 +74,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/sillverton-industries-limited-addendum-ii_103621.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-14T08:02:14.704Z",
-    "lastSeen": "2026-08-31T03:17:40.452Z"
+    "lastSeen": "2026-08-31T09:17:41.391Z"
   },
   {
     "id": "arjun-jewellers-limited-drhp",
@@ -113,7 +124,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentStage": "corrigendum",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-11T00:00:00.000Z",
-    "lastSeen": "2026-08-31T03:17:40.452Z",
+    "lastSeen": "2026-08-31T09:17:41.391Z",
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/hero-motors-limited-corrigendum-to-drhp_103180.html"
   },
   {

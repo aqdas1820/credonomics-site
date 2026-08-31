@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-08-31T03:17:27.858Z",
+  "generatedAt": "2026-08-31T09:17:29.110Z",
   "recordCount": 6,
   "nseCount": 6,
   "bseCount": 0,
@@ -31,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 2.858714515358857,
-      "updatedAt": "2026-08-31T03:17:27.858Z",
+      "total": 60.079149022198784,
+      "updatedAt": "2026-08-31T09:17:29.110Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=LUMINO&type=Active"
     },
     "sharesOffered": 63205127,
-    "sharesBid": 180685414,
+    "sharesBid": 3797310244,
     "estimatedIssueValueCr": 518.28,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=LUMINO&type=Active",
-    "fetchedAt": "2026-08-31T03:17:27.858Z"
+    "fetchedAt": "2026-08-31T09:17:29.110Z"
   },
   {
     "slug": "esds-software-solution-ltd-c5f3c5e",
@@ -60,17 +60,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 1.5433727447275314,
-      "updatedAt": "2026-08-31T03:17:27.858Z",
+      "total": 16.765172377559935,
+      "updatedAt": "2026-08-31T09:17:29.110Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ESDS&type=Active"
     },
     "sharesOffered": 12352942,
-    "sharesBid": 19065194,
+    "sharesBid": 207099202,
     "estimatedIssueValueCr": 529.94,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ESDS&type=Active",
-    "fetchedAt": "2026-08-31T03:17:27.858Z"
+    "fetchedAt": "2026-08-31T09:17:29.110Z"
   },
   {
     "slug": "priority-jewels-ltd-835c013",
@@ -89,17 +89,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 1.367704918032787,
-      "updatedAt": "2026-08-31T03:17:27.858Z",
+      "total": 17.258126463700233,
+      "updatedAt": "2026-08-31T09:17:29.110Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PRIORITY&type=Active"
     },
     "sharesOffered": 3202500,
-    "sharesBid": 4380075,
+    "sharesBid": 55269150,
     "estimatedIssueValueCr": 64.05,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PRIORITY&type=Active",
-    "fetchedAt": "2026-08-31T03:17:27.858Z"
+    "fetchedAt": "2026-08-31T09:17:29.110Z"
   },
   {
     "slug": "ashutosh-fibre-ltd-9c63806",
@@ -115,11 +115,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
         "NSE"
       ]
     },
+    "subscription": {
+      "total": 0.93,
+      "updatedAt": "2026-08-31T09:17:29.110Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=ASHUTOSH&type=Active"
+    },
     "sharesOffered": 4381200,
+    "sharesBid": 4059600,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=ASHUTOSH&type=Active",
-    "fetchedAt": "2026-08-31T03:17:27.858Z"
+    "fetchedAt": "2026-08-31T09:17:29.110Z"
   },
   {
     "slug": "purple-style-labs-ltd-9bd08f0",
@@ -138,17 +144,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0,
-      "updatedAt": "2026-08-31T03:17:27.858Z",
+      "total": 0.06506627331303498,
+      "updatedAt": "2026-08-31T09:17:29.110Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PERNIASPOP&type=Active"
     },
-    "sharesOffered": 0,
-    "sharesBid": 0,
-    "estimatedIssueValueCr": 0,
+    "sharesOffered": 6849816,
+    "sharesBid": 445692,
+    "estimatedIssueValueCr": 393.86,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PERNIASPOP&type=Active",
-    "fetchedAt": "2026-08-31T03:17:27.858Z"
+    "fetchedAt": "2026-08-31T09:17:29.110Z"
   },
   {
     "slug": "shanti-inorganics-ltd-c9dedea",
@@ -164,10 +170,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
         "NSE"
       ]
     },
+    "subscription": {
+      "total": 0.68,
+      "updatedAt": "2026-08-31T09:17:29.110Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SHANTIINOR&type=Active"
+    },
     "sharesOffered": 4072000,
+    "sharesBid": 2780800,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SHANTIINOR&type=Active",
-    "fetchedAt": "2026-08-31T03:17:27.858Z"
+    "fetchedAt": "2026-08-31T09:17:29.110Z"
   }
 ]
