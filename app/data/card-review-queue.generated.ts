@@ -10,9 +10,9 @@ export type CardReviewQueueItem = {
 }
 
 export const cardReviewQueueMeta = {
-  "generatedAt": "2026-08-28T07:06:51.567Z",
-  "itemCount": 233,
-  "newCardCandidates": 225,
+  "generatedAt": "2026-08-31T02:24:41.687Z",
+  "itemCount": 239,
+  "newCardCandidates": 231,
   "possibleFeeChanges": 8,
   "reviewDue": 0
 } as const
@@ -1867,10 +1867,50 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
+    "id": "7023d535d53e",
+    "type": "new-card-candidate",
+    "issuer": "Standard Chartered India",
+    "name": "Discover endless benefits & privileges with our range of Credit Cards",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
     "id": "d8444721020a",
     "type": "new-card-candidate",
     "issuer": "Standard Chartered India",
     "name": "Manhattan Credit Card",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "83942b1f428d",
+    "type": "new-card-candidate",
+    "issuer": "Standard Chartered India",
+    "name": "Platinum Rewards Card",
+    "sourceUrl": "https://www.sc.com/content/dam/sc/in/credit-cards/docs/in-sc-platinum-rewards-credit-card-tcs.pdf",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "3df4e5d96e22",
+    "type": "new-card-candidate",
+    "issuer": "Standard Chartered India",
+    "name": "Rewards Credit Card",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "04690c6fcdbd",
+    "type": "new-card-candidate",
+    "issuer": "Standard Chartered India",
+    "name": "Smart Credit Card",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "edced92c132f",
+    "type": "new-card-candidate",
+    "issuer": "Standard Chartered India",
+    "name": "Standard Chartered EaseMyTrip Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
@@ -1880,6 +1920,14 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Standard Chartered India",
     "name": "Super Value Titanium Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "a36c60fa6998",
+    "type": "new-card-candidate",
+    "issuer": "Standard Chartered India",
+    "name": "Ultimate Credit Card",
+    "sourceUrl": "https://www.sc.com/content/dam/sc/in/credit-cards/docs/in-ultimate-credit-card-tnc.pdf",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   }
 ]
