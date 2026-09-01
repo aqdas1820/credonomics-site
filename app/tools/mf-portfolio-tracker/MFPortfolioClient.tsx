@@ -757,9 +757,9 @@ export default function MFPortfolioClient({
           asOf={initialIndex.metadata?.asOf}
           message={
             initialIndex.metadata?.availability === "partial"
-              ? `Partial historical coverage. ${initialIndex.metadata.asOf ? `Data as of ${new Intl.DateTimeFormat("en-IN", { day: "2-digit", month: "short", year: "numeric" }).format(new Date(initialIndex.metadata.asOf))}.` : ""}`
+              ? `Partial historical coverage. ${initialIndex.metadata.asOf ? `Data as of ${new Intl.DateTimeFormat("en-IN", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" }).format(new Date(initialIndex.metadata.asOf))}.` : ""}`
               : initialIndex.metadata?.availability === "stale"
-              ? `Historical dataset — update pending. ${initialIndex.metadata.asOf ? `Data as of ${new Intl.DateTimeFormat("en-IN", { day: "2-digit", month: "short", year: "numeric" }).format(new Date(initialIndex.metadata.asOf))}.` : ""}`
+              ? `Historical dataset — update pending. ${initialIndex.metadata.asOf ? `Data as of ${new Intl.DateTimeFormat("en-IN", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" }).format(new Date(initialIndex.metadata.asOf))}.` : ""}`
               : undefined
           }
         />
