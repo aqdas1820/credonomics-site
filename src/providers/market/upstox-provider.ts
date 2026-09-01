@@ -1,8 +1,121 @@
-import "server-only";import type { CompanyFundamentals,CorporateAction,FinancialStatements,HistoricalPrice,HistoricalRange,MarketQuote,Shareholding } from "../../domain/equity/types";import type { FinancialDataMetadata } from "../../domain/financial-data";import { marketQuoteSchema } from "../../schemas/equity";import { searchInstrumentMaster } from "../../services/market-data/instrument-master";import type { MarketDataProvider,ProviderResult } from "./types";
-const BASE="https://api.upstox.com";const memory=new Map<string,{expires:number,value:unknown}>();const inflight=new Map<string,Promise<unknown>>();
-function metadata(asOf:string|null,availability:FinancialDataMetadata["availability"]):FinancialDataMetadata{return{source:"Upstox API",asOf,generatedAt:new Date().toISOString(),quality:availability==="unavailable"?"unknown":"verified",availability}}
-function failure<T>(code:string,message:string,retryable=false):ProviderResult<T>{return{data:null,metadata:metadata(null,"unavailable"),error:{code,message,retryable}}}
-async function cachedFetch(url:string,token:string,ttl:number){const hit=memory.get(url);if(hit&&hit.expires>Date.now())return hit.value;if(inflight.has(url))return inflight.get(url);const work=(async()=>{const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),8000);try{const response=await fetch(url,{headers:{Accept:"application/json",Authorization:`Bearer ${token}`},signal:controller.signal});if(!response.ok){const error=new Error(response.status===401||response.status===403?"Authentication required":response.status===429?"Rate limit reached — retry shortly":response.status===404?"Unable to retrieve this security":"Market data temporarily unavailable");Object.assign(error,{status:response.status});throw error}const value=await response.json();memory.set(url,{expires:Date.now()+ttl,value});return value}finally{clearTimeout(timer);inflight.delete(url)}})();inflight.set(url,work);return work}
-export function transformCandles(raw:unknown):HistoricalPrice[]{if(!Array.isArray(raw))return[];return raw.flatMap(c=>Array.isArray(c)&&c.length>=6&&typeof c[0]==="string"&&c.slice(1,6).every(Number.isFinite)?[{date:c[0],open:c[1] as number,high:c[2] as number,low:c[3] as number,close:c[4] as number,volume:c[5] as number}]:[])}
-export class UpstoxMarketDataProvider implements MarketDataProvider{readonly id="upstox";constructor(private token=process.env.UPSTOX_ACCESS_TOKEN?.trim()??""){}async searchStocks(q:string){return{data:searchInstrumentMaster(q),metadata:metadata(new Date().toISOString(),"recent")}}async getQuote(key:string):Promise<ProviderResult<MarketQuote>>{if(!this.token)return failure<MarketQuote>("AUTH_REQUIRED","Market data authentication is not configured.");const instrument=key.includes("|")?searchInstrumentMaster(key.split("|").at(-1)??"").find(x=>x.instrumentKey===key):null;if(!instrument)return failure("NOT_FOUND","Unable to retrieve this security");try{const raw=await cachedFetch(`${BASE}/v2/market-quote/quotes?instrument_key=${encodeURIComponent(key)}`,this.token,15000) as {data?:Record<string,Record<string,unknown>>},item=Object.values(raw.data??{})[0]??{},price=numberOrNull(item.last_price),previousClose=numberOrNull((item.ohlc as Record<string,unknown>|undefined)?.close),timestamp=dateOrNull(item.timestamp),quote={...instrument,price,previousClose,change:price!==null&&previousClose!==null?price-previousClose:null,changePercent:price!==null&&previousClose?((price-previousClose)/previousClose)*100:null,open:numberOrNull((item.ohlc as Record<string,unknown>|undefined)?.open),high:numberOrNull((item.ohlc as Record<string,unknown>|undefined)?.high),low:numberOrNull((item.ohlc as Record<string,unknown>|undefined)?.low),volume:numberOrNull(item.volume),fiftyTwoWeekHigh:null,fiftyTwoWeekLow:null,timestamp,...metadata(timestamp,timestamp&&Date.now()-Date.parse(timestamp)<120000?"live":"delayed")};const parsed=marketQuoteSchema.safeParse(quote);return parsed.success?{data:parsed.data,metadata:metadata(timestamp,quote.availability)}:failure<MarketQuote>("INVALID_RESPONSE","Market data temporarily unavailable")}catch(e){return mapError<MarketQuote>(e)}}async getQuotes(keys:string[]):Promise<ProviderResult<MarketQuote[]>>{const results=await Promise.all(keys.map(k=>this.getQuote(k)));return{data:results.flatMap(x=>x.data?[x.data]:[]),metadata:metadata(new Date().toISOString(),results.some(x=>x.data)?"delayed":"unavailable"),error:results.every(x=>!x.data)?results[0]?.error:undefined}}async getHistoricalPrices(key:string,range:HistoricalRange):Promise<ProviderResult<HistoricalPrice[]>>{if(!this.token)return failure<HistoricalPrice[]>("AUTH_REQUIRED","Market data authentication is not configured.");const days:{[K in HistoricalRange]:number}={"1D":1,"1W":7,"1M":31,"3M":93,"6M":186,"1Y":366,"3Y":1096,"5Y":1827,"MAX":3650},to=new Date(),from=new Date(to.getTime()-days[range]*86400000),fmt=(d:Date)=>d.toISOString().slice(0,10);try{const raw=await cachedFetch(`${BASE}/v3/historical-candle/${encodeURIComponent(key)}/days/1/${fmt(to)}/${fmt(from)}`,this.token,3600000) as {data?:{candles?:unknown}},data=transformCandles(raw.data?.candles);return{data,metadata:metadata(data[0]?.date??null,data.length?"recent":"unavailable")}}catch(e){return mapError(e)}}async getIntradayPrices(key:string):Promise<ProviderResult<HistoricalPrice[]>>{if(!this.token)return failure<HistoricalPrice[]>("AUTH_REQUIRED","Market data authentication is not configured.");try{const raw=await cachedFetch(`${BASE}/v3/historical-candle/intraday/${encodeURIComponent(key)}/minutes/5`,this.token,30000) as {data?:{candles?:unknown}},data=transformCandles(raw.data?.candles);return{data,metadata:metadata(data[0]?.date??null,data.length?"live":"unavailable")}}catch(e){return mapError(e)}}async getCompanyProfile(symbol:string){const data=searchInstrumentMaster(symbol,1)[0]??null;return{data,metadata:metadata(null,data?"recent":"unavailable")}}async getFundamentals(){return failure<CompanyFundamentals>("NOT_SUPPORTED","Fundamental data source not connected") }async getFinancialStatements(){return failure<FinancialStatements>("NOT_SUPPORTED","Financial statement data source not connected") }async getShareholding(){return failure<Shareholding>("NOT_SUPPORTED","Shareholding data source not connected") }async getCorporateActions(){return failure<CorporateAction[]>("NOT_SUPPORTED","Corporate-action data source not connected") }async getMarketStatus():Promise<ProviderResult<{session:"OPEN"|"CLOSED"}>>{const parts=new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Kolkata",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date()),weekday=parts.find(x=>x.type==="weekday")?.value,h=Number(parts.find(x=>x.type==="hour")?.value),m=Number(parts.find(x=>x.type==="minute")?.value),minute=h*60+m,session=!["Sat","Sun"].includes(weekday??"")&&minute>=555&&minute<930?"OPEN":"CLOSED";return{data:{session},metadata:metadata(new Date().toISOString(),"recent")}}}
-function numberOrNull(x:unknown){return typeof x==="number"&&Number.isFinite(x)?x:null}function dateOrNull(x:unknown){if(typeof x==="string"&&!Number.isNaN(Date.parse(x)))return new Date(x).toISOString();if(typeof x==="number")return new Date(x).toISOString();return null}function mapError<T>(e:unknown):ProviderResult<T>{const status=(e as {status?:number}).status;if((e as Error).name==="AbortError")return failure("TIMEOUT","Market data temporarily unavailable",true);return failure(status===401||status===403?"AUTH_REQUIRED":status===429?"RATE_LIMITED":"PROVIDER_ERROR",(e as Error).message||"Market data temporarily unavailable",status===429||!status)}
+import "server-only";
+import type { CompanyFundamentals, CorporateAction, FinancialStatements, HistoricalPrice, HistoricalRange, IndianEquityIdentity, MarketQuote, Shareholding } from "../../domain/equity/types";
+import type { FinancialDataMetadata } from "../../domain/financial-data";
+import { upstoxGet, UpstoxApiError, hasUpstoxAnalyticsToken } from "../../lib/upstox/client";
+import { marketQuoteSchema } from "../../schemas/equity";
+import { searchInstrumentMaster } from "../../services/market-data/instrument-master";
+import type { MarketDataProvider, ProviderResult } from "./types";
+
+function metadata(asOf: string | null, availability: FinancialDataMetadata["availability"]): FinancialDataMetadata {
+  return { source: "Upstox API", asOf, generatedAt: new Date().toISOString(), quality: availability === "unavailable" ? "unknown" : "verified", availability };
+}
+function failure<T>(code: string, message: string, retryable = false): ProviderResult<T> {
+  return { data: null, metadata: metadata(null, "unavailable"), error: { code, message, retryable } };
+}
+function numberOrNull(value: unknown): number | null {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (typeof value === "string") { const parsed = Number(value.replace(/%$/, "")); return Number.isFinite(parsed) ? parsed : null; }
+  return null;
+}
+function dateOrNull(value: unknown): string | null {
+  if ((typeof value === "string" || typeof value === "number") && !Number.isNaN(Date.parse(String(value)))) return new Date(value).toISOString();
+  return null;
+}
+function mapError<T>(error: unknown): ProviderResult<T> {
+  if (error instanceof UpstoxApiError) return failure(error.providerCode === "AUTH_REQUIRED" || error.status === 401 || error.status === 403 ? "AUTH_REQUIRED" : error.status === 429 ? "RATE_LIMITED" : error.providerCode ?? "PROVIDER_ERROR", error.message, error.retryable);
+  return failure("PROVIDER_ERROR", "Market data temporarily unavailable.", true);
+}
+function identityFor(key: string): IndianEquityIdentity | null {
+  const term = key.includes("|") ? key.split("|").at(-1) ?? "" : key;
+  return searchInstrumentMaster(term, 20).find(item => item.instrumentKey === key || item.symbol.toUpperCase() === key.toUpperCase() || item.isin === key) ?? null;
+}
+export function transformCandles(raw: unknown): HistoricalPrice[] {
+  if (!Array.isArray(raw)) return [];
+  return raw.flatMap(candle => Array.isArray(candle) && candle.length >= 6 && typeof candle[0] === "string" && candle.slice(1, 6).every(Number.isFinite) ? [{ date: candle[0], open: candle[1] as number, high: candle[2] as number, low: candle[3] as number, close: candle[4] as number, volume: candle[5] as number }] : []);
+}
+
+export class UpstoxMarketDataProvider implements MarketDataProvider {
+  readonly id = "upstox";
+  async searchStocks(query: string) { return { data: searchInstrumentMaster(query), metadata: metadata(new Date().toISOString(), "recent") }; }
+
+  async getQuote(key: string): Promise<ProviderResult<MarketQuote>> {
+    if (!hasUpstoxAnalyticsToken()) return failure("AUTH_REQUIRED", "Market data authentication is not configured.");
+    const instrument = identityFor(key);
+    if (!instrument) return failure("NOT_FOUND", "Unable to retrieve this security.");
+    try {
+      const raw = await upstoxGet<{ data?: Record<string, Record<string, unknown>> }>("/v2/market-quote/quotes", { query: { instrument_key: key }, ttlMs: 15_000 });
+      const item = Object.values(raw.data ?? {})[0] ?? {};
+      const ohlc = item.ohlc as Record<string, unknown> | undefined;
+      const price = numberOrNull(item.last_price);
+      const previousClose = numberOrNull(ohlc?.close);
+      const timestamp = dateOrNull(item.timestamp ?? item.last_trade_time);
+      const availability = timestamp && Date.now() - Date.parse(timestamp) < 120_000 ? "live" : "delayed";
+      const quote = { ...instrument, price, previousClose, change: price !== null && previousClose !== null ? price - previousClose : null, changePercent: price !== null && previousClose ? ((price - previousClose) / previousClose) * 100 : null, open: numberOrNull(ohlc?.open), high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), volume: numberOrNull(item.volume), fiftyTwoWeekHigh: numberOrNull(item.ohlc_52_week_high), fiftyTwoWeekLow: numberOrNull(item.ohlc_52_week_low), timestamp, ...metadata(timestamp, availability) };
+      const parsed = marketQuoteSchema.safeParse(quote);
+      return parsed.success ? { data: parsed.data, metadata: metadata(timestamp, availability) } : failure("INVALID_RESPONSE", "Market data temporarily unavailable.");
+    } catch (error) { return mapError(error); }
+  }
+
+  async getQuotes(keys: string[]): Promise<ProviderResult<MarketQuote[]>> {
+    const results = await Promise.all(keys.map(key => this.getQuote(key)));
+    return { data: results.flatMap(result => result.data ? [result.data] : []), metadata: metadata(new Date().toISOString(), results.some(result => result.data) ? "delayed" : "unavailable"), error: results.every(result => !result.data) ? results[0]?.error : undefined };
+  }
+
+  async getHistoricalPrices(key: string, range: HistoricalRange): Promise<ProviderResult<HistoricalPrice[]>> {
+    if (!hasUpstoxAnalyticsToken()) return failure("AUTH_REQUIRED", "Market data authentication is not configured.");
+    const settings: Record<HistoricalRange, { days: number; unit: "days" | "weeks" | "months" }> = { "1D": { days: 1, unit: "days" }, "1W": { days: 7, unit: "days" }, "1M": { days: 31, unit: "days" }, "3M": { days: 93, unit: "days" }, "6M": { days: 186, unit: "days" }, "1Y": { days: 366, unit: "days" }, "3Y": { days: 1096, unit: "weeks" }, "5Y": { days: 1827, unit: "weeks" }, "MAX": { days: 3650, unit: "months" } };
+    const { days, unit } = settings[range];
+    const to = new Date(); const from = new Date(to.getTime() - days * 86_400_000); const format = (date: Date) => date.toISOString().slice(0, 10);
+    try {
+      const raw = await upstoxGet<{ data?: { candles?: unknown } }>(`/v3/historical-candle/${encodeURIComponent(key)}/${unit}/1/${format(to)}/${format(from)}`, { ttlMs: 3_600_000 });
+      const data = transformCandles(raw.data?.candles);
+      return { data, metadata: metadata(data[0]?.date ?? null, data.length ? "recent" : "unavailable") };
+    } catch (error) { return mapError(error); }
+  }
+
+  async getIntradayPrices(key: string): Promise<ProviderResult<HistoricalPrice[]>> {
+    if (!hasUpstoxAnalyticsToken()) return failure("AUTH_REQUIRED", "Market data authentication is not configured.");
+    try {
+      const raw = await upstoxGet<{ data?: { candles?: unknown } }>(`/v3/historical-candle/intraday/${encodeURIComponent(key)}/minutes/5`, { ttlMs: 30_000 });
+      const data = transformCandles(raw.data?.candles);
+      return { data, metadata: metadata(data[0]?.date ?? null, data.length ? "live" : "unavailable") };
+    } catch (error) { return mapError(error); }
+  }
+
+  async getCompanyProfile(symbol: string) { const data = identityFor(symbol); return { data, metadata: metadata(null, data ? "recent" : "unavailable") }; }
+
+  async getFundamentals(symbol: string): Promise<ProviderResult<CompanyFundamentals>> {
+    const instrument = identityFor(symbol);
+    if (!instrument?.isin) return failure("NOT_FOUND", "Fundamental data is unavailable for this security.");
+    try {
+      const raw = await upstoxGet<{ data?: Array<{ name?: string; company_value?: string }> }>(`/v2/fundamentals/${instrument.isin}/key-ratios`, { ttlMs: 21_600_000 });
+      const ratios = new Map((raw.data ?? []).map(item => [item.name, numberOrNull(item.company_value)]));
+      return { data: { ...instrument, marketCap: null, pe: ratios.get("P/E") ?? null, pb: ratios.get("P/B") ?? null, eps: null, bookValue: null, dividendYield: null, roe: ratios.get("ROE") ?? null, roce: ratios.get("ROCE") ?? null, roa: ratios.get("ROA") ?? null, evEbitda: ratios.get("EV/EBITDA") ?? null, debtToEquity: null, ...metadata(new Date().toISOString(), "recent") }, metadata: metadata(new Date().toISOString(), "recent") };
+    } catch (error) { return mapError(error); }
+  }
+  async getFinancialStatements(): Promise<ProviderResult<FinancialStatements>> { return failure("NOT_SUPPORTED", "Financial statements are not yet normalized."); }
+
+  async getShareholding(symbol: string): Promise<ProviderResult<Shareholding>> {
+    const instrument = identityFor(symbol); if (!instrument?.isin) return failure("NOT_FOUND", "Shareholding data is unavailable for this security.");
+    try {
+      const raw = await upstoxGet<{ data?: Array<{ category?: string; history?: Array<{ period?: string; value?: number }> }> }>(`/v2/fundamentals/${instrument.isin}/share-holdings`, { ttlMs: 21_600_000 });
+      const entries = new Map((raw.data ?? []).map(item => [item.category, item.history?.[0]?.value ?? null]));
+      return { data: { ...instrument, promoterHolding: entries.get("promoters") ?? null, fiiHolding: entries.get("fii") ?? null, diiHolding: entries.get("other_dii") ?? null, mutualFundHolding: entries.get("mutual_funds") ?? null, publicHolding: entries.get("retail_and_other") ?? null, history: raw.data ?? [], ...metadata(new Date().toISOString(), "recent") }, metadata: metadata(new Date().toISOString(), "recent") };
+    } catch (error) { return mapError(error); }
+  }
+
+  async getCorporateActions(symbol: string): Promise<ProviderResult<CorporateAction[]>> {
+    const instrument = identityFor(symbol); if (!instrument?.isin) return failure("NOT_FOUND", "Corporate actions are unavailable for this security.");
+    try {
+      const raw = await upstoxGet<{ data?: Array<{ name?: string; expiry_date?: string; amount?: number; ratio?: string | null; event_details?: Array<{ name?: string; value?: string }> }> }>(`/v2/fundamentals/${instrument.isin}/corporate-actions`, { ttlMs: 21_600_000 });
+      const data = (raw.data ?? []).map(action => { const details = new Map((action.event_details ?? []).map(item => [item.name?.toLowerCase(), item.value ?? null])); const name = action.name?.toLowerCase() ?? "other"; const type: CorporateAction["type"] = name.includes("dividend") ? "dividend" : name.includes("split") ? "split" : name.includes("bonus") ? "bonus" : name.includes("right") ? "rights" : name.includes("buyback") ? "buyback" : "other"; return { type, exDate: details.get("ex dividend date") ?? action.expiry_date ?? null, recordDate: details.get("record date") ?? null, announcementDate: details.get("announcement date") ?? null, amount: action.amount ?? null, ratio: action.ratio ?? null, description: details.get("details") ?? action.name ?? "Corporate action" }; });
+      return { data, metadata: metadata(new Date().toISOString(), "recent") };
+    } catch (error) { return mapError(error); }
+  }
+
+  async getMarketStatus(): Promise<ProviderResult<{ session: "OPEN" | "CLOSED" }>> {
+    const parts = new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Kolkata", weekday: "short", hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(new Date());
+    const weekday = parts.find(item => item.type === "weekday")?.value; const hour = Number(parts.find(item => item.type === "hour")?.value); const minute = Number(parts.find(item => item.type === "minute")?.value); const total = hour * 60 + minute;
+    return { data: { session: !["Sat", "Sun"].includes(weekday ?? "") && total >= 555 && total < 930 ? "OPEN" : "CLOSED" }, metadata: metadata(new Date().toISOString(), "recent") };
+  }
+}

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, BarChart3, Database, Search, ShieldCheck } from 'lucide-react'
+import { ArrowRight, BarChart3, Database, Search } from 'lucide-react'
 import SiteFrame from '../components/SiteFrame'
 import styles from './markets.module.css'
+import MarketOverview from './MarketOverview'
 
 export const metadata: Metadata = {
   title: 'Indian Markets & Stock Search',
@@ -34,10 +35,7 @@ export default function MarketsPage() {
           </form>
         </section>
 
-        <section aria-labelledby="market-pulse" className={styles.pulse}>
-          <div><span>Market Pulse</span><h2 id="market-pulse">Market intelligence data pending</h2><p>No composite score is shown because a verified Market Pulse calculation is not connected.</p></div>
-          <ShieldCheck size={28} aria-hidden="true" />
-        </section>
+        <MarketOverview />
 
         <section className={styles.grid} aria-label="Market data availability">
           <article><Database size={19} /><span>Security master</span><strong>Verified instruments</strong><p>Identity records power search and canonical stock routes.</p></article>

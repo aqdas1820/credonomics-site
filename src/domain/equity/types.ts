@@ -42,6 +42,8 @@ export type CompanyFundamentals = IndianEquityIdentity &
     dividendYield: FinancialValue;
     roe: FinancialValue;
     roce: FinancialValue;
+    roa: FinancialValue;
+    evEbitda: FinancialValue;
     debtToEquity: FinancialValue;
   };
 
@@ -60,7 +62,9 @@ export type Shareholding = IndianEquityIdentity &
     promoterHolding: FinancialValue;
     fiiHolding: FinancialValue;
     diiHolding: FinancialValue;
+    mutualFundHolding: FinancialValue;
     publicHolding: FinancialValue;
+    history: Array<{ category?: string; history?: Array<{ period?: string; value?: number }> }>;
   };
 
 export type HistoricalPrice = {
@@ -76,6 +80,9 @@ export type CorporateAction = {
   type: "dividend" | "split" | "bonus" | "rights" | "buyback" | "other";
   exDate: string | null;
   recordDate: string | null;
+  announcementDate: string | null;
+  amount: number | null;
+  ratio: string | null;
   description: string;
 };
 

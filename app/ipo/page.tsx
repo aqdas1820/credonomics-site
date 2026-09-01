@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import SiteFrame from '../components/SiteFrame'
 import IPODashboardClient from './IPODashboardClient'
+import LiveIpoPanel from './LiveIpoPanel'
 
 export const metadata: Metadata = {
   title: 'IPO Intelligence Dashboard',
@@ -53,6 +54,7 @@ export default function IPOPage() {
 
   return (
     <SiteFrame>
+      <LiveIpoPanel />
       <IPODashboardClient />
 
       <script

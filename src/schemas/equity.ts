@@ -47,6 +47,8 @@ export const companyFundamentalsSchema = indianEquityIdentitySchema
     dividendYield: nullableNumberSchema,
     roe: nullableNumberSchema,
     roce: nullableNumberSchema,
+    roa: nullableNumberSchema,
+    evEbitda: nullableNumberSchema,
     debtToEquity: nullableNumberSchema,
   });
 
@@ -67,7 +69,9 @@ export const shareholdingSchema = indianEquityIdentitySchema
     promoterHolding: nullableNumberSchema,
     fiiHolding: nullableNumberSchema,
     diiHolding: nullableNumberSchema,
+    mutualFundHolding: nullableNumberSchema,
     publicHolding: nullableNumberSchema,
+    history: z.array(z.object({ category: z.string().optional(), history: z.array(z.object({ period: z.string().optional(), value: z.number().optional() })).optional() })),
   });
 
 export const historicalPriceSchema = z.object({
