@@ -754,7 +754,7 @@ export default function IPOHubClient({
         <div className="drawerBackdrop" onClick={() => setSelected(null)}>
           <aside className="drawer" onClick={(e) => e.stopPropagation()}>
             <button className="close" onClick={() => setSelected(null)}>
-              Ã—
+              ×
             </button>
 
             <div className="drawerHero">

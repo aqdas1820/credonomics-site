@@ -441,6 +441,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 60
   },
   {
+    "id": "route:/markets",
+    "title": "Indian Markets & Stock Search",
+    "description": "Search the verified CredoNomics Indian equity security master and open source-aware stock market pages.",
+    "href": "/markets",
+    "category": "Platform",
+    "source": "CredoNomics",
+    "updated": "",
+    "keywords": "markets Indian Markets & Stock Search Platform",
+    "priority": 60
+  },
+  {
     "id": "route:/stocks/search",
     "title": "Indian Stock Search",
     "description": "Search verified Indian listed-company records by company, NSE symbol, BSE code or ISIN when a market-data provider is connected.",

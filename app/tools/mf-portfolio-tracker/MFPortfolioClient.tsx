@@ -1208,7 +1208,7 @@ export default function MFPortfolioClient({
               onClick={() => setDrawerSlug(null)}
               aria-label="Close security detail"
             >
-              Ã—
+              ×
             </button>
 
             {drawerLoading && (
@@ -1833,8 +1833,9 @@ const styles = `
     background: #fbfdfd;
   }
 
-  td strong {
-    color: #07182a;
+  .mfTableWrap td strong,
+  .mfMatrixWrap td strong {
+    color: #edf4f8;
   }
 
   .rank,

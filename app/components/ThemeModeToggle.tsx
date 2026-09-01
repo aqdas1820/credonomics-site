@@ -45,33 +45,17 @@ export default function ThemeModeToggle({ compact = false }: Props) {
   }
 
   return (
-    <div
+    <button
+      type="button"
       className={`${styles.selector} ${compact ? styles.compact : ''}`}
-      role="group"
-      aria-label="Website appearance"
+      aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+      aria-pressed={theme === 'dark'}
       data-mounted={mounted ? 'true' : 'false'}
+      onClick={() => choose(theme === 'dark' ? 'light' : 'dark')}
+      title={`Use ${theme === 'dark' ? 'light' : 'dark'} theme`}
     >
-      <button
-        type="button"
-        className={theme === 'light' ? styles.active : undefined}
-        aria-pressed={theme === 'light'}
-        onClick={() => choose('light')}
-        title="Use white mode"
-      >
-        <Sun size={14} />
-        <span>White</span>
-      </button>
-
-      <button
-        type="button"
-        className={theme === 'dark' ? styles.active : undefined}
-        aria-pressed={theme === 'dark'}
-        onClick={() => choose('dark')}
-        title="Use black mode"
-      >
-        <Moon size={14} />
-        <span>Black</span>
-      </button>
-    </div>
+      {theme === 'dark' ? <Moon size={16} /> : <Sun size={16} />}
+      {!compact ? <span>{theme === 'dark' ? 'Dark' : 'Light'}</span> : null}
+    </button>
   )
 }

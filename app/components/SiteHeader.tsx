@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { BarChart3, Home, Menu, Search, Wrench, X } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import styles from '../core-v4.module.css'
@@ -9,24 +9,20 @@ import ThemeModeToggle from './ThemeModeToggle'
 import SiteSearch from './SiteSearch'
 
 const primaryNav = [
+  { href: '/markets', label: 'Markets' },
   { href: '/research', label: 'Research' },
   { href: '/ipo', label: 'IPOs' },
   { href: '/tools/mf-portfolio-tracker', label: 'Mutual Funds' },
   { href: '/cards', label: 'Cards' },
   { href: '/tools', label: 'Tools' },
-  { href: '/about', label: 'About' },
 ]
 
-const intelligenceNav = [
-  { href: '/research', title: 'Research', detail: 'Frameworks' },
-  { href: '/ipo/calendar', title: 'IPO Calendar', detail: 'Primary market' },
-  {
-    href: '/tools/mf-portfolio-tracker',
-    title: 'MF Intelligence',
-    detail: 'Portfolio data',
-  },
-  { href: '/cards', title: 'Card Intelligence', detail: 'Product economics' },
-  { href: '/methodology', title: 'Methodology', detail: 'Sources & limits' },
+const mobileNav = [
+  { href: '/', label: 'Home', icon: Home },
+  { href: '/markets', label: 'Markets', icon: BarChart3 },
+  { href: '/search', label: 'Search', icon: Search },
+  { href: '/research', label: 'Research', icon: BarChart3 },
+  { href: '/tools', label: 'Tools', icon: Wrench },
 ]
 
 export default function SiteHeader() {
@@ -115,33 +111,19 @@ export default function SiteHeader() {
         </div>
       </header>
 
-      <div className={styles.intelligenceStrip}>
-        <div className={styles.intelligenceStripInner}>
-          <div className={styles.intelligenceIdentity}>
-            <span className={styles.intelligenceLive}>
-              <i />
-              Intelligence Desk
-            </span>
-
-            <span className={styles.intelligenceDivider} />
-            <span className={styles.intelligenceStatus}>
-              Source-aware research
-            </span>
-          </div>
-
-          <nav
-            className={styles.intelligenceNav}
-            aria-label="Intelligence shortcuts"
+      <nav className={styles.mobileDock} aria-label="Mobile primary navigation">
+        {mobileNav.map(({ href, label, icon: Icon }) => (
+          <Link
+            href={href}
+            key={href}
+            className={isActive(href) ? styles.mobileDockActive : undefined}
+            aria-current={isActive(href) ? 'page' : undefined}
           >
-            {intelligenceNav.map((item) => (
-              <Link href={item.href} key={item.href}>
-                <strong>{item.title}</strong>
-                <small>{item.detail}</small>
-              </Link>
-            ))}
-          </nav>
-        </div>
-      </div>
+            <Icon size={18} aria-hidden="true" />
+            <span>{label}</span>
+          </Link>
+        ))}
+      </nav>
     </>
   )
 }

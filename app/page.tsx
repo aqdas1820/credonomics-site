@@ -9,6 +9,15 @@ import { PUBLIC_REVIEW_DATE } from "./data/tool-registry";
 import styles from "./home-investment.module.css";
 import HomeIntelligenceRail from './components/HomeIntelligenceRail'
 
+const quickActions = [
+  ['Markets', '/markets'],
+  ['Stocks', '/search'],
+  ['Mutual Funds', '/mutual-funds'],
+  ['IPOs', '/ipo'],
+  ['Cards', '/cards'],
+  ['Tools', '/tools'],
+]
+
 const capabilities = [
   {
     eyebrow: "RESEARCH DESK",
@@ -75,6 +84,25 @@ export default function HomePage() {
       <div className={styles.page}>
       <div className={styles.ambientOne} />
       <div className={styles.ambientTwo} />
+      <section className={styles.appHome}>
+        <div className={styles.appHomeIntro}>
+          <span className={styles.sectionEyebrow}>CREDONOMICS HOME</span>
+          <h1>Financial intelligence,<br />without the noise.</h1>
+          <p>Markets, research and practical decision tools in one source-aware workspace.</p>
+        </div>
+        <div className={styles.marketStatus} aria-label="Market data status">
+          <div><span>Market status</span><strong>Live index feed unavailable</strong></div>
+          <p>Verified market values will appear here when the connected provider is available.</p>
+          <Link href="/markets">Open Markets <span>→</span></Link>
+        </div>
+        <div className={styles.pulsePanel}>
+          <div><span className={styles.sectionEyebrow}>MARKET PULSE</span><h2>Intelligence data pending</h2><p>A composite score is intentionally withheld until verified inputs and methodology are connected.</p></div>
+          <Link href="/methodology">How data is handled</Link>
+        </div>
+        <nav className={styles.quickActions} aria-label="Quick actions">
+          {quickActions.map(([label, href]) => <Link href={href} key={href}><span>{label}</span><b>→</b></Link>)}
+        </nav>
+      </section>
       <LatestReportBanner />
       <HomepageDiscovery />
       <section className={styles.hero}>
@@ -86,7 +114,7 @@ export default function HomePage() {
             </div>
 
             <h1>
-              Research beyond
+              Research beyond{' '}
               <em>market noise.</em>
             </h1>
 

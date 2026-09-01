@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import StockSearchClient from "./StockSearchClient";
+import SiteFrame from "../../components/SiteFrame";
 
 export const metadata: Metadata = {
   title: "Indian Stock Search",
@@ -9,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function StockSearchPage() {
-  return <StockSearchClient />;
+  return <SiteFrame><StockSearchClient /></SiteFrame>;
 }

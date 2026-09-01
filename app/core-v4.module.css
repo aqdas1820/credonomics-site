@@ -4510,3 +4510,56 @@
 }
 
 /* === CREDONOMICS_V17_5_1_BRAND_WEIGHT_END === */
+
+/* === CREDONOMICS_APP_SHELL_2026_BEGIN === */
+.siteShell{
+  --bg:#0a0d10;
+  --surface:#11161b;
+  --surface-2:#171d23;
+  --elevated:#1c232a;
+  --ink:#f3f6f4;
+  --muted:#9ca9a3;
+  --line:rgba(255,255,255,.09);
+  --teal:#37d996;
+  --positive:#37d996;
+  --negative:#ff6b72;
+  --warning:#f5bd58;
+  --focus:#7ce8bb;
+  background:var(--bg);
+  color:var(--ink);
+}
+:global(html[data-theme='light']) .siteShell{
+  --bg:#f3f6f4;
+  --surface:#ffffff;
+  --surface-2:#e9efeb;
+  --elevated:#ffffff;
+  --ink:#101713;
+  --muted:#5d6b64;
+  --line:rgba(16,23,19,.11);
+  --teal:#087f52;
+  --positive:#087f52;
+  --negative:#c7363e;
+  --warning:#9b6500;
+  --focus:#087f52;
+}
+.globalHeader{background:color-mix(in srgb,var(--bg) 90%,transparent)!important}
+.globalHeaderInner{min-height:68px;max-width:1320px}
+.globalNavActive:after{background:var(--teal)}
+.globalResearchCta{background:var(--teal);border-color:var(--teal);box-shadow:none}
+.pageMain{background:var(--bg)}
+.mobileDock{display:none}
+@media(max-width:880px){
+  .pageMain{padding-bottom:72px}
+  .globalHeaderInner{width:min(100% - 32px,1320px)}
+  .globalResearchCta{display:none}
+  .mobileDock{
+    position:fixed;z-index:130;left:0;right:0;bottom:0;
+    min-height:64px;display:grid;grid-template-columns:repeat(5,1fr);
+    padding:6px max(8px,env(safe-area-inset-right)) calc(6px + env(safe-area-inset-bottom));
+    border-top:1px solid var(--line);background:color-mix(in srgb,var(--bg) 94%,transparent);
+    backdrop-filter:blur(20px)
+  }
+  .mobileDock a{display:flex;min-width:0;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:var(--muted)!important;font-size:10px;font-weight:750}
+  .mobileDockActive{color:var(--teal)!important}
+}
+/* === CREDONOMICS_APP_SHELL_2026_END === */

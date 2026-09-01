@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-const routes = ["/", "/ipo", "/mutual-funds", "/tools/mf-portfolio-tracker", "/cards", "/tools/cashback-calculator", "/stocks/search"];
+const routes = ["/", "/markets", "/search", "/research", "/ipo", "/mutual-funds", "/tools/mf-portfolio-tracker", "/cards", "/tools", "/tools/cashback-calculator", "/stocks/search", "/stocks/nse/RELIANCE"];
 
 for (const route of routes) {
   test(`${route} loads without runtime errors or page overflow`, async ({ page }) => {
@@ -8,11 +8,20 @@ for (const route of routes) {
     page.on("pageerror", (error) => errors.push(error.message));
     await page.goto(route);
     await expect(page.locator("main").first()).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1 }).first()).toBeVisible();
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
     expect(overflow).toBeLessThanOrEqual(1);
     expect(errors).toEqual([]);
   });
 }
+
+test("public pages do not expose common mojibake", async ({ page }) => {
+  for (const route of routes) {
+    await page.goto(route);
+    const text = await page.locator("body").innerText();
+    expect(text, `Malformed text on ${route}`).not.toMatch(/\u00c3\u00a2|\u00c3\u0082|\u00c3\u0192|\u00ef\u00bf\u00bd/);
+  }
+});
 
 test("primary navigation reaches IPO intelligence", async ({ page }, testInfo) => {
   await page.goto("/");

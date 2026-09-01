@@ -2774,13 +2774,6 @@ th{
 
 /* === CREDONOMICS_V20_PERFORMANCE_POLISH_BEGIN === */
 
-@media(min-width:821px){
-  main section:not(:first-child){
-    content-visibility:auto;
-    contain-intrinsic-size:auto 620px;
-  }
-}
-
 @media(prefers-reduced-data:reduce){
   *,
   *::before,
