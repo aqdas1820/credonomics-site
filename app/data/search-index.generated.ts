@@ -79,24 +79,24 @@ export const searchIndex: readonly SearchEntry[] = [
   },
   {
     "id": "route:/ipo",
-    "title": "IPO Intelligence India",
-    "description": "IPO dashboard for India with SEBI filing discovery, current and upcoming IPO research, Mainboard and SME filters, calendar, subscription data and transparent quantitative analysis.",
+    "title": "IPO Intelligence Dashboard",
+    "description": "Track current and upcoming Indian IPOs, Mainboard and SME issues, price bands, important dates and CredoNomics primary-market research.",
     "href": "/ipo",
     "category": "IPO",
     "source": "IPO market records",
     "updated": "",
-    "keywords": "ipo IPO Intelligence India IPO",
+    "keywords": "ipo IPO Intelligence Dashboard IPO",
     "priority": 94
   },
   {
     "id": "route:/tools/mf-portfolio-tracker",
-    "title": "Follow the funds that actually matter.",
-    "description": "Explore Follow the funds that actually matter. on CredoNomics Investment Solutions.",
+    "title": "Mutual Fund Portfolio Intelligence | CredoNomics",
+    "description": "Track selected HDFC active-equity fund holdings, consensus ownership, accumulation, exits, sector rotation and monthly portfolio changes.",
     "href": "/tools/mf-portfolio-tracker",
     "category": "Mutual Funds",
     "source": "Portfolio disclosures",
     "updated": "",
-    "keywords": "tools mf-portfolio-tracker Follow the funds that actually matter. Mutual Funds",
+    "keywords": "tools mf-portfolio-tracker Mutual Fund Portfolio Intelligence | CredoNomics Mutual Funds",
     "priority": 93
   },
   {
@@ -438,6 +438,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "CredoNomics tools",
     "updated": "",
     "keywords": "tools fuel-surcharge-waiver Fuel Surcharge Waiver Calculator India Tools",
+    "priority": 60
+  },
+  {
+    "id": "route:/stocks/search",
+    "title": "Indian Stock Search",
+    "description": "Search verified Indian listed-company records by company, NSE symbol, BSE code or ISIN when a market-data provider is connected.",
+    "href": "/stocks/search",
+    "category": "Platform",
+    "source": "CredoNomics",
+    "updated": "",
+    "keywords": "stocks search Indian Stock Search Platform",
     "priority": 60
   },
   {

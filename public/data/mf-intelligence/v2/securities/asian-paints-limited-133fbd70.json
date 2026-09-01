@@ -1,0 +1,120 @@
+{
+  "securityId": "NAME:asian-paints-limited",
+  "slug": "asian-paints-limited-133fbd70",
+  "isin": null,
+  "stock": "Asian Paints Limited",
+  "sector": "Consumer Durables",
+  "firstTracked": "2025-11",
+  "latestTracked": "2026-06",
+  "monthsTracked": 5,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.3,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.27,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-11",
+      "schemeCount": 1,
+      "totalWeight": 0.3,
+      "normalizedWeight": 0.3,
+      "avgHeldWeight": 0.3
+    },
+    {
+      "month": "2025-12",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    },
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 0.25,
+      "normalizedWeight": 0.25,
+      "avgHeldWeight": 0.25
+    },
+    {
+      "month": "2026-04",
+      "schemeCount": 1,
+      "totalWeight": 0.26,
+      "normalizedWeight": 0.26,
+      "avgHeldWeight": 0.26
+    },
+    {
+      "month": "2026-06",
+      "schemeCount": 1,
+      "totalWeight": 0.27,
+      "normalizedWeight": 0.27,
+      "avgHeldWeight": 0.27
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-11",
+          "weight": 0.3,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-12",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-02",
+          "weight": 0.25,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-04",
+          "weight": 0.26,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-06",
+          "weight": 0.27,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-11",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-12",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

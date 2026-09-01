@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:corporation-ltd",
+  "slug": "corporation-ltd-3f754f62",
+  "isin": null,
+  "stock": "Corporation Ltd.",
+  "sector": "Cement & Cement Products",
+  "firstTracked": "2026-04",
+  "latestTracked": "2026-04",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.45,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.45,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-04",
+      "schemeCount": 1,
+      "totalWeight": 0.45,
+      "normalizedWeight": 0.45,
+      "avgHeldWeight": 0.45
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-04",
+          "weight": 0.45,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

@@ -150,7 +150,7 @@ export default function ResearchPage() {
             </div>
             <p>
               These articles explain the maths and decision rules behind a
-              product instead of assuming todayâ€™s terms will remain unchanged.
+              product instead of assuming today’s terms will remain unchanged.
             </p>
           </div>
 

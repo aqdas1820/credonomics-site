@@ -76,7 +76,7 @@ export default function SearchWorkspace({
           <strong>{results.length}</strong>
           <span>
             {query.trim()
-              ? `results for â€œ${query.trim()}â€`
+              ? `results for “${query.trim()}”`
               : 'CredoNomics intelligence entries'}
           </span>
         </div>

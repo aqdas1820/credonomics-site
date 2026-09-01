@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:nilkamal-ltd",
+  "slug": "nilkamal-ltd-b23abeb4",
+  "isin": null,
+  "stock": "Nilkamal Ltd.",
+  "sector": "Consumer Durables",
+  "firstTracked": "2026-01",
+  "latestTracked": "2026-01",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.1,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.1,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-01",
+      "schemeCount": 1,
+      "totalWeight": 0.1,
+      "normalizedWeight": 0.1,
+      "avgHeldWeight": 0.1
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-01",
+          "weight": 0.1,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

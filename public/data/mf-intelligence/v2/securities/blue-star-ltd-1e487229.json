@@ -1,0 +1,148 @@
+{
+  "securityId": "NAME:blue-star-ltd",
+  "slug": "blue-star-ltd-1e487229",
+  "isin": null,
+  "stock": "Blue Star Ltd.",
+  "sector": "Consumer Durables",
+  "firstTracked": "2025-01",
+  "latestTracked": "2026-03",
+  "monthsTracked": 6,
+  "maxSchemeCount": 2,
+  "peakNormalizedWeight": 0.32,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.31,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-01",
+      "schemeCount": 1,
+      "totalWeight": 0.24,
+      "normalizedWeight": 0.24,
+      "avgHeldWeight": 0.24
+    },
+    {
+      "month": "2025-02",
+      "schemeCount": 2,
+      "totalWeight": 0.53,
+      "normalizedWeight": 0.265,
+      "avgHeldWeight": 0.265
+    },
+    {
+      "month": "2025-03",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    },
+    {
+      "month": "2025-12",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    },
+    {
+      "month": "2026-01",
+      "schemeCount": 1,
+      "totalWeight": 0.32,
+      "normalizedWeight": 0.32,
+      "avgHeldWeight": 0.32
+    },
+    {
+      "month": "2026-03",
+      "schemeCount": 1,
+      "totalWeight": 0.31,
+      "normalizedWeight": 0.31,
+      "avgHeldWeight": 0.31
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-02",
+          "weight": 0.25,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2025-01",
+          "weight": 0.24,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-02",
+          "weight": 0.28,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-03",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-12",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-01",
+          "weight": 0.32,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-03",
+          "weight": 0.31,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-12",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

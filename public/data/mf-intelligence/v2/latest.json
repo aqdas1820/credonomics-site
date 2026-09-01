@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "mf-v2",
+  "latestMonth": "2026-06",
+  "previousMonth": "2026-05",
+  "metadata": {
+    "source": "HDFC Mutual Fund official monthly portfolio disclosures (repository extraction)",
+    "sourceFile": "holdings_public.csv",
+    "asOf": "2026-06-30T23:59:59.000Z",
+    "generatedAt": "2026-08-10T11:24:20.991Z",
+    "quality": "PARTIAL",
+    "availability": "partial",
+    "recordCount": 874,
+    "schemaVersion": "mf-v2",
+    "coverageStart": "2025-01",
+    "coverageEnd": "2026-06",
+    "schemeCount": 3,
+    "holdingCount": 874,
+    "validationStatus": "PASSED_WITH_WARNINGS",
+    "sourceSha256": "09e4e46b1314a86409d71300762833c4eb8ca7cbea15ee8cb410747cdbeb204b"
+  },
+  "summary": {
+    "holdings": 56,
+    "schemes": 2
+  },
+  "topConsensus": [],
+  "signals": {},
+  "sectorRotation": [],
+  "ownershipMatrix": []
+}

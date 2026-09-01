@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:sbi-cards-and-payment-services-limited",
+  "slug": "sbi-cards-and-payment-services-limited-f2e41ca6",
+  "isin": null,
+  "stock": "SBI CARDS AND PAYMENT SERVICES LIMITED",
+  "sector": "Finance",
+  "firstTracked": "2026-02",
+  "latestTracked": "2026-02",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.26,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.26,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 0.26,
+      "normalizedWeight": 0.26,
+      "avgHeldWeight": 0.26
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-02",
+          "weight": 0.26,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

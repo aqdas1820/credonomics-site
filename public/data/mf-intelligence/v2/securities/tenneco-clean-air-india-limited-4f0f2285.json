@@ -1,0 +1,102 @@
+{
+  "securityId": "NAME:tenneco-clean-air-india-limited",
+  "slug": "tenneco-clean-air-india-limited-4f0f2285",
+  "isin": null,
+  "stock": "TENNECO CLEAN AIR INDIA LIMITED",
+  "sector": "Auto Components",
+  "firstTracked": "2026-01",
+  "latestTracked": "2026-06",
+  "monthsTracked": 4,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.04,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.04,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-01",
+      "schemeCount": 1,
+      "totalWeight": 0.04,
+      "normalizedWeight": 0.04,
+      "avgHeldWeight": 0.04
+    },
+    {
+      "month": "2026-03",
+      "schemeCount": 1,
+      "totalWeight": 0.04,
+      "normalizedWeight": 0.04,
+      "avgHeldWeight": 0.04
+    },
+    {
+      "month": "2026-05",
+      "schemeCount": 1,
+      "totalWeight": 0.04,
+      "normalizedWeight": 0.04,
+      "avgHeldWeight": 0.04
+    },
+    {
+      "month": "2026-06",
+      "schemeCount": 1,
+      "totalWeight": 0.04,
+      "normalizedWeight": 0.04,
+      "avgHeldWeight": 0.04
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-01",
+          "weight": 0.04,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-03",
+          "weight": 0.04,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-05",
+          "weight": 0.04,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-06",
+          "weight": 0.04,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

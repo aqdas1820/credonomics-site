@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import { ArrowRight, Building2, CalendarCheck, ExternalLink, Layers3, ShieldCheck } from 'lucide-react'
+import { ArrowRight, Building2, ExternalLink, Layers3, ShieldCheck } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
 import CategoryComparator from '../components/CategoryComparator'
 import RealCardRanking from '../components/RealCardRanking'

@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:titagarh-wagons-limited",
+  "slug": "titagarh-wagons-limited-084a18f6",
+  "isin": null,
+  "stock": "Titagarh Wagons Limited",
+  "sector": "Industrial Manufacturing",
+  "firstTracked": "2025-02",
+  "latestTracked": "2025-02",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.19,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.19,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-02",
+      "schemeCount": 1,
+      "totalWeight": 0.19,
+      "normalizedWeight": 0.19,
+      "avgHeldWeight": 0.19
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-02",
+          "weight": 0.19,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:bharat-petroleum-corporation-ltd",
+  "slug": "bharat-petroleum-corporation-ltd-eb8475f5",
+  "isin": null,
+  "stock": "Bharat Petroleum Corporation Ltd.",
+  "sector": "Petroleum Products",
+  "firstTracked": "2026-06",
+  "latestTracked": "2026-06",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.37,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.37,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-06",
+      "schemeCount": 1,
+      "totalWeight": 0.37,
+      "normalizedWeight": 0.37,
+      "avgHeldWeight": 0.37
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-06",
+          "weight": 0.37,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

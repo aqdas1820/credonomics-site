@@ -1,0 +1,120 @@
+{
+  "securityId": "NAME:bombay-stock-exchange-limited-bse",
+  "slug": "bombay-stock-exchange-limited-bse-1313159e",
+  "isin": null,
+  "stock": "Bombay Stock Exchange Limited (BSE)",
+  "sector": "Capital Markets",
+  "firstTracked": "2025-11",
+  "latestTracked": "2026-06",
+  "monthsTracked": 5,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.37,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.37,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-11",
+      "schemeCount": 1,
+      "totalWeight": 0.25,
+      "normalizedWeight": 0.25,
+      "avgHeldWeight": 0.25
+    },
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 0.26,
+      "normalizedWeight": 0.26,
+      "avgHeldWeight": 0.26
+    },
+    {
+      "month": "2026-03",
+      "schemeCount": 1,
+      "totalWeight": 0.3,
+      "normalizedWeight": 0.3,
+      "avgHeldWeight": 0.3
+    },
+    {
+      "month": "2026-04",
+      "schemeCount": 1,
+      "totalWeight": 0.36,
+      "normalizedWeight": 0.36,
+      "avgHeldWeight": 0.36
+    },
+    {
+      "month": "2026-06",
+      "schemeCount": 1,
+      "totalWeight": 0.37,
+      "normalizedWeight": 0.37,
+      "avgHeldWeight": 0.37
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-11",
+          "weight": 0.25,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-02",
+          "weight": 0.26,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-03",
+          "weight": 0.3,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-04",
+          "weight": 0.36,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-06",
+          "weight": 0.37,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-11",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

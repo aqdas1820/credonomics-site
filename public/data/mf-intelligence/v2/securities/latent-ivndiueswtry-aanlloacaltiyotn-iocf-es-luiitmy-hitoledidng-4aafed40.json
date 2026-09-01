@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:latent-ivndiueswtry-aanlloacaltiyotn-iocf-es-luiitmy-hitoledidng",
+  "slug": "latent-ivndiueswtry-aanlloacaltiyotn-iocf-es-luiitmy-hitoledidng-4aafed40",
+  "isin": null,
+  "stock": "LATENT IVndIuEsWtry AANlloAcaLtiYoTn IoCf ES LuiItMy HITolEdiDng",
+  "sector": "Software",
+  "firstTracked": "2026-04",
+  "latestTracked": "2026-04",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.01,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.01,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-04",
+      "schemeCount": 1,
+      "totalWeight": 0.01,
+      "normalizedWeight": 0.01,
+      "avgHeldWeight": 0.01
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-04",
+          "weight": 0.01,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

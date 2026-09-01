@@ -1,0 +1,192 @@
+{
+  "securityId": "NAME:redington-ltd",
+  "slug": "redington-ltd-63bc4beb",
+  "isin": null,
+  "stock": "Redington Ltd.",
+  "sector": "Commercial Services & Supplies",
+  "firstTracked": "2025-07",
+  "latestTracked": "2026-06",
+  "monthsTracked": 9,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.41,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.37,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-07",
+      "schemeCount": 1,
+      "totalWeight": 0.37,
+      "normalizedWeight": 0.37,
+      "avgHeldWeight": 0.37
+    },
+    {
+      "month": "2025-08",
+      "schemeCount": 1,
+      "totalWeight": 0.36,
+      "normalizedWeight": 0.36,
+      "avgHeldWeight": 0.36
+    },
+    {
+      "month": "2025-09",
+      "schemeCount": 1,
+      "totalWeight": 0.41,
+      "normalizedWeight": 0.41,
+      "avgHeldWeight": 0.41
+    },
+    {
+      "month": "2025-10",
+      "schemeCount": 1,
+      "totalWeight": 0.35,
+      "normalizedWeight": 0.35,
+      "avgHeldWeight": 0.35
+    },
+    {
+      "month": "2025-11",
+      "schemeCount": 1,
+      "totalWeight": 0.38,
+      "normalizedWeight": 0.38,
+      "avgHeldWeight": 0.38
+    },
+    {
+      "month": "2025-12",
+      "schemeCount": 1,
+      "totalWeight": 0.37,
+      "normalizedWeight": 0.37,
+      "avgHeldWeight": 0.37
+    },
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 0.38,
+      "normalizedWeight": 0.38,
+      "avgHeldWeight": 0.38
+    },
+    {
+      "month": "2026-03",
+      "schemeCount": 1,
+      "totalWeight": 0.31,
+      "normalizedWeight": 0.31,
+      "avgHeldWeight": 0.31
+    },
+    {
+      "month": "2026-06",
+      "schemeCount": 1,
+      "totalWeight": 0.37,
+      "normalizedWeight": 0.37,
+      "avgHeldWeight": 0.37
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-07",
+          "weight": 0.37,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-08",
+          "weight": 0.36,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-09",
+          "weight": 0.41,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-10",
+          "weight": 0.35,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-11",
+          "weight": 0.38,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-12",
+          "weight": 0.37,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-02",
+          "weight": 0.38,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-03",
+          "weight": 0.31,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-06",
+          "weight": 0.37,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-07",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-08",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-09",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-10",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-11",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-12",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

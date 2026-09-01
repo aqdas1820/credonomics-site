@@ -1,0 +1,138 @@
+{
+  "securityId": "NAME:kalpataru-projects-international-ltd",
+  "slug": "kalpataru-projects-international-ltd-fc9a3f50",
+  "isin": null,
+  "stock": "Kalpataru Projects International Ltd",
+  "sector": "Construction",
+  "firstTracked": "2025-11",
+  "latestTracked": "2026-06",
+  "monthsTracked": 6,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.34,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.34,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-11",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    },
+    {
+      "month": "2025-12",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    },
+    {
+      "month": "2026-01",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    },
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 0.32,
+      "normalizedWeight": 0.32,
+      "avgHeldWeight": 0.32
+    },
+    {
+      "month": "2026-03",
+      "schemeCount": 1,
+      "totalWeight": 0.3,
+      "normalizedWeight": 0.3,
+      "avgHeldWeight": 0.3
+    },
+    {
+      "month": "2026-06",
+      "schemeCount": 1,
+      "totalWeight": 0.34,
+      "normalizedWeight": 0.34,
+      "avgHeldWeight": 0.34
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2025-11",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-12",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-01",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-02",
+          "weight": 0.32,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-03",
+          "weight": 0.3,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-06",
+          "weight": 0.34,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-11",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-12",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

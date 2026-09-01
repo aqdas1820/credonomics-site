@@ -1,0 +1,94 @@
+{
+  "securityId": "NAME:eicher-motors-ltd",
+  "slug": "eicher-motors-ltd-be18b7a3",
+  "isin": null,
+  "stock": "Eicher Motors Ltd.",
+  "sector": "Automobiles",
+  "firstTracked": "2025-01",
+  "latestTracked": "2025-09",
+  "monthsTracked": 3,
+  "maxSchemeCount": 2,
+  "peakNormalizedWeight": 1.235,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.28,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-01",
+      "schemeCount": 2,
+      "totalWeight": 2.47,
+      "normalizedWeight": 1.235,
+      "avgHeldWeight": 1.235
+    },
+    {
+      "month": "2025-02",
+      "schemeCount": 1,
+      "totalWeight": 0.24,
+      "normalizedWeight": 0.24,
+      "avgHeldWeight": 0.24
+    },
+    {
+      "month": "2025-09",
+      "schemeCount": 1,
+      "totalWeight": 0.28,
+      "normalizedWeight": 0.28,
+      "avgHeldWeight": 0.28
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Focused Fund",
+      "history": [
+        {
+          "month": "2025-01",
+          "weight": 2.23,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2025-01",
+          "weight": 0.24,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-02",
+          "weight": 0.24,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-09",
+          "weight": 0.28,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-09",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

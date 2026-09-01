@@ -1,0 +1,66 @@
+{
+  "securityId": "NAME:universal-ltd",
+  "slug": "universal-ltd-e4ff37ea",
+  "isin": null,
+  "stock": "Universal Ltd.",
+  "sector": "Industrial Products",
+  "firstTracked": "2026-04",
+  "latestTracked": "2026-05",
+  "monthsTracked": 2,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.34,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.34,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-04",
+      "schemeCount": 1,
+      "totalWeight": 0.31,
+      "normalizedWeight": 0.31,
+      "avgHeldWeight": 0.31
+    },
+    {
+      "month": "2026-05",
+      "schemeCount": 1,
+      "totalWeight": 0.34,
+      "normalizedWeight": 0.34,
+      "avgHeldWeight": 0.34
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-04",
+          "weight": 0.31,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-05",
+          "weight": 0.34,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

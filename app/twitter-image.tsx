@@ -128,7 +128,7 @@ export default function TwitterImage() {
           }}
         >
           <span>credonomics.in</span>
-          <span>Equity â€¢ IPO â€¢ Mutual Funds â€¢ Tools</span>
+          <span>Equity • IPO • Mutual Funds • Tools</span>
         </div>
       </div>
     ),

@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:projects-international-ltd",
+  "slug": "projects-international-ltd-bd041753",
+  "isin": null,
+  "stock": "Projects International Ltd",
+  "sector": "Construction",
+  "firstTracked": "2026-05",
+  "latestTracked": "2026-05",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.33,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.33,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-05",
+      "schemeCount": 1,
+      "totalWeight": 0.33,
+      "normalizedWeight": 0.33,
+      "avgHeldWeight": 0.33
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-05",
+          "weight": 0.33,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

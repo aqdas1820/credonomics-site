@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:15-521-28cr-hcl-technologies-ltd",
+  "slug": "15-521-28cr-hcl-technologies-ltd-0d4e0a29",
+  "isin": null,
+  "stock": "₹15,521.28Cr. • HCL Technologies Ltd.",
+  "sector": "Software",
+  "firstTracked": "2025-01",
+  "latestTracked": "2025-01",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 3.41,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Focused Fund",
+      "weight": 3.41,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-01",
+      "schemeCount": 1,
+      "totalWeight": 3.41,
+      "normalizedWeight": 3.41,
+      "avgHeldWeight": 3.41
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Focused Fund",
+      "history": [
+        {
+          "month": "2025-01",
+          "weight": 3.41,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

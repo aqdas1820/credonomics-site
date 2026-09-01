@@ -1,8 +1,34 @@
 "use client";
 
 import { useMemo, useState } from "react";
-// Local compatibility type: page.tsx no longer exports NormalizedIPO.
-type NormalizedIPO = any;
+type NormalizedIPO = {
+  id: string;
+  company: string;
+  type: string;
+  status: string;
+  exchange: string | null;
+  issueType: string | null;
+  priceLow: number | null;
+  priceHigh: number | null;
+  lotSize: number | null;
+  issueSizeCr: number | null;
+  freshIssueCr: number | null;
+  ofsCr: number | null;
+  openDate: string | null;
+  closeDate: string | null;
+  allotmentDate: string | null;
+  listingDate: string | null;
+  listingPrice: number | null;
+  subscription: number | null;
+  gmp: number | null;
+  gain: number | null;
+  registrar: string | null;
+  leadManager: string | null;
+  sourceFile: string | null;
+  sourceUrl: string | null;
+  rhpUrl: string | null;
+  drhpUrl: string | null;
+};
 
 type Props = {
   initialIPOs: NormalizedIPO[];
@@ -15,7 +41,7 @@ type StatusFilter = "All" | "Open" | "Upcoming" | "Closed" | "Listed";
 
 function money(value: number | null, suffix = "") {
   if (value === null || !Number.isFinite(value)) return "—";
-  return `â‚¹${value.toLocaleString("en-IN", {
+  return `₹${value.toLocaleString("en-IN", {
     maximumFractionDigits: 2,
   })}${suffix}`;
 }
@@ -221,21 +247,21 @@ export default function IPOHubClient({
                 target="_blank"
                 rel="noreferrer"
               >
-                NSE IPO data â†—
+                NSE IPO data ↗
               </a>
               <a
                 href="https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx?id=1&Type=p"
                 target="_blank"
                 rel="noreferrer"
               >
-                BSE Public Issues â†—
+                BSE Public Issues ↗
               </a>
               <a
                 href="https://www.sebi.gov.in/Curation_Links_for_Securities_Market_Data.html"
                 target="_blank"
                 rel="noreferrer"
               >
-                SEBI source directory â†—
+                SEBI source directory ↗
               </a>
             </div>
           </aside>
@@ -353,7 +379,7 @@ export default function IPOHubClient({
             <h2>The new IPO terminal is installed, but no compatible IPO JSON was found.</h2>
             <p>
               Add or retain your IPO JSON inside <code>public/</code> with
-              â€œipoâ€ in its file/folder name. This page automatically normalizes
+              “ipo” in its file/folder name. This page automatically normalizes
               common fields such as company name, dates, price band, lot size,
               issue size, subscription, GMP, allotment and listing date.
             </p>
@@ -717,7 +743,7 @@ export default function IPOHubClient({
               CredoNomics is not registered with SEBI as an Investment Adviser
               or Research Analyst. IPO data can change during the issue period.
               Verify dates, price bands, subscription and allotment information
-              from NSE/BSE/SEBI and the issuer's official offer documents before
+              from NSE/BSE/SEBI and the issuer’s official offer documents before
               acting.
             </p>
           </div>
@@ -813,17 +839,17 @@ export default function IPOHubClient({
               <div className="docLinks">
                 {selected.sourceUrl && (
                   <a href={selected.sourceUrl} target="_blank" rel="noreferrer">
-                    Official / source page â†—
+                    Official / source page ↗
                   </a>
                 )}
                 {selected.rhpUrl && (
                   <a href={selected.rhpUrl} target="_blank" rel="noreferrer">
-                    RHP â†—
+                    RHP ↗
                   </a>
                 )}
                 {selected.drhpUrl && (
                   <a href={selected.drhpUrl} target="_blank" rel="noreferrer">
-                    DRHP â†—
+                    DRHP ↗
                   </a>
                 )}
                 {!selected.sourceUrl &&

@@ -2796,3 +2796,4 @@ iframe{
 }
 
 /* === CREDONOMICS_V20_PERFORMANCE_POLISH_END === */
+html,body{max-width:100%;overflow-x:clip}img,svg,video,canvas{max-width:100%}main,section,article,aside,nav,header,footer,div{min-width:0}table{font-variant-numeric:tabular-nums}button,input,select,textarea{max-width:100%}

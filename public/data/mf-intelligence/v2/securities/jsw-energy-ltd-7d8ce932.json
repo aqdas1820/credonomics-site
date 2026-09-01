@@ -1,0 +1,71 @@
+{
+  "securityId": "NAME:jsw-energy-ltd",
+  "slug": "jsw-energy-ltd-7d8ce932",
+  "isin": null,
+  "stock": "JSW Energy Ltd.",
+  "sector": "Power",
+  "firstTracked": "2025-02",
+  "latestTracked": "2025-08",
+  "monthsTracked": 2,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.22,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.07,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-02",
+      "schemeCount": 1,
+      "totalWeight": 0.22,
+      "normalizedWeight": 0.22,
+      "avgHeldWeight": 0.22
+    },
+    {
+      "month": "2025-08",
+      "schemeCount": 1,
+      "totalWeight": 0.07,
+      "normalizedWeight": 0.07,
+      "avgHeldWeight": 0.07
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-02",
+          "weight": 0.22,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2025-08",
+          "weight": 0.07,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-08",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

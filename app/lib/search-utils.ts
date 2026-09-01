@@ -3,7 +3,7 @@ import type { SearchEntry } from '../data/search-index.generated'
 export function normalizeSearch(value: string) {
   return value
     .toLocaleLowerCase('en-IN')
-    .replace(/[^\p{L}\p{N}\sâ‚¹&.+/-]/gu, ' ')
+    .replace(/[^\p{L}\p{N}\s₹&.+/-]/gu, ' ')
     .replace(/\s+/g, ' ')
     .trim()
 }

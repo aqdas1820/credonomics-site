@@ -215,7 +215,7 @@ export default function HomePage() {
               <h2>What changed, what is current, and where to research next.</h2>
             </div>
             <p>
-              This section is built from CredoNomicsâ€™ existing research and
+              This section is built from CredoNomics’ existing research and
               market-data records. It does not use decorative or fabricated
               market prices.
             </p>
@@ -412,5 +412,4 @@ export default function HomePage() {
     </SiteFrame>
   );
 }
-
 export const metadata = mergeHomeMetadata()

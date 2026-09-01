@@ -1,0 +1,84 @@
+{
+  "securityId": "NAME:sagar-cements-ltd",
+  "slug": "sagar-cements-ltd-f09974ed",
+  "isin": null,
+  "stock": "Sagar Cements Ltd.",
+  "sector": "Cement & Cement Products",
+  "firstTracked": "2025-12",
+  "latestTracked": "2026-02",
+  "monthsTracked": 3,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.16,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.14,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-12",
+      "schemeCount": 1,
+      "totalWeight": 0.16,
+      "normalizedWeight": 0.16,
+      "avgHeldWeight": 0.16
+    },
+    {
+      "month": "2026-01",
+      "schemeCount": 1,
+      "totalWeight": 0.15,
+      "normalizedWeight": 0.15,
+      "avgHeldWeight": 0.15
+    },
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 0.14,
+      "normalizedWeight": 0.14,
+      "avgHeldWeight": 0.14
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2025-12",
+          "weight": 0.16,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-01",
+          "weight": 0.15,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-02",
+          "weight": 0.14,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-12",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

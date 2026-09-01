@@ -1,0 +1,20 @@
+import { execFileSync } from "node:child_process";
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import { describe, expect, it } from "vitest";
+import { classifySecurityName, deterministicSort, monthsBetween, normalizeIsin, parsePercentage, qualityFor, stableHash } from "../../scripts/mf/pipeline-lib.mjs";
+describe("MF production validation primitives",()=>{
+it("normalizes and accepts a valid ISIN",()=>expect(normalizeIsin(" ine123a01016 ")).toEqual({status:"VALID",value:"INE123A01016"}));
+it("rejects malformed and shifted non-ISIN values",()=>{expect(normalizeIsin("HDFC Bank Ltd").status).toBe("INVALID");expect(normalizeIsin("4.25%").status).toBe("INVALID")});
+it("reports a missing ISIN without guessing",()=>expect(normalizeIsin("")).toEqual({status:"MISSING",value:null}));
+it("rejects contaminated company text",()=>expect(classifySecurityName("Regular: 1.60% Direct: 0.63% Sundram Fasteners Ltd.").status).toBe("REJECTED"));
+it("normalizes only safe artifacts",()=>expect(classifySecurityName("• HDFC Bank Ltd.")).toEqual({status:"NORMALIZED",value:"HDFC Bank Ltd."}));
+it("parses valid percentages",()=>expect(parsePercentage("4.25%")).toEqual({ok:true,value:4.25}));
+it("rejects negative and over-100 percentages",()=>{expect(parsePercentage("-1")).toEqual({ok:false,reason:"negative_percentage"});expect(parsePercentage("100.01")).toEqual({ok:false,reason:"percentage_over_100"})});
+it("builds missing months without interpolation",()=>expect(monthsBetween("2025-01","2025-03")).toEqual(["2025-01","2025-02","2025-03"]));
+it("classifies missing scheme-month coverage as partial",()=>expect(qualityFor({errors:0,warnings:0,missingCombinations:1,latestMonth:"2026-06",now:new Date("2026-07-01")})).toBe("PARTIAL"));
+it("detects duplicate holding keys",()=>{const keys=["Fund|2026-01|INE123A01016","Fund|2026-01|INE123A01016"];expect(new Set(keys).size).toBeLessThan(keys.length)});
+it("sorts deterministically",()=>{const input=[{scheme:"B",month:"2026-01",weight:1,stock:"Z"},{scheme:"A",month:"2026-01",weight:2,stock:"X"}];expect([...input].sort(deterministicSort).map(x=>x.scheme)).toEqual(["A","B"]);expect(stableHash(JSON.stringify([...input].sort(deterministicSort)))).toBe(stableHash(JSON.stringify([...input].reverse().sort(deterministicSort))))});
+it("blocks publishing after validation failure and preserves production",()=>{const root=fs.mkdtempSync(path.join(os.tmpdir(),"mf-publish-")),staging=path.join(root,"staging"),production=path.join(root,"production");fs.mkdirSync(staging);fs.mkdirSync(production);fs.writeFileSync(path.join(staging,".validation.json"),'{"status":"FAILED"}');fs.writeFileSync(path.join(production,"sentinel.txt"),"current");expect(()=>execFileSync(process.execPath,["scripts/mf/publish.mjs",`--staging=${staging}`,`--production=${production}`],{stdio:"pipe"})).toThrow();expect(fs.readFileSync(path.join(production,"sentinel.txt"),"utf8")).toBe("current");fs.rmSync(root,{recursive:true,force:true})});
+});

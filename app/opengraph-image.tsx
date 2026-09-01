@@ -125,7 +125,7 @@ export default function OpenGraphImage() {
               lineHeight: 1.45,
             }}
           >
-            Equity research â€¢ IPO intelligence â€¢ Mutual-fund analytics â€¢
+            Equity research • IPO intelligence • Mutual-fund analytics •
             Financial tools
           </div>
         </div>
@@ -142,7 +142,7 @@ export default function OpenGraphImage() {
           }}
         >
           <span>credonomics.in</span>
-          <span>Data â€¢ Research â€¢ Perspective</span>
+          <span>Data • Research • Perspective</span>
         </div>
       </div>
     ),

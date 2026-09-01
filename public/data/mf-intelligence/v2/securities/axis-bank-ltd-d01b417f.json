@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:axis-bank-ltd",
+  "slug": "axis-bank-ltd-d01b417f",
+  "isin": null,
+  "stock": "Axis Bank Ltd.",
+  "sector": "Banks",
+  "firstTracked": "2026-02",
+  "latestTracked": "2026-02",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 7.65,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Focused Fund",
+      "weight": 7.65,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 7.65,
+      "normalizedWeight": 7.65,
+      "avgHeldWeight": 7.65
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Focused Fund",
+      "history": [
+        {
+          "month": "2026-02",
+          "weight": 7.65,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

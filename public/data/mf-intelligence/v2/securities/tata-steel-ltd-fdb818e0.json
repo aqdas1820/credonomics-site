@@ -1,0 +1,66 @@
+{
+  "securityId": "NAME:tata-steel-ltd",
+  "slug": "tata-steel-ltd-fdb818e0",
+  "isin": null,
+  "stock": "Tata Steel Ltd.",
+  "sector": "Ferrous Metals",
+  "firstTracked": "2025-01",
+  "latestTracked": "2026-02",
+  "monthsTracked": 2,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 2.77,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Focused Fund",
+      "weight": 2.5,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-01",
+      "schemeCount": 1,
+      "totalWeight": 2.77,
+      "normalizedWeight": 2.77,
+      "avgHeldWeight": 2.77
+    },
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 2.5,
+      "normalizedWeight": 2.5,
+      "avgHeldWeight": 2.5
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Focused Fund",
+      "history": [
+        {
+          "month": "2025-01",
+          "weight": 2.77,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-02",
+          "weight": 2.5,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

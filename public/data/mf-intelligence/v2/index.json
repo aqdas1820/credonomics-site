@@ -1,0 +1,117 @@
+{
+  "version": 2,
+  "schemaVersion": "mf-v2",
+  "dataset": "CredoNomics Core Mutual Fund Intelligence",
+  "metadata": {
+    "source": "HDFC Mutual Fund official monthly portfolio disclosures (repository extraction)",
+    "sourceFile": "holdings_public.csv",
+    "asOf": "2026-06-30T23:59:59.000Z",
+    "generatedAt": "2026-08-10T11:24:20.991Z",
+    "quality": "PARTIAL",
+    "availability": "partial",
+    "recordCount": 874,
+    "schemaVersion": "mf-v2",
+    "coverageStart": "2025-01",
+    "coverageEnd": "2026-06",
+    "schemeCount": 3,
+    "holdingCount": 874,
+    "validationStatus": "PASSED_WITH_WARNINGS",
+    "sourceSha256": "09e4e46b1314a86409d71300762833c4eb8ca7cbea15ee8cb410747cdbeb204b"
+  },
+  "years": [
+    2025,
+    2026
+  ],
+  "months": [
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06"
+  ],
+  "expectedMonths": [
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06"
+  ],
+  "firstMonth": "2025-01",
+  "latestMonth": "2026-06",
+  "schemes": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "category": "Large & Mid Cap",
+      "slug": "hdfc-large-and-mid-cap-fund"
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "category": "Multi Cap",
+      "slug": "hdfc-multi-cap-fund"
+    },
+    {
+      "scheme": "HDFC Focused Fund",
+      "category": "Focused",
+      "slug": "hdfc-focused-fund"
+    }
+  ],
+  "presentCoreSchemes": [
+    "HDFC Large and Mid Cap Fund",
+    "HDFC Multi Cap Fund",
+    "HDFC Focused Fund"
+  ],
+  "missingCoreSchemes": [
+    "HDFC Flexi Cap Fund",
+    "HDFC Mid Cap Fund",
+    "HDFC Small Cap Fund"
+  ],
+  "counts": {
+    "holdings": 874,
+    "stocks": 202,
+    "schemes": 3,
+    "amcs": 1
+  },
+  "qualityAudit": {
+    "sourceRows": 46549,
+    "selectedCandidateRows": 1707,
+    "publishedHoldings": 874,
+    "isinCoveragePct": 0,
+    "normalizedCompanyRows": 121,
+    "rejectedRows": 10,
+    "duplicateRows": 823,
+    "validationWarnings": 2638,
+    "validationErrors": 0
+  },
+  "methodology": {
+    "scope": "Six intended HDFC active-equity schemes",
+    "securityIdentity": "Valid source ISIN; otherwise normalized source name without guessing",
+    "duplicateHandling": "First deterministic row retained; duplicates reported",
+    "missingData": "No interpolation or carry-forward"
+  }
+}

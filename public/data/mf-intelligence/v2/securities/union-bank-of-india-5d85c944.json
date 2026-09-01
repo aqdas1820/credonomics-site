@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:union-bank-of-india",
+  "slug": "union-bank-of-india-5d85c944",
+  "isin": null,
+  "stock": "Union Bank of India",
+  "sector": "Banks",
+  "firstTracked": "2025-02",
+  "latestTracked": "2025-02",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.17,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.17,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-02",
+      "schemeCount": 1,
+      "totalWeight": 0.17,
+      "normalizedWeight": 0.17,
+      "avgHeldWeight": 0.17
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-02",
+          "weight": 0.17,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

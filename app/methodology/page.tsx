@@ -1,4 +1,5 @@
-import { BadgeIndianRupee, CheckCircle2, FileSearch, RefreshCcw, Search, ShieldCheck, Target } from 'lucide-react'
+import { BadgeIndianRupee, FileSearch, RefreshCcw, Search, ShieldCheck, Target } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 import SiteFrame from '../components/SiteFrame'
 import styles from '../core-v4.module.css'
 
@@ -7,7 +8,7 @@ export const metadata = {
   description: 'How CredoNomics sources, normalizes, calculates and stress-tests financial-product research.',
 }
 
-const steps = [
+const steps: Array<[LucideIcon, string, string, string]> = [
   [FileSearch, '01', 'Define and source', 'Define the question first. Collect the current official product terms that directly govern the answer.'],
   [Search, '02', 'Normalize the rules', 'Convert inconsistent wording into comparable fields: rates, caps, eligible spend, exclusions, fees, taxes and timing.'],
   [BadgeIndianRupee, '03', 'Calculate in rupees', 'Use the same period and the same assumptions across alternatives so the comparison is economically consistent.'],
@@ -35,7 +36,7 @@ export default function MethodologyPage() {
           <p>There is no universal “best” product. A useful comparison starts by defining what value means for the user’s scenario.</p>
         </div>
         <div className={styles.stack}>
-          {steps.map(([Icon, no, title, text]: any) => (
+          {steps.map(([Icon, no, title, text]) => (
             <article className={styles.infoCard} key={no}>
               <div className={styles.infoCardTop}><span className={styles.iconTile}><Icon size={20}/></span><span className={styles.overline}>{no}</span></div>
               <h3>{title}</h3><p>{text}</p>

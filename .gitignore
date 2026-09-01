@@ -7,3 +7,14 @@ mf-backups/
 **/__pycache__/
 *.pyc
 *.tmp
+playwright-report/
+test-results/
+coverage/
+data/mf-production-source/
+data/mf-production-diagnostics/
+data/mf-production-staging/
+data/mf-production-reports/
+public/data/mf-intelligence/.v2-publish-*/
+data/equity-instruments/
+public/data/mf-intelligence/v2/latest_holdings.csv
+public/data/mf-intelligence/v2/quality_audit.csv

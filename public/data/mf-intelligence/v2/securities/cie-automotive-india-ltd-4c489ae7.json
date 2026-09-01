@@ -1,0 +1,120 @@
+{
+  "securityId": "NAME:cie-automotive-india-ltd",
+  "slug": "cie-automotive-india-ltd-4c489ae7",
+  "isin": null,
+  "stock": "CIE Automotive India Ltd",
+  "sector": "Auto Components",
+  "firstTracked": "2025-02",
+  "latestTracked": "2026-03",
+  "monthsTracked": 5,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.28,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.28,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-02",
+      "schemeCount": 1,
+      "totalWeight": 0.28,
+      "normalizedWeight": 0.28,
+      "avgHeldWeight": 0.28
+    },
+    {
+      "month": "2025-06",
+      "schemeCount": 1,
+      "totalWeight": 0.27,
+      "normalizedWeight": 0.27,
+      "avgHeldWeight": 0.27
+    },
+    {
+      "month": "2025-10",
+      "schemeCount": 1,
+      "totalWeight": 0.24,
+      "normalizedWeight": 0.24,
+      "avgHeldWeight": 0.24
+    },
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 0.27,
+      "normalizedWeight": 0.27,
+      "avgHeldWeight": 0.27
+    },
+    {
+      "month": "2026-03",
+      "schemeCount": 1,
+      "totalWeight": 0.28,
+      "normalizedWeight": 0.28,
+      "avgHeldWeight": 0.28
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-02",
+          "weight": 0.28,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-06",
+          "weight": 0.27,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-10",
+          "weight": 0.24,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-02",
+          "weight": 0.27,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-03",
+          "weight": 0.28,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-10",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

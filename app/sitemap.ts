@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/ipo/current`, lastModified: updated, priority: 0.86 },
 
     { url: `${base}/tools`, lastModified: updated, priority: 0.84 },
+    { url: `${base}/stocks/search`, lastModified: updated, priority: 0.72 },
     {
       url: `${base}/tools/mf-portfolio-tracker`,
       lastModified: updated,

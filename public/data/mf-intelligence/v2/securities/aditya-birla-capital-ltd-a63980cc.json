@@ -1,0 +1,207 @@
+{
+  "securityId": "NAME:aditya-birla-capital-ltd",
+  "slug": "aditya-birla-capital-ltd-a63980cc",
+  "isin": null,
+  "stock": "Aditya Birla Capital ltd.",
+  "sector": "Finance",
+  "firstTracked": "2025-01",
+  "latestTracked": "2026-03",
+  "monthsTracked": 9,
+  "maxSchemeCount": 2,
+  "peakNormalizedWeight": 0.43,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.43,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-01",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    },
+    {
+      "month": "2025-02",
+      "schemeCount": 2,
+      "totalWeight": 0.5,
+      "normalizedWeight": 0.25,
+      "avgHeldWeight": 0.25
+    },
+    {
+      "month": "2025-03",
+      "schemeCount": 1,
+      "totalWeight": 0.3,
+      "normalizedWeight": 0.3,
+      "avgHeldWeight": 0.3
+    },
+    {
+      "month": "2025-04",
+      "schemeCount": 1,
+      "totalWeight": 0.31,
+      "normalizedWeight": 0.31,
+      "avgHeldWeight": 0.31
+    },
+    {
+      "month": "2025-05",
+      "schemeCount": 1,
+      "totalWeight": 0.33,
+      "normalizedWeight": 0.33,
+      "avgHeldWeight": 0.33
+    },
+    {
+      "month": "2025-07",
+      "schemeCount": 2,
+      "totalWeight": 0.72,
+      "normalizedWeight": 0.36,
+      "avgHeldWeight": 0.36
+    },
+    {
+      "month": "2025-08",
+      "schemeCount": 1,
+      "totalWeight": 0.4,
+      "normalizedWeight": 0.4,
+      "avgHeldWeight": 0.4
+    },
+    {
+      "month": "2025-09",
+      "schemeCount": 1,
+      "totalWeight": 0.4,
+      "normalizedWeight": 0.4,
+      "avgHeldWeight": 0.4
+    },
+    {
+      "month": "2026-03",
+      "schemeCount": 1,
+      "totalWeight": 0.43,
+      "normalizedWeight": 0.43,
+      "avgHeldWeight": 0.43
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-02",
+          "weight": 0.22,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-07",
+          "weight": 0.36,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-08",
+          "weight": 0.4,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-09",
+          "weight": 0.4,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2025-01",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-02",
+          "weight": 0.28,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-03",
+          "weight": 0.3,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-04",
+          "weight": 0.31,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-05",
+          "weight": 0.33,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-07",
+          "weight": 0.36,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-03",
+          "weight": 0.43,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-07",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-08",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-09",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

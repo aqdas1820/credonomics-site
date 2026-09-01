@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:steel-authority-of-india-ltd",
+  "slug": "steel-authority-of-india-ltd-5fb8079c",
+  "isin": null,
+  "stock": "Steel Authority Of India Ltd.",
+  "sector": "Ferrous Metals",
+  "firstTracked": "2025-08",
+  "latestTracked": "2025-08",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.39,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.39,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-08",
+      "schemeCount": 1,
+      "totalWeight": 0.39,
+      "normalizedWeight": 0.39,
+      "avgHeldWeight": 0.39
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-08",
+          "weight": 0.39,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-08",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

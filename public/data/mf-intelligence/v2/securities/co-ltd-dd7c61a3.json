@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:co-ltd",
+  "slug": "co-ltd-dd7c61a3",
+  "isin": null,
+  "stock": "Co. Ltd.",
+  "sector": "Finance",
+  "firstTracked": "2025-07",
+  "latestTracked": "2025-07",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.38,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.38,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-07",
+      "schemeCount": 1,
+      "totalWeight": 0.38,
+      "normalizedWeight": 0.38,
+      "avgHeldWeight": 0.38
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-07",
+          "weight": 0.38,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-07",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

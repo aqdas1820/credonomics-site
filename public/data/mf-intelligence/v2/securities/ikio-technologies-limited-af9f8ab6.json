@@ -1,0 +1,102 @@
+{
+  "securityId": "NAME:ikio-technologies-limited",
+  "slug": "ikio-technologies-limited-af9f8ab6",
+  "isin": null,
+  "stock": "IKIO Technologies Limited",
+  "sector": "Consumer Durables",
+  "firstTracked": "2026-02",
+  "latestTracked": "2026-05",
+  "monthsTracked": 4,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.04,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.04,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 0.03,
+      "normalizedWeight": 0.03,
+      "avgHeldWeight": 0.03
+    },
+    {
+      "month": "2026-03",
+      "schemeCount": 1,
+      "totalWeight": 0.03,
+      "normalizedWeight": 0.03,
+      "avgHeldWeight": 0.03
+    },
+    {
+      "month": "2026-04",
+      "schemeCount": 1,
+      "totalWeight": 0.04,
+      "normalizedWeight": 0.04,
+      "avgHeldWeight": 0.04
+    },
+    {
+      "month": "2026-05",
+      "schemeCount": 1,
+      "totalWeight": 0.04,
+      "normalizedWeight": 0.04,
+      "avgHeldWeight": 0.04
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-02",
+          "weight": 0.03,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-03",
+          "weight": 0.03,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-04",
+          "weight": 0.04,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-05",
+          "weight": 0.04,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

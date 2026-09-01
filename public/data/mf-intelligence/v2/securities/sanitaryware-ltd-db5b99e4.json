@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:sanitaryware-ltd",
+  "slug": "sanitaryware-ltd-db5b99e4",
+  "isin": null,
+  "stock": "Sanitaryware Ltd",
+  "sector": "Consumer Durables",
+  "firstTracked": "2026-05",
+  "latestTracked": "2026-05",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.18,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.18,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-05",
+      "schemeCount": 1,
+      "totalWeight": 0.18,
+      "normalizedWeight": 0.18,
+      "avgHeldWeight": 0.18
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-05",
+          "weight": 0.18,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

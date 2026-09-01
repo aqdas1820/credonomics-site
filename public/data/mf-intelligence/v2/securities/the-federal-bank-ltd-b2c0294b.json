@@ -1,0 +1,66 @@
+{
+  "securityId": "NAME:the-federal-bank-ltd",
+  "slug": "the-federal-bank-ltd-b2c0294b",
+  "isin": null,
+  "stock": "The Federal Bank Ltd.",
+  "sector": "Banks",
+  "firstTracked": "2025-08",
+  "latestTracked": "2025-09",
+  "monthsTracked": 2,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.38,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.37,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-08",
+      "schemeCount": 1,
+      "totalWeight": 0.38,
+      "normalizedWeight": 0.38,
+      "avgHeldWeight": 0.38
+    },
+    {
+      "month": "2025-09",
+      "schemeCount": 1,
+      "totalWeight": 0.37,
+      "normalizedWeight": 0.37,
+      "avgHeldWeight": 0.37
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-08",
+          "weight": 0.38,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-09",
+          "weight": 0.37,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-08",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-09",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

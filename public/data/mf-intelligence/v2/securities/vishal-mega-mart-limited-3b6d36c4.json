@@ -1,0 +1,99 @@
+{
+  "securityId": "NAME:vishal-mega-mart-limited",
+  "slug": "vishal-mega-mart-limited-3b6d36c4",
+  "isin": null,
+  "stock": "Vishal Mega Mart Limited",
+  "sector": "Retailing",
+  "firstTracked": "2026-02",
+  "latestTracked": "2026-06",
+  "monthsTracked": 3,
+  "maxSchemeCount": 2,
+  "peakNormalizedWeight": 0.42,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.38,
+      "quality": "NAME_ONLY"
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.46,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 0.39,
+      "normalizedWeight": 0.39,
+      "avgHeldWeight": 0.39
+    },
+    {
+      "month": "2026-03",
+      "schemeCount": 1,
+      "totalWeight": 0.39,
+      "normalizedWeight": 0.39,
+      "avgHeldWeight": 0.39
+    },
+    {
+      "month": "2026-06",
+      "schemeCount": 2,
+      "totalWeight": 0.84,
+      "normalizedWeight": 0.42,
+      "avgHeldWeight": 0.42
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-02",
+          "weight": 0.39,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-03",
+          "weight": 0.39,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-06",
+          "weight": 0.38,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-06",
+          "weight": 0.46,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

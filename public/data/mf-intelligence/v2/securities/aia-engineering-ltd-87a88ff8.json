@@ -1,0 +1,66 @@
+{
+  "securityId": "NAME:aia-engineering-ltd",
+  "slug": "aia-engineering-ltd-87a88ff8",
+  "isin": null,
+  "stock": "AIA Engineering Ltd.",
+  "sector": "Industrial Products",
+  "firstTracked": "2025-02",
+  "latestTracked": "2026-06",
+  "monthsTracked": 2,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.29,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.29,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-02",
+      "schemeCount": 1,
+      "totalWeight": 0.24,
+      "normalizedWeight": 0.24,
+      "avgHeldWeight": 0.24
+    },
+    {
+      "month": "2026-06",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-02",
+          "weight": 0.24,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-06",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

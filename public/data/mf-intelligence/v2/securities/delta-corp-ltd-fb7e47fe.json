@@ -1,0 +1,305 @@
+{
+  "securityId": "NAME:delta-corp-ltd",
+  "slug": "delta-corp-ltd-fb7e47fe",
+  "isin": null,
+  "stock": "Delta Corp Ltd.",
+  "sector": "Leisure Services",
+  "firstTracked": "2025-01",
+  "latestTracked": "2026-06",
+  "monthsTracked": 15,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.29,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.01,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-01",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    },
+    {
+      "month": "2025-02",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    },
+    {
+      "month": "2025-04",
+      "schemeCount": 1,
+      "totalWeight": 0.26,
+      "normalizedWeight": 0.26,
+      "avgHeldWeight": 0.26
+    },
+    {
+      "month": "2025-06",
+      "schemeCount": 1,
+      "totalWeight": 0.02,
+      "normalizedWeight": 0.02,
+      "avgHeldWeight": 0.02
+    },
+    {
+      "month": "2025-07",
+      "schemeCount": 1,
+      "totalWeight": 0.02,
+      "normalizedWeight": 0.02,
+      "avgHeldWeight": 0.02
+    },
+    {
+      "month": "2025-08",
+      "schemeCount": 1,
+      "totalWeight": 0.02,
+      "normalizedWeight": 0.02,
+      "avgHeldWeight": 0.02
+    },
+    {
+      "month": "2025-09",
+      "schemeCount": 1,
+      "totalWeight": 0.02,
+      "normalizedWeight": 0.02,
+      "avgHeldWeight": 0.02
+    },
+    {
+      "month": "2025-11",
+      "schemeCount": 1,
+      "totalWeight": 0.02,
+      "normalizedWeight": 0.02,
+      "avgHeldWeight": 0.02
+    },
+    {
+      "month": "2025-12",
+      "schemeCount": 1,
+      "totalWeight": 0.02,
+      "normalizedWeight": 0.02,
+      "avgHeldWeight": 0.02
+    },
+    {
+      "month": "2026-01",
+      "schemeCount": 1,
+      "totalWeight": 0.01,
+      "normalizedWeight": 0.01,
+      "avgHeldWeight": 0.01
+    },
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 0.01,
+      "normalizedWeight": 0.01,
+      "avgHeldWeight": 0.01
+    },
+    {
+      "month": "2026-03",
+      "schemeCount": 1,
+      "totalWeight": 0.01,
+      "normalizedWeight": 0.01,
+      "avgHeldWeight": 0.01
+    },
+    {
+      "month": "2026-04",
+      "schemeCount": 1,
+      "totalWeight": 0.02,
+      "normalizedWeight": 0.02,
+      "avgHeldWeight": 0.02
+    },
+    {
+      "month": "2026-05",
+      "schemeCount": 1,
+      "totalWeight": 0.02,
+      "normalizedWeight": 0.02,
+      "avgHeldWeight": 0.02
+    },
+    {
+      "month": "2026-06",
+      "schemeCount": 1,
+      "totalWeight": 0.01,
+      "normalizedWeight": 0.01,
+      "avgHeldWeight": 0.01
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-06",
+          "weight": 0.02,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-07",
+          "weight": 0.02,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-08",
+          "weight": 0.02,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-09",
+          "weight": 0.02,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-11",
+          "weight": 0.02,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-12",
+          "weight": 0.02,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-01",
+          "weight": 0.01,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-02",
+          "weight": 0.01,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-03",
+          "weight": 0.01,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-04",
+          "weight": 0.02,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-05",
+          "weight": 0.02,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-06",
+          "weight": 0.01,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2025-01",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-02",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-04",
+          "weight": 0.26,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-07",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-08",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-09",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-11",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-12",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

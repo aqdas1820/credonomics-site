@@ -1,0 +1,261 @@
+{
+  "securityId": "NAME:medi-assist-healthcare-services-limited",
+  "slug": "medi-assist-healthcare-services-limited-51cfe272",
+  "isin": null,
+  "stock": "Medi Assist Healthcare Services Limited",
+  "sector": "Insurance",
+  "firstTracked": "2025-01",
+  "latestTracked": "2026-06",
+  "monthsTracked": 12,
+  "maxSchemeCount": 2,
+  "peakNormalizedWeight": 0.34,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.17,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-01",
+      "schemeCount": 1,
+      "totalWeight": 0.33,
+      "normalizedWeight": 0.33,
+      "avgHeldWeight": 0.33
+    },
+    {
+      "month": "2025-02",
+      "schemeCount": 2,
+      "totalWeight": 0.59,
+      "normalizedWeight": 0.295,
+      "avgHeldWeight": 0.295
+    },
+    {
+      "month": "2025-06",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    },
+    {
+      "month": "2025-07",
+      "schemeCount": 1,
+      "totalWeight": 0.27,
+      "normalizedWeight": 0.27,
+      "avgHeldWeight": 0.27
+    },
+    {
+      "month": "2025-08",
+      "schemeCount": 1,
+      "totalWeight": 0.28,
+      "normalizedWeight": 0.28,
+      "avgHeldWeight": 0.28
+    },
+    {
+      "month": "2025-09",
+      "schemeCount": 2,
+      "totalWeight": 0.67,
+      "normalizedWeight": 0.335,
+      "avgHeldWeight": 0.335
+    },
+    {
+      "month": "2025-10",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    },
+    {
+      "month": "2025-11",
+      "schemeCount": 1,
+      "totalWeight": 0.34,
+      "normalizedWeight": 0.34,
+      "avgHeldWeight": 0.34
+    },
+    {
+      "month": "2026-01",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    },
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 0.27,
+      "normalizedWeight": 0.27,
+      "avgHeldWeight": 0.27
+    },
+    {
+      "month": "2026-03",
+      "schemeCount": 1,
+      "totalWeight": 0.24,
+      "normalizedWeight": 0.24,
+      "avgHeldWeight": 0.24
+    },
+    {
+      "month": "2026-06",
+      "schemeCount": 1,
+      "totalWeight": 0.17,
+      "normalizedWeight": 0.17,
+      "avgHeldWeight": 0.17
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-02",
+          "weight": 0.3,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-06",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-08",
+          "weight": 0.28,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-09",
+          "weight": 0.28,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-10",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2025-01",
+          "weight": 0.33,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-02",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-07",
+          "weight": 0.27,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-09",
+          "weight": 0.39,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-11",
+          "weight": 0.34,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-01",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-02",
+          "weight": 0.27,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-03",
+          "weight": 0.24,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-06",
+          "weight": 0.17,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-07",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-08",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-09",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-10",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-11",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

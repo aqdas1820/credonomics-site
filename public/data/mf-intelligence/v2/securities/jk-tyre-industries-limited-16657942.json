@@ -1,0 +1,84 @@
+{
+  "securityId": "NAME:jk-tyre-industries-limited",
+  "slug": "jk-tyre-industries-limited-16657942",
+  "isin": null,
+  "stock": "JK Tyre & Industries Limited",
+  "sector": "Auto Components",
+  "firstTracked": "2026-02",
+  "latestTracked": "2026-06",
+  "monthsTracked": 3,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.46,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.46,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 0.43,
+      "normalizedWeight": 0.43,
+      "avgHeldWeight": 0.43
+    },
+    {
+      "month": "2026-03",
+      "schemeCount": 1,
+      "totalWeight": 0.44,
+      "normalizedWeight": 0.44,
+      "avgHeldWeight": 0.44
+    },
+    {
+      "month": "2026-06",
+      "schemeCount": 1,
+      "totalWeight": 0.46,
+      "normalizedWeight": 0.46,
+      "avgHeldWeight": 0.46
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-02",
+          "weight": 0.43,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-03",
+          "weight": 0.44,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-06",
+          "weight": 0.46,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

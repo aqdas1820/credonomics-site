@@ -1,0 +1,102 @@
+{
+  "securityId": "NAME:muthoot-finance-ltd",
+  "slug": "muthoot-finance-ltd-add31815",
+  "isin": null,
+  "stock": "Muthoot Finance Ltd.",
+  "sector": "Finance",
+  "firstTracked": "2025-03",
+  "latestTracked": "2025-07",
+  "monthsTracked": 4,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.4,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.38,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-03",
+      "schemeCount": 1,
+      "totalWeight": 0.4,
+      "normalizedWeight": 0.4,
+      "avgHeldWeight": 0.4
+    },
+    {
+      "month": "2025-04",
+      "schemeCount": 1,
+      "totalWeight": 0.35,
+      "normalizedWeight": 0.35,
+      "avgHeldWeight": 0.35
+    },
+    {
+      "month": "2025-05",
+      "schemeCount": 1,
+      "totalWeight": 0.34,
+      "normalizedWeight": 0.34,
+      "avgHeldWeight": 0.34
+    },
+    {
+      "month": "2025-07",
+      "schemeCount": 1,
+      "totalWeight": 0.38,
+      "normalizedWeight": 0.38,
+      "avgHeldWeight": 0.38
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2025-03",
+          "weight": 0.4,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-04",
+          "weight": 0.35,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-05",
+          "weight": 0.34,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-07",
+          "weight": 0.38,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-07",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

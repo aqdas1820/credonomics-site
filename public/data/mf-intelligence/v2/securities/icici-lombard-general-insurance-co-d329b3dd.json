@@ -1,0 +1,120 @@
+{
+  "securityId": "NAME:icici-lombard-general-insurance-co",
+  "slug": "icici-lombard-general-insurance-co-d329b3dd",
+  "isin": null,
+  "stock": "ICICI Lombard General Insurance Co",
+  "sector": "Insurance",
+  "firstTracked": "2025-04",
+  "latestTracked": "2025-08",
+  "monthsTracked": 5,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.36,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.36,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-04",
+      "schemeCount": 1,
+      "totalWeight": 0.01,
+      "normalizedWeight": 0.01,
+      "avgHeldWeight": 0.01
+    },
+    {
+      "month": "2025-05",
+      "schemeCount": 1,
+      "totalWeight": 0.01,
+      "normalizedWeight": 0.01,
+      "avgHeldWeight": 0.01
+    },
+    {
+      "month": "2025-06",
+      "schemeCount": 1,
+      "totalWeight": 0.01,
+      "normalizedWeight": 0.01,
+      "avgHeldWeight": 0.01
+    },
+    {
+      "month": "2025-07",
+      "schemeCount": 1,
+      "totalWeight": 0.33,
+      "normalizedWeight": 0.33,
+      "avgHeldWeight": 0.33
+    },
+    {
+      "month": "2025-08",
+      "schemeCount": 1,
+      "totalWeight": 0.36,
+      "normalizedWeight": 0.36,
+      "avgHeldWeight": 0.36
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-04",
+          "weight": 0.01,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-05",
+          "weight": 0.01,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-06",
+          "weight": 0.01,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-07",
+          "weight": 0.33,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-08",
+          "weight": 0.36,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-07",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-08",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

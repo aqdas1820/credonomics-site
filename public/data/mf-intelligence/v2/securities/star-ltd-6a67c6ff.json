@@ -1,0 +1,66 @@
+{
+  "securityId": "NAME:star-ltd",
+  "slug": "star-ltd-6a67c6ff",
+  "isin": null,
+  "stock": "Star Ltd.",
+  "sector": "Consumer Durables",
+  "firstTracked": "2026-04",
+  "latestTracked": "2026-05",
+  "monthsTracked": 2,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.38,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.38,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-04",
+      "schemeCount": 1,
+      "totalWeight": 0.35,
+      "normalizedWeight": 0.35,
+      "avgHeldWeight": 0.35
+    },
+    {
+      "month": "2026-05",
+      "schemeCount": 1,
+      "totalWeight": 0.38,
+      "normalizedWeight": 0.38,
+      "avgHeldWeight": 0.38
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-04",
+          "weight": 0.35,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-05",
+          "weight": 0.38,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

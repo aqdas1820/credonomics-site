@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:ltm-limited",
+  "slug": "ltm-limited-474b6c98",
+  "isin": null,
+  "stock": "LTM Limited",
+  "sector": "Software",
+  "firstTracked": "2026-06",
+  "latestTracked": "2026-06",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.26,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.26,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-06",
+      "schemeCount": 1,
+      "totalWeight": 0.26,
+      "normalizedWeight": 0.26,
+      "avgHeldWeight": 0.26
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-06",
+          "weight": 0.26,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

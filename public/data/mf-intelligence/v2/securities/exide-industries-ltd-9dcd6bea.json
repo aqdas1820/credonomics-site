@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:exide-industries-ltd",
+  "slug": "exide-industries-ltd-9dcd6bea",
+  "isin": null,
+  "stock": "Exide Industries Ltd.",
+  "sector": "Auto Components",
+  "firstTracked": "2025-02",
+  "latestTracked": "2025-02",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.18,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.18,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-02",
+      "schemeCount": 1,
+      "totalWeight": 0.18,
+      "normalizedWeight": 0.18,
+      "avgHeldWeight": 0.18
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-02",
+          "weight": 0.18,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

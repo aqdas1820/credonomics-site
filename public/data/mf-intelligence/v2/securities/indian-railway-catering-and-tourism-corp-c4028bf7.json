@@ -1,0 +1,102 @@
+{
+  "securityId": "NAME:indian-railway-catering-and-tourism-corp",
+  "slug": "indian-railway-catering-and-tourism-corp-c4028bf7",
+  "isin": null,
+  "stock": "Indian Railway Catering And Tourism Corp",
+  "sector": "Leisure Services",
+  "firstTracked": "2026-01",
+  "latestTracked": "2026-05",
+  "monthsTracked": 4,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.03,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.03,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-01",
+      "schemeCount": 1,
+      "totalWeight": 0.03,
+      "normalizedWeight": 0.03,
+      "avgHeldWeight": 0.03
+    },
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 0.03,
+      "normalizedWeight": 0.03,
+      "avgHeldWeight": 0.03
+    },
+    {
+      "month": "2026-04",
+      "schemeCount": 1,
+      "totalWeight": 0.03,
+      "normalizedWeight": 0.03,
+      "avgHeldWeight": 0.03
+    },
+    {
+      "month": "2026-05",
+      "schemeCount": 1,
+      "totalWeight": 0.03,
+      "normalizedWeight": 0.03,
+      "avgHeldWeight": 0.03
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-01",
+          "weight": 0.03,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-02",
+          "weight": 0.03,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-04",
+          "weight": 0.03,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-05",
+          "weight": 0.03,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

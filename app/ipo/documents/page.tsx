@@ -19,7 +19,7 @@ export default function IpoDocumentsPage() {
         <div className={styles.breadcrumbs}><a href="/">Home</a><span>/</span><a href="/ipo">IPO Intelligence</a><span>/</span><span>Documents</span></div>
         <span className={styles.pageKicker}><FileText size={14}/> Official filing discovery</span>
         <h1>IPO Documents</h1>
-        <p className={styles.pageHeroLead}>Search recent DRHP, RHP, prospectus and amendment records detected from SEBI's public-issues filing surface.</p>
+        <p className={styles.pageHeroLead}>Search recent DRHP, RHP, prospectus and amendment records detected from SEBI’s public-issues filing surface.</p>
       </section>
 
       <IpoSubnav active="Documents"/>

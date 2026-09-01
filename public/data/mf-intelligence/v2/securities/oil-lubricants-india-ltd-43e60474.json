@@ -1,0 +1,66 @@
+{
+  "securityId": "NAME:oil-lubricants-india-ltd",
+  "slug": "oil-lubricants-india-ltd-43e60474",
+  "isin": null,
+  "stock": "Oil Lubricants India Ltd.",
+  "sector": "Petroleum Products",
+  "firstTracked": "2026-04",
+  "latestTracked": "2026-05",
+  "monthsTracked": 2,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.42,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.42,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-04",
+      "schemeCount": 1,
+      "totalWeight": 0.42,
+      "normalizedWeight": 0.42,
+      "avgHeldWeight": 0.42
+    },
+    {
+      "month": "2026-05",
+      "schemeCount": 1,
+      "totalWeight": 0.42,
+      "normalizedWeight": 0.42,
+      "avgHeldWeight": 0.42
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-04",
+          "weight": 0.42,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-05",
+          "weight": 0.42,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

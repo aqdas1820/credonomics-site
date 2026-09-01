@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:jagran-prakashan-ltd",
+  "slug": "jagran-prakashan-ltd-3768d916",
+  "isin": null,
+  "stock": "Jagran Prakashan Ltd.",
+  "sector": "Media",
+  "firstTracked": "2026-01",
+  "latestTracked": "2026-01",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.11,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.11,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-01",
+      "schemeCount": 1,
+      "totalWeight": 0.11,
+      "normalizedWeight": 0.11,
+      "avgHeldWeight": 0.11
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-01",
+          "weight": 0.11,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

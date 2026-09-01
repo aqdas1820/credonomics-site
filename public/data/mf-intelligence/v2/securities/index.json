@@ -1,0 +1,1620 @@
+{
+  "securities": [
+    {
+      "securityId": "NAME:15-521-28cr-hcl-technologies-ltd",
+      "slug": "15-521-28cr-hcl-technologies-ltd-0d4e0a29",
+      "isin": null,
+      "stock": "₹15,521.28Cr. • HCL Technologies Ltd.",
+      "sector": "Software",
+      "latestTracked": "2025-01"
+    },
+    {
+      "securityId": "NAME:2026-ltd",
+      "slug": "2026-ltd-244050e0",
+      "isin": null,
+      "stock": "2026 Ltd.",
+      "sector": "Insurance",
+      "latestTracked": "2026-02"
+    },
+    {
+      "securityId": "NAME:360-one-wam-limited",
+      "slug": "360-one-wam-limited-89fda024",
+      "isin": null,
+      "stock": "360 ONE WAM LIMITED",
+      "sector": "Capital Markets",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:6-65-source-fimmda-mibor-for-schemes-consumer-elec-ltd",
+      "slug": "6-65-source-fimmda-mibor-for-schemes-consumer-elec-ltd-0edc1874",
+      "isin": null,
+      "stock": "6.65% (Source: FIMMDA MIBOR) For schemes Consumer Elec. Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2025-01"
+    },
+    {
+      "securityId": "NAME:aadhar-housing-finance-limited",
+      "slug": "aadhar-housing-finance-limited-0171a262",
+      "isin": null,
+      "stock": "Aadhar Housing Finance Limited",
+      "sector": "Finance",
+      "latestTracked": "2025-09"
+    },
+    {
+      "securityId": "NAME:acc-ltd",
+      "slug": "acc-ltd-7d222d91",
+      "isin": null,
+      "stock": "ACC Ltd.",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2025-11"
+    },
+    {
+      "securityId": "NAME:aditya-birla-capital-ltd",
+      "slug": "aditya-birla-capital-ltd-a63980cc",
+      "isin": null,
+      "stock": "Aditya Birla Capital ltd.",
+      "sector": "Finance",
+      "latestTracked": "2026-03"
+    },
+    {
+      "securityId": "NAME:aditya-birla-fashion-and-retail-ltd",
+      "slug": "aditya-birla-fashion-and-retail-ltd-b86a07a2",
+      "isin": null,
+      "stock": "Aditya Birla Fashion and Retail Ltd.",
+      "sector": "Retailing",
+      "latestTracked": "2025-08"
+    },
+    {
+      "securityId": "NAME:aditya-birla-lifestyle-brands",
+      "slug": "aditya-birla-lifestyle-brands-4a936630",
+      "isin": null,
+      "stock": "ADITYA BIRLA LIFESTYLE BRANDS",
+      "sector": "Retailing",
+      "latestTracked": "2025-08"
+    },
+    {
+      "securityId": "NAME:agency-limited",
+      "slug": "agency-limited-a48ece9f",
+      "isin": null,
+      "stock": "Agency Limited",
+      "sector": "Finance",
+      "latestTracked": "2025-05"
+    },
+    {
+      "securityId": "NAME:aia-engineering-ltd",
+      "slug": "aia-engineering-ltd-87a88ff8",
+      "isin": null,
+      "stock": "AIA Engineering Ltd.",
+      "sector": "Industrial Products",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:akzonobel-india-ltd",
+      "slug": "akzonobel-india-ltd-074c0a63",
+      "isin": null,
+      "stock": "AkzoNobel India Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:ambuja-cements-ltd",
+      "slug": "ambuja-cements-ltd-661c6f10",
+      "isin": null,
+      "stock": "Ambuja Cements Ltd.",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2026-01"
+    },
+    {
+      "securityId": "NAME:as-au-housing-finance-ltd",
+      "slug": "as-au-housing-finance-ltd-ca87d027",
+      "isin": null,
+      "stock": "as Au Housing Finance Ltd.)",
+      "sector": "Finance",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:asian-paints-limited",
+      "slug": "asian-paints-limited-133fbd70",
+      "isin": null,
+      "stock": "Asian Paints Limited",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:assist-healthcare-services-limited",
+      "slug": "assist-healthcare-services-limited-34bef458",
+      "isin": null,
+      "stock": "Assist Healthcare Services Limited",
+      "sector": "Insurance",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:au-housing-finance-ltd",
+      "slug": "au-housing-finance-ltd-ace30f98",
+      "isin": null,
+      "stock": "Au Housing Finance Ltd.)",
+      "sector": "Finance",
+      "latestTracked": "2025-01"
+    },
+    {
+      "securityId": "NAME:automation-ltd",
+      "slug": "automation-ltd-4ab903d6",
+      "isin": null,
+      "stock": "Automation Ltd",
+      "sector": "Auto Components",
+      "latestTracked": "2025-03"
+    },
+    {
+      "securityId": "NAME:avalon-technologies-limited",
+      "slug": "avalon-technologies-limited-985db52f",
+      "isin": null,
+      "stock": "Avalon Technologies Limited",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2026-04"
+    },
+    {
+      "securityId": "NAME:avanti-feeds-ltd",
+      "slug": "avanti-feeds-ltd-5fc872cd",
+      "isin": null,
+      "stock": "Avanti Feeds Ltd.",
+      "sector": "Food Products",
+      "latestTracked": "2026-01"
+    },
+    {
+      "securityId": "NAME:avenue-supermarts-ltd",
+      "slug": "avenue-supermarts-ltd-8a935b01",
+      "isin": null,
+      "stock": "Avenue Supermarts Ltd.",
+      "sector": "Retailing",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:axis-bank-ltd",
+      "slug": "axis-bank-ltd-d01b417f",
+      "isin": null,
+      "stock": "Axis Bank Ltd.",
+      "sector": "Banks",
+      "latestTracked": "2026-02"
+    },
+    {
+      "securityId": "NAME:bajaj-auto-limited",
+      "slug": "bajaj-auto-limited-0c85a0ee",
+      "isin": null,
+      "stock": "Bajaj Auto Limited",
+      "sector": "Automobiles",
+      "latestTracked": "2026-02"
+    },
+    {
+      "securityId": "NAME:bajel-projects-limited",
+      "slug": "bajel-projects-limited-352ff5d3",
+      "isin": null,
+      "stock": "Bajel Projects Limited",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2025-08"
+    },
+    {
+      "securityId": "NAME:balkrishna-industries-ltd",
+      "slug": "balkrishna-industries-ltd-7b11f5db",
+      "isin": null,
+      "stock": "Balkrishna Industries Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2025-05"
+    },
+    {
+      "securityId": "NAME:bandhan-bank-ltd",
+      "slug": "bandhan-bank-ltd-7a80a2d7",
+      "isin": null,
+      "stock": "Bandhan Bank Ltd.",
+      "sector": "Banks",
+      "latestTracked": "2025-09"
+    },
+    {
+      "securityId": "NAME:bank-of-india",
+      "slug": "bank-of-india-31095d2c",
+      "isin": null,
+      "stock": "Bank of India",
+      "sector": "Banks",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:bata-india-ltd",
+      "slug": "bata-india-ltd-0a8b0a50",
+      "isin": null,
+      "stock": "Bata India Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:bharat-petroleum-corporation-ltd",
+      "slug": "bharat-petroleum-corporation-ltd-eb8475f5",
+      "isin": null,
+      "stock": "Bharat Petroleum Corporation Ltd.",
+      "sector": "Petroleum Products",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:bikaji-foods-international-limited",
+      "slug": "bikaji-foods-international-limited-4113f4ad",
+      "isin": null,
+      "stock": "BIKAJI FOODS INTERNATIONAL LIMITED",
+      "sector": "Food Products",
+      "latestTracked": "2025-09"
+    },
+    {
+      "securityId": "NAME:billionbrains-garage-ventures-limited",
+      "slug": "billionbrains-garage-ventures-limited-7529c443",
+      "isin": null,
+      "stock": "Billionbrains Garage Ventures Limited",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-04"
+    },
+    {
+      "securityId": "NAME:birla-corporation-ltd",
+      "slug": "birla-corporation-ltd-8cf36c66",
+      "isin": null,
+      "stock": "Birla Corporation Ltd.",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:birlasoft-limited",
+      "slug": "birlasoft-limited-044d3ceb",
+      "isin": null,
+      "stock": "Birlasoft Limited",
+      "sector": "Software",
+      "latestTracked": "2026-01"
+    },
+    {
+      "securityId": "NAME:blue-dart-express-ltd",
+      "slug": "blue-dart-express-ltd-75b41909",
+      "isin": null,
+      "stock": "Blue Dart Express Ltd.",
+      "sector": "Transport Services",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:blue-star-ltd",
+      "slug": "blue-star-ltd-1e487229",
+      "isin": null,
+      "stock": "Blue Star Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-03"
+    },
+    {
+      "securityId": "NAME:bombay-stock-exchange-limited-bse",
+      "slug": "bombay-stock-exchange-limited-bse-1313159e",
+      "isin": null,
+      "stock": "Bombay Stock Exchange Limited (BSE)",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:bombay-stock-exchange-ltd-bse",
+      "slug": "bombay-stock-exchange-ltd-bse-529e6aa4",
+      "isin": null,
+      "stock": "Bombay Stock Exchange Ltd. (BSE)",
+      "sector": "Capital Markets",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:bosch-limited",
+      "slug": "bosch-limited-28cdd3d8",
+      "isin": null,
+      "stock": "Bosch Limited",
+      "sector": "Auto Components",
+      "latestTracked": "2026-03"
+    },
+    {
+      "securityId": "NAME:brainbees-solutions-limited-firstcry",
+      "slug": "brainbees-solutions-limited-firstcry-649cce75",
+      "isin": null,
+      "stock": "Brainbees Solutions Limited (FirstCry)",
+      "sector": "Retailing",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:brands-limited",
+      "slug": "brands-limited-8469230e",
+      "isin": null,
+      "stock": "BRANDS LIMITED",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-04"
+    },
+    {
+      "securityId": "NAME:brigade-enterprises-limited",
+      "slug": "brigade-enterprises-limited-7a613a00",
+      "isin": null,
+      "stock": "Brigade Enterprises Limited.",
+      "sector": "Realty",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:canfin-homes-ltd",
+      "slug": "canfin-homes-ltd-f43cc830",
+      "isin": null,
+      "stock": "CanFin Homes Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2025-12"
+    },
+    {
+      "securityId": "NAME:carborundum-universal-ltd",
+      "slug": "carborundum-universal-ltd-c68f3578",
+      "isin": null,
+      "stock": "Carborundum Universal Ltd.",
+      "sector": "Industrial Products",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:cartrade-tech-limited",
+      "slug": "cartrade-tech-limited-bb7b54c4",
+      "isin": null,
+      "stock": "CarTrade Tech Limited",
+      "sector": "Retailing",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:cello-world-limited",
+      "slug": "cello-world-limited-1a13cb87",
+      "isin": null,
+      "stock": "Cello World Limited",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:central-depository-services-india-ltd",
+      "slug": "central-depository-services-india-ltd-8eaddbf5",
+      "isin": null,
+      "stock": "Central Depository Services (India) Ltd.",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:centum-electronics-ltd",
+      "slug": "centum-electronics-ltd-699c7837",
+      "isin": null,
+      "stock": "Centum Electronics Ltd.",
+      "sector": "Industrial Manufacturing",
+      "latestTracked": "2026-02"
+    },
+    {
+      "securityId": "NAME:cera-sanitaryware-ltd",
+      "slug": "cera-sanitaryware-ltd-c0f198c5",
+      "isin": null,
+      "stock": "Cera Sanitaryware Ltd",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:cesc-ltd",
+      "slug": "cesc-ltd-bc2463cb",
+      "isin": null,
+      "stock": "CESC Ltd.",
+      "sector": "Power",
+      "latestTracked": "2025-12"
+    },
+    {
+      "securityId": "NAME:cg-power-and-industrial-solutions-ltd",
+      "slug": "cg-power-and-industrial-solutions-ltd-3e44272b",
+      "isin": null,
+      "stock": "CG Power and Industrial Solutions Ltd.",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:cholamandalam-financial-holdings-ltd",
+      "slug": "cholamandalam-financial-holdings-ltd-674d1071",
+      "isin": null,
+      "stock": "Cholamandalam Financial Holdings Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2026-03"
+    },
+    {
+      "securityId": "NAME:cie-automotive-india-ltd",
+      "slug": "cie-automotive-india-ltd-4c489ae7",
+      "isin": null,
+      "stock": "CIE Automotive India Ltd",
+      "sector": "Auto Components",
+      "latestTracked": "2026-03"
+    },
+    {
+      "securityId": "NAME:co-ltd",
+      "slug": "co-ltd-dd7c61a3",
+      "isin": null,
+      "stock": "Co. Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2025-07"
+    },
+    {
+      "securityId": "NAME:commodity-exchange-of-india-l",
+      "slug": "commodity-exchange-of-india-l-3626b154",
+      "isin": null,
+      "stock": "Commodity Exchange of India L",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:corporation-ltd",
+      "slug": "corporation-ltd-3f754f62",
+      "isin": null,
+      "stock": "Corporation Ltd.",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2026-04"
+    },
+    {
+      "securityId": "NAME:craftsman-automation-ltd",
+      "slug": "craftsman-automation-ltd-fdab2fe4",
+      "isin": null,
+      "stock": "Craftsman Automation Ltd",
+      "sector": "Auto Components",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:creditaccess-grameen-limited",
+      "slug": "creditaccess-grameen-limited-6f3fccb9",
+      "isin": null,
+      "stock": "Creditaccess Grameen Limited",
+      "sector": "Finance",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:crompton-greaves-consumer-elec-ltd",
+      "slug": "crompton-greaves-consumer-elec-ltd-609bc477",
+      "isin": null,
+      "stock": "Crompton Greaves Consumer Elec. Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:dabur-india-ltd",
+      "slug": "dabur-india-ltd-0b923432",
+      "isin": null,
+      "stock": "Dabur India Ltd.",
+      "sector": "Personal Products",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:delhivery-limited",
+      "slug": "delhivery-limited-6b6a9c1d",
+      "isin": null,
+      "stock": "Delhivery Limited",
+      "sector": "Transport Services",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:delta-corp-ltd",
+      "slug": "delta-corp-ltd-fb7e47fe",
+      "isin": null,
+      "stock": "Delta Corp Ltd.",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:devyani-international-ltd",
+      "slug": "devyani-international-ltd-e534dcf5",
+      "isin": null,
+      "stock": "Devyani International Ltd",
+      "sector": "Leisure Services",
+      "latestTracked": "2025-10"
+    },
+    {
+      "securityId": "NAME:dilip-buildcon-ltd",
+      "slug": "dilip-buildcon-ltd-a2435074",
+      "isin": null,
+      "stock": "Dilip Buildcon Ltd.",
+      "sector": "Construction",
+      "latestTracked": "2025-05"
+    },
+    {
+      "securityId": "NAME:dixon-technologies-india-ltd",
+      "slug": "dixon-technologies-india-ltd-41ff943f",
+      "isin": null,
+      "stock": "Dixon Technologies (India) Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:doms-industries-limited",
+      "slug": "doms-industries-limited-041b67cd",
+      "isin": null,
+      "stock": "DOMS Industries Limited",
+      "sector": "Household Products",
+      "latestTracked": "2026-02"
+    },
+    {
+      "securityId": "NAME:eicher-motors-ltd",
+      "slug": "eicher-motors-ltd-be18b7a3",
+      "isin": null,
+      "stock": "Eicher Motors Ltd.",
+      "sector": "Automobiles",
+      "latestTracked": "2025-09"
+    },
+    {
+      "securityId": "NAME:eih-ltd",
+      "slug": "eih-ltd-fdca5e08",
+      "isin": null,
+      "stock": "EIH Ltd.",
+      "sector": "Leisure Services",
+      "latestTracked": "2025-11"
+    },
+    {
+      "securityId": "NAME:elecon-engineering-comapny-ltd",
+      "slug": "elecon-engineering-comapny-ltd-1acf5536",
+      "isin": null,
+      "stock": "Elecon Engineering Comapny Ltd.",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2026-02"
+    },
+    {
+      "securityId": "NAME:emami-ltd",
+      "slug": "emami-ltd-a8e53ec1",
+      "isin": null,
+      "stock": "Emami Ltd.",
+      "sector": "Personal Products",
+      "latestTracked": "2026-04"
+    },
+    {
+      "securityId": "NAME:embassy-office-parks-reit",
+      "slug": "embassy-office-parks-reit-b11c3e18",
+      "isin": null,
+      "stock": "Embassy Office Parks REIT",
+      "sector": "Realty",
+      "latestTracked": "2025-10"
+    },
+    {
+      "securityId": "NAME:endurance-technologies-ltd",
+      "slug": "endurance-technologies-ltd-f515d63e",
+      "isin": null,
+      "stock": "Endurance Technologies Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:enterprises-limited",
+      "slug": "enterprises-limited-95c3a548",
+      "isin": null,
+      "stock": "Enterprises Limited.",
+      "sector": "Realty",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:equitas-small-finance-bank-ltd",
+      "slug": "equitas-small-finance-bank-ltd-f214e782",
+      "isin": null,
+      "stock": "Equitas Small Finance Bank Ltd",
+      "sector": "Banks",
+      "latestTracked": "2025-08"
+    },
+    {
+      "securityId": "NAME:exide-industries-ltd",
+      "slug": "exide-industries-ltd-9dcd6bea",
+      "isin": null,
+      "stock": "Exide Industries Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:financial-holdings-ltd",
+      "slug": "financial-holdings-ltd-f6ec69f4",
+      "isin": null,
+      "stock": "Financial Holdings Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:five-star-business-finance-limited",
+      "slug": "five-star-business-finance-limited-aad76ad5",
+      "isin": null,
+      "stock": "Five-Star Business Finance Limited",
+      "sector": "Finance",
+      "latestTracked": "2026-03"
+    },
+    {
+      "securityId": "NAME:fusion-finance-limited",
+      "slug": "fusion-finance-limited-95eccbbd",
+      "isin": null,
+      "stock": "Fusion Finance Limited",
+      "sector": "Finance",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:gabriel-india-ltd",
+      "slug": "gabriel-india-ltd-7e32ce39",
+      "isin": null,
+      "stock": "Gabriel India Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2025-01"
+    },
+    {
+      "securityId": "NAME:gail-india-ltd",
+      "slug": "gail-india-ltd-781ee4db",
+      "isin": null,
+      "stock": "GAIL (India) Ltd.",
+      "sector": "Gas",
+      "latestTracked": "2026-04"
+    },
+    {
+      "securityId": "NAME:go-fashion-india-limited",
+      "slug": "go-fashion-india-limited-79d60ed8",
+      "isin": null,
+      "stock": "GO FASHION (INDIA) LIMITED",
+      "sector": "Retailing",
+      "latestTracked": "2025-08"
+    },
+    {
+      "securityId": "NAME:godrej-consumer-products-ltd",
+      "slug": "godrej-consumer-products-ltd-3b82238d",
+      "isin": null,
+      "stock": "Godrej Consumer Products Ltd.",
+      "sector": "Personal Products",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:great-eastern-shipping-company-ltd",
+      "slug": "great-eastern-shipping-company-ltd-ffb07761",
+      "isin": null,
+      "stock": "Great Eastern Shipping Company Ltd.",
+      "sector": "Transport Services",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:greaves-consumer-elec-ltd",
+      "slug": "greaves-consumer-elec-ltd-6c4d0f30",
+      "isin": null,
+      "stock": "Greaves Consumer Elec. Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:greenply-industries-ltd",
+      "slug": "greenply-industries-ltd-98acecc2",
+      "isin": null,
+      "stock": "Greenply Industries Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:gulf-oil-lubricants-india-ltd",
+      "slug": "gulf-oil-lubricants-india-ltd-64bf278b",
+      "isin": null,
+      "stock": "Gulf Oil Lubricants India Ltd.",
+      "sector": "Petroleum Products",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:havells-india-ltd",
+      "slug": "havells-india-ltd-b85ce489",
+      "isin": null,
+      "stock": "Havells India Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-02"
+    },
+    {
+      "securityId": "NAME:hdfc-life-insurance-company-limited",
+      "slug": "hdfc-life-insurance-company-limited-7b5a864b",
+      "isin": null,
+      "stock": "HDFC Life Insurance Company Limited",
+      "sector": "Insurance",
+      "latestTracked": "2026-04"
+    },
+    {
+      "securityId": "NAME:hero-motocorp-ltd",
+      "slug": "hero-motocorp-ltd-d322510c",
+      "isin": null,
+      "stock": "Hero MotoCorp Ltd.",
+      "sector": "Automobiles",
+      "latestTracked": "2025-12"
+    },
+    {
+      "securityId": "NAME:hexaware-technologies-ltd",
+      "slug": "hexaware-technologies-ltd-01832f15",
+      "isin": null,
+      "stock": "Hexaware Technologies Ltd.",
+      "sector": "Software",
+      "latestTracked": "2025-11"
+    },
+    {
+      "securityId": "NAME:hindalco-industries-ltd",
+      "slug": "hindalco-industries-ltd-bd8e2c14",
+      "isin": null,
+      "stock": "Hindalco Industries Ltd.",
+      "sector": "Non - Ferrous Metals",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:hotels-limited",
+      "slug": "hotels-limited-39173b08",
+      "isin": null,
+      "stock": "Hotels Limited",
+      "sector": "Leisure Services",
+      "latestTracked": "2025-03"
+    },
+    {
+      "securityId": "NAME:hyundai-motor-india-limited",
+      "slug": "hyundai-motor-india-limited-0f13cac8",
+      "isin": null,
+      "stock": "Hyundai Motor India Limited",
+      "sector": "Automobiles",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:icici-bank-ltd",
+      "slug": "icici-bank-ltd-821c644c",
+      "isin": null,
+      "stock": "ICICI Bank Ltd.",
+      "sector": "Banks",
+      "latestTracked": "2026-02"
+    },
+    {
+      "securityId": "NAME:icici-lombard-general-insurance-co",
+      "slug": "icici-lombard-general-insurance-co-d329b3dd",
+      "isin": null,
+      "stock": "ICICI Lombard General Insurance Co",
+      "sector": "Insurance",
+      "latestTracked": "2025-08"
+    },
+    {
+      "securityId": "NAME:icici-prudential-asset-management",
+      "slug": "icici-prudential-asset-management-ef0a8154",
+      "isin": null,
+      "stock": "ICICI PRUDENTIAL ASSET MANAGEMENT",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:icici-prudential-life-insurance-company-ltd",
+      "slug": "icici-prudential-life-insurance-company-ltd-b8893231",
+      "isin": null,
+      "stock": "ICICI Prudential Life Insurance Company Ltd.",
+      "sector": "Insurance",
+      "latestTracked": "2026-02"
+    },
+    {
+      "securityId": "NAME:idfc-first-bank-limited",
+      "slug": "idfc-first-bank-limited-282d1b1e",
+      "isin": null,
+      "stock": "IDFC First Bank Limited",
+      "sector": "Banks",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:ikio-technologies-limited",
+      "slug": "ikio-technologies-limited-af9f8ab6",
+      "isin": null,
+      "stock": "IKIO Technologies Limited",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:indian-bank",
+      "slug": "indian-bank-dc90b35c",
+      "isin": null,
+      "stock": "Indian Bank",
+      "sector": "Banks",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:indian-railway-catering-and-tourism",
+      "slug": "indian-railway-catering-and-tourism-3da147f3",
+      "isin": null,
+      "stock": "Indian Railway Catering And Tourism",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-03"
+    },
+    {
+      "securityId": "NAME:indian-railway-catering-and-tourism-corp",
+      "slug": "indian-railway-catering-and-tourism-corp-c4028bf7",
+      "isin": null,
+      "stock": "Indian Railway Catering And Tourism Corp",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:indian-railway-catering-and-tourism-corp-ltd",
+      "slug": "indian-railway-catering-and-tourism-corp-ltd-acb90c74",
+      "isin": null,
+      "stock": "Indian Railway Catering And Tourism Corp Ltd",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:indigo-paints-limited",
+      "slug": "indigo-paints-limited-35f2f397",
+      "isin": null,
+      "stock": "Indigo Paints Limited",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:indraprastha-gas-ltd",
+      "slug": "indraprastha-gas-ltd-e6244743",
+      "isin": null,
+      "stock": "Indraprastha Gas Ltd.",
+      "sector": "Gas",
+      "latestTracked": "2026-01"
+    },
+    {
+      "securityId": "NAME:industries-ltd",
+      "slug": "industries-ltd-5ecb25a1",
+      "isin": null,
+      "stock": "Industries Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:instruments-limited",
+      "slug": "instruments-limited-5eeebc59",
+      "isin": null,
+      "stock": "instruments Limited",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2025-03"
+    },
+    {
+      "securityId": "NAME:interglobe-aviation-ltd",
+      "slug": "interglobe-aviation-ltd-85db2fea",
+      "isin": null,
+      "stock": "InterGlobe Aviation Ltd.",
+      "sector": "Transport Services",
+      "latestTracked": "2026-02"
+    },
+    {
+      "securityId": "NAME:investments-of-india-ltd",
+      "slug": "investments-of-india-ltd-9d16ff70",
+      "isin": null,
+      "stock": "Investments of India Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2025-03"
+    },
+    {
+      "securityId": "NAME:itc-hotels-limited",
+      "slug": "itc-hotels-limited-7a87b230",
+      "isin": null,
+      "stock": "ITC Hotels Limited",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:jagran-prakashan-ltd",
+      "slug": "jagran-prakashan-ltd-3768d916",
+      "isin": null,
+      "stock": "Jagran Prakashan Ltd.",
+      "sector": "Media",
+      "latestTracked": "2026-01"
+    },
+    {
+      "securityId": "NAME:jindal-steel-power-ltd",
+      "slug": "jindal-steel-power-ltd-6b5e30c8",
+      "isin": null,
+      "stock": "Jindal Steel & Power Ltd.",
+      "sector": "Ferrous Metals",
+      "latestTracked": "2025-07"
+    },
+    {
+      "securityId": "NAME:jk-tyre-industries-limited",
+      "slug": "jk-tyre-industries-limited-16657942",
+      "isin": null,
+      "stock": "JK Tyre & Industries Limited",
+      "sector": "Auto Components",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:jsw-energy-ltd",
+      "slug": "jsw-energy-ltd-7d8ce932",
+      "isin": null,
+      "stock": "JSW Energy Ltd.",
+      "sector": "Power",
+      "latestTracked": "2025-08"
+    },
+    {
+      "securityId": "NAME:jubilant-foodworks-limited",
+      "slug": "jubilant-foodworks-limited-dc7b7259",
+      "isin": null,
+      "stock": "Jubilant Foodworks Limited",
+      "sector": "Leisure Services",
+      "latestTracked": "2025-11"
+    },
+    {
+      "securityId": "NAME:kajaria-ceramics-ltd",
+      "slug": "kajaria-ceramics-ltd-d3fd40d4",
+      "isin": null,
+      "stock": "Kajaria Ceramics Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-02"
+    },
+    {
+      "securityId": "NAME:kalpataru-projects-international-ltd",
+      "slug": "kalpataru-projects-international-ltd-fc9a3f50",
+      "isin": null,
+      "stock": "Kalpataru Projects International Ltd",
+      "sector": "Construction",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:kaynes-technology-india-limited",
+      "slug": "kaynes-technology-india-limited-11c88621",
+      "isin": null,
+      "stock": "KAYNES TECHNOLOGY INDIA LIMITED",
+      "sector": "Industrial Manufacturing",
+      "latestTracked": "2026-03"
+    },
+    {
+      "securityId": "NAME:kec-international-ltd",
+      "slug": "kec-international-ltd-80a91b31",
+      "isin": null,
+      "stock": "KEC International Ltd.",
+      "sector": "Construction",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:kei-industries-ltd",
+      "slug": "kei-industries-ltd-4c7086fc",
+      "isin": null,
+      "stock": "KEI Industries Ltd.",
+      "sector": "Industrial Products",
+      "latestTracked": "2025-08"
+    },
+    {
+      "securityId": "NAME:kwality-wall-s-india-limited",
+      "slug": "kwality-wall-s-india-limited-21a63b25",
+      "isin": null,
+      "stock": "Kwality Wall’s India Limited",
+      "sector": "Food Products",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:latent-ivndiueswtry-aanlloacaltiyotn-iocf-es-luiitmy-hitoledidng",
+      "slug": "latent-ivndiueswtry-aanlloacaltiyotn-iocf-es-luiitmy-hitoledidng-4aafed40",
+      "isin": null,
+      "stock": "LATENT IVndIuEsWtry AANlloAcaLtiYoTn IoCf ES LuiItMy HITolEdiDng",
+      "sector": "Software",
+      "latestTracked": "2026-04"
+    },
+    {
+      "securityId": "NAME:latent-view-analytics-limited",
+      "slug": "latent-view-analytics-limited-dbfbf598",
+      "isin": null,
+      "stock": "LATENT VIEW ANALYTICS LIMITED",
+      "sector": "Software",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:le-travenues-technology-limited",
+      "slug": "le-travenues-technology-limited-54e5a94c",
+      "isin": null,
+      "stock": "Le Travenues Technology Limited",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-03"
+    },
+    {
+      "securityId": "NAME:lg-balakrishnan-bros-ltd",
+      "slug": "lg-balakrishnan-bros-ltd-35b331f0",
+      "isin": null,
+      "stock": "LG Balakrishnan & Bros Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:limited",
+      "slug": "limited-e5125d9f",
+      "isin": null,
+      "stock": "Limited",
+      "sector": "Banks",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:limited-nykaa",
+      "slug": "limited-nykaa-cd50ee58",
+      "isin": null,
+      "stock": "Limited (Nykaa)",
+      "sector": "Retailing",
+      "latestTracked": "2026-02"
+    },
+    {
+      "securityId": "NAME:ltd",
+      "slug": "ltd-a046a924",
+      "isin": null,
+      "stock": "Ltd.",
+      "sector": "Personal Products",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:ltimindtree-limited",
+      "slug": "ltimindtree-limited-15edf0fe",
+      "isin": null,
+      "stock": "LTIMindtree Limited",
+      "sector": "Software",
+      "latestTracked": "2026-03"
+    },
+    {
+      "securityId": "NAME:ltm-limited",
+      "slug": "ltm-limited-474b6c98",
+      "isin": null,
+      "stock": "LTM Limited",
+      "sector": "Software",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:mahanagar-gas-ltd",
+      "slug": "mahanagar-gas-ltd-b64d80d3",
+      "isin": null,
+      "stock": "Mahanagar Gas Ltd.",
+      "sector": "Gas",
+      "latestTracked": "2025-09"
+    },
+    {
+      "securityId": "NAME:medi-assist-healthcare-services-limited",
+      "slug": "medi-assist-healthcare-services-limited-51cfe272",
+      "isin": null,
+      "stock": "Medi Assist Healthcare Services Limited",
+      "sector": "Insurance",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:metro-brands-limited",
+      "slug": "metro-brands-limited-7796f737",
+      "isin": null,
+      "stock": "METRO BRANDS LIMITED",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:motherson-sumi-wiring-india",
+      "slug": "motherson-sumi-wiring-india-ddaf87a8",
+      "isin": null,
+      "stock": "Motherson Sumi Wiring India",
+      "sector": "Auto Components",
+      "latestTracked": "2025-08"
+    },
+    {
+      "securityId": "NAME:motherson-sumi-wiring-india-limited",
+      "slug": "motherson-sumi-wiring-india-limited-046ccf1a",
+      "isin": null,
+      "stock": "Motherson Sumi Wiring India Limited",
+      "sector": "Auto Components",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:multi-commodity-exchange-of-india-l",
+      "slug": "multi-commodity-exchange-of-india-l-6156b01a",
+      "isin": null,
+      "stock": "Multi Commodity Exchange of India L",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:muthoot-finance-ltd",
+      "slug": "muthoot-finance-ltd-add31815",
+      "isin": null,
+      "stock": "Muthoot Finance Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2025-07"
+    },
+    {
+      "securityId": "NAME:nhpc-ltd",
+      "slug": "nhpc-ltd-4a54cf57",
+      "isin": null,
+      "stock": "NHPC Ltd.",
+      "sector": "Power",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:nilkamal-ltd",
+      "slug": "nilkamal-ltd-b23abeb4",
+      "isin": null,
+      "stock": "Nilkamal Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-01"
+    },
+    {
+      "securityId": "NAME:nlc-india-ltd",
+      "slug": "nlc-india-ltd-b9a9040d",
+      "isin": null,
+      "stock": "NLC India Ltd.",
+      "sector": "Power",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:oberoi-realty-ltd",
+      "slug": "oberoi-realty-ltd-a7aa221d",
+      "isin": null,
+      "stock": "Oberoi Realty Ltd.",
+      "sector": "Realty",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:office-parks-reit",
+      "slug": "office-parks-reit-c897eb15",
+      "isin": null,
+      "stock": "Office Parks REIT",
+      "sector": "Realty",
+      "latestTracked": "2025-03"
+    },
+    {
+      "securityId": "NAME:oil-lubricants-india-ltd",
+      "slug": "oil-lubricants-india-ltd-43e60474",
+      "isin": null,
+      "stock": "Oil Lubricants India Ltd.",
+      "sector": "Petroleum Products",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:ola-electric-mobility-limited",
+      "slug": "ola-electric-mobility-limited-8a3bcb1b",
+      "isin": null,
+      "stock": "Ola Electric Mobility Limited",
+      "sector": "Automobiles",
+      "latestTracked": "2025-11"
+    },
+    {
+      "securityId": "NAME:oracle-financial-ser-software-ltd",
+      "slug": "oracle-financial-ser-software-ltd-67787bac",
+      "isin": null,
+      "stock": "Oracle Financial Ser Software Ltd.",
+      "sector": "Software",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:orient-cement-ltd",
+      "slug": "orient-cement-ltd-44f9378f",
+      "isin": null,
+      "stock": "Orient Cement Ltd.",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2025-08"
+    },
+    {
+      "securityId": "NAME:pnb-housing-finance-ltd",
+      "slug": "pnb-housing-finance-ltd-183c3ae5",
+      "isin": null,
+      "stock": "PNB Housing Finance Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2026-03"
+    },
+    {
+      "securityId": "NAME:power-grid-corporation-of-india-ltd",
+      "slug": "power-grid-corporation-of-india-ltd-571cba44",
+      "isin": null,
+      "stock": "Power Grid Corporation of India Ltd.",
+      "sector": "Power",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:praj-industries-limited",
+      "slug": "praj-industries-limited-ada7b61e",
+      "isin": null,
+      "stock": "Praj Industries Limited",
+      "sector": "Industrial Manufacturing",
+      "latestTracked": "2026-03"
+    },
+    {
+      "securityId": "NAME:projects-international-ltd",
+      "slug": "projects-international-ltd-bd041753",
+      "isin": null,
+      "stock": "Projects International Ltd",
+      "sector": "Construction",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:projects-limited",
+      "slug": "projects-limited-1f28bd2e",
+      "isin": null,
+      "stock": "Projects Limited",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2025-03"
+    },
+    {
+      "securityId": "NAME:prudent-corporate-advisory-services-limited",
+      "slug": "prudent-corporate-advisory-services-limited-142597bb",
+      "isin": null,
+      "stock": "Prudent Corporate Advisory Services Limited",
+      "sector": "Capital Markets",
+      "latestTracked": "2025-04"
+    },
+    {
+      "securityId": "NAME:rbl-bank-ltd",
+      "slug": "rbl-bank-ltd-a5eea306",
+      "isin": null,
+      "stock": "RBL Bank Ltd.",
+      "sector": "Banks",
+      "latestTracked": "2025-05"
+    },
+    {
+      "securityId": "NAME:rec-limited",
+      "slug": "rec-limited-523a362d",
+      "isin": null,
+      "stock": "REC Limited.",
+      "sector": "Finance",
+      "latestTracked": "2025-09"
+    },
+    {
+      "securityId": "NAME:redington-ltd",
+      "slug": "redington-ltd-63bc4beb",
+      "isin": null,
+      "stock": "Redington Ltd.",
+      "sector": "Commercial Services & Supplies",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:rishabh-instruments-limited",
+      "slug": "rishabh-instruments-limited-2a1336bb",
+      "isin": null,
+      "stock": "Rishabh instruments Limited",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2025-05"
+    },
+    {
+      "securityId": "NAME:sagar-cements-ltd",
+      "slug": "sagar-cements-ltd-f09974ed",
+      "isin": null,
+      "stock": "Sagar Cements Ltd.",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2026-02"
+    },
+    {
+      "securityId": "NAME:sanitaryware-ltd",
+      "slug": "sanitaryware-ltd-db5b99e4",
+      "isin": null,
+      "stock": "Sanitaryware Ltd",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:sapphire-foods-india-limited",
+      "slug": "sapphire-foods-india-limited-ebe3be26",
+      "isin": null,
+      "stock": "SAPPHIRE FOODS INDIA LIMITED",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:sbi-cards-and-payment-services-limited",
+      "slug": "sbi-cards-and-payment-services-limited-f2e41ca6",
+      "isin": null,
+      "stock": "SBI CARDS AND PAYMENT SERVICES LIMITED",
+      "sector": "Finance",
+      "latestTracked": "2026-02"
+    },
+    {
+      "securityId": "NAME:schloss-bangalore-limited",
+      "slug": "schloss-bangalore-limited-bf99b640",
+      "isin": null,
+      "stock": "Schloss Bangalore Limited",
+      "sector": "Leisure Services",
+      "latestTracked": "2025-07"
+    },
+    {
+      "securityId": "NAME:shoppers-stop-ltd",
+      "slug": "shoppers-stop-ltd-1da7a2a5",
+      "isin": null,
+      "stock": "Shoppers Stop Ltd.",
+      "sector": "Retailing",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:software-ltd",
+      "slug": "software-ltd-d282ca23",
+      "isin": null,
+      "stock": "Software Ltd.",
+      "sector": "Software",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:sona-blw-precision-forgings",
+      "slug": "sona-blw-precision-forgings-41242484",
+      "isin": null,
+      "stock": "Sona Blw Precision Forgings",
+      "sector": "Auto Components",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:sonata-software-ltd",
+      "slug": "sonata-software-ltd-75d8e901",
+      "isin": null,
+      "stock": "Sonata Software Ltd.",
+      "sector": "Software",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:star-ltd",
+      "slug": "star-ltd-6a67c6ff",
+      "isin": null,
+      "stock": "Star Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:state-bank-of-india",
+      "slug": "state-bank-of-india-4e4f0340",
+      "isin": null,
+      "stock": "State Bank of India",
+      "sector": "Banks",
+      "latestTracked": "2025-01"
+    },
+    {
+      "securityId": "NAME:steel-authority-of-india-ltd",
+      "slug": "steel-authority-of-india-ltd-5fb8079c",
+      "isin": null,
+      "stock": "Steel Authority Of India Ltd.",
+      "sector": "Ferrous Metals",
+      "latestTracked": "2025-08"
+    },
+    {
+      "securityId": "NAME:stl-networks-limited",
+      "slug": "stl-networks-limited-6ababa2f",
+      "isin": null,
+      "stock": "STL NETWORKS LIMITED",
+      "sector": "Telecom - Services",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:sundram-fasteners-ltd",
+      "slug": "sundram-fasteners-ltd-78d3b5f8",
+      "isin": null,
+      "stock": "Sundram Fasteners Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2025-08"
+    },
+    {
+      "securityId": "NAME:supreme-industries-ltd",
+      "slug": "supreme-industries-ltd-f37a6f56",
+      "isin": null,
+      "stock": "Supreme Industries Ltd.",
+      "sector": "Industrial Products",
+      "latestTracked": "2025-06"
+    },
+    {
+      "securityId": "NAME:suzlon-energy-ltd",
+      "slug": "suzlon-energy-ltd-1b1b2330",
+      "isin": null,
+      "stock": "Suzlon Energy Ltd",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2026-03"
+    },
+    {
+      "securityId": "NAME:symphony-ltd",
+      "slug": "symphony-ltd-8a70b7a3",
+      "isin": null,
+      "stock": "Symphony Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:tata-motors-ltd",
+      "slug": "tata-motors-ltd-32878fc4",
+      "isin": null,
+      "stock": "Tata Motors Ltd.",
+      "sector": "Automobiles",
+      "latestTracked": "2025-10"
+    },
+    {
+      "securityId": "NAME:tata-motors-passenger-vehicles-limited",
+      "slug": "tata-motors-passenger-vehicles-limited-6a1fbd86",
+      "isin": null,
+      "stock": "Tata Motors Passenger Vehicles Limited",
+      "sector": "Automobiles",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:tata-steel-ltd",
+      "slug": "tata-steel-ltd-fdb818e0",
+      "isin": null,
+      "stock": "Tata Steel Ltd.",
+      "sector": "Ferrous Metals",
+      "latestTracked": "2026-02"
+    },
+    {
+      "securityId": "NAME:tci-express-ltd",
+      "slug": "tci-express-ltd-ed9f568e",
+      "isin": null,
+      "stock": "TCI Express Ltd.",
+      "sector": "Transport Services",
+      "latestTracked": "2025-10"
+    },
+    {
+      "securityId": "NAME:td-power-systems-ltd",
+      "slug": "td-power-systems-ltd-49017c12",
+      "isin": null,
+      "stock": "TD Power Systems Ltd.",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2026-01"
+    },
+    {
+      "securityId": "NAME:tech-mahindra-ltd",
+      "slug": "tech-mahindra-ltd-440e31ce",
+      "isin": null,
+      "stock": "Tech Mahindra Ltd.",
+      "sector": "Software",
+      "latestTracked": "2026-02"
+    },
+    {
+      "securityId": "NAME:technologies-ltd",
+      "slug": "technologies-ltd-a6516f9a",
+      "isin": null,
+      "stock": "Technologies Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:technology-india-limited",
+      "slug": "technology-india-limited-4e694361",
+      "isin": null,
+      "stock": "TECHNOLOGY INDIA LIMITED",
+      "sector": "Industrial Manufacturing",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:tega-industries-limited",
+      "slug": "tega-industries-limited-f6e61eca",
+      "isin": null,
+      "stock": "TEGA INDUSTRIES LIMITED",
+      "sector": "Industrial Manufacturing",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:tenneco-clean-air-india-limited",
+      "slug": "tenneco-clean-air-india-limited-4f0f2285",
+      "isin": null,
+      "stock": "TENNECO CLEAN AIR INDIA LIMITED",
+      "sector": "Auto Components",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:the-federal-bank-ltd",
+      "slug": "the-federal-bank-ltd-b2c0294b",
+      "isin": null,
+      "stock": "The Federal Bank Ltd.",
+      "sector": "Banks",
+      "latestTracked": "2025-09"
+    },
+    {
+      "securityId": "NAME:the-phoenix-mills-limited",
+      "slug": "the-phoenix-mills-limited-9276c5fb",
+      "isin": null,
+      "stock": "The Phoenix Mills Limited",
+      "sector": "Realty",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:the-ramco-cements-ltd",
+      "slug": "the-ramco-cements-ltd-e9601a2c",
+      "isin": null,
+      "stock": "The Ramco Cements Ltd.",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:timken-india-ltd",
+      "slug": "timken-india-ltd-e9ad82aa",
+      "isin": null,
+      "stock": "Timken India Ltd.",
+      "sector": "Industrial Products",
+      "latestTracked": "2025-12"
+    },
+    {
+      "securityId": "NAME:titagarh-wagons-limited",
+      "slug": "titagarh-wagons-limited-084a18f6",
+      "isin": null,
+      "stock": "Titagarh Wagons Limited",
+      "sector": "Industrial Manufacturing",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:titan-company-ltd",
+      "slug": "titan-company-ltd-ea176253",
+      "isin": null,
+      "stock": "Titan Company Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:torrent-power-ltd",
+      "slug": "torrent-power-ltd-a2eca412",
+      "isin": null,
+      "stock": "Torrent Power Ltd.",
+      "sector": "Power",
+      "latestTracked": "2025-11"
+    },
+    {
+      "securityId": "NAME:tube-investments-of-india-ltd",
+      "slug": "tube-investments-of-india-ltd-eb7482fe",
+      "isin": null,
+      "stock": "Tube Investments of India Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2025-11"
+    },
+    {
+      "securityId": "NAME:ultratech-cement-limited",
+      "slug": "ultratech-cement-limited-870ecda1",
+      "isin": null,
+      "stock": "UltraTech Cement Limited",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:union-bank-of-india",
+      "slug": "union-bank-of-india-5d85c944",
+      "isin": null,
+      "stock": "Union Bank of India",
+      "sector": "Banks",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:universal-ltd",
+      "slug": "universal-ltd-e4ff37ea",
+      "isin": null,
+      "stock": "Universal Ltd.",
+      "sector": "Industrial Products",
+      "latestTracked": "2026-05"
+    },
+    {
+      "securityId": "NAME:uti-asset-management-company-ltd",
+      "slug": "uti-asset-management-company-ltd-10023d6a",
+      "isin": null,
+      "stock": "UTI Asset Management Company Ltd",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-03"
+    },
+    {
+      "securityId": "NAME:varroc-engineering-limited",
+      "slug": "varroc-engineering-limited-8671eaf9",
+      "isin": null,
+      "stock": "Varroc Engineering Limited",
+      "sector": "Auto Components",
+      "latestTracked": "2026-01"
+    },
+    {
+      "securityId": "NAME:vip-industries-ltd",
+      "slug": "vip-industries-ltd-9e91ab49",
+      "isin": null,
+      "stock": "VIP Industries Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2025-05"
+    },
+    {
+      "securityId": "NAME:vishal-mega-mart-limited",
+      "slug": "vishal-mega-mart-limited-3b6d36c4",
+      "isin": null,
+      "stock": "Vishal Mega Mart Limited",
+      "sector": "Retailing",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:vodafone-idea-limited",
+      "slug": "vodafone-idea-limited-1507f439",
+      "isin": null,
+      "stock": "VODAFONE IDEA LIMITED",
+      "sector": "Telecom - Services",
+      "latestTracked": "2025-02"
+    },
+    {
+      "securityId": "NAME:voltas-ltd",
+      "slug": "voltas-ltd-087c024f",
+      "isin": null,
+      "stock": "Voltas Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2025-12"
+    },
+    {
+      "securityId": "NAME:wheels-india-ltd",
+      "slug": "wheels-india-ltd-f990606b",
+      "isin": null,
+      "stock": "Wheels India Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2025-03"
+    },
+    {
+      "securityId": "NAME:whirlpool-of-india-ltd",
+      "slug": "whirlpool-of-india-ltd-be72a882",
+      "isin": null,
+      "stock": "Whirlpool of India Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "NAME:zensar-technologies-ltd",
+      "slug": "zensar-technologies-ltd-38e30071",
+      "isin": null,
+      "stock": "Zensar Technologies Ltd.",
+      "sector": "Software",
+      "latestTracked": "2026-06"
+    }
+  ]
+}

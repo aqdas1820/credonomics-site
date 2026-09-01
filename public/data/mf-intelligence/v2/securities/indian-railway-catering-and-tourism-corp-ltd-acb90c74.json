@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:indian-railway-catering-and-tourism-corp-ltd",
+  "slug": "indian-railway-catering-and-tourism-corp-ltd-acb90c74",
+  "isin": null,
+  "stock": "Indian Railway Catering And Tourism Corp Ltd",
+  "sector": "Leisure Services",
+  "firstTracked": "2026-06",
+  "latestTracked": "2026-06",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.03,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.03,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-06",
+      "schemeCount": 1,
+      "totalWeight": 0.03,
+      "normalizedWeight": 0.03,
+      "avgHeldWeight": 0.03
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-06",
+          "weight": 0.03,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

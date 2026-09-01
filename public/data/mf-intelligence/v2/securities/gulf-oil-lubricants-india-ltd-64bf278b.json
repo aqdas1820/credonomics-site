@@ -1,0 +1,66 @@
+{
+  "securityId": "NAME:gulf-oil-lubricants-india-ltd",
+  "slug": "gulf-oil-lubricants-india-ltd-64bf278b",
+  "isin": null,
+  "stock": "Gulf Oil Lubricants India Ltd.",
+  "sector": "Petroleum Products",
+  "firstTracked": "2026-03",
+  "latestTracked": "2026-06",
+  "monthsTracked": 2,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.42,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.26,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-03",
+      "schemeCount": 1,
+      "totalWeight": 0.42,
+      "normalizedWeight": 0.42,
+      "avgHeldWeight": 0.42
+    },
+    {
+      "month": "2026-06",
+      "schemeCount": 1,
+      "totalWeight": 0.26,
+      "normalizedWeight": 0.26,
+      "avgHeldWeight": 0.26
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-03",
+          "weight": 0.42,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-06",
+          "weight": 0.26,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

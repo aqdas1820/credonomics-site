@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:limited-nykaa",
+  "slug": "limited-nykaa-cd50ee58",
+  "isin": null,
+  "stock": "Limited (Nykaa)",
+  "sector": "Retailing",
+  "firstTracked": "2026-02",
+  "latestTracked": "2026-02",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 1.96,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Focused Fund",
+      "weight": 1.96,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 1.96,
+      "normalizedWeight": 1.96,
+      "avgHeldWeight": 1.96
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Focused Fund",
+      "history": [
+        {
+          "month": "2026-02",
+          "weight": 1.96,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

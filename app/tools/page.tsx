@@ -3,7 +3,6 @@ import {
   BarChart3,
   CreditCard,
   Database,
-  FileSearch,
   Landmark,
   ShieldCheck,
 } from 'lucide-react'

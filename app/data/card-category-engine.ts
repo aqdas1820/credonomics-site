@@ -455,7 +455,6 @@ export function analyseCategoryCard(
     const theoretical = partner.theoretical + baseReward
     const fee = feeCost(card.values, totalSpend)
     const net = gross - fee.cost
-    const grossRate = totalSpend > 0 ? gross / totalSpend * 100 : 0
     const netRate = totalSpend > 0 ? net / totalSpend * 100 : 0
     const partnerShare = totalSpend > 0 ? partnerAnnual / totalSpend : 0
     const partnerPart = clamp((safe(card.values.partnerRate) / 8) * 40, 0, 40)

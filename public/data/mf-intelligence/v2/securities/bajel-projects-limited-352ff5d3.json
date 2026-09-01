@@ -1,0 +1,84 @@
+{
+  "securityId": "NAME:bajel-projects-limited",
+  "slug": "bajel-projects-limited-352ff5d3",
+  "isin": null,
+  "stock": "Bajel Projects Limited",
+  "sector": "Electrical Equipment",
+  "firstTracked": "2025-04",
+  "latestTracked": "2025-08",
+  "monthsTracked": 3,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.03,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.03,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-04",
+      "schemeCount": 1,
+      "totalWeight": 0.03,
+      "normalizedWeight": 0.03,
+      "avgHeldWeight": 0.03
+    },
+    {
+      "month": "2025-05",
+      "schemeCount": 1,
+      "totalWeight": 0.03,
+      "normalizedWeight": 0.03,
+      "avgHeldWeight": 0.03
+    },
+    {
+      "month": "2025-08",
+      "schemeCount": 1,
+      "totalWeight": 0.03,
+      "normalizedWeight": 0.03,
+      "avgHeldWeight": 0.03
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2025-04",
+          "weight": 0.03,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-05",
+          "weight": 0.03,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-08",
+          "weight": 0.03,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-08",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

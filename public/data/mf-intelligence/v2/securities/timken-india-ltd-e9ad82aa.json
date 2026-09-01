@@ -1,0 +1,143 @@
+{
+  "securityId": "NAME:timken-india-ltd",
+  "slug": "timken-india-ltd-e9ad82aa",
+  "isin": null,
+  "stock": "Timken India Ltd.",
+  "sector": "Industrial Products",
+  "firstTracked": "2025-03",
+  "latestTracked": "2025-12",
+  "monthsTracked": 6,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.42,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.42,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-03",
+      "schemeCount": 1,
+      "totalWeight": 0.34,
+      "normalizedWeight": 0.34,
+      "avgHeldWeight": 0.34
+    },
+    {
+      "month": "2025-04",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    },
+    {
+      "month": "2025-05",
+      "schemeCount": 1,
+      "totalWeight": 0.35,
+      "normalizedWeight": 0.35,
+      "avgHeldWeight": 0.35
+    },
+    {
+      "month": "2025-07",
+      "schemeCount": 1,
+      "totalWeight": 0.36,
+      "normalizedWeight": 0.36,
+      "avgHeldWeight": 0.36
+    },
+    {
+      "month": "2025-09",
+      "schemeCount": 1,
+      "totalWeight": 0.32,
+      "normalizedWeight": 0.32,
+      "avgHeldWeight": 0.32
+    },
+    {
+      "month": "2025-12",
+      "schemeCount": 1,
+      "totalWeight": 0.42,
+      "normalizedWeight": 0.42,
+      "avgHeldWeight": 0.42
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-12",
+          "weight": 0.42,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2025-03",
+          "weight": 0.34,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-04",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-05",
+          "weight": 0.35,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-07",
+          "weight": 0.36,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-09",
+          "weight": 0.32,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-03",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-07",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-09",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-12",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

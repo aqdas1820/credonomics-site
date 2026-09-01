@@ -3,10 +3,11 @@ import {
   readdirSync,
 } from 'node:fs'
 import path from 'node:path'
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 import {
   ipoDashboardRecords,
 } from '../../data/ipo-dashboard.generated'
+import { readPublicJson } from '../../../src/services/server/public-json'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -45,49 +46,6 @@ function stringValue(
     : fallback
 }
 
-async function fetchPublicJson(
-  request: NextRequest,
-  pathname: string,
-): Promise<JsonRecord | null> {
-  try {
-    const url = new URL(pathname, request.nextUrl.origin)
-
-    const response = await fetch(url, {
-      cache: 'no-store',
-      headers: {
-        Accept: 'application/json',
-      },
-    })
-
-    if (!response.ok) {
-      return null
-    }
-
-    return (await response.json()) as JsonRecord
-  } catch {
-    return null
-  }
-}
-
-function countFirstArray(
-  data: JsonRecord | null,
-  keys: string[],
-): number {
-  if (!data) {
-    return 0
-  }
-
-  for (const key of keys) {
-    const value = data[key]
-
-    if (Array.isArray(value)) {
-      return value.length
-    }
-  }
-
-  return 0
-}
-
 function generatedAt(
   data: JsonRecord | null,
 ): string {
@@ -108,6 +66,11 @@ function generatedAt(
     if (value) {
       return value
     }
+  }
+
+  const metadata = data.metadata
+  if (metadata && typeof metadata === 'object') {
+    return stringValue((metadata as JsonRecord).generatedAt)
   }
 
   return ''
@@ -328,6 +291,14 @@ function mfSummary(payloads: {
   latest: JsonRecord | null
   manifest: JsonRecord | null
 }) {
+  const metadata = payloads.index?.metadata && typeof payloads.index.metadata === 'object'
+    ? payloads.index.metadata as JsonRecord
+    : {}
+  const context = {
+    availability: stringValue(metadata.availability, 'unavailable'),
+    asOf: stringValue(metadata.asOf),
+    quality: stringValue(metadata.quality, 'unknown'),
+  }
   const schemeCount = Math.max(
     collectionCount(
       payloads.schemes,
@@ -382,6 +353,7 @@ function mfSummary(payloads: {
         schemeCount === 1
           ? 'scheme indexed'
           : 'schemes indexed',
+      ...context,
     }
   }
 
@@ -393,6 +365,7 @@ function mfSummary(payloads: {
         portfolioCount === 1
           ? 'portfolio indexed'
           : 'portfolios indexed',
+      ...context,
     }
   }
 
@@ -404,6 +377,7 @@ function mfSummary(payloads: {
         holdingCount === 1
           ? 'holding indexed'
           : 'holdings indexed',
+      ...context,
     }
   }
 
@@ -412,6 +386,7 @@ function mfSummary(payloads: {
       available: true,
       count: 0,
       label: 'Portfolio dataset online',
+      ...context,
     }
   }
 
@@ -419,6 +394,7 @@ function mfSummary(payloads: {
     available: false,
     count: 0,
     label: 'Tracker available',
+    ...context,
   }
 }
 
@@ -430,7 +406,7 @@ function boardOf(board: unknown): string {
   return stringValue(board).toLowerCase()
 }
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   // Use the exact same generated records consumed by /ipo.
   // This prevents homepage counts from diverging from the IPO dashboard.
   const issues = ipoDashboardRecords
@@ -477,33 +453,20 @@ export async function GET(request: NextRequest) {
     mfLatest,
     mfManifest,
   ] = await Promise.all([
-    fetchPublicJson(
-      request,
+    readPublicJson(
       '/data/ipo-intelligence/index.json',
     ),
-    fetchPublicJson(
-      request,
-      '/data/mf-intelligence/index.json',
+    readPublicJson(
+      '/data/mf-intelligence/v2/index.json',
     ),
-    fetchPublicJson(
-      request,
-      '/data/mf-intelligence/schemes.json',
+    Promise.resolve(null),
+    Promise.resolve(null),
+    Promise.resolve(null),
+    readPublicJson(
+      '/data/mf-intelligence/v2/latest.json',
     ),
-    fetchPublicJson(
-      request,
-      '/data/mf-intelligence/portfolios_public.json',
-    ),
-    fetchPublicJson(
-      request,
-      '/data/mf-intelligence/holdings_public.json',
-    ),
-    fetchPublicJson(
-      request,
-      '/data/mf-intelligence/latest.json',
-    ),
-    fetchPublicJson(
-      request,
-      '/data/mf-intelligence/manifest.json',
+    readPublicJson(
+      '/data/mf-intelligence/v2/manifest.json',
     ),
   ])
 

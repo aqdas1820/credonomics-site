@@ -51,7 +51,7 @@ export default function HomepageDiscovery() {
               <strong>{entry!.title}</strong>
               <small>
                 {entry!.source}
-                {entry!.updated ? ` Â· ${entry!.updated}` : ''}
+                {entry!.updated ? ` · ${entry!.updated}` : ''}
               </small>
             </a>
           ))}

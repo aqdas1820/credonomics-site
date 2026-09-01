@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:as-au-housing-finance-ltd",
+  "slug": "as-au-housing-finance-ltd-ca87d027",
+  "isin": null,
+  "stock": "as Au Housing Finance Ltd.)",
+  "sector": "Finance",
+  "firstTracked": "2025-02",
+  "latestTracked": "2025-02",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.21,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.21,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-02",
+      "schemeCount": 1,
+      "totalWeight": 0.21,
+      "normalizedWeight": 0.21,
+      "avgHeldWeight": 0.21
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-02",
+          "weight": 0.21,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

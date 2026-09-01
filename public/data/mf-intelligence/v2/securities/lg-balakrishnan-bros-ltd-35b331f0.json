@@ -1,0 +1,66 @@
+{
+  "securityId": "NAME:lg-balakrishnan-bros-ltd",
+  "slug": "lg-balakrishnan-bros-ltd-35b331f0",
+  "isin": null,
+  "stock": "LG Balakrishnan & Bros Ltd.",
+  "sector": "Auto Components",
+  "firstTracked": "2026-05",
+  "latestTracked": "2026-06",
+  "monthsTracked": 2,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.04,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.04,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-05",
+      "schemeCount": 1,
+      "totalWeight": 0.04,
+      "normalizedWeight": 0.04,
+      "avgHeldWeight": 0.04
+    },
+    {
+      "month": "2026-06",
+      "schemeCount": 1,
+      "totalWeight": 0.04,
+      "normalizedWeight": 0.04,
+      "avgHeldWeight": 0.04
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-05",
+          "weight": 0.04,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-06",
+          "weight": 0.04,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

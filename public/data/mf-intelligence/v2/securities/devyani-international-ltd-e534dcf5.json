@@ -1,0 +1,102 @@
+{
+  "securityId": "NAME:devyani-international-ltd",
+  "slug": "devyani-international-ltd-e534dcf5",
+  "isin": null,
+  "stock": "Devyani International Ltd",
+  "sector": "Leisure Services",
+  "firstTracked": "2025-06",
+  "latestTracked": "2025-10",
+  "monthsTracked": 4,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.29,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.24,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-06",
+      "schemeCount": 1,
+      "totalWeight": 0.27,
+      "normalizedWeight": 0.27,
+      "avgHeldWeight": 0.27
+    },
+    {
+      "month": "2025-07",
+      "schemeCount": 1,
+      "totalWeight": 0.27,
+      "normalizedWeight": 0.27,
+      "avgHeldWeight": 0.27
+    },
+    {
+      "month": "2025-08",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    },
+    {
+      "month": "2025-10",
+      "schemeCount": 1,
+      "totalWeight": 0.24,
+      "normalizedWeight": 0.24,
+      "avgHeldWeight": 0.24
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-06",
+          "weight": 0.27,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-07",
+          "weight": 0.27,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-08",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-10",
+          "weight": 0.24,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-07",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-08",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-10",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

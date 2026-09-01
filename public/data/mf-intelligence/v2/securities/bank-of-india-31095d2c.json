@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:bank-of-india",
+  "slug": "bank-of-india-31095d2c",
+  "isin": null,
+  "stock": "Bank of India",
+  "sector": "Banks",
+  "firstTracked": "2025-02",
+  "latestTracked": "2025-02",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.16,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.16,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-02",
+      "schemeCount": 1,
+      "totalWeight": 0.16,
+      "normalizedWeight": 0.16,
+      "avgHeldWeight": 0.16
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-02",
+          "weight": 0.16,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

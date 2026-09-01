@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:icici-prudential-life-insurance-company-ltd",
+  "slug": "icici-prudential-life-insurance-company-ltd-b8893231",
+  "isin": null,
+  "stock": "ICICI Prudential Life Insurance Company Ltd.",
+  "sector": "Insurance",
+  "firstTracked": "2026-02",
+  "latestTracked": "2026-02",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.27,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.27,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 0.27,
+      "normalizedWeight": 0.27,
+      "avgHeldWeight": 0.27
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-02",
+          "weight": 0.27,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

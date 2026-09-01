@@ -1,0 +1,161 @@
+{
+  "securityId": "NAME:hero-motocorp-ltd",
+  "slug": "hero-motocorp-ltd-d322510c",
+  "isin": null,
+  "stock": "Hero MotoCorp Ltd.",
+  "sector": "Automobiles",
+  "firstTracked": "2025-02",
+  "latestTracked": "2025-12",
+  "monthsTracked": 7,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.31,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.29,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-02",
+      "schemeCount": 1,
+      "totalWeight": 0.25,
+      "normalizedWeight": 0.25,
+      "avgHeldWeight": 0.25
+    },
+    {
+      "month": "2025-06",
+      "schemeCount": 1,
+      "totalWeight": 0.02,
+      "normalizedWeight": 0.02,
+      "avgHeldWeight": 0.02
+    },
+    {
+      "month": "2025-07",
+      "schemeCount": 1,
+      "totalWeight": 0.02,
+      "normalizedWeight": 0.02,
+      "avgHeldWeight": 0.02
+    },
+    {
+      "month": "2025-08",
+      "schemeCount": 1,
+      "totalWeight": 0.02,
+      "normalizedWeight": 0.02,
+      "avgHeldWeight": 0.02
+    },
+    {
+      "month": "2025-09",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    },
+    {
+      "month": "2025-11",
+      "schemeCount": 1,
+      "totalWeight": 0.31,
+      "normalizedWeight": 0.31,
+      "avgHeldWeight": 0.31
+    },
+    {
+      "month": "2025-12",
+      "schemeCount": 1,
+      "totalWeight": 0.29,
+      "normalizedWeight": 0.29,
+      "avgHeldWeight": 0.29
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-06",
+          "weight": 0.02,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-07",
+          "weight": 0.02,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-08",
+          "weight": 0.02,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2025-02",
+          "weight": 0.25,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-09",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-11",
+          "weight": 0.31,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-12",
+          "weight": 0.29,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-07",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-08",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-09",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-11",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-12",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

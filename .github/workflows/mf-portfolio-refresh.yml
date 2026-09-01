@@ -1,0 +1,29 @@
+name: Validate MF production projection
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 3 12 * *"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - name: Validate the checked-in browser projection
+        run: npm run mf:validate
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+
+  # Publishing stays manual until a newly ingested workbook passes the precision-first
+  # review. This workflow deliberately cannot commit or label unreviewed data as live.

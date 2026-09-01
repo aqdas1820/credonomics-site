@@ -207,7 +207,7 @@ export default function SiteSearch() {
                     : 'Explore CredoNomics'}
               </span>
               <span className={styles.desktopHint}>
-                â†‘ â†“ navigate Â· Enter open Â· Esc close
+                ↑ ↓ navigate · Enter open · Esc close
               </span>
             </div>
 
@@ -241,7 +241,7 @@ export default function SiteSearch() {
                       </span>
                       <span className={styles.resultProvenance}>
                         {entry.source}
-                        {entry.updated ? ` Â· ${entry.updated}` : ''}
+                        {entry.updated ? ` · ${entry.updated}` : ''}
                       </span>
                     </span>
 

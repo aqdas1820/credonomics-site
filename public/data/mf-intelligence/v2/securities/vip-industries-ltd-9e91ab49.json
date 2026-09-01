@@ -1,0 +1,66 @@
+{
+  "securityId": "NAME:vip-industries-ltd",
+  "slug": "vip-industries-ltd-9e91ab49",
+  "isin": null,
+  "stock": "VIP Industries Ltd.",
+  "sector": "Consumer Durables",
+  "firstTracked": "2025-04",
+  "latestTracked": "2025-05",
+  "monthsTracked": 2,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.02,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.02,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-04",
+      "schemeCount": 1,
+      "totalWeight": 0.02,
+      "normalizedWeight": 0.02,
+      "avgHeldWeight": 0.02
+    },
+    {
+      "month": "2025-05",
+      "schemeCount": 1,
+      "totalWeight": 0.02,
+      "normalizedWeight": 0.02,
+      "avgHeldWeight": 0.02
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2025-04",
+          "weight": 0.02,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-05",
+          "weight": 0.02,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

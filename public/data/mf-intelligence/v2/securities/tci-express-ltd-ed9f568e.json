@@ -1,0 +1,176 @@
+{
+  "securityId": "NAME:tci-express-ltd",
+  "slug": "tci-express-ltd-ed9f568e",
+  "isin": null,
+  "stock": "TCI Express Ltd.",
+  "sector": "Transport Services",
+  "firstTracked": "2025-04",
+  "latestTracked": "2025-10",
+  "monthsTracked": 7,
+  "maxSchemeCount": 2,
+  "peakNormalizedWeight": 0.035,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.01,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-04",
+      "schemeCount": 2,
+      "totalWeight": 0.06,
+      "normalizedWeight": 0.03,
+      "avgHeldWeight": 0.03
+    },
+    {
+      "month": "2025-05",
+      "schemeCount": 2,
+      "totalWeight": 0.07,
+      "normalizedWeight": 0.035,
+      "avgHeldWeight": 0.035
+    },
+    {
+      "month": "2025-06",
+      "schemeCount": 1,
+      "totalWeight": 0.01,
+      "normalizedWeight": 0.01,
+      "avgHeldWeight": 0.01
+    },
+    {
+      "month": "2025-07",
+      "schemeCount": 1,
+      "totalWeight": 0.01,
+      "normalizedWeight": 0.01,
+      "avgHeldWeight": 0.01
+    },
+    {
+      "month": "2025-08",
+      "schemeCount": 2,
+      "totalWeight": 0.06,
+      "normalizedWeight": 0.03,
+      "avgHeldWeight": 0.03
+    },
+    {
+      "month": "2025-09",
+      "schemeCount": 1,
+      "totalWeight": 0.01,
+      "normalizedWeight": 0.01,
+      "avgHeldWeight": 0.01
+    },
+    {
+      "month": "2025-10",
+      "schemeCount": 1,
+      "totalWeight": 0.01,
+      "normalizedWeight": 0.01,
+      "avgHeldWeight": 0.01
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2025-04",
+          "weight": 0.01,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-05",
+          "weight": 0.01,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-06",
+          "weight": 0.01,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-07",
+          "weight": 0.01,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-08",
+          "weight": 0.01,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-09",
+          "weight": 0.01,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-10",
+          "weight": 0.01,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2025-04",
+          "weight": 0.05,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-05",
+          "weight": 0.06,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-08",
+          "weight": 0.05,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-07",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-08",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-09",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-10",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

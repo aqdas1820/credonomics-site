@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:brands-limited",
+  "slug": "brands-limited-8469230e",
+  "isin": null,
+  "stock": "BRANDS LIMITED",
+  "sector": "Consumer Durables",
+  "firstTracked": "2026-04",
+  "latestTracked": "2026-04",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.47,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.47,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-04",
+      "schemeCount": 1,
+      "totalWeight": 0.47,
+      "normalizedWeight": 0.47,
+      "avgHeldWeight": 0.47
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-04",
+          "weight": 0.47,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "securityId": "NAME:2026-ltd",
+  "slug": "2026-ltd-244050e0",
+  "isin": null,
+  "stock": "2026 Ltd.",
+  "sector": "Insurance",
+  "firstTracked": "2026-02",
+  "latestTracked": "2026-02",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 3.53,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Focused Fund",
+      "weight": 3.53,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 3.53,
+      "normalizedWeight": 3.53,
+      "avgHeldWeight": 3.53
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Focused Fund",
+      "history": [
+        {
+          "month": "2026-02",
+          "weight": 3.53,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

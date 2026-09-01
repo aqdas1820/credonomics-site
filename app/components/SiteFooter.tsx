@@ -36,7 +36,7 @@ export default function SiteFooter() {
 
           <Link className={styles.ctaButton} href="/research">
             Research Desk
-            <span aria-hidden="true">â†—</span>
+            <span aria-hidden="true">↗</span>
           </Link>
         </section>
 

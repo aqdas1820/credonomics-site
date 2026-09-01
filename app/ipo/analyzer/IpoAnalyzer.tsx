@@ -1,7 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import { AlertTriangle, BarChart3, Calculator, Database, ShieldCheck } from 'lucide-react'
+import { AlertTriangle, BarChart3, Calculator, ShieldCheck } from 'lucide-react'
 import { calculateIpoDataScore } from '../../data/ipo-engine'
 import type { VerifiedIpoRecord } from '../../data/ipo-types'
 import styles from './analyzer.module.css'

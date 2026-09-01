@@ -8,18 +8,34 @@
     "start": "next start",
     "prebuild": "node scripts/generate-ipo-dashboard.mjs && node scripts/generate-search-index.mjs",
     "ipo:refresh": "python scripts/ipo_auto_fetch/fetch_ipo_intelligence.py",
-    "ipo:generate": "node scripts/generate-ipo-dashboard.mjs"
+    "ipo:generate": "node scripts/generate-ipo-dashboard.mjs",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit --pretty false",
+    "test": "vitest run",
+    "test:smoke": "playwright test",
+    "mf:metadata": "node scripts/mf/enrich-v2-metadata.mjs",
+    "mf:generate": "node scripts/mf/generate.mjs",
+    "mf:publish": "node scripts/mf/publish.mjs",
+    "mf:validate": "node scripts/mf/validate-production.mjs"
+    ,"equity:instruments:fetch": "node scripts/equity/fetch-instruments.mjs"
+    ,"equity:instruments:validate": "node scripts/equity/validate-instruments.mjs"
+    ,"equity:instruments:publish": "node scripts/equity/publish-instruments.mjs"
   },
   "dependencies": {
-    "next": "14.2.5",
+    "lucide-react": "^0.468.0",
+    "next": "14.2.35",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "lucide-react": "^0.468.0"
+    "zod": "^3.25.76"
   },
   "devDependencies": {
-    "typescript": "^5.5.4",
+    "@playwright/test": "^1.62.1",
     "@types/node": "^20.14.12",
     "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0"
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.35",
+    "typescript": "^5.5.4",
+    "vitest": "^4.1.11"
   }
 }

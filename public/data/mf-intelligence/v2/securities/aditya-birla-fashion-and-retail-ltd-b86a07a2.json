@@ -1,0 +1,84 @@
+{
+  "securityId": "NAME:aditya-birla-fashion-and-retail-ltd",
+  "slug": "aditya-birla-fashion-and-retail-ltd-b86a07a2",
+  "isin": null,
+  "stock": "Aditya Birla Fashion and Retail Ltd.",
+  "sector": "Retailing",
+  "firstTracked": "2025-04",
+  "latestTracked": "2025-08",
+  "monthsTracked": 3,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.06,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.02,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-04",
+      "schemeCount": 1,
+      "totalWeight": 0.06,
+      "normalizedWeight": 0.06,
+      "avgHeldWeight": 0.06
+    },
+    {
+      "month": "2025-05",
+      "schemeCount": 1,
+      "totalWeight": 0.02,
+      "normalizedWeight": 0.02,
+      "avgHeldWeight": 0.02
+    },
+    {
+      "month": "2025-08",
+      "schemeCount": 1,
+      "totalWeight": 0.02,
+      "normalizedWeight": 0.02,
+      "avgHeldWeight": 0.02
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2025-04",
+          "weight": 0.06,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-05",
+          "weight": 0.02,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-08",
+          "weight": 0.02,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-04",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-05",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-08",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

@@ -28,6 +28,9 @@ type IntelligencePayload = {
     available: boolean
     count: number
     label: string
+    availability: string
+    asOf: string
+    quality: string
   }
   report: {
     title: string
@@ -123,7 +126,7 @@ export default function HomeIntelligenceRail() {
           <div>
             <span className={styles.eyebrow}>
               <span className={styles.liveDot} />
-              Live intelligence
+              Financial intelligence
             </span>
 
             <h2 id="live-intelligence-title">
@@ -215,7 +218,7 @@ export default function HomeIntelligenceRail() {
                       ? ''
                       : 's'
                   }`
-                : 'Live IPO discovery loading'}
+                : 'IPO discovery loading'}
             </p>
 
             <div className={styles.miniStats}>
@@ -316,13 +319,14 @@ export default function HomeIntelligenceRail() {
                     data.mutualFunds.count,
                   )
                 : data?.mutualFunds.available
-                  ? 'Live'
+                  ? 'Available'
                   : '--'}
             </strong>
 
             <p>
-              {data?.mutualFunds.label ??
-                'Portfolio intelligence loading'}
+              {data
+                ? `${data.mutualFunds.label}${data.mutualFunds.availability === 'stale' ? ' · historical update pending' : ''}`
+                : 'Portfolio intelligence loading'}
             </p>
 
             <div className={styles.miniStats}>

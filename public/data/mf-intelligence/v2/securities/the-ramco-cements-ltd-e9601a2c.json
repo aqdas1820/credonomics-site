@@ -1,0 +1,66 @@
+{
+  "securityId": "NAME:the-ramco-cements-ltd",
+  "slug": "the-ramco-cements-ltd-e9601a2c",
+  "isin": null,
+  "stock": "The Ramco Cements Ltd.",
+  "sector": "Cement & Cement Products",
+  "firstTracked": "2025-01",
+  "latestTracked": "2025-02",
+  "monthsTracked": 2,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.24,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.23,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2025-01",
+      "schemeCount": 1,
+      "totalWeight": 0.24,
+      "normalizedWeight": 0.24,
+      "avgHeldWeight": 0.24
+    },
+    {
+      "month": "2025-02",
+      "schemeCount": 1,
+      "totalWeight": 0.23,
+      "normalizedWeight": 0.23,
+      "avgHeldWeight": 0.23
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2025-01",
+          "weight": 0.24,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2025-02",
+          "weight": 0.23,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2025-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2025-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}

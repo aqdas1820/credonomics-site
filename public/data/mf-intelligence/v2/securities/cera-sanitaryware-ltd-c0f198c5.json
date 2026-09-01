@@ -1,0 +1,84 @@
+{
+  "securityId": "NAME:cera-sanitaryware-ltd",
+  "slug": "cera-sanitaryware-ltd-c0f198c5",
+  "isin": null,
+  "stock": "Cera Sanitaryware Ltd",
+  "sector": "Consumer Durables",
+  "firstTracked": "2026-01",
+  "latestTracked": "2026-06",
+  "monthsTracked": 3,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.21,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.21,
+      "quality": "NAME_ONLY"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-01",
+      "schemeCount": 1,
+      "totalWeight": 0.13,
+      "normalizedWeight": 0.13,
+      "avgHeldWeight": 0.13
+    },
+    {
+      "month": "2026-02",
+      "schemeCount": 1,
+      "totalWeight": 0.14,
+      "normalizedWeight": 0.14,
+      "avgHeldWeight": 0.14
+    },
+    {
+      "month": "2026-06",
+      "schemeCount": 1,
+      "totalWeight": 0.21,
+      "normalizedWeight": 0.21,
+      "avgHeldWeight": 0.21
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-01",
+          "weight": 0.13,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-02",
+          "weight": 0.14,
+          "quality": "NAME_ONLY"
+        },
+        {
+          "month": "2026-06",
+          "weight": 0.21,
+          "quality": "NAME_ONLY"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-01",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-02",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    },
+    {
+      "month": "2026-06",
+      "pdfs": [
+        "holdings_public.csv"
+      ]
+    }
+  ]
+}
