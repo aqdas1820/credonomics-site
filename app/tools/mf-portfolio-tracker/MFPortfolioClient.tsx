@@ -966,7 +966,14 @@ export default function MFPortfolioClient({
                   {visibleSecurities.slice(0, 60).map((item, index) => (
                     <tr
                       key={item.id}
+                      tabIndex={0}
                       onClick={() => openSecurity(item.slug)}
+                      onKeyDown={(event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                          event.preventDefault();
+                          openSecurity(item.slug);
+                        }
+                      }}
                     >
                       <td className="rank">{index + 1}</td>
                       <td>
@@ -1321,6 +1328,12 @@ const styles = `
   }
 
   .mfTermPage {
+    --mf-table-name: #10283d;
+    --mf-table-text: #526579;
+    --mf-table-head: #53677c;
+    --mf-table-head-bg: #f2f5f8;
+    --mf-table-row-hover: #edf5f3;
+    --mf-table-focus: #087f61;
     min-height: 100vh;
     color: #07172a;
     background:
@@ -1328,6 +1341,15 @@ const styles = `
       radial-gradient(circle at 16% 3%, rgba(0, 174, 154, .10), transparent 26rem),
       #f5f7fa;
     font-family: Arial, Helvetica, sans-serif;
+  }
+
+  :global(html[data-theme='dark']) .mfTermPage {
+    --mf-table-name: #edf4f8;
+    --mf-table-text: #aab9c7;
+    --mf-table-head: #a6b5c3;
+    --mf-table-head-bg: #0b1119;
+    --mf-table-row-hover: #121e29;
+    --mf-table-focus: #43e3ae;
   }
 
   .mfTermShell {
@@ -1807,12 +1829,12 @@ const styles = `
   }
 
   thead {
-    background: #f4f7f9;
+    background: var(--mf-table-head-bg);
   }
 
   th {
     padding: 11px;
-    color: #66788c;
+    color: var(--mf-table-head);
     text-align: left;
     text-transform: uppercase;
     letter-spacing: .07em;
@@ -1825,22 +1847,33 @@ const styles = `
     font-size: 11px;
   }
 
+  .mfTableWrap td,
+  .mfMatrixWrap td {
+    color: var(--mf-table-text);
+  }
+
   tbody tr {
     cursor: pointer;
   }
 
   tbody tr:hover {
-    background: #fbfdfd;
+    background: var(--mf-table-row-hover);
+  }
+
+  tbody tr:focus-visible {
+    outline: 2px solid var(--mf-table-focus);
+    outline-offset: -2px;
+    background: var(--mf-table-row-hover);
   }
 
   .mfTableWrap td strong,
   .mfMatrixWrap td strong {
-    color: #edf4f8;
+    color: var(--mf-table-name);
   }
 
   .rank,
   .muted {
-    color: #758597;
+    color: var(--mf-table-text);
   }
 
   .change {
@@ -1904,18 +1937,18 @@ const styles = `
   }
 
   .mfMoves strong {
-    overflow: hidden;
-    max-width: 220px;
+    overflow: visible;
+    max-width: none;
     color: #07182a;
-    text-overflow: ellipsis;
-    font-size: 10px;
-    white-space: nowrap;
+    font-size: 12px;
+    line-height: 1.35;
+    white-space: normal;
   }
 
   .mfMoves span {
     margin-top: 4px;
     color: #8593a2;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .mfMoves button > div:last-child {
@@ -1948,7 +1981,7 @@ const styles = `
     display: block;
     margin-top: 4px;
     color: #607286;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .mfEmpty {

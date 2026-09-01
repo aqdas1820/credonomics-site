@@ -2790,3 +2790,26 @@ iframe{
 
 /* === CREDONOMICS_V20_PERFORMANCE_POLISH_END === */
 html,body{max-width:100%;overflow-x:clip}img,svg,video,canvas{max-width:100%}main,section,article,aside,nav,header,footer,div{min-width:0}table{font-variant-numeric:tabular-nums}button,input,select,textarea{max-width:100%}
+
+/* MF holdings table uses a dark data surface in dark mode and a light one in light mode. */
+html[data-theme='light'] .mfTableWrap td strong,
+html[data-theme='light'] .mfMatrixWrap td strong{color:#10283d}
+html[data-theme='light'] .mfTableWrap td,
+html[data-theme='light'] .mfMatrixWrap td{color:#526579}
+html[data-theme='light'] .mfTableWrap th,
+html[data-theme='light'] .mfMatrixWrap th{color:#53677c;background:#f2f5f8}
+html[data-theme='light'] .mfTableWrap tbody tr:hover,
+html[data-theme='light'] .mfMatrixWrap tbody tr:hover,
+html[data-theme='light'] .mfTableWrap tbody tr:focus-visible,
+html[data-theme='light'] .mfMatrixWrap tbody tr:focus-visible{background:#edf5f3}
+
+html[data-theme='dark'] .mfTableWrap td strong,
+html[data-theme='dark'] .mfMatrixWrap td strong{color:#edf4f8}
+html[data-theme='dark'] .mfTableWrap td,
+html[data-theme='dark'] .mfMatrixWrap td{color:#aab9c7}
+html[data-theme='dark'] .mfTableWrap th,
+html[data-theme='dark'] .mfMatrixWrap th{color:#a6b5c3;background:#0b1119}
+html[data-theme='dark'] .mfTableWrap tbody tr:hover,
+html[data-theme='dark'] .mfMatrixWrap tbody tr:hover,
+html[data-theme='dark'] .mfTableWrap tbody tr:focus-visible,
+html[data-theme='dark'] .mfMatrixWrap tbody tr:focus-visible{background:#121e29}
