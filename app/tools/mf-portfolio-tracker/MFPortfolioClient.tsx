@@ -1,8 +1,10 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { FinancialDataState } from "../../components/FinancialDataState";
+import { formatIsinCoverageDetail, formatTrustMetric } from "../../../src/mf/trust";
+import type { MutualFundTrustMetadata } from "../../../src/schemas/mutual-fund";
 
 type Holding = {
   amc: string;
@@ -54,6 +56,7 @@ type IndexData = {
     mediumSnapshots?: number;
     reviewSnapshotsExcluded?: number;
   };
+  trustMetadata?: MutualFundTrustMetadata;
   metadata?: {
     source: string;
     sourceFile: string;
@@ -683,7 +686,11 @@ export default function MFPortfolioClient({
   const activeSignals =
     signalGroups[signalTab as keyof typeof signalGroups] ?? [];
 
-  const quality = initialIndex.qualityAudit ?? {};
+  const trust = initialIndex.trustMetadata;
+  const isinDetail = formatIsinCoverageDetail(
+    trust?.validIsinCount,
+    trust?.eligibleIsinCount
+  );
 
   function openSecurity(slug: string) {
     if (!slug) return;
@@ -728,25 +735,27 @@ export default function MFPortfolioClient({
           <aside className="mfQuality">
             <div className="mfQualityTop">
               <span>DATA TRUST LAYER</span>
-              <strong>{quality.isinCoveragePct ?? 0}%</strong>
-              <small>ISIN coverage</small>
+              <strong>{formatTrustMetric(trust?.isinCoveragePercent, "%")}</strong>
+              <small title="Share of eligible published holdings matched to a valid ISIN.">
+                ISIN coverage{isinDetail ? ` · ${isinDetail}` : ""}
+              </small>
             </div>
             <div className="mfQualityStats">
               <div>
-                <strong>{quality.repairedCompanyRows ?? 0}</strong>
-                <span>company rows repaired</span>
+                <strong>{formatTrustMetric(trust?.duplicateRowsExcluded)}</strong>
+                <span title="Duplicate logical holdings removed before publication.">duplicates removed</span>
               </div>
               <div>
-                <strong>{quality.reviewSnapshotsExcluded ?? 0}</strong>
-                <span>weak snapshots excluded</span>
+                <strong>{formatTrustMetric(trust?.rejectedRows)}</strong>
+                <span>rejected rows</span>
               </div>
               <div>
-                <strong>{quality.highSnapshots ?? 0}</strong>
-                <span>high-quality snapshots</span>
+                <strong>{formatTrustMetric(trust?.normalizedCompanyRows)}</strong>
+                <span>names normalized</span>
               </div>
               <div>
-                <strong>{quality.droppedSuspiciousFragments ?? 0}</strong>
-                <span>bad fragments removed</span>
+                <strong>{formatTrustMetric(trust?.validationWarnings)}</strong>
+                <span>validation warnings</span>
               </div>
             </div>
           </aside>

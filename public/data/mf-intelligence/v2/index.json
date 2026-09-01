@@ -9,14 +9,33 @@
     "generatedAt": "2026-08-10T11:24:20.991Z",
     "quality": "PARTIAL",
     "availability": "partial",
-    "recordCount": 874,
+    "recordCount": 870,
     "schemaVersion": "mf-v2",
     "coverageStart": "2025-01",
     "coverageEnd": "2026-06",
     "schemeCount": 3,
-    "holdingCount": 874,
+    "holdingCount": 870,
     "validationStatus": "PASSED_WITH_WARNINGS",
     "sourceSha256": "09e4e46b1314a86409d71300762833c4eb8ca7cbea15ee8cb410747cdbeb204b"
+  },
+  "trustMetadata": {
+    "isinDataAvailable": false,
+    "isinCoveragePercent": null,
+    "validIsinCount": 0,
+    "eligibleIsinCount": 870,
+    "repairedCompanyRows": null,
+    "excludedWeakSnapshots": null,
+    "highQualitySnapshots": null,
+    "removedBadFragments": null,
+    "normalizedCompanyRows": 121,
+    "duplicateRowsExcluded": 818,
+    "rejectedRows": 19,
+    "validationWarnings": 2633,
+    "validationErrors": 0,
+    "generatedAt": "2026-08-10T11:24:20.991Z",
+    "asOf": "2026-06-30T23:59:59.000Z",
+    "source": "HDFC Mutual Fund official monthly portfolio disclosures (repository extraction)",
+    "quality": "PARTIAL"
   },
   "years": [
     2025,
@@ -92,25 +111,25 @@
     "HDFC Small Cap Fund"
   ],
   "counts": {
-    "holdings": 874,
-    "stocks": 202,
+    "holdings": 870,
+    "stocks": 200,
     "schemes": 3,
     "amcs": 1
   },
   "qualityAudit": {
     "sourceRows": 46549,
     "selectedCandidateRows": 1707,
-    "publishedHoldings": 874,
-    "isinCoveragePct": 0,
+    "publishedHoldings": 870,
+    "isinCoveragePct": null,
     "normalizedCompanyRows": 121,
-    "rejectedRows": 10,
-    "duplicateRows": 823,
-    "validationWarnings": 2638,
+    "rejectedRows": 19,
+    "duplicateRows": 818,
+    "validationWarnings": 2633,
     "validationErrors": 0
   },
   "methodology": {
     "scope": "Six intended HDFC active-equity schemes",
-    "securityIdentity": "Valid source ISIN; otherwise normalized source name without guessing",
+    "securityIdentity": "Exact unique ISIN match to the verified equity instrument master; otherwise the normalized source name is preserved",
     "duplicateHandling": "First deterministic row retained; duplicates reported",
     "missingData": "No interpolation or carry-forward"
   }

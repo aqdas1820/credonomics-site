@@ -8,12 +8,12 @@
     "generatedAt": "2026-08-10T11:24:20.991Z",
     "quality": "PARTIAL",
     "availability": "partial",
-    "recordCount": 874,
+    "recordCount": 870,
     "schemaVersion": "mf-v2",
     "coverageStart": "2025-01",
     "coverageEnd": "2026-06",
     "schemeCount": 3,
-    "holdingCount": 874,
+    "holdingCount": 870,
     "validationStatus": "PASSED_WITH_WARNINGS",
     "sourceSha256": "09e4e46b1314a86409d71300762833c4eb8ca7cbea15ee8cb410747cdbeb204b"
   },
@@ -31,10 +31,14 @@
       "slug": "vishal-mega-mart-limited-3b6d36c4",
       "isin": null,
       "stock": "Vishal Mega Mart Limited",
+      "sourceSecurityName": "Vishal Mega Mart Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Retailing",
       "weight": 0.39,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45341
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -45,10 +49,14 @@
       "slug": "delhivery-limited-6b6a9c1d",
       "isin": null,
       "stock": "Delhivery Limited",
+      "sourceSecurityName": "Delhivery Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Transport Services",
       "weight": 0.38,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45343
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -59,10 +67,14 @@
       "slug": "hyundai-motor-india-limited-0f13cac8",
       "isin": null,
       "stock": "Hyundai Motor India Limited",
+      "sourceSecurityName": "Hyundai Motor India Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Automobiles",
       "weight": 0.37,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45346
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -73,10 +85,14 @@
       "slug": "ltd-a046a924",
       "isin": null,
       "stock": "Ltd.",
+      "sourceSecurityName": "Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Finance",
       "weight": 0.37,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45345
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -87,10 +103,14 @@
       "slug": "pnb-housing-finance-ltd-183c3ae5",
       "isin": null,
       "stock": "PNB Housing Finance Ltd.",
+      "sourceSecurityName": "PNB Housing Finance Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Finance",
       "weight": 0.37,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45347
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -101,10 +121,14 @@
       "slug": "dabur-india-ltd-0b923432",
       "isin": null,
       "stock": "Dabur India Ltd.",
+      "sourceSecurityName": "Dabur India Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Personal Products",
       "weight": 0.36,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45351
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -115,10 +139,14 @@
       "slug": "five-star-business-finance-limited-aad76ad5",
       "isin": null,
       "stock": "Five-Star Business Finance Limited",
+      "sourceSecurityName": "Five-Star Business Finance Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Finance",
       "weight": 0.36,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45352
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -129,10 +157,14 @@
       "slug": "endurance-technologies-ltd-f515d63e",
       "isin": null,
       "stock": "Endurance Technologies Ltd.",
+      "sourceSecurityName": "Endurance Technologies Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Auto Components",
       "weight": 0.35,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45355
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -143,10 +175,14 @@
       "slug": "bosch-limited-28cdd3d8",
       "isin": null,
       "stock": "Bosch Limited",
+      "sourceSecurityName": "Bosch Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Auto Components",
       "weight": 0.34,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45357
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -157,10 +193,14 @@
       "slug": "avalon-technologies-limited-985db52f",
       "isin": null,
       "stock": "Avalon Technologies Limited",
+      "sourceSecurityName": "Avalon Technologies Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Electrical Equipment",
       "weight": 0.33,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45359
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -171,10 +211,14 @@
       "slug": "creditaccess-grameen-limited-6f3fccb9",
       "isin": null,
       "stock": "Creditaccess Grameen Limited",
+      "sourceSecurityName": "Creditaccess Grameen Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Finance",
       "weight": 0.33,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45360
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -185,10 +229,14 @@
       "slug": "suzlon-energy-ltd-1b1b2330",
       "isin": null,
       "stock": "Suzlon Energy Ltd",
+      "sourceSecurityName": "Suzlon Energy Ltd",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Electrical Equipment",
       "weight": 0.33,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45361
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -199,10 +247,14 @@
       "slug": "avenue-supermarts-ltd-8a935b01",
       "isin": null,
       "stock": "Avenue Supermarts Ltd.",
+      "sourceSecurityName": "Avenue Supermarts Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Retailing",
       "weight": 0.31,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45365
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -213,10 +265,14 @@
       "slug": "redington-ltd-63bc4beb",
       "isin": null,
       "stock": "Redington Ltd.",
+      "sourceSecurityName": "Redington Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Commercial Services & Supplies",
       "weight": 0.31,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45366
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -227,10 +283,14 @@
       "slug": "sona-blw-precision-forgings-41242484",
       "isin": null,
       "stock": "Sona Blw Precision Forgings",
+      "sourceSecurityName": "Sona Blw Precision Forgings",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Auto Components",
       "weight": 0.31,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45367
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -241,10 +301,14 @@
       "slug": "ultratech-cement-limited-870ecda1",
       "isin": null,
       "stock": "UltraTech Cement Limited",
+      "sourceSecurityName": "UltraTech Cement Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Cement & Cement Products",
       "weight": 0.31,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45368
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -255,10 +319,14 @@
       "slug": "bombay-stock-exchange-limited-bse-1313159e",
       "isin": null,
       "stock": "Bombay Stock Exchange Limited (BSE)",
+      "sourceSecurityName": "Bombay Stock Exchange Limited (BSE)",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Capital Markets",
       "weight": 0.3,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45373
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -269,10 +337,14 @@
       "slug": "tata-motors-passenger-vehicles-limited-6a1fbd86",
       "isin": null,
       "stock": "Tata Motors Passenger Vehicles Limited",
+      "sourceSecurityName": "Tata Motors Passenger Vehicles Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Automobiles",
       "weight": 0.3,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45374
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -283,10 +355,14 @@
       "slug": "the-phoenix-mills-limited-9276c5fb",
       "isin": null,
       "stock": "The Phoenix Mills Limited",
+      "sourceSecurityName": "The Phoenix Mills Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Realty",
       "weight": 0.3,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45375
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -297,10 +373,14 @@
       "slug": "nhpc-ltd-4a54cf57",
       "isin": null,
       "stock": "NHPC Ltd.",
+      "sourceSecurityName": "NHPC Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Power",
       "weight": 0.29,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45379
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -311,10 +391,14 @@
       "slug": "cie-automotive-india-ltd-4c489ae7",
       "isin": null,
       "stock": "CIE Automotive India Ltd",
+      "sourceSecurityName": "CIE Automotive India Ltd",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Auto Components",
       "weight": 0.28,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45381
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -325,10 +409,14 @@
       "slug": "hdfc-life-insurance-company-limited-7b5a864b",
       "isin": null,
       "stock": "HDFC Life Insurance Company Limited",
+      "sourceSecurityName": "HDFC Life Insurance Company Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Insurance",
       "weight": 0.28,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45382
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -339,10 +427,14 @@
       "slug": "crompton-greaves-consumer-elec-ltd-609bc477",
       "isin": null,
       "stock": "Crompton Greaves Consumer Elec. Ltd.",
+      "sourceSecurityName": "Crompton Greaves Consumer Elec. Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Consumer Durables",
       "weight": 0.27,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45385
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -353,10 +445,14 @@
       "slug": "sapphire-foods-india-limited-ebe3be26",
       "isin": null,
       "stock": "SAPPHIRE FOODS INDIA LIMITED",
+      "sourceSecurityName": "SAPPHIRE FOODS INDIA LIMITED",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Leisure Services",
       "weight": 0.04,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45387
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -367,10 +463,14 @@
       "slug": "tenneco-clean-air-india-limited-4f0f2285",
       "isin": null,
       "stock": "TENNECO CLEAN AIR INDIA LIMITED",
+      "sourceSecurityName": "TENNECO CLEAN AIR INDIA LIMITED",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Auto Components",
       "weight": 0.04,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45388
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -381,10 +481,14 @@
       "slug": "billionbrains-garage-ventures-limited-7529c443",
       "isin": null,
       "stock": "Billionbrains Garage Ventures Limited",
+      "sourceSecurityName": "Billionbrains Garage Ventures Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Capital Markets",
       "weight": 0.03,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45391
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -395,10 +499,14 @@
       "slug": "central-depository-services-india-ltd-8eaddbf5",
       "isin": null,
       "stock": "Central Depository Services (India) Ltd.",
+      "sourceSecurityName": "Central Depository Services (India) Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Capital Markets",
       "weight": 0.03,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45392
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -409,10 +517,14 @@
       "slug": "fusion-finance-limited-95eccbbd",
       "isin": null,
       "stock": "Fusion Finance Limited",
+      "sourceSecurityName": "Fusion Finance Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Finance",
       "weight": 0.03,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45393
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -423,10 +535,14 @@
       "slug": "ikio-technologies-limited-af9f8ab6",
       "isin": null,
       "stock": "IKIO Technologies Limited",
+      "sourceSecurityName": "IKIO Technologies Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Consumer Durables",
       "weight": 0.03,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45394
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -437,10 +553,14 @@
       "slug": "indian-railway-catering-and-tourism-3da147f3",
       "isin": null,
       "stock": "Indian Railway Catering And Tourism",
+      "sourceSecurityName": "Indian Railway Catering And Tourism",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Leisure Services",
       "weight": 0.03,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45395
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -451,10 +571,14 @@
       "slug": "titan-company-ltd-ea176253",
       "isin": null,
       "stock": "Titan Company Ltd.",
+      "sourceSecurityName": "Titan Company Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Consumer Durables",
       "weight": 0.03,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45396
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -465,10 +589,14 @@
       "slug": "uti-asset-management-company-ltd-10023d6a",
       "isin": null,
       "stock": "UTI Asset Management Company Ltd",
+      "sourceSecurityName": "UTI Asset Management Company Ltd",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Capital Markets",
       "weight": 0.03,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45397
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -479,10 +607,14 @@
       "slug": "cello-world-limited-1a13cb87",
       "isin": null,
       "stock": "Cello World Limited",
+      "sourceSecurityName": "Cello World Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Consumer Durables",
       "weight": 0.02,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45405
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -493,10 +625,14 @@
       "slug": "icici-prudential-asset-management-ef0a8154",
       "isin": null,
       "stock": "ICICI PRUDENTIAL ASSET MANAGEMENT",
+      "sourceSecurityName": "ICICI PRUDENTIAL ASSET MANAGEMENT",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Capital Markets",
       "weight": 0.02,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45406
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -507,10 +643,14 @@
       "slug": "itc-hotels-limited-7a87b230",
       "isin": null,
       "stock": "ITC Hotels Limited",
+      "sourceSecurityName": "ITC Hotels Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Leisure Services",
       "weight": 0.02,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45407
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -521,10 +661,14 @@
       "slug": "stl-networks-limited-6ababa2f",
       "isin": null,
       "stock": "STL NETWORKS LIMITED",
+      "sourceSecurityName": "STL NETWORKS LIMITED",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Telecom - Services",
       "weight": 0.02,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45408
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -535,10 +679,14 @@
       "slug": "delta-corp-ltd-fb7e47fe",
       "isin": null,
       "stock": "Delta Corp Ltd.",
+      "sourceSecurityName": "Delta Corp Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Leisure Services",
       "weight": 0.01,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45413
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -549,10 +697,14 @@
       "slug": "godrej-consumer-products-ltd-3b82238d",
       "isin": null,
       "stock": "Godrej Consumer Products Ltd.",
+      "sourceSecurityName": "Godrej Consumer Products Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Personal Products",
       "weight": 0.01,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45414
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -563,10 +715,14 @@
       "slug": "indigo-paints-limited-35f2f397",
       "isin": null,
       "stock": "Indigo Paints Limited",
+      "sourceSecurityName": "Indigo Paints Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Consumer Durables",
       "weight": 0.01,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45415
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -577,10 +733,14 @@
       "slug": "metro-brands-limited-7796f737",
       "isin": null,
       "stock": "METRO BRANDS LIMITED",
+      "sourceSecurityName": "METRO BRANDS LIMITED",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Consumer Durables",
       "weight": 0.45,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45419
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -591,10 +751,14 @@
       "slug": "godrej-consumer-products-ltd-3b82238d",
       "isin": null,
       "stock": "Godrej Consumer Products Ltd.",
+      "sourceSecurityName": "Godrej Consumer Products Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Personal Products",
       "weight": 0.44,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45421
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -605,10 +769,14 @@
       "slug": "jk-tyre-industries-limited-16657942",
       "isin": null,
       "stock": "JK Tyre & Industries Limited",
+      "sourceSecurityName": "JK Tyre & Industries Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Auto Components",
       "weight": 0.44,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45422
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -619,10 +787,14 @@
       "slug": "aditya-birla-capital-ltd-a63980cc",
       "isin": null,
       "stock": "Aditya Birla Capital ltd.",
+      "sourceSecurityName": "Aditya Birla Capital ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Finance",
       "weight": 0.43,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45425
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -633,10 +805,14 @@
       "slug": "zensar-technologies-ltd-38e30071",
       "isin": null,
       "stock": "Zensar Technologies Ltd.",
+      "sourceSecurityName": "Zensar Technologies Ltd. IT -",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Software",
       "weight": 0.43,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45426
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -647,24 +823,14 @@
       "slug": "gulf-oil-lubricants-india-ltd-64bf278b",
       "isin": null,
       "stock": "Gulf Oil Lubricants India Ltd.",
+      "sourceSecurityName": "Gulf Oil Lubricants India Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Petroleum Products",
       "weight": 0.42,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
-    },
-    {
-      "amc": "HDFC Mutual Fund",
-      "scheme": "HDFC Multi Cap Fund",
-      "category": "Multi Cap",
-      "month": "2026-03",
-      "securityId": "NAME:multi-commodity-exchange-of-india-l",
-      "slug": "multi-commodity-exchange-of-india-l-6156b01a",
-      "isin": null,
-      "stock": "Multi Commodity Exchange of India L",
-      "sector": "Capital Markets",
-      "weight": 0.41,
-      "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45429
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -675,10 +841,14 @@
       "slug": "praj-industries-limited-ada7b61e",
       "isin": null,
       "stock": "Praj Industries Limited",
+      "sourceSecurityName": "Praj Industries Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Industrial Manufacturing",
       "weight": 0.41,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45432
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -689,10 +859,14 @@
       "slug": "kaynes-technology-india-limited-11c88621",
       "isin": null,
       "stock": "KAYNES TECHNOLOGY INDIA LIMITED",
+      "sourceSecurityName": "KAYNES TECHNOLOGY INDIA LIMITED",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Industrial Manufacturing",
       "weight": 0.39,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45435
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -703,10 +877,14 @@
       "slug": "cholamandalam-financial-holdings-ltd-674d1071",
       "isin": null,
       "stock": "Cholamandalam Financial Holdings Ltd.",
+      "sourceSecurityName": "Cholamandalam Financial Holdings Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Finance",
       "weight": 0.38,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45437
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -717,10 +895,14 @@
       "slug": "ltimindtree-limited-15edf0fe",
       "isin": null,
       "stock": "LTIMindtree Limited",
+      "sourceSecurityName": "LTIMindtree Limited IT -",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Software",
       "weight": 0.34,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45439
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -731,10 +913,14 @@
       "slug": "blue-star-ltd-1e487229",
       "isin": null,
       "stock": "Blue Star Ltd.",
+      "sourceSecurityName": "Blue Star Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Consumer Durables",
       "weight": 0.31,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45441
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -745,10 +931,14 @@
       "slug": "kalpataru-projects-international-ltd-fc9a3f50",
       "isin": null,
       "stock": "Kalpataru Projects International Ltd",
+      "sourceSecurityName": "Kalpataru Projects International Ltd",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Construction",
       "weight": 0.3,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45443
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -759,10 +949,14 @@
       "slug": "le-travenues-technology-limited-54e5a94c",
       "isin": null,
       "stock": "Le Travenues Technology Limited",
+      "sourceSecurityName": "Le Travenues Technology Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Leisure Services",
       "weight": 0.28,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45445
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -773,10 +967,14 @@
       "slug": "symphony-ltd-8a70b7a3",
       "isin": null,
       "stock": "Symphony Ltd.",
+      "sourceSecurityName": "Symphony Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Consumer Durables",
       "weight": 0.27,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45447
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -787,10 +985,14 @@
       "slug": "medi-assist-healthcare-services-limited-51cfe272",
       "isin": null,
       "stock": "Medi Assist Healthcare Services Limited",
+      "sourceSecurityName": "Medi Assist Healthcare Services Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Insurance",
       "weight": 0.24,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45449
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -801,10 +1003,14 @@
       "slug": "sonata-software-ltd-75d8e901",
       "isin": null,
       "stock": "Sonata Software Ltd.",
+      "sourceSecurityName": "Sonata Software Ltd. IT -",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Software",
       "weight": 0.24,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45450
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -815,10 +1021,14 @@
       "slug": "crompton-greaves-consumer-elec-ltd-609bc477",
       "isin": null,
       "stock": "Crompton Greaves Consumer Elec. Ltd.",
+      "sourceSecurityName": "Crompton Greaves Consumer Elec. Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Consumer Durables",
       "weight": 0.22,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 45453
     }
   ]
 }

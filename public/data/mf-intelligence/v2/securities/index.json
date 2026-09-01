@@ -425,14 +425,6 @@
       "latestTracked": "2025-07"
     },
     {
-      "securityId": "NAME:commodity-exchange-of-india-l",
-      "slug": "commodity-exchange-of-india-l-3626b154",
-      "isin": null,
-      "stock": "Commodity Exchange of India L",
-      "sector": "Capital Markets",
-      "latestTracked": "2026-05"
-    },
-    {
       "securityId": "NAME:corporation-ltd",
       "slug": "corporation-ltd-3f754f62",
       "isin": null,
@@ -1070,14 +1062,6 @@
       "isin": null,
       "stock": "Motherson Sumi Wiring India Limited",
       "sector": "Auto Components",
-      "latestTracked": "2026-06"
-    },
-    {
-      "securityId": "NAME:multi-commodity-exchange-of-india-l",
-      "slug": "multi-commodity-exchange-of-india-l-6156b01a",
-      "isin": null,
-      "stock": "Multi Commodity Exchange of India L",
-      "sector": "Capital Markets",
       "latestTracked": "2026-06"
     },
     {

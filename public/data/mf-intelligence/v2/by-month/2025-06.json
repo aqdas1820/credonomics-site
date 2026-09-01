@@ -8,12 +8,12 @@
     "generatedAt": "2026-08-10T11:24:20.991Z",
     "quality": "PARTIAL",
     "availability": "partial",
-    "recordCount": 874,
+    "recordCount": 870,
     "schemaVersion": "mf-v2",
     "coverageStart": "2025-01",
     "coverageEnd": "2026-06",
     "schemeCount": 3,
-    "holdingCount": 874,
+    "holdingCount": 870,
     "validationStatus": "PASSED_WITH_WARNINGS",
     "sourceSha256": "09e4e46b1314a86409d71300762833c4eb8ca7cbea15ee8cb410747cdbeb204b"
   },
@@ -30,10 +30,14 @@
       "slug": "embassy-office-parks-reit-b11c3e18",
       "isin": null,
       "stock": "Embassy Office Parks REIT",
+      "sourceSecurityName": "Embassy Office Parks REIT",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Realty",
       "weight": 0.34,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42529
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -44,10 +48,14 @@
       "slug": "limited-c9b062ee",
       "isin": null,
       "stock": "LIMITED",
+      "sourceSecurityName": "LIMITED",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Finance",
       "weight": 0.34,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42491
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -58,10 +66,14 @@
       "slug": "avenue-supermarts-ltd-8a935b01",
       "isin": null,
       "stock": "Avenue Supermarts Ltd.",
+      "sourceSecurityName": "Avenue Supermarts Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Retailing",
       "weight": 0.33,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42493
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -72,10 +84,14 @@
       "slug": "delhivery-limited-6b6a9c1d",
       "isin": null,
       "stock": "Delhivery Limited",
+      "sourceSecurityName": "Delhivery Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Transport Services",
       "weight": 0.33,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42494
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -86,10 +102,14 @@
       "slug": "emami-ltd-a8e53ec1",
       "isin": null,
       "stock": "Emami Ltd.",
+      "sourceSecurityName": "Emami Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Personal Products",
       "weight": 0.33,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42495
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -100,10 +120,14 @@
       "slug": "gail-india-ltd-781ee4db",
       "isin": null,
       "stock": "GAIL (India) Ltd.",
+      "sourceSecurityName": "GAIL (India) Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Gas",
       "weight": 0.33,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42496
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -114,10 +138,14 @@
       "slug": "creditaccess-grameen-limited-6f3fccb9",
       "isin": null,
       "stock": "Creditaccess Grameen Limited",
+      "sourceSecurityName": "Creditaccess Grameen Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Finance",
       "weight": 0.32,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42501
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -128,10 +156,14 @@
       "slug": "nhpc-ltd-4a54cf57",
       "isin": null,
       "stock": "NHPC Ltd.",
+      "sourceSecurityName": "NHPC Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Power",
       "weight": 0.32,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42502
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -142,10 +174,14 @@
       "slug": "ultratech-cement-limited-870ecda1",
       "isin": null,
       "stock": "UltraTech Cement Limited",
+      "sourceSecurityName": "UltraTech Cement Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Cement & Cement Products",
       "weight": 0.32,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42503
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -156,10 +192,14 @@
       "slug": "rec-limited-523a362d",
       "isin": null,
       "stock": "REC Limited.",
+      "sourceSecurityName": "REC Limited.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Finance",
       "weight": 0.3,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42507
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -170,10 +210,14 @@
       "slug": "medi-assist-healthcare-services-limited-51cfe272",
       "isin": null,
       "stock": "Medi Assist Healthcare Services Limited",
+      "sourceSecurityName": "Medi Assist Healthcare Services Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Insurance",
       "weight": 0.29,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42509
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -184,10 +228,14 @@
       "slug": "suzlon-energy-ltd-1b1b2330",
       "isin": null,
       "stock": "Suzlon Energy Ltd",
+      "sourceSecurityName": "Suzlon Energy Ltd",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Electrical Equipment",
       "weight": 0.29,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42510
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -198,10 +246,14 @@
       "slug": "the-phoenix-mills-limited-9276c5fb",
       "isin": null,
       "stock": "The Phoenix Mills Limited",
+      "sourceSecurityName": "The Phoenix Mills Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Realty",
       "weight": 0.29,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42511
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -212,10 +264,14 @@
       "slug": "voltas-ltd-087c024f",
       "isin": null,
       "stock": "Voltas Ltd.",
+      "sourceSecurityName": "Voltas Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Consumer Durables",
       "weight": 0.29,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42512
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -226,10 +282,14 @@
       "slug": "avalon-technologies-limited-985db52f",
       "isin": null,
       "stock": "Avalon Technologies Limited",
+      "sourceSecurityName": "Avalon Technologies Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Electrical Equipment",
       "weight": 0.28,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42517
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -240,10 +300,14 @@
       "slug": "whirlpool-of-india-ltd-be72a882",
       "isin": null,
       "stock": "Whirlpool of India Ltd.",
+      "sourceSecurityName": "Whirlpool of India Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Consumer Durables",
       "weight": 0.28,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42518
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -254,10 +318,14 @@
       "slug": "cie-automotive-india-ltd-4c489ae7",
       "isin": null,
       "stock": "CIE Automotive India Ltd",
+      "sourceSecurityName": "CIE Automotive India Ltd",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Auto Components",
       "weight": 0.27,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42521
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -268,10 +336,14 @@
       "slug": "devyani-international-ltd-e534dcf5",
       "isin": null,
       "stock": "Devyani International Ltd",
+      "sourceSecurityName": "Devyani International Ltd",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Leisure Services",
       "weight": 0.27,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42522
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -282,10 +354,14 @@
       "slug": "acc-ltd-7d222d91",
       "isin": null,
       "stock": "ACC Ltd.",
+      "sourceSecurityName": "ACC Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Cement & Cement Products",
       "weight": 0.26,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42525
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -296,10 +372,14 @@
       "slug": "supreme-industries-ltd-f37a6f56",
       "isin": null,
       "stock": "Supreme Industries Ltd.",
+      "sourceSecurityName": "Supreme Industries Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Industrial Products",
       "weight": 0.26,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42526
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -310,10 +390,14 @@
       "slug": "delta-corp-ltd-fb7e47fe",
       "isin": null,
       "stock": "Delta Corp Ltd.",
+      "sourceSecurityName": "Delta Corp Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Leisure Services",
       "weight": 0.02,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42531
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -324,10 +408,14 @@
       "slug": "hero-motocorp-ltd-d322510c",
       "isin": null,
       "stock": "Hero MotoCorp Ltd.",
+      "sourceSecurityName": "Hero MotoCorp Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Automobiles",
       "weight": 0.02,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42532
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -338,10 +426,14 @@
       "slug": "indigo-paints-limited-35f2f397",
       "isin": null,
       "stock": "Indigo Paints Limited",
+      "sourceSecurityName": "Indigo Paints Limited",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Consumer Durables",
       "weight": 0.02,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42533
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -352,10 +444,14 @@
       "slug": "titan-company-ltd-ea176253",
       "isin": null,
       "stock": "Titan Company Ltd.",
+      "sourceSecurityName": "Titan Company Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Consumer Durables",
       "weight": 0.02,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42534
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -366,10 +462,14 @@
       "slug": "godrej-consumer-products-ltd-3b82238d",
       "isin": null,
       "stock": "Godrej Consumer Products Ltd.",
+      "sourceSecurityName": "Godrej Consumer Products Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Personal Products",
       "weight": 0.01,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42539
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -380,10 +480,14 @@
       "slug": "icici-lombard-general-insurance-co-d329b3dd",
       "isin": null,
       "stock": "ICICI Lombard General Insurance Co",
+      "sourceSecurityName": "ICICI Lombard General Insurance Co",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Insurance",
       "weight": 0.01,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42540
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -394,10 +498,14 @@
       "slug": "latent-view-analytics-limited-dbfbf598",
       "isin": null,
       "stock": "LATENT VIEW ANALYTICS LIMITED",
+      "sourceSecurityName": "LATENT VIEW ANALYTICS LIMITED IT -",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Software",
       "weight": 0.01,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42541
     },
     {
       "amc": "HDFC Mutual Fund",
@@ -408,10 +516,14 @@
       "slug": "tci-express-ltd-ed9f568e",
       "isin": null,
       "stock": "TCI Express Ltd.",
+      "sourceSecurityName": "TCI Express Ltd.",
+      "canonicalSecurityName": null,
+      "nameResolutionStatus": "UNRESOLVED",
       "sector": "Transport Services",
       "weight": 0.01,
       "quality": "NAME_ONLY",
-      "sourceFile": "holdings_public.csv"
+      "sourceFile": "holdings_public.csv",
+      "sourceRow": 42542
     }
   ]
 }
