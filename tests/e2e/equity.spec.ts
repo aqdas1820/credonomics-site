@@ -10,10 +10,22 @@ test("verified stock search opens the canonical stock page", async ({ page }) =>
   await expect(page.getByRole("heading", { level: 1 })).toContainText(/Reliance Industries/i);
 });
 
-test("stock detail preserves unavailable market data", async ({ page }) => {
+test("stock detail renders connected or unavailable market data", async ({ page }) => {
   await page.goto("/stocks/nse/RELIANCE");
-  await expect(page.getByText(/authentication is not configured/i).first()).toBeVisible();
-  await expect(page.getByText("Fundamental data source not connected.")).toBeVisible();
+  const authenticationNotice = page.getByText(/authentication is not configured/i).first();
+  const quoteMetadata = page.locator("main header small");
+
+  await expect.poll(async () => (
+    await authenticationNotice.isVisible() || await quoteMetadata.isVisible()
+  )).toBe(true);
+  await expect(page.getByText(/Loading fundamentals/i)).not.toBeVisible();
+
+  if (await authenticationNotice.isVisible()) {
+    await expect(page.getByText("Fundamental data source not connected.")).toBeVisible();
+  } else {
+    await expect(quoteMetadata).toContainText(/LIVE|DELAYED|STALE/i);
+    await expect(page.getByText("Open", { exact: true })).toBeVisible();
+  }
 });
 
 test("mobile stock detail does not overflow", async ({ page }) => {

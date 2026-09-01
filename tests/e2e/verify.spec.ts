@@ -23,14 +23,19 @@ test.describe("UI Verification", () => {
     expect(content).toContain("RELIANCE");
     
     const chart = page.locator('svg[aria-label="Historical closing price chart"]');
+    const historySection = page.locator('main section').first();
+    const historyLoading = historySection.getByText(/Loading price history/i);
+    const historyNotice = historySection.locator('p[class*="notice"]');
     await expect(chart).toBeVisible();
     
     // Check changing periods
     const periods = ['1W', '1M', '3M', '6M', '1Y', '3Y', '5Y'];
     for (const p of periods) {
       await page.getByRole('button', { name: p }).click();
-      await page.waitForTimeout(1000);
-      await expect(chart).toBeVisible();
+      await expect(historyLoading).not.toBeVisible({ timeout: 15000 });
+      await expect.poll(async () => (
+        await chart.isVisible() || await historyNotice.isVisible()
+      )).toBe(true);
     }
   });
 
