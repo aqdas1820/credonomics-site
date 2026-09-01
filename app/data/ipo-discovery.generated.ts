@@ -2,7 +2,7 @@
 import type { IpoDiscoveryRecord } from './ipo-types'
 
 export const ipoDiscoveryMeta = {
-  "generatedAt": "2026-09-01T03:24:29.413Z",
+  "generatedAt": "2026-09-01T09:24:31.637Z",
   "source": "SEBI Public Issues",
   "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
   "recordCount": 19,
@@ -19,7 +19,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/hero-motors-limited-addendum-to-drhp_104121.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-31T09:17:41.391Z",
-    "lastSeen": "2026-09-01T03:24:29.413Z"
+    "lastSeen": "2026-09-01T09:24:31.637Z"
   },
   {
     "id": "karamtara-engineering-limited-addendum-9fb3c4",
@@ -41,7 +41,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/t-c-terrytex-limited-addendum-cum-corrigendum-to-drhp_103904.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-24T11:02:16.253Z",
-    "lastSeen": "2026-09-01T03:24:29.413Z"
+    "lastSeen": "2026-09-01T09:24:31.637Z"
   },
   {
     "id": "lumino-industries-limited-corrigendum-9e4344",
@@ -52,7 +52,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-corrigendum-to-drhp_103755.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-19T10:04:47.322Z",
-    "lastSeen": "2026-09-01T03:24:29.413Z"
+    "lastSeen": "2026-09-01T09:24:31.637Z"
   },
   {
     "id": "german-green-steel-and-power-ltd-addendum-bf8abd",
@@ -63,7 +63,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/german-green-steel-and-power-ltd-addendum-to-drhp_103895.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-24T11:02:16.253Z",
-    "lastSeen": "2026-09-01T03:24:29.413Z"
+    "lastSeen": "2026-09-01T09:24:31.637Z"
   },
   {
     "id": "sillverton-industries-limited-addendum-9129fa",
@@ -74,7 +74,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/sillverton-industries-limited-addendum-ii_103621.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-14T08:02:14.704Z",
-    "lastSeen": "2026-09-01T03:24:29.413Z"
+    "lastSeen": "2026-09-01T09:24:31.637Z"
   },
   {
     "id": "arjun-jewellers-limited-drhp",

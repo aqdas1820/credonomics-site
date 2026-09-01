@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-09-01T03:24:17.506Z",
+  "generatedAt": "2026-09-01T09:24:19.820Z",
   "recordCount": 7,
   "nseCount": 7,
   "bseCount": 0,
@@ -31,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 20.84214189623816,
-      "updatedAt": "2026-09-01T03:24:17.506Z",
+      "total": 65.47364473985226,
+      "updatedAt": "2026-09-01T09:24:19.820Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ESDS&type=Active"
     },
     "sharesOffered": 12352942,
-    "sharesBid": 257461770,
+    "sharesBid": 808792136,
     "estimatedIssueValueCr": 529.94,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ESDS&type=Active",
-    "fetchedAt": "2026-09-01T03:24:17.506Z"
+    "fetchedAt": "2026-09-01T09:24:19.820Z"
   },
   {
     "slug": "priority-jewels-ltd-835c013",
@@ -60,17 +60,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 22.16063231850117,
-      "updatedAt": "2026-09-01T03:24:17.506Z",
+      "total": 57.6323887587822,
+      "updatedAt": "2026-09-01T09:24:19.820Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PRIORITY&type=Active"
     },
     "sharesOffered": 3202500,
-    "sharesBid": 70969425,
+    "sharesBid": 184567725,
     "estimatedIssueValueCr": 64.05,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PRIORITY&type=Active",
-    "fetchedAt": "2026-09-01T03:24:17.506Z"
+    "fetchedAt": "2026-09-01T09:24:19.820Z"
   },
   {
     "slug": "ashutosh-fibre-ltd-9c63806",
@@ -87,16 +87,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 1.36,
-      "updatedAt": "2026-09-01T03:24:17.506Z",
+      "total": 3.9,
+      "updatedAt": "2026-09-01T09:24:19.820Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=ASHUTOSH&type=Active"
     },
     "sharesOffered": 4381200,
-    "sharesBid": 5952000,
+    "sharesBid": 17102400,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=ASHUTOSH&type=Active",
-    "fetchedAt": "2026-09-01T03:24:17.506Z"
+    "fetchedAt": "2026-09-01T09:24:19.820Z"
   },
   {
     "slug": "purple-style-labs-ltd-9bd08f0",
@@ -115,17 +115,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.09228539861508689,
-      "updatedAt": "2026-09-01T03:24:17.506Z",
+      "total": 0.1549224095946519,
+      "updatedAt": "2026-09-01T09:24:19.820Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PERNIASPOP&type=Active"
     },
     "sharesOffered": 6849816,
-    "sharesBid": 632138,
+    "sharesBid": 1061190,
     "estimatedIssueValueCr": 393.86,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PERNIASPOP&type=Active",
-    "fetchedAt": "2026-09-01T03:24:17.506Z"
+    "fetchedAt": "2026-09-01T09:24:19.820Z"
   },
   {
     "slug": "shanti-inorganics-ltd-c9dedea",
@@ -142,16 +142,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 1.06,
-      "updatedAt": "2026-09-01T03:24:17.506Z",
+      "total": 2.91,
+      "updatedAt": "2026-09-01T09:24:19.820Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SHANTIINOR&type=Active"
     },
     "sharesOffered": 4072000,
-    "sharesBid": 4334400,
+    "sharesBid": 11859200,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SHANTIINOR&type=Active",
-    "fetchedAt": "2026-09-01T03:24:17.506Z"
+    "fetchedAt": "2026-09-01T09:24:19.820Z"
   },
   {
     "slug": "deepa-jewellers-ltd-7ebfb15",
@@ -170,17 +170,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0,
-      "updatedAt": "2026-09-01T03:24:17.506Z",
+      "total": 0.3748822967065216,
+      "updatedAt": "2026-09-01T09:24:19.820Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=DEEPA&type=Active"
     },
-    "sharesOffered": 0,
-    "sharesBid": 0,
-    "estimatedIssueValueCr": 0,
+    "sharesOffered": 18520085,
+    "sharesBid": 6942852,
+    "estimatedIssueValueCr": 327.81,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=DEEPA&type=Active",
-    "fetchedAt": "2026-09-01T03:24:17.506Z"
+    "fetchedAt": "2026-09-01T09:24:19.820Z"
   },
   {
     "slug": "rays-of-belief-ltd-for-profit-social-enterprise-fpse-153100a",
@@ -199,16 +199,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0,
-      "updatedAt": "2026-09-01T03:24:17.506Z",
+      "total": 0.5866448255311826,
+      "updatedAt": "2026-09-01T09:24:19.820Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MOMSBELIEF&type=Active"
     },
-    "sharesOffered": 0,
-    "sharesBid": 0,
-    "estimatedIssueValueCr": 0,
+    "sharesOffered": 3137810,
+    "sharesBid": 1840780,
+    "estimatedIssueValueCr": 74.99,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MOMSBELIEF&type=Active",
-    "fetchedAt": "2026-09-01T03:24:17.506Z"
+    "fetchedAt": "2026-09-01T09:24:19.820Z"
   }
 ]
