@@ -1,38 +1,47 @@
-import {
-  BarChart3,
-  CalendarDays,
-  Clock3,
-  FileText,
-  Gauge,
-  Grid2X2,
-  Landmark,
-  ListFilter,
-  TrendingUp,
-} from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import styles from '../ipo.module.css'
 
-const links = [
-  { href: '/ipo', label: 'Dashboard', icon: Grid2X2 },
-  { href: '/ipo/current', label: 'Current', icon: TrendingUp },
-  { href: '/ipo/upcoming', label: 'Upcoming', icon: Clock3 },
-  { href: '/ipo/mainboard', label: 'Mainboard', icon: Landmark },
-  { href: '/ipo/sme', label: 'SME', icon: ListFilter },
-  { href: '/ipo/calendar', label: 'Calendar', icon: CalendarDays },
-  { href: '/ipo/subscription', label: 'Subscription', icon: BarChart3 },
-  { href: '/ipo/documents', label: 'Documents', icon: FileText },
-  { href: '/ipo/analyzer', label: 'Analyzer', icon: Gauge },
+const primary = [
+  { href: '/ipo/current', label: 'Open' },
+  { href: '/ipo/upcoming', label: 'Upcoming' },
+  { href: '/ipo?view=closed', label: 'Recently Closed' },
+  { href: '/ipo?view=listed', label: 'Listed' },
 ]
 
-export default function IpoSubnav({ active = 'Dashboard' }: { active?: string }) {
+const secondary = [
+  { href: '/ipo/mainboard', label: 'Mainboard' },
+  { href: '/ipo/sme', label: 'SME' },
+  { href: '/ipo', label: 'All' },
+]
+
+const tools = [
+  { href: '/ipo/calendar', label: 'Calendar' },
+  { href: '/ipo/subscription', label: 'Subscription' },
+  { href: '/ipo/documents', label: 'Documents' },
+  { href: '/ipo/analyzer', label: 'Analyzer' },
+  { href: '/ipo/documents', label: 'Filed / RHP pipeline' },
+]
+
+export default function IpoSubnav({ active = 'All' }: { active?: string }) {
   return (
     <nav className={styles.ipoSubnav} aria-label="IPO Intelligence navigation">
       <div className={styles.ipoSubnavInner}>
-        {links.map(({ href, label, icon: Icon }) => (
-          <a href={href} key={href} data-active={active === label}>
-            <Icon size={14}/>
-            <span>{label}</span>
-          </a>
-        ))}
+        <div className={styles.ipoPrimaryLinks}>
+          {primary.map((item) => (
+            <a href={item.href} key={item.href} data-active={active === item.label}>{item.label}</a>
+          ))}
+        </div>
+        <div className={styles.ipoSecondaryLinks}>
+          {secondary.map((item) => (
+            <a href={item.href} key={item.href} data-active={active === item.label}>{item.label}</a>
+          ))}
+          <details className={styles.ipoMore}>
+            <summary>More / Research Tools <ChevronDown size={13}/></summary>
+            <div>
+              {tools.map((item) => <a href={item.href} key={`${item.href}-${item.label}`}>{item.label}</a>)}
+            </div>
+          </details>
+        </div>
       </div>
     </nav>
   )

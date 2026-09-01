@@ -50,7 +50,12 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
       const previousClose = numberOrNull(ohlc?.close);
       const timestamp = dateOrNull(item.timestamp ?? item.last_trade_time);
       const availability = timestamp && Date.now() - Date.parse(timestamp) < 120_000 ? "live" : "delayed";
-      const quote = { ...instrument, price, previousClose, change: price !== null && previousClose !== null ? price - previousClose : null, changePercent: price !== null && previousClose ? ((price - previousClose) / previousClose) * 100 : null, open: numberOrNull(ohlc?.open), high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), volume: numberOrNull(item.volume), fiftyTwoWeekHigh: numberOrNull(item.ohlc_52_week_high), fiftyTwoWeekLow: numberOrNull(item.ohlc_52_week_low), timestamp, ...metadata(timestamp, availability) };
+      const netChange = numberOrNull(item.net_change);
+      const netChangePercent = numberOrNull(item.net_change_percent);
+      const change = netChange !== null ? netChange : (price !== null && previousClose !== null ? price - previousClose : null);
+      const changePercent = netChangePercent !== null ? netChangePercent : (price !== null && previousClose ? ((price - previousClose) / previousClose) * 100 : null);
+
+      const quote = { ...instrument, price, previousClose, change, changePercent, open: numberOrNull(ohlc?.open), high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), volume: numberOrNull(item.volume), fiftyTwoWeekHigh: numberOrNull(item.ohlc_52_week_high), fiftyTwoWeekLow: numberOrNull(item.ohlc_52_week_low), timestamp, ...metadata(timestamp, availability) };
       const parsed = marketQuoteSchema.safeParse(quote);
       return parsed.success ? { data: parsed.data, metadata: metadata(timestamp, availability) } : failure("INVALID_RESPONSE", "Market data temporarily unavailable.");
     } catch (error) { return mapError(error); }
@@ -63,8 +68,9 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
 
   async getHistoricalPrices(key: string, range: HistoricalRange): Promise<ProviderResult<HistoricalPrice[]>> {
     if (!hasUpstoxAnalyticsToken()) return failure("AUTH_REQUIRED", "Market data authentication is not configured.");
-    const settings: Record<HistoricalRange, { days: number; unit: "days" | "weeks" | "months" }> = { "1D": { days: 1, unit: "days" }, "1W": { days: 7, unit: "days" }, "1M": { days: 31, unit: "days" }, "3M": { days: 93, unit: "days" }, "6M": { days: 186, unit: "days" }, "1Y": { days: 366, unit: "days" }, "3Y": { days: 1096, unit: "weeks" }, "5Y": { days: 1827, unit: "weeks" }, "MAX": { days: 3650, unit: "months" } };
-    const { days, unit } = settings[range];
+    const settings: Partial<Record<HistoricalRange, { days: number; unit: "days" | "weeks" | "months" }>> = { "1D": { days: 1, unit: "days" }, "1W": { days: 7, unit: "days" }, "1M": { days: 31, unit: "days" }, "3M": { days: 93, unit: "days" }, "6M": { days: 186, unit: "days" }, "1Y": { days: 366, unit: "days" }, "3Y": { days: 1096, unit: "weeks" }, "5Y": { days: 1827, unit: "weeks" }, "MAX": { days: 3650, unit: "months" } };
+    const config = settings[range] ?? settings["1M"]!;
+    const { days, unit } = config;
     const to = new Date(); const from = new Date(to.getTime() - days * 86_400_000); const format = (date: Date) => date.toISOString().slice(0, 10);
     try {
       const raw = await upstoxGet<{ data?: { candles?: unknown } }>(`/v3/historical-candle/${encodeURIComponent(key)}/${unit}/1/${format(to)}/${format(from)}`, { ttlMs: 3_600_000 });
@@ -73,10 +79,10 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
     } catch (error) { return mapError(error); }
   }
 
-  async getIntradayPrices(key: string): Promise<ProviderResult<HistoricalPrice[]>> {
+  async getIntradayPrices(key: string, interval: "1minute" | "5minute" | "15minute" | "30minute" | "60minute" = "5minute"): Promise<ProviderResult<HistoricalPrice[]>> {
     if (!hasUpstoxAnalyticsToken()) return failure("AUTH_REQUIRED", "Market data authentication is not configured.");
     try {
-      const raw = await upstoxGet<{ data?: { candles?: unknown } }>(`/v3/historical-candle/intraday/${encodeURIComponent(key)}/minutes/5`, { ttlMs: 30_000 });
+      const raw = await upstoxGet<{ data?: { candles?: unknown } }>(`/v3/historical-candle/intraday/${encodeURIComponent(key)}/${interval.replace("minute", "minutes") === "60minutes" ? "30minute" /* fallback */ : interval === "1minute" ? "1minute" : "minutes/" + interval.replace("minute", "")}`, { ttlMs: 30_000 });
       const data = transformCandles(raw.data?.candles);
       return { data, metadata: metadata(data[0]?.date ?? null, data.length ? "live" : "unavailable") };
     } catch (error) { return mapError(error); }

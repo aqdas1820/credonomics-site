@@ -86,4 +86,4 @@ export type CorporateAction = {
   description: string;
 };
 
-export type HistoricalRange = "1D" | "1W" | "1M" | "3M" | "6M" | "1Y" | "3Y" | "5Y" | "MAX";
+export type HistoricalRange = "1m" | "5m" | "15m" | "1h" | "1D" | "1W" | "1M" | "3M" | "6M" | "1Y" | "3Y" | "5Y" | "MAX";

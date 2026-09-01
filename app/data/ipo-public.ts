@@ -5,6 +5,7 @@ import type {
   VerifiedIpoRecord,
 } from './ipo-types'
 import { verifiedIpos } from './verified-ipos.generated'
+import { getIpoDisplayStatus } from '../../src/domain/ipo/display-status'
 
 function normalizeName(value: string) {
   return value
@@ -15,13 +16,13 @@ function normalizeName(value: string) {
     .trim()
 }
 
-function marketToPublic(record: IpoMarketRecord): PublicIpoRecord {
+function marketToPublic(record: IpoMarketRecord, normalizedAt: string): PublicIpoRecord {
   return {
     slug: record.slug,
     companyName: record.companyName,
     symbol: record.symbol,
     marketSegment: record.marketSegment,
-    status: record.status,
+    status: getIpoDisplayStatus({ ...record.issue, providerStatus: record.status }),
     issue: record.issue,
     financials: [],
     subscription: record.subscription,
@@ -34,6 +35,9 @@ function marketToPublic(record: IpoMarketRecord): PublicIpoRecord {
       },
     ],
     lastUpdated: record.fetchedAt,
+    providerUpdatedAt: record.fetchedAt,
+    normalizedAt,
+    provider: record.marketSource.toLowerCase(),
     researchState: 'exchange-live',
     sharesOffered: record.sharesOffered,
     sharesBid: record.sharesBid,
@@ -41,10 +45,14 @@ function marketToPublic(record: IpoMarketRecord): PublicIpoRecord {
   }
 }
 
-function verifiedToPublic(record: VerifiedIpoRecord): PublicIpoRecord {
+function verifiedToPublic(record: VerifiedIpoRecord, normalizedAt: string): PublicIpoRecord {
   return {
     ...record,
+    status: getIpoDisplayStatus({ ...record.issue, providerStatus: record.status }),
     lastUpdated: record.lastVerified,
+    providerUpdatedAt: record.lastVerified,
+    normalizedAt,
+    provider: 'official-filing',
     researchState: 'normalized',
   }
 }
@@ -60,7 +68,14 @@ function mergeMarketIntoVerified(
     symbol: market.symbol || verified.symbol,
     marketSegment:
       verified.marketSegment === 'unknown' ? market.marketSegment : verified.marketSegment,
-    status: market.status === 'unknown' ? verified.status : market.status,
+    status: getIpoDisplayStatus({
+      ...market.issue,
+      ...verified.issue,
+      openDate: market.issue.openDate || verified.issue.openDate,
+      closeDate: market.issue.closeDate || verified.issue.closeDate,
+      listingDate: verified.issue.listingDate,
+      providerStatus: market.status === 'unknown' ? verified.status : market.status,
+    }),
     issue: {
       ...market.issue,
       ...verified.issue,
@@ -82,6 +97,7 @@ function mergeMarketIntoVerified(
       },
     ],
     lastUpdated: market.fetchedAt > verified.lastUpdated ? market.fetchedAt : verified.lastUpdated,
+    providerUpdatedAt: market.fetchedAt,
     sharesOffered: market.sharesOffered,
     sharesBid: market.sharesBid,
     estimatedIssueValueCr: market.estimatedIssueValueCr,
@@ -96,35 +112,40 @@ const verifiedNames = new Set(
   verifiedIpos.map((record) => normalizeName(record.companyName)),
 )
 
-export const publicIpos: PublicIpoRecord[] = [
+export function getPublicIpos(now = new Date()): PublicIpoRecord[] {
+  const normalizedAt = now.toISOString()
+  return [
   ...verifiedIpos.map((record) =>
     mergeMarketIntoVerified(
-      verifiedToPublic(record),
+      verifiedToPublic(record, normalizedAt),
       marketByName.get(normalizeName(record.companyName)),
     ),
   ),
   ...ipoMarketMaster
     .filter((record) => !verifiedNames.has(normalizeName(record.companyName)))
-    .map(marketToPublic),
+    .map((record) => marketToPublic(record, normalizedAt)),
 ].sort((a, b) => {
-  const statusOrder = { open: 0, upcoming: 1, closed: 2, listed: 3, draft: 4, unknown: 5, withdrawn: 6 }
+  const statusOrder = { closing_today: 0, open: 1, upcoming: 2, closed: 3, listed: 4, draft: 5, unknown: 6, withdrawn: 7 }
   const aStatus = statusOrder[a.status] ?? 9
   const bStatus = statusOrder[b.status] ?? 9
   return aStatus - bStatus ||
     String(a.issue.openDate || '').localeCompare(String(b.issue.openDate || '')) ||
     a.companyName.localeCompare(b.companyName)
 })
+}
+
+export const publicIpos: PublicIpoRecord[] = getPublicIpos()
 
 export function getPublicIpo(slug: string) {
-  return publicIpos.find((ipo) => ipo.slug === slug)
+  return getPublicIpos().find((ipo) => ipo.slug === slug)
 }
 
 export function publicIposByStatus(status: PublicIpoRecord['status']) {
-  return publicIpos.filter((ipo) => ipo.status === status)
+  return getPublicIpos().filter((ipo) => ipo.status === status)
 }
 
 export function publicIposBySegment(segment: PublicIpoRecord['marketSegment']) {
-  return publicIpos.filter((ipo) => ipo.marketSegment === segment)
+  return getPublicIpos().filter((ipo) => ipo.marketSegment === segment)
 }
 
 export { ipoMarketMasterMeta }

@@ -29,5 +29,5 @@
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "ipo-backups", "mf-backups", "**/*-backups/**"]
+  "exclude": ["node_modules", "scratch", "ipo-backups", "mf-backups", "**/*-backups/**"]
 }

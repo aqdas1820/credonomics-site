@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { formatSubscription } from '../../lib/format'
 import {
   ArrowUpRight,
   BarChart3,
@@ -117,7 +118,7 @@ export default function IPOCompanyPage({
     ['Allotment', issue.allotmentDate],
     ['Listing date', issue.listingDate],
     ['Exchange', issue.exchange],
-    ['Subscription', issue.subscription],
+    ['Subscription', formatSubscription(issue.subscription)],
   ]
 
   const issueStructure = [

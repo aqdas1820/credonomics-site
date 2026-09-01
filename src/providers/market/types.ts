@@ -27,6 +27,6 @@ export interface MarketDataProvider {
   getShareholding(symbol: string): Promise<ProviderResult<Shareholding>>;
   getCorporateActions(symbol: string): Promise<ProviderResult<CorporateAction[]>>;
   getHistoricalPrices(symbol: string, range: HistoricalRange): Promise<ProviderResult<HistoricalPrice[]>>;
-  getIntradayPrices(instrumentKey: string): Promise<ProviderResult<HistoricalPrice[]>>;
+  getIntradayPrices(instrumentKey: string, interval?: string): Promise<ProviderResult<HistoricalPrice[]>>;
   getMarketStatus(): Promise<ProviderResult<{ session: "PRE_OPEN" | "OPEN" | "CLOSED" | "HOLIDAY" | "UNKNOWN" }>>;
 }

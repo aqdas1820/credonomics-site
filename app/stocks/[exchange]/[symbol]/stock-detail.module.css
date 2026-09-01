@@ -1,1 +1,392 @@
-.page{min-height:75vh;padding:54px 20px;background:#f5f8fb;color:#102235}.page>header,.page>section{width:min(1080px,100%);margin:0 auto}.page header span,.page small{color:#647789;font-size:12px;font-weight:700}.page h1{max-width:800px;margin:10px 0;font-size:clamp(34px,6vw,66px);line-height:1;letter-spacing:-.045em}.price{font-size:34px;font-weight:850}.up{color:#087d68}.down{color:#bf3341}.notice{padding:14px;border-radius:10px;background:#fff3df;color:#74521a}.card{margin-top:24px!important;padding:20px;border:1px solid #dce5ec;border-radius:16px;background:white}.range{display:flex;gap:6px;overflow-x:auto}.range button{padding:8px 11px;border:0;border-radius:8px;background:#eef3f6;color:#405467;cursor:pointer}.range .selected{background:#073b4c;color:white}.chart{width:100%;height:300px;margin-top:18px;color:#008b7e}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px!important}.grid div{padding:16px;border:1px solid #dce5ec;border-radius:13px;background:white}.grid span,.grid strong{display:block}.grid span{margin-bottom:7px;color:#6b7c8c;font-size:12px}@media(max-width:700px){.page{padding:36px 12px}.grid{grid-template-columns:repeat(2,1fr)}.chart{height:220px}}
+.page {
+  --bg-color: #f5f8fb;
+  --text-primary: #102235;
+  --text-secondary: #647789;
+  --card-bg: #ffffff;
+  --card-border: #dce5ec;
+  --up-color: #087d68;
+  --down-color: #bf3341;
+  --brand-color: #073b4c;
+  --btn-bg: #eef3f6;
+  --btn-text: #405467;
+  --chart-tooltip-bg: rgba(255, 255, 255, 0.95);
+  --chart-tooltip-border: #dce5ec;
+
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+:global([data-theme="dark"]) .page {
+  --bg-color: #061321;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --card-bg: #0f1c2e;
+  --card-border: #1e293b;
+  --up-color: #26a69a;
+  --down-color: #ef5350;
+  --brand-color: #38bdf8;
+  --btn-bg: #1e293b;
+  --btn-text: #cbd5e1;
+  --chart-tooltip-bg: rgba(15, 28, 46, 0.95);
+  --chart-tooltip-border: #1e293b;
+}
+
+.brokerHeader {
+  width: min(1200px, 100%);
+  margin: 0 auto 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 20px;
+}
+
+.headerTitle h1 {
+  margin: 0 0 8px 0;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.exchangeBadge {
+  display: inline-block;
+  padding: 4px 8px;
+  background: var(--btn-bg);
+  color: var(--text-secondary);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.headerPriceData {
+  text-align: right;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 850;
+}
+
+.up { color: var(--up-color); font-weight: 600; font-size: 18px; }
+.down { color: var(--down-color); font-weight: 600; font-size: 18px; }
+.upText { color: var(--up-color) !important; }
+.downText { color: var(--down-color) !important; }
+
+.timestamp {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.liveIndicator {
+  width: 8px;
+  height: 8px;
+  background: var(--up-color);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(38, 166, 154, 0.7); }
+  70% { box-shadow: 0 0 0 6px rgba(38, 166, 154, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(38, 166, 154, 0); }
+}
+
+.brokerLayout {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  align-items: start;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.chartCard, .statsCard {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.chartControls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.range {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.range button {
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.range button:hover {
+  background: var(--card-border);
+}
+
+.range .selected {
+  background: var(--brand-color);
+  color: #fff;
+  border-color: var(--brand-color);
+}
+
+.chartArea {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  margin-bottom: 24px;
+}
+
+.chartWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.chartContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.chartTooltip {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  background: var(--chart-tooltip-bg);
+  border: 1px solid var(--chart-tooltip-border);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+  min-width: 220px;
+}
+
+.chartTooltipPinned {
+  pointer-events: auto;
+  border-color: var(--brand-color);
+  box-shadow: 0 0 0 1px var(--brand-color), 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.attribution {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  font-size: 11px;
+}
+
+.attribution a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+.tooltipHeader {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pinnedBadge {
+  background: var(--brand-color);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+}
+
+.tooltipGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.tooltipGrid div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.tooltipGrid span {
+  color: var(--text-secondary);
+  margin-right: 8px;
+}
+
+.tooltipGrid strong {
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.statsCard h2 {
+  font-size: 16px;
+  margin: 0 0 16px 0;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.brokerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gridLabel {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.gridValue {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.actionList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.actionItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.actionItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.actionItem strong {
+  font-size: 11px;
+  color: var(--brand-color);
+  letter-spacing: 0.05em;
+}
+
+.actionItem span {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.actionItem small {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.notice {
+  padding: 12px 16px;
+  background: rgba(239, 83, 80, 0.1);
+  color: var(--down-color);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.loading, .chartLoading {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 100px;
+}
+
+@media (max-width: 992px) {
+  .brokerLayout {
+    grid-template-columns: 1fr;
+  }
+  .brokerHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .headerPriceData {
+    text-align: left;
+  }
+  .timestamp {
+    justify-content: flex-start;
+  }
+  .chartArea {
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 24px 12px;
+  }
+  .chartArea {
+    height: 320px;
+  }
+  .tooltipGrid {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .chartTooltip {
+    min-width: 140px;
+    padding: 8px;
+  }
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { formatSubscription } from './lib/format'
 type NormalizedIPO = {
   id: string;
   company: string;
@@ -318,7 +319,7 @@ export default function IPOHubClient({
                   <strong>{openIssues[0].company}</strong>
                   <b>
                     {openIssues[0].subscription !== null
-                      ? `${openIssues[0].subscription.toFixed(2)}x`
+                      ? formatSubscription(openIssues[0].subscription)
                       : "Subscription unavailable"}
                   </b>
                   <small>
@@ -487,7 +488,7 @@ export default function IPOHubClient({
                     </td>
                     <td>
                       {ipo.subscription !== null ? (
-                        <b className="sub">{ipo.subscription.toFixed(2)}x</b>
+                        <b className="sub">{formatSubscription(ipo.subscription)}</b>
                       ) : (
                         "—"
                       )}
@@ -546,7 +547,7 @@ export default function IPOHubClient({
                         {ipo.type} · {ipo.status}
                       </small>
                     </div>
-                    <b>{ipo.subscription!.toFixed(2)}x</b>
+                    <b>{formatSubscription(ipo.subscription)}</b>
                   </button>
                 ))}
 
@@ -801,7 +802,7 @@ export default function IPOHubClient({
                 <span>SUBSCRIPTION</span>
                 <strong>
                   {selected.subscription !== null
-                    ? `${selected.subscription.toFixed(2)}x`
+                    ? formatSubscription(selected.subscription)
                     : "—"}
                 </strong>
               </div>

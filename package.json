@@ -16,12 +16,13 @@
     "mf:metadata": "node scripts/mf/enrich-v2-metadata.mjs",
     "mf:generate": "node scripts/mf/generate.mjs",
     "mf:publish": "node scripts/mf/publish.mjs",
-    "mf:validate": "node scripts/mf/validate-production.mjs"
-    ,"equity:instruments:fetch": "node scripts/equity/fetch-instruments.mjs"
-    ,"equity:instruments:validate": "node scripts/equity/validate-instruments.mjs"
-    ,"equity:instruments:publish": "node scripts/equity/publish-instruments.mjs"
+    "mf:validate": "node scripts/mf/validate-production.mjs",
+    "equity:instruments:fetch": "node scripts/equity/fetch-instruments.mjs",
+    "equity:instruments:validate": "node scripts/equity/validate-instruments.mjs",
+    "equity:instruments:publish": "node scripts/equity/publish-instruments.mjs"
   },
   "dependencies": {
+    "lightweight-charts": "^5.2.1",
     "lucide-react": "^0.468.0",
     "next": "14.2.35",
     "react": "18.3.1",

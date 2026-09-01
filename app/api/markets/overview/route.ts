@@ -13,12 +13,16 @@ export const dynamic = "force-dynamic";
 export async function GET() {
   try {
     const raw = await upstoxGet<{ data?: Record<string, Record<string, unknown>> }>("/v2/market-quote/quotes", { query: { instrument_key: instruments.map(item => item.instrumentKey).join(",") }, ttlMs: 15_000 });
-    const entries = Object.values(raw.data ?? {});
     const data = instruments.map(instrument => {
-      const quote = entries.find(item => item.instrument_token === instrument.instrumentKey) ?? entries.find(item => String(item.symbol ?? "").toUpperCase().includes(instrument.name.replace("BANK NIFTY", "NIFTY BANK")));
+      const quote = raw.data?.[instrument.instrumentKey];
       const ohlc = quote?.ohlc as Record<string, unknown> | undefined;
-      const price = numberOrNull(quote?.last_price); const previousClose = numberOrNull(ohlc?.close);
-      return { ...instrument, price, change: price !== null && previousClose !== null ? price - previousClose : null, changePercent: price !== null && previousClose ? ((price - previousClose) / previousClose) * 100 : null, open: numberOrNull(ohlc?.open), high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), previousClose, timestamp: typeof quote?.timestamp === "string" ? quote.timestamp : null };
+      const price = numberOrNull(quote?.last_price);
+      const previousClose = numberOrNull(ohlc?.close);
+      const netChange = numberOrNull(quote?.net_change);
+      const netChangePercent = numberOrNull(quote?.net_change_percent);
+      const change = netChange !== null ? netChange : (price !== null && previousClose !== null ? price - previousClose : null);
+      const changePercent = netChangePercent !== null ? netChangePercent : (price !== null && previousClose ? ((price - previousClose) / previousClose) * 100 : null);
+      return { ...instrument, price, change, changePercent, open: numberOrNull(ohlc?.open), high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), previousClose, timestamp: typeof quote?.timestamp === "string" ? quote.timestamp : null };
     });
     return NextResponse.json({ data, metadata: { source: "Upstox API", availability: "live", asOf: data.find(item => item.timestamp)?.timestamp ?? null } }, { headers: { "Cache-Control": "public, s-maxage=15, stale-while-revalidate=30" } });
   } catch (error) {

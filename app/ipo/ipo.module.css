@@ -620,3 +620,28 @@
 }
 
 /* === CREDONOMICS_V17_5_DENSE_MODULE_MOBILE_END === */
+
+.ipoPrimaryLinks,.ipoSecondaryLinks{display:flex;align-items:center;gap:4px}.ipoPrimaryLinks a,.ipoSecondaryLinks>a{padding:9px 11px;border-radius:8px;color:var(--muted);font-size:11px;font-weight:800;text-decoration:none;white-space:nowrap}.ipoPrimaryLinks a[data-active=true],.ipoSecondaryLinks>a[data-active=true]{background:var(--ink);color:var(--surface)}.ipoSecondaryLinks{margin-left:auto}.ipoMore{position:relative}.ipoMore summary{display:flex;align-items:center;gap:5px;padding:9px 8px;color:var(--muted);font-size:11px;font-weight:800;cursor:pointer;list-style:none;white-space:nowrap}.ipoMore summary::-webkit-details-marker{display:none}.ipoMore>div{position:absolute;right:0;z-index:20;display:grid;min-width:205px;padding:7px;border:1px solid var(--line);border-radius:12px;background:var(--surface);box-shadow:var(--shadow)}.ipoMore>div a{padding:9px;border-radius:7px;color:var(--ink);font-size:11px;text-decoration:none}.ipoMore>div a:hover{background:var(--surface2)}
+@media(max-width:760px){.ipoSubnavInner{align-items:flex-start;flex-direction:column}.ipoPrimaryLinks{width:100%;overflow-x:auto}.ipoSecondaryLinks{width:100%;margin-left:0;overflow:visible;flex-wrap:wrap}.ipoMore>div{left:0;right:auto}}
+.ipoPrimaryLinks a[data-active=true],.ipoSecondaryLinks>a[data-active=true]{border-color:var(--line);background:var(--soft2);color:var(--ink)!important}
+@media(max-width:760px){.explorerHead{display:none}.explorerTable>a{min-width:0;grid-template-columns:1fr 1fr;gap:16px;padding:16px}.explorerIdentity{grid-column:1/-1}.explorerDates,.explorerMoney{grid-template-columns:18px 1fr}.explorerDates span:last-child,.explorerMoney span:last-child{grid-column:2}.explorerScore{grid-template-columns:auto 1fr}.explorerTable>a>svg{display:none}}
+
+/* Final IPO presentation cleanup */
+.explorerTable{overflow-x:auto}
+.explorerHead,.explorerTable>a{grid-template-columns:minmax(240px,1.35fr) minmax(210px,1fr) minmax(210px,1fr) minmax(145px,.72fr) 20px}
+.explorerScore{grid-template-columns:minmax(72px,max-content) minmax(70px,1fr)}
+.explorerScore>strong,.subscriptionTable strong{white-space:nowrap;font-variant-numeric:tabular-nums}
+.ipoPrimaryLinks a[data-active=true],.ipoSecondaryLinks>a[data-active=true]{border:1px solid var(--line);background:var(--soft2);color:var(--ink)!important}
+.detailNav{top:88px}
+.detailSection,.analysisDisclosure{scroll-margin-top:145px}
+.statusWord{font-size:34px!important;line-height:1!important;letter-spacing:-.04em!important;text-transform:capitalize}
+.analysisDisclosure{margin-top:40px;border:1px solid var(--line);border-radius:17px;background:var(--surface);overflow:hidden}
+.analysisDisclosure>summary{padding:17px 19px;display:flex;align-items:center;justify-content:space-between;gap:18px;cursor:pointer;list-style:none}
+.analysisDisclosure>summary::-webkit-details-marker{display:none}
+.analysisDisclosure>summary>span:first-child{display:grid;gap:3px}
+.analysisDisclosure>summary b{font-size:12px}.analysisDisclosure>summary small{color:var(--muted);font-size:8.5px}.analysisDisclosure>summary>span:last-child{color:var(--teal);font-size:8px;font-weight:900;text-transform:uppercase}
+.analysisBody{padding:0 19px 20px;border-top:1px solid var(--line)}
+.analysisBody>section,.analysisBody>.sectionPending{margin-top:24px}
+@media(max-width:850px){.detailNav{top:80px}}
+@media(max-width:760px){.explorerTable{overflow:hidden}.explorerHead{display:none}.explorerTable>a{min-width:0;grid-template-columns:1fr 1fr}.explorerScore{grid-template-columns:minmax(72px,max-content) 1fr}}
+@media(max-width:620px){.detailNav{top:78px}.detailSection,.analysisDisclosure{scroll-margin-top:130px}}

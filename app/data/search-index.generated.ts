@@ -190,7 +190,7 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "route:/ipo/current",
     "title": "Current IPOs",
-    "description": "Browse current ipos using the CredoNomics exchange market master and normalized IPO research database.",
+    "description": "Browse open and closing-today IPOs with date-validated CredoNomics market intelligence.",
     "href": "/ipo/current",
     "category": "IPO",
     "source": "IPO market records",
@@ -278,7 +278,7 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "route:/ipo/upcoming",
     "title": "Upcoming IPOs",
-    "description": "Browse upcoming ipos using the CredoNomics exchange market master and normalized IPO research database.",
+    "description": "Browse future-dated IPOs with date-validated CredoNomics market intelligence.",
     "href": "/ipo/upcoming",
     "category": "IPO",
     "source": "IPO market records",

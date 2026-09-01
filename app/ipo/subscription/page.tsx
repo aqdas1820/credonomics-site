@@ -1,22 +1,20 @@
 import { BarChart3, Database, ExternalLink } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
-import { publicIpos } from '../../data/ipo-public'
+import { getPublicIpos } from '../../data/ipo-public'
 import styles from '../../core-v4.module.css'
 import local from '../ipo.module.css'
 import IpoSubnav from '../components/IpoSubnav'
+import { formatIpoDate, formatSubscription } from '../lib/format'
 
 export const metadata = {
   title: 'IPO Subscription Status',
   description: 'QIB, NII and retail IPO subscription data from normalized source-backed CredoNomics IPO records.',
   alternates: { canonical: '/ipo/subscription' },
 }
-
-function x(value?: number) {
-  return value === undefined ? '—' : `${value.toLocaleString('en-IN',{maximumFractionDigits:2})}×`
-}
+export const dynamic = 'force-dynamic'
 
 export default function SubscriptionPage() {
-  const records = publicIpos.filter((ipo) => ipo.subscription && (
+  const records = getPublicIpos().filter((ipo) => ipo.subscription && (
     ipo.subscription.total !== undefined ||
     ipo.subscription.qib !== undefined ||
     ipo.subscription.nii !== undefined ||
@@ -41,12 +39,12 @@ export default function SubscriptionPage() {
             {records.map((ipo) => (
               <div key={ipo.slug}>
                 <a href={`/ipo/${ipo.slug}`}><b>{ipo.companyName}</b><small>{ipo.marketSegment}</small></a>
-                <strong>{x(ipo.subscription?.qib)}</strong>
-                <strong>{x(ipo.subscription?.sNii)}</strong>
-                <strong>{x(ipo.subscription?.bNii)}</strong>
-                <strong>{x(ipo.subscription?.retail)}</strong>
-                <strong>{x(ipo.subscription?.total)}</strong>
-                <span>{ipo.subscription?.updatedAt || '—'} {ipo.subscription?.sourceUrl && <a href={ipo.subscription.sourceUrl} target="_blank" rel="noreferrer"><ExternalLink size={11}/></a>}</span>
+                <strong>{formatSubscription(ipo.subscription?.qib)}</strong>
+                <strong>{formatSubscription(ipo.subscription?.sNii)}</strong>
+                <strong>{formatSubscription(ipo.subscription?.bNii)}</strong>
+                <strong>{formatSubscription(ipo.subscription?.retail)}</strong>
+                <strong>{formatSubscription(ipo.subscription?.total)}</strong>
+                <span>{formatIpoDate(ipo.subscription?.updatedAt)} {ipo.subscription?.sourceUrl && <a href={ipo.subscription.sourceUrl} target="_blank" rel="noreferrer"><ExternalLink size={11}/></a>}</span>
               </div>
             ))}
           </div>

@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import SiteFrame from '../components/SiteFrame'
 import IPODashboardClient from './IPODashboardClient'
-import LiveIpoPanel from './LiveIpoPanel'
+import { getPublicIpos } from '../data/ipo-public'
+
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'IPO Intelligence Dashboard',
@@ -18,7 +20,11 @@ export const metadata: Metadata = {
   },
 }
 
-export default function IPOPage() {
+export default function IPOPage({ searchParams }: { searchParams?: { view?: string } }) {
+  const records = getPublicIpos()
+  const initialView = ['open', 'upcoming', 'closed', 'listed'].includes(searchParams?.view || '')
+    ? searchParams?.view as 'open' | 'upcoming' | 'closed' | 'listed'
+    : 'open'
   const collectionPage = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -54,8 +60,7 @@ export default function IPOPage() {
 
   return (
     <SiteFrame>
-      <LiveIpoPanel />
-      <IPODashboardClient />
+      <IPODashboardClient records={records} initialView={initialView} />
 
       <script
         type="application/ld+json"

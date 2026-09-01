@@ -1,11 +1,14 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
+import dynamic from "next/dynamic";
 import type { CompanyFundamentals, CorporateAction, HistoricalPrice, HistoricalRange, IndianEquityIdentity, MarketQuote, Shareholding } from "../../../../src/domain/equity/types";
 import { formatINR as formatCurrency, formatIndianNumber as formatNumber, formatPercent } from "../../../../src/lib/financial-format";
 import styles from "./stock-detail.module.css";
 
+const InteractiveChart = dynamic(() => import("./InteractiveChart"), { ssr: false, loading: () => <p>Loading interactive chart...</p> });
+
 type Result<T> = { data: T | null; metadata: { availability: string; asOf: string | null }; error?: { message: string } };
-const ranges: HistoricalRange[] = ["1D", "1W", "1M", "3M", "6M", "1Y", "3Y", "5Y"];
+const ranges: HistoricalRange[] = ["1m", "5m", "15m", "1h", "1D", "1W", "1M", "3M", "6M", "1Y", "3Y", "5Y"];
 const unavailable = <T,>(message: string): Result<T> => ({ data: null, metadata: { availability: "unavailable", asOf: null }, error: { message } });
 
 export default function StockDetailClient({ stock }: { stock: IndianEquityIdentity }) {
@@ -14,7 +17,7 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
   const [fundamentals, setFundamentals] = useState<Result<CompanyFundamentals> | null>(null);
   const [shareholding, setShareholding] = useState<Result<Shareholding> | null>(null);
   const [actions, setActions] = useState<Result<CorporateAction[]> | null>(null);
-  const [range, setRange] = useState<HistoricalRange>("1M");
+  const [range, setRange] = useState<HistoricalRange>("1D");
 
   useEffect(() => {
     const query = `instrumentKey=${encodeURIComponent(stock.instrumentKey)}`;
@@ -23,17 +26,192 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
     fetch(`/api/stocks/shareholding?${query}`).then(async response => setShareholding(await response.json())).catch(() => setShareholding(unavailable("Shareholding data temporarily unavailable.")));
     fetch(`/api/stocks/corporate-actions?${query}`).then(async response => setActions(await response.json())).catch(() => setActions(unavailable("Corporate actions temporarily unavailable.")));
   }, [stock.instrumentKey]);
-  useEffect(() => { setHistory(null); fetch(`/api/stocks/history?instrumentKey=${encodeURIComponent(stock.instrumentKey)}&range=${range}`).then(async response => setHistory(await response.json())).catch(() => setHistory(unavailable("Historical data temporarily unavailable."))); }, [range, stock.instrumentKey]);
+
+  // Fallback for 52W High/Low using 1Y history
+  const [history1Y, setHistory1Y] = useState<Result<HistoricalPrice[]> | null>(null);
+  useEffect(() => {
+    if (quote?.data && (quote.data.fiftyTwoWeekHigh === null || quote.data.fiftyTwoWeekLow === null)) {
+      fetch(`/api/stocks/history?instrumentKey=${encodeURIComponent(stock.instrumentKey)}&range=1Y`)
+        .then(async response => setHistory1Y(await response.json()))
+        .catch(() => setHistory1Y(unavailable("1Y data unavailable.")));
+    }
+  }, [quote?.data, stock.instrumentKey]);
+
+  const computed52W = useMemo(() => {
+    if (!history1Y?.data?.length) return null;
+    const highs = history1Y.data.map(p => p.high as number).filter(h => h !== null);
+    const lows = history1Y.data.map(p => p.low as number).filter(l => l !== null);
+    if (!highs.length || !lows.length) return null;
+    return { high: Math.max(...highs), low: Math.min(...lows) };
+  }, [history1Y]);
+
+  const display52WHigh = quote?.data?.fiftyTwoWeekHigh ?? computed52W?.high ?? null;
+  const display52WLow = quote?.data?.fiftyTwoWeekLow ?? computed52W?.low ?? null;
+
+  useEffect(() => {
+    setHistory(null);
+    fetch(`/api/stocks/history?instrumentKey=${encodeURIComponent(stock.instrumentKey)}&range=${range}`)
+      .then(async response => setHistory(await response.json()))
+      .catch(() => setHistory(unavailable("Historical data temporarily unavailable.")));
+  }, [range, stock.instrumentKey]);
+
   const points = useMemo(() => history?.data?.filter(point => point.close !== null) ?? [], [history]);
+  const isIntraday = ["1m", "5m", "15m", "1h", "1D"].includes(range);
 
   return <main className={styles.page}>
-    <header><span>{stock.symbol} • {stock.exchange}</span><h1>{stock.companyName}</h1>{quote?.data ? <><div className={styles.price}>{formatCurrency(quote.data.price, "N/A")}</div><div className={(quote.data.change ?? 0) >= 0 ? styles.up : styles.down}>{formatCurrency(quote.data.change, "N/A")} · {formatPercent(quote.data.changePercent, "N/A")}</div><small>{quote.metadata.availability.toUpperCase()} · {quote.metadata.asOf ? new Date(quote.metadata.asOf).toLocaleString("en-IN") : "Timestamp unavailable"}</small></> : quote ? <p className={styles.notice}>{quote.error?.message ?? "Market data temporarily unavailable."}</p> : <p>Loading market quote…</p>}</header>
-    <section className={styles.card}><div className={styles.range}>{ranges.map(item => <button key={item} className={item === range ? styles.selected : ""} onClick={() => setRange(item)}>{item}</button>)}</div>{!history ? <p>Loading price history…</p> : points.length ? <PriceChart points={points} /> : <p className={styles.notice}>{history.error?.message ?? "No historical data available."}</p>}</section>
-    <section className={styles.grid}>{[["Open", quote?.data?.open], ["Previous Close", quote?.data?.previousClose], ["Day High", quote?.data?.high], ["Day Low", quote?.data?.low], ["52 Week High", quote?.data?.fiftyTwoWeekHigh], ["52 Week Low", quote?.data?.fiftyTwoWeekLow], ["Volume", quote?.data?.volume]].map(([label, value]) => <div key={String(label)}><span>{label}</span><strong>{label === "Volume" ? formatNumber(value as number | null, "N/A") : formatCurrency(value as number | null, "N/A")}</strong></div>)}</section>
-    <section className={styles.card}><h2>Company fundamentals</h2>{fundamentals?.data ? <div className={styles.grid}>{[["P/E", fundamentals.data.pe], ["P/B", fundamentals.data.pb], ["ROE", fundamentals.data.roe], ["ROCE", fundamentals.data.roce], ["ROA", fundamentals.data.roa], ["EV/EBITDA", fundamentals.data.evEbitda]].map(([label, value]) => <div key={String(label)}><span>{label}</span><strong>{formatNumber(value as number | null, "N/A")}</strong></div>)}</div> : fundamentals ? <p className={styles.notice}>{fundamentals.error?.message ?? "Fundamentals unavailable."}</p> : <p>Loading fundamentals…</p>}</section>
-    <section className={styles.card}><h2>Shareholding</h2>{shareholding?.data ? <div className={styles.grid}>{[["Promoters", shareholding.data.promoterHolding], ["FII", shareholding.data.fiiHolding], ["DII", shareholding.data.diiHolding], ["Mutual funds", shareholding.data.mutualFundHolding], ["Public / other", shareholding.data.publicHolding]].map(([label, value]) => <div key={String(label)}><span>{label}</span><strong>{formatPercent(value as number | null, "N/A")}</strong></div>)}</div> : shareholding ? <p className={styles.notice}>{shareholding.error?.message ?? "Shareholding unavailable."}</p> : <p>Loading shareholding…</p>}</section>
-    <section className={styles.card}><h2>Corporate actions</h2>{actions?.data?.length ? <div className={styles.actionList}>{actions.data.slice(0, 8).map((action, index) => <article key={`${action.type}-${action.recordDate}-${index}`}><strong>{action.type.toUpperCase()}</strong><span>{action.description}</span><small>Ex-date {action.exDate ?? "N/A"} · Record date {action.recordDate ?? "N/A"}</small></article>)}</div> : actions ? <p>{actions.error?.message ?? "No corporate actions returned."}</p> : <p>Loading corporate actions…</p>}</section>
+
+    {/* HEADER */}
+    <header className={styles.brokerHeader}>
+      <div className={styles.headerTitle}>
+        <h1>{stock.companyName}</h1>
+        <span className={styles.exchangeBadge}>{stock.symbol} • {stock.exchange}</span>
+      </div>
+      {quote?.data ? (
+        <div className={styles.headerPriceData}>
+          <div className={styles.priceRow}>
+            <span className={styles.price}>{formatCurrency(quote.data.price, "N/A")}</span>
+            {quote.data.change !== null ? (
+              <span className={quote.data.change >= 0 ? styles.up : styles.down}>
+                {quote.data.change > 0 ? "+" : ""}{formatCurrency(quote.data.change, "N/A")} ({formatPercent(quote.data.changePercent, "N/A")})
+              </span>
+            ) : (
+              <span className={styles.notice}>Change N/A</span>
+            )}
+          </div>
+          <small className={styles.timestamp}>
+            {quote.metadata.availability === "live" ? <span className={styles.liveIndicator}></span> : null}
+            {quote.metadata.availability.toUpperCase()} MARKET · {quote.metadata.asOf ? new Date(quote.metadata.asOf).toLocaleString("en-IN") : "Timestamp unavailable"}
+          </small>
+        </div>
+      ) : quote ? (
+        <p className={styles.notice}>{quote.error?.message ?? "Market data temporarily unavailable."}</p>
+      ) : (
+        <div className={styles.headerPriceData}><p>Loading market quote…</p></div>
+      )}
+    </header>
+
+    <div className={styles.brokerLayout}>
+      {/* MAIN CHART AREA */}
+      <div className={styles.mainContent}>
+        <section className={styles.chartCard}>
+          <div className={styles.chartControls}>
+            <div className={styles.range}>
+              {ranges.map(item => (
+                <button key={item} className={item === range ? styles.selected : ""} onClick={() => setRange(item)}>
+                  {item}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className={styles.chartArea}>
+            {!history ? (
+              <div className={styles.chartLoading}>Loading price history…</div>
+            ) : points.length ? (
+              <InteractiveChart points={points} isIntraday={isIntraday} />
+            ) : (
+              <p className={styles.notice}>{history.error?.message ?? "No historical data available for this range."}</p>
+            )}
+          </div>
+        </section>
+      </div>
+
+      {/* SIDEBAR FOR STATS */}
+      <aside className={styles.sidebar}>
+
+        {/* QUICK STATS */}
+        <section className={styles.statsCard}>
+          <h2>Market Statistics</h2>
+          <div className={styles.brokerGrid}>
+            {[
+              ["Open", quote?.data?.open, "currency"],
+              ["Previous Close", quote?.data?.previousClose, "currency"],
+              ["Day High", quote?.data?.high, "currency"],
+              ["Day Low", quote?.data?.low, "currency"],
+              ["52W High", display52WHigh, "currency"],
+              ["52W Low", display52WLow, "currency"],
+              ["Volume", quote?.data?.volume, "number"]
+            ].map(([label, value, type]) => (
+              <div key={String(label)} className={styles.gridItem}>
+                <span className={styles.gridLabel}>{label}</span>
+                <strong className={styles.gridValue}>
+                  {type === "number" ? formatNumber(value as number | null, "N/A") : formatCurrency(value as number | null, "N/A")}
+                </strong>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* FUNDAMENTALS */}
+        <section className={styles.statsCard}>
+          <h2>Fundamentals</h2>
+          {fundamentals?.data ? (
+            <div className={styles.brokerGrid}>
+              {[
+                ["P/E Ratio", fundamentals.data.pe],
+                ["P/B Ratio", fundamentals.data.pb],
+                ["ROE", fundamentals.data.roe],
+                ["ROCE", fundamentals.data.roce],
+                ["ROA", fundamentals.data.roa],
+                ["EV/EBITDA", fundamentals.data.evEbitda]
+              ].map(([label, value]) => (
+                <div key={String(label)} className={styles.gridItem}>
+                  <span className={styles.gridLabel}>{label}</span>
+                  <strong className={styles.gridValue}>{formatNumber(value as number | null, "N/A")}</strong>
+                </div>
+              ))}
+            </div>
+          ) : fundamentals ? (
+            <p className={styles.notice}>{fundamentals.error?.message ?? "Fundamentals unavailable."}</p>
+          ) : (
+            <p className={styles.loading}>Loading fundamentals…</p>
+          )}
+        </section>
+
+        {/* SHAREHOLDING */}
+        <section className={styles.statsCard}>
+          <h2>Shareholding</h2>
+          {shareholding?.data ? (
+            <div className={styles.brokerGrid}>
+              {[
+                ["Promoters", shareholding.data.promoterHolding],
+                ["FII", shareholding.data.fiiHolding],
+                ["DII", shareholding.data.diiHolding],
+                ["Mutual Funds", shareholding.data.mutualFundHolding],
+                ["Public", shareholding.data.publicHolding]
+              ].map(([label, value]) => (
+                <div key={String(label)} className={styles.gridItem}>
+                  <span className={styles.gridLabel}>{label}</span>
+                  <strong className={styles.gridValue}>{formatPercent(value as number | null, "N/A")}</strong>
+                </div>
+              ))}
+            </div>
+          ) : shareholding ? (
+            <p className={styles.notice}>{shareholding.error?.message ?? "Shareholding unavailable."}</p>
+          ) : (
+            <p className={styles.loading}>Loading shareholding…</p>
+          )}
+        </section>
+
+        {/* CORPORATE ACTIONS */}
+        <section className={styles.statsCard}>
+          <h2>Corporate Actions</h2>
+          {actions?.data?.length ? (
+            <div className={styles.actionList}>
+              {actions.data.slice(0, 5).map((action, index) => (
+                <article key={`${action.type}-${action.recordDate}-${index}`} className={styles.actionItem}>
+                  <strong>{action.type.toUpperCase()}</strong>
+                  <span>{action.description}</span>
+                  <small>Ex-date: {action.exDate ?? "N/A"} · Record: {action.recordDate ?? "N/A"}</small>
+                </article>
+              ))}
+            </div>
+          ) : actions ? (
+            <p className={styles.notice}>{actions.error?.message ?? "No corporate actions returned."}</p>
+          ) : (
+            <p className={styles.loading}>Loading corporate actions…</p>
+          )}
+        </section>
+      </aside>
+    </div>
   </main>;
 }
-
-function PriceChart({ points }: { points: HistoricalPrice[] }) { const values = points.map(point => point.close as number); const min = Math.min(...values); const max = Math.max(...values); const span = max - min || 1; const path = values.map((value, index) => `${index ? "L" : "M"}${(index / (values.length - 1 || 1)) * 100},${100 - ((value - min) / span) * 90}`).join(" "); return <svg className={styles.chart} viewBox="0 0 100 105" preserveAspectRatio="none" role="img" aria-label="Historical closing price chart"><path d={path} fill="none" stroke="currentColor" strokeWidth="1.5" vectorEffect="non-scaling-stroke" /></svg>; }

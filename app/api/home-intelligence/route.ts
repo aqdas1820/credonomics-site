@@ -4,9 +4,7 @@ import {
 } from 'node:fs'
 import path from 'node:path'
 import { NextResponse } from 'next/server'
-import {
-  ipoDashboardRecords,
-} from '../../data/ipo-dashboard.generated'
+import { getPublicIpos } from '../../data/ipo-public'
 import { readPublicJson } from '../../../src/services/server/public-json'
 
 export const runtime = 'nodejs'
@@ -409,10 +407,10 @@ function boardOf(board: unknown): string {
 export async function GET() {
   // Use the exact same generated records consumed by /ipo.
   // This prevents homepage counts from diverging from the IPO dashboard.
-  const issues = ipoDashboardRecords
+  const issues = getPublicIpos()
 
   const open = issues.filter(
-    (issue) => statusOf(issue.status) === 'open',
+    (issue) => ['open', 'closing_today'].includes(statusOf(issue.status)),
   ).length
 
   const upcoming = issues.filter(
@@ -421,27 +419,23 @@ export async function GET() {
 
   const filed = issues.filter((issue) =>
     [
-      'research',
-      'filed',
-      'filed / research',
+      'draft',
     ].includes(statusOf(issue.status)),
   ).length
 
   const market = issues.filter(
     (issue) =>
       ![
-        'research',
-        'filed',
-        'filed / research',
+        'draft',
       ].includes(statusOf(issue.status)),
   ).length
 
   const mainboard = issues.filter(
-    (issue) => boardOf(issue.board) === 'mainboard',
+    (issue) => boardOf(issue.marketSegment) === 'mainboard',
   ).length
 
   const sme = issues.filter(
-    (issue) => boardOf(issue.board) === 'sme',
+    (issue) => boardOf(issue.marketSegment) === 'sme',
   ).length
 
   const [

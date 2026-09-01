@@ -1,5 +1,5 @@
 import SiteFrame from '../../components/SiteFrame'
-import { publicIpos } from '../../data/ipo-public'
+import { getPublicIpos } from '../../data/ipo-public'
 import styles from '../../core-v4.module.css'
 import local from '../ipo.module.css'
 import IpoExplorer from '../components/IpoExplorer'
@@ -10,9 +10,10 @@ export const metadata = {
   description: 'Browse mainboard ipos using the CredoNomics exchange market master and normalized IPO research database.',
   alternates: { canonical: '/ipo/mainboard' },
 }
+export const dynamic = 'force-dynamic'
 
 export default function Page() {
-  const records = publicIpos
+  const records = getPublicIpos()
     .filter((ipo) => ipo.marketSegment === 'mainboard')
     .sort((a, b) => String(a.issue.openDate || a.issue.listingDate || '').localeCompare(String(b.issue.openDate || b.issue.listingDate || '')))
 

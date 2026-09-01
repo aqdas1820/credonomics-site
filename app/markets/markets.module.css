@@ -1,14 +1,18 @@
 .page{width:min(1180px,calc(100% - 40px));margin:auto;padding:64px 0 96px;color:var(--ink)}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:end;padding:28px 0 48px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:end;padding:0 0 24px}
 .eyebrow,.sectionHead span,.pulse span,.grid article>span{display:flex;align-items:center;gap:8px;color:var(--teal);font-size:11px;font-weight:850;letter-spacing:.11em;text-transform:uppercase}
-.hero h1{max-width:720px;margin:18px 0;font-size:clamp(42px,5.5vw,72px);line-height:1;letter-spacing:-.055em}
+.hero h1{max-width:720px;margin:18px 0;font-size:clamp(32px,4.5vw,56px);line-height:1;letter-spacing:-.045em}
 .hero p,.pulse p,.grid p{color:var(--muted);line-height:1.65}
 .search{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:10px 10px 10px 16px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
 .search input{min-height:46px;border:0;outline:0;color:var(--ink);background:transparent;font-size:15px}
 .search button{min-height:42px;padding:0 18px;border:0;border-radius:10px;color:#04130c;background:var(--teal);font-weight:850;cursor:pointer}
 .pulse{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px;border-radius:20px;background:linear-gradient(135deg,var(--surface),color-mix(in srgb,var(--teal) 7%,var(--surface)))}
 .pulse h2{margin:8px 0 4px;font-size:26px}.pulse p{margin:0}.pulse>svg{color:var(--teal)}
-.overview{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}.overview>p{grid-column:1/-1;padding:28px;border-radius:20px;color:var(--muted);background:var(--surface)}.overview article{display:flex;min-height:170px;flex-direction:column;padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}.overview article>span{color:var(--teal);font-size:11px;font-weight:850;letter-spacing:.08em}.overview article>strong{margin:14px 0 5px;font-size:25px}.overview article>em{font-style:normal;font-weight:800}.overview article>small{margin-top:10px;color:var(--muted);line-height:1.4}.positive{color:#087f61}.negative{color:#c84b56}
+.overviewWrapper { margin-bottom: 32px; }
+.marketStatus { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font-size: 13px; font-weight: 700; color: var(--muted); }
+.statusOpen { width: 8px; height: 8px; background: #087f61; border-radius: 50%; box-shadow: 0 0 0 4px rgba(8,127,97,0.2); }
+.statusClosed { width: 8px; height: 8px; background: #c84b56; border-radius: 50%; }
+.overview{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}.overview>p{grid-column:1/-1;padding:28px;border-radius:20px;color:var(--muted);background:var(--surface)}.overview article{display:flex;min-height:170px;flex-direction:column;padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}.overview article>span{color:var(--teal);font-size:11px;font-weight:850;letter-spacing:.08em}.overview article>strong{margin:14px 0 5px;font-size:25px}.overview article>em{font-style:normal;font-weight:800}.overview article>small{margin-top:10px;color:var(--muted);line-height:1.4}.positive{color:#087f61}.negative{color:#c84b56}.neutral{color:var(--muted)}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:16px 0 64px}.grid article{padding:24px;border-radius:18px;background:var(--surface)}.grid article>svg{float:right;color:var(--teal)}.grid strong{display:block;margin:14px 0 4px;font-size:22px}.grid p{margin:0}
 .sectionHead{display:flex;align-items:end;justify-content:space-between;gap:24px}.sectionHead h2{margin:7px 0 0;font-size:32px}.sectionHead a{display:flex;align-items:center;gap:7px;color:var(--teal);font-weight:800}
 .rows{margin-top:20px;border-radius:18px;overflow:hidden;background:var(--surface)}.rows>a{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border-bottom:1px solid var(--line)}.rows>a:last-child{border:0}.rows strong,.rows span{display:block}.rows span{margin-top:5px;color:var(--muted);font-size:12px}

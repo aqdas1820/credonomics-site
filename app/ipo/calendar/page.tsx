@@ -1,6 +1,6 @@
 import { CalendarDays, Database } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
-import { publicIpos } from '../../data/ipo-public'
+import { getPublicIpos } from '../../data/ipo-public'
 import styles from '../../core-v4.module.css'
 import local from '../ipo.module.css'
 import IpoSubnav from '../components/IpoSubnav'
@@ -10,9 +10,10 @@ export const metadata = {
   description: 'IPO opening, closing, allotment and listing calendar from normalized CredoNomics IPO records.',
   alternates: { canonical: '/ipo/calendar' },
 }
+export const dynamic = 'force-dynamic'
 
 export default function IpoCalendarPage() {
-  const records = publicIpos
+  const records = getPublicIpos()
     .filter((ipo) => ipo.issue.openDate || ipo.issue.closeDate || ipo.issue.allotmentDate || ipo.issue.listingDate)
     .sort((a, b) => String(a.issue.openDate || a.issue.listingDate || '').localeCompare(String(b.issue.openDate || b.issue.listingDate || '')))
 

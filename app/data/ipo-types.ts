@@ -11,6 +11,7 @@ export type IpoLifecycleStatus =
   | 'draft'
   | 'upcoming'
   | 'open'
+  | 'closing_today'
   | 'closed'
   | 'listed'
   | 'withdrawn'
@@ -65,6 +66,7 @@ export type IpoIssueStructure = {
   postIssuePromoterHoldingPercent?: number
   openDate?: string
   closeDate?: string
+  biddingEndAt?: string
   allotmentDate?: string
   listingDate?: string
   exchange?: string[]
@@ -213,6 +215,9 @@ export type PublicIpoRecord = {
   riskFlags?: string[]
   sources: IpoSource[]
   lastUpdated: string
+  providerUpdatedAt: string
+  normalizedAt: string
+  provider: string
   researchState: PublicIpoResearchState
   sharesOffered?: number
   sharesBid?: number
