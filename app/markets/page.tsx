@@ -4,6 +4,7 @@ import { ArrowRight, BarChart3, Database, Search } from 'lucide-react'
 import SiteFrame from '../components/SiteFrame'
 import styles from './markets.module.css'
 import MarketOverview from './MarketOverview'
+import MarketPulse from './MarketPulse'
 
 export const metadata: Metadata = {
   title: 'Indian Markets & Stock Search',
@@ -36,6 +37,8 @@ export default function MarketsPage() {
         </section>
 
         <MarketOverview />
+
+        <MarketPulse />
 
         <section className={styles.grid} aria-label="Market data availability">
           <article><Database size={19} /><span>Security master</span><strong>Verified instruments</strong><p>Identity records power search and canonical stock routes.</p></article>
