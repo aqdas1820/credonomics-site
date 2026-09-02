@@ -485,6 +485,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 60
   },
   {
+    "id": "route:/alerts",
+    "title": "Price Alerts",
+    "description": "Manage personal equity price and market-move alerts.",
+    "href": "/alerts",
+    "category": "Platform",
+    "source": "CredoNomics",
+    "updated": "",
+    "keywords": "alerts Price Alerts Platform",
+    "priority": 60
+  },
+  {
     "id": "route:/privacy",
     "title": "Privacy",
     "description": "CredoNomics privacy information and safe-use guidance.",
@@ -515,6 +526,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "CredoNomics",
     "updated": "",
     "keywords": "terms Terms of Use Platform",
+    "priority": 60
+  },
+  {
+    "id": "route:/watchlist",
+    "title": "Watchlist",
+    "description": "Track Indian equities with verified market quotes and personal alerts.",
+    "href": "/watchlist",
+    "category": "Platform",
+    "source": "CredoNomics",
+    "updated": "",
+    "keywords": "watchlist Watchlist Platform",
     "priority": 60
   }
 ]

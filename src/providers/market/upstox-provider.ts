@@ -6,7 +6,7 @@ import { marketQuoteSchema } from "../../schemas/equity";
 import { searchInstrumentMaster } from "../../services/market-data/instrument-master";
 import type { MarketDataProvider, ProviderResult } from "./types";
 import { getIndianMarketSession, getIstDate, shiftIsoDate } from "../../domain/market/session";
-import { calculateQuoteChange, resolvePreviousClose } from "../../domain/market/quote";
+import { calculateQuoteChange, resolvePreviousClose, resolveProviderQuote } from "../../domain/market/quote";
 import { derive52WeekStats } from "../../domain/market/range";
 
 function metadata(asOf: string | null, availability: FinancialDataMetadata["availability"]): FinancialDataMetadata {
@@ -86,8 +86,18 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
   }
 
   async getQuotes(keys: string[]): Promise<ProviderResult<MarketQuote[]>> {
-    const results = await Promise.all(keys.map(key => this.getQuote(key)));
-    return { data: results.flatMap(result => result.data ? [result.data] : []), metadata: metadata(new Date().toISOString(), results.some(result => result.data) ? "delayed" : "unavailable"), error: results.every(result => !result.data) ? results[0]?.error : undefined };
+    if (!hasUpstoxAnalyticsToken()) return failure("AUTH_REQUIRED", "Market data authentication is not configured.");
+    const uniqueKeys = [...new Set(keys)];
+    try {
+      const raw = await upstoxGet<{ data?: Record<string, Record<string, unknown>> }>("/v2/market-quote/quotes", { query: { instrument_key: uniqueKeys.join(",") }, ttlMs: 15_000, diagnostics: { category: "batch-quotes", instrumentKey: `${uniqueKeys.length} instruments`, recordCount: value => Object.keys((value as { data?: object }).data ?? {}).length } });
+      const data = uniqueKeys.flatMap(key => {
+        const instrument = identityFor(key); const item = resolveProviderQuote(raw.data, key); if (!instrument || !item) return [];
+        const ohlc = item.ohlc as Record<string, unknown> | undefined; const price = numberOrNull(item.last_price); const previousClose = resolvePreviousClose(price, numberOrNull(item.net_change), numberOrNull(ohlc?.close)); const timestamp = dateOrNull(item.timestamp ?? item.last_trade_time); const availability = timestamp && Date.now() - Date.parse(timestamp) < 120_000 ? "live" : "delayed"; const { change, changePercent } = calculateQuoteChange(price, previousClose);
+        const parsed = marketQuoteSchema.safeParse({ ...instrument, price, previousClose, change, changePercent, open: numberOrNull(ohlc?.open), high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), volume: numberOrNull(item.volume), fiftyTwoWeekHigh: numberOrNull(item.ohlc_52_week_high), fiftyTwoWeekLow: numberOrNull(item.ohlc_52_week_low), timestamp, ...metadata(timestamp, availability) });
+        return parsed.success ? [parsed.data] : [];
+      });
+      return { data, metadata: metadata(data.find(item => item.timestamp)?.timestamp ?? null, data.length ? "delayed" : "unavailable"), error: data.length ? undefined : { code: "INVALID_RESPONSE", message: "Market data temporarily unavailable.", retryable: true } };
+    } catch (error) { return mapError(error); }
   }
 
   async getHistoricalPrices(key: string, range: HistoricalRange): Promise<ProviderResult<HistoricalPrice[]>> {

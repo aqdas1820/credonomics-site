@@ -5,6 +5,7 @@ import type { CompanyFundamentals, CorporateAction, HistoricalPrice, HistoricalR
 import { formatINR as formatCurrency, formatIndianNumber as formatNumber, formatPercent } from "../../../../src/lib/financial-format";
 import { getIndianMarketSession, marketSessionLabel } from "../../../../src/domain/market/session";
 import styles from "./stock-detail.module.css";
+import StockTrackerActions from "../../../components/StockTrackerActions";
 
 const InteractiveChart = dynamic(() => import("./InteractiveChart"), { ssr: false, loading: () => <p>Loading interactive chart...</p> });
 
@@ -98,6 +99,7 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
         <div className={styles.headerPriceData}><p>Loading market quote…</p></div>
       )}
     </header>
+    <StockTrackerActions stock={{ instrumentKey: stock.instrumentKey, symbol: stock.symbol, exchange: stock.exchange, companyName: stock.companyName }} />
 
     <div className={styles.brokerLayout}>
       {/* MAIN CHART AREA */}

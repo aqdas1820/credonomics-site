@@ -6,6 +6,8 @@ const investmentLinks = [
   { label: 'IPO Intelligence', href: '/ipo' },
   { label: 'Mutual Fund Intelligence', href: '/mutual-funds' },
   { label: 'Financial Tools', href: '/tools' },
+  { label: 'Watchlist', href: '/watchlist' },
+  { label: 'Alerts', href: '/alerts' },
 ]
 
 const cardLinks = [

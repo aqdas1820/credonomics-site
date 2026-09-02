@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { BarChart3, Home, Menu, Search, Wrench, X } from 'lucide-react'
+import { BarChart3, Bell, Eye, Home, Menu, Wrench, X } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import styles from '../core-v4.module.css'
@@ -20,7 +20,7 @@ const primaryNav = [
 const mobileNav = [
   { href: '/', label: 'Home', icon: Home },
   { href: '/markets', label: 'Markets', icon: BarChart3 },
-  { href: '/search', label: 'Search', icon: Search },
+  { href: '/watchlist', label: 'Watchlist', icon: Eye },
   { href: '/research', label: 'Research', icon: BarChart3 },
   { href: '/tools', label: 'Tools', icon: Wrench },
 ]
@@ -91,6 +91,7 @@ export default function SiteHeader() {
           </nav>
 
           <div className={styles.globalHeaderActions}>
+            <Link href="/alerts" aria-label="Alerts"><Bell size={18}/></Link>
             <SiteSearch />
             <ThemeModeToggle compact />
 

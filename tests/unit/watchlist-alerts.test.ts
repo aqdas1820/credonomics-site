@@ -1,0 +1,7 @@
+import { describe, expect, it } from 'vitest'
+import { alertMatches } from '../../src/domain/watchlist/alerts'
+import type { MarketQuote } from '../../src/domain/equity/types'
+import type { PriceAlert } from '../../src/domain/watchlist/types'
+const quote={instrumentKey:'NSE_EQ|INE002A01018',symbol:'RELIANCE',exchange:'NSE',companyName:'Reliance',price:1400,change:40,changePercent:3,previousClose:1360,open:1370,high:1410,low:1360,volume:1,fiftyTwoWeekHigh:1400,fiftyTwoWeekLow:1000,timestamp:null,source:'test',asOf:null,generatedAt:'x',quality:'verified',availability:'recent'} as MarketQuote
+const alert=(type:PriceAlert['type'],threshold:number|null,status:PriceAlert['status']='active')=>({id:'a',ownerId:'u',instrumentKey:quote.instrumentKey,symbol:quote.symbol,exchange:'NSE',companyName:'Reliance',type,threshold,status,createdAt:'x',triggeredAt:null})as PriceAlert
+describe('watchlist alert evaluation',()=>{it('evaluates supported conditions',()=>{expect(alertMatches(alert('price_above',1399),quote)).toBe(true);expect(alertMatches(alert('percent_rise',3),quote)).toBe(true);expect(alertMatches(alert('52_week_high',null),quote)).toBe(true);expect(alertMatches(alert('price_below',1200),quote)).toBe(false)});it('does not repeat paused or triggered alerts',()=>{expect(alertMatches(alert('price_above',1000,'triggered'),quote)).toBe(false);expect(alertMatches(alert('price_above',1000,'paused'),quote)).toBe(false)});it('does not claim unsupported volume reliability',()=>expect(alertMatches(alert('volume_spike',2),quote)).toBe(false))})
