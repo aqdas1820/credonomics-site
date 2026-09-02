@@ -7,6 +7,7 @@ import { searchInstrumentMaster } from "../../services/market-data/instrument-ma
 import type { MarketDataProvider, ProviderResult } from "./types";
 import { getIndianMarketSession, getIstDate, shiftIsoDate } from "../../domain/market/session";
 import { calculateQuoteChange, resolvePreviousClose } from "../../domain/market/quote";
+import { derive52WeekStats } from "../../domain/market/range";
 
 function metadata(asOf: string | null, availability: FinancialDataMetadata["availability"]): FinancialDataMetadata {
   return { source: "Upstox API", asOf, generatedAt: new Date().toISOString(), quality: availability === "unavailable" ? "unknown" : "verified", availability };
@@ -36,6 +37,19 @@ export function transformCandles(raw: unknown): HistoricalPrice[] {
   return raw.flatMap(candle => Array.isArray(candle) && candle.length >= 6 && typeof candle[0] === "string" && candle.slice(1, 6).every(Number.isFinite) ? [{ date: candle[0], open: candle[1] as number, high: candle[2] as number, low: candle[3] as number, close: candle[4] as number, volume: candle[5] as number }] : []);
 }
 
+async function get52WeekStats(key: string) {
+  const to = new Date();
+  const from = new Date(to.getTime() - 370 * 86_400_000);
+  const format = (date: Date) => date.toISOString().slice(0, 10);
+  const countCandles = (value: unknown) => Array.isArray((value as { data?: { candles?: unknown[] } }).data?.candles) ? (value as { data: { candles: unknown[] } }).data.candles.length : 0;
+  const raw = await upstoxGet<{ data?: { candles?: unknown } }>(`/v3/historical-candle/${encodeURIComponent(key)}/days/1/${format(to)}/${format(from)}`, {
+    ttlMs: 21_600_000,
+    cacheWhen: value => countCandles(value) >= 200,
+    diagnostics: { category: "52-week-daily-candles", instrumentKey: key, recordCount: countCandles },
+  });
+  return derive52WeekStats(transformCandles(raw.data?.candles));
+}
+
 export class UpstoxMarketDataProvider implements MarketDataProvider {
   readonly id = "upstox";
   async searchStocks(query: string) { return { data: searchInstrumentMaster(query), metadata: metadata(new Date().toISOString(), "recent") }; }
@@ -53,8 +67,19 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
       const timestamp = dateOrNull(item.timestamp ?? item.last_trade_time);
       const availability = timestamp && Date.now() - Date.parse(timestamp) < 120_000 ? "live" : "delayed";
       const { change, changePercent } = calculateQuoteChange(price, previousClose);
+      let fiftyTwoWeekHigh = numberOrNull(item.ohlc_52_week_high);
+      let fiftyTwoWeekLow = numberOrNull(item.ohlc_52_week_low);
+      if (fiftyTwoWeekHigh === null || fiftyTwoWeekLow === null) {
+        try {
+          const derived = await get52WeekStats(key);
+          fiftyTwoWeekHigh ??= derived.high;
+          fiftyTwoWeekLow ??= derived.low;
+        } catch (error) {
+          console.warn("Market data request failed", { category: "52-week-daily-candles", instrumentKey: key, providerCode: error instanceof UpstoxApiError ? error.providerCode : "PROVIDER_ERROR" });
+        }
+      }
 
-      const quote = { ...instrument, price, previousClose, change, changePercent, open: numberOrNull(ohlc?.open), high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), volume: numberOrNull(item.volume), fiftyTwoWeekHigh: numberOrNull(item.ohlc_52_week_high), fiftyTwoWeekLow: numberOrNull(item.ohlc_52_week_low), timestamp, ...metadata(timestamp, availability) };
+      const quote = { ...instrument, price, previousClose, change, changePercent, open: numberOrNull(ohlc?.open), high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), volume: numberOrNull(item.volume), fiftyTwoWeekHigh, fiftyTwoWeekLow, timestamp, ...metadata(timestamp, availability) };
       const parsed = marketQuoteSchema.safeParse(quote);
       return parsed.success ? { data: parsed.data, metadata: metadata(timestamp, availability) } : failure("INVALID_RESPONSE", "Market data temporarily unavailable.");
     } catch (error) { return mapError(error); }

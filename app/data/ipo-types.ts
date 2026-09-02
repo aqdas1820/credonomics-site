@@ -194,6 +194,8 @@ export type IpoMarketRecord = {
 export type PublicIpoResearchState = 'exchange-live' | 'normalized'
 
 export type PublicIpoRecord = {
+  exchangeId?: string
+  isin?: string
   slug: string
   companyName: string
   symbol?: string

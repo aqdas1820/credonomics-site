@@ -6,6 +6,7 @@ import type {
 } from './ipo-types'
 import { verifiedIpos } from './verified-ipos.generated'
 import { getIpoDisplayStatus } from '../../src/domain/ipo/display-status'
+import { deduplicatePublicIpos } from './ipo-dedup'
 
 function normalizeName(value: string) {
   return value
@@ -114,7 +115,7 @@ const verifiedNames = new Set(
 
 export function getPublicIpos(now = new Date()): PublicIpoRecord[] {
   const normalizedAt = now.toISOString()
-  return [
+  return deduplicatePublicIpos([
   ...verifiedIpos.map((record) =>
     mergeMarketIntoVerified(
       verifiedToPublic(record, normalizedAt),
@@ -124,7 +125,7 @@ export function getPublicIpos(now = new Date()): PublicIpoRecord[] {
   ...ipoMarketMaster
     .filter((record) => !verifiedNames.has(normalizeName(record.companyName)))
     .map((record) => marketToPublic(record, normalizedAt)),
-].sort((a, b) => {
+]).sort((a, b) => {
   const statusOrder = { closing_today: 0, open: 1, upcoming: 2, closed: 3, listed: 4, draft: 5, unknown: 6, withdrawn: 7 }
   const aStatus = statusOrder[a.status] ?? 9
   const bStatus = statusOrder[b.status] ?? 9

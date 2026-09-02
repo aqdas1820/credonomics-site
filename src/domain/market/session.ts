@@ -44,3 +44,12 @@ export function marketSessionLabel(session: IndianMarketSession) {
   if (session === "PRE_OPEN") return "PRE-OPEN";
   return "MARKET CLOSED";
 }
+
+export function marketOverviewCacheControl(session: IndianMarketSession, stale = false) {
+  if (session === "OPEN" || session === "PRE_OPEN") return stale
+    ? "public, max-age=0, s-maxage=15, stale-while-revalidate=60"
+    : "public, max-age=0, s-maxage=20, stale-while-revalidate=30";
+  return stale
+    ? "public, max-age=0, s-maxage=300, stale-while-revalidate=900"
+    : "public, max-age=0, s-maxage=600, stale-while-revalidate=900";
+}

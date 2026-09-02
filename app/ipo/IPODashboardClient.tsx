@@ -6,12 +6,14 @@ import type { PublicIpoRecord } from '../data/ipo-types'
 import { ipoStatusLabel } from '../../src/domain/ipo/display-status'
 import { formatIpoDate, formatShortIpoDate, formatSubscription } from './lib/format'
 import styles from './ipo-dashboard.module.css'
+import { deduplicatePublicIpos } from '../data/ipo-dedup'
 
 type View = 'open' | 'upcoming' | 'closed' | 'listed'
 type Segment = 'all' | 'mainboard' | 'sme'
 
 type ApiIpo = {
   id: string
+  isin?: string | null
   symbol: string | null
   company: string | null
   issueType: string
@@ -71,6 +73,8 @@ export default function IPODashboardClient({ records, initialView = 'open' }: { 
         setLiveRecords(payload.data.filter((item) => item.company).map((item) => {
           const existing = staticByName.get(normalizeName(item.company!))
           return {
+            exchangeId: item.id,
+            isin: item.isin ?? undefined,
             slug: existing?.slug ?? `live:${item.id}`,
             companyName: item.company!,
             symbol: item.symbol ?? undefined,
@@ -106,8 +110,7 @@ export default function IPODashboardClient({ records, initialView = 'open' }: { 
 
   const displayRecords = useMemo(() => {
     if (!liveRecords.length) return records
-    const liveNames = new Set(liveRecords.map((record) => normalizeName(record.companyName)))
-    return [...liveRecords, ...records.filter((record) => !liveNames.has(normalizeName(record.companyName)))]
+    return deduplicatePublicIpos([...liveRecords, ...records], false)
   }, [liveRecords, records])
 
   const stats = useMemo(() => ({
@@ -267,7 +270,7 @@ export default function IPODashboardClient({ records, initialView = 'open' }: { 
 
         <footer className={styles.freshness}>
           <span>Market data</span>
-          <span>Last updated {displayRecords[0]?.providerUpdatedAt ? new Date(displayRecords[0].providerUpdatedAt).toLocaleString('en-IN') : '—'}</span>
+          <span>Last updated {displayRecords[0]?.providerUpdatedAt ? new Intl.DateTimeFormat('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'short', timeStyle: 'medium' }).format(new Date(displayRecords[0].providerUpdatedAt)) : '—'}</span>
         </footer>
       </section>
     </main>

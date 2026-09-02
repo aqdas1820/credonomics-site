@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { calculateQuoteChange, resolvePreviousClose, resolveProviderQuote } from "../../../../src/domain/market/quote";
-import { getIndianMarketSession } from "../../../../src/domain/market/session";
+import { getIndianMarketSession, marketOverviewCacheControl } from "../../../../src/domain/market/session";
 import { upstoxGet, UpstoxApiError } from "../../../../src/lib/upstox/client";
 
 const instruments = [
@@ -28,6 +28,7 @@ export const dynamic = "force-dynamic";
 
 export async function GET() {
   const instrumentKeys = instruments.map(item => item.instrumentKey);
+  const session = getIndianMarketSession();
   try {
     const raw = await upstoxGet<{ data?: Record<string, Record<string, unknown>> }>("/v2/market-quote/quotes", {
       query: { instrument_key: instrumentKeys.join(",") },
@@ -44,11 +45,12 @@ export async function GET() {
       if (normalized.price !== null) lastKnown.set(instrument.instrumentKey, normalized);
       return normalized.price !== null ? normalized : lastKnown.get(instrument.instrumentKey) ?? normalized;
     });
-    const availability = getIndianMarketSession() === "OPEN" ? "live" : "recent";
-    return NextResponse.json({ data, metadata: { source: "Exchange market data", availability, asOf: data.find(item => item.timestamp)?.timestamp ?? null } }, { headers: { "Cache-Control": "public, s-maxage=15, stale-while-revalidate=300" } });
+    if (data.some(item => item.price === null)) throw new Error("Incomplete index quote response");
+    const availability = session === "OPEN" ? "live" : "recent";
+    return NextResponse.json({ data, metadata: { source: "Exchange market data", availability, asOf: data.find(item => item.timestamp)?.timestamp ?? null } }, { headers: { "Cache-Control": marketOverviewCacheControl(session) } });
   } catch (error) {
     const fallback = instruments.map(item => lastKnown.get(item.instrumentKey)).filter((item): item is IndexQuote => Boolean(item));
-    if (fallback.length === instruments.length) return NextResponse.json({ data: fallback, metadata: { source: "Exchange market data", availability: "stale", asOf: fallback.find(item => item.timestamp)?.timestamp ?? null } }, { headers: { "Cache-Control": "public, max-age=0, stale-while-revalidate=300" } });
+    if (fallback.length === instruments.length) return NextResponse.json({ data: fallback, metadata: { source: "Exchange market data", availability: "stale", asOf: fallback.find(item => item.timestamp)?.timestamp ?? null } }, { headers: { "Cache-Control": marketOverviewCacheControl(session, true) } });
     const apiError = error instanceof UpstoxApiError ? error : null;
     return NextResponse.json({ data: null, metadata: { source: "Exchange market data", availability: "unavailable", asOf: null }, error: { code: apiError?.providerCode ?? "PROVIDER_ERROR", message: "Market index data is temporarily unavailable." } }, { status: apiError?.status === 429 ? 429 : 503, headers: { "Cache-Control": "no-store" } });
   }
