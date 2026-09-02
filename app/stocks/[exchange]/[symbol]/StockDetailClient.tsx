@@ -3,11 +3,12 @@ import { useEffect, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import type { CompanyFundamentals, CorporateAction, HistoricalPrice, HistoricalRange, IndianEquityIdentity, MarketQuote, Shareholding } from "../../../../src/domain/equity/types";
 import { formatINR as formatCurrency, formatIndianNumber as formatNumber, formatPercent } from "../../../../src/lib/financial-format";
+import { getIndianMarketSession, marketSessionLabel } from "../../../../src/domain/market/session";
 import styles from "./stock-detail.module.css";
 
 const InteractiveChart = dynamic(() => import("./InteractiveChart"), { ssr: false, loading: () => <p>Loading interactive chart...</p> });
 
-type Result<T> = { data: T | null; metadata: { availability: string; asOf: string | null }; error?: { message: string } };
+type Result<T> = { data: T | null; metadata: { availability: string; asOf: string | null; session?: "current" | "previous"; sessionDate?: string }; error?: { message: string } };
 const ranges: HistoricalRange[] = ["1m", "5m", "15m", "1h", "1D", "1W", "1M", "3M", "6M", "1Y", "3Y", "5Y"];
 const unavailable = <T,>(message: string): Result<T> => ({ data: null, metadata: { availability: "unavailable", asOf: null }, error: { message } });
 
@@ -18,6 +19,14 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
   const [shareholding, setShareholding] = useState<Result<Shareholding> | null>(null);
   const [actions, setActions] = useState<Result<CorporateAction[]> | null>(null);
   const [range, setRange] = useState<HistoricalRange>("1D");
+  const [marketSession, setMarketSession] = useState(() => getIndianMarketSession());
+
+  useEffect(() => {
+    const update = () => setMarketSession(getIndianMarketSession());
+    update();
+    const timer = window.setInterval(update, 60_000);
+    return () => window.clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     const query = `instrumentKey=${encodeURIComponent(stock.instrumentKey)}`;
@@ -79,8 +88,8 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
             )}
           </div>
           <small className={styles.timestamp}>
-            {quote.metadata.availability === "live" ? <span className={styles.liveIndicator}></span> : null}
-            {quote.metadata.availability.toUpperCase()} MARKET · {quote.metadata.asOf ? new Date(quote.metadata.asOf).toLocaleString("en-IN") : "Timestamp unavailable"}
+            {marketSession === "OPEN" ? <span className={styles.liveIndicator}></span> : null}
+            {marketSessionLabel(marketSession)} · {quote.metadata.asOf ? new Date(quote.metadata.asOf).toLocaleString("en-IN") : "Timestamp unavailable"}
           </small>
         </div>
       ) : quote ? (
@@ -107,9 +116,12 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
             {!history ? (
               <div className={styles.chartLoading}>Loading price history…</div>
             ) : points.length ? (
-              <InteractiveChart points={points} isIntraday={isIntraday} />
+              <>
+                {history.metadata.session === "previous" ? <p className={styles.notice}>Previous trading session · {history.metadata.sessionDate}</p> : null}
+                <InteractiveChart points={points} isIntraday={isIntraday} />
+              </>
             ) : (
-              <p className={styles.notice}>{history.error?.message ?? "No historical data available for this range."}</p>
+              <p className={styles.notice}>{history.error ? "Chart data is unavailable for this interval." : "No trading-session data is available yet."}</p>
             )}
           </div>
         </section>

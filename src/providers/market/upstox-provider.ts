@@ -5,6 +5,8 @@ import { upstoxGet, UpstoxApiError, hasUpstoxAnalyticsToken } from "../../lib/up
 import { marketQuoteSchema } from "../../schemas/equity";
 import { searchInstrumentMaster } from "../../services/market-data/instrument-master";
 import type { MarketDataProvider, ProviderResult } from "./types";
+import { getIndianMarketSession, getIstDate, shiftIsoDate } from "../../domain/market/session";
+import { calculateQuoteChange, resolvePreviousClose } from "../../domain/market/quote";
 
 function metadata(asOf: string | null, availability: FinancialDataMetadata["availability"]): FinancialDataMetadata {
   return { source: "Upstox API", asOf, generatedAt: new Date().toISOString(), quality: availability === "unavailable" ? "unknown" : "verified", availability };
@@ -22,7 +24,7 @@ function dateOrNull(value: unknown): string | null {
   return null;
 }
 function mapError<T>(error: unknown): ProviderResult<T> {
-  if (error instanceof UpstoxApiError) return failure(error.providerCode === "AUTH_REQUIRED" || error.status === 401 || error.status === 403 ? "AUTH_REQUIRED" : error.status === 429 ? "RATE_LIMITED" : error.providerCode ?? "PROVIDER_ERROR", error.message, error.retryable);
+  if (error instanceof UpstoxApiError) return failure(error.providerCode === "AUTH_REQUIRED" || error.status === 401 || error.status === 403 ? "AUTH_REQUIRED" : error.status === 429 ? "RATE_LIMITED" : error.providerCode ?? "PROVIDER_ERROR", "Market data is temporarily unavailable.", error.retryable);
   return failure("PROVIDER_ERROR", "Market data temporarily unavailable.", true);
 }
 function identityFor(key: string): IndianEquityIdentity | null {
@@ -43,17 +45,14 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
     const instrument = identityFor(key);
     if (!instrument) return failure("NOT_FOUND", "Unable to retrieve this security.");
     try {
-      const raw = await upstoxGet<{ data?: Record<string, Record<string, unknown>> }>("/v2/market-quote/quotes", { query: { instrument_key: key }, ttlMs: 15_000 });
+      const raw = await upstoxGet<{ data?: Record<string, Record<string, unknown>> }>("/v2/market-quote/quotes", { query: { instrument_key: key }, ttlMs: 15_000, diagnostics: { category: "quote", instrumentKey: key, recordCount: value => Object.keys((value as { data?: object }).data ?? {}).length } });
       const item = Object.values(raw.data ?? {})[0] ?? {};
       const ohlc = item.ohlc as Record<string, unknown> | undefined;
       const price = numberOrNull(item.last_price);
-      const previousClose = numberOrNull(ohlc?.close);
+      const previousClose = resolvePreviousClose(price, numberOrNull(item.net_change), numberOrNull(ohlc?.close));
       const timestamp = dateOrNull(item.timestamp ?? item.last_trade_time);
       const availability = timestamp && Date.now() - Date.parse(timestamp) < 120_000 ? "live" : "delayed";
-      const netChange = numberOrNull(item.net_change);
-      const netChangePercent = numberOrNull(item.net_change_percent);
-      const change = netChange !== null ? netChange : (price !== null && previousClose !== null ? price - previousClose : null);
-      const changePercent = netChangePercent !== null ? netChangePercent : (price !== null && previousClose ? ((price - previousClose) / previousClose) * 100 : null);
+      const { change, changePercent } = calculateQuoteChange(price, previousClose);
 
       const quote = { ...instrument, price, previousClose, change, changePercent, open: numberOrNull(ohlc?.open), high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), volume: numberOrNull(item.volume), fiftyTwoWeekHigh: numberOrNull(item.ohlc_52_week_high), fiftyTwoWeekLow: numberOrNull(item.ohlc_52_week_low), timestamp, ...metadata(timestamp, availability) };
       const parsed = marketQuoteSchema.safeParse(quote);
@@ -73,7 +72,7 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
     const { days, unit } = config;
     const to = new Date(); const from = new Date(to.getTime() - days * 86_400_000); const format = (date: Date) => date.toISOString().slice(0, 10);
     try {
-      const raw = await upstoxGet<{ data?: { candles?: unknown } }>(`/v3/historical-candle/${encodeURIComponent(key)}/${unit}/1/${format(to)}/${format(from)}`, { ttlMs: 3_600_000 });
+      const raw = await upstoxGet<{ data?: { candles?: unknown } }>(`/v3/historical-candle/${encodeURIComponent(key)}/${unit}/1/${format(to)}/${format(from)}`, { ttlMs: 3_600_000, diagnostics: { category: "historical-candles", instrumentKey: key, recordCount: value => Array.isArray((value as { data?: { candles?: unknown[] } }).data?.candles) ? (value as { data: { candles: unknown[] } }).data.candles.length : 0 } });
       const data = transformCandles(raw.data?.candles);
       return { data, metadata: metadata(data[0]?.date ?? null, data.length ? "recent" : "unavailable") };
     } catch (error) { return mapError(error); }
@@ -82,9 +81,34 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
   async getIntradayPrices(key: string, interval: "1minute" | "5minute" | "15minute" | "30minute" | "60minute" = "5minute"): Promise<ProviderResult<HistoricalPrice[]>> {
     if (!hasUpstoxAnalyticsToken()) return failure("AUTH_REQUIRED", "Market data authentication is not configured.");
     try {
-      const raw = await upstoxGet<{ data?: { candles?: unknown } }>(`/v3/historical-candle/intraday/${encodeURIComponent(key)}/${interval.replace("minute", "minutes") === "60minutes" ? "30minute" /* fallback */ : interval === "1minute" ? "1minute" : "minutes/" + interval.replace("minute", "")}`, { ttlMs: 30_000 });
+      const specification = interval === "60minute"
+        ? { unit: "hours", value: "1" }
+        : { unit: "minutes", value: interval.replace("minute", "") };
+      const countCandles = (value: unknown) => Array.isArray((value as { data?: { candles?: unknown[] } }).data?.candles) ? (value as { data: { candles: unknown[] } }).data.candles.length : 0;
+      const raw = await upstoxGet<{ data?: { candles?: unknown } }>(`/v3/historical-candle/intraday/${encodeURIComponent(key)}/${specification.unit}/${specification.value}`, {
+        ttlMs: 30_000,
+        cacheWhen: value => countCandles(value) > 0,
+        diagnostics: { category: "intraday-candles", instrumentKey: key, recordCount: countCandles },
+      });
       const data = transformCandles(raw.data?.candles);
-      return { data, metadata: metadata(data[0]?.date ?? null, data.length ? "live" : "unavailable") };
+      if (data.length) {
+        const currentMetadata = metadata(data[0]?.date ?? null, getIndianMarketSession() === "OPEN" ? "live" : "recent");
+        return { data, metadata: { ...currentMetadata, session: "current", sessionDate: data[0]!.date.slice(0, 10) } };
+      }
+
+      const today = getIstDate();
+      const toDate = shiftIsoDate(today, -1);
+      const fromDate = shiftIsoDate(today, -10);
+      const fallbackRaw = await upstoxGet<{ data?: { candles?: unknown } }>(`/v3/historical-candle/${encodeURIComponent(key)}/${specification.unit}/${specification.value}/${toDate}/${fromDate}`, {
+        ttlMs: 3_600_000,
+        cacheWhen: value => countCandles(value) > 0,
+        diagnostics: { category: "previous-session-candles", instrumentKey: key, recordCount: countCandles },
+      });
+      const fallback = transformCandles(fallbackRaw.data?.candles);
+      const sessionDate = fallback.reduce((latest, candle) => candle.date.slice(0, 10) > latest ? candle.date.slice(0, 10) : latest, "");
+      const previousSession = sessionDate ? fallback.filter(candle => candle.date.startsWith(sessionDate)) : [];
+      const previousMetadata = metadata(previousSession[0]?.date ?? null, previousSession.length ? "recent" : "unavailable");
+      return { data: previousSession, metadata: { ...previousMetadata, session: "previous", sessionDate: sessionDate || undefined } };
     } catch (error) { return mapError(error); }
   }
 
@@ -119,9 +143,7 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
     } catch (error) { return mapError(error); }
   }
 
-  async getMarketStatus(): Promise<ProviderResult<{ session: "OPEN" | "CLOSED" }>> {
-    const parts = new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Kolkata", weekday: "short", hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(new Date());
-    const weekday = parts.find(item => item.type === "weekday")?.value; const hour = Number(parts.find(item => item.type === "hour")?.value); const minute = Number(parts.find(item => item.type === "minute")?.value); const total = hour * 60 + minute;
-    return { data: { session: !["Sat", "Sun"].includes(weekday ?? "") && total >= 555 && total < 930 ? "OPEN" : "CLOSED" }, metadata: metadata(new Date().toISOString(), "recent") };
+  async getMarketStatus(): Promise<ProviderResult<{ session: "PRE_OPEN" | "OPEN" | "CLOSED" | "HOLIDAY" }>> {
+    return { data: { session: getIndianMarketSession() }, metadata: metadata(new Date().toISOString(), "recent") };
   }
 }

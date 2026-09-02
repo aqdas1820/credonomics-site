@@ -15,6 +15,8 @@ export type FinancialDataMetadata = {
   generatedAt: string;
   quality: DataQuality;
   availability: DataAvailability;
+  session?: "current" | "previous";
+  sessionDate?: string;
 };
 
 export type FinancialValue = number | null;

@@ -25,6 +25,12 @@ type RequestOptions = {
   query?: Record<string, string | number | boolean | null | undefined>;
   ttlMs?: number;
   timeoutMs?: number;
+  cacheWhen?: (value: unknown) => boolean;
+  diagnostics?: {
+    category: string;
+    instrumentKey?: string;
+    recordCount?: (value: unknown) => number;
+  };
 };
 
 export async function upstoxGet<T>(endpoint: string, options: RequestOptions = {}): Promise<T> {
@@ -51,7 +57,15 @@ export async function upstoxGet<T>(endpoint: string, options: RequestOptions = {
         });
         const payload = await response.json().catch(() => ({})) as Record<string, unknown>;
         if (response.ok) {
-          if ((options.ttlMs ?? 0) > 0) cache.set(cacheKey, { expiresAt: Date.now() + (options.ttlMs ?? 0), value: payload });
+          const shouldCache = options.cacheWhen ? options.cacheWhen(payload) : true;
+          if ((options.ttlMs ?? 0) > 0 && shouldCache) cache.set(cacheKey, { expiresAt: Date.now() + (options.ttlMs ?? 0), value: payload });
+          if (options.diagnostics) console.info("Market data request", {
+            category: options.diagnostics.category,
+            instrumentKey: options.diagnostics.instrumentKey,
+            status: response.status,
+            providerCode: null,
+            records: options.diagnostics.recordCount?.(payload) ?? null,
+          });
           return payload as T;
         }
         const providerError = Array.isArray(payload.errors) ? payload.errors[0] as Record<string, unknown> | undefined : undefined;
@@ -59,7 +73,7 @@ export async function upstoxGet<T>(endpoint: string, options: RequestOptions = {
         const retryable = response.status === 429 || response.status >= 500;
         const message = response.status === 401 || response.status === 403 ? "Upstox authentication or entitlement failed." : response.status === 429 ? "Upstox rate limit reached." : response.status === 404 ? "Upstox data was not found." : "Upstox data is temporarily unavailable.";
         lastError = new UpstoxApiError(endpoint, response.status, code, message, retryable);
-        console.warn("Upstox request failed", { endpoint, status: response.status, providerCode: code, message });
+        console.warn("Market data request failed", { category: options.diagnostics?.category ?? "market-data", instrumentKey: options.diagnostics?.instrumentKey, status: response.status, providerCode: code });
         if (!retryable || attempt === 1) throw lastError;
       } catch (error) {
         if (error instanceof UpstoxApiError) {
@@ -67,7 +81,7 @@ export async function upstoxGet<T>(endpoint: string, options: RequestOptions = {
           if (!error.retryable || attempt === 1) throw error;
         } else if ((error as Error).name === "AbortError") {
           lastError = new UpstoxApiError(endpoint, null, "TIMEOUT", "Upstox request timed out.", true);
-          console.warn("Upstox request failed", { endpoint, status: null, providerCode: "TIMEOUT", message: lastError.message });
+          console.warn("Market data request failed", { category: options.diagnostics?.category ?? "market-data", instrumentKey: options.diagnostics?.instrumentKey, status: null, providerCode: "TIMEOUT" });
           if (attempt === 1) throw lastError;
         } else {
           throw new UpstoxApiError(endpoint, null, "NETWORK_ERROR", "Upstox data is temporarily unavailable.", true);
