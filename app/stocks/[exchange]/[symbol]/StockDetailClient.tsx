@@ -6,6 +6,8 @@ import { formatINR as formatCurrency, formatIndianNumber as formatNumber, format
 import { getIndianMarketSession, marketSessionLabel } from "../../../../src/domain/market/session";
 import styles from "./stock-detail.module.css";
 import StockTrackerActions from "../../../components/StockTrackerActions";
+import FinancialIntelligence from "./FinancialIntelligence";
+import type { CompanyFinancials } from "../../../../src/domain/equity/financial-intelligence";
 
 const InteractiveChart = dynamic(() => import("./InteractiveChart"), { ssr: false, loading: () => <p>Loading interactive chart...</p> });
 
@@ -14,11 +16,13 @@ const ranges: HistoricalRange[] = ["1m", "5m", "15m", "1h", "1D", "1W", "1M", "3
 const unavailable = <T,>(message: string): Result<T> => ({ data: null, metadata: { availability: "unavailable", asOf: null }, error: { message } });
 
 export default function StockDetailClient({ stock }: { stock: IndianEquityIdentity }) {
+  const isBank = /bank/i.test(`${stock.companyName} ${stock.sector ?? ""} ${stock.industry ?? ""}`);
   const [quote, setQuote] = useState<Result<MarketQuote> | null>(null);
   const [history, setHistory] = useState<Result<HistoricalPrice[]> | null>(null);
   const [fundamentals, setFundamentals] = useState<Result<CompanyFundamentals> | null>(null);
   const [shareholding, setShareholding] = useState<Result<Shareholding> | null>(null);
   const [actions, setActions] = useState<Result<CorporateAction[]> | null>(null);
+  const [financials, setFinancials] = useState<Result<CompanyFinancials> | null>(null);
   const [range, setRange] = useState<HistoricalRange>("1D");
   const [marketSession, setMarketSession] = useState(() => getIndianMarketSession());
 
@@ -35,6 +39,7 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
     fetch(`/api/stocks/fundamentals?${query}`).then(async response => setFundamentals(await response.json())).catch(() => setFundamentals(unavailable("Fundamentals temporarily unavailable.")));
     fetch(`/api/stocks/shareholding?${query}`).then(async response => setShareholding(await response.json())).catch(() => setShareholding(unavailable("Shareholding data temporarily unavailable.")));
     fetch(`/api/stocks/corporate-actions?${query}`).then(async response => setActions(await response.json())).catch(() => setActions(unavailable("Corporate actions temporarily unavailable.")));
+    fetch(`/api/stocks/financial-intelligence?${query}`).then(async response => setFinancials(await response.json())).catch(() => setFinancials(unavailable("Financial data temporarily unavailable.")));
   }, [stock.instrumentKey]);
 
   // Fallback for 52W High/Low using 1Y history
@@ -104,7 +109,7 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
     <div className={styles.brokerLayout}>
       {/* MAIN CHART AREA */}
       <div className={styles.mainContent}>
-        <section className={styles.chartCard}>
+        <section className={styles.chartCard} id="chart">
           <div className={styles.chartControls}>
             <div className={styles.range}>
               {ranges.map(item => (
@@ -167,7 +172,7 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
                 ["ROCE", fundamentals.data.roce],
                 ["ROA", fundamentals.data.roa],
                 ["EV/EBITDA", fundamentals.data.evEbitda]
-              ].map(([label, value]) => (
+              ].filter(([label]) => !isBank || label !== "EV/EBITDA").map(([label, value]) => (
                 <div key={String(label)} className={styles.gridItem}>
                   <span className={styles.gridLabel}>{label}</span>
                   <strong className={styles.gridValue}>{formatNumber(value as number | null, "N/A")}</strong>
@@ -207,15 +212,15 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
         </section>
 
         {/* CORPORATE ACTIONS */}
-        <section className={styles.statsCard}>
+        <section className={styles.statsCard} id="corporate-actions">
           <h2>Corporate Actions</h2>
           {actions?.data?.length ? (
             <div className={styles.actionList}>
-              {actions.data.slice(0, 5).map((action, index) => (
+              {actions.data.slice(0, 10).map((action, index) => (
                 <article key={`${action.type}-${action.recordDate}-${index}`} className={styles.actionItem}>
                   <strong>{action.type.toUpperCase()}</strong>
                   <span>{action.description}</span>
-                  <small>Ex-date: {action.exDate ?? "N/A"} · Record: {action.recordDate ?? "N/A"}</small>
+                  <small>Announced: {action.announcementDate ?? "N/A"} · Ex-date: {action.exDate ?? "N/A"} · Record: {action.recordDate ?? "N/A"}{action.amount !== null ? ` · ${formatCurrency(action.amount)}` : action.ratio ? ` · ${action.ratio}` : ""}</small>
                 </article>
               ))}
             </div>
@@ -227,5 +232,6 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
         </section>
       </aside>
     </div>
+    {financials?.data ? <FinancialIntelligence data={financials.data} /> : financials ? <section className={styles.financialEmpty}>Financial data unavailable for this company.</section> : <section className={styles.financialEmpty}>Loading financial statements…</section>}
   </main>;
 }
