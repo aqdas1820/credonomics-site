@@ -1,95 +1,14 @@
 {
   "meta": {
-    "generatedAt": "2026-09-02T09:24:01.514Z",
-    "recordCount": 5,
-    "nseCount": 5,
+    "generatedAt": "2026-09-03T05:28:45.528Z",
+    "recordCount": 2,
+    "nseCount": 2,
     "bseCount": 0,
-    "activeCount": 5,
+    "activeCount": 2,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 5 · BSE SME unavailable · BSE mainboard 0"
+    "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard 0"
   },
   "records": [
-    {
-      "slug": "ashutosh-fibre-ltd-9c63806",
-      "companyName": "Ashutosh Fibre Limited",
-      "symbol": "ASHUTOSH",
-      "marketSegment": "sme",
-      "status": "open",
-      "securityType": "SME",
-      "issue": {
-        "openDate": "2026-08-31",
-        "closeDate": "2026-09-02",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 69.85,
-        "updatedAt": "2026-09-02T09:24:01.514Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=ASHUTOSH&type=Active"
-      },
-      "sharesOffered": 4381200,
-      "sharesBid": 306024000,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=ASHUTOSH&type=Active",
-      "fetchedAt": "2026-09-02T09:24:01.514Z"
-    },
-    {
-      "slug": "purple-style-labs-ltd-9bd08f0",
-      "companyName": "Purple Style Labs Limited",
-      "symbol": "PERNIASPOP",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 546,
-        "priceBandHigh": 575,
-        "openDate": "2026-08-31",
-        "closeDate": "2026-09-02",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 1.0188402141021013,
-        "updatedAt": "2026-09-02T09:24:01.514Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PERNIASPOP&type=Active"
-      },
-      "sharesOffered": 6849816,
-      "sharesBid": 6978868,
-      "estimatedIssueValueCr": 393.86,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PERNIASPOP&type=Active",
-      "fetchedAt": "2026-09-02T09:24:01.514Z"
-    },
-    {
-      "slug": "shanti-inorganics-ltd-c9dedea",
-      "companyName": "Shanti Inorganics Limited",
-      "symbol": "SHANTIINOR",
-      "marketSegment": "sme",
-      "status": "open",
-      "securityType": "SME",
-      "issue": {
-        "openDate": "2026-08-31",
-        "closeDate": "2026-09-02",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 93.68,
-        "updatedAt": "2026-09-02T09:24:01.514Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SHANTIINOR&type=Active"
-      },
-      "sharesOffered": 4072000,
-      "sharesBid": 381478400,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SHANTIINOR&type=Active",
-      "fetchedAt": "2026-09-02T09:24:01.514Z"
-    },
     {
       "slug": "deepa-jewellers-ltd-7ebfb15",
       "companyName": "Deepa Jewellers Limited",
@@ -107,17 +26,17 @@
         ]
       },
       "subscription": {
-        "total": 1.7560273616454785,
-        "updatedAt": "2026-09-02T09:24:01.514Z",
+        "total": 3.5456999252433237,
+        "updatedAt": "2026-09-03T05:28:45.528Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=DEEPA&type=Active"
       },
       "sharesOffered": 18520085,
-      "sharesBid": 32521776,
+      "sharesBid": 65666664,
       "estimatedIssueValueCr": 327.81,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=DEEPA&type=Active",
-      "fetchedAt": "2026-09-02T09:24:01.514Z"
+      "fetchedAt": "2026-09-03T05:28:45.528Z"
     },
     {
       "slug": "rays-of-belief-ltd-for-profit-social-enterprise-fpse-153100a",
@@ -136,17 +55,17 @@
         ]
       },
       "subscription": {
-        "total": 1.8943352210618234,
-        "updatedAt": "2026-09-02T09:24:01.514Z",
+        "total": 4.886638770352571,
+        "updatedAt": "2026-09-03T05:28:45.528Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MOMSBELIEF&type=Active"
       },
       "sharesOffered": 3137810,
-      "sharesBid": 5944064,
+      "sharesBid": 15333344,
       "estimatedIssueValueCr": 74.99,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MOMSBELIEF&type=Active",
-      "fetchedAt": "2026-09-02T09:24:01.514Z"
+      "fetchedAt": "2026-09-03T05:28:45.528Z"
     }
   ]
 }
