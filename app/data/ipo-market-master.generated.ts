@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-09-03T05:28:45.528Z",
+  "generatedAt": "2026-09-03T09:24:32.388Z",
   "recordCount": 2,
   "nseCount": 2,
   "bseCount": 0,
@@ -31,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 3.5456999252433237,
-      "updatedAt": "2026-09-03T05:28:45.528Z",
+      "total": 20.79963347900401,
+      "updatedAt": "2026-09-03T09:24:32.388Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=DEEPA&type=Active"
     },
     "sharesOffered": 18520085,
-    "sharesBid": 65666664,
+    "sharesBid": 385210980,
     "estimatedIssueValueCr": 327.81,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=DEEPA&type=Active",
-    "fetchedAt": "2026-09-03T05:28:45.528Z"
+    "fetchedAt": "2026-09-03T09:24:32.388Z"
   },
   {
     "slug": "rays-of-belief-ltd-for-profit-social-enterprise-fpse-153100a",
@@ -60,16 +60,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 4.886638770352571,
-      "updatedAt": "2026-09-03T05:28:45.528Z",
+      "total": 58.73766990353145,
+      "updatedAt": "2026-09-03T09:24:32.388Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MOMSBELIEF&type=Active"
     },
     "sharesOffered": 3137810,
-    "sharesBid": 15333344,
+    "sharesBid": 184307648,
     "estimatedIssueValueCr": 74.99,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MOMSBELIEF&type=Active",
-    "fetchedAt": "2026-09-03T05:28:45.528Z"
+    "fetchedAt": "2026-09-03T09:24:32.388Z"
   }
 ]
