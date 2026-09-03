@@ -10,10 +10,10 @@ export type CardReviewQueueItem = {
 }
 
 export const cardReviewQueueMeta = {
-  "generatedAt": "2026-08-31T02:24:41.687Z",
-  "itemCount": 239,
-  "newCardCandidates": 231,
-  "possibleFeeChanges": 8,
+  "generatedAt": "2026-09-03T05:11:44.970Z",
+  "itemCount": 236,
+  "newCardCandidates": 229,
+  "possibleFeeChanges": 7,
   "reviewDue": 0
 } as const
 
@@ -43,14 +43,6 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Automated discovery detected fee ₹0 versus verified ₹350. Human review required."
   },
   {
-    "id": "bb137c4ae89d",
-    "type": "possible-fee-change",
-    "issuer": "Axis Bank",
-    "name": "FLIPKART AXIS BANK Credit Card",
-    "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
-    "message": "Automated discovery detected fee ₹5,00,000 versus verified ₹500. Human review required."
-  },
-  {
     "id": "6702218d0be5",
     "type": "possible-fee-change",
     "issuer": "Axis Bank",
@@ -59,12 +51,12 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Automated discovery detected fee ₹5,00,000 versus verified ₹500. Human review required."
   },
   {
-    "id": "a588ba45457f",
+    "id": "59eae2d6525f",
     "type": "possible-fee-change",
     "issuer": "Axis Bank",
     "name": "IndiGo Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
-    "message": "Automated discovery detected fee ₹7,99,000 versus verified ₹799. Human review required."
+    "message": "Automated discovery detected fee ₹0 versus verified ₹799. Human review required."
   },
   {
     "id": "9a142d5db2b7",
@@ -1019,19 +1011,11 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
-    "id": "c105a2192631",
+    "id": "088ee5740f75",
     "type": "new-card-candidate",
     "issuer": "HSBC India",
-    "name": "Paying utility bills with a credit card",
-    "sourceUrl": "https://www.hsbc.co.in/credit-cards/paying-utility-bills/",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "f3d4107be594",
-    "type": "new-card-candidate",
-    "issuer": "HSBC India",
-    "name": "Understanding your credit card billing cycle",
-    "sourceUrl": "https://www.hsbc.co.in/credit-cards/billing-cycles/",
+    "name": "Ultimate guide to cashback credit cards",
+    "sourceUrl": "https://www.hsbc.co.in/credit-cards/",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
@@ -1355,22 +1339,6 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
-    "id": "a3a8c5affb3e",
-    "type": "new-card-candidate",
-    "issuer": "IndusInd Bank",
-    "name": "Best Credit Card for Golf Privileges",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "6a9f1c3890a6",
-    "type": "new-card-candidate",
-    "issuer": "IndusInd Bank",
-    "name": "Best Credit Cards for Dining",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
     "id": "5f6851ca2ba6",
     "type": "new-card-candidate",
     "issuer": "IndusInd Bank",
@@ -1379,18 +1347,18 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
-    "id": "d5f234910f13",
-    "type": "new-card-candidate",
-    "issuer": "IndusInd Bank",
-    "name": "Can I pay a Credit Card bill online via NEFT?",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
     "id": "0646911cd8e3",
     "type": "new-card-candidate",
     "issuer": "IndusInd Bank",
     "name": "Can I use a credit card for UPI?",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "1907e0fd95e6",
+    "type": "new-card-candidate",
+    "issuer": "IndusInd Bank",
+    "name": "Can students below 21 apply for a credit card?",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
@@ -1427,10 +1395,18 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
-    "id": "80e90e9524f6",
+    "id": "00fac74a5438",
     "type": "new-card-candidate",
     "issuer": "IndusInd Bank",
-    "name": "Credit Card Interest Rates and Charges",
+    "name": "Credit Card Fees and Charges",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "57080335f033",
+    "type": "new-card-candidate",
+    "issuer": "IndusInd Bank",
+    "name": "Credit Card Interest Rates",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
@@ -1451,14 +1427,6 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
-    "id": "abb1f3fee1cb",
-    "type": "new-card-candidate",
-    "issuer": "IndusInd Bank",
-    "name": "Credit Cards with Zero Joining and Annual Fee in India",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
     "id": "a6ac90dbe70a",
     "type": "new-card-candidate",
     "issuer": "IndusInd Bank",
@@ -1471,6 +1439,14 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "type": "new-card-candidate",
     "issuer": "IndusInd Bank",
     "name": "Documents needed for online credit card application",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "bc3b1b555529",
+    "type": "new-card-candidate",
+    "issuer": "IndusInd Bank",
+    "name": "Documents Required for Credit Card Application",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
@@ -1715,10 +1691,10 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
-    "id": "99419c896da3",
+    "id": "5db083011f41",
     "type": "new-card-candidate",
     "issuer": "IndusInd Bank",
-    "name": "Which Credit Card transactions are eligible for EMI conversion?",
+    "name": "Which IndusInd Bank credit cards offer unlimited complimentary lounge access?",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
