@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-09-04T03:22:57.302Z",
+  "generatedAt": "2026-09-04T09:23:58.904Z",
   "recordCount": 1,
   "nseCount": 1,
   "bseCount": 0,
@@ -28,10 +28,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
         "NSE"
       ]
     },
+    "subscription": {
+      "total": 8.45,
+      "updatedAt": "2026-09-04T09:23:58.904Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=QUALIANCE&type=Active"
+    },
     "sharesOffered": 2543000,
+    "sharesBid": 21483000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=QUALIANCE&type=Active",
-    "fetchedAt": "2026-09-04T03:22:57.302Z"
+    "fetchedAt": "2026-09-04T09:23:58.904Z"
   }
 ]
