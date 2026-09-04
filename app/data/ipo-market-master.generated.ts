@@ -4,72 +4,34 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-09-03T09:24:32.388Z",
-  "recordCount": 2,
-  "nseCount": 2,
+  "generatedAt": "2026-09-04T03:22:57.302Z",
+  "recordCount": 1,
+  "nseCount": 1,
   "bseCount": 0,
-  "activeCount": 2,
+  "activeCount": 1,
   "upcomingCount": 0,
-  "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard 0"
+  "sourceStatus": "NSE API 1 · BSE SME unavailable · BSE mainboard 0"
 } as const
 
 export const ipoMarketMaster: IpoMarketRecord[] = [
   {
-    "slug": "deepa-jewellers-ltd-7ebfb15",
-    "companyName": "Deepa Jewellers Limited",
-    "symbol": "DEEPA",
-    "marketSegment": "mainboard",
+    "slug": "qualiance-international-ltd-d7884a7",
+    "companyName": "Qualiance International Limited",
+    "symbol": "QUALIANCE",
+    "marketSegment": "sme",
     "status": "open",
-    "securityType": "EQ",
+    "securityType": "SME",
     "issue": {
-      "priceBandLow": 168,
-      "priceBandHigh": 177,
-      "openDate": "2026-09-01",
-      "closeDate": "2026-09-03",
+      "openDate": "2026-09-04",
+      "closeDate": "2026-09-08",
       "exchange": [
         "NSE"
       ]
     },
-    "subscription": {
-      "total": 20.79963347900401,
-      "updatedAt": "2026-09-03T09:24:32.388Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=DEEPA&type=Active"
-    },
-    "sharesOffered": 18520085,
-    "sharesBid": 385210980,
-    "estimatedIssueValueCr": 327.81,
+    "sharesOffered": 2543000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=DEEPA&type=Active",
-    "fetchedAt": "2026-09-03T09:24:32.388Z"
-  },
-  {
-    "slug": "rays-of-belief-ltd-for-profit-social-enterprise-fpse-153100a",
-    "companyName": "Rays of Belief Limited- For Profit Social Enterprise (FPSE)",
-    "symbol": "MOMSBELIEF",
-    "marketSegment": "mainboard",
-    "status": "open",
-    "securityType": "EQ",
-    "issue": {
-      "priceBandLow": 227,
-      "priceBandHigh": 239,
-      "openDate": "2026-09-01",
-      "closeDate": "2026-09-03",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 58.73766990353145,
-      "updatedAt": "2026-09-03T09:24:32.388Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MOMSBELIEF&type=Active"
-    },
-    "sharesOffered": 3137810,
-    "sharesBid": 184307648,
-    "estimatedIssueValueCr": 74.99,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MOMSBELIEF&type=Active",
-    "fetchedAt": "2026-09-03T09:24:32.388Z"
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=QUALIANCE&type=Active",
+    "fetchedAt": "2026-09-04T03:22:57.302Z"
   }
 ]
