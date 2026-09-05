@@ -11,6 +11,7 @@ import { useMarketData } from "./useMarketData";
 import { useHistoricalData } from "./useHistoricalData";
 import StockHeader from "./StockHeader";
 import StockStats from "./StockStats";
+import NewsletterForm from "../../../components/NewsletterForm";
 
 const InteractiveChart = dynamic(() => import("./InteractiveChart"), { ssr: false, loading: () => <p>Loading interactive chart...</p> });
 const ranges: HistoricalRange[] = ["1m", "5m", "15m", "1h", "1D", "1W", "1M", "3M", "6M", "1Y", "3Y", "5Y"];
@@ -81,6 +82,10 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
         />
       </div>
       
+      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <NewsletterForm />
+      </div>
+
       {financials?.data ? (
         <FinancialIntelligence data={financials.data} />
       ) : financials ? (

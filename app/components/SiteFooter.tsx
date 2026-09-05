@@ -26,20 +26,19 @@ const companyLinks = [
   { label: 'Terms', href: '/terms' },
 ]
 
+import NewsletterForm from './NewsletterForm'
+
 export default function SiteFooter() {
   return (
     <footer className={styles.footerShell}>
       <div className={styles.footerWrap}>
-        <section className={styles.ctaPanel}>
+        <section className={styles.ctaPanel} style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '16px' }}>
           <div className={styles.ctaCopy}>
             <span className={styles.kicker}>CredoNomics Investment Solutions</span>
             <h2>Research the context before making the decision.</h2>
           </div>
 
-          <Link className={styles.ctaButton} href="/research">
-            Research Desk
-            <span aria-hidden="true">↗</span>
-          </Link>
+          <NewsletterForm />
         </section>
 
         <section className={styles.footerGrid}>

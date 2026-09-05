@@ -5,6 +5,7 @@ import SiteFrame from '../components/SiteFrame'
 import styles from './markets.module.css'
 import MarketOverview from './MarketOverview'
 import MarketPulse from './MarketPulse'
+import NewsletterForm from '../components/NewsletterForm'
 
 export const metadata: Metadata = {
   title: 'Indian Markets & Stock Search',
@@ -48,6 +49,10 @@ export default function MarketsPage() {
         <section className={styles.watch}>
           <div className={styles.sectionHead}><div><span>Explore stocks</span><h2>Popular security routes</h2></div><Link href="/search">Search all <ArrowRight size={15} /></Link></div>
           <div className={styles.rows}>{popular.map(([symbol,name,href]) => <Link href={href} key={symbol}><div><strong>{name}</strong><span>{symbol} · NSE</span></div><ArrowRight size={17} /></Link>)}</div>
+        </section>
+
+        <section style={{ maxWidth: '1200px', margin: '40px auto 0' }}>
+          <NewsletterForm />
         </section>
       </main>
     </SiteFrame>
