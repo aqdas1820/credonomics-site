@@ -1,7 +1,8 @@
 'use client'
 
 import { ArrowLeft, Calculator, Info, RotateCcw, ShieldCheck, Sparkles, TrendingUp } from 'lucide-react'
-import { useMemo, useState } from 'react'
+import { useMemo, Suspense } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 type NumSetter = (n: number) => void
 
@@ -28,15 +29,25 @@ function PercentInput({ label, value, onChange, helper }: { label: string; value
 const inr = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 })
 const pct = (n:number) => `${n.toFixed(2)}%`
 
-export default function CashbackCalculatorPage() {
+function CashbackCalculatorForm() {
+  const router = useRouter()
+  const searchParams = useSearchParams()
+
   const defaults = { spend: 30000, rate: 5, cap: 1000, excluded: 20, fee: 1000, waiver: 100000, gst: 18 }
-  const [spend, setSpend] = useState(defaults.spend)
-  const [rate, setRate] = useState(defaults.rate)
-  const [cap, setCap] = useState(defaults.cap)
-  const [excluded, setExcluded] = useState(defaults.excluded)
-  const [fee, setFee] = useState(defaults.fee)
-  const [waiver, setWaiver] = useState(defaults.waiver)
-  const [gst, setGst] = useState(defaults.gst)
+  
+  const spend = Number(searchParams.get('spend') ?? defaults.spend)
+  const rate = Number(searchParams.get('rate') ?? defaults.rate)
+  const cap = Number(searchParams.get('cap') ?? defaults.cap)
+  const excluded = Number(searchParams.get('excluded') ?? defaults.excluded)
+  const fee = Number(searchParams.get('fee') ?? defaults.fee)
+  const waiver = Number(searchParams.get('waiver') ?? defaults.waiver)
+  const gst = Number(searchParams.get('gst') ?? defaults.gst)
+
+  const updateParam = (key: string, value: number) => {
+    const params = new URLSearchParams(searchParams.toString())
+    params.set(key, value.toString())
+    router.replace(`?${params.toString()}`, { scroll: false })
+  }
 
   const r = useMemo(() => {
     const eligibleMonthly = spend * (1 - excluded / 100)
@@ -56,15 +67,12 @@ export default function CashbackCalculatorPage() {
     return { eligibleMonthly, uncappedMonthly, monthlyCashback, annualSpend, annualEligible, annualGross, annualFeeWithGst, annualNet, effectiveRate, grossRate, capUtilization, spendToHitCap, breakEvenMonthly, feeWaived }
   }, [spend, rate, cap, excluded, fee, waiver, gst])
 
-  const reset = () => { setSpend(defaults.spend); setRate(defaults.rate); setCap(defaults.cap); setExcluded(defaults.excluded); setFee(defaults.fee); setWaiver(defaults.waiver); setGst(defaults.gst) }
+  const reset = () => {
+    router.replace('?', { scroll: false })
+  }
 
   return (
-    <main className="calcPage">
-      <header className="calcNav wrap">
-        <a className="brand" href="/"><img src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CredoNomics</strong><small>Investment Solutions</small></span></a>
-        <a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a>
-      </header>
-
+    <>
       <section className="calcHero wrap">
         <div>
           <div className="eyebrow"><Sparkles size={14}/> Live tool</div>
@@ -78,13 +86,13 @@ export default function CashbackCalculatorPage() {
         <div className="calcPanel">
           <div className="calcPanelHead"><div><span className="overline">Your card & spending</span><h2>Enter the numbers</h2></div><button onClick={reset} className="resetBtn"><RotateCcw size={15}/> Reset</button></div>
           <div className="calcFields">
-            <MoneyInput label="Monthly card spend" value={spend} onChange={setSpend} helper="Your total monthly spend on this card."/>
-            <PercentInput label="Cashback rate" value={rate} onChange={setRate} helper="Use the rate for the spend you are evaluating."/>
-            <MoneyInput label="Monthly cashback cap" value={cap} onChange={setCap} helper="Enter 0 if the card has no monthly cap."/>
-            <PercentInput label="Excluded / non-reward spend" value={excluded} onChange={setExcluded} helper="Fuel, rent, wallet loads or other excluded spends."/>
-            <MoneyInput label="Annual card fee" value={fee} onChange={setFee} helper="Enter 0 for a lifetime-free card."/>
-            <MoneyInput label="Annual spend for fee waiver" value={waiver} onChange={setWaiver} helper="Enter 0 if the fee is never waived."/>
-            <PercentInput label="GST on annual fee" value={gst} onChange={setGst} helper="18% is commonly applicable to card fees in India."/>
+            <MoneyInput label="Monthly card spend" value={spend} onChange={v => updateParam('spend', v)} helper="Your total monthly spend on this card."/>
+            <PercentInput label="Cashback rate" value={rate} onChange={v => updateParam('rate', v)} helper="Use the rate for the spend you are evaluating."/>
+            <MoneyInput label="Monthly cashback cap" value={cap} onChange={v => updateParam('cap', v)} helper="Enter 0 if the card has no monthly cap."/>
+            <PercentInput label="Excluded / non-reward spend" value={excluded} onChange={v => updateParam('excluded', v)} helper="Fuel, rent, wallet loads or other excluded spends."/>
+            <MoneyInput label="Annual card fee" value={fee} onChange={v => updateParam('fee', v)} helper="Enter 0 for a lifetime-free card."/>
+            <MoneyInput label="Annual spend for fee waiver" value={waiver} onChange={v => updateParam('waiver', v)} helper="Enter 0 if the fee is never waived."/>
+            <PercentInput label="GST on annual fee" value={gst} onChange={v => updateParam('gst', v)} helper="18% is commonly applicable to card fees in India."/>
           </div>
 
           <div className="calcNote"><Info size={17}/><p>This calculator assumes the same spending pattern every month. It does not include milestone rewards, joining benefits or merchant-specific rates beyond the cashback rate entered above.</p></div>
@@ -108,6 +116,21 @@ export default function CashbackCalculatorPage() {
         <article><span><ShieldCheck size={18}/></span><small>Break-even monthly spend</small><b>{r.breakEvenMonthly > 0 ? inr.format(r.breakEvenMonthly) : '₹0'}</b><p>Approximate monthly spend required for cashback to recover the annual fee including GST.</p></article>
         <article><span><Calculator size={18}/></span><small>Eligible annual spend</small><b>{inr.format(r.annualEligible)}</b><p>Annual spending that actually earns cashback under the assumptions entered above.</p></article>
       </section>
+    </>
+  )
+}
+
+export default function CashbackCalculatorPage() {
+  return (
+    <main className="calcPage">
+      <header className="calcNav wrap">
+        <a className="brand" href="/"><img src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CredoNomics</strong><small>Investment Solutions</small></span></a>
+        <a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a>
+      </header>
+
+      <Suspense fallback={<div className="wrap" style={{padding: '4rem 0', textAlign: 'center'}}>Loading calculator...</div>}>
+        <CashbackCalculatorForm />
+      </Suspense>
 
       <section className="calcExplain wrap">
         <div><span className="overline">How it works</span><h2>Why “5% cashback” is rarely really 5%.</h2></div>

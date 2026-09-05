@@ -1,3 +1,5 @@
+import { withSentryConfig } from '@sentry/nextjs';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   poweredByHeader: false,
@@ -30,4 +32,8 @@ const nextConfig = {
   },
 }
 
-export default nextConfig
+export default withSentryConfig(nextConfig, {
+  silent: true,
+  org: 'credonomics',
+  project: 'credonomics-site',
+});

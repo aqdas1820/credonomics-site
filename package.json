@@ -22,8 +22,10 @@
     "equity:instruments:publish": "node scripts/equity/publish-instruments.mjs"
   },
   "dependencies": {
+    "@sentry/nextjs": "^10.73.0",
     "@supabase/ssr": "^0.12.5",
     "@supabase/supabase-js": "^2.113.0",
+    "@vercel/og": "^1.0.2",
     "lightweight-charts": "^5.2.1",
     "lucide-react": "^0.468.0",
     "next": "14.2.35",

@@ -1,7 +1,8 @@
 'use client'
 
 import { ArrowLeft, BadgeIndianRupee, ExternalLink, Fuel, Gauge, Info, RotateCcw, Sparkles, Trophy } from 'lucide-react'
-import { useMemo, useState } from 'react'
+import { useMemo, Suspense } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 const inr = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 })
 const pct = (n: number) => `${n.toFixed(2)}%`
@@ -99,12 +100,25 @@ function calcCard(card: FuelCard, monthlyFuel: number, annualRetailSpend: number
   return { ...card, rewards, waiver, app, annualGross, feeWaived, feeCost, net, effective: annualFuel ? net / annualFuel * 100 : 0 }
 }
 
-export default function FuelOptimizer() {
-  const [monthlyFuel, setMonthlyFuel] = useState(10000)
-  const [annualRetailSpend, setAnnualRetailSpend] = useState(120000)
-  const [preferred, setPreferred] = useState<Brand>('Any')
-  const [useApp, setUseApp] = useState(true)
-  const [showAll, setShowAll] = useState(true)
+function FuelOptimizerForm() {
+  const router = useRouter()
+  const searchParams = useSearchParams()
+
+  const monthlyFuel = Number(searchParams.get('monthlyFuel') ?? 10000)
+  const annualRetailSpend = Number(searchParams.get('annualRetailSpend') ?? 120000)
+  const preferred = (searchParams.get('preferred') ?? 'Any') as Brand
+  const useApp = searchParams.get('useApp') !== 'false'
+  const showAll = searchParams.get('showAll') !== 'false'
+
+  const updateParam = (key: string, value: string | boolean | number) => {
+    const params = new URLSearchParams(searchParams.toString())
+    params.set(key, value.toString())
+    router.replace(`?${params.toString()}`, { scroll: false })
+  }
+
+  const reset = () => {
+    router.replace('?', { scroll: false })
+  }
 
   const ranked = useMemo(() => cards
     .map(c => calcCard(c, monthlyFuel, annualRetailSpend, preferred, useApp))
@@ -112,41 +126,56 @@ export default function FuelOptimizer() {
     .sort((a, b) => b.net - a.net), [monthlyFuel, annualRetailSpend, preferred, useApp, showAll])
 
   const best = ranked[0]
-  const reset = () => { setMonthlyFuel(10000); setAnnualRetailSpend(120000); setPreferred('Any'); setUseApp(true); setShowAll(true) }
 
-  return <main className="toolPage">
-    <header className="calcNav wrap"><a className="brand" href="/"><img src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CredoNomics</strong><small>Investment Solutions</small></span></a><a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a></header>
+  return (
+    <>
+      <section className="calcHero wrap fuelCompareHero">
+        <div><div className="eyebrow"><Sparkles size={14}/> Indian fuel-card comparison engine</div><h1>Fuel Card <span>Comparator</span></h1><p>Enter your fuel spend once. CredoNomics ranks major IndianOil, BPCL and HPCL credit cards by estimated annual net savings after reward caps, surcharge waivers and annual fees.</p></div>
+        {best && <div className="calcHeroBadge"><Trophy size={24}/><div><small>Current #1 match</small><b>{best.name}</b></div></div>}
+      </section>
 
-    <section className="calcHero wrap fuelCompareHero"><div><div className="eyebrow"><Sparkles size={14}/> Indian fuel-card comparison engine</div><h1>Fuel Card <span>Comparator</span></h1><p>Enter your fuel spend once. CredoNomics ranks major IndianOil, BPCL and HPCL credit cards by estimated annual net savings after reward caps, surcharge waivers and annual fees.</p></div>{best && <div className="calcHeroBadge"><Trophy size={24}/><div><small>Current #1 match</small><b>{best.name}</b></div></div>}</section>
+      <section className="fuelCompareShell wrap">
+        <aside className="fuelControls calcPanel">
+          <div className="calcPanelHead"><div><span className="overline">Your profile</span><h2>Tell us how you refuel</h2></div><button className="resetBtn" onClick={reset}><RotateCcw size={15}/> Reset</button></div>
+          <label className="calcField"><span className="calcLabel">Monthly fuel spend</span><div className="calcInputWrap"><span>₹</span><input type="number" min="0" step="500" value={monthlyFuel} onChange={e=>updateParam('monthlyFuel', Math.max(0,Number(e.target.value)||0))}/></div><small>Total petrol/diesel/CNG spend per month.</small></label>
+          <label className="calcField"><span className="calcLabel">Annual retail spend on card</span><div className="calcInputWrap"><span>₹</span><input type="number" min="0" step="5000" value={annualRetailSpend} onChange={e=>updateParam('annualRetailSpend', Math.max(0,Number(e.target.value)||0))}/></div><small>Used to test annual-fee waiver thresholds.</small></label>
+          <label className="calcField"><span className="calcLabel">Preferred fuel network</span><select className="selectInput" value={preferred} onChange={e=>updateParam('preferred', e.target.value)}><option>Any</option><option>IndianOil</option><option>BPCL</option><option>HPCL</option></select><small>Choose “Any” to compare all supported networks.</small></label>
+          <label className="toggleRow"><span><b>Include partner-app bonus</b><small>Example: HP Pay Happy Coins where applicable.</small></span><input type="checkbox" checked={useApp} onChange={e=>updateParam('useApp', e.target.checked)}/></label>
+          <label className="toggleRow"><span><b>Show cards from other fuel networks</b><small>Useful to see whether switching pumps can save more.</small></span><input type="checkbox" checked={showAll} onChange={e=>updateParam('showAll', e.target.checked)}/></label>
+          <div className="calcNote"><Info size={17}/><p>Results are estimates based on issuer-published benefits. Actual value can change with transaction size, MCC, reward redemption method, caps, exclusions and issuer updates.</p></div>
+        </aside>
 
-    <section className="fuelCompareShell wrap">
-      <aside className="fuelControls calcPanel">
-        <div className="calcPanelHead"><div><span className="overline">Your profile</span><h2>Tell us how you refuel</h2></div><button className="resetBtn" onClick={reset}><RotateCcw size={15}/> Reset</button></div>
-        <label className="calcField"><span className="calcLabel">Monthly fuel spend</span><div className="calcInputWrap"><span>₹</span><input type="number" min="0" step="500" value={monthlyFuel} onChange={e=>setMonthlyFuel(Math.max(0,Number(e.target.value)||0))}/></div><small>Total petrol/diesel/CNG spend per month.</small></label>
-        <label className="calcField"><span className="calcLabel">Annual retail spend on card</span><div className="calcInputWrap"><span>₹</span><input type="number" min="0" step="5000" value={annualRetailSpend} onChange={e=>setAnnualRetailSpend(Math.max(0,Number(e.target.value)||0))}/></div><small>Used to test annual-fee waiver thresholds.</small></label>
-        <label className="calcField"><span className="calcLabel">Preferred fuel network</span><select className="selectInput" value={preferred} onChange={e=>setPreferred(e.target.value as Brand)}><option>Any</option><option>IndianOil</option><option>BPCL</option><option>HPCL</option></select><small>Choose “Any” to compare all supported networks.</small></label>
-        <label className="toggleRow"><span><b>Include partner-app bonus</b><small>Example: HP Pay Happy Coins where applicable.</small></span><input type="checkbox" checked={useApp} onChange={e=>setUseApp(e.target.checked)}/></label>
-        <label className="toggleRow"><span><b>Show cards from other fuel networks</b><small>Useful to see whether switching pumps can save more.</small></span><input type="checkbox" checked={showAll} onChange={e=>setShowAll(e.target.checked)}/></label>
-        <div className="calcNote"><Info size={17}/><p>Results are estimates based on issuer-published benefits. Actual value can change with transaction size, MCC, reward redemption method, caps, exclusions and issuer updates.</p></div>
-      </aside>
-
-      <div className="fuelRanking">
-        <div className="fuelRankingHead"><div><span className="overline">Live ranking</span><h2>{ranked.length} fuel cards compared</h2></div><div className="rankingMetric"><small>Sorted by</small><b>Net annual savings</b></div></div>
-        <div className="fuelCardList">
-          {ranked.map((c, i) => <article className={`fuelCompareCard ${i===0?'winner':''}`} key={c.id}>
-            <div className="fuelRank"><span>#{i+1}</span>{i===0&&<Trophy size={16}/>}</div>
-            <div className="fuelCardMain"><div className="fuelCardTitle"><div><span className={`fuelBrand ${c.brand.toLowerCase()}`}>{c.brand}</span><h3>{c.name}</h3><small>{c.issuer}</small></div><div className="fuelNet"><strong>{inr.format(c.net)}</strong><span>net / year</span></div></div>
-              <div className="fuelStats"><div><small>Effective return</small><b>{pct(c.effective)}</b></div><div><small>Gross fuel value</small><b>{inr.format(c.annualGross)}</b></div><div><small>Annual fee</small><b>{c.feeWaived?'Waived':inr.format(c.feeCost)}</b></div><div><small>Fuel network</small><b>{c.brand}</b></div></div>
-              <div className="fuelBreakdown"><span>Rewards <b>{inr.format(c.rewards)}/mo</b></span><span>Waiver <b>{inr.format(c.waiver)}/mo</b></span>{c.app>0&&<span>App bonus <b>{inr.format(c.app)}/mo</b></span>}</div>
-              <p className="fuelNote">{c.note}</p>
-              <div className="fuelMeta"><span>Verified {c.verified}</span>{c.feeWaiverSpend&&<span>Fee waiver at {inr.format(c.feeWaiverSpend)} annual spend</span>}<a href={c.source} target="_blank" rel="noreferrer">Official issuer source <ExternalLink size={12}/></a></div>
-            </div>
-          </article>)}
+        <div className="fuelRanking">
+          <div className="fuelRankingHead"><div><span className="overline">Live ranking</span><h2>{ranked.length} fuel cards compared</h2></div><div className="rankingMetric"><small>Sorted by</small><b>Net annual savings</b></div></div>
+          <div className="fuelCardList">
+            {ranked.map((c, i) => <article className={`fuelCompareCard ${i===0?'winner':''}`} key={c.id}>
+              <div className="fuelRank"><span>#{i+1}</span>{i===0&&<Trophy size={16}/>}</div>
+              <div className="fuelCardMain"><div className="fuelCardTitle"><div><span className={`fuelBrand ${c.brand.toLowerCase()}`}>{c.brand}</span><h3>{c.name}</h3><small>{c.issuer}</small></div><div className="fuelNet"><strong>{inr.format(c.net)}</strong><span>net / year</span></div></div>
+                <div className="fuelStats"><div><small>Effective return</small><b>{pct(c.effective)}</b></div><div><small>Gross fuel value</small><b>{inr.format(c.annualGross)}</b></div><div><small>Annual fee</small><b>{c.feeWaived?'Waived':inr.format(c.feeCost)}</b></div><div><small>Fuel network</small><b>{c.brand}</b></div></div>
+                <div className="fuelBreakdown"><span>Rewards <b>{inr.format(c.rewards)}/mo</b></span><span>Waiver <b>{inr.format(c.waiver)}/mo</b></span>{c.app>0&&<span>App bonus <b>{inr.format(c.app)}/mo</b></span>}</div>
+                <p className="fuelNote">{c.note}</p>
+                <div className="fuelMeta"><span>Verified {c.verified}</span>{c.feeWaiverSpend&&<span>Fee waiver at {inr.format(c.feeWaiverSpend)} annual spend</span>}<a href={c.source} target="_blank" rel="noreferrer">Official issuer source <ExternalLink size={12}/></a></div>
+              </div>
+            </article>)}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section className="calcInsights wrap"><article><span><Gauge size={18}/></span><small>Compared networks</small><b>IOCL · BPCL · HPCL</b><p>Major co-branded fuel cards from the three large public-sector fuel networks.</p></article><article><span><BadgeIndianRupee size={18}/></span><small>Ranking method</small><b>Rewards + waiver − fee</b><p>Annual fee GST is deducted unless your entered annual spend meets the issuer waiver threshold.</p></article><article><span><Fuel size={18}/></span><small>Data policy</small><b>Issuer-first</b><p>Card terms are sourced from official issuer pages and should be re-verified when banks revise benefits.</p></article></section>
-    <footer className="calcFooter wrap"><p><Info size={13}/> This comparison is an informational calculator, not a recommendation to apply for credit. Eligibility and benefits are governed by the issuer.</p><a href="/">CredoNomics home →</a></footer>
-  </main>
+      <section className="calcInsights wrap"><article><span><Gauge size={18}/></span><small>Compared networks</small><b>IOCL · BPCL · HPCL</b><p>Major co-branded fuel cards from the three large public-sector fuel networks.</p></article><article><span><BadgeIndianRupee size={18}/></span><small>Ranking method</small><b>Rewards + waiver − fee</b><p>Annual fee GST is deducted unless your entered annual spend meets the issuer waiver threshold.</p></article><article><span><Fuel size={18}/></span><small>Data policy</small><b>Issuer-first</b><p>Card terms are sourced from official issuer pages and should be re-verified when banks revise benefits.</p></article></section>
+    </>
+  )
+}
+
+export default function FuelOptimizer() {
+  return (
+    <main className="toolPage">
+      <header className="calcNav wrap"><a className="brand" href="/"><img src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CredoNomics</strong><small>Investment Solutions</small></span></a><a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a></header>
+
+      <Suspense fallback={<div className="wrap" style={{padding: '4rem 0', textAlign: 'center'}}>Loading comparator...</div>}>
+        <FuelOptimizerForm />
+      </Suspense>
+
+      <footer className="calcFooter wrap"><p><Info size={13}/> This comparison is an informational calculator, not a recommendation to apply for credit. Eligibility and benefits are governed by the issuer.</p><a href="/">CredoNomics home →</a></footer>
+    </main>
+  )
 }

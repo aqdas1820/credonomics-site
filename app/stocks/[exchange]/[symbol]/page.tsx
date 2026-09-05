@@ -11,10 +11,14 @@ export const dynamic = 'force-dynamic'
 export function generateMetadata({ params }: Props): Metadata {
   const stock = findInstrument(params.exchange, decodeURIComponent(params.symbol))
   if (!stock) return { title: 'Stock unavailable' }
+  const ogUrl = `https://www.credonomics.in/api/og?title=${encodeURIComponent(stock.companyName)}&subtitle=${encodeURIComponent(stock.symbol + ' | ' + stock.exchange)}`
   return {
     title: `${stock.companyName} (${stock.symbol})`,
     description: `Verified ${stock.exchange} security identity and available market data for ${stock.companyName}.`,
     alternates: { canonical: `/stocks/${stock.exchange.toLowerCase()}/${encodeURIComponent(stock.symbol)}` },
+    openGraph: {
+      images: [ogUrl]
+    }
   }
 }
 

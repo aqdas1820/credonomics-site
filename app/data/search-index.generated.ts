@@ -298,6 +298,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 60
   },
   {
+    "id": "route:/account",
+    "title": "Account",
+    "description": "Explore Account on CredoNomics Investment Solutions.",
+    "href": "/account",
+    "category": "Platform",
+    "source": "CredoNomics",
+    "updated": "",
+    "keywords": "account Account Platform",
+    "priority": 60
+  },
+  {
     "id": "route:/cards/all",
     "title": "All Verified Credit Cards",
     "description": "Browse all real Indian credit cards currently normalized in the CredoNomics verified comparison database.",

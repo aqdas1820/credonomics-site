@@ -12,7 +12,16 @@ export const dynamic = 'force-dynamic'
 export function generateStaticParams() { return publicIpos.map((ipo) => ({ slug: ipo.slug })) }
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const ipo = getPublicIpo(params.slug)
-  return ipo ? { title: `${ipo.companyName} IPO — Details, Dates, Subscription & Research`, description: `Source-backed IPO market and research page for ${ipo.companyName}.`, alternates: { canonical: `/ipo/${ipo.slug}` } } : {}
+  if (!ipo) return {}
+  const ogUrl = `https://www.credonomics.in/api/og?title=${encodeURIComponent(ipo.companyName + ' IPO')}&subtitle=${encodeURIComponent(ipoStatusLabel(ipo.status))}`
+  return { 
+    title: `${ipo.companyName} IPO — Details, Dates, Subscription & Research`, 
+    description: `Source-backed IPO market and research page for ${ipo.companyName}.`, 
+    alternates: { canonical: `/ipo/${ipo.slug}` },
+    openGraph: {
+      images: [ogUrl]
+    }
+  }
 }
 
 const defined = (value: unknown) => value !== undefined && value !== null && value !== ''

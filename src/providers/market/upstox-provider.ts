@@ -28,7 +28,10 @@ function dateOrNull(value: unknown): string | null {
   if ((typeof value === "string" || typeof value === "number") && !Number.isNaN(Date.parse(String(value)))) return new Date(value).toISOString();
   return null;
 }
+import * as Sentry from '@sentry/nextjs';
+
 function mapError<T>(error: unknown): ProviderResult<T> {
+  Sentry.captureException(error, { tags: { provider: "upstox" } });
   if (error instanceof UpstoxApiError) return failure(error.providerCode === "AUTH_REQUIRED" || error.status === 401 || error.status === 403 ? "AUTH_REQUIRED" : error.status === 429 ? "RATE_LIMITED" : error.providerCode ?? "PROVIDER_ERROR", "Market data is temporarily unavailable.", error.retryable);
   return failure("PROVIDER_ERROR", "Market data temporarily unavailable.", true);
 }
