@@ -22,6 +22,8 @@
     "equity:instruments:publish": "node scripts/equity/publish-instruments.mjs"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.12.5",
+    "@supabase/supabase-js": "^2.113.0",
     "lightweight-charts": "^5.2.1",
     "lucide-react": "^0.468.0",
     "next": "14.2.35",

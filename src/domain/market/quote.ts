@@ -18,7 +18,15 @@ export function resolveProviderQuote<T extends { instrument_token?: unknown }>(
   instrumentKey: string,
 ) {
   if (!quotes) return undefined;
-  return quotes[instrumentKey]
-    ?? quotes[instrumentKey.replace("|", ":")]
-    ?? Object.values(quotes).find(quote => quote.instrument_token === instrumentKey);
+  
+  if (quotes[instrumentKey]) return quotes[instrumentKey];
+  if (quotes[instrumentKey.replace("|", ":")]) return quotes[instrumentKey.replace("|", ":")];
+  
+  const lowerKey = instrumentKey.toLowerCase();
+  const matchedKey = Object.keys(quotes).find(k => k.toLowerCase() === lowerKey || k.toLowerCase() === lowerKey.replace("|", ":"));
+  if (matchedKey) return quotes[matchedKey];
+
+  return Object.values(quotes).find(quote => 
+    typeof quote.instrument_token === "string" && quote.instrument_token.toLowerCase() === lowerKey
+  );
 }

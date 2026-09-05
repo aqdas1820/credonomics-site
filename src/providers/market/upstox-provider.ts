@@ -17,7 +17,11 @@ function failure<T>(code: string, message: string, retryable = false): ProviderR
 }
 function numberOrNull(value: unknown): number | null {
   if (typeof value === "number" && Number.isFinite(value)) return value;
-  if (typeof value === "string") { const parsed = Number(value.replace(/%$/, "")); return Number.isFinite(parsed) ? parsed : null; }
+  if (typeof value === "string") {
+    const cleaned = value.replace(/,/g, "").replace(/%$/, "").trim();
+    const parsed = Number(cleaned);
+    return Number.isFinite(parsed) ? parsed : null;
+  }
   return null;
 }
 function dateOrNull(value: unknown): string | null {
@@ -69,11 +73,11 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
       const { change, changePercent } = calculateQuoteChange(price, previousClose);
       let fiftyTwoWeekHigh = numberOrNull(item.ohlc_52_week_high);
       let fiftyTwoWeekLow = numberOrNull(item.ohlc_52_week_low);
-      if (fiftyTwoWeekHigh === null || fiftyTwoWeekLow === null) {
+      if (!fiftyTwoWeekHigh || !fiftyTwoWeekLow) {
         try {
           const derived = await get52WeekStats(key);
-          fiftyTwoWeekHigh ??= derived.high;
-          fiftyTwoWeekLow ??= derived.low;
+          fiftyTwoWeekHigh = fiftyTwoWeekHigh || derived.high;
+          fiftyTwoWeekLow = fiftyTwoWeekLow || derived.low;
         } catch (error) {
           console.warn("Market data request failed", { category: "52-week-daily-candles", instrumentKey: key, providerCode: error instanceof UpstoxApiError ? error.providerCode : "PROVIDER_ERROR" });
         }
@@ -93,7 +97,16 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
       const data = uniqueKeys.flatMap(key => {
         const instrument = identityFor(key); const item = resolveProviderQuote(raw.data, key); if (!instrument || !item) return [];
         const ohlc = item.ohlc as Record<string, unknown> | undefined; const price = numberOrNull(item.last_price); const previousClose = resolvePreviousClose(price, numberOrNull(item.net_change), numberOrNull(ohlc?.close)); const timestamp = dateOrNull(item.timestamp ?? item.last_trade_time); const availability = timestamp && Date.now() - Date.parse(timestamp) < 120_000 ? "live" : "delayed"; const { change, changePercent } = calculateQuoteChange(price, previousClose);
-        const parsed = marketQuoteSchema.safeParse({ ...instrument, price, previousClose, change, changePercent, open: numberOrNull(ohlc?.open), high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), volume: numberOrNull(item.volume), fiftyTwoWeekHigh: numberOrNull(item.ohlc_52_week_high), fiftyTwoWeekLow: numberOrNull(item.ohlc_52_week_low), timestamp, ...metadata(timestamp, availability) });
+        
+        let fiftyTwoWeekHigh = numberOrNull(item.ohlc_52_week_high);
+        let fiftyTwoWeekLow = numberOrNull(item.ohlc_52_week_low);
+        if (!fiftyTwoWeekHigh || !fiftyTwoWeekLow) {
+           // For getQuotes batch, we won't fetch historical for each. Just fallback to null if missing or 0.
+           fiftyTwoWeekHigh = fiftyTwoWeekHigh || null;
+           fiftyTwoWeekLow = fiftyTwoWeekLow || null;
+        }
+
+        const parsed = marketQuoteSchema.safeParse({ ...instrument, price, previousClose, change, changePercent, open: numberOrNull(ohlc?.open), high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), volume: numberOrNull(item.volume), fiftyTwoWeekHigh, fiftyTwoWeekLow, timestamp, ...metadata(timestamp, availability) });
         return parsed.success ? [parsed.data] : [];
       });
       return { data, metadata: metadata(data.find(item => item.timestamp)?.timestamp ?? null, data.length ? "delayed" : "unavailable"), error: data.length ? undefined : { code: "INVALID_RESPONSE", message: "Market data temporarily unavailable.", retryable: true } };

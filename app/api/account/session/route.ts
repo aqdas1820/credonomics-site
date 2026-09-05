@@ -1,0 +1,2 @@
+import { NextResponse } from 'next/server';import { authenticatedUser } from '../../../../src/lib/supabase/server';import { supabaseConfigured } from '../../../../src/lib/supabase/config'
+export const dynamic='force-dynamic';export async function GET(){const{user}=await authenticatedUser();return NextResponse.json({data:{configured:supabaseConfigured(),user:user?{id:user.id,email:user.email,displayName:user.user_metadata?.full_name??null,avatarUrl:user.user_metadata?.avatar_url??null}:null}},{headers:{'Cache-Control':'private, no-store'}})}

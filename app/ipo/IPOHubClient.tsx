@@ -38,7 +38,7 @@ type Props = {
 };
 
 type Segment = "All" | "Mainboard" | "SME";
-type StatusFilter = "All" | "Open" | "Upcoming" | "Closed" | "Listed";
+type StatusFilter = "All" | "Open" | "Upcoming" | "Recently Closed" | "Listed";
 
 function money(value: number | null, suffix = "") {
   if (value === null || !Number.isFinite(value)) return "—";
@@ -90,7 +90,7 @@ function statusTone(status: string) {
   if (status === "Open") return "good";
   if (status === "Upcoming") return "info";
   if (status === "Listed") return "neutral";
-  if (status === "Closed") return "warn";
+  if (status === "Closed" || status === "Recently Closed") return "warn";
   return "muted";
 }
 
@@ -110,7 +110,11 @@ export default function IPOHubClient({
 
     const rows = initialIPOs.filter((ipo) => {
       if (segment !== "All" && ipo.type !== segment) return false;
-      if (status !== "All" && ipo.status !== status) return false;
+      if (status !== "All") {
+        if (status === "Recently Closed") {
+          if (ipo.status !== "Closed" && ipo.status !== "Recently Closed") return false;
+        } else if (ipo.status !== status) return false;
+      }
       if (
         q &&
         !ipo.company.toLowerCase().includes(q) &&
@@ -228,10 +232,15 @@ export default function IPOHubClient({
             <div className="quickNav">
               <a href="#dashboard">Dashboard</a>
               <a href="#current">Current IPOs</a>
-              <a href="#calendar">Calendar</a>
-              <a href="#subscription">Subscription</a>
-              <a href="#allotment">Allotment</a>
               <a href="#performance">Performance</a>
+              <div className="dropdown" style={{ display: 'inline-block', position: 'relative' }}>
+                <span style={{ cursor: 'pointer', padding: '8px 16px', borderRadius: '99px', background: 'var(--surface)', color: 'var(--ink)', fontSize: '13px', fontWeight: 600 }}>More Tools ▾</span>
+                <div className="dropdownContent" style={{ position: 'absolute', top: '100%', left: 0, background: 'var(--surface)', border: '1px solid var(--line)', borderRadius: '12px', padding: '8px', display: 'flex', flexDirection: 'column', gap: '4px', zIndex: 10, marginTop: '8px', minWidth: '150px' }}>
+                  <a href="#calendar" style={{ padding: '8px', border: 'none', background: 'transparent' }}>Calendar</a>
+                  <a href="#subscription" style={{ padding: '8px', border: 'none', background: 'transparent' }}>Subscription</a>
+                  <a href="#allotment" style={{ padding: '8px', border: 'none', background: 'transparent' }}>Allotment</a>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -414,7 +423,7 @@ export default function IPOHubClient({
 
             <div className="segmented status">
               {(
-                ["All", "Open", "Upcoming", "Closed", "Listed"] as StatusFilter[]
+                ["All", "Open", "Upcoming", "Recently Closed", "Listed"] as StatusFilter[]
               ).map((value) => (
                 <button
                   key={value}

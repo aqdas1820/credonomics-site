@@ -1,0 +1,1 @@
+import type{Metadata}from'next';import SiteFrame from'../components/SiteFrame';import AccountClient from'./AccountClient';export const metadata:Metadata={title:'Account',robots:{index:false,follow:false}};export const dynamic='force-dynamic';export default function Page(){return <SiteFrame><AccountClient/></SiteFrame>}

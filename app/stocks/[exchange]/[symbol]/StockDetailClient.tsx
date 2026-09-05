@@ -35,33 +35,23 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
 
   useEffect(() => {
     const query = `instrumentKey=${encodeURIComponent(stock.instrumentKey)}`;
-    fetch(`/api/stocks/quote?${query}`).then(async response => setQuote(await response.json())).catch(() => setQuote(unavailable("Market data temporarily unavailable.")));
-    fetch(`/api/stocks/fundamentals?${query}`).then(async response => setFundamentals(await response.json())).catch(() => setFundamentals(unavailable("Fundamentals temporarily unavailable.")));
-    fetch(`/api/stocks/shareholding?${query}`).then(async response => setShareholding(await response.json())).catch(() => setShareholding(unavailable("Shareholding data temporarily unavailable.")));
-    fetch(`/api/stocks/corporate-actions?${query}`).then(async response => setActions(await response.json())).catch(() => setActions(unavailable("Corporate actions temporarily unavailable.")));
-    fetch(`/api/stocks/financial-intelligence?${query}`).then(async response => setFinancials(await response.json())).catch(() => setFinancials(unavailable("Financial data temporarily unavailable.")));
+    Promise.all([
+      fetch(`/api/stocks/quote?${query}`).then(r => r.json()).catch(() => unavailable("Market data temporarily unavailable.")),
+      fetch(`/api/stocks/fundamentals?${query}`).then(r => r.json()).catch(() => unavailable("Fundamentals temporarily unavailable.")),
+      fetch(`/api/stocks/shareholding?${query}`).then(r => r.json()).catch(() => unavailable("Shareholding data temporarily unavailable.")),
+      fetch(`/api/stocks/corporate-actions?${query}`).then(r => r.json()).catch(() => unavailable("Corporate actions temporarily unavailable.")),
+      fetch(`/api/stocks/financial-intelligence?${query}`).then(r => r.json()).catch(() => unavailable("Financial data temporarily unavailable."))
+    ]).then(([quoteRes, fundRes, shareRes, actionsRes, finRes]) => {
+      setQuote(quoteRes);
+      setFundamentals(fundRes);
+      setShareholding(shareRes);
+      setActions(actionsRes);
+      setFinancials(finRes);
+    });
   }, [stock.instrumentKey]);
 
-  // Fallback for 52W High/Low using 1Y history
-  const [history1Y, setHistory1Y] = useState<Result<HistoricalPrice[]> | null>(null);
-  useEffect(() => {
-    if (quote?.data && (quote.data.fiftyTwoWeekHigh === null || quote.data.fiftyTwoWeekLow === null)) {
-      fetch(`/api/stocks/history?instrumentKey=${encodeURIComponent(stock.instrumentKey)}&range=1Y`)
-        .then(async response => setHistory1Y(await response.json()))
-        .catch(() => setHistory1Y(unavailable("1Y data unavailable.")));
-    }
-  }, [quote?.data, stock.instrumentKey]);
-
-  const computed52W = useMemo(() => {
-    if (!history1Y?.data?.length) return null;
-    const highs = history1Y.data.map(p => p.high as number).filter(h => h !== null);
-    const lows = history1Y.data.map(p => p.low as number).filter(l => l !== null);
-    if (!highs.length || !lows.length) return null;
-    return { high: Math.max(...highs), low: Math.min(...lows) };
-  }, [history1Y]);
-
-  const display52WHigh = quote?.data?.fiftyTwoWeekHigh ?? computed52W?.high ?? null;
-  const display52WLow = quote?.data?.fiftyTwoWeekLow ?? computed52W?.low ?? null;
+  const display52WHigh = quote?.data?.fiftyTwoWeekHigh ?? null;
+  const display52WLow = quote?.data?.fiftyTwoWeekLow ?? null;
 
   useEffect(() => {
     setHistory(null);

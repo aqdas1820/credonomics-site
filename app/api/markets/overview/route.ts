@@ -22,7 +22,15 @@ type IndexQuote = typeof instruments[number] & {
 };
 
 const lastKnown = new Map<string, IndexQuote>();
-const numberOrNull = (value: unknown) => typeof value === "number" && Number.isFinite(value) ? value : null;
+const numberOrNull = (value: unknown) => {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (typeof value === "string") {
+    const cleaned = value.replace(/,/g, "").replace(/%$/, "").trim();
+    const parsed = Number(cleaned);
+    return Number.isFinite(parsed) ? parsed : null;
+  }
+  return null;
+};
 
 export const dynamic = "force-dynamic";
 

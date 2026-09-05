@@ -1,0 +1,4 @@
+import type{AlertType}from'./types';import{searchInstrumentMaster}from'../../services/market-data/instrument-master'
+export const equityKey=/^(NSE|BSE)_EQ\|INE[A-Z0-9]{9}$/;export const alertTypes=new Set<AlertType>(['price_above','price_below','percent_rise','percent_fall','52_week_high','52_week_low']);
+export function verifiedInstrument(input:{instrumentKey:unknown;symbol:unknown;exchange:unknown}){if(typeof input.instrumentKey!=='string'||typeof input.symbol!=='string'||(input.exchange!=='NSE'&&input.exchange!=='BSE')||!equityKey.test(input.instrumentKey))return null;const symbol=input.symbol.trim().toUpperCase();return searchInstrumentMaster(symbol,10).find(x=>x.instrumentKey===input.instrumentKey&&x.symbol===symbol&&x.exchange===input.exchange)??null}
+export function validThreshold(type:AlertType,value:unknown){if(type==='52_week_high'||type==='52_week_low')return value==null;return typeof value==='number'&&Number.isFinite(value)&&value>0&&value<=100_000_000}

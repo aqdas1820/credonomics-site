@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
     { results: result.data ?? [], metadata: result.metadata, error: result.error ?? null },
     {
       status: result.error?.code === "PROVIDER_NOT_CONFIGURED" ? 503 : 200,
-      headers: { "Cache-Control": "no-store" },
+      headers: { "Cache-Control": "public, max-age=3600, stale-while-revalidate=86400" },
     },
   );
 }

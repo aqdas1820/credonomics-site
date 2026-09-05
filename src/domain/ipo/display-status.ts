@@ -88,7 +88,7 @@ export function ipoStatusLabel(status: IpoDisplayStatus) {
   if (status === 'closing_today') return 'Closing today'
   if (status === 'upcoming') return 'Upcoming'
   if (status === 'open') return 'Open'
-  if (status === 'closed') return 'Closed'
+  if (status === 'closed') return 'Recently Closed'
   if (status === 'listed') return 'Listed'
   if (status === 'withdrawn') return 'Withdrawn'
   if (status === 'draft') return 'Filed / RHP'

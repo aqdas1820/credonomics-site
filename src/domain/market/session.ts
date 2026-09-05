@@ -42,6 +42,7 @@ export function getIndianMarketSession(
 export function marketSessionLabel(session: IndianMarketSession) {
   if (session === "OPEN") return "MARKET OPEN";
   if (session === "PRE_OPEN") return "PRE-OPEN";
+  if (session === "HOLIDAY") return "HOLIDAY";
   return "MARKET CLOSED";
 }
 
