@@ -1,5 +1,5 @@
 import React from 'react'
-import type { MFPortfolioData } from '../../../../src/domain/mf/types'
+import type { MFPortfolioData } from '../../../src/domain/mf/types'
 import styles from '../../stocks/[exchange]/[symbol]/stock-detail.module.css'
 
 export default function MFPortfolioUI({ data }: { data: MFPortfolioData }) {

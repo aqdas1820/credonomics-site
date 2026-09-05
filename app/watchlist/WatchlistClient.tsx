@@ -1,5 +1,7 @@
 'use client'
 import Link from 'next/link'; import { Bell, RefreshCw, Trash2 } from 'lucide-react'; import { useEffect, useState, useCallback } from 'react'; import type { IndianEquityIdentity, MarketQuote } from '../../src/domain/equity/types'; import type { Watchlist } from '../../src/domain/watchlist/types'; import { formatINR, formatPercent } from '../../src/lib/financial-format'; import { marketSessionLabel } from '../../src/domain/market/session'; import styles from './watchlist.module.css'
+import { createSupabaseBrowserClient } from '../../src/lib/supabase/browser'
+import AuthModal from '../components/AuthModal'
 
 export default function WatchlistClient() {
   const [watchlists, setWatchlists] = useState<Watchlist[] | null>(null);
@@ -11,6 +13,22 @@ export default function WatchlistClient() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [toast, setToast] = useState('');
+  const [user, setUser] = useState<any>(null);
+  const [isAuthOpen, setIsAuthOpen] = useState(false);
+  const supabase = createSupabaseBrowserClient();
+
+  useEffect(() => {
+    if (!supabase) return;
+    const fetchUser = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      setUser(session?.user ?? null);
+    };
+    fetchUser();
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+    return () => subscription.unsubscribe();
+  }, [supabase]);
 
   type ApiWatchlist = { id: string; name: string; position: number; created_at: string; watchlist_items: Array<{ instrument_key: string; symbol: string; exchange: 'NSE' | 'BSE'; company_name: string; created_at: string }> };
 
@@ -79,6 +97,7 @@ export default function WatchlistClient() {
   };
 
   const createNewList = () => {
+    if (!user) return setIsAuthOpen(true);
     const name = prompt('New watchlist name');
     if (!name || !watchlists) return;
     const tempId = `temp-${Date.now()}`;
@@ -105,6 +124,7 @@ export default function WatchlistClient() {
   };
 
   const renameList = () => {
+    if (!user) return setIsAuthOpen(true);
     if (!watchlists || !list) return;
     const name = prompt('Rename watchlist', list.name);
     if (!name) return;
@@ -115,6 +135,7 @@ export default function WatchlistClient() {
   };
 
   const deleteList = () => {
+    if (!user) return setIsAuthOpen(true);
     if (!watchlists || !list) return;
     mutateWatchlist(
       () => fetch(`/api/watchlists/${list.id}`, { method: 'DELETE' }),
@@ -127,6 +148,7 @@ export default function WatchlistClient() {
   };
 
   const addItem = (stock: IndianEquityIdentity) => {
+    if (!user) return setIsAuthOpen(true);
     if (!watchlists || !list) return;
     const exists = list.items.some(x => x.instrumentKey === stock.instrumentKey);
     if (exists) return;
@@ -140,6 +162,7 @@ export default function WatchlistClient() {
   };
 
   const removeItemOpt = (instrumentKey: string) => {
+    if (!user) return setIsAuthOpen(true);
     if (!watchlists || !list) return;
     mutateWatchlist(
       () => fetch(`/api/watchlists/${list.id}/items?instrument_key=${encodeURIComponent(instrumentKey)}`, { method: 'DELETE' }),
@@ -182,5 +205,7 @@ export default function WatchlistClient() {
         </div>
       </article>
     })}</div> : <div className={styles.empty}><h2>No stocks in this watchlist yet.</h2><p>Search for a stock to start tracking.</p></div>}
+    
+    <AuthModal isOpen={isAuthOpen} onClose={() => setIsAuthOpen(false)} />
   </main>
 }

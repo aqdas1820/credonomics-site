@@ -75,12 +75,14 @@ export default function NewsletterForm() {
             padding: '10px 16px',
             borderRadius: '6px',
             border: 'none',
-            background: 'var(--brand-color, #0284c7)',
+            background: '#2563EB', /* High-contrast electric blue as requested */
             color: 'white',
             fontWeight: 600,
             fontSize: '14px',
             cursor: status === 'loading' ? 'not-allowed' : 'pointer',
-            opacity: status === 'loading' ? 0.7 : 1
+            opacity: status === 'loading' ? 0.7 : 1,
+            transition: 'background 0.2s ease',
+            boxShadow: '0 2px 4px rgba(37, 99, 235, 0.2)'
           }}
         >
           {status === 'loading' ? 'Subscribing...' : 'Subscribe'}

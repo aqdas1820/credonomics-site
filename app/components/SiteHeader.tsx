@@ -3,7 +3,8 @@
 import Link from 'next/link'
 import { BarChart3, Bell, Eye, Home, Menu, Wrench, X } from 'lucide-react'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { createSupabaseBrowserClient } from '../../src/lib/supabase/browser'
 import styles from '../core-v4.module.css'
 import ThemeModeToggle from './ThemeModeToggle'
 import SiteSearch from './SiteSearch'
@@ -28,6 +29,21 @@ const mobileNav = [
 export default function SiteHeader() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+  const [user, setUser] = useState<any>(null)
+  const supabase = createSupabaseBrowserClient()
+
+  useEffect(() => {
+    if (!supabase) return
+    const fetchUser = async () => {
+      const { data: { session } } = await supabase.auth.getSession()
+      setUser(session?.user ?? null)
+    }
+    fetchUser()
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null)
+    })
+    return () => subscription.unsubscribe()
+  }, [supabase])
 
   const isActive = (href: string) => {
     if (href === '/tools/mf-portfolio-tracker') {
@@ -98,6 +114,19 @@ export default function SiteHeader() {
             <Link href="/research" className={styles.globalResearchCta}>
               Research Desk <span>→</span>
             </Link>
+
+            {user ? (
+              <button 
+                onClick={() => supabase?.auth.signOut()} 
+                style={{ background: 'none', border: 'none', color: 'var(--text-secondary)', fontWeight: 600, fontSize: '14px', cursor: 'pointer', padding: '4px 8px' }}
+              >
+                Log Out
+              </button>
+            ) : (
+              <Link href="/login" style={{ color: 'var(--brand-color)', fontWeight: 600, fontSize: '14px', textDecoration: 'none' }}>
+                Log In
+              </Link>
+            )}
 
             <button
               type="button"

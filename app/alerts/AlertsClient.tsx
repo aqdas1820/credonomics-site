@@ -1,5 +1,7 @@
 'use client'
 import Link from 'next/link'; import { Pause, Play, RotateCcw, Trash2 } from 'lucide-react'; import { useEffect, useState, useCallback } from 'react'; import type { MarketQuote } from '../../src/domain/equity/types'; import type { AlertStatus, PriceAlert } from '../../src/domain/watchlist/types'; import { formatINR, formatPercent } from '../../src/lib/financial-format'; import styles from '../watchlist/watchlist.module.css';
+import { createSupabaseBrowserClient } from '../../src/lib/supabase/browser'
+import AuthModal from '../components/AuthModal'
 
 const labels = { price_above: 'Price above', price_below: 'Price below', percent_rise: 'Percentage rise', percent_fall: 'Percentage fall', '52_week_high': '52-week high', '52_week_low': '52-week low', volume_spike: 'Volume spike' };
 
@@ -9,6 +11,22 @@ export default function AlertsClient() {
   const [tab, setTab] = useState<AlertStatus>('active');
   const [error, setError] = useState('');
   const [toast, setToast] = useState('');
+  const [user, setUser] = useState<any>(null);
+  const [isAuthOpen, setIsAuthOpen] = useState(false);
+  const supabase = createSupabaseBrowserClient();
+
+  useEffect(() => {
+    if (!supabase) return;
+    const fetchUser = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      setUser(session?.user ?? null);
+    };
+    fetchUser();
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+    return () => subscription.unsubscribe();
+  }, [supabase]);
 
   useEffect(() => {
     fetch('/api/alerts')
@@ -64,6 +82,7 @@ export default function AlertsClient() {
   useEffect(() => { if (alerts) void evaluate() }, [alerts, evaluate]);
 
   const update = (id: string, patch: Partial<PriceAlert>) => {
+    if (!user) return setIsAuthOpen(true);
     void mutateAlerts(
       () => fetch(`/api/alerts/${id}`, { method: 'PATCH', body: JSON.stringify(patch) }),
       (prev) => prev.map(a => a.id === id ? { ...a, ...patch } : a)
@@ -71,6 +90,7 @@ export default function AlertsClient() {
   };
 
   const deleteAlert = (id: string) => {
+    if (!user) return setIsAuthOpen(true);
     void mutateAlerts(
       () => fetch(`/api/alerts/${id}`, { method: 'DELETE' }),
       (prev) => prev.filter(x => x.id !== id)
@@ -106,5 +126,7 @@ export default function AlertsClient() {
         </article>
       }) : <div className={styles.empty}><h2>No {tab} alerts.</h2><p>Create an alert from any stock page.</p></div>}
     </div>
+    
+    <AuthModal isOpen={isAuthOpen} onClose={() => setIsAuthOpen(false)} />
   </main>
 }
