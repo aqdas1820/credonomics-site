@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-09-07T03:24:30.265Z",
+  "generatedAt": "2026-09-07T09:26:10.091Z",
   "recordCount": 2,
   "nseCount": 2,
   "bseCount": 0,
@@ -29,16 +29,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 12.51,
-      "updatedAt": "2026-09-07T03:24:30.265Z",
+      "total": 65.61,
+      "updatedAt": "2026-09-07T09:26:10.091Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=QUALIANCE&type=Active"
     },
     "sharesOffered": 2543000,
-    "sharesBid": 31801000,
+    "sharesBid": 166852000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=QUALIANCE&type=Active",
-    "fetchedAt": "2026-09-07T03:24:30.265Z"
+    "fetchedAt": "2026-09-07T09:26:10.091Z"
   },
   {
     "slug": "pranav-constructions-ltd-0d74c06",
@@ -57,16 +57,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0,
-      "updatedAt": "2026-09-07T03:24:30.265Z",
+      "total": 2.718405715105597,
+      "updatedAt": "2026-09-07T09:26:10.091Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PRANAV&type=Active"
     },
-    "sharesOffered": 0,
-    "sharesBid": 0,
-    "estimatedIssueValueCr": 0,
+    "sharesOffered": 22463137,
+    "sharesBid": 61063920,
+    "estimatedIssueValueCr": 278.54,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PRANAV&type=Active",
-    "fetchedAt": "2026-09-07T03:24:30.265Z"
+    "fetchedAt": "2026-09-07T09:26:10.091Z"
   }
 ]
