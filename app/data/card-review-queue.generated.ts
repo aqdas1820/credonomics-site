@@ -10,9 +10,9 @@ export type CardReviewQueueItem = {
 }
 
 export const cardReviewQueueMeta = {
-  "generatedAt": "2026-09-03T05:11:44.970Z",
-  "itemCount": 236,
-  "newCardCandidates": 229,
+  "generatedAt": "2026-09-07T02:30:15.182Z",
+  "itemCount": 233,
+  "newCardCandidates": 226,
   "possibleFeeChanges": 7,
   "reviewDue": 0
 } as const
@@ -683,6 +683,14 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
+    "id": "b54561133c55",
+    "type": "new-card-candidate",
+    "issuer": "Axis Bank",
+    "name": "Scapia Axis Bank Credit Card",
+    "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
     "id": "08510a7285f9",
     "type": "new-card-candidate",
     "issuer": "Axis Bank",
@@ -784,22 +792,6 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "HDFC Bank",
     "name": "Business Credit Cards",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "7750c218e82c",
-    "type": "new-card-candidate",
-    "issuer": "HDFC Bank",
-    "name": "Card Membership Fee Condition",
-    "sourceUrl": "https://www.hdfcbank.com/credit-cards/services/fee-waiver-condition",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "a2a7adf7f901",
-    "type": "new-card-candidate",
-    "issuer": "HDFC Bank",
-    "name": "Credit Card Policy",
-    "sourceUrl": "https://www.hdfcbank.com/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards-services/credit-card-policy.pdf",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
@@ -911,6 +903,22 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "type": "new-card-candidate",
     "issuer": "HDFC Bank",
     "name": "Shoppers Stop HDFC Bank Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "880f1ffac0de",
+    "type": "new-card-candidate",
+    "issuer": "HDFC Bank",
+    "name": "Swiggy BLCK HDFC Bank Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "8a8b872315a9",
+    "type": "new-card-candidate",
+    "issuer": "HDFC Bank",
+    "name": "Swiggy Ornge HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
@@ -1179,6 +1187,14 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
+    "id": "b3074cb86605",
+    "type": "new-card-candidate",
+    "issuer": "IDFC FIRST Bank",
+    "name": "A Credit Card for Everyone",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
     "id": "1b4372d11d1e",
     "type": "new-card-candidate",
     "issuer": "IDFC FIRST Bank",
@@ -1288,46 +1304,6 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "IDFC FIRST Bank",
     "name": "Micro Enterprise Credit Card",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card/micro-enterprise-credit-card",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "4326d23301c6",
-    "type": "new-card-candidate",
-    "issuer": "IDFC FIRST Bank",
-    "name": "on MakeMyTrip with your Credit Card on EMI transactions only",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "c6def6ed14bc",
-    "type": "new-card-candidate",
-    "issuer": "IDFC FIRST Bank",
-    "name": "on Swiggy Instamart with your Credit Card EMI transactions only",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "5c4a4d0e119d",
-    "type": "new-card-candidate",
-    "issuer": "IDFC FIRST Bank",
-    "name": "on Swiggy Instamart with your Credit Card transactions only",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "0805f9a69893",
-    "type": "new-card-candidate",
-    "issuer": "IDFC FIRST Bank",
-    "name": "on Tata CLiQ Fashion with your Credit Card transactions only",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "d93c0156f8b6",
-    "type": "new-card-candidate",
-    "issuer": "IDFC FIRST Bank",
-    "name": "on Tata CLiQ Luxury with your Credit Card transactions only",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
