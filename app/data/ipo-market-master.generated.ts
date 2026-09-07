@@ -4,13 +4,13 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-09-04T09:23:58.904Z",
-  "recordCount": 1,
-  "nseCount": 1,
+  "generatedAt": "2026-09-07T03:24:30.265Z",
+  "recordCount": 2,
+  "nseCount": 2,
   "bseCount": 0,
-  "activeCount": 1,
+  "activeCount": 2,
   "upcomingCount": 0,
-  "sourceStatus": "NSE API 1 · BSE SME unavailable · BSE mainboard 0"
+  "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard 0"
 } as const
 
 export const ipoMarketMaster: IpoMarketRecord[] = [
@@ -29,15 +29,44 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 8.45,
-      "updatedAt": "2026-09-04T09:23:58.904Z",
+      "total": 12.51,
+      "updatedAt": "2026-09-07T03:24:30.265Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=QUALIANCE&type=Active"
     },
     "sharesOffered": 2543000,
-    "sharesBid": 21483000,
+    "sharesBid": 31801000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=QUALIANCE&type=Active",
-    "fetchedAt": "2026-09-04T09:23:58.904Z"
+    "fetchedAt": "2026-09-07T03:24:30.265Z"
+  },
+  {
+    "slug": "pranav-constructions-ltd-0d74c06",
+    "companyName": "Pranav Constructions Limited",
+    "symbol": "PRANAV",
+    "marketSegment": "mainboard",
+    "status": "open",
+    "securityType": "EQ",
+    "issue": {
+      "priceBandLow": 118,
+      "priceBandHigh": 124,
+      "openDate": "2026-09-07",
+      "closeDate": "2026-09-09",
+      "exchange": [
+        "NSE"
+      ]
+    },
+    "subscription": {
+      "total": 0,
+      "updatedAt": "2026-09-07T03:24:30.265Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PRANAV&type=Active"
+    },
+    "sharesOffered": 0,
+    "sharesBid": 0,
+    "estimatedIssueValueCr": 0,
+    "marketSource": "NSE",
+    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PRANAV&type=Active",
+    "fetchedAt": "2026-09-07T03:24:30.265Z"
   }
 ]
