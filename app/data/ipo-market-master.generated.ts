@@ -4,13 +4,13 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-09-07T09:26:10.091Z",
-  "recordCount": 2,
-  "nseCount": 2,
+  "generatedAt": "2026-09-08T03:24:23.806Z",
+  "recordCount": 5,
+  "nseCount": 5,
   "bseCount": 0,
-  "activeCount": 2,
+  "activeCount": 5,
   "upcomingCount": 0,
-  "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard 0"
+  "sourceStatus": "NSE API 5 · BSE SME unavailable · BSE mainboard unavailable"
 } as const
 
 export const ipoMarketMaster: IpoMarketRecord[] = [
@@ -29,16 +29,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 65.61,
-      "updatedAt": "2026-09-07T09:26:10.091Z",
+      "total": 83.68,
+      "updatedAt": "2026-09-08T03:24:23.806Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=QUALIANCE&type=Active"
     },
     "sharesOffered": 2543000,
-    "sharesBid": 166852000,
+    "sharesBid": 212788000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=QUALIANCE&type=Active",
-    "fetchedAt": "2026-09-07T09:26:10.091Z"
+    "fetchedAt": "2026-09-08T03:24:23.806Z"
   },
   {
     "slug": "pranav-constructions-ltd-0d74c06",
@@ -57,16 +57,103 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 2.718405715105597,
-      "updatedAt": "2026-09-07T09:26:10.091Z",
+      "total": 3.847113606616921,
+      "updatedAt": "2026-09-08T03:24:23.806Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PRANAV&type=Active"
     },
     "sharesOffered": 22463137,
-    "sharesBid": 61063920,
+    "sharesBid": 86418240,
     "estimatedIssueValueCr": 278.54,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PRANAV&type=Active",
-    "fetchedAt": "2026-09-07T09:26:10.091Z"
+    "fetchedAt": "2026-09-08T03:24:23.806Z"
+  },
+  {
+    "slug": "glass-wall-systems-india-ltd-e0ba777",
+    "companyName": "Glass Wall Systems (India) Limited",
+    "symbol": "GLASSWALL",
+    "marketSegment": "mainboard",
+    "status": "open",
+    "securityType": "EQ",
+    "issue": {
+      "priceBandLow": 172,
+      "priceBandHigh": 182,
+      "openDate": "2026-09-08",
+      "closeDate": "2026-09-10",
+      "exchange": [
+        "NSE"
+      ]
+    },
+    "subscription": {
+      "total": 0,
+      "updatedAt": "2026-09-08T03:24:23.806Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=GLASSWALL&type=Active"
+    },
+    "sharesOffered": 0,
+    "sharesBid": 0,
+    "estimatedIssueValueCr": 0,
+    "marketSource": "NSE",
+    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=GLASSWALL&type=Active",
+    "fetchedAt": "2026-09-08T03:24:23.806Z"
+  },
+  {
+    "slug": "kanohar-electricals-ltd-3cc51df",
+    "companyName": "Kanohar Electricals Limited",
+    "symbol": "KANOHAR",
+    "marketSegment": "mainboard",
+    "status": "open",
+    "securityType": "EQ",
+    "issue": {
+      "priceBandLow": 601,
+      "priceBandHigh": 632,
+      "openDate": "2026-09-08",
+      "closeDate": "2026-09-10",
+      "exchange": [
+        "NSE"
+      ]
+    },
+    "subscription": {
+      "total": 0,
+      "updatedAt": "2026-09-08T03:24:23.806Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=KANOHAR&type=Active"
+    },
+    "sharesOffered": 0,
+    "sharesBid": 0,
+    "estimatedIssueValueCr": 0,
+    "marketSource": "NSE",
+    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=KANOHAR&type=Active",
+    "fetchedAt": "2026-09-08T03:24:23.806Z"
+  },
+  {
+    "slug": "prasol-chemicals-ltd-4fdf230",
+    "companyName": "Prasol Chemicals Limited",
+    "symbol": "PRASOLCHEM",
+    "marketSegment": "mainboard",
+    "status": "open",
+    "securityType": "EQ",
+    "issue": {
+      "priceBandLow": 643,
+      "priceBandHigh": 676,
+      "openDate": "2026-09-08",
+      "closeDate": "2026-09-10",
+      "exchange": [
+        "NSE"
+      ]
+    },
+    "subscription": {
+      "total": 0,
+      "updatedAt": "2026-09-08T03:24:23.806Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PRASOLCHEM&type=Active"
+    },
+    "sharesOffered": 0,
+    "sharesBid": 0,
+    "estimatedIssueValueCr": 0,
+    "marketSource": "NSE",
+    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PRASOLCHEM&type=Active",
+    "fetchedAt": "2026-09-08T03:24:23.806Z"
   }
 ]
