@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-09-07T02:30:15.182Z",
-    "itemCount": 233,
-    "newCardCandidates": 226,
+    "generatedAt": "2026-09-10T02:30:51.477Z",
+    "itemCount": 234,
+    "newCardCandidates": 227,
     "possibleFeeChanges": 7,
     "reviewDue": 0
   },
@@ -936,6 +936,14 @@
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
+      "id": "6dea86baf3dc",
+      "type": "new-card-candidate",
+      "issuer": "HSBC India",
+      "name": "7 steps to adding credit cards to UPI apps",
+      "sourceUrl": "https://www.hsbc.co.in/credit-cards/",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
       "id": "71f5cbc7125d",
       "type": "new-card-candidate",
       "issuer": "HSBC India",
@@ -1005,14 +1013,6 @@
       "issuer": "HSBC India",
       "name": "HSBC Visa Platinum Credit Card",
       "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/visa-platinum/",
-      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-    },
-    {
-      "id": "088ee5740f75",
-      "type": "new-card-candidate",
-      "issuer": "HSBC India",
-      "name": "Ultimate guide to cashback credit cards",
-      "sourceUrl": "https://www.hsbc.co.in/credit-cards/",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
@@ -1189,6 +1189,14 @@
       "issuer": "IDFC FIRST Bank",
       "name": "Add-On Credit Card",
       "sourceUrl": "https://www.idfcfirstbank.com/credit-card/add-on-credit-card?utm_source=website&utm_medium=PDPAddonCC&utm_campaign=ApplyNow",
+      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+    },
+    {
+      "id": "80a49ccecd17",
+      "type": "new-card-candidate",
+      "issuer": "IDFC FIRST Bank",
+      "name": "All IDFC FIRST Bank Credit Cards now come with Zero Forex Markup",
+      "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
