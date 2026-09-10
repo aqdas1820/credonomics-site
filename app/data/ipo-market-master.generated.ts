@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-09-10T08:04:14.407Z",
+  "generatedAt": "2026-09-10T13:34:12.284Z",
   "recordCount": 11,
   "nseCount": 11,
   "bseCount": 0,
@@ -31,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 18.741546151743744,
-      "updatedAt": "2026-09-10T08:04:14.407Z",
+      "total": 56.5945909225196,
+      "updatedAt": "2026-09-10T13:34:12.284Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=GLASSWALL&type=Active"
     },
     "sharesOffered": 16457298,
-    "sharesBid": 308435210,
+    "sharesBid": 931394048,
     "estimatedIssueValueCr": 299.52,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=GLASSWALL&type=Active",
-    "fetchedAt": "2026-09-10T08:04:14.407Z"
+    "fetchedAt": "2026-09-10T13:34:12.284Z"
   },
   {
     "slug": "kanohar-electricals-ltd-3cc51df",
@@ -60,17 +60,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 21.466308815815108,
-      "updatedAt": "2026-09-10T08:04:14.407Z",
+      "total": 69.53480737644705,
+      "updatedAt": "2026-09-10T13:34:12.284Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=KANOHAR&type=Active"
     },
     "sharesOffered": 11693326,
-    "sharesBid": 251012547,
+    "sharesBid": 813093171,
     "estimatedIssueValueCr": 739.02,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=KANOHAR&type=Active",
-    "fetchedAt": "2026-09-10T08:04:14.407Z"
+    "fetchedAt": "2026-09-10T13:34:12.284Z"
   },
   {
     "slug": "prasol-chemicals-ltd-4fdf230",
@@ -89,17 +89,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.9909606963072838,
-      "updatedAt": "2026-09-10T08:04:14.407Z",
+      "total": 1.5246817651801898,
+      "updatedAt": "2026-09-10T13:34:12.284Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PRASOLCHEM&type=Active"
     },
     "sharesOffered": 5443229,
-    "sharesBid": 5394026,
+    "sharesBid": 8299192,
     "estimatedIssueValueCr": 367.96,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PRASOLCHEM&type=Active",
-    "fetchedAt": "2026-09-10T08:04:14.407Z"
+    "fetchedAt": "2026-09-10T13:34:12.284Z"
   },
   {
     "slug": "asset-reconstruction-company-india-ltd-1a3e0b1",
@@ -118,17 +118,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.4349441134397167,
-      "updatedAt": "2026-09-10T08:04:14.407Z",
+      "total": 0.5997211015723919,
+      "updatedAt": "2026-09-10T13:34:12.284Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ARCIL&type=Active"
     },
     "sharesOffered": 36912363,
-    "sharesBid": 16054815,
+    "sharesBid": 22137123,
     "estimatedIssueValueCr": 513.08,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ARCIL&type=Active",
-    "fetchedAt": "2026-09-10T08:04:14.407Z"
+    "fetchedAt": "2026-09-10T13:34:12.284Z"
   },
   {
     "slug": "karamtara-engineering-ltd-65947d6",
@@ -147,17 +147,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 1.8742453306101055,
-      "updatedAt": "2026-09-10T08:04:14.407Z",
+      "total": 2.426116657302751,
+      "updatedAt": "2026-09-10T13:34:12.284Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=KARAMTARA&type=Active"
     },
     "sharesOffered": 25414937,
-    "sharesBid": 47633827,
+    "sharesBid": 61659602,
     "estimatedIssueValueCr": 645.54,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=KARAMTARA&type=Active",
-    "fetchedAt": "2026-09-10T08:04:14.407Z"
+    "fetchedAt": "2026-09-10T13:34:12.284Z"
   },
   {
     "slug": "lcc-projects-ltd-bfa4468",
@@ -176,17 +176,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 2.042931138545901,
-      "updatedAt": "2026-09-10T08:04:14.407Z",
+      "total": 3.0067492284353614,
+      "updatedAt": "2026-09-10T13:34:12.284Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=LCCPROJECT&type=Active"
     },
     "sharesOffered": 20927281,
-    "sharesBid": 42752994,
+    "sharesBid": 62923086,
     "estimatedIssueValueCr": 305.54,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=LCCPROJECT&type=Active",
-    "fetchedAt": "2026-09-10T08:04:14.407Z"
+    "fetchedAt": "2026-09-10T13:34:12.284Z"
   },
   {
     "slug": "manipal-payment-and-identity-solutions-ltd-dbca562",
@@ -205,17 +205,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.15453683450337782,
-      "updatedAt": "2026-09-10T08:04:14.407Z",
+      "total": 0.20091708783572293,
+      "updatedAt": "2026-09-10T13:34:12.284Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MPIMANIPAL&type=Active"
     },
     "sharesOffered": 13060472,
-    "sharesBid": 2018324,
+    "sharesBid": 2624072,
     "estimatedIssueValueCr": 442.75,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MPIMANIPAL&type=Active",
-    "fetchedAt": "2026-09-10T08:04:14.407Z"
+    "fetchedAt": "2026-09-10T13:34:12.284Z"
   },
   {
     "slug": "rentomojo-ltd-766dbd9",
@@ -234,17 +234,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 2.2572311685240947,
-      "updatedAt": "2026-09-10T08:04:14.407Z",
+      "total": 3.3707126909954575,
+      "updatedAt": "2026-09-10T13:34:12.284Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=RENTOMOJO&type=Active"
     },
     "sharesOffered": 21772311,
-    "sharesBid": 49145139,
+    "sharesBid": 73388205,
     "estimatedIssueValueCr": 879.6,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=RENTOMOJO&type=Active",
-    "fetchedAt": "2026-09-10T08:04:14.407Z"
+    "fetchedAt": "2026-09-10T13:34:12.284Z"
   },
   {
     "slug": "steamhouse-india-ltd-7be6b43",
@@ -263,17 +263,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.77503025465027,
-      "updatedAt": "2026-09-10T08:04:14.407Z",
+      "total": 1.2811947318076404,
+      "updatedAt": "2026-09-10T13:34:12.284Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=STEAMHOUSE&type=Active"
     },
     "sharesOffered": 37636363,
-    "sharesBid": 29169320,
+    "sharesBid": 48219510,
     "estimatedIssueValueCr": 304.85,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=STEAMHOUSE&type=Active",
-    "fetchedAt": "2026-09-10T08:04:14.407Z"
+    "fetchedAt": "2026-09-10T13:34:12.284Z"
   },
   {
     "slug": "vinod-texworld-ltd-0db2335",
@@ -290,16 +290,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.41,
-      "updatedAt": "2026-09-10T08:04:14.407Z",
+      "total": 0.6,
+      "updatedAt": "2026-09-10T13:34:12.284Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=VINOD&type=Active"
     },
     "sharesOffered": 4556400,
-    "sharesBid": 1860000,
+    "sharesBid": 2725200,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=VINOD&type=Active",
-    "fetchedAt": "2026-09-10T08:04:14.407Z"
+    "fetchedAt": "2026-09-10T13:34:12.284Z"
   },
   {
     "slug": "veegaland-developers-ltd-b9cfc23",
@@ -318,16 +318,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.24241250999761932,
-      "updatedAt": "2026-09-10T08:04:14.407Z",
+      "total": 0.50269984361088,
+      "updatedAt": "2026-09-10T13:34:12.284Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VEEGALAND&type=Active"
     },
     "sharesOffered": 11307692,
-    "sharesBid": 2741126,
+    "sharesBid": 5684375,
     "estimatedIssueValueCr": 158.31,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VEEGALAND&type=Active",
-    "fetchedAt": "2026-09-10T08:04:14.407Z"
+    "fetchedAt": "2026-09-10T13:34:12.284Z"
   }
 ]
