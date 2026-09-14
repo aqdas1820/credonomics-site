@@ -10,9 +10,9 @@ export type CardReviewQueueItem = {
 }
 
 export const cardReviewQueueMeta = {
-  "generatedAt": "2026-09-10T02:30:51.477Z",
-  "itemCount": 234,
-  "newCardCandidates": 227,
+  "generatedAt": "2026-09-14T07:56:51.251Z",
+  "itemCount": 233,
+  "newCardCandidates": 226,
   "possibleFeeChanges": 7,
   "reviewDue": 0
 } as const
@@ -415,14 +415,6 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "type": "new-card-candidate",
     "issuer": "Axis Bank",
     "name": "Axis Bank AURA Credit Card",
-    "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "39359f3914ad",
-    "type": "new-card-candidate",
-    "issuer": "Axis Bank",
-    "name": "Axis Bank Credit Cards. Power meets privilege.",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
@@ -947,14 +939,6 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
-    "id": "6dea86baf3dc",
-    "type": "new-card-candidate",
-    "issuer": "HSBC India",
-    "name": "7 steps to adding credit cards to UPI apps",
-    "sourceUrl": "https://www.hsbc.co.in/credit-cards/",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
     "id": "71f5cbc7125d",
     "type": "new-card-candidate",
     "issuer": "HSBC India",
@@ -1024,6 +1008,14 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "HSBC India",
     "name": "HSBC Visa Platinum Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/visa-platinum/",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "088ee5740f75",
+    "type": "new-card-candidate",
+    "issuer": "HSBC India",
+    "name": "Ultimate guide to cashback credit cards",
+    "sourceUrl": "https://www.hsbc.co.in/credit-cards/",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
