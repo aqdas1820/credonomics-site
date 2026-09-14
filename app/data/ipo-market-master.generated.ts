@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-09-14T08:49:56.731Z",
+  "generatedAt": "2026-09-14T15:52:12.323Z",
   "recordCount": 2,
   "nseCount": 2,
   "bseCount": 0,
@@ -32,7 +32,7 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     },
     "subscription": {
       "total": 0.905597800152321,
-      "updatedAt": "2026-09-14T08:49:56.731Z",
+      "updatedAt": "2026-09-14T15:52:12.323Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VEEGALAND&type=Active"
     },
     "sharesOffered": 11307692,
@@ -41,7 +41,7 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VEEGALAND&type=Active",
-    "fetchedAt": "2026-09-14T08:49:56.731Z"
+    "fetchedAt": "2026-09-14T15:52:12.323Z"
   },
   {
     "slug": "manika-plastech-ltd-e67bc06",
@@ -61,7 +61,7 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     },
     "subscription": {
       "total": 0.9358464395923508,
-      "updatedAt": "2026-09-14T08:49:56.731Z",
+      "updatedAt": "2026-09-14T15:52:12.323Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MANIKA&type=Active"
     },
     "sharesOffered": 21386919,
@@ -70,6 +70,6 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MANIKA&type=Active",
-    "fetchedAt": "2026-09-14T08:49:56.731Z"
+    "fetchedAt": "2026-09-14T15:52:12.323Z"
   }
 ]
