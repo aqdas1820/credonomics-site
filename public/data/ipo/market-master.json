@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-09-15T08:37:05.428Z",
+    "generatedAt": "2026-09-15T14:18:41.168Z",
     "recordCount": 2,
     "nseCount": 2,
     "bseCount": 0,
@@ -26,17 +26,17 @@
         ]
       },
       "subscription": {
-        "total": 6.315471362325751,
-        "updatedAt": "2026-09-15T08:37:05.428Z",
+        "total": 10.605447955250284,
+        "updatedAt": "2026-09-15T14:18:41.168Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VEEGALAND&type=Active"
       },
       "sharesOffered": 11307692,
-      "sharesBid": 71413405,
+      "sharesBid": 119923139,
       "estimatedIssueValueCr": 158.31,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VEEGALAND&type=Active",
-      "fetchedAt": "2026-09-15T08:37:05.428Z"
+      "fetchedAt": "2026-09-15T14:18:41.168Z"
     },
     {
       "slug": "manika-plastech-ltd-e67bc06",
@@ -55,17 +55,17 @@
         ]
       },
       "subscription": {
-        "total": 4.712019529320703,
-        "updatedAt": "2026-09-15T08:37:05.428Z",
+        "total": 6.081032990305896,
+        "updatedAt": "2026-09-15T14:18:41.168Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MANIKA&type=Active"
       },
       "sharesOffered": 21386919,
-      "sharesBid": 100775580,
+      "sharesBid": 130054560,
       "estimatedIssueValueCr": 91.96,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MANIKA&type=Active",
-      "fetchedAt": "2026-09-15T08:37:05.428Z"
+      "fetchedAt": "2026-09-15T14:18:41.168Z"
     }
   ]
 }
