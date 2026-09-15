@@ -1,12 +1,23 @@
 {
   "meta": {
-    "generatedAt": "2026-09-14T15:52:24.375Z",
+    "generatedAt": "2026-09-15T08:37:18.468Z",
     "source": "SEBI Public Issues",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
-    "recordCount": 24,
+    "recordCount": 25,
     "note": "Discovery layer only. Financial ranking requires separately normalized offer-document data."
   },
   "records": [
+    {
+      "id": "german-green-steel-and-power-limited-addendum-bd7415",
+      "companyName": "German Green Steel and Power Limited",
+      "filingTitle": "German Green Steel and Power Limited - Addendum II to DRHP",
+      "filingDate": "2026-09-12",
+      "documentStage": "addendum",
+      "documentUrl": "https://www.sebi.gov.in/filings/public-issues/sep-2026/german-green-steel-and-power-limited-addendum-ii-to-drhp_104480.html",
+      "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
+      "firstSeen": "2026-09-15T08:37:18.468Z",
+      "lastSeen": "2026-09-15T08:37:18.468Z"
+    },
     {
       "id": "runwal-enterprises-limited-addendum-2e4d3f",
       "companyName": "RUNWAL ENTERPRISES LIMITED",
@@ -16,7 +27,7 @@
       "documentUrl": "https://www.sebi.gov.in/filings/public-issues/sep-2026/runwal-enterprises-limited-addendum-to-drhp_104424.html",
       "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
       "firstSeen": "2026-09-11T08:00:02.795Z",
-      "lastSeen": "2026-09-14T15:52:24.375Z"
+      "lastSeen": "2026-09-15T08:37:18.468Z"
     },
     {
       "id": "incred-holdings-limited-corrigendum-4d78bb",
@@ -27,7 +38,7 @@
       "documentUrl": "https://www.sebi.gov.in/filings/public-issues/sep-2026/incred-holdings-limited-corrigendum-to-udrhp_104399.html",
       "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
       "firstSeen": "2026-09-10T08:04:27.413Z",
-      "lastSeen": "2026-09-14T15:52:24.375Z"
+      "lastSeen": "2026-09-15T08:37:18.468Z"
     },
     {
       "id": "hero-motors-limited-corrigendum-a9d898",
@@ -38,7 +49,7 @@
       "documentUrl": "https://www.sebi.gov.in/filings/public-issues/sep-2026/hero-motors-limited-corrigendum-to-addendum-_104330.html",
       "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
       "firstSeen": "2026-09-08T09:25:03.215Z",
-      "lastSeen": "2026-09-14T15:52:24.375Z"
+      "lastSeen": "2026-09-15T08:37:18.468Z"
     },
     {
       "id": "gaurik-fashions-limited-addendum-f7e143",
@@ -49,7 +60,7 @@
       "documentUrl": "https://www.sebi.gov.in/filings/public-issues/sep-2026/gaurik-fashions-limited-addendum-to-drhp_104276.html",
       "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
       "firstSeen": "2026-09-07T09:26:24.036Z",
-      "lastSeen": "2026-09-14T15:52:24.375Z"
+      "lastSeen": "2026-09-15T08:37:18.468Z"
     },
     {
       "id": "hero-motors-limited-addendum-123d67",
@@ -60,7 +71,7 @@
       "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/hero-motors-limited-addendum-to-drhp_104121.html",
       "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
       "firstSeen": "2026-08-31T09:17:41.391Z",
-      "lastSeen": "2026-09-14T15:52:24.375Z"
+      "lastSeen": "2026-09-15T08:37:18.468Z"
     },
     {
       "id": "karamtara-engineering-limited-addendum-9fb3c4",
@@ -71,7 +82,7 @@
       "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/karamtara-engineering-limited-addendum-to-drhp_104033.html",
       "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
       "firstSeen": "2026-08-28T21:14:43.778Z",
-      "lastSeen": "2026-09-14T15:52:24.375Z"
+      "lastSeen": "2026-09-15T08:37:18.468Z"
     },
     {
       "id": "armee-infotech-limited-addendum-5fff1b",
@@ -82,7 +93,7 @@
       "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/armee-infotech-limited-addendum-ii-to-drhp_104294.html",
       "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
       "firstSeen": "2026-09-07T09:26:24.036Z",
-      "lastSeen": "2026-09-14T15:52:24.375Z"
+      "lastSeen": "2026-09-15T08:37:18.468Z"
     },
     {
       "id": "t-c-terrytex-limited-corrigendum-fe614a",
@@ -93,7 +104,7 @@
       "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/t-c-terrytex-limited-addendum-cum-corrigendum-to-drhp_103904.html",
       "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
       "firstSeen": "2026-08-24T11:02:16.253Z",
-      "lastSeen": "2026-09-14T15:52:24.375Z"
+      "lastSeen": "2026-09-15T08:37:18.468Z"
     },
     {
       "id": "lumino-industries-limited-corrigendum-9e4344",
@@ -104,7 +115,7 @@
       "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/lumino-industries-limited-corrigendum-to-drhp_103755.html",
       "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
       "firstSeen": "2026-08-19T10:04:47.322Z",
-      "lastSeen": "2026-09-14T15:52:24.375Z"
+      "lastSeen": "2026-09-15T08:37:18.468Z"
     },
     {
       "id": "german-green-steel-and-power-ltd-addendum-bf8abd",
