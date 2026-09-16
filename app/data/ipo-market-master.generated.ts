@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-09-16T08:31:41.203Z",
+  "generatedAt": "2026-09-16T14:10:41.988Z",
   "recordCount": 4,
   "nseCount": 4,
   "bseCount": 0,
@@ -31,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 11.57575039209715,
-      "updatedAt": "2026-09-16T08:31:41.203Z",
+      "total": 22.211098288631476,
+      "updatedAt": "2026-09-16T14:10:41.988Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MANIKA&type=Active"
     },
     "sharesOffered": 21386919,
-    "sharesBid": 247569636,
+    "sharesBid": 475026960,
     "estimatedIssueValueCr": 91.96,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MANIKA&type=Active",
-    "fetchedAt": "2026-09-16T08:31:41.203Z"
+    "fetchedAt": "2026-09-16T14:10:41.988Z"
   },
   {
     "slug": "hero-motors-ltd-5599474",
@@ -60,17 +60,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.5718774268517566,
-      "updatedAt": "2026-09-16T08:31:41.203Z",
+      "total": 0.8179122024707679,
+      "updatedAt": "2026-09-16T14:10:41.988Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HEROMOTORS&type=Active"
     },
     "sharesOffered": 88607596,
-    "sharesBid": 50672684,
+    "sharesBid": 72473234,
     "estimatedIssueValueCr": 744.3,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HEROMOTORS&type=Active",
-    "fetchedAt": "2026-09-16T08:31:41.203Z"
+    "fetchedAt": "2026-09-16T14:10:41.988Z"
   },
   {
     "slug": "jindal-supreme-india-ltd-c38cdf5",
@@ -89,17 +89,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 2.889781799225499,
-      "updatedAt": "2026-09-16T08:31:41.203Z",
+      "total": 4.55471254095919,
+      "updatedAt": "2026-09-16T14:10:41.988Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JSIPL&type=Active"
     },
     "sharesOffered": 9399600,
-    "sharesBid": 27162793,
+    "sharesBid": 42812476,
     "estimatedIssueValueCr": 87.42,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JSIPL&type=Active",
-    "fetchedAt": "2026-09-16T08:31:41.203Z"
+    "fetchedAt": "2026-09-16T14:10:41.988Z"
   },
   {
     "slug": "ss-retail-ltd-db810d2",
@@ -118,16 +118,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.5937979168249206,
-      "updatedAt": "2026-09-16T08:31:41.203Z",
+      "total": 0.9764587524693298,
+      "updatedAt": "2026-09-16T14:10:41.988Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SSRETAIL&type=Active"
     },
     "sharesOffered": 8793884,
-    "sharesBid": 5221790,
+    "sharesBid": 8586865,
     "estimatedIssueValueCr": 372.86,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SSRETAIL&type=Active",
-    "fetchedAt": "2026-09-16T08:31:41.203Z"
+    "fetchedAt": "2026-09-16T14:10:41.988Z"
   }
 ]
