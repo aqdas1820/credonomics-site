@@ -4,45 +4,16 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-09-15T14:18:41.168Z",
-  "recordCount": 2,
-  "nseCount": 2,
+  "generatedAt": "2026-09-16T08:31:41.203Z",
+  "recordCount": 4,
+  "nseCount": 4,
   "bseCount": 0,
-  "activeCount": 2,
+  "activeCount": 4,
   "upcomingCount": 0,
-  "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard 0"
+  "sourceStatus": "NSE API 4 · BSE SME unavailable · BSE mainboard 0"
 } as const
 
 export const ipoMarketMaster: IpoMarketRecord[] = [
-  {
-    "slug": "veegaland-developers-ltd-b9cfc23",
-    "companyName": "Veegaland Developers Limited",
-    "symbol": "VEEGALAND",
-    "marketSegment": "mainboard",
-    "status": "open",
-    "securityType": "EQ",
-    "issue": {
-      "priceBandLow": 130,
-      "priceBandHigh": 140,
-      "openDate": "2026-09-10",
-      "closeDate": "2026-09-15",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 10.605447955250284,
-      "updatedAt": "2026-09-15T14:18:41.168Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VEEGALAND&type=Active"
-    },
-    "sharesOffered": 11307692,
-    "sharesBid": 119923139,
-    "estimatedIssueValueCr": 158.31,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VEEGALAND&type=Active",
-    "fetchedAt": "2026-09-15T14:18:41.168Z"
-  },
   {
     "slug": "manika-plastech-ltd-e67bc06",
     "companyName": "Manika Plastech Limited",
@@ -60,16 +31,103 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 6.081032990305896,
-      "updatedAt": "2026-09-15T14:18:41.168Z",
+      "total": 11.57575039209715,
+      "updatedAt": "2026-09-16T08:31:41.203Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MANIKA&type=Active"
     },
     "sharesOffered": 21386919,
-    "sharesBid": 130054560,
+    "sharesBid": 247569636,
     "estimatedIssueValueCr": 91.96,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MANIKA&type=Active",
-    "fetchedAt": "2026-09-15T14:18:41.168Z"
+    "fetchedAt": "2026-09-16T08:31:41.203Z"
+  },
+  {
+    "slug": "hero-motors-ltd-5599474",
+    "companyName": "Hero Motors Limited",
+    "symbol": "HEROMOTORS",
+    "marketSegment": "mainboard",
+    "status": "open",
+    "securityType": "EQ",
+    "issue": {
+      "priceBandLow": 79,
+      "priceBandHigh": 84,
+      "openDate": "2026-09-16",
+      "closeDate": "2026-09-18",
+      "exchange": [
+        "NSE"
+      ]
+    },
+    "subscription": {
+      "total": 0.5718774268517566,
+      "updatedAt": "2026-09-16T08:31:41.203Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HEROMOTORS&type=Active"
+    },
+    "sharesOffered": 88607596,
+    "sharesBid": 50672684,
+    "estimatedIssueValueCr": 744.3,
+    "marketSource": "NSE",
+    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HEROMOTORS&type=Active",
+    "fetchedAt": "2026-09-16T08:31:41.203Z"
+  },
+  {
+    "slug": "jindal-supreme-india-ltd-c38cdf5",
+    "companyName": "Jindal Supreme (India) Limited",
+    "symbol": "JSIPL",
+    "marketSegment": "mainboard",
+    "status": "open",
+    "securityType": "EQ",
+    "issue": {
+      "priceBandLow": 88,
+      "priceBandHigh": 93,
+      "openDate": "2026-09-16",
+      "closeDate": "2026-09-18",
+      "exchange": [
+        "NSE"
+      ]
+    },
+    "subscription": {
+      "total": 2.889781799225499,
+      "updatedAt": "2026-09-16T08:31:41.203Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JSIPL&type=Active"
+    },
+    "sharesOffered": 9399600,
+    "sharesBid": 27162793,
+    "estimatedIssueValueCr": 87.42,
+    "marketSource": "NSE",
+    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JSIPL&type=Active",
+    "fetchedAt": "2026-09-16T08:31:41.203Z"
+  },
+  {
+    "slug": "ss-retail-ltd-db810d2",
+    "companyName": "SS Retail Limited",
+    "symbol": "SSRETAIL",
+    "marketSegment": "mainboard",
+    "status": "open",
+    "securityType": "EQ",
+    "issue": {
+      "priceBandLow": 403,
+      "priceBandHigh": 424,
+      "openDate": "2026-09-16",
+      "closeDate": "2026-09-18",
+      "exchange": [
+        "NSE"
+      ]
+    },
+    "subscription": {
+      "total": 0.5937979168249206,
+      "updatedAt": "2026-09-16T08:31:41.203Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SSRETAIL&type=Active"
+    },
+    "sharesOffered": 8793884,
+    "sharesBid": 5221790,
+    "estimatedIssueValueCr": 372.86,
+    "marketSource": "NSE",
+    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SSRETAIL&type=Active",
+    "fetchedAt": "2026-09-16T08:31:41.203Z"
   }
 ]
