@@ -2,14 +2,25 @@
 import type { IpoDiscoveryRecord } from './ipo-types'
 
 export const ipoDiscoveryMeta = {
-  "generatedAt": "2026-09-16T14:10:53.929Z",
+  "generatedAt": "2026-09-17T08:35:52.118Z",
   "source": "SEBI Public Issues",
   "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
-  "recordCount": 26,
+  "recordCount": 27,
   "note": "Discovery layer only. Financial ranking requires separately normalized offer-document data."
 } as const
 
 export const ipoDiscovery: IpoDiscoveryRecord[] = [
+  {
+    "id": "rayzon-solar-limited-addendum-e842f4",
+    "companyName": "Rayzon Solar Limited",
+    "filingTitle": "Rayzon Solar Limited - Addendum to the DRHP",
+    "filingDate": "2026-09-17",
+    "documentStage": "addendum",
+    "documentUrl": "https://www.sebi.gov.in/filings/public-issues/sep-2026/rayzon-solar-limited-addendum-to-the-drhp_104532.html",
+    "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
+    "firstSeen": "2026-09-17T08:35:52.118Z",
+    "lastSeen": "2026-09-17T08:35:52.118Z"
+  },
   {
     "id": "sterlite-electric-limited-second-addendum-to-drhp-addendum-2cf6a4",
     "companyName": "Sterlite Electric Limited – Second Addendum to DRHP",
@@ -19,7 +30,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/sep-2026/sterlite-electric-limited-second-addendum-to-drhp_104506.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-09-16T14:10:53.929Z",
-    "lastSeen": "2026-09-16T14:10:53.929Z"
+    "lastSeen": "2026-09-17T08:35:52.118Z"
   },
   {
     "id": "german-green-steel-and-power-limited-addendum-bd7415",
@@ -30,7 +41,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/sep-2026/german-green-steel-and-power-limited-addendum-ii-to-drhp_104480.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-09-15T08:37:18.468Z",
-    "lastSeen": "2026-09-16T14:10:53.929Z"
+    "lastSeen": "2026-09-17T08:35:52.118Z"
   },
   {
     "id": "runwal-enterprises-limited-addendum-2e4d3f",
@@ -41,7 +52,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/sep-2026/runwal-enterprises-limited-addendum-to-drhp_104424.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-09-11T08:00:02.795Z",
-    "lastSeen": "2026-09-16T14:10:53.929Z"
+    "lastSeen": "2026-09-17T08:35:52.118Z"
   },
   {
     "id": "incred-holdings-limited-corrigendum-4d78bb",
@@ -52,7 +63,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/sep-2026/incred-holdings-limited-corrigendum-to-udrhp_104399.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-09-10T08:04:27.413Z",
-    "lastSeen": "2026-09-16T14:10:53.929Z"
+    "lastSeen": "2026-09-17T08:35:52.118Z"
   },
   {
     "id": "hero-motors-limited-corrigendum-a9d898",
@@ -63,7 +74,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/sep-2026/hero-motors-limited-corrigendum-to-addendum-_104330.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-09-08T09:25:03.215Z",
-    "lastSeen": "2026-09-16T14:10:53.929Z"
+    "lastSeen": "2026-09-17T08:35:52.118Z"
   },
   {
     "id": "gaurik-fashions-limited-addendum-f7e143",
@@ -74,7 +85,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/sep-2026/gaurik-fashions-limited-addendum-to-drhp_104276.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-09-07T09:26:24.036Z",
-    "lastSeen": "2026-09-16T14:10:53.929Z"
+    "lastSeen": "2026-09-17T08:35:52.118Z"
   },
   {
     "id": "hero-motors-limited-addendum-123d67",
@@ -85,7 +96,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/hero-motors-limited-addendum-to-drhp_104121.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-31T09:17:41.391Z",
-    "lastSeen": "2026-09-16T14:10:53.929Z"
+    "lastSeen": "2026-09-17T08:35:52.118Z"
   },
   {
     "id": "karamtara-engineering-limited-addendum-9fb3c4",
@@ -107,7 +118,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/armee-infotech-limited-addendum-ii-to-drhp_104294.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-09-07T09:26:24.036Z",
-    "lastSeen": "2026-09-16T14:10:53.929Z"
+    "lastSeen": "2026-09-17T08:35:52.118Z"
   },
   {
     "id": "t-c-terrytex-limited-corrigendum-fe614a",
@@ -118,7 +129,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/aug-2026/t-c-terrytex-limited-addendum-cum-corrigendum-to-drhp_103904.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-08-24T11:02:16.253Z",
-    "lastSeen": "2026-09-16T14:10:53.929Z"
+    "lastSeen": "2026-09-17T08:35:52.118Z"
   },
   {
     "id": "lumino-industries-limited-corrigendum-9e4344",
