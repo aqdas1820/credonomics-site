@@ -10,9 +10,9 @@ export type CardReviewQueueItem = {
 }
 
 export const cardReviewQueueMeta = {
-  "generatedAt": "2026-09-14T07:56:51.251Z",
-  "itemCount": 233,
-  "newCardCandidates": 226,
+  "generatedAt": "2026-09-17T07:45:16.547Z",
+  "itemCount": 238,
+  "newCardCandidates": 231,
   "possibleFeeChanges": 7,
   "reviewDue": 0
 } as const
@@ -1219,19 +1219,51 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
+    "id": "c3741f2d44cf",
+    "type": "new-card-candidate",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Are there any EMI conversion charges on my IDFC FIRST Bank Credit Card",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "8eacd9a8a2ad",
+    "type": "new-card-candidate",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Can I apply for an add-on card?",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/add-on-credit-card",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "d42933134180",
+    "type": "new-card-candidate",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Can I pay my Credit Card bill online via NEFT?",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "4e0eb9e3112c",
+    "type": "new-card-candidate",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Can I use my Credit Card for international transactions?",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/wow",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "81953f4b054f",
+    "type": "new-card-candidate",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Can I withdraw cash using my Credit Card?",
+    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/key-factors-for-credit-card-cash-withdrawal",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
     "id": "21f75dc32768",
     "type": "new-card-candidate",
     "issuer": "IDFC FIRST Bank",
     "name": "Compare Credit Card Fees & Benefits",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "41dbfd25efc7",
-    "type": "new-card-candidate",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Credit Card EMI Calculator",
-    "sourceUrl": "https://www.idfcfirstbank.com/calculators/credit-card-emi-calculator?utm_source=website&utm_medium=PDPCCSQL&utm_campaign=CCEMICalc",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
@@ -1267,19 +1299,19 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
+    "id": "89dccd023eb1",
+    "type": "new-card-candidate",
+    "issuer": "IDFC FIRST Bank",
+    "name": "I already have an IDFC FIRST Bank Credit Card. Can I apply for another one?",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
     "id": "9264410619ac",
     "type": "new-card-candidate",
     "issuer": "IDFC FIRST Bank",
     "name": "IndiGo IDFC Dual Cards",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card/indigo-credit-card?utm_source=website&utm_medium=PDPIndigoIDFCFIRST&utm_campaign=Knowmore",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "721c365802f6",
-    "type": "new-card-candidate",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Instant Loan on Credit Card",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/Quick-Cash?utm_source=website&utm_medium=PDPLAC&utm_campaign=ExploreNow",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
@@ -1312,6 +1344,14 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "IDFC FIRST Bank",
     "name": "Quantum+ Credit Card",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card/quantum-plus-credit-card?utm_source=website&utm_medium=PDPQuantum+&utm_campaign=Knowmore",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "f16f66de090b",
+    "type": "new-card-candidate",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Things to keep in mind when applying for a credit card online",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
