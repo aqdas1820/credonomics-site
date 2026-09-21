@@ -1,101 +1,14 @@
 {
   "meta": {
-    "generatedAt": "2026-09-18T13:34:12.648Z",
-    "recordCount": 8,
-    "nseCount": 8,
+    "generatedAt": "2026-09-21T08:51:22.324Z",
+    "recordCount": 5,
+    "nseCount": 5,
     "bseCount": 0,
-    "activeCount": 8,
+    "activeCount": 5,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 8 · BSE SME unavailable · BSE mainboard 0"
+    "sourceStatus": "NSE API 5 · BSE SME unavailable · BSE mainboard 0"
   },
   "records": [
-    {
-      "slug": "hero-motors-ltd-5599474",
-      "companyName": "Hero Motors Limited",
-      "symbol": "HEROMOTORS",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 79,
-        "priceBandHigh": 84,
-        "openDate": "2026-09-16",
-        "closeDate": "2026-09-18",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 4.008565902182924,
-        "updatedAt": "2026-09-18T13:34:12.648Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HEROMOTORS&type=Active"
-      },
-      "sharesOffered": 88607596,
-      "sharesBid": 355189388,
-      "estimatedIssueValueCr": 744.3,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HEROMOTORS&type=Active",
-      "fetchedAt": "2026-09-18T13:34:12.648Z"
-    },
-    {
-      "slug": "jindal-supreme-india-ltd-c38cdf5",
-      "companyName": "Jindal Supreme (India) Limited",
-      "symbol": "JSIPL",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 88,
-        "priceBandHigh": 93,
-        "openDate": "2026-09-16",
-        "closeDate": "2026-09-18",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 125.10088471849866,
-        "updatedAt": "2026-09-18T13:34:12.648Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JSIPL&type=Active"
-      },
-      "sharesOffered": 9399600,
-      "sharesBid": 1175898276,
-      "estimatedIssueValueCr": 87.42,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JSIPL&type=Active",
-      "fetchedAt": "2026-09-18T13:34:12.648Z"
-    },
-    {
-      "slug": "ss-retail-ltd-db810d2",
-      "companyName": "SS Retail Limited",
-      "symbol": "SSRETAIL",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 403,
-        "priceBandHigh": 424,
-        "openDate": "2026-09-16",
-        "closeDate": "2026-09-18",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 71.33152597873703,
-        "updatedAt": "2026-09-18T13:34:12.648Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SSRETAIL&type=Active"
-      },
-      "sharesOffered": 8793884,
-      "sharesBid": 627281165,
-      "estimatedIssueValueCr": 372.86,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SSRETAIL&type=Active",
-      "fetchedAt": "2026-09-18T13:34:12.648Z"
-    },
     {
       "slug": "kheria-autocomp-ltd-efd56e9",
       "companyName": "Kheria Autocomp Limited",
@@ -111,16 +24,16 @@
         ]
       },
       "subscription": {
-        "total": 0.45,
-        "updatedAt": "2026-09-18T13:34:12.648Z",
+        "total": 1.28,
+        "updatedAt": "2026-09-21T08:51:22.324Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=KHERIAAUTO&type=Active"
       },
       "sharesOffered": 3288000,
-      "sharesBid": 1478400,
+      "sharesBid": 4195200,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=KHERIAAUTO&type=Active",
-      "fetchedAt": "2026-09-18T13:34:12.648Z"
+      "fetchedAt": "2026-09-21T08:51:22.324Z"
     },
     {
       "slug": "national-stock-exchange-of-india-ltd-b38e1aa",
@@ -139,17 +52,17 @@
         ]
       },
       "subscription": {
-        "total": 0.6040483034227069,
-        "updatedAt": "2026-09-18T13:34:12.648Z",
+        "total": 2.6313588911808186,
+        "updatedAt": "2026-09-21T08:51:22.324Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=NSE&type=Active"
       },
       "sharesOffered": 88642911,
-      "sharesBid": 53544600,
+      "sharesBid": 233251312,
       "estimatedIssueValueCr": 15822.76,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=NSE&type=Active",
-      "fetchedAt": "2026-09-18T13:34:12.648Z"
+      "fetchedAt": "2026-09-21T08:51:22.324Z"
     },
     {
       "slug": "sonaselection-india-ltd-02cab62",
@@ -168,17 +81,17 @@
         ]
       },
       "subscription": {
-        "total": 0.6866133866133867,
-        "updatedAt": "2026-09-18T13:34:12.648Z",
+        "total": 1.1127422577422577,
+        "updatedAt": "2026-09-21T08:51:22.324Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SONA&type=Active"
       },
       "sharesOffered": 10010000,
-      "sharesBid": 6873000,
+      "sharesBid": 11138550,
       "estimatedIssueValueCr": 99.1,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SONA&type=Active",
-      "fetchedAt": "2026-09-18T13:34:12.648Z"
+      "fetchedAt": "2026-09-21T08:51:22.324Z"
     },
     {
       "slug": "spectraa-technology-solutions-ltd-8234d1f",
@@ -195,16 +108,16 @@
         ]
       },
       "subscription": {
-        "total": 18.43,
-        "updatedAt": "2026-09-18T13:34:12.648Z",
+        "total": 148.66,
+        "updatedAt": "2026-09-21T08:51:22.324Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SPECTRAA&type=Active"
       },
       "sharesOffered": 2578800,
-      "sharesBid": 47528400,
+      "sharesBid": 383373600,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SPECTRAA&type=Active",
-      "fetchedAt": "2026-09-18T13:34:12.648Z"
+      "fetchedAt": "2026-09-21T08:51:22.324Z"
     },
     {
       "slug": "axiom-gas-engineering-ltd-9742d6c",
@@ -221,16 +134,16 @@
         ]
       },
       "subscription": {
-        "total": 0.58,
-        "updatedAt": "2026-09-18T13:34:12.648Z",
+        "total": 0.8,
+        "updatedAt": "2026-09-21T08:51:22.324Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=AXIOMGAS&type=Active"
       },
       "sharesOffered": 8328000,
-      "sharesBid": 4808000,
+      "sharesBid": 6658000,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=AXIOMGAS&type=Active",
-      "fetchedAt": "2026-09-18T13:34:12.648Z"
+      "fetchedAt": "2026-09-21T08:51:22.324Z"
     }
   ]
 }
