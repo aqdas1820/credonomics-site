@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-09-21T08:51:22.324Z",
+  "generatedAt": "2026-09-21T15:52:16.855Z",
   "recordCount": 5,
   "nseCount": 5,
   "bseCount": 0,
@@ -29,16 +29,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 1.28,
-      "updatedAt": "2026-09-21T08:51:22.324Z",
+      "total": 2.37,
+      "updatedAt": "2026-09-21T15:52:16.855Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=KHERIAAUTO&type=Active"
     },
     "sharesOffered": 3288000,
-    "sharesBid": 4195200,
+    "sharesBid": 7802400,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=KHERIAAUTO&type=Active",
-    "fetchedAt": "2026-09-21T08:51:22.324Z"
+    "fetchedAt": "2026-09-21T15:52:16.855Z"
   },
   {
     "slug": "national-stock-exchange-of-india-ltd-b38e1aa",
@@ -57,17 +57,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 2.6313588911808186,
-      "updatedAt": "2026-09-21T08:51:22.324Z",
+      "total": 3.8002494751103106,
+      "updatedAt": "2026-09-21T15:52:16.855Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=NSE&type=Active"
     },
     "sharesOffered": 88642911,
-    "sharesBid": 233251312,
+    "sharesBid": 336865176,
     "estimatedIssueValueCr": 15822.76,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=NSE&type=Active",
-    "fetchedAt": "2026-09-21T08:51:22.324Z"
+    "fetchedAt": "2026-09-21T15:52:16.855Z"
   },
   {
     "slug": "sonaselection-india-ltd-02cab62",
@@ -86,17 +86,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 1.1127422577422577,
-      "updatedAt": "2026-09-21T08:51:22.324Z",
+      "total": 1.455944055944056,
+      "updatedAt": "2026-09-21T15:52:16.855Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SONA&type=Active"
     },
     "sharesOffered": 10010000,
-    "sharesBid": 11138550,
+    "sharesBid": 14574000,
     "estimatedIssueValueCr": 99.1,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SONA&type=Active",
-    "fetchedAt": "2026-09-21T08:51:22.324Z"
+    "fetchedAt": "2026-09-21T15:52:16.855Z"
   },
   {
     "slug": "spectraa-technology-solutions-ltd-8234d1f",
@@ -113,16 +113,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 148.66,
-      "updatedAt": "2026-09-21T08:51:22.324Z",
+      "total": 282.62,
+      "updatedAt": "2026-09-21T15:52:16.855Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SPECTRAA&type=Active"
     },
     "sharesOffered": 2578800,
-    "sharesBid": 383373600,
+    "sharesBid": 728828400,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SPECTRAA&type=Active",
-    "fetchedAt": "2026-09-21T08:51:22.324Z"
+    "fetchedAt": "2026-09-21T15:52:16.855Z"
   },
   {
     "slug": "axiom-gas-engineering-ltd-9742d6c",
@@ -139,15 +139,15 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.8,
-      "updatedAt": "2026-09-21T08:51:22.324Z",
+      "total": 0.86,
+      "updatedAt": "2026-09-21T15:52:16.855Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=AXIOMGAS&type=Active"
     },
     "sharesOffered": 8328000,
-    "sharesBid": 6658000,
+    "sharesBid": 7126000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=AXIOMGAS&type=Active",
-    "fetchedAt": "2026-09-21T08:51:22.324Z"
+    "fetchedAt": "2026-09-21T15:52:16.855Z"
   }
 ]
