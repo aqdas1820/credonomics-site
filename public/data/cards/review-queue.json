@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-09-17T07:45:16.547Z",
-    "itemCount": 238,
-    "newCardCandidates": 231,
+    "generatedAt": "2026-09-21T08:01:26.844Z",
+    "itemCount": 233,
+    "newCardCandidates": 226,
     "possibleFeeChanges": 7,
     "reviewDue": 0
   },
@@ -168,14 +168,6 @@
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "a9a6a0887849",
-      "type": "new-card-candidate",
-      "issuer": "AU Small Finance Bank",
-      "name": "AU CS Credit Card",
-      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/au-cs-credit-card",
-      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-    },
-    {
       "id": "6695b5702d07",
       "type": "new-card-candidate",
       "issuer": "AU Small Finance Bank",
@@ -288,27 +280,11 @@
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
-      "id": "310ce198fff2",
-      "type": "new-card-candidate",
-      "issuer": "AU Small Finance Bank",
-      "name": "LIT Credit Card",
-      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/lit-credit-card",
-      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-    },
-    {
       "id": "f081d61724d6",
       "type": "new-card-candidate",
       "issuer": "AU Small Finance Bank",
       "name": "Manage Features Of LIT Credit Card",
       "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-    },
-    {
-      "id": "af060de591fe",
-      "type": "new-card-candidate",
-      "issuer": "AU Small Finance Bank",
-      "name": "NOMO Credit Card",
-      "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/nomo-credit-card",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
@@ -381,14 +357,6 @@
       "issuer": "AU Small Finance Bank",
       "name": "Visa Business Gold Debit Card",
       "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-    },
-    {
-      "id": "dc282f17cf9a",
-      "type": "new-card-candidate",
-      "issuer": "AU Small Finance Bank",
-      "name": "Zenith+ Credit Card",
-      "sourceUrl": "https://www.au.bank.in/premium-banking/credit-cards/zenith-plus-credit-card",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
@@ -1709,14 +1677,6 @@
       "issuer": "Kotak Mahindra Bank",
       "name": "Credit Card Interest Rates & Charges",
       "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards/credit-card-services/credit-card-payments.html",
-      "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-    },
-    {
-      "id": "50f113abfe67",
-      "type": "new-card-candidate",
-      "issuer": "Kotak Mahindra Bank",
-      "name": "Enjoy a free flight ticket worth 5,000* every calender quarter with Kotak Air+ Credit Card",
-      "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards/credit-card-services.html",
       "message": "Official-source discovery record is not yet normalized in the verified ranking database."
     },
     {
