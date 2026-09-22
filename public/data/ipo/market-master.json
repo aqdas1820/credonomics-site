@@ -1,124 +1,14 @@
 {
   "meta": {
-    "generatedAt": "2026-09-21T15:52:16.855Z",
-    "recordCount": 5,
-    "nseCount": 5,
+    "generatedAt": "2026-09-22T08:28:39.574Z",
+    "recordCount": 2,
+    "nseCount": 2,
     "bseCount": 0,
-    "activeCount": 5,
+    "activeCount": 2,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 5 · BSE SME unavailable · BSE mainboard 0"
+    "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard 0"
   },
   "records": [
-    {
-      "slug": "kheria-autocomp-ltd-efd56e9",
-      "companyName": "Kheria Autocomp Limited",
-      "symbol": "KHERIAAUTO",
-      "marketSegment": "sme",
-      "status": "open",
-      "securityType": "SME",
-      "issue": {
-        "openDate": "2026-09-17",
-        "closeDate": "2026-09-21",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 2.37,
-        "updatedAt": "2026-09-21T15:52:16.855Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=KHERIAAUTO&type=Active"
-      },
-      "sharesOffered": 3288000,
-      "sharesBid": 7802400,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=KHERIAAUTO&type=Active",
-      "fetchedAt": "2026-09-21T15:52:16.855Z"
-    },
-    {
-      "slug": "national-stock-exchange-of-india-ltd-b38e1aa",
-      "companyName": "National Stock Exchange of India Limited",
-      "symbol": "NSE",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 1700,
-        "priceBandHigh": 1785,
-        "openDate": "2026-09-17",
-        "closeDate": "2026-09-21",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 3.8002494751103106,
-        "updatedAt": "2026-09-21T15:52:16.855Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=NSE&type=Active"
-      },
-      "sharesOffered": 88642911,
-      "sharesBid": 336865176,
-      "estimatedIssueValueCr": 15822.76,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=NSE&type=Active",
-      "fetchedAt": "2026-09-21T15:52:16.855Z"
-    },
-    {
-      "slug": "sonaselection-india-ltd-02cab62",
-      "companyName": "Sonaselection India Limited",
-      "symbol": "SONA",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 94,
-        "priceBandHigh": 99,
-        "openDate": "2026-09-17",
-        "closeDate": "2026-09-21",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 1.455944055944056,
-        "updatedAt": "2026-09-21T15:52:16.855Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SONA&type=Active"
-      },
-      "sharesOffered": 10010000,
-      "sharesBid": 14574000,
-      "estimatedIssueValueCr": 99.1,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SONA&type=Active",
-      "fetchedAt": "2026-09-21T15:52:16.855Z"
-    },
-    {
-      "slug": "spectraa-technology-solutions-ltd-8234d1f",
-      "companyName": "SpectraA Technology Solutions Limited",
-      "symbol": "SPECTRAA",
-      "marketSegment": "sme",
-      "status": "open",
-      "securityType": "SME",
-      "issue": {
-        "openDate": "2026-09-17",
-        "closeDate": "2026-09-21",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 282.62,
-        "updatedAt": "2026-09-21T15:52:16.855Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SPECTRAA&type=Active"
-      },
-      "sharesOffered": 2578800,
-      "sharesBid": 728828400,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SPECTRAA&type=Active",
-      "fetchedAt": "2026-09-21T15:52:16.855Z"
-    },
     {
       "slug": "axiom-gas-engineering-ltd-9742d6c",
       "companyName": "Axiom Gas Engineering Limited",
@@ -134,16 +24,45 @@
         ]
       },
       "subscription": {
-        "total": 0.86,
-        "updatedAt": "2026-09-21T15:52:16.855Z",
+        "total": 1.2,
+        "updatedAt": "2026-09-22T08:28:39.574Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=AXIOMGAS&type=Active"
       },
       "sharesOffered": 8328000,
-      "sharesBid": 7126000,
+      "sharesBid": 9964000,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=AXIOMGAS&type=Active",
-      "fetchedAt": "2026-09-21T15:52:16.855Z"
+      "fetchedAt": "2026-09-22T08:28:39.574Z"
+    },
+    {
+      "slug": "varmora-granito-ltd-0033b6c",
+      "companyName": "Varmora Granito Limited",
+      "symbol": "VARMORA",
+      "marketSegment": "mainboard",
+      "status": "open",
+      "securityType": "EQ",
+      "issue": {
+        "priceBandLow": 140,
+        "priceBandHigh": 148,
+        "openDate": "2026-09-22",
+        "closeDate": "2026-09-24",
+        "exchange": [
+          "NSE"
+        ]
+      },
+      "subscription": {
+        "total": 0.05573293304504727,
+        "updatedAt": "2026-09-22T08:28:39.574Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VARMORA&type=Active"
+      },
+      "sharesOffered": 33902899,
+      "sharesBid": 1889508,
+      "estimatedIssueValueCr": 501.76,
+      "marketSource": "NSE",
+      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VARMORA&type=Active",
+      "fetchedAt": "2026-09-22T08:28:39.574Z"
     }
   ]
 }
