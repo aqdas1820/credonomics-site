@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-09-22T08:28:39.574Z",
+    "generatedAt": "2026-09-22T14:01:06.733Z",
     "recordCount": 2,
     "nseCount": 2,
     "bseCount": 0,
@@ -24,16 +24,16 @@
         ]
       },
       "subscription": {
-        "total": 1.2,
-        "updatedAt": "2026-09-22T08:28:39.574Z",
+        "total": 1.37,
+        "updatedAt": "2026-09-22T14:01:06.733Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=AXIOMGAS&type=Active"
       },
       "sharesOffered": 8328000,
-      "sharesBid": 9964000,
+      "sharesBid": 11392000,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=AXIOMGAS&type=Active",
-      "fetchedAt": "2026-09-22T08:28:39.574Z"
+      "fetchedAt": "2026-09-22T14:01:06.733Z"
     },
     {
       "slug": "varmora-granito-ltd-0033b6c",
@@ -52,17 +52,17 @@
         ]
       },
       "subscription": {
-        "total": 0.05573293304504727,
-        "updatedAt": "2026-09-22T08:28:39.574Z",
+        "total": 0.07312787617365701,
+        "updatedAt": "2026-09-22T14:01:06.733Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VARMORA&type=Active"
       },
       "sharesOffered": 33902899,
-      "sharesBid": 1889508,
+      "sharesBid": 2479247,
       "estimatedIssueValueCr": 501.76,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VARMORA&type=Active",
-      "fetchedAt": "2026-09-22T08:28:39.574Z"
+      "fetchedAt": "2026-09-22T14:01:06.733Z"
     }
   ]
 }
