@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-09-23T08:30:42.207Z",
+  "generatedAt": "2026-09-23T14:12:54.631Z",
   "recordCount": 7,
   "nseCount": 7,
   "bseCount": 0,
@@ -31,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.12943875389535273,
-      "updatedAt": "2026-09-23T08:30:42.207Z",
+      "total": 0.19462733850577202,
+      "updatedAt": "2026-09-23T14:12:54.631Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VARMORA&type=Active"
     },
     "sharesOffered": 33902899,
-    "sharesBid": 4388349,
+    "sharesBid": 6598431,
     "estimatedIssueValueCr": 501.76,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VARMORA&type=Active",
-    "fetchedAt": "2026-09-23T08:30:42.207Z"
+    "fetchedAt": "2026-09-23T14:12:54.631Z"
   },
   {
     "slug": "adroit-industries-india-ltd-ec3249d",
@@ -60,17 +60,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 1.7802522577449225,
-      "updatedAt": "2026-09-23T08:30:42.207Z",
+      "total": 3.0569447090652746,
+      "updatedAt": "2026-09-23T14:12:54.631Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ADROITIND&type=Active"
     },
     "sharesOffered": 7872900,
-    "sharesBid": 14015748,
+    "sharesBid": 24067020,
     "estimatedIssueValueCr": 105.5,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ADROITIND&type=Active",
-    "fetchedAt": "2026-09-23T08:30:42.207Z"
+    "fetchedAt": "2026-09-23T14:12:54.631Z"
   },
   {
     "slug": "armee-infotech-ltd-1423f4f",
@@ -89,17 +89,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.3012399405896568,
-      "updatedAt": "2026-09-23T08:30:42.207Z",
+      "total": 0.3879652603455339,
+      "updatedAt": "2026-09-23T14:12:54.631Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ARMEE&type=Active"
     },
     "sharesOffered": 7430356,
-    "sharesBid": 2238320,
+    "sharesBid": 2882720,
     "estimatedIssueValueCr": 278.64,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ARMEE&type=Active",
-    "fetchedAt": "2026-09-23T08:30:42.207Z"
+    "fetchedAt": "2026-09-23T14:12:54.631Z"
   },
   {
     "slug": "coreintegra-consulting-services-ltd-11094d7",
@@ -116,16 +116,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.11,
-      "updatedAt": "2026-09-23T08:30:42.207Z",
+      "total": 0.13,
+      "updatedAt": "2026-09-23T14:12:54.631Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=COREIN&type=Active"
     },
     "sharesOffered": 2819200,
-    "sharesBid": 318400,
+    "sharesBid": 379200,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=COREIN&type=Active",
-    "fetchedAt": "2026-09-23T08:30:42.207Z"
+    "fetchedAt": "2026-09-23T14:12:54.631Z"
   },
   {
     "slug": "elevate-campuses-ltd-05a764c",
@@ -144,17 +144,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.03081927884588543,
-      "updatedAt": "2026-09-23T08:30:42.207Z",
+      "total": 0.08191484761830888,
+      "updatedAt": "2026-09-23T14:12:54.631Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ELEVATE&type=Active"
     },
     "sharesOffered": 33673468,
-    "sharesBid": 1037792,
+    "sharesBid": 2758357,
     "estimatedIssueValueCr": 1218.98,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ELEVATE&type=Active",
-    "fetchedAt": "2026-09-23T08:30:42.207Z"
+    "fetchedAt": "2026-09-23T14:12:54.631Z"
   },
   {
     "slug": "pooja-logistics-ltd-3fce861",
@@ -171,16 +171,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.23,
-      "updatedAt": "2026-09-23T08:30:42.207Z",
+      "total": 0.31,
+      "updatedAt": "2026-09-23T14:12:54.631Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=POOJALOGIS&type=Active"
     },
     "sharesOffered": 2784000,
-    "sharesBid": 645600,
+    "sharesBid": 874800,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=POOJALOGIS&type=Active",
-    "fetchedAt": "2026-09-23T08:30:42.207Z"
+    "fetchedAt": "2026-09-23T14:12:54.631Z"
   },
   {
     "slug": "swastika-infra-ltd-35a05ac",
@@ -199,16 +199,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.4580111352784317,
-      "updatedAt": "2026-09-23T08:30:42.207Z",
+      "total": 0.7894014539224224,
+      "updatedAt": "2026-09-23T14:12:54.631Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SWASTIKAIN&type=Active"
     },
     "sharesOffered": 6335001,
-    "sharesBid": 2901501,
+    "sharesBid": 5000859,
     "estimatedIssueValueCr": 117.2,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SWASTIKAIN&type=Active",
-    "fetchedAt": "2026-09-23T08:30:42.207Z"
+    "fetchedAt": "2026-09-23T14:12:54.631Z"
   }
 ]
