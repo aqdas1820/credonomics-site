@@ -10,7 +10,7 @@ export type CardReviewQueueItem = {
 }
 
 export const cardReviewQueueMeta = {
-  "generatedAt": "2026-09-21T08:01:26.844Z",
+  "generatedAt": "2026-09-24T07:39:00.746Z",
   "itemCount": 233,
   "newCardCandidates": 226,
   "possibleFeeChanges": 7,
@@ -155,14 +155,6 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
-    "id": "4527f98a32e9",
-    "type": "new-card-candidate",
-    "issuer": "AU Small Finance Bank",
-    "name": "Add-On Credit Card",
-    "sourceUrl": "https://www.au.bank.in/cards/credit-cards/add-on-credit-card",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
     "id": "2b9d52a95e7b",
     "type": "new-card-candidate",
     "issuer": "AU Small Finance Bank",
@@ -179,19 +171,19 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
+    "id": "a9a6a0887849",
+    "type": "new-card-candidate",
+    "issuer": "AU Small Finance Bank",
+    "name": "AU CS Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/au-cs-credit-card",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
     "id": "6695b5702d07",
     "type": "new-card-candidate",
     "issuer": "AU Small Finance Bank",
     "name": "AU Royale Business Debit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "ff8aebbf7727",
-    "type": "new-card-candidate",
-    "issuer": "AU Small Finance Bank",
-    "name": "Block Lost/Stolen Card",
-    "sourceUrl": "https://www.au.bank.in/cards/credit-card/block-credit-card",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
@@ -291,11 +283,19 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
-    "id": "f081d61724d6",
+    "id": "310ce198fff2",
     "type": "new-card-candidate",
     "issuer": "AU Small Finance Bank",
-    "name": "Manage Features Of LIT Credit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "name": "LIT Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/lit-credit-card",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "af060de591fe",
+    "type": "new-card-candidate",
+    "issuer": "AU Small Finance Bank",
+    "name": "NOMO Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/nomo-credit-card",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
@@ -320,14 +320,6 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "AU Small Finance Bank",
     "name": "Presenting AU Credit Cards, A World of Limitless Possibilities.",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "03ee3d79098b",
-    "type": "new-card-candidate",
-    "issuer": "AU Small Finance Bank",
-    "name": "Set/Reset PIN & Activate Card",
-    "sourceUrl": "https://www.au.bank.in/cards/credit-card/manage-credit-card",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
@@ -368,6 +360,14 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "AU Small Finance Bank",
     "name": "Visa Business Gold Debit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "dc282f17cf9a",
+    "type": "new-card-candidate",
+    "issuer": "AU Small Finance Bank",
+    "name": "Zenith+ Credit Card",
+    "sourceUrl": "https://www.au.bank.in/premium-banking/credit-cards/zenith-plus-credit-card",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
@@ -1103,7 +1103,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "type": "new-card-candidate",
     "issuer": "ICICI Bank",
     "name": "Personal Loan Credit Card",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/culinary-treat",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/personal-loan-on-credit-card",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
@@ -1839,7 +1839,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "type": "new-card-candidate",
     "issuer": "Standard Chartered India",
     "name": "Platinum Rewards Card",
-    "sourceUrl": "https://www.sc.com/content/dam/sc/in/credit-cards/docs/in-sc-platinum-rewards-credit-card-tcs.pdf",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
@@ -1879,7 +1879,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "type": "new-card-candidate",
     "issuer": "Standard Chartered India",
     "name": "Ultimate Credit Card",
-    "sourceUrl": "https://www.sc.com/content/dam/sc/in/credit-cards/docs/in-ultimate-credit-card-tnc.pdf",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   }
 ]
