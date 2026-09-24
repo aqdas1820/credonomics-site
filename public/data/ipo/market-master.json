@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-09-24T08:23:07.533Z",
+    "generatedAt": "2026-09-24T14:11:07.249Z",
     "recordCount": 10,
     "nseCount": 10,
     "bseCount": 0,
@@ -26,17 +26,17 @@
         ]
       },
       "subscription": {
-        "total": 0.40765059648733876,
-        "updatedAt": "2026-09-24T08:23:07.533Z",
+        "total": 0.9725319359857693,
+        "updatedAt": "2026-09-24T14:11:07.249Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VARMORA&type=Active"
       },
       "sharesOffered": 33902899,
-      "sharesBid": 13820537,
+      "sharesBid": 32971652,
       "estimatedIssueValueCr": 501.76,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VARMORA&type=Active",
-      "fetchedAt": "2026-09-24T08:23:07.533Z"
+      "fetchedAt": "2026-09-24T14:11:07.249Z"
     },
     {
       "slug": "adroit-industries-india-ltd-ec3249d",
@@ -55,17 +55,17 @@
         ]
       },
       "subscription": {
-        "total": 7.213202377776931,
-        "updatedAt": "2026-09-24T08:23:07.533Z",
+        "total": 10.899498151888123,
+        "updatedAt": "2026-09-24T14:11:07.249Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ADROITIND&type=Active"
       },
       "sharesOffered": 7872900,
-      "sharesBid": 56788821,
+      "sharesBid": 85810659,
       "estimatedIssueValueCr": 105.5,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ADROITIND&type=Active",
-      "fetchedAt": "2026-09-24T08:23:07.533Z"
+      "fetchedAt": "2026-09-24T14:11:07.249Z"
     },
     {
       "slug": "armee-infotech-ltd-1423f4f",
@@ -84,17 +84,17 @@
         ]
       },
       "subscription": {
-        "total": 0.6464670064260717,
-        "updatedAt": "2026-09-24T08:23:07.533Z",
+        "total": 0.7831011057882018,
+        "updatedAt": "2026-09-24T14:11:07.249Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ARMEE&type=Active"
       },
       "sharesOffered": 7430356,
-      "sharesBid": 4803480,
+      "sharesBid": 5818720,
       "estimatedIssueValueCr": 278.64,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ARMEE&type=Active",
-      "fetchedAt": "2026-09-24T08:23:07.533Z"
+      "fetchedAt": "2026-09-24T14:11:07.249Z"
     },
     {
       "slug": "coreintegra-consulting-services-ltd-11094d7",
@@ -111,16 +111,16 @@
         ]
       },
       "subscription": {
-        "total": 0.33,
-        "updatedAt": "2026-09-24T08:23:07.533Z",
+        "total": 0.48,
+        "updatedAt": "2026-09-24T14:11:07.249Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=COREIN&type=Active"
       },
       "sharesOffered": 2819200,
-      "sharesBid": 916800,
+      "sharesBid": 1364800,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=COREIN&type=Active",
-      "fetchedAt": "2026-09-24T08:23:07.533Z"
+      "fetchedAt": "2026-09-24T14:11:07.249Z"
     },
     {
       "slug": "elevate-campuses-ltd-05a764c",
@@ -139,17 +139,17 @@
         ]
       },
       "subscription": {
-        "total": 0.09398589417638836,
-        "updatedAt": "2026-09-24T08:23:07.533Z",
+        "total": 0.1031542400087808,
+        "updatedAt": "2026-09-24T14:11:07.249Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ELEVATE&type=Active"
       },
       "sharesOffered": 33673468,
-      "sharesBid": 3164831,
+      "sharesBid": 3473561,
       "estimatedIssueValueCr": 1218.98,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ELEVATE&type=Active",
-      "fetchedAt": "2026-09-24T08:23:07.533Z"
+      "fetchedAt": "2026-09-24T14:11:07.249Z"
     },
     {
       "slug": "pooja-logistics-ltd-3fce861",
@@ -166,16 +166,16 @@
         ]
       },
       "subscription": {
-        "total": 0.37,
-        "updatedAt": "2026-09-24T08:23:07.533Z",
+        "total": 0.44,
+        "updatedAt": "2026-09-24T14:11:07.249Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=POOJALOGIS&type=Active"
       },
       "sharesOffered": 2784000,
-      "sharesBid": 1032000,
+      "sharesBid": 1214400,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=POOJALOGIS&type=Active",
-      "fetchedAt": "2026-09-24T08:23:07.533Z"
+      "fetchedAt": "2026-09-24T14:11:07.249Z"
     },
     {
       "slug": "swastika-infra-ltd-35a05ac",
@@ -194,17 +194,17 @@
         ]
       },
       "subscription": {
-        "total": 1.0332452986195266,
-        "updatedAt": "2026-09-24T08:23:07.533Z",
+        "total": 1.2742250553709462,
+        "updatedAt": "2026-09-24T14:11:07.249Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SWASTIKAIN&type=Active"
       },
       "sharesOffered": 6335001,
-      "sharesBid": 6545610,
+      "sharesBid": 8072217,
       "estimatedIssueValueCr": 117.2,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SWASTIKAIN&type=Active",
-      "fetchedAt": "2026-09-24T08:23:07.533Z"
+      "fetchedAt": "2026-09-24T14:11:07.249Z"
     },
     {
       "slug": "a-one-steels-india-ltd-5f8eaf7",
@@ -223,17 +223,17 @@
         ]
       },
       "subscription": {
-        "total": 0.21844474168624933,
-        "updatedAt": "2026-09-24T08:23:07.533Z",
+        "total": 0.397995296911252,
+        "updatedAt": "2026-09-24T14:11:07.249Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=AONESTEELS&type=Active"
       },
       "sharesOffered": 7384934,
-      "sharesBid": 1613200,
+      "sharesBid": 2939169,
       "estimatedIssueValueCr": 299.09,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=AONESTEELS&type=Active",
-      "fetchedAt": "2026-09-24T08:23:07.533Z"
+      "fetchedAt": "2026-09-24T14:11:07.249Z"
     },
     {
       "slug": "green-asia-impex-ltd-06e7139",
@@ -251,15 +251,15 @@
       },
       "subscription": {
         "total": 0.01,
-        "updatedAt": "2026-09-24T08:23:07.533Z",
+        "updatedAt": "2026-09-24T14:11:07.249Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=GREENASIA&type=Active"
       },
       "sharesOffered": 7057600,
-      "sharesBid": 48000,
+      "sharesBid": 86400,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=GREENASIA&type=Active",
-      "fetchedAt": "2026-09-24T08:23:07.533Z"
+      "fetchedAt": "2026-09-24T14:11:07.249Z"
     },
     {
       "slug": "moneyview-ltd-8039f66",
@@ -278,17 +278,17 @@
         ]
       },
       "subscription": {
-        "total": 0.6276114644853594,
-        "updatedAt": "2026-09-24T08:23:07.533Z",
+        "total": 1.0861165382051134,
+        "updatedAt": "2026-09-24T14:11:07.249Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MONEYVIEW&type=Active"
       },
       "sharesOffered": 232524175,
-      "sharesBid": 145934838,
+      "sharesBid": 252548352,
       "estimatedIssueValueCr": 790.58,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MONEYVIEW&type=Active",
-      "fetchedAt": "2026-09-24T08:23:07.533Z"
+      "fetchedAt": "2026-09-24T14:11:07.249Z"
     }
   ]
 }
