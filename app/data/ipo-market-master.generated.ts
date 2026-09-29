@@ -4,45 +4,16 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-09-28T09:40:26.536Z",
-  "recordCount": 11,
-  "nseCount": 11,
+  "generatedAt": "2026-09-29T09:44:58.096Z",
+  "recordCount": 10,
+  "nseCount": 10,
   "bseCount": 0,
-  "activeCount": 11,
+  "activeCount": 10,
   "upcomingCount": 0,
-  "sourceStatus": "NSE API 11 · BSE SME unavailable · BSE mainboard 0"
+  "sourceStatus": "NSE API 10 · BSE SME unavailable · BSE mainboard 0"
 } as const
 
 export const ipoMarketMaster: IpoMarketRecord[] = [
-  {
-    "slug": "a-one-steels-india-ltd-5f8eaf7",
-    "companyName": "A-One Steels India Limited",
-    "symbol": "AONESTEELS",
-    "marketSegment": "mainboard",
-    "status": "open",
-    "securityType": "EQ",
-    "issue": {
-      "priceBandLow": 385,
-      "priceBandHigh": 405,
-      "openDate": "2026-09-24",
-      "closeDate": "2026-09-28",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 5.8195833571430695,
-      "updatedAt": "2026-09-28T09:40:26.536Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=AONESTEELS&type=Active"
-    },
-    "sharesOffered": 7384934,
-    "sharesBid": 42977239,
-    "estimatedIssueValueCr": 299.09,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=AONESTEELS&type=Active",
-    "fetchedAt": "2026-09-28T09:40:26.536Z"
-  },
   {
     "slug": "green-asia-impex-ltd-06e7139",
     "companyName": "Green Asia Impex Limited",
@@ -52,51 +23,22 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     "securityType": "SME",
     "issue": {
       "openDate": "2026-09-24",
-      "closeDate": "2026-09-28",
+      "closeDate": "2026-10-01",
       "exchange": [
         "NSE"
       ]
     },
     "subscription": {
-      "total": 0.37,
-      "updatedAt": "2026-09-28T09:40:26.536Z",
+      "total": 0.51,
+      "updatedAt": "2026-09-29T09:44:58.096Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=GREENASIA&type=Active"
     },
     "sharesOffered": 7057600,
-    "sharesBid": 2633600,
+    "sharesBid": 3627200,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=GREENASIA&type=Active",
-    "fetchedAt": "2026-09-28T09:40:26.536Z"
-  },
-  {
-    "slug": "moneyview-ltd-8039f66",
-    "companyName": "Moneyview Limited",
-    "symbol": "MONEYVIEW",
-    "marketSegment": "mainboard",
-    "status": "open",
-    "securityType": "EQ",
-    "issue": {
-      "priceBandLow": 32,
-      "priceBandHigh": 34,
-      "openDate": "2026-09-24",
-      "closeDate": "2026-09-28",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 53.058103046704716,
-      "updatedAt": "2026-09-28T09:40:26.536Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MONEYVIEW&type=Active"
-    },
-    "sharesOffered": 232524175,
-    "sharesBid": 12337291638,
-    "estimatedIssueValueCr": 790.58,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MONEYVIEW&type=Active",
-    "fetchedAt": "2026-09-28T09:40:26.536Z"
+    "fetchedAt": "2026-09-29T09:44:58.096Z"
   },
   {
     "slug": "acevector-ltd-7f40cfc",
@@ -115,17 +57,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.8896071929462336,
-      "updatedAt": "2026-09-28T09:40:26.536Z",
+      "total": 2.5952445700386826,
+      "updatedAt": "2026-09-29T09:44:58.096Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ACEVECTOR&type=Active"
     },
     "sharesOffered": 74229166,
-    "sharesBid": 66034800,
+    "sharesBid": 192642840,
     "estimatedIssueValueCr": 237.53,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ACEVECTOR&type=Active",
-    "fetchedAt": "2026-09-28T09:40:26.536Z"
+    "fetchedAt": "2026-09-29T09:44:58.096Z"
   },
   {
     "slug": "bench-mark-infotech-services-ltd-e18315a",
@@ -142,16 +84,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.96,
-      "updatedAt": "2026-09-28T09:40:26.536Z",
+      "total": 66.19,
+      "updatedAt": "2026-09-29T09:44:58.096Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=BMISL&type=Active"
     },
     "sharesOffered": 2761200,
-    "sharesBid": 2647200,
+    "sharesBid": 182760000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=BMISL&type=Active",
-    "fetchedAt": "2026-09-28T09:40:26.536Z"
+    "fetchedAt": "2026-09-29T09:44:58.096Z"
   },
   {
     "slug": "german-green-steel-and-power-ltd-67bf82d",
@@ -170,17 +112,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 3.4420446670861433,
-      "updatedAt": "2026-09-28T09:40:26.536Z",
+      "total": 17.927114746989005,
+      "updatedAt": "2026-09-29T09:44:58.096Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=GERMAN&type=Active"
     },
     "sharesOffered": 16062879,
-    "sharesBid": 55289147,
+    "sharesBid": 287961075,
     "estimatedIssueValueCr": 223.27,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=GERMAN&type=Active",
-    "fetchedAt": "2026-09-28T09:40:26.536Z"
+    "fetchedAt": "2026-09-29T09:44:58.096Z"
   },
   {
     "slug": "himalayan-solar-ltd-2d741c6",
@@ -197,16 +139,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.64,
-      "updatedAt": "2026-09-28T09:40:26.536Z",
+      "total": 1.12,
+      "updatedAt": "2026-09-29T09:44:58.096Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=HIMALAYAN&type=Active"
     },
     "sharesOffered": 5852400,
-    "sharesBid": 3744000,
+    "sharesBid": 6530400,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=HIMALAYAN&type=Active",
-    "fetchedAt": "2026-09-28T09:40:26.536Z"
+    "fetchedAt": "2026-09-29T09:44:58.096Z"
   },
   {
     "slug": "orient-cables-india-ltd-6361c7e",
@@ -225,17 +167,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 4.557469204085294,
-      "updatedAt": "2026-09-28T09:40:26.536Z",
+      "total": 44.72425780425023,
+      "updatedAt": "2026-09-29T09:44:58.096Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ORIENTCABL&type=Active"
     },
     "sharesOffered": 14976743,
-    "sharesBid": 68256045,
+    "sharesBid": 669823715,
     "estimatedIssueValueCr": 407.37,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ORIENTCABL&type=Active",
-    "fetchedAt": "2026-09-28T09:40:26.536Z"
+    "fetchedAt": "2026-09-29T09:44:58.096Z"
   },
   {
     "slug": "runwal-enterprises-ltd-40ace5c",
@@ -254,17 +196,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.3453180147389701,
-      "updatedAt": "2026-09-28T09:40:26.536Z",
+      "total": 0.9973246459048885,
+      "updatedAt": "2026-09-29T09:44:58.096Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=RUNWALENTR&type=Active"
     },
     "sharesOffered": 12111294,
-    "sharesBid": 4182248,
+    "sharesBid": 12078892,
     "estimatedIssueValueCr": 365.76,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=RUNWALENTR&type=Active",
-    "fetchedAt": "2026-09-28T09:40:26.536Z"
+    "fetchedAt": "2026-09-29T09:44:58.096Z"
   },
   {
     "slug": "shah-investor-s-home-ltd-ab7d47f",
@@ -283,17 +225,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.1862180640518172,
-      "updatedAt": "2026-09-28T09:40:26.536Z",
+      "total": 0.6710597337171644,
+      "updatedAt": "2026-09-29T09:44:58.096Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHAHINVEST&type=Active"
     },
     "sharesOffered": 3779440,
-    "sharesBid": 703800,
+    "sharesBid": 2536230,
     "estimatedIssueValueCr": 63.12,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHAHINVEST&type=Active",
-    "fetchedAt": "2026-09-28T09:40:26.536Z"
+    "fetchedAt": "2026-09-29T09:44:58.096Z"
   },
   {
     "slug": "srit-india-ltd-782fd69",
@@ -312,16 +254,42 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.4930331632653061,
-      "updatedAt": "2026-09-28T09:40:26.536Z",
+      "total": 2.2203898809523808,
+      "updatedAt": "2026-09-29T09:44:58.096Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SRIT&type=Active"
     },
     "sharesOffered": 11760000,
-    "sharesBid": 5798070,
+    "sharesBid": 26111785,
     "estimatedIssueValueCr": 152.88,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SRIT&type=Active",
-    "fetchedAt": "2026-09-28T09:40:26.536Z"
+    "fetchedAt": "2026-09-29T09:44:58.096Z"
+  },
+  {
+    "slug": "papadmalji-agro-foods-ltd-4497863",
+    "companyName": "Papadmalji Agro Foods Limited",
+    "symbol": "PAPADMALJI",
+    "marketSegment": "sme",
+    "status": "open",
+    "securityType": "SME",
+    "issue": {
+      "openDate": "2026-09-29",
+      "closeDate": "2026-10-01",
+      "exchange": [
+        "NSE"
+      ]
+    },
+    "subscription": {
+      "total": 1.23,
+      "updatedAt": "2026-09-29T09:44:58.096Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=PAPADMALJI&type=Active"
+    },
+    "sharesOffered": 2803200,
+    "sharesBid": 3452800,
+    "marketSource": "NSE",
+    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=PAPADMALJI&type=Active",
+    "fetchedAt": "2026-09-29T09:44:58.096Z"
   }
 ]
