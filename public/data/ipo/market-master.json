@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generatedAt": "2026-09-29T09:44:58.096Z",
-    "recordCount": 10,
-    "nseCount": 10,
+    "generatedAt": "2026-09-30T09:36:58.271Z",
+    "recordCount": 7,
+    "nseCount": 7,
     "bseCount": 0,
-    "activeCount": 10,
+    "activeCount": 7,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 10 · BSE SME unavailable · BSE mainboard 0"
+    "sourceStatus": "NSE API 7 · BSE SME unavailable · BSE mainboard 0"
   },
   "records": [
     {
@@ -24,184 +24,16 @@
         ]
       },
       "subscription": {
-        "total": 0.51,
-        "updatedAt": "2026-09-29T09:44:58.096Z",
+        "total": 0.6,
+        "updatedAt": "2026-09-30T09:36:58.271Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=GREENASIA&type=Active"
       },
       "sharesOffered": 7057600,
-      "sharesBid": 3627200,
+      "sharesBid": 4204800,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=GREENASIA&type=Active",
-      "fetchedAt": "2026-09-29T09:44:58.096Z"
-    },
-    {
-      "slug": "acevector-ltd-7f40cfc",
-      "companyName": "AceVector Limited",
-      "symbol": "ACEVECTOR",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 30,
-        "priceBandHigh": 32,
-        "openDate": "2026-09-25",
-        "closeDate": "2026-09-29",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 2.5952445700386826,
-        "updatedAt": "2026-09-29T09:44:58.096Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ACEVECTOR&type=Active"
-      },
-      "sharesOffered": 74229166,
-      "sharesBid": 192642840,
-      "estimatedIssueValueCr": 237.53,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ACEVECTOR&type=Active",
-      "fetchedAt": "2026-09-29T09:44:58.096Z"
-    },
-    {
-      "slug": "bench-mark-infotech-services-ltd-e18315a",
-      "companyName": "Bench Mark Infotech Services Limited",
-      "symbol": "BMISL",
-      "marketSegment": "sme",
-      "status": "open",
-      "securityType": "SME",
-      "issue": {
-        "openDate": "2026-09-25",
-        "closeDate": "2026-09-29",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 66.19,
-        "updatedAt": "2026-09-29T09:44:58.096Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=BMISL&type=Active"
-      },
-      "sharesOffered": 2761200,
-      "sharesBid": 182760000,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=BMISL&type=Active",
-      "fetchedAt": "2026-09-29T09:44:58.096Z"
-    },
-    {
-      "slug": "german-green-steel-and-power-ltd-67bf82d",
-      "companyName": "German Green Steel and Power Limited",
-      "symbol": "GERMAN",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 132,
-        "priceBandHigh": 139,
-        "openDate": "2026-09-25",
-        "closeDate": "2026-09-29",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 17.927114746989005,
-        "updatedAt": "2026-09-29T09:44:58.096Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=GERMAN&type=Active"
-      },
-      "sharesOffered": 16062879,
-      "sharesBid": 287961075,
-      "estimatedIssueValueCr": 223.27,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=GERMAN&type=Active",
-      "fetchedAt": "2026-09-29T09:44:58.096Z"
-    },
-    {
-      "slug": "himalayan-solar-ltd-2d741c6",
-      "companyName": "Himalayan Solar Limited",
-      "symbol": "HIMALAYAN",
-      "marketSegment": "sme",
-      "status": "open",
-      "securityType": "SME",
-      "issue": {
-        "openDate": "2026-09-25",
-        "closeDate": "2026-09-29",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 1.12,
-        "updatedAt": "2026-09-29T09:44:58.096Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=HIMALAYAN&type=Active"
-      },
-      "sharesOffered": 5852400,
-      "sharesBid": 6530400,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=HIMALAYAN&type=Active",
-      "fetchedAt": "2026-09-29T09:44:58.096Z"
-    },
-    {
-      "slug": "orient-cables-india-ltd-6361c7e",
-      "companyName": "Orient Cables (India) Limited",
-      "symbol": "ORIENTCABL",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 258,
-        "priceBandHigh": 272,
-        "openDate": "2026-09-25",
-        "closeDate": "2026-09-29",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 44.72425780425023,
-        "updatedAt": "2026-09-29T09:44:58.096Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ORIENTCABL&type=Active"
-      },
-      "sharesOffered": 14976743,
-      "sharesBid": 669823715,
-      "estimatedIssueValueCr": 407.37,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ORIENTCABL&type=Active",
-      "fetchedAt": "2026-09-29T09:44:58.096Z"
-    },
-    {
-      "slug": "runwal-enterprises-ltd-40ace5c",
-      "companyName": "Runwal Enterprises Limited",
-      "symbol": "RUNWALENTR",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 290,
-        "priceBandHigh": 302,
-        "openDate": "2026-09-25",
-        "closeDate": "2026-09-29",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 0.9973246459048885,
-        "updatedAt": "2026-09-29T09:44:58.096Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=RUNWALENTR&type=Active"
-      },
-      "sharesOffered": 12111294,
-      "sharesBid": 12078892,
-      "estimatedIssueValueCr": 365.76,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=RUNWALENTR&type=Active",
-      "fetchedAt": "2026-09-29T09:44:58.096Z"
+      "fetchedAt": "2026-09-30T09:36:58.271Z"
     },
     {
       "slug": "shah-investor-s-home-ltd-ab7d47f",
@@ -220,17 +52,17 @@
         ]
       },
       "subscription": {
-        "total": 0.6710597337171644,
-        "updatedAt": "2026-09-29T09:44:58.096Z",
+        "total": 18.70038682979489,
+        "updatedAt": "2026-09-30T09:36:58.271Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHAHINVEST&type=Active"
       },
       "sharesOffered": 3779440,
-      "sharesBid": 2536230,
+      "sharesBid": 70676990,
       "estimatedIssueValueCr": 63.12,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SHAHINVEST&type=Active",
-      "fetchedAt": "2026-09-29T09:44:58.096Z"
+      "fetchedAt": "2026-09-30T09:36:58.271Z"
     },
     {
       "slug": "srit-india-ltd-782fd69",
@@ -249,17 +81,17 @@
         ]
       },
       "subscription": {
-        "total": 2.2203898809523808,
-        "updatedAt": "2026-09-29T09:44:58.096Z",
+        "total": 63.891310799319726,
+        "updatedAt": "2026-09-30T09:36:58.271Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SRIT&type=Active"
       },
       "sharesOffered": 11760000,
-      "sharesBid": 26111785,
+      "sharesBid": 751361815,
       "estimatedIssueValueCr": 152.88,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SRIT&type=Active",
-      "fetchedAt": "2026-09-29T09:44:58.096Z"
+      "fetchedAt": "2026-09-30T09:36:58.271Z"
     },
     {
       "slug": "papadmalji-agro-foods-ltd-4497863",
@@ -276,16 +108,100 @@
         ]
       },
       "subscription": {
-        "total": 1.23,
-        "updatedAt": "2026-09-29T09:44:58.096Z",
+        "total": 1.6,
+        "updatedAt": "2026-09-30T09:36:58.271Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=PAPADMALJI&type=Active"
       },
       "sharesOffered": 2803200,
-      "sharesBid": 3452800,
+      "sharesBid": 4472000,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=PAPADMALJI&type=Active",
-      "fetchedAt": "2026-09-29T09:44:58.096Z"
+      "fetchedAt": "2026-09-30T09:36:58.271Z"
+    },
+    {
+      "slug": "eventions-ltd-a765320",
+      "companyName": "Eventions Limited",
+      "symbol": "EVENTIONS",
+      "marketSegment": "sme",
+      "status": "open",
+      "securityType": "SME",
+      "issue": {
+        "openDate": "2026-09-30",
+        "closeDate": "2026-10-05",
+        "exchange": [
+          "NSE"
+        ]
+      },
+      "subscription": {
+        "total": 1.06,
+        "updatedAt": "2026-09-30T09:36:58.271Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=EVENTIONS&type=Active"
+      },
+      "sharesOffered": 3230400,
+      "sharesBid": 3421200,
+      "marketSource": "NSE",
+      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=EVENTIONS&type=Active",
+      "fetchedAt": "2026-09-30T09:36:58.271Z"
+    },
+    {
+      "slug": "nityas-gems-and-jewellery-ltd-c3e7846",
+      "companyName": "Nityas Gems and Jewellery Limited",
+      "symbol": "NITYAS",
+      "marketSegment": "mainboard",
+      "status": "open",
+      "securityType": "EQ",
+      "issue": {
+        "priceBandLow": 70,
+        "priceBandHigh": 75,
+        "openDate": "2026-09-30",
+        "closeDate": "2026-10-05",
+        "exchange": [
+          "NSE"
+        ]
+      },
+      "subscription": {
+        "total": 0.09142224681793028,
+        "updatedAt": "2026-09-30T09:36:58.271Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=NITYAS&type=Active"
+      },
+      "sharesOffered": 14456000,
+      "sharesBid": 1321600,
+      "estimatedIssueValueCr": 108.42,
+      "marketSource": "NSE",
+      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=NITYAS&type=Active",
+      "fetchedAt": "2026-09-30T09:36:58.271Z"
+    },
+    {
+      "slug": "vishal-nirmiti-ltd-5d86d9a",
+      "companyName": "Vishal Nirmiti Limited",
+      "symbol": "VNL",
+      "marketSegment": "mainboard",
+      "status": "open",
+      "securityType": "EQ",
+      "issue": {
+        "priceBandLow": 208,
+        "priceBandHigh": 220,
+        "openDate": "2026-09-30",
+        "closeDate": "2026-10-05",
+        "exchange": [
+          "NSE"
+        ]
+      },
+      "subscription": {
+        "total": 0.03485428724991745,
+        "updatedAt": "2026-09-30T09:36:58.271Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VNL&type=Active"
+      },
+      "sharesOffered": 8471153,
+      "sharesBid": 295256,
+      "estimatedIssueValueCr": 186.37,
+      "marketSource": "NSE",
+      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VNL&type=Active",
+      "fetchedAt": "2026-09-30T09:36:58.271Z"
     }
   ]
 }
