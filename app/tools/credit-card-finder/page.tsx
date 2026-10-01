@@ -1,5 +1,7 @@
 'use client'
 
+import { boundedNumber } from '../../../src/lib/calculator-input'
+import Image from 'next/image'
 import { ArrowLeft, CreditCard, Info, RotateCcw, Sparkles, Trophy, WalletCards, CheckCircle2 } from 'lucide-react'
 import { useMemo, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
@@ -21,7 +23,7 @@ function CreditCardFinderForm() {
   const router = useRouter()
   const searchParams = useSearchParams()
 
-  const monthlySpend = Number(searchParams.get('spend') ?? 40000)
+  const monthlySpend = boundedNumber(searchParams.get('spend'), 40000)
   
   let cards: CardDraft[] = defaults
   try {
@@ -92,7 +94,7 @@ function CreditCardFinderForm() {
 
 export default function CreditCardFinder(){
   return <main className="toolPage">
-    <header className="calcNav wrap"><a className="brand" href="/"><img src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CredoNomics</strong><small>Investment Solutions</small></span></a><a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a></header>
+    <header className="calcNav wrap"><a className="brand" href="/"><Image width={48} height={48} src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CredoNomics</strong><small>Investment Solutions</small></span></a><a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a></header>
     
     <Suspense fallback={<div className="wrap" style={{padding: '4rem 0', textAlign: 'center'}}>Loading finder...</div>}>
       <CreditCardFinderForm />

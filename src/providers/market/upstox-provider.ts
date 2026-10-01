@@ -1,33 +1,24 @@
 import "server-only";
+import { marketObservationAvailability, latestObservation } from "../../domain/freshness";
 import type { CompanyFundamentals, CorporateAction, FinancialStatements, HistoricalPrice, HistoricalRange, IndianEquityIdentity, MarketQuote, Shareholding } from "../../domain/equity/types";
 import type { FinancialDataMetadata } from "../../domain/financial-data";
-import { upstoxGet, UpstoxApiError, hasUpstoxAnalyticsToken } from "../../lib/upstox/client";
+import { upstoxGet, UpstoxApiError, hasUpstoxAnalyticsToken, getUpstoxProvenance } from "../../lib/upstox/client";
 import { marketQuoteSchema } from "../../schemas/equity";
 import { searchInstrumentMaster } from "../../services/market-data/instrument-master";
 import type { MarketDataProvider, ProviderResult } from "./types";
 import { getIndianMarketSession, getIstDate, shiftIsoDate } from "../../domain/market/session";
 import { calculateQuoteChange, resolvePreviousClose, resolveProviderQuote } from "../../domain/market/quote";
-import { derive52WeekStats } from "../../domain/market/range";
+import { derive52WeekStats, includeSessionExtremes } from "../../domain/market/range";
 
-function metadata(asOf: string | null, availability: FinancialDataMetadata["availability"]): FinancialDataMetadata {
-  return { source: "Upstox API", asOf, generatedAt: new Date().toISOString(), quality: availability === "unavailable" ? "unknown" : "verified", availability };
+import { withProvenance, aggregateProvenance } from "../../domain/provenance";
+
+function metadata(asOf: string | null, availability: FinancialDataMetadata["availability"], raw?: unknown): FinancialDataMetadata {
+  return withProvenance({ source: "Upstox API", asOf, generatedAt: new Date().toISOString(), quality: availability === "unavailable" ? "unknown" : "verified", availability }, getUpstoxProvenance(raw), raw !== undefined);
 }
 function failure<T>(code: string, message: string, retryable = false): ProviderResult<T> {
   return { data: null, metadata: metadata(null, "unavailable"), error: { code, message, retryable } };
 }
-function numberOrNull(value: unknown): number | null {
-  if (typeof value === "number" && Number.isFinite(value)) return value;
-  if (typeof value === "string") {
-    const cleaned = value.replace(/,/g, "").replace(/%$/, "").trim();
-    const parsed = Number(cleaned);
-    return Number.isFinite(parsed) ? parsed : null;
-  }
-  return null;
-}
-function dateOrNull(value: unknown): string | null {
-  if ((typeof value === "string" || typeof value === "number") && !Number.isNaN(Date.parse(String(value)))) return new Date(value).toISOString();
-  return null;
-}
+import { providerNumber as numberOrNull, providerDate as dateOrNull, transformUpstoxCandles } from './upstox-transform';
 import * as Sentry from '@sentry/nextjs';
 
 function mapError<T>(error: unknown): ProviderResult<T> {
@@ -39,10 +30,7 @@ function identityFor(key: string): IndianEquityIdentity | null {
   const term = key.includes("|") ? key.split("|").at(-1) ?? "" : key;
   return searchInstrumentMaster(term, 20).find(item => item.instrumentKey === key || item.symbol.toUpperCase() === key.toUpperCase() || item.isin === key) ?? null;
 }
-export function transformCandles(raw: unknown): HistoricalPrice[] {
-  if (!Array.isArray(raw)) return [];
-  return raw.flatMap(candle => Array.isArray(candle) && candle.length >= 6 && typeof candle[0] === "string" && candle.slice(1, 6).every(Number.isFinite) ? [{ date: candle[0], open: candle[1] as number, high: candle[2] as number, low: candle[3] as number, close: candle[4] as number, volume: candle[5] as number }] : []);
-}
+export const transformCandles = transformUpstoxCandles;
 
 async function get52WeekStats(key: string) {
   const to = new Date();
@@ -59,7 +47,7 @@ async function get52WeekStats(key: string) {
 
 export class UpstoxMarketDataProvider implements MarketDataProvider {
   readonly id = "upstox";
-  async searchStocks(query: string) { return { data: searchInstrumentMaster(query), metadata: metadata(new Date().toISOString(), "recent") }; }
+  async searchStocks(query: string) { return { data: searchInstrumentMaster(query), metadata: metadata(null, "unavailable") }; }
 
   async getQuote(key: string): Promise<ProviderResult<MarketQuote>> {
     if (!hasUpstoxAnalyticsToken()) return failure("AUTH_REQUIRED", "Market data authentication is not configured.");
@@ -67,15 +55,16 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
     if (!instrument) return failure("NOT_FOUND", "Unable to retrieve this security.");
     try {
       const raw = await upstoxGet<{ data?: Record<string, Record<string, unknown>> }>("/v2/market-quote/quotes", { query: { instrument_key: key }, ttlMs: 15_000, diagnostics: { category: "quote", instrumentKey: key, recordCount: value => Object.keys((value as { data?: object }).data ?? {}).length } });
-      const item = Object.values(raw.data ?? {})[0] ?? {};
+      const item = resolveProviderQuote(raw.data, key);
+      if (!item) return failure("INVALID_RESPONSE", "Market data temporarily unavailable.");
       const ohlc = item.ohlc as Record<string, unknown> | undefined;
       const price = numberOrNull(item.last_price);
       const previousClose = resolvePreviousClose(price, numberOrNull(item.net_change), numberOrNull(ohlc?.close));
       const timestamp = dateOrNull(item.timestamp ?? item.last_trade_time);
-      const availability = timestamp && Date.now() - Date.parse(timestamp) < 120_000 ? "live" : "delayed";
+      const availability = marketObservationAvailability(timestamp, getIndianMarketSession() === "OPEN");
       const { change, changePercent } = calculateQuoteChange(price, previousClose);
-      let fiftyTwoWeekHigh = numberOrNull(item.ohlc_52_week_high);
-      let fiftyTwoWeekLow = numberOrNull(item.ohlc_52_week_low);
+      let fiftyTwoWeekHigh = numberOrNull(item['52_week_high'] ?? item.ohlc_52_week_high);
+      let fiftyTwoWeekLow = numberOrNull(item['52_week_low'] ?? item.ohlc_52_week_low);
       if (!fiftyTwoWeekHigh || !fiftyTwoWeekLow) {
         try {
           const derived = await get52WeekStats(key);
@@ -86,9 +75,10 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
         }
       }
 
-      const quote = { ...instrument, price, previousClose, change, changePercent, open: numberOrNull(ohlc?.open), high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), volume: numberOrNull(item.volume), fiftyTwoWeekHigh, fiftyTwoWeekLow, timestamp, ...metadata(timestamp, availability) };
+      const range = includeSessionExtremes({ high: fiftyTwoWeekHigh, low: fiftyTwoWeekLow }, { high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), price });
+      const quote = { ...instrument, price, previousClose, change, changePercent, open: numberOrNull(ohlc?.open), high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), volume: numberOrNull(item.volume), fiftyTwoWeekHigh: range.high, fiftyTwoWeekLow: range.low, marketCap: numberOrNull(item.mcap ?? item.market_cap), pe: numberOrNull(item.pe ?? item.ttm_pe), eps: numberOrNull(item.eps ?? item.ttm_eps), timestamp, ...metadata(timestamp, availability, raw) };
       const parsed = marketQuoteSchema.safeParse(quote);
-      return parsed.success ? { data: parsed.data, metadata: metadata(timestamp, availability) } : failure("INVALID_RESPONSE", "Market data temporarily unavailable.");
+      return parsed.success ? { data: parsed.data, metadata: metadata(timestamp, availability, raw) } : failure("INVALID_RESPONSE", "Market data temporarily unavailable.");
     } catch (error) { return mapError(error); }
   }
 
@@ -99,20 +89,21 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
       const raw = await upstoxGet<{ data?: Record<string, Record<string, unknown>> }>("/v2/market-quote/quotes", { query: { instrument_key: uniqueKeys.join(",") }, ttlMs: 15_000, diagnostics: { category: "batch-quotes", instrumentKey: `${uniqueKeys.length} instruments`, recordCount: value => Object.keys((value as { data?: object }).data ?? {}).length } });
       const data = uniqueKeys.flatMap(key => {
         const instrument = identityFor(key); const item = resolveProviderQuote(raw.data, key); if (!instrument || !item) return [];
-        const ohlc = item.ohlc as Record<string, unknown> | undefined; const price = numberOrNull(item.last_price); const previousClose = resolvePreviousClose(price, numberOrNull(item.net_change), numberOrNull(ohlc?.close)); const timestamp = dateOrNull(item.timestamp ?? item.last_trade_time); const availability = timestamp && Date.now() - Date.parse(timestamp) < 120_000 ? "live" : "delayed"; const { change, changePercent } = calculateQuoteChange(price, previousClose);
+        const ohlc = item.ohlc as Record<string, unknown> | undefined; const price = numberOrNull(item.last_price); const previousClose = resolvePreviousClose(price, numberOrNull(item.net_change), numberOrNull(ohlc?.close)); const timestamp = dateOrNull(item.timestamp ?? item.last_trade_time); const availability = marketObservationAvailability(timestamp, getIndianMarketSession() === "OPEN"); const { change, changePercent } = calculateQuoteChange(price, previousClose);
         
-        let fiftyTwoWeekHigh = numberOrNull(item.ohlc_52_week_high);
-        let fiftyTwoWeekLow = numberOrNull(item.ohlc_52_week_low);
+        let fiftyTwoWeekHigh = numberOrNull(item['52_week_high'] ?? item.ohlc_52_week_high);
+        let fiftyTwoWeekLow = numberOrNull(item['52_week_low'] ?? item.ohlc_52_week_low);
         if (!fiftyTwoWeekHigh || !fiftyTwoWeekLow) {
            // For getQuotes batch, we won't fetch historical for each. Just fallback to null if missing or 0.
            fiftyTwoWeekHigh = fiftyTwoWeekHigh || null;
            fiftyTwoWeekLow = fiftyTwoWeekLow || null;
         }
 
-        const parsed = marketQuoteSchema.safeParse({ ...instrument, price, previousClose, change, changePercent, open: numberOrNull(ohlc?.open), high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), volume: numberOrNull(item.volume), fiftyTwoWeekHigh, fiftyTwoWeekLow, timestamp, ...metadata(timestamp, availability) });
+        const range = includeSessionExtremes({ high: fiftyTwoWeekHigh, low: fiftyTwoWeekLow }, { high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), price });
+        const parsed = marketQuoteSchema.safeParse({ ...instrument, price, previousClose, change, changePercent, open: numberOrNull(ohlc?.open), high: numberOrNull(ohlc?.high), low: numberOrNull(ohlc?.low), volume: numberOrNull(item.volume), fiftyTwoWeekHigh: range.high, fiftyTwoWeekLow: range.low, marketCap: numberOrNull(item.mcap ?? item.market_cap), pe: numberOrNull(item.pe ?? item.ttm_pe), eps: numberOrNull(item.eps ?? item.ttm_eps), timestamp, ...metadata(timestamp, availability, raw) });
         return parsed.success ? [parsed.data] : [];
       });
-      return { data, metadata: metadata(data.find(item => item.timestamp)?.timestamp ?? null, data.length ? "delayed" : "unavailable"), error: data.length ? undefined : { code: "INVALID_RESPONSE", message: "Market data temporarily unavailable.", retryable: true } };
+      return { data, metadata: aggregateProvenance(data, "Upstox API"), error: data.length ? undefined : { code: "INVALID_RESPONSE", message: "Market data temporarily unavailable.", retryable: true } };
     } catch (error) { return mapError(error); }
   }
 
@@ -125,7 +116,7 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
     try {
       const raw = await upstoxGet<{ data?: { candles?: unknown } }>(`/v3/historical-candle/${encodeURIComponent(key)}/${unit}/1/${format(to)}/${format(from)}`, { ttlMs: 3_600_000, diagnostics: { category: "historical-candles", instrumentKey: key, recordCount: value => Array.isArray((value as { data?: { candles?: unknown[] } }).data?.candles) ? (value as { data: { candles: unknown[] } }).data.candles.length : 0 } });
       const data = transformCandles(raw.data?.candles);
-      return { data, metadata: metadata(data[0]?.date ?? null, data.length ? "recent" : "unavailable") };
+      return { data, metadata: metadata(latestObservation(data.map(point => point.date)), marketObservationAvailability(latestObservation(data.map(point => point.date)), false), raw) };
     } catch (error) { return mapError(error); }
   }
 
@@ -143,8 +134,10 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
       });
       const data = transformCandles(raw.data?.candles);
       if (data.length) {
-        const currentMetadata = metadata(data[0]?.date ?? null, getIndianMarketSession() === "OPEN" ? "live" : "recent");
-        return { data, metadata: { ...currentMetadata, session: "current", sessionDate: data[0]!.date.slice(0, 10) } };
+        const asOf = latestObservation(data.map(point => point.date));
+        const sessionDate = asOf ? getIstDate(new Date(asOf)) : undefined;
+        const currentMetadata = metadata(asOf, marketObservationAvailability(asOf, getIndianMarketSession() === "OPEN", new Date(), Number(specification.value) * (specification.unit === "hours" ? 60 : 1) + 2), raw);
+        return { data, metadata: { ...currentMetadata, session: sessionDate === getIstDate() ? "current" : "previous", sessionDate } };
       }
 
       const today = getIstDate();
@@ -158,7 +151,7 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
       const fallback = transformCandles(fallbackRaw.data?.candles);
       const sessionDate = fallback.reduce((latest, candle) => candle.date.slice(0, 10) > latest ? candle.date.slice(0, 10) : latest, "");
       const previousSession = sessionDate ? fallback.filter(candle => candle.date.startsWith(sessionDate)) : [];
-      const previousMetadata = metadata(previousSession[0]?.date ?? null, previousSession.length ? "recent" : "unavailable");
+      const previousMetadata = metadata(latestObservation(previousSession.map(point => point.date)), marketObservationAvailability(latestObservation(previousSession.map(point => point.date)), false), fallbackRaw);
       return { data: previousSession, metadata: { ...previousMetadata, session: "previous", sessionDate: sessionDate || undefined } };
     } catch (error) { return mapError(error); }
   }
@@ -171,7 +164,7 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
     try {
       const raw = await upstoxGet<{ data?: Array<{ name?: string; company_value?: string }> }>(`/v2/fundamentals/${instrument.isin}/key-ratios`, { ttlMs: 21_600_000 });
       const ratios = new Map((raw.data ?? []).map(item => [item.name, numberOrNull(item.company_value)]));
-      return { data: { ...instrument, marketCap: null, pe: ratios.get("P/E") ?? null, pb: ratios.get("P/B") ?? null, eps: null, bookValue: null, dividendYield: null, roe: ratios.get("ROE") ?? null, roce: ratios.get("ROCE") ?? null, roa: ratios.get("ROA") ?? null, evEbitda: ratios.get("EV/EBITDA") ?? null, debtToEquity: null, ...metadata(new Date().toISOString(), "recent") }, metadata: metadata(new Date().toISOString(), "recent") };
+      return { data: { ...instrument, marketCap: null, pe: ratios.get("P/E") ?? null, pb: ratios.get("P/B") ?? null, eps: null, bookValue: null, dividendYield: null, roe: ratios.get("ROE") ?? null, roce: ratios.get("ROCE") ?? null, roa: ratios.get("ROA") ?? null, evEbitda: ratios.get("EV/EBITDA") ?? null, debtToEquity: null, ...metadata(null, "unavailable", raw) }, metadata: metadata(null, "unavailable", raw) };
     } catch (error) { return mapError(error); }
   }
   async getFinancialStatements(): Promise<ProviderResult<FinancialStatements>> { return failure("NOT_SUPPORTED", "Financial statements are not yet normalized."); }
@@ -181,7 +174,7 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
     try {
       const raw = await upstoxGet<{ data?: Array<{ category?: string; history?: Array<{ period?: string; value?: number }> }> }>(`/v2/fundamentals/${instrument.isin}/share-holdings`, { ttlMs: 21_600_000 });
       const entries = new Map((raw.data ?? []).map(item => [item.category, item.history?.[0]?.value ?? null]));
-      return { data: { ...instrument, promoterHolding: entries.get("promoters") ?? null, fiiHolding: entries.get("fii") ?? null, diiHolding: entries.get("other_dii") ?? null, mutualFundHolding: entries.get("mutual_funds") ?? null, publicHolding: entries.get("retail_and_other") ?? null, history: raw.data ?? [], ...metadata(new Date().toISOString(), "recent") }, metadata: metadata(new Date().toISOString(), "recent") };
+      return { data: { ...instrument, promoterHolding: entries.get("promoters") ?? null, fiiHolding: entries.get("fii") ?? null, diiHolding: entries.get("other_dii") ?? null, mutualFundHolding: entries.get("mutual_funds") ?? null, publicHolding: entries.get("retail_and_other") ?? null, history: raw.data ?? [], ...metadata(null, "unavailable", raw) }, metadata: metadata(null, "unavailable", raw) };
     } catch (error) { return mapError(error); }
   }
 
@@ -190,11 +183,11 @@ export class UpstoxMarketDataProvider implements MarketDataProvider {
     try {
       const raw = await upstoxGet<{ data?: Array<{ name?: string; expiry_date?: string; amount?: number; ratio?: string | null; event_details?: Array<{ name?: string; value?: string }> }> }>(`/v2/fundamentals/${instrument.isin}/corporate-actions`, { ttlMs: 21_600_000 });
       const data = (raw.data ?? []).map(action => { const details = new Map((action.event_details ?? []).map(item => [item.name?.toLowerCase(), item.value ?? null])); const name = action.name?.toLowerCase() ?? "other"; const type: CorporateAction["type"] = name.includes("dividend") ? "dividend" : name.includes("split") ? "split" : name.includes("bonus") ? "bonus" : name.includes("right") ? "rights" : name.includes("buyback") ? "buyback" : "other"; return { type, exDate: details.get("ex dividend date") ?? action.expiry_date ?? null, recordDate: details.get("record date") ?? null, announcementDate: details.get("announcement date") ?? null, amount: action.amount ?? null, ratio: action.ratio ?? null, description: details.get("details") ?? action.name ?? "Corporate action" }; }).filter((action,index,all)=>all.findIndex(item=>`${item.type}|${item.exDate}|${item.recordDate}|${item.amount}|${item.ratio}`===`${action.type}|${action.exDate}|${action.recordDate}|${action.amount}|${action.ratio}`)===index).sort((a,b)=>Date.parse(b.exDate??b.recordDate??b.announcementDate??'')-Date.parse(a.exDate??a.recordDate??a.announcementDate??''));
-      return { data, metadata: metadata(new Date().toISOString(), "recent") };
+      return { data, metadata: metadata(null, "unavailable", raw) };
     } catch (error) { return mapError(error); }
   }
 
   async getMarketStatus(): Promise<ProviderResult<{ session: "PRE_OPEN" | "OPEN" | "CLOSED" | "HOLIDAY" }>> {
-    return { data: { session: getIndianMarketSession() }, metadata: metadata(new Date().toISOString(), "recent") };
+    return { data: { session: getIndianMarketSession() }, metadata: metadata(null, "unavailable") };
   }
 }

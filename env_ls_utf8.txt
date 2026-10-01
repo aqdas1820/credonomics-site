@@ -1,0 +1,14 @@
+﻿
+ name                                       value                       type      environments        created    
+ CRON_SECRET                                Hidden                      Secret    Preview             33m ago    
+ SUPABASE_STAGING_PROJECT_REF               eyJ2IjoidjIiLCJjIjΓÇª         Config    Preview             35m ago    
+ SUPABASE_BACKEND_ENV                       eyJ2IjoidjIiLCJjIjΓÇª         Config    Preview             38m ago    
+ STRIPE_CHECKOUT_ENABLED                    eyJ2IjoidjIiLCJjIjΓÇª         Config    Preview             1d ago     
+ RESEND_NEWSLETTER_SEGMENT_ID               eyJ2IjoidjIiLCJjIjΓÇª         Config    Preview             1d ago     
+ RESEND_API_KEY                             Hidden                      Secret    Preview             1d ago     
+ SUPABASE_SERVICE_ROLE_KEY                  Hidden                      Secret    Preview             2d ago     
+ NEXT_PUBLIC_SUPABASE_URL                   eyJ2IjoidjIiLCJjIjΓÇª         Config    Preview             2d ago     
+ NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY       eyJ2IjoidjIiLCJjIjΓÇª         Config    Preview             2d ago     
+ UPSTOX_ANALYTICS_TOKEN                     Hidden                      Secret    Preview             2d ago     
+ UPSTOX_ANALYTICS_TOKEN                     Hidden                      Secret    Production          29d ago    
+

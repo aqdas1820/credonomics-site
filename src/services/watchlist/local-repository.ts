@@ -1,4 +1,5 @@
 'use client'
+import { localWorkspaceSchema } from './local-schema'
 import type { AlertNotification, PriceAlert, TrackedInstrument, WatchlistState } from '../../domain/watchlist/types'
 
 const KEY = 'credonomics-watchlists-v1'
@@ -7,7 +8,12 @@ const id = () => globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.rand
 const initial = (): WatchlistState => { const now = new Date().toISOString(); return { version: 1, ownerId: `anonymous:${id()}`, watchlists: [{ id: id(), ownerId: 'anonymous', name: 'My Watchlist', items: [], createdAt: now, order: 0 }], alerts: [], notifications: [] } }
 
 export function loadWatchlistState(): WatchlistState {
-  try { const parsed = JSON.parse(localStorage.getItem(KEY) ?? '') as WatchlistState; if (parsed?.version === 1 && typeof parsed.ownerId === 'string' && Array.isArray(parsed.watchlists) && parsed.watchlists.length > 0 && parsed.watchlists.every(list => list && typeof list.id === 'string' && typeof list.name === 'string' && Array.isArray(list.items)) && Array.isArray(parsed.alerts) && Array.isArray(parsed.notifications)) return parsed } catch {}
+  const raw = localStorage.getItem(KEY)
+  if (raw !== null) {
+    const parsed = localWorkspaceSchema.safeParse(JSON.parse(raw))
+    if (!parsed.success) throw new Error('Saved device data could not be read. Existing storage has been preserved.')
+    return parsed.data
+  }
   const state = initial(); state.watchlists[0]!.ownerId = state.ownerId; saveWatchlistState(state); return state
 }
 export function saveWatchlistState(state: WatchlistState) { localStorage.setItem(KEY, JSON.stringify(state)); window.dispatchEvent(new Event(WATCHLIST_EVENT)) }

@@ -1,10 +1,11 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import styles from './site-footer.module.css'
 
 const investmentLinks = [
   { label: 'Research Desk', href: '/research' },
   { label: 'IPO Intelligence', href: '/ipo' },
-  { label: 'Mutual Fund Intelligence', href: '/mutual-funds' },
+  { label: 'Mutual Fund Intelligence', href: '/tools/mf-portfolio-tracker' },
   { label: 'Financial Tools', href: '/tools' },
   { label: 'Watchlist', href: '/watchlist' },
   { label: 'Alerts', href: '/alerts' },
@@ -12,15 +13,15 @@ const investmentLinks = [
 
 const cardLinks = [
   { label: 'Credit Card Intelligence', href: '/cards' },
-  { label: 'Card Directory', href: '/cards' },
-  { label: 'Head-to-Head', href: '/cards' },
+  { label: 'Card Directory', href: '/cards/all' },
+  { label: 'Head-to-Head', href: '/cards/compare' },
   { label: 'Methodology', href: '/methodology' },
 ]
 
 const companyLinks = [
   { label: 'About', href: '/about' },
   { label: 'Official Identity', href: '/official' },
-  { label: 'Contact', href: '/about' },
+  { label: 'Contact', href: '/contact' },
   { label: 'Disclosures', href: '/disclosures' },
   { label: 'Privacy', href: '/privacy' },
   { label: 'Terms', href: '/terms' },
@@ -45,7 +46,7 @@ export default function SiteFooter() {
           <div className={styles.brandColumn}>
             <div className={styles.brandRow}>
               <span className={styles.logoPlate}>
-                <img src="/credonomics-mark.png" alt="CredoNomics logo" />
+                <Image width={48} height={48} src="/credonomics-mark.png" alt="CredoNomics logo" />
               </span>
 
               <span className={styles.wordmark}>
@@ -91,13 +92,6 @@ export default function SiteFooter() {
               </Link>
             ))}
 
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
           </nav>
         </section>
 

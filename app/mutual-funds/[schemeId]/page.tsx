@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import MFSchemeClient from './MFSchemeClient'
 
-export function generateMetadata({ params }: { params: { schemeId: string } }): Metadata {
+export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ schemeId: string }> }): Promise<Metadata> {
+  const params = await paramsPromise
   return {
     title: `Mutual Fund Scheme - ${params.schemeId}`,
     description: `Detailed portfolio intelligence and scheme holdings for ${params.schemeId}.`,
@@ -11,6 +12,7 @@ export function generateMetadata({ params }: { params: { schemeId: string } }): 
   }
 }
 
-export default function MutualFundSchemePage({ params }: { params: { schemeId: string } }) {
+export default async function MutualFundSchemePage({ params: paramsPromise }: { params: Promise<{ schemeId: string }> }) {
+  const params = await paramsPromise
   return <MFSchemeClient schemeId={params.schemeId} />
 }

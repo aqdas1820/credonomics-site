@@ -1,6 +1,6 @@
 .workspace{
   --ink:#081827;--muted:#5e6d7b;--line:#d9e1e7;--surface:#fff;--soft:#f0f3f6;--soft2:#f7f9fa;--blue:#1769ff;--teal:#00a79d;
-  display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:14px;align-items:start;color:var(--ink)
+  display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:14px;align-items:flex-start;color:var(--ink)
 }
 :global(html[data-theme='dark']) .workspace{--ink:#f4f7fa;--muted:#9aa9b7;--line:#25303d;--surface:#0e141d;--soft:#121a25;--soft2:#0b1119;--blue:#6b9bff;--teal:#45d2c8}
 .inputPanel,.resultPanel{border:1px solid var(--line);border-radius:22px;background:var(--surface);box-shadow:0 12px 38px rgba(8,24,39,.04)}

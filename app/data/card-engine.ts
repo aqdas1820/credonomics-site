@@ -9,6 +9,7 @@ export type CustomCardModel = {
   annualFeeTaxRatePercent: number
   waiverSpendRupees: number
   baseRatePercent: number
+  combinedMonthlyCapRupees?: number
   categoryRates: Partial<Record<CardCategory, number>>
   monthlyCaps: Partial<Record<CardCategory, number>>
 }
@@ -69,7 +70,7 @@ export function analyseCard(card: CustomCardModel, monthlySpend: SpendProfile): 
   const categoryBreakdown = categories.map(({ key }) => {
     const spend = money(monthlySpend[key]) * 12
     const explicitRate = card.categoryRates[key]
-    const rate = Math.max(0, explicitRate ?? card.baseRatePercent)
+    const rate = clamp(explicitRate ?? card.baseRatePercent, 0, 100)
     const theoreticalReward = spend * (rate / 100)
     const monthlyCap = money(card.monthlyCaps[key] ?? 0)
     const annualCap = monthlyCap > 0 ? monthlyCap * 12 : Number.POSITIVE_INFINITY
@@ -85,8 +86,16 @@ export function analyseCard(card: CustomCardModel, monthlySpend: SpendProfile): 
     }
   })
 
-  const grossReward = categoryBreakdown.reduce((sum, row) => sum + row.actualReward, 0)
   const theoreticalReward = categoryBreakdown.reduce((sum, row) => sum + row.theoreticalReward, 0)
+  
+  let grossReward = categoryBreakdown.reduce((sum, row) => sum + row.actualReward, 0)
+  if (card.combinedMonthlyCapRupees && card.combinedMonthlyCapRupees > 0) {
+    const combinedAnnualCap = card.combinedMonthlyCapRupees * 12
+    if (grossReward > combinedAnnualCap) {
+      grossReward = combinedAnnualCap
+    }
+  }
+
   const capLoss = Math.max(0, theoreticalReward - grossReward)
 
   const waiverThreshold = money(card.waiverSpendRupees)

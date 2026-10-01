@@ -10,6 +10,13 @@ export const financialMetadataSchema = z.object({
   generatedAt: z.string().datetime({ offset: true }),
   quality: z.enum(["verified", "high", "medium", "low", "unknown"]),
   availability: z.enum(DATA_AVAILABILITIES),
+  observationTimestamp: isoDateSchema.nullable().optional(),
+  fetchedAt: isoDateSchema.nullable().optional(),
+  cachedAt: isoDateSchema.nullable().optional(),
+  delivery: z.enum(['provider', 'cache', 'unknown']).optional(),
+  status: z.enum(['LIVE', 'RECENT', 'DELAYED', 'CACHED', 'STALE', 'UNAVAILABLE', 'UNKNOWN']).optional(),
+  isStale: z.boolean().optional(),
+  staleReason: z.string().nullable().optional(),
 });
 
 export function parseFinancialData<T>(schema: z.ZodType<T>, value: unknown, context: string): T {

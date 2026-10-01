@@ -5,6 +5,9 @@ import {
 import path from 'node:path'
 import { NextResponse } from 'next/server'
 import { getPublicIpos } from '../../data/ipo-public'
+import { deduplicatePublicIpos } from '../../data/ipo-dedup'
+import { getIpoDisplayStatus } from '../../../src/domain/ipo/display-status'
+import { GET as getIpos } from '../ipos/route'
 import { readPublicJson } from '../../../src/services/server/public-json'
 
 export const runtime = 'nodejs'
@@ -407,14 +410,78 @@ function boardOf(board: unknown): string {
 export async function GET() {
   // Use the exact same generated records consumed by /ipo.
   // This prevents homepage counts from diverging from the IPO dashboard.
-  const issues = getPublicIpos()
+  let issues = getPublicIpos()
+
+  try {
+    const liveRes = await getIpos()
+    if (liveRes.status === 200) {
+      const liveJson = await liveRes.json()
+      if (liveJson.data) {
+        const liveRecords = liveJson.data.map((item: {
+          id?: string
+          company?: string
+          isin?: string
+          symbol?: string
+          issueType?: string
+          status?: string
+          issueSizeCrore?: number
+          priceMin?: number
+          priceMax?: number
+          lotSize?: number
+          openDate?: string
+          closeDate?: string
+          listingDate?: string
+          providerUpdatedAt?: string
+          normalizedAt?: string
+        }) => {
+          const existing = issues.find(r => r.companyName === item.company)
+          return {
+            exchangeId: item.id,
+            isin: item.isin ?? undefined,
+            slug: existing?.slug ?? `live:${item.id}`,
+            companyName: item.company!,
+            symbol: item.symbol ?? undefined,
+            marketSegment: item.issueType?.toLowerCase() === 'sme' ? 'sme' : item.issueType?.toLowerCase() === 'mainboard' ? 'mainboard' : 'unknown',
+            status: item.status,
+            issue: {
+              ...existing?.issue,
+              issueSizeCr: (existing?.researchState === 'normalized' ? existing?.issue?.issueSizeCr : undefined) ?? item.issueSizeCrore ?? existing?.issue?.issueSizeCr ?? undefined,
+              priceBandLow: (existing?.researchState === 'normalized' ? existing?.issue?.priceBandLow : undefined) ?? item.priceMin ?? existing?.issue?.priceBandLow ?? undefined,
+              priceBandHigh: (existing?.researchState === 'normalized' ? existing?.issue?.priceBandHigh : undefined) ?? item.priceMax ?? existing?.issue?.priceBandHigh ?? undefined,
+              lotSize: (existing?.researchState === 'normalized' ? existing?.issue?.lotSize : undefined) ?? item.lotSize ?? existing?.issue?.lotSize ?? undefined,
+              openDate: item.openDate ?? existing?.issue?.openDate ?? undefined,
+              closeDate: item.closeDate ?? existing?.issue?.closeDate ?? undefined,
+              listingDate: item.listingDate ?? existing?.issue?.listingDate ?? undefined,
+            },
+            financials: existing?.financials ?? [],
+            subscription: existing?.subscription,
+            sources: existing?.sources ?? [],
+            lastUpdated: item.providerUpdatedAt ?? existing?.lastUpdated ?? '',
+            providerUpdatedAt: item.providerUpdatedAt ?? '',
+            normalizedAt: item.normalizedAt,
+            provider: 'upstox',
+            researchState: existing?.researchState ?? 'exchange-live',
+            estimatedIssueValueCr: existing?.estimatedIssueValueCr,
+            sharesOffered: existing?.sharesOffered,
+            sharesBid: existing?.sharesBid,
+          }
+        })
+        issues = deduplicatePublicIpos([...liveRecords, ...issues], false)
+      }
+    }
+  } catch {
+    // silently fallback to static data
+  }
+  
+  const now = new Date()
+  issues = issues.map(record => ({ ...record, status: getIpoDisplayStatus({ ...record.issue, providerStatus: record.status }, now) }))
 
   const open = issues.filter(
-    (issue) => ['open', 'closing_today'].includes(statusOf(issue.status)),
+    (issue) => ['open'].includes(statusOf(issue.status)),
   ).length
 
   const upcoming = issues.filter(
-    (issue) => statusOf(issue.status) === 'upcoming',
+    (issue) => statusOf(issue.status) === 'announced',
   ).length
 
   const filed = issues.filter((issue) =>
@@ -503,7 +570,7 @@ export async function GET() {
         generatedAt(mfLatest) ||
         generatedAt(mfManifest) ||
         generatedAt(mfIndex) ||
-        new Date().toISOString(),
+        '',
       ipo: {
         total: issues.length,
         market,

@@ -31,7 +31,7 @@ export default function StockSearchClient() {
         if ((error as Error).name !== "AbortError") { setMessage((error as Error).message); setStatus("error"); }
       }
     }, 250);
-    return () => window.clearTimeout(timer);
+    return () => { window.clearTimeout(timer); request.current?.abort(); };
   }, [query]);
 
   return (
@@ -43,7 +43,7 @@ export default function StockSearchClient() {
         <label className={styles.search}>
           <span>Company, symbol, BSE code or ISIN</span>
           <input value={query} onChange={(event) => setQuery(event.target.value)} onKeyDown={(event) => {
-            if (event.key === "ArrowDown") { event.preventDefault(); setActive((value) => Math.min(value + 1, results.length - 1)); }
+            if (event.key === "ArrowDown") { event.preventDefault(); setActive((value) => Math.max(0, Math.min(value + 1, results.length - 1))); }
             if (event.key === "ArrowUp") { event.preventDefault(); setActive((value) => Math.max(value - 1, 0)); }
             if (event.key === "Enter" && results[active]) { event.preventDefault(); window.location.assign(`/stocks/${results[active].exchange.toLowerCase()}/${encodeURIComponent(results[active].symbol)}`); }
           }} placeholder="Example: RELIANCE or INE002A01018" autoComplete="off" />

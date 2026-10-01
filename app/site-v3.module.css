@@ -548,7 +548,7 @@
   display:grid;
   grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);
   gap:60px;
-  align-items:end;
+  align-items:flex-end;
   margin-bottom:34px;
 }
 .overline{
@@ -786,7 +786,7 @@
   display:grid;
   grid-template-columns:.84fr 1.16fr;
   gap:68px;
-  align-items:start;
+  align-items:flex-start;
 }
 .methodIntro{
   position:sticky;
@@ -1109,7 +1109,7 @@
   display:grid;
   grid-template-columns:1fr .8fr;
   gap:45px;
-  align-items:end;
+  align-items:flex-end;
 }
 .workflowHeader h2{
   margin:8px 0 0;

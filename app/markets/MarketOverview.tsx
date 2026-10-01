@@ -1,10 +1,12 @@
 "use client";
+import DataFreshness from "../components/DataFreshness";
+import type { FinancialDataMetadata } from "../../src/domain/financial-data";
 import { useEffect, useState } from "react";
 import { formatIndianNumber, formatPercent } from "../../src/lib/financial-format";
 import { getIndianMarketSession, marketSessionLabel } from "../../src/domain/market/session";
 import styles from "./markets.module.css";
 
-type IndexQuote = { name: string; price: number | null; change: number | null; changePercent: number | null; open: number | null; high: number | null; low: number | null; previousClose: number | null; timestamp: string | null };
+type IndexQuote = { metadata?: FinancialDataMetadata; name: string; price: number | null; change: number | null; changePercent: number | null; open: number | null; high: number | null; low: number | null; previousClose: number | null; timestamp: string | null };
 
 export default function MarketOverview() {
   const [result, setResult] = useState<{ data: IndexQuote[] | null; error?: { message?: string } } | null>(null);
@@ -20,7 +22,7 @@ export default function MarketOverview() {
     return () => clearInterval(interval);
   }, []);
 
-  if (!result) return <section className={styles.overview}><p>Loading live market overview…</p></section>;
+  if (!result) return <section className={styles.overview}><p>Loading market overview…</p></section>;
   if (!result.data) return <section className={styles.overview}><p>{result.error?.message ?? "Market data temporarily unavailable."}</p></section>;
 
   return (
@@ -29,7 +31,7 @@ export default function MarketOverview() {
         <span className={status === "MARKET OPEN" ? styles.statusOpen : styles.statusClosed}></span>
         <strong>{status}</strong>
       </div>
-      <section className={styles.overview} aria-label="Live Indian market overview">
+      <section className={styles.overview} aria-label="Indian market overview">
         {result.data.map(item => (
           <article key={item.name}>
             <span>{item.name}</span>
@@ -44,7 +46,7 @@ export default function MarketOverview() {
             )}
 
             <small>O {formatIndianNumber(item.open, "N/A")} · H {formatIndianNumber(item.high, "N/A")} · L {formatIndianNumber(item.low, "N/A")}</small>
-            <small>Prev. {formatIndianNumber(item.previousClose, "N/A")}</small>
+            {item.metadata ? <DataFreshness metadata={item.metadata} /> : null}<small>Prev. {formatIndianNumber(item.previousClose, "N/A")}</small>
           </article>
         ))}
       </section>

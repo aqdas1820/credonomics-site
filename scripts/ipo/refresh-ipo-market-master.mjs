@@ -201,6 +201,7 @@ function nseRecord(row) {
   const sharesOffered = num(first(row, ['noOfSharesOffered','noOfsharesOffered','sharesOffered','offered']))
   const sharesBid = num(first(row, ['noOfsharesBid','noOfSharesBid','sharesBid','bids']))
   const totalSubscription = num(first(row, ['noOfTime','subscription','subscriptionTimes','times']))
+  const lotSize = num(first(row, ['bidLot','marketLot','lotSize','lot']))
   const issueInfoUrl = symbol
     ? `https://www.nseindia.com/market-data/issue-information?series=${marketSegment === 'sme' ? 'SME' : 'EQ'}&symbol=${encodeURIComponent(symbol)}&type=Active`
     : NSE_PAGE
@@ -220,6 +221,7 @@ function nseRecord(row) {
     issue: {
       priceBandLow: price.low,
       priceBandHigh: price.high,
+      lotSize,
       openDate,
       closeDate,
       exchange: ['NSE'],
@@ -369,32 +371,43 @@ function merge(records) {
     }
 
     const sources = new Set([...(old.issue.exchange || []), ...(record.issue.exchange || [])])
-    const preferNse = old.marketSource.includes('NSE') ? old : record.marketSource.includes('NSE') ? record : old
-    const other = preferNse === old ? record : old
-
+    
+    // Prefer NSE data. If both or neither have NSE, prefer the more recently fetched record.
+    const oldHasNse = old.marketSource.includes('NSE')
+    const newHasNse = record.marketSource.includes('NSE')
+    let preferred
+    if (oldHasNse && !newHasNse) {
+      preferred = old
+    } else if (newHasNse && !oldHasNse) {
+      preferred = record
+    } else {
+      preferred = new Date(record.fetchedAt) >= new Date(old.fetchedAt) ? record : old
+    }
+    const other = preferred === old ? record : old
+    
     map.set(key, {
       ...other,
-      ...preferNse,
+      ...preferred,
       slug: old.slug || record.slug,
       marketSegment:
-        preferNse.marketSegment !== 'unknown'
-          ? preferNse.marketSegment
+        preferred.marketSegment !== 'unknown'
+          ? preferred.marketSegment
           : other.marketSegment,
       status:
-        preferNse.status !== 'unknown'
-          ? preferNse.status
+        preferred.status !== 'unknown'
+          ? preferred.status
           : other.status,
       issue: {
         ...other.issue,
-        ...preferNse.issue,
-        priceBandLow: preferNse.issue.priceBandLow ?? other.issue.priceBandLow,
-        priceBandHigh: preferNse.issue.priceBandHigh ?? other.issue.priceBandHigh,
-        faceValue: preferNse.issue.faceValue ?? other.issue.faceValue,
-        openDate: preferNse.issue.openDate || other.issue.openDate,
-        closeDate: preferNse.issue.closeDate || other.issue.closeDate,
+        ...preferred.issue,
+        priceBandLow: preferred.issue.priceBandLow ?? other.issue.priceBandLow,
+        priceBandHigh: preferred.issue.priceBandHigh ?? other.issue.priceBandHigh,
+        faceValue: preferred.issue.faceValue ?? other.issue.faceValue,
+        openDate: preferred.issue.openDate || other.issue.openDate,
+        closeDate: preferred.issue.closeDate || other.issue.closeDate,
         exchange: [...sources],
       },
-      subscription: preferNse.subscription || other.subscription,
+      subscription: preferred.subscription || other.subscription,
       marketSource:
         old.marketSource !== record.marketSource ? 'NSE+BSE' : old.marketSource,
     })
@@ -488,7 +501,10 @@ async function refresh() {
     statuses.push('BSE mainboard unavailable')
   }
 
-  const merged = merge(records)
+  // Combine previously known records with newly fetched records.
+  // The merge function will deduplicate by company name, preferring the latest data.
+  const allRecords = [...previous, ...records]
+  const merged = merge(allRecords)
 
   if (merged.length === 0 && previous.length > 0) {
     console.warn('No fresh exchange rows could be parsed. Preserving last-known market master.')

@@ -40,7 +40,7 @@ export default function IpoDashboardOverview() {
     <>
       <div className={styles.marketFreshness}>
         <span><Radio size={13}/> Exchange market master</span>
-        <b>{ipoMarketMasterMeta.generatedAt ? `Updated ${new Date(ipoMarketMasterMeta.generatedAt).toLocaleString('en-IN')}` : 'Awaiting first exchange refresh'}</b>
+        <b>{ipoMarketMasterMeta.generatedAt ? `Snapshot compiled ${new Date(ipoMarketMasterMeta.generatedAt).toLocaleString('en-IN')}` : 'Awaiting first exchange refresh'}</b>
         <small>{ipoMarketMasterMeta.sourceStatus}</small>
       </div>
 

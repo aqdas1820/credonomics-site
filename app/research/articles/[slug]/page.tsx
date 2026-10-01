@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '../../../../src/lib/json-ld'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { CalendarCheck, CheckCircle2, Clock3, Mail, ShieldCheck } from 'lucide-react'
@@ -9,7 +10,8 @@ export function generateStaticParams() {
   return researchArticles.map((article) => ({ slug: article.slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const params = await paramsPromise
   const article = getResearchArticle(params.slug)
   if (!article) return {}
 
@@ -28,7 +30,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   }
 }
 
-export default function ResearchArticlePage({ params }: { params: { slug: string } }) {
+export default async function ResearchArticlePage({ params: paramsPromise }: { params: Promise<{ slug: string }> }) {
+  const params = await paramsPromise
   const article = getResearchArticle(params.slug)
   if (!article) notFound()
 
@@ -109,7 +112,7 @@ export default function ResearchArticlePage({ params }: { params: { slug: string
 
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(schema) }}
         />
       </article>
     </SiteFrame>

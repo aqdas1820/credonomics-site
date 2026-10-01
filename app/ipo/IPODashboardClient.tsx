@@ -1,14 +1,17 @@
 'use client'
+import DataFreshness from '../components/DataFreshness'
+import type { FinancialDataMetadata } from '../../src/domain/financial-data'
 
 import { ArrowRight, ChevronDown, Search } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import type { PublicIpoRecord } from '../data/ipo-types'
-import { ipoStatusLabel } from '../../src/domain/ipo/display-status'
+import { getIpoDisplayStatus, ipoStatusLabel } from '../../src/domain/ipo/display-status'
+import { fetchJson } from '../../src/lib/client-json'
 import { formatIpoDate, formatShortIpoDate, formatSubscription } from './lib/format'
 import styles from './ipo-dashboard.module.css'
 import { deduplicatePublicIpos } from '../data/ipo-dedup'
 
-type View = 'open' | 'upcoming' | 'closed' | 'listed'
+type View = 'open' | 'announced' | 'closed' | 'listed'
 type Segment = 'all' | 'mainboard' | 'sme'
 
 type ApiIpo = {
@@ -25,14 +28,14 @@ type ApiIpo = {
   closeDate: string | null
   listingDate: string | null
   status: PublicIpoRecord['status']
-  providerUpdatedAt: string
+  providerUpdatedAt: string | null
   normalizedAt: string
 }
 
 const views: { value: View; label: string }[] = [
   { value: 'open', label: 'Open' },
-  { value: 'upcoming', label: 'Upcoming' },
-  { value: 'closed', label: 'Recently Closed' },
+  { value: 'announced', label: 'Upcoming' },
+  { value: 'closed', label: 'Closed / Allotment' },
   { value: 'listed', label: 'Listed' },
 ]
 
@@ -52,7 +55,6 @@ function crore(value?: number) {
 }
 
 function inView(record: PublicIpoRecord, view: View) {
-  if (view === 'open') return record.status === 'open' || record.status === 'closing_today'
   return record.status === view
 }
 
@@ -60,15 +62,21 @@ export default function IPODashboardClient({ records, initialView = 'open' }: { 
   const [view, setView] = useState<View>(initialView)
   const [segment, setSegment] = useState<Segment>('all')
   const [query, setQuery] = useState('')
+  const [liveMetadata, setLiveMetadata] = useState<FinancialDataMetadata | null>(null)
   const [liveRecords, setLiveRecords] = useState<PublicIpoRecord[]>([])
+  const [refreshError, setRefreshError] = useState('')
+  const [now, setNow] = useState<Date | null>(null)
 
   useEffect(() => {
     let active = true
+    const controller = new AbortController()
     const refresh = async () => {
+      setNow(new Date())
       try {
-        const response = await fetch('/api/ipos', { cache: 'no-store' })
-        const payload = await response.json() as { data?: ApiIpo[] | null }
+        const payload = await fetchJson<{ data?: ApiIpo[] | null; metadata?: FinancialDataMetadata }>('/api/ipos', { cache: 'no-store', signal: controller.signal })
         if (!active || !payload.data) return
+        setRefreshError('')
+        setLiveMetadata(payload.metadata ?? null)
         const staticByName = new Map(records.map((record) => [normalizeName(record.companyName), record]))
         setLiveRecords(payload.data.filter((item) => item.company).map((item) => {
           const existing = staticByName.get(normalizeName(item.company!))
@@ -78,45 +86,49 @@ export default function IPODashboardClient({ records, initialView = 'open' }: { 
             slug: existing?.slug ?? `live:${item.id}`,
             companyName: item.company!,
             symbol: item.symbol ?? undefined,
-            marketSegment: item.issueType.toLowerCase() === 'sme' ? 'sme' : 'mainboard',
+            marketSegment: item.issueType.toLowerCase() === 'sme' ? 'sme' : item.issueType.toLowerCase() === 'mainboard' ? 'mainboard' : 'unknown',
             status: item.status,
             issue: {
-              issueSizeCr: item.issueSizeCrore ?? undefined,
-              priceBandLow: item.priceMin ?? undefined,
-              priceBandHigh: item.priceMax ?? undefined,
-              lotSize: item.lotSize ?? undefined,
-              openDate: item.openDate ?? undefined,
-              closeDate: item.closeDate ?? undefined,
-              listingDate: item.listingDate ?? undefined,
+              ...existing?.issue,
+              issueSizeCr: (existing?.researchState === 'normalized' ? existing?.issue?.issueSizeCr : undefined) ?? item.issueSizeCrore ?? existing?.issue?.issueSizeCr ?? undefined,
+              priceBandLow: (existing?.researchState === 'normalized' ? existing?.issue?.priceBandLow : undefined) ?? item.priceMin ?? existing?.issue?.priceBandLow ?? undefined,
+              priceBandHigh: (existing?.researchState === 'normalized' ? existing?.issue?.priceBandHigh : undefined) ?? item.priceMax ?? existing?.issue?.priceBandHigh ?? undefined,
+              lotSize: (existing?.researchState === 'normalized' ? existing?.issue?.lotSize : undefined) ?? item.lotSize ?? existing?.issue?.lotSize ?? undefined,
+              openDate: item.openDate ?? existing?.issue?.openDate ?? undefined,
+              closeDate: item.closeDate ?? existing?.issue?.closeDate ?? undefined,
+              listingDate: item.listingDate ?? existing?.issue?.listingDate ?? undefined,
             },
             financials: existing?.financials ?? [],
             subscription: existing?.subscription,
             sources: existing?.sources ?? [],
-            lastUpdated: item.providerUpdatedAt,
-            providerUpdatedAt: item.providerUpdatedAt,
+            lastUpdated: item.providerUpdatedAt ?? existing?.lastUpdated ?? '',
+            providerUpdatedAt: item.providerUpdatedAt ?? '',
             normalizedAt: item.normalizedAt,
             provider: 'upstox',
             researchState: existing?.researchState ?? 'exchange-live',
+            estimatedIssueValueCr: existing?.estimatedIssueValueCr,
+            sharesOffered: existing?.sharesOffered,
+            sharesBid: existing?.sharesBid,
           }
         }))
       } catch {
-        // Generated exchange records remain the resilient public fallback.
+        if (active) setRefreshError('Live IPO updates are unavailable. Showing the last published records; check the source dates.')
       }
     }
     void refresh()
     const timer = window.setInterval(refresh, 60_000)
-    return () => { active = false; window.clearInterval(timer) }
+    return () => { active = false; controller.abort(); window.clearInterval(timer) }
   }, [records])
 
   const displayRecords = useMemo(() => {
-    if (!liveRecords.length) return records
-    return deduplicatePublicIpos([...liveRecords, ...records], false)
-  }, [liveRecords, records])
+    const merged = liveRecords.length ? deduplicatePublicIpos([...liveRecords, ...records], false) : records
+    return now ? merged.map(record => ({ ...record, status: getIpoDisplayStatus({ ...record.issue, providerStatus: record.status }, now) })) : merged
+  }, [liveRecords, records, now])
 
   const stats = useMemo(() => ({
     open: displayRecords.filter((record) => record.status === 'open').length,
-    upcoming: displayRecords.filter((record) => record.status === 'upcoming').length,
-    closingToday: displayRecords.filter((record) => record.status === 'closing_today').length,
+    announced: displayRecords.filter((record) => record.status === 'announced').length,
+    closed: displayRecords.filter((record) => record.status === 'closed').length,
     recentlyListed: displayRecords.filter((record) => record.status === 'listed').length,
   }), [displayRecords])
 
@@ -132,7 +144,7 @@ export default function IPODashboardClient({ records, initialView = 'open' }: { 
       .sort((a, b) => {
         const aDate = a.issue.closeDate || a.issue.openDate || a.issue.listingDate || ''
         const bDate = b.issue.closeDate || b.issue.openDate || b.issue.listingDate || ''
-        return view === 'upcoming' ? aDate.localeCompare(bDate) : bDate.localeCompare(aDate)
+        return view === 'announced' ? aDate.localeCompare(bDate) : bDate.localeCompare(aDate)
       })
   }, [displayRecords, query, segment, view])
 
@@ -146,9 +158,9 @@ export default function IPODashboardClient({ records, initialView = 'open' }: { 
 
       <section className={styles.stats} aria-label="IPO market summary">
         <article><span>Open</span><strong>{stats.open}</strong></article>
-        <article><span>Upcoming</span><strong>{stats.upcoming}</strong></article>
-        <article><span>Closing today</span><strong>{stats.closingToday}</strong></article>
-        <article><span>Recently listed</span><strong>{stats.recentlyListed}</strong></article>
+        <article><span>Upcoming</span><strong>{stats.announced}</strong></article>
+        <article><span>Closed / Allotment</span><strong>{stats.closed}</strong></article>
+        <article><span>Listed</span><strong>{stats.recentlyListed}</strong></article>
       </section>
 
       <section className={styles.workspace}>
@@ -240,8 +252,15 @@ export default function IPODashboardClient({ records, initialView = 'open' }: { 
                 </div>
 
                 <div className={styles.issueSize}>
-                  <small>Issue size</small>
+                  <small>{record.issue.issueSizeCr !== undefined ? 'Issue size' : 'Est. issue value'}</small>
                   <strong>{crore(issueSize)}</strong>
+                  {(record.issue.freshIssueCr !== undefined || record.issue.ofsCr !== undefined) ? (
+                    <span style={{ fontSize: '0.75rem', opacity: 0.8, display: 'block', marginTop: '2px' }}>
+                      {record.issue.freshIssueCr !== undefined ? `Fresh: ${crore(record.issue.freshIssueCr)}` : ''}
+                      {record.issue.freshIssueCr !== undefined && record.issue.ofsCr !== undefined ? ' · ' : ''}
+                      {record.issue.ofsCr !== undefined ? `OFS: ${crore(record.issue.ofsCr)}` : ''}
+                    </span>
+                  ) : null}
                 </div>
 
                 <div className={styles.demand}>
@@ -269,8 +288,9 @@ export default function IPODashboardClient({ records, initialView = 'open' }: { 
         ) : null}
 
         <footer className={styles.freshness}>
+          {refreshError && <span role="status">{refreshError}</span>}
           <span>Market data</span>
-          <span>Last updated {displayRecords[0]?.providerUpdatedAt ? new Intl.DateTimeFormat('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'short', timeStyle: 'medium' }).format(new Date(displayRecords[0].providerUpdatedAt)) : '—'}</span>
+          {liveMetadata ? <DataFreshness metadata={liveMetadata} /> : <span>Published data ? see source dates</span>}
         </footer>
       </section>
     </main>

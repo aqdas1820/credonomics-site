@@ -1,9 +1,11 @@
+import DataFreshness from "../../../components/DataFreshness";
 import type { IndianEquityIdentity, MarketQuote } from "../../../../src/domain/equity/types";
 import { formatINR as formatCurrency, formatPercent } from "../../../../src/lib/financial-format";
 import { IndianMarketSession, marketSessionLabel } from "../../../../src/domain/market/session";
 import styles from "./stock-detail.module.css";
+import Link from "next/link";
 
-type Result<T> = { data: T | null; metadata: { availability: string; asOf: string | null; session?: "current" | "previous"; sessionDate?: string }; error?: { message: string } };
+type Result<T> = { data: T | null; metadata: { source?: string; availability: string; asOf: string | null; session?: "current" | "previous"; sessionDate?: string }; error?: { message: string } };
 
 type Props = {
   stock: IndianEquityIdentity;
@@ -15,8 +17,11 @@ export default function StockHeader({ stock, quote, marketSession }: Props) {
   return (
     <header className={styles.brokerHeader}>
       <div className={styles.headerTitle}>
-        <h1>{stock.companyName}</h1>
-        <span className={styles.exchangeBadge}>{stock.symbol} • {stock.exchange}</span>
+        <div>
+          <h1>{stock.companyName}</h1>
+          <span className={styles.exchangeBadge}>{stock.symbol} • {stock.exchange}</span>
+        </div>
+        <Link href={`/compare`} className={styles.compareBtn}>Compare</Link>
       </div>
       {quote?.data ? (
         <div className={styles.headerPriceData}>
@@ -31,8 +36,8 @@ export default function StockHeader({ stock, quote, marketSession }: Props) {
             )}
           </div>
           <small className={styles.timestamp}>
-            {marketSession === "OPEN" ? <span className={styles.liveIndicator}></span> : null}
-            {marketSessionLabel(marketSession)} · {quote.metadata.asOf ? new Date(quote.metadata.asOf).toLocaleString("en-IN") : "Timestamp unavailable"}
+            {quote.metadata.availability === "live" ? <span className={styles.liveIndicator}></span> : null}
+            {marketSessionLabel(marketSession)} / <DataFreshness metadata={quote.metadata} />
           </small>
         </div>
       ) : quote ? (

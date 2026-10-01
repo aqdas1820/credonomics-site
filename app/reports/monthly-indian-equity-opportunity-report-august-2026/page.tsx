@@ -1,3 +1,5 @@
+import { serializeJsonLd } from '../../../src/lib/json-ld'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import {
   ArrowLeft,
@@ -87,7 +89,7 @@ export default function August2026EquityReportPage() {
 
           <div className={styles.reportCoverLarge}>
             <div className={styles.coverBrand}>
-              <img src="/credonomics-mark.png" alt="" />
+              <Image width={48} height={48} src="/credonomics-mark.png" alt="" />
               <span>
                 <strong>CredoNomics</strong>
                 <small>Investment Solutions</small>
@@ -258,7 +260,7 @@ export default function August2026EquityReportPage() {
 
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(structuredData) }}
         />
       </section>
     </SiteFrame>

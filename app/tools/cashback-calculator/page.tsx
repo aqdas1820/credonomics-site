@@ -1,5 +1,7 @@
 'use client'
 
+import { boundedNumber } from '../../../src/lib/calculator-input'
+import Image from 'next/image'
 import { ArrowLeft, Calculator, Info, RotateCcw, ShieldCheck, Sparkles, TrendingUp } from 'lucide-react'
 import { useMemo, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
@@ -35,13 +37,13 @@ function CashbackCalculatorForm() {
 
   const defaults = { spend: 30000, rate: 5, cap: 1000, excluded: 20, fee: 1000, waiver: 100000, gst: 18 }
   
-  const spend = Number(searchParams.get('spend') ?? defaults.spend)
-  const rate = Number(searchParams.get('rate') ?? defaults.rate)
-  const cap = Number(searchParams.get('cap') ?? defaults.cap)
-  const excluded = Number(searchParams.get('excluded') ?? defaults.excluded)
-  const fee = Number(searchParams.get('fee') ?? defaults.fee)
-  const waiver = Number(searchParams.get('waiver') ?? defaults.waiver)
-  const gst = Number(searchParams.get('gst') ?? defaults.gst)
+  const spend = boundedNumber(searchParams.get('spend'), defaults.spend)
+  const rate = boundedNumber(searchParams.get('rate'), defaults.rate, 100)
+  const cap = boundedNumber(searchParams.get('cap'), defaults.cap)
+  const excluded = boundedNumber(searchParams.get('excluded'), defaults.excluded, 100)
+  const fee = boundedNumber(searchParams.get('fee'), defaults.fee)
+  const waiver = boundedNumber(searchParams.get('waiver'), defaults.waiver)
+  const gst = boundedNumber(searchParams.get('gst'), defaults.gst, 100)
 
   const updateParam = (key: string, value: number) => {
     const params = new URLSearchParams(searchParams.toString())
@@ -124,7 +126,7 @@ export default function CashbackCalculatorPage() {
   return (
     <main className="calcPage">
       <header className="calcNav wrap">
-        <a className="brand" href="/"><img src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CredoNomics</strong><small>Investment Solutions</small></span></a>
+        <a className="brand" href="/"><Image width={48} height={48} src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CredoNomics</strong><small>Investment Solutions</small></span></a>
         <a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a>
       </header>
 

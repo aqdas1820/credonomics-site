@@ -36,6 +36,7 @@ const newCard = (index: number): CustomCardModel => ({
   annualFeeTaxRatePercent: 18,
   waiverSpendRupees: 0,
   baseRatePercent: 1,
+  combinedMonthlyCapRupees: 0,
   categoryRates: {
     online: 1,
     groceries: 1,
@@ -192,6 +193,7 @@ export default function CardAnalyzer() {
                   <label><span>Fee GST %</span><input type="number" min="0" value={card.annualFeeTaxRatePercent} onChange={(e) => patchCard(card.id, { annualFeeTaxRatePercent: Number(e.target.value) })} /></label>
                   <label><span>Fee waiver spend ₹/yr</span><input type="number" min="0" value={card.waiverSpendRupees} onChange={(e) => patchCard(card.id, { waiverSpendRupees: Number(e.target.value) })} /></label>
                   <label><span>Base reward %</span><input type="number" min="0" step="0.1" value={card.baseRatePercent} onChange={(e) => patchCard(card.id, { baseRatePercent: Number(e.target.value) })} /></label>
+                  <label><span>Combined monthly cap ₹</span><input type="number" min="0" placeholder="No cap" value={card.combinedMonthlyCapRupees || ''} onChange={(e) => patchCard(card.id, { combinedMonthlyCapRupees: Number(e.target.value) })} /></label>
                 </div>
 
                 {isOpen && (

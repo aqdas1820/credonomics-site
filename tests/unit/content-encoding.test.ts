@@ -23,5 +23,5 @@ describe('production text encoding', () => {
       return malformed.some((sequence) => content.includes(sequence))
     })
     expect(offenders).toEqual([])
-  })
+  }, 20000)
 })

@@ -1,7 +1,9 @@
-export type PulseQuote = { name: string; symbol: string; instrumentKey: string; price: number | null; change: number | null; changePercent: number | null; volume: number | null; timestamp: string | null }
-export type InstitutionalFlow = { label: 'FII' | 'DII'; segment: 'NSE cash'; buy: number; sell: number; net: number; timestamp: string }
+import type { FinancialDataMetadata } from '../financial-data'
+export type PulseQuote = { metadata?: FinancialDataMetadata; name: string; symbol: string; instrumentKey: string; price: number | null; change: number | null; changePercent: number | null; volume: number | null; timestamp: string | null }
+export type InstitutionalFlow = { metadata?: FinancialDataMetadata; label: 'FII' | 'DII'; segment: 'NSE cash'; buy: number; sell: number; net: number; timestamp: string }
 export type MarketTrend = { label: string; classification: string; value: number; unit: '%' | 'crore' | 'stocks' }
 export type MarketPulse = {
+  metadata?: FinancialDataMetadata
   movers: { gainers: PulseQuote[]; losers: PulseQuote[]; mostActive: PulseQuote[]; universeSize: number }
   breadth: { advances: number; declines: number; unchanged: number; universeSize: number } | null
   sectors: PulseQuote[]

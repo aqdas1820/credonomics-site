@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '../../src/lib/json-ld'
 import {
   BRAND_NAME,
   SITE_DESCRIPTION,
@@ -51,7 +52,7 @@ export default function SiteStructuredData() {
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(graph),
+        __html: serializeJsonLd(graph),
       }}
     />
   )

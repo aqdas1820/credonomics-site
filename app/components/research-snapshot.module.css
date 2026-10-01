@@ -1,0 +1,93 @@
+.snapshot {
+  margin: 2rem 0;
+  border-top: 1px solid var(--border-color, #eaeaea);
+  padding-top: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--surface, #fff);
+  border: 1px solid var(--border-color, #eaeaea);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary, #666);
+  margin: 0 0 1rem 0;
+}
+
+.stateGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.stateGrid div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stateGrid small {
+  font-size: 0.8rem;
+  color: var(--text-secondary, #666);
+}
+
+.stateGrid strong {
+  font-size: 1.1rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.list li {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color, #eaeaea);
+}
+
+.list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.riskItem {
+  color: var(--color-negative, #d92121);
+  font-weight: 500;
+}
+
+.empty {
+  font-size: 0.9rem;
+  color: var(--text-secondary, #666);
+  font-style: italic;
+}

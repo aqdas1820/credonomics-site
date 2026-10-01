@@ -28,7 +28,7 @@ export function availabilityFromDate(
 ): DataAvailability {
   if (!asOf) return "unavailable";
   const timestamp = new Date(asOf).getTime();
-  if (!Number.isFinite(timestamp)) return "unavailable";
+  if (!Number.isFinite(timestamp) || timestamp > now.getTime() + 60_000) return "unavailable";
 
   const ageMs = Math.max(0, now.getTime() - timestamp);
   const minutes = ageMs / 60_000;
@@ -60,3 +60,14 @@ export const availabilityLabels: Record<DataAvailability, string> = {
   stale: "Stale",
   unavailable: "Unavailable",
 };
+
+// Freshness is based on observation time, never the time this request was served.
+export function marketObservationAvailability(asOf: string | null, marketOpen: boolean, now = new Date(), liveMinutes = 2): DataAvailability {
+  const availability = availabilityFromDate(asOf, now, { liveMinutes, recentHours: 24, delayedDays: 7, staleAfterDays: 7 });
+  return availability === 'live' && !marketOpen ? 'recent' : availability;
+}
+
+export function latestObservation(dates: string[]): string | null {
+  return dates.filter(date => Number.isFinite(Date.parse(date)))
+    .reduce<string | null>((latest, date) => !latest || Date.parse(date) > Date.parse(latest) ? date : latest, null);
+}

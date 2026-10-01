@@ -9,9 +9,8 @@ export type IpoDocumentStage =
 
 export type IpoLifecycleStatus =
   | 'draft'
-  | 'upcoming'
+  | 'announced'
   | 'open'
-  | 'closing_today'
   | 'closed'
   | 'listed'
   | 'withdrawn'

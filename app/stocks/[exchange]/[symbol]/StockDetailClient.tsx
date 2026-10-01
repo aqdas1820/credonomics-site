@@ -1,4 +1,5 @@
 "use client";
+import DataFreshness from "../../../components/DataFreshness";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import type { IndianEquityIdentity, HistoricalRange } from "../../../../src/domain/equity/types";
@@ -12,6 +13,9 @@ import { useHistoricalData } from "./useHistoricalData";
 import StockHeader from "./StockHeader";
 import StockStats from "./StockStats";
 import NewsletterForm from "../../../components/NewsletterForm";
+import { addRecentView } from "../../../../src/services/recent-views";
+import ResearchSnapshot from "../../../components/ResearchSnapshot";
+import { ChangeIntelligenceService } from "../../../../src/services/research/ChangeIntelligenceService";
 
 const InteractiveChart = dynamic(() => import("./InteractiveChart"), { ssr: false, loading: () => <p>Loading interactive chart...</p> });
 const ranges: HistoricalRange[] = ["1m", "5m", "15m", "1h", "1D", "1W", "1M", "3M", "6M", "1Y", "3Y", "5Y"];
@@ -26,8 +30,9 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
     const update = () => setMarketSession(getIndianMarketSession());
     update();
     const timer = window.setInterval(update, 60_000);
+    addRecentView(stock);
     return () => window.clearInterval(timer);
-  }, []);
+  }, [stock]);
 
   const { quote, fundamentals, shareholding, actions, financials } = useMarketData(stock.instrumentKey);
   const { history, points, isIntraday } = useHistoricalData(stock.instrumentKey, range);
@@ -35,12 +40,21 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
   const display52WHigh = quote?.data?.fiftyTwoWeekHigh ?? null;
   const display52WLow = quote?.data?.fiftyTwoWeekLow ?? null;
 
+  const changes = ChangeIntelligenceService.generateStockChanges(
+    stock.instrumentKey,
+    quote?.data ?? null,
+    financials?.data ?? null,
+    actions?.data ?? null
+  );
+
   return (
     <main className={styles.page}>
       {/* HEADER */}
       <StockHeader stock={stock} quote={quote} marketSession={marketSession} />
       
       <StockTrackerActions stock={{ instrumentKey: stock.instrumentKey, symbol: stock.symbol, exchange: stock.exchange, companyName: stock.companyName }} />
+
+      <ResearchSnapshot type="stock" quote={quote?.data ?? null} financials={financials?.data ?? null} actions={actions?.data ?? null} changes={changes} />
 
       <div className={styles.brokerLayout}>
         {/* MAIN CHART AREA */}
@@ -61,6 +75,7 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
               ) : points.length ? (
                 <>
                   {history.metadata.session === "previous" ? <p className={styles.notice}>Previous trading session · {history.metadata.sessionDate}</p> : null}
+                  <DataFreshness metadata={history.metadata} />
                   <InteractiveChart points={points} isIntraday={isIntraday} />
                 </>
               ) : (
@@ -75,7 +90,6 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
           quote={quote} 
           fundamentals={fundamentals} 
           shareholding={shareholding} 
-          actions={actions} 
           isBank={isBank} 
           display52WHigh={display52WHigh} 
           display52WLow={display52WLow} 
@@ -87,7 +101,7 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
       </div>
 
       {financials?.data ? (
-        <FinancialIntelligence data={financials.data} />
+        <FinancialIntelligence data={financials.data} quote={quote} actions={actions} shareholding={shareholding} />
       ) : financials ? (
         <section className={styles.financialEmpty}>Financial data unavailable for this company.</section>
       ) : (

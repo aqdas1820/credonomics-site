@@ -30,6 +30,9 @@ export type MarketQuote = IndianEquityIdentity &
     volume: FinancialValue;
     fiftyTwoWeekHigh: FinancialValue;
     fiftyTwoWeekLow: FinancialValue;
+    marketCap?: FinancialValue;
+    pe?: FinancialValue;
+    eps?: FinancialValue;
   };
 
 export type CompanyFundamentals = IndianEquityIdentity &
@@ -76,14 +79,18 @@ export type HistoricalPrice = {
   volume: FinancialValue;
 };
 
-export type CorporateAction = {
-  type: "dividend" | "split" | "bonus" | "rights" | "buyback" | "other";
-  exDate: string | null;
-  recordDate: string | null;
+export type CorporateEvent = {
+  type: "dividend" | "split" | "bonus" | "rights" | "buyback" | "earnings" | "board_meeting" | "ipo_milestone" | "other";
   announcementDate: string | null;
+  recordDate: string | null;
+  exDate: string | null;
+  eventDate?: string | null;
+  reportingPeriod?: string | null;
   amount: number | null;
   ratio: string | null;
   description: string;
 };
+
+export type CorporateAction = CorporateEvent;
 
 export type HistoricalRange = "1m" | "5m" | "15m" | "1h" | "1D" | "1W" | "1M" | "3M" | "6M" | "1Y" | "3Y" | "5Y" | "MAX";

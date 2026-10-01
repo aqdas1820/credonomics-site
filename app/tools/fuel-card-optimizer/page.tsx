@@ -1,5 +1,7 @@
 'use client'
 
+import { boundedNumber } from '../../../src/lib/calculator-input'
+import Image from 'next/image'
 import { ArrowLeft, BadgeIndianRupee, ExternalLink, Fuel, Gauge, Info, RotateCcw, Sparkles, Trophy } from 'lucide-react'
 import { useMemo, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
@@ -104,8 +106,8 @@ function FuelOptimizerForm() {
   const router = useRouter()
   const searchParams = useSearchParams()
 
-  const monthlyFuel = Number(searchParams.get('monthlyFuel') ?? 10000)
-  const annualRetailSpend = Number(searchParams.get('annualRetailSpend') ?? 120000)
+  const monthlyFuel = boundedNumber(searchParams.get('monthlyFuel'), 10000)
+  const annualRetailSpend = boundedNumber(searchParams.get('annualRetailSpend'), 120000)
   const preferred = (searchParams.get('preferred') ?? 'Any') as Brand
   const useApp = searchParams.get('useApp') !== 'false'
   const showAll = searchParams.get('showAll') !== 'false'
@@ -169,7 +171,7 @@ function FuelOptimizerForm() {
 export default function FuelOptimizer() {
   return (
     <main className="toolPage">
-      <header className="calcNav wrap"><a className="brand" href="/"><img src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CredoNomics</strong><small>Investment Solutions</small></span></a><a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a></header>
+      <header className="calcNav wrap"><a className="brand" href="/"><Image width={48} height={48} src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CredoNomics</strong><small>Investment Solutions</small></span></a><a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a></header>
 
       <Suspense fallback={<div className="wrap" style={{padding: '4rem 0', textAlign: 'center'}}>Loading comparator...</div>}>
         <FuelOptimizerForm />

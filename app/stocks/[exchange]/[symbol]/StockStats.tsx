@@ -1,20 +1,20 @@
-import type { CompanyFundamentals, CorporateAction, MarketQuote, Shareholding } from "../../../../src/domain/equity/types";
-import { formatINR as formatCurrency, formatIndianNumber as formatNumber, formatPercent } from "../../../../src/lib/financial-format";
+import DataFreshness from "../../../components/DataFreshness";
+import type { CompanyFundamentals, MarketQuote, Shareholding } from "../../../../src/domain/equity/types";
+import { formatINR as formatCurrency, formatIndianNumber as formatNumber, formatPercent, formatMarketCap } from "../../../../src/lib/financial-format";
 import styles from "./stock-detail.module.css";
 
-type Result<T> = { data: T | null; metadata: { availability: string; asOf: string | null; session?: "current" | "previous"; sessionDate?: string }; error?: { message: string } };
+type Result<T> = { data: T | null; metadata: { source?: string; availability: string; asOf: string | null; session?: "current" | "previous"; sessionDate?: string }; error?: { message: string } };
 
 type Props = {
   quote: Result<MarketQuote> | null;
   fundamentals: Result<CompanyFundamentals> | null;
   shareholding: Result<Shareholding> | null;
-  actions: Result<CorporateAction[]> | null;
   isBank: boolean;
   display52WHigh: number | null;
   display52WLow: number | null;
 };
 
-export default function StockStats({ quote, fundamentals, shareholding, actions, isBank, display52WHigh, display52WLow }: Props) {
+export default function StockStats({ quote, fundamentals, shareholding, isBank, display52WHigh, display52WLow }: Props) {
   return (
     <aside className={styles.sidebar}>
       {/* QUICK STATS */}
@@ -43,19 +43,22 @@ export default function StockStats({ quote, fundamentals, shareholding, actions,
       {/* FUNDAMENTALS */}
       <section className={styles.statsCard}>
         <h2>Fundamentals</h2>
+        {fundamentals ? <DataFreshness metadata={fundamentals.metadata} hasData={Boolean(fundamentals.data)} /> : null}
         {fundamentals?.data ? (
           <div className={styles.brokerGrid}>
             {[
-              ["P/E Ratio", fundamentals.data.pe],
-              ["P/B Ratio", fundamentals.data.pb],
-              ["ROE", fundamentals.data.roe],
-              ["ROCE", fundamentals.data.roce],
-              ["ROA", fundamentals.data.roa],
-              ["EV/EBITDA", fundamentals.data.evEbitda]
-            ].filter(([label]) => !isBank || label !== "EV/EBITDA").map(([label, value]) => (
+              ["Market Cap", fundamentals.data.marketCap ?? quote?.data?.marketCap, "marketCap"],
+              ["P/E Ratio", fundamentals.data.pe ?? quote?.data?.pe, "multiple"],
+              ["EPS", fundamentals.data.eps ?? quote?.data?.eps, "currency"],
+              ["P/B Ratio", fundamentals.data.pb, "multiple"],
+              ["ROE", fundamentals.data.roe, "percent"],
+              ["ROCE", fundamentals.data.roce, "percent"],
+              ["ROA", fundamentals.data.roa, "percent"],
+              ["EV/EBITDA", fundamentals.data.evEbitda, "multiple"]
+            ].filter(([label]) => !isBank || label !== "EV/EBITDA").map(([label, value, type]) => (
               <div key={String(label)} className={styles.gridItem}>
                 <span className={styles.gridLabel}>{label}</span>
-                <strong className={styles.gridValue}>{formatNumber(value as number | null, "N/A")}</strong>
+                <strong className={styles.gridValue}>{type === "percent" ? formatPercent(value as number | null, "N/A") : type === "currency" ? formatCurrency(value as number | null, "N/A") : type === "marketCap" ? formatMarketCap(value as number | null, "N/A") : formatNumber(value as number | null, "N/A")}</strong>
               </div>
             ))}
           </div>
@@ -69,12 +72,13 @@ export default function StockStats({ quote, fundamentals, shareholding, actions,
       {/* SHAREHOLDING */}
       <section className={styles.statsCard}>
         <h2>Shareholding</h2>
+        {shareholding ? <DataFreshness metadata={shareholding.metadata} hasData={Boolean(shareholding.data)} /> : null}
         {shareholding?.data ? (
           <div className={styles.brokerGrid}>
             {[
               ["Promoters", shareholding.data.promoterHolding],
               ["FII", shareholding.data.fiiHolding],
-              ["DII", shareholding.data.diiHolding],
+              ["Other DII", shareholding.data.diiHolding],
               ["Mutual Funds", shareholding.data.mutualFundHolding],
               ["Public", shareholding.data.publicHolding]
             ].map(([label, value]) => (
@@ -91,25 +95,6 @@ export default function StockStats({ quote, fundamentals, shareholding, actions,
         )}
       </section>
 
-      {/* CORPORATE ACTIONS */}
-      <section className={styles.statsCard} id="corporate-actions">
-        <h2>Corporate Actions</h2>
-        {actions?.data?.length ? (
-          <div className={styles.actionList}>
-            {actions.data.slice(0, 10).map((action, index) => (
-              <article key={`${action.type}-${action.recordDate}-${index}`} className={styles.actionItem}>
-                <strong>{action.type.toUpperCase()}</strong>
-                <span>{action.description}</span>
-                <small>Announced: {action.announcementDate ?? "N/A"} · Ex-date: {action.exDate ?? "N/A"} · Record: {action.recordDate ?? "N/A"}{action.amount !== null ? ` · ${formatCurrency(action.amount)}` : action.ratio ? ` · ${action.ratio}` : ""}</small>
-              </article>
-            ))}
-          </div>
-        ) : actions ? (
-          <p className={styles.notice}>{actions.error?.message ?? "No corporate actions returned."}</p>
-        ) : (
-          <p className={styles.loading}>Loading corporate actions…</p>
-        )}
-      </section>
     </aside>
   );
 }

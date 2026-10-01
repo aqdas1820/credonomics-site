@@ -1,52 +1,24 @@
 'use client'
-
-import React from 'react'
+import { useEffect, useRef } from 'react'
 import AuthForm from '../auth/AuthForm'
 import { X } from 'lucide-react'
 
 export default function AuthModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
-  if (!isOpen) return null;
-
-  return (
-    <div style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      backgroundColor: 'rgba(0, 0, 0, 0.6)',
-      backdropFilter: 'blur(4px)',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      zIndex: 9999,
-      padding: '20px'
-    }}>
-      <div style={{
-        background: 'var(--card-bg, #ffffff)',
-        border: '1px solid var(--card-border, #e2e8f0)',
-        borderRadius: '16px',
-        width: '100%',
-        maxWidth: '480px',
-        padding: '32px',
-        position: 'relative',
-        boxShadow: '0 10px 40px rgba(0,0,0,0.1)'
-      }}>
-        <button 
-          onClick={onClose}
-          style={{ position: 'absolute', top: '16px', right: '16px', background: 'none', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer' }}
-          aria-label="Close"
-        >
-          <X size={20} />
-        </button>
-
-        <h2 style={{ margin: '0 0 8px 0', fontSize: '22px', textAlign: 'center', color: 'var(--text-primary)' }}>Sign in to continue</h2>
-        <p style={{ margin: '0 0 24px 0', fontSize: '14px', textAlign: 'center', color: 'var(--text-secondary)' }}>
-          Create an account to save watchlists, set price alerts, and unlock personalized insights.
-        </p>
-
-        <AuthForm view="signup" onComplete={onClose} />
-      </div>
-    </div>
-  )
+  const dialog = useRef<HTMLDialogElement>(null)
+  useEffect(() => {
+    const element = dialog.current
+    if (!element) return
+    if (!isOpen) { element.close(); return }
+    const previous = document.activeElement instanceof HTMLElement ? document.activeElement : null
+    element.showModal()
+    const overflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => { element.close(); document.body.style.overflow = overflow; previous?.focus() }
+  }, [isOpen])
+  return <dialog ref={dialog} className="authDialog" aria-labelledby="auth-dialog-title" onCancel={onClose} onClick={event => { if (event.target === event.currentTarget) onClose() }}>
+    <button type="button" onClick={onClose} aria-label="Close sign in" className="authDialogClose"><X size={20} /></button>
+    <h2 id="auth-dialog-title">Sign in to continue</h2>
+    <p>Save your watchlists and alerts across devices.</p>
+    {isOpen && <AuthForm view="login" onComplete={onClose} />}
+  </dialog>
 }

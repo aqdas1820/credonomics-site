@@ -176,7 +176,7 @@ function objectsFromText(text) {
 
   while ((match = regex.exec(text))) {
     const block = match[1]
-    if (/slug\s*:/.test(block)) objects.push(block)
+    if (/(slug|id)\s*:/.test(block)) objects.push(block)
   }
 
   return objects
@@ -192,7 +192,7 @@ function addEnriched(relative, config) {
   if (!text) return
 
   for (const block of objectsFromText(text)) {
-    const slug = value(block, 'slug')
+    const slug = value(block, config.slugKey || 'slug')
     const title = value(block, config.titleKey)
     if (!slug || !title) continue
 
@@ -274,7 +274,106 @@ if (ipoText) {
   }
 }
 
+addEnriched('app/data/verified-real-cards.ts', {
+  prefix: 'card',
+  slugKey: 'id',
+  titleKey: 'name',
+  updatedKey: 'verifiedAt',
+  baseHref: '/cards',
+  category: 'Cards',
+  source: 'CredoNomics cards',
+  priority: 88,
+  fallbackDescription: (title) => `View details and rewards for ${title}.`,
+})
+
+const mfIndexText = readIfExists('public/data/mf-intelligence/v2/index.json')
+if (mfIndexText) {
+  try {
+    const mfIndex = JSON.parse(mfIndexText)
+    for (const scheme of mfIndex.schemes || []) {
+      entries.push({
+        id: `mf:${scheme.slug}`,
+        title: scheme.scheme,
+        description: `Explore the ${scheme.category} mutual fund portfolio intelligence.`,
+        href: `/tools/mf-portfolio-tracker?scheme=${scheme.slug}`,
+        category: 'Mutual Funds',
+        source: 'Portfolio disclosures',
+        updated: mfIndex.metadata?.asOf || '',
+        keywords: `${scheme.scheme} ${scheme.category} Mutual Fund MF`,
+        priority: 85,
+      })
+    }
+  } catch (e) {
+    console.error('Failed to parse MF index:', e)
+  }
+}
+
+const instrumentsText = readIfExists('public/data/equity/instruments.json')
+if (instrumentsText) {
+  try {
+    const instrumentsObj = JSON.parse(instrumentsText)
+    const instruments = instrumentsObj.instruments || []
+    
+    const equities = instruments.filter(i => i.instrumentType === 'EQ' && i.exchange === 'NSE')
+    
+    for (const eq of equities) {
+      if (!eq.symbol || !eq.companyName) continue
+      
+      entries.push({
+        id: `stock:${eq.symbol}`,
+        title: `${eq.companyName} (${eq.symbol})`,
+        description: `View market data and fundamental quality metrics for ${eq.companyName}.`,
+        href: `/stocks/nse/${eq.symbol}`,
+        category: 'Stocks',
+        source: 'Exchange market data',
+        updated: instrumentsObj.generatedAt || '',
+        keywords: `${eq.companyName} ${eq.symbol} Stock Equity Company`,
+        priority: 65,
+      })
+    }
+  } catch (e) {
+    console.error('Failed to parse instruments:', e)
+  }
+}
+
+// Add Sectors
+const sectorsText = readIfExists('app/data/sectors.ts');
+if (sectorsText) {
+  try {
+    const regex = /\{ slug: '([^']+)', name: '([^']+)' \}/g;
+    let match;
+    while ((match = regex.exec(sectorsText)) !== null) {
+      const slug = match[1];
+      const name = match[2];
+      entries.push({
+        id: `sector:${slug}`,
+        title: `${name} Sector`,
+        description: `Sector intelligence and constituent companies for ${name}.`,
+        href: `/sectors/${slug}`,
+        category: 'Sectors',
+        source: 'CredoNomics Sector Aggregation',
+        updated: new Date().toISOString(),
+        keywords: `${name} ${slug} Sector Industry`,
+        priority: 75,
+      });
+    }
+  } catch (e) {
+    console.error('Failed to parse sectors:', e);
+  }
+}
+
 const deduped = new Map()
+
+// Manually add Discovery Tools
+const tools = [
+  { id: 'tool:screener', title: 'Market Screener', description: 'Filter Indian equities by valuation, growth, and ownership metrics.', href: '/screener', category: 'Tools', source: 'CredoNomics', updated: '', keywords: 'screener filter discovery stocks', priority: 90 },
+  { id: 'tool:results', title: 'Results Center', description: 'Track recently reported financial results across Indian equities.', href: '/results', category: 'Tools', source: 'CredoNomics', updated: '', keywords: 'earnings results financials quarter', priority: 90 },
+  { id: 'tool:ownership', title: 'Ownership Scanner', description: 'Track quarter-on-quarter changes in Promoter, FII, and DII holdings.', href: '/ownership', category: 'Tools', source: 'CredoNomics', updated: '', keywords: 'ownership fii dii promoter', priority: 90 },
+  { id: 'tool:corporate-actions', title: 'Corporate Actions Calendar', description: 'Track dividends, bonuses, splits, and record dates.', href: '/corporate-actions', category: 'Tools', source: 'CredoNomics', updated: '', keywords: 'corporate actions dividend split bonus', priority: 90 },
+  { id: 'tool:events', title: 'Event Discovery', description: 'Factual event-driven discovery for Indian equities.', href: '/events', category: 'Tools', source: 'CredoNomics', updated: '', keywords: 'events timeline discovery', priority: 90 },
+  { id: 'tool:heatmap', title: 'Market Heatmap', description: 'Visual representation of market performance and metrics.', href: '/heatmap', category: 'Tools', source: 'CredoNomics', updated: '', keywords: 'heatmap performance visualization', priority: 90 },
+];
+entries.push(...tools);
 
 for (const entry of entries) {
   const key = entry.href.toLowerCase()

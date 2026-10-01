@@ -1,4 +1,4 @@
-const inr = new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 });
+const inr = new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", minimumFractionDigits: 0, maximumFractionDigits: 2 });
 const indianNumber = new Intl.NumberFormat("en-IN", { maximumFractionDigits: 2 });
 const percent = new Intl.NumberFormat("en-IN", { maximumFractionDigits: 2 });
 const date = new Intl.DateTimeFormat("en-IN", { day: "2-digit", month: "short", year: "numeric", timeZone: "Asia/Kolkata" });

@@ -38,8 +38,12 @@ function cagr(start?: number, end?: number, periods?: number) {
 
 function availableFinancials(financials: IpoFinancialPeriod[]) {
   return financials
-    .filter((period) => period.period)
-    .slice()
+    .filter((period) => /^FY\s*(?:20)?\d{2}$/i.test(period.period.trim()))
+    .sort((a, b) => fiscalYear(a.period) - fiscalYear(b.period))
+}
+
+function fiscalYear(period: string) {
+  return 2000 + Number(period.trim().slice(-2))
 }
 
 function growthFactor(value: number) {
@@ -133,7 +137,7 @@ export function calculateIpoDataScore(record: VerifiedIpoRecord): IpoDataScore {
   const periods = availableFinancials(record.financials)
   const first = periods[0]
   const last = periods[periods.length - 1]
-  const years = Math.max(1, periods.length - 1)
+  const years = first && last && periods.length > 1 ? fiscalYear(last.period) - fiscalYear(first.period) : 0
 
   const revenueCagr = cagr(first?.revenueCr, last?.revenueCr, years)
   const patCagr = cagr(first?.patCr, last?.patCr, years)

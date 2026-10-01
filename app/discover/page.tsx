@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '../../src/lib/json-ld'
 import type { Metadata } from 'next'
 import {
   ArrowUpRight,
@@ -190,11 +191,11 @@ export default function DiscoverPage() {
 
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(itemList) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbs) }}
         />
       </main>
     </SiteFrame>

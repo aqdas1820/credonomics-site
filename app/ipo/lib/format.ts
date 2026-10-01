@@ -2,6 +2,7 @@ const unavailable = '—'
 
 function finiteNumber(value: number | string | null | undefined) {
   if (value === null || value === undefined || value === '') return undefined
+  if (typeof value === 'string' && !value.trim()) return undefined
   if (typeof value === 'number') return Number.isFinite(value) ? value : undefined
   const parsed = Number(value.replace(/[,×x]/gi, '').trim())
   return Number.isFinite(parsed) ? parsed : undefined
@@ -19,7 +20,7 @@ export function formatSubscription(value: number | string | null | undefined) {
 export function formatIpoDate(value: string | null | undefined) {
   if (!value) return unavailable
   const date = new Date(`${value.slice(0, 10)}T00:00:00+05:30`)
-  if (Number.isNaN(date.getTime())) return value
+  if (Number.isNaN(date.getTime())) return unavailable
   return new Intl.DateTimeFormat('en-IN', {
     day: 'numeric',
     month: 'short',
@@ -31,7 +32,7 @@ export function formatIpoDate(value: string | null | undefined) {
 export function formatShortIpoDate(value: string | null | undefined) {
   if (!value) return unavailable
   const date = new Date(`${value.slice(0, 10)}T00:00:00+05:30`)
-  if (Number.isNaN(date.getTime())) return value
+  if (Number.isNaN(date.getTime())) return unavailable
   return new Intl.DateTimeFormat('en-IN', {
     day: 'numeric',
     month: 'short',

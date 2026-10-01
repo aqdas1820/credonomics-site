@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import { ArrowUpRight, CalendarDays, FileText, ShieldCheck } from 'lucide-react'
 import SiteFrame from '../components/SiteFrame'
@@ -55,7 +56,7 @@ export default function ReportsPage() {
             >
               <div className={styles.reportCover}>
                 <div className={styles.coverBrand}>
-                  <img src="/credonomics-mark.png" alt="" />
+                  <Image width={48} height={48} src="/credonomics-mark.png" alt="" />
                   <span>
                     <strong>CredoNomics</strong>
                     <small>Investment Solutions</small>

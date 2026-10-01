@@ -1,0 +1,129 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.emptyState {
+  background: #111;
+  border: 1px dashed #444;
+  border-radius: 8px;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.emptyTitle {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.emptyDesc {
+  color: #888;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.importButton {
+  background: #2563eb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.importButton:hover {
+  background: #1d4ed8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.cardValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.cardSub {
+  font-size: 0.875rem;
+  color: #aaa;
+  margin-top: 0.25rem;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  padding: 1rem;
+  background: #222;
+  color: #888;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #333;
+}
+
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+  color: #ddd;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover td {
+  background: #252525;
+}
+
+.positive { color: #22c55e; }
+.negative { color: #ef4444; }
+.neutral { color: #888; }

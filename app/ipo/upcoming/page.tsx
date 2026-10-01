@@ -13,7 +13,7 @@ export const dynamic = 'force-dynamic'
 export default function Page() {
   return (
     <SiteFrame>
-      <IPODashboardClient records={getPublicIpos()} initialView="upcoming"/>
+      <IPODashboardClient records={getPublicIpos()} initialView="announced"/>
     </SiteFrame>
   )
 }

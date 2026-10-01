@@ -1,7 +1,9 @@
 "use client";
+import DataFreshness from '../../components/DataFreshness';
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { fetchJson } from '../../../src/lib/client-json';
 import { FinancialDataState } from "../../components/FinancialDataState";
 import { formatIsinCoverageDetail, formatTrustMetric } from "../../../src/mf/trust";
 import type { MutualFundTrustMetadata } from "../../../src/schemas/mutual-fund";
@@ -394,34 +396,23 @@ export default function MFPortfolioClient({
   const [drawerData, setDrawerData] = useState<SecurityDetail | null>(null);
   const [drawerLoading, setDrawerLoading] = useState(false);
 
+  const [monthError, setMonthError] = useState("");
+  const [monthRetry, setMonthRetry] = useState(0);
   const previousMonth = useMemo(
     () => compareMonth(months, currentMonth, comparePeriod),
     [months, currentMonth, comparePeriod]
   );
 
   useEffect(() => {
-    async function loadMonth(month: string) {
-      if (!month || monthCache[month]) return;
-
-      try {
-        const response = await fetch(`${DATA_ROOT}/by-month/${month}.json`, {
-          cache: "no-store",
-        });
-        if (!response.ok) return;
-
-        const payload: MonthPayload = await response.json();
-        setMonthCache((current) => ({
-          ...current,
-          [month]: payload,
-        }));
-      } catch (error) {
-        console.error(error);
-      }
-    }
-
-    loadMonth(currentMonth);
-    loadMonth(previousMonth);
-  }, [currentMonth, previousMonth, monthCache]);
+    const controller = new AbortController();
+    const missing = [...new Set([currentMonth, previousMonth])].filter(month => month && !monthCache[month]);
+    if (!missing.length) { setMonthError(''); return; }
+    setMonthError('');
+    Promise.all(missing.map(month => fetchJson<MonthPayload>(`${DATA_ROOT}/by-month/${month}.json`, { signal: controller.signal }).then(payload => ({month, payload}))))
+      .then(rows => { if (!controller.signal.aborted) setMonthCache(current => ({...current, ...Object.fromEntries(rows.map(row => [row.month, row.payload]))})); })
+      .catch(() => { if (!controller.signal.aborted) setMonthError('Portfolio comparison data is unavailable. Please retry before interpreting changes.'); });
+    return () => controller.abort();
+  }, [currentMonth, previousMonth, monthCache, monthRetry]);
 
   useEffect(() => {
     if (!drawerSlug) {
@@ -433,6 +424,7 @@ export default function MFPortfolioClient({
 
     async function loadSecurity() {
       setDrawerLoading(true);
+      setDrawerData(null);
       try {
         const response = await fetch(
           `${DATA_ROOT}/securities/${drawerSlug}.json`,
@@ -456,13 +448,14 @@ export default function MFPortfolioClient({
     };
   }, [drawerSlug]);
 
+  const monthReady = Boolean(monthCache[currentMonth]) && (!previousMonth || Boolean(monthCache[previousMonth]));
   const currentRows = useMemo(
-    () => monthCache[currentMonth]?.holdings ?? [],
-    [currentMonth, monthCache],
+    () => monthReady ? monthCache[currentMonth]?.holdings ?? [] : [],
+    [currentMonth, monthCache, monthReady],
   );
   const previousRows = useMemo(
-    () => monthCache[previousMonth]?.holdings ?? [],
-    [monthCache, previousMonth],
+    () => monthReady ? monthCache[previousMonth]?.holdings ?? [] : [],
+    [monthCache, previousMonth, monthReady],
   );
 
   const sectors = useMemo(() => {
@@ -571,8 +564,16 @@ export default function MFPortfolioClient({
         const change = currentWeight - previousWeight;
 
         let status = "Unchanged";
-        if (current && !previous) status = "New";
-        else if (!current && previous) status = "Exit";
+        if (current && !previous) {
+          const currentSchemes = Array.from(current.schemes);
+          const isCoverageNew = currentSchemes.every(s => !previousRows.some(r => r.scheme === s));
+          status = isCoverageNew ? "Unchanged" : "New";
+        }
+        else if (!current && previous) {
+          const previousSchemes = Array.from(previous.schemes);
+          const isCoverageMissing = previousSchemes.every(s => !currentRows.some(r => r.scheme === s));
+          status = isCoverageMissing ? "Unchanged" : "Exit";
+        }
         else if (change > 0.05) status = "Increased";
         else if (change < -0.05) status = "Reduced";
 
@@ -589,7 +590,7 @@ export default function MFPortfolioClient({
       })
       .filter((item) => item.status !== "Unchanged")
       .sort((a, b) => Math.abs(b.change) - Math.abs(a.change));
-  }, [currentMap, previousMap]);
+  }, [currentMap, previousMap, currentRows, previousRows]);
 
   const sectorRotation = useMemo(() => {
     function sectorMap(rows: Holding[]) {
@@ -697,8 +698,11 @@ export default function MFPortfolioClient({
     setDrawerSlug(slug);
   }
 
+  if (!monthReady) return <main style={{maxWidth:1000,margin:'40px auto',padding:24}}><h1>Mutual fund portfolio intelligence</h1><p role="status">{monthError || 'Loading portfolio comparison...'}</p>{monthError && <button onClick={() => setMonthRetry(value => value + 1)}>Retry</button>} <button onClick={() => { setCurrentMonth(initialMonth); setComparePeriod('1M'); }}>Back to latest available comparison</button></main>;
+
   return (
     <main className="mfTermPage">
+      {monthError && <p role="alert">{monthError} <button onClick={() => setMonthRetry(value => value + 1)}>Retry</button></p>}
       <div className="mfTermShell">
         <nav className="mfBreadcrumb">
           <Link href="/">CredoNomics</Link>
@@ -761,6 +765,7 @@ export default function MFPortfolioClient({
           </aside>
         </section>
 
+        {initialIndex.metadata ? <DataFreshness metadata={initialIndex.metadata} /> : null}
         <FinancialDataState
           availability={initialIndex.metadata?.availability === "available" ? "recent" : initialIndex.metadata?.availability === "partial" ? "stale" : initialIndex.metadata?.availability ?? "unavailable"}
           asOf={initialIndex.metadata?.asOf}
@@ -784,50 +789,61 @@ export default function MFPortfolioClient({
             </small>
           </div>
 
-          <div className="mfSignalTabs">
-            {Object.entries(signalGroups).map(([label, values]) => (
-              <button
-                key={label}
-                onClick={() => setSignalTab(label)}
-                className={signalTab === label ? "active" : ""}
-              >
-                {label}
-                <b>{values.length}</b>
-              </button>
-            ))}
-          </div>
-
-          <div className="mfSignalCards">
-            {activeSignals.slice(0, 6).map((item) => (
-              <button
-                className="mfSignalCard"
-                key={`${signalTab}-${item.securityId}`}
-                onClick={() => openSecurity(item.slug)}
-              >
-                <div>
-                  <strong>{item.stock}</strong>
-                  <span>{item.sector}</span>
-                </div>
-                <div className="mfSignalMetric">
-                  <em>
-                    {signalTab === "3M accumulation"
-                      ? delta(item.change3m ?? 0)
-                      : delta(item.change ?? 0)}
-                  </em>
-                  <small>
-                    {item.currentSchemeCount ?? 0} schemes
-                  </small>
-                </div>
-              </button>
-            ))}
-
-            {!activeSignals.length && (
-              <div className="mfEmptySignal">
-                No securities meet this strict signal definition in the latest
-                clean snapshot.
+          {!trust?.isinDataAvailable ? (
+            <div className="mfEmptySignal" style={{ textAlign: "left", padding: "16px", background: "rgba(180, 83, 9, 0.1)", color: "#b45309", borderRadius: "8px", border: "1px solid rgba(180, 83, 9, 0.2)", margin: "0 24px 24px" }}>
+              <strong style={{ display: "block", marginBottom: "8px", fontSize: "0.9rem" }}>Signals suppressed: Unsupported data quality</strong>
+              <p style={{ margin: 0, fontSize: "0.85rem", lineHeight: 1.5 }}>
+                High-confidence consensus signals and accumulation trends require validated ISINs and underlying share quantities. The current dataset relies on fuzzy name matching and percentage weights without quantity values, risking false entry/exit signals from price changes or renames. Verified historical holdings remain available below.
+              </p>
+            </div>
+          ) : (
+            <>
+              <div className="mfSignalTabs">
+                {Object.entries(signalGroups).map(([label, values]) => (
+                  <button
+                    key={label}
+                    onClick={() => setSignalTab(label)}
+                    className={signalTab === label ? "active" : ""}
+                  >
+                    {label}
+                    <b>{values.length}</b>
+                  </button>
+                ))}
               </div>
-            )}
-          </div>
+
+              <div className="mfSignalCards">
+                {activeSignals.slice(0, 6).map((item) => (
+                  <button
+                    className="mfSignalCard"
+                    key={`${signalTab}-${item.securityId}`}
+                    onClick={() => openSecurity(item.slug)}
+                  >
+                    <div>
+                      <strong>{item.stock}</strong>
+                      <span>{item.sector}</span>
+                    </div>
+                    <div className="mfSignalMetric">
+                      <em>
+                        {signalTab === "3M accumulation"
+                          ? delta(item.change3m ?? 0)
+                          : delta(item.change ?? 0)}
+                      </em>
+                      <small>
+                        {item.currentSchemeCount ?? 0} schemes
+                      </small>
+                    </div>
+                  </button>
+                ))}
+
+                {!activeSignals.length && (
+                  <div className="mfEmptySignal">
+                    No securities meet this strict signal definition in the latest
+                    clean snapshot.
+                  </div>
+                )}
+              </div>
+            </>
+          )}
         </section>
 
         <section className="mfControls">

@@ -50,16 +50,19 @@ export default function NewsletterForm() {
         Get data-driven insights and portfolio intelligence delivered straight to your inbox. No spam.
       </p>
       
-      <form onSubmit={handleSubmit} style={{ display: 'flex', gap: '8px', maxWidth: '400px' }}>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', maxWidth: '400px' }}>
         <input
           type="email"
+          aria-label="Newsletter email address"
+          autoComplete="email"
           placeholder="your@email.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === 'loading'}
           required
           style={{
-            flex: 1,
+            flex: '1 1 180px',
+            minWidth: 0,
             padding: '10px 14px',
             borderRadius: '6px',
             border: '1px solid var(--card-border, #e2e8f0)',
@@ -90,7 +93,7 @@ export default function NewsletterForm() {
       </form>
       
       {message && (
-        <p style={{ 
+        <p role="status" style={{ 
           margin: '12px 0 0 0', 
           fontSize: '13px', 
           color: status === 'success' ? 'var(--up-color, #16a34a)' : 'var(--down-color, #dc2626)',

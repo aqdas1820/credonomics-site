@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '../../../src/lib/json-ld'
 import { notFound } from 'next/navigation'
 import { ArrowRight, Building2, ExternalLink, Layers3, ShieldCheck } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
@@ -24,7 +25,8 @@ export function generateStaticParams() {
   ]
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ slug: string }> }) {
+  const params = await paramsPromise
   if (isCardCategorySlug(params.slug)) {
     const category = cardCategoryMap[params.slug]
     return {
@@ -50,7 +52,8 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   }
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params: paramsPromise }: { params: Promise<{ slug: string }> }) {
+  const params = await paramsPromise
   if (isCardCategorySlug(params.slug)) {
     const category = cardCategoryMap[params.slug]
     const cards = verifiedRealCards.filter((card) => Boolean(card.terms[category.slug]))
@@ -103,7 +106,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             </div>
           </section>
 
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(schema) }} />
         </section>
       </SiteFrame>
     )
@@ -216,8 +219,8 @@ export default function Page({ params }: { params: { slug: string } }) {
 
         <div className={local.trustNote}><ShieldCheck size={20}/><p>CredoNomics is not SEBI-registered and is not NISM-certified. This page is general educational research, not personalized advice or a guarantee of card eligibility.</p></div>
 
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(financialProductSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(financialProductSchema) }} />
       </section>
     </SiteFrame>
   )

@@ -21,7 +21,7 @@ export async function GET(request: NextRequest) {
   const cacheControl = result.error?.code === "AUTH_REQUIRED"
     ? "no-store"
     : result.data?.length
-      ? result.metadata.session === "previous" ? "private, max-age=300, stale-while-revalidate=3600" : "private, max-age=30, stale-while-revalidate=300"
+      ? result.metadata.session === "previous" ? "no-store" : "no-store"
       : "no-store";
   return NextResponse.json(publicResult, {
     status: result.error?.code === "AUTH_REQUIRED" ? 503 : result.error ? 502 : 200,

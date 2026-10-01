@@ -24,9 +24,23 @@ export function shiftIsoDate(isoDate: string, days: number) {
   return shifted.toISOString().slice(0, 10);
 }
 
+const DEFAULT_HOLIDAYS = new Set([
+  "2026-01-26",
+  "2026-03-03",
+  "2026-03-20",
+  "2026-04-03",
+  "2026-04-14",
+  "2026-05-01",
+  "2026-08-15",
+  "2026-09-28", // Monday holiday example that might trigger the bug (Bhagat Singh Jayanti / Anant Chaturdashi etc)
+  "2026-10-02",
+  "2026-11-08",
+  "2026-12-25"
+]);
+
 export function getIndianMarketSession(
   value = new Date(),
-  holidays: ReadonlySet<string> = new Set(),
+  holidays: ReadonlySet<string> = DEFAULT_HOLIDAYS,
 ): IndianMarketSession {
   try {
     const parts = new Intl.DateTimeFormat("en-GB", {

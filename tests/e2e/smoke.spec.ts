@@ -12,16 +12,9 @@ for (const route of routes) {
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
     expect(overflow).toBeLessThanOrEqual(1);
     expect(errors).toEqual([]);
+    expect(await page.locator('body').innerText()).not.toMatch(/\u00c3\u00a2|\u00c3\u0082|\u00c3\u0192|\u00ef\u00bf\u00bd/);
   });
 }
-
-test("public pages do not expose common mojibake", async ({ page }) => {
-  for (const route of routes) {
-    await page.goto(route);
-    const text = await page.locator("body").innerText();
-    expect(text, `Malformed text on ${route}`).not.toMatch(/\u00c3\u00a2|\u00c3\u0082|\u00c3\u0192|\u00ef\u00bf\u00bd/);
-  }
-});
 
 test("primary navigation reaches IPO intelligence", async ({ page }, testInfo) => {
   await page.goto("/");

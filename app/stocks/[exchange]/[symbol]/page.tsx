@@ -4,12 +4,13 @@ import { findInstrument } from '../../../../src/services/market-data/instrument-
 import SiteFrame from '../../../components/SiteFrame'
 import StockDetailClient from './StockDetailClient'
 
-type Props = { params: { exchange: string; symbol: string } }
+type Props = { params: Promise<{ exchange: string; symbol: string }> }
 
 export const dynamic = 'force-dynamic'
 
-export function generateMetadata({ params }: Props): Metadata {
-  const stock = findInstrument(params.exchange, decodeURIComponent(params.symbol))
+export async function generateMetadata({ params: paramsPromise }: Props): Promise<Metadata> {
+  const params = await paramsPromise
+  const stock = findInstrument(params.exchange, params.symbol)
   if (!stock) return { title: 'Stock unavailable' }
   const ogUrl = `https://www.credonomics.in/api/og?title=${encodeURIComponent(stock.companyName)}&subtitle=${encodeURIComponent(stock.symbol + ' | ' + stock.exchange)}`
   return {
@@ -22,7 +23,8 @@ export function generateMetadata({ params }: Props): Metadata {
   }
 }
 
-export default function StockPage({ params }: Props) {
+export default async function StockPage({ params: paramsPromise }: Props) {
+  const params = await paramsPromise
   const stock = findInstrument(params.exchange, decodeURIComponent(params.symbol))
   if (!stock) notFound()
   return <SiteFrame><StockDetailClient stock={stock} /></SiteFrame>

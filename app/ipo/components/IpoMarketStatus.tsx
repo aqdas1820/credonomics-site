@@ -4,7 +4,7 @@ import { publicIpos, ipoMarketMasterMeta } from '../../data/ipo-public'
 import styles from '../ipo.module.css'
 
 export default function IpoMarketStatus() {
-  const upcoming = publicIpos.filter((ipo) => ipo.status === 'upcoming').slice(0, 5)
+  const upcoming = publicIpos.filter((ipo) => ipo.status === 'announced').slice(0, 5)
   const recentlyClosed = publicIpos
     .filter((ipo) => ipo.status === 'closed')
     .sort((a, b) => String(b.issue.closeDate || '').localeCompare(String(a.issue.closeDate || '')))

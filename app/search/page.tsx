@@ -12,11 +12,12 @@ export const metadata: Metadata = {
   },
 }
 
-export default function SearchPage({
-  searchParams,
+export default async function SearchPage({
+  searchParams: searchParamsPromise,
 }: {
-  searchParams?: { q?: string }
+  searchParams: Promise<{ q?: string }>
 }) {
+  const searchParams = await searchParamsPromise
   return (
     <SiteFrame>
       <SearchWorkspace initialQuery={searchParams?.q ?? ''} />

@@ -1,0 +1,198 @@
+.page {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.header p {
+  color: var(--text-secondary, #666);
+  margin-top: 0.5rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.searchWrap {
+  position: relative;
+  flex: 1;
+  max-width: 500px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, #eaeaea);
+  font-size: 1rem;
+}
+
+.searchResults {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--surface, #fff);
+  border: 1px solid var(--border-color, #eaeaea);
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 10;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.searchResultItem {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-color, #eaeaea);
+  display: flex;
+  flex-direction: column;
+}
+
+.searchResultItem:last-child {
+  border-bottom: none;
+}
+
+.searchResultItem:hover {
+  background: var(--surface2, #f5f5f5);
+}
+
+.searchResultItem strong {
+  font-size: 0.95rem;
+}
+
+.searchResultItem small {
+  font-size: 0.8rem;
+  color: var(--text-secondary, #666);
+  text-transform: uppercase;
+}
+
+.compareGrid {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding-bottom: 2rem;
+}
+
+.entityColumn {
+  flex: 1;
+  min-width: 350px;
+  background: var(--surface, #fff);
+  border: 1px solid var(--border-color, #eaeaea);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.entityHeader {
+  padding: 1.5rem;
+  background: var(--surface2, #f9f9f9);
+  border-bottom: 1px solid var(--border-color, #eaeaea);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.entityHeader h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.entityHeader span {
+  font-size: 0.8rem;
+  color: var(--text-secondary, #666);
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  color: var(--color-negative, #d92121);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.removeBtn:hover {
+  background: rgba(217, 33, 33, 0.1);
+}
+
+.section {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color, #eaeaea);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary, #666);
+  margin: 0 0 1rem 0;
+}
+
+.metricRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--border-color, #eaeaea);
+}
+
+.metricRow:last-child {
+  border-bottom: none;
+}
+
+.metricLabel {
+  font-size: 0.9rem;
+  color: var(--text-secondary, #666);
+}
+
+.metricValue {
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: right;
+}
+
+.metricValue small {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-secondary, #999);
+  font-weight: normal;
+}
+
+.emptyState {
+  padding: 4rem;
+  text-align: center;
+  color: var(--text-secondary, #666);
+  background: var(--surface2, #f9f9f9);
+  border-radius: 12px;
+  border: 1px dashed var(--border-color, #eaeaea);
+}
+
+.notice {
+  padding: 1rem;
+  background: var(--surface2, #f9f9f9);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--teal, #12b9b7);
+}

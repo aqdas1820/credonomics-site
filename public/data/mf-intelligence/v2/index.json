@@ -21,8 +21,8 @@
   "trustMetadata": {
     "isinDataAvailable": false,
     "isinCoveragePercent": null,
-    "validIsinCount": 0,
-    "eligibleIsinCount": 870,
+    "validIsinCount": null,
+    "eligibleIsinCount": 0,
     "repairedCompanyRows": null,
     "excludedWeakSnapshots": null,
     "highQualitySnapshots": null,

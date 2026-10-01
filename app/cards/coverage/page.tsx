@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '../../../src/lib/json-ld'
 import { Activity, ArrowRight, Building2, Database, RefreshCw, ShieldCheck } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
 import { cardCategories } from '../../data/card-categories'
@@ -83,7 +84,7 @@ export default function CoveragePage() {
           </section>
         ))}
 
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(schema) }} />
       </section>
     </SiteFrame>
   )

@@ -3,15 +3,18 @@ import { redirect } from 'next/navigation'
 import AuthForm from '../auth/AuthForm'
 import { authenticatedUser } from '../../src/lib/supabase/server'
 import SiteFrame from '../components/SiteFrame'
+import { safeRedirectPath } from '../../src/lib/auth-redirect'
 
 export const metadata: Metadata = {
   title: 'Log In - CredoNomics',
 }
 
-export default async function LoginPage() {
+export default async function LoginPage({ searchParams: searchParamsPromise }: { searchParams: Promise<{ next?: string; error?: string }> }) {
+  const searchParams = await searchParamsPromise
+  const next = safeRedirectPath(searchParams.next)
   const { user } = await authenticatedUser()
   if (user) {
-    redirect('/')
+    redirect(next)
   }
 
   return (
@@ -22,7 +25,7 @@ export default async function LoginPage() {
           <p style={{ fontSize: '15px', color: 'var(--text-secondary)', textAlign: 'center', marginBottom: '32px' }}>
             Log in to access your watchlists and alerts.
           </p>
-          <AuthForm view="login" />
+          <AuthForm view="login" next={next} initialError={searchParams.error ? 'Sign-in could not be completed. Please try again.' : ''} />
         </div>
       </main>
     </SiteFrame>

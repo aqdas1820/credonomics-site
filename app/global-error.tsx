@@ -1,11 +1,21 @@
 'use client'
 
+import { useEffect } from 'react'
+
 export default function GlobalError({
   reset,
+  error,
 }: {
   error: Error & { digest?: string }
   reset: () => void
 }) {
+  useEffect(() => {
+    import('@sentry/nextjs').then((Sentry) => {
+      Sentry.captureException(error)
+    })
+    console.error('CredoNomics global error:', error)
+  }, [error])
+
   return (
     <html lang="en">
       <body>

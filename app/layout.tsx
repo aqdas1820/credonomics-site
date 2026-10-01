@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '../src/lib/json-ld'
 import { mergeRootMetadata } from './seo/site'
 import SiteStructuredData from './components/SiteStructuredData'
 import './globals.css'
@@ -160,7 +161,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />        {children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(entityGraph) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(entityGraph) }}
         />
       </body>
     </html>

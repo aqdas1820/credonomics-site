@@ -30,7 +30,7 @@ export default function CalculatorShell({
         </div>
         {children}
         <section className={styles.explainPanel}>
-          <h2>How this calculation works</h2>
+          <h2>Why this result?</h2>
           <p>This is a generic research model. It does not represent the current terms of any particular bank or card unless you independently enter those current terms.</p>
           <div className={styles.equation}>{equation}</div>
           <ul className={styles.caveats}>

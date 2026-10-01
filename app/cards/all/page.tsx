@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '../../../src/lib/json-ld'
 import { CreditCard, Database } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
 import { categoriesForCard, categoryLabel } from '../../data/card-intelligence'
@@ -60,7 +61,7 @@ export default function AllCardsPage() {
           <CardDirectory cards={cards} issuers={issuers}/>
         </div>
 
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(schema) }} />
       </section>
     </SiteFrame>
   )

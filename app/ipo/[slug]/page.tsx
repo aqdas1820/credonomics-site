@@ -1,3 +1,4 @@
+import DataFreshness from '../../components/DataFreshness'
 import { notFound } from 'next/navigation'
 import { BarChart3, Building2, ExternalLink, FileText, Gauge, Landmark, Radio, Scale, ShieldCheck, TriangleAlert, Users, WalletCards } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
@@ -5,12 +6,13 @@ import { calculateIpoDataScore } from '../../data/ipo-engine'
 import { getPublicIpo, publicIpos } from '../../data/ipo-public'
 import styles from '../../core-v4.module.css'
 import local from '../ipo.module.css'
-import { ipoStatusLabel } from '../../../src/domain/ipo/display-status'
+import { ipoStatusLabel, getIpoDisplayStatus } from '../../../src/domain/ipo/display-status'
 import { formatIpoDate, formatSubscription } from '../lib/format'
 
 export const dynamic = 'force-dynamic'
 export function generateStaticParams() { return publicIpos.map((ipo) => ({ slug: ipo.slug })) }
-export function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ slug: string }> }) {
+  const params = await paramsPromise
   const ipo = getPublicIpo(params.slug)
   if (!ipo) return {}
   const ogUrl = `https://www.credonomics.in/api/og?title=${encodeURIComponent(ipo.companyName + ' IPO')}&subtitle=${encodeURIComponent(ipoStatusLabel(ipo.status))}`
@@ -39,11 +41,35 @@ function sourceLabel(type: string, label: string) {
   return label
 }
 
-export default function IpoDetailPage({ params }: { params: { slug: string } }) {
+import { MarketDataService } from '../../../src/services/market-data/market-data-service'
+
+export default async function IpoDetailPage({ params: paramsPromise }: { params: Promise<{ slug: string }> }) {
+  const params = await paramsPromise
   const ipo = getPublicIpo(params.slug)
   if (!ipo) notFound()
-  const issue = ipo.issue
+
   const normalized = ipo.researchState === 'normalized'
+  const { data: liveIpos } = await MarketDataService.getLiveIpos()
+  
+  const normalizeName = (name: string) => name.toLowerCase().replace(/\b(ipo|limited|ltd)\b/g, '').replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim()
+  const ipoNormalizedName = normalizeName(ipo.companyName)
+  const liveMatch = liveIpos?.find((item) => item.company && normalizeName(item.company) === ipoNormalizedName)
+
+  const issue = {
+    ...ipo.issue,
+    issueSizeCr: (normalized ? ipo.issue.issueSizeCr : undefined) ?? liveMatch?.issueSizeCrore ?? ipo.issue.issueSizeCr,
+    priceBandLow: (normalized ? ipo.issue.priceBandLow : undefined) ?? liveMatch?.priceMin ?? ipo.issue.priceBandLow,
+    priceBandHigh: (normalized ? ipo.issue.priceBandHigh : undefined) ?? liveMatch?.priceMax ?? ipo.issue.priceBandHigh,
+    lotSize: (normalized ? ipo.issue.lotSize : undefined) ?? liveMatch?.lotSize ?? ipo.issue.lotSize,
+    openDate: liveMatch?.openDate ?? ipo.issue.openDate,
+    closeDate: liveMatch?.closeDate ?? ipo.issue.closeDate,
+  }
+
+  const liveStatus = getIpoDisplayStatus(
+    { ...issue, providerStatus: liveMatch?.status ?? ipo.status },
+    new Date()
+  )
+
   const score = normalized ? calculateIpoDataScore({ ...ipo, lastVerified: ipo.lastUpdated.slice(0, 10) }) : null
   const application = [
     issue.lotSize && ['Lot size', `${issue.lotSize.toLocaleString('en-IN')} shares`, issue.priceBandHigh ? `Approx. ${rupees(issue.lotSize * issue.priceBandHigh)}` : ''],
@@ -62,7 +88,7 @@ export default function IpoDetailPage({ params }: { params: { slug: string } }) 
   return <SiteFrame>
     <section className={`${styles.wrap} ${styles.pageHero} ${local.ipoDetailPageHero}`}>
       <div className={styles.breadcrumbs}><a href="/">Home</a><span>/</span><a href="/ipo">IPO Intelligence</a><span>/</span><span>{ipo.companyName}</span></div>
-      <span className={styles.pageKicker}><Landmark size={14}/> {ipo.marketSegment === 'sme' ? 'SME' : 'Mainboard'} · {ipoStatusLabel(ipo.status)}</span>
+      <span className={styles.pageKicker}><Landmark size={14}/> {ipo.marketSegment === 'sme' ? 'SME' : 'Mainboard'} · {ipoStatusLabel(liveStatus)}</span>
       <h1>{ipo.companyName} <span>IPO.</span></h1>
       <p className={styles.pageHeroLead}>{ipo.summary || (normalized ? 'Source-backed offer-document research with normalized financial analysis.' : 'Official exchange issue data is live. Deeper financial analysis appears after verified offer-document normalization.')}</p>
     </section>
@@ -72,11 +98,11 @@ export default function IpoDetailPage({ params }: { params: { slug: string } }) 
     </div></nav>
 
     <section className={`${styles.wrap} ${styles.pageBody} ${local.shell}`}>
-      <div className={local.researchStateBanner} data-state={ipo.researchState}>{normalized ? <ShieldCheck size={18}/> : <Radio size={18}/>}<div><b>{normalized ? 'Normalized financial research available' : 'Exchange-live issue record'}</b><p>{normalized ? `The quantitative model has ${score?.coverage ?? 0}% weighted data coverage.` : 'Current issue terms appear first. Advanced analysis appears only after verified offer-document data is normalized.'}</p></div><span>Updated {formatIpoDate(ipo.lastUpdated)}</span></div>
+      {liveMatch?.metadata ? <DataFreshness metadata={liveMatch.metadata} /> : null}<div className={local.researchStateBanner} data-state={ipo.researchState}>{normalized ? <ShieldCheck size={18}/> : <Radio size={18}/>}<div><b>{normalized ? 'Normalized financial research available' : 'Exchange-live issue record'}</b><p>{normalized ? `The quantitative model has ${score?.coverage ?? 0}% weighted data coverage.` : 'Current issue terms appear first. Advanced analysis appears only after verified offer-document data is normalized.'}</p></div><span>Source record {formatIpoDate(ipo.lastUpdated)}</span></div>
 
       <section id="overview" className={`${local.detailHero} ${local.detailSection}`}>
-        <div className={local.detailScore}><small>Status</small><strong className={local.statusWord}>{ipoStatusLabel(ipo.status)}</strong><p>{ipo.marketSegment === 'sme' ? 'SME' : 'Mainboard'} · {ipo.symbol || 'Symbol unavailable'}</p></div>
-        <div className={local.detailQuick}><span><small>Open date</small><b>{formatIpoDate(issue.openDate)}</b></span><span><small>Close date</small><b>{formatIpoDate(issue.closeDate)}</b></span><span><small>Price band</small><b>{priceBand(issue.priceBandLow, issue.priceBandHigh)}</b></span><span><small>Lot size</small><b>{issue.lotSize ? `${issue.lotSize.toLocaleString('en-IN')} shares` : '—'}</b></span><span><small>{issue.issueSizeCr !== undefined ? 'Issue size' : 'Est. issue value'}</small><b>{money(issue.issueSizeCr ?? ipo.estimatedIssueValueCr)}</b></span><span><small>Subscription</small><b>{formatSubscription(ipo.subscription?.total)}</b></span>{issue.registrar ? <span><small>Registrar</small><b>{issue.registrar}</b></span> : null}{issue.exchange?.length ? <span><small>Exchange</small><b>{issue.exchange.join(' · ')}</b></span> : null}</div>
+        <div className={local.detailScore}><small>Status</small><strong className={local.statusWord}>{ipoStatusLabel(liveStatus)}</strong><p>{ipo.marketSegment === 'sme' ? 'SME' : 'Mainboard'} · {ipo.symbol || 'Symbol unavailable'}</p></div>
+        <div className={local.detailQuick}><span><small>Open date</small><b>{formatIpoDate(issue.openDate)}</b></span><span><small>Close date</small><b>{formatIpoDate(issue.closeDate)}</b></span><span><small>Price band</small><b>{priceBand(issue.priceBandLow, issue.priceBandHigh)}</b></span><span><small>Lot size</small><b>{issue.lotSize ? `${issue.lotSize.toLocaleString('en-IN')} shares` : '—'}</b></span><span><small>{issue.issueSizeCr !== undefined ? 'Issue size' : 'Est. issue value'}</small><b>{money(issue.issueSizeCr ?? ipo.estimatedIssueValueCr)}</b></span>{issue.freshIssueCr !== undefined ? <span><small>Fresh issue</small><b>{money(issue.freshIssueCr)}</b></span> : null}{issue.ofsCr !== undefined ? <span><small>OFS</small><b>{money(issue.ofsCr)}</b></span> : null}<span><small>Subscription</small><b>{formatSubscription(ipo.subscription?.total)}</b></span>{issue.registrar ? <span><small>Registrar</small><b>{issue.registrar}</b></span> : null}{issue.exchange?.length ? <span><small>Exchange</small><b>{issue.exchange.join(' · ')}</b></span> : null}</div>
       </section>
 
       {timeline.length ? <section id="timeline" className={local.detailSection}><div className={local.sectionHead}><div><span>IPO Timeline</span><h2>Application to listing.</h2></div></div><div className={local.timeline}>{timeline.map(([label, date], index) => <div key={label} data-complete="true"><span>{index + 1}</span><div><small>{label}</small><b>{formatIpoDate(date)}</b></div></div>)}</div></section> : null}

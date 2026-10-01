@@ -25,6 +25,9 @@ const marketFields = {
   volume: nullableNumberSchema,
   fiftyTwoWeekHigh: nullableNumberSchema,
   fiftyTwoWeekLow: nullableNumberSchema,
+  marketCap: nullableNumberSchema.optional(),
+  pe: nullableNumberSchema.optional(),
+  eps: nullableNumberSchema.optional(),
 };
 
 export const marketQuoteSchema = indianEquityIdentitySchema

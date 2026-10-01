@@ -32,7 +32,7 @@
   display:grid;
   grid-template-columns:1fr auto;
   gap:30px;
-  align-items:start;
+  align-items:flex-start;
 }
 .kicker{
   display:inline-flex;

@@ -10,6 +10,9 @@ export default function ErrorPage({
   reset: () => void
 }) {
   useEffect(() => {
+    import('@sentry/nextjs').then((Sentry) => {
+      Sentry.captureException(error)
+    })
     console.error('CredoNomics route error:', error)
   }, [error])
 

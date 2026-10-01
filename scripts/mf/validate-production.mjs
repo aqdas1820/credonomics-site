@@ -41,7 +41,7 @@ if (index) {
   }
   if (all.length !== index.counts?.holdings || all.length !== index.metadata?.recordCount) errors.push(`holding count mismatch: files=${all.length}, index=${index.counts?.holdings}, metadata=${index.metadata?.recordCount}`)
   const observedValidIsinCount = all.filter(holding => ISIN_RE.test(holding.isin ?? '')).length
-  const eligibleIsinCount = all.length
+  const eligibleIsinCount = all.filter(h=>h?.isin!=null&&String(h.isin).trim()!=='').length
   const trust = index.trustMetadata
   const expectedValidIsinCount = trust?.isinDataAvailable ? observedValidIsinCount : null
   const expectedCoverage = trust?.isinDataAvailable && eligibleIsinCount ? Number((observedValidIsinCount / eligibleIsinCount * 100).toFixed(1)) : null

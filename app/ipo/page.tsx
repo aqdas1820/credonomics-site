@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '../../src/lib/json-ld'
 import type { Metadata } from 'next'
 import SiteFrame from '../components/SiteFrame'
 import IPODashboardClient from './IPODashboardClient'
@@ -20,10 +21,11 @@ export const metadata: Metadata = {
   },
 }
 
-export default function IPOPage({ searchParams }: { searchParams?: { view?: string } }) {
+export default async function IPOPage({ searchParams: searchParamsPromise }: { searchParams: Promise<{ view?: string }> }) {
+  const searchParams = await searchParamsPromise
   const records = getPublicIpos()
-  const initialView = ['open', 'upcoming', 'closed', 'listed'].includes(searchParams?.view || '')
-    ? searchParams?.view as 'open' | 'upcoming' | 'closed' | 'listed'
+  const initialView = ['open', 'announced', 'closed', 'listed'].includes(searchParams?.view || '')
+    ? searchParams?.view as 'open' | 'announced' | 'closed' | 'listed'
     : 'open'
   const collectionPage = {
     '@context': 'https://schema.org',
@@ -65,14 +67,14 @@ export default function IPOPage({ searchParams }: { searchParams?: { view?: stri
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(collectionPage),
+          __html: serializeJsonLd(collectionPage),
         }}
       />
 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbs),
+          __html: serializeJsonLd(breadcrumbs),
         }}
       />
     </SiteFrame>

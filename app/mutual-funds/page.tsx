@@ -1,3 +1,4 @@
+import { serializeJsonLd } from '../../src/lib/json-ld'
 import type { Metadata } from 'next'
 import {
   ArrowUpRight,
@@ -223,14 +224,14 @@ export default function MutualFundsPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(collectionData),
+            __html: serializeJsonLd(collectionData),
           }}
         />
 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(breadcrumbs),
+            __html: serializeJsonLd(breadcrumbs),
           }}
         />
       </main>

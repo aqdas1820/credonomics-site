@@ -3,7 +3,13 @@ import React, { useEffect, useRef, useState } from "react";
 import { createChart, ColorType, Time, CandlestickSeries, HistogramSeries } from "lightweight-charts";
 import type { HistoricalPrice } from "../../../../src/domain/equity/types";
 import { formatINR, formatIndianNumber, formatPercent } from "../../../../src/lib/financial-format";
+import { isValidCandle } from '../../../../src/providers/market/upstox-transform';
+import { getIstDate } from '../../../../src/domain/market/session';
 import styles from "./stock-detail.module.css";
+
+function timeKey(time: Time): string {
+  return typeof time === 'object' ? [time.year, String(time.month).padStart(2, '0'), String(time.day).padStart(2, '0')].join('-') : String(time);
+}
 
 interface InteractiveChartProps {
   points: HistoricalPrice[];
@@ -17,6 +23,8 @@ export default function InteractiveChart({ points, isIntraday = false }: Interac
 
   useEffect(() => {
     if (!chartContainerRef.current) return;
+    setHovered(null);
+    setPinned(null);
     const isDark = document.documentElement.dataset.theme === "dark";
     const textColor = isDark ? "#A3A3A3" : "#52525B";
     const backgroundColor = "transparent";
@@ -43,6 +51,7 @@ export default function InteractiveChart({ points, isIntraday = false }: Interac
         mode: 1, // Normal crosshair mode
       },
       autoSize: true,
+      localization: { locale: 'en-IN', timeFormatter: (time: Time) => typeof time === 'number' ? new Date(time * 1000).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : timeKey(time) },
     });
 
     const candleSeries = chart.addSeries(CandlestickSeries, {
@@ -66,17 +75,17 @@ export default function InteractiveChart({ points, isIntraday = false }: Interac
       },
     });
 
-    const sortedPoints = [...points].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+    const sortedPoints = points.filter(isValidCandle).sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
     
     // De-duplicate points by time
     const seenTimes = new Set<number>();
     const candleData: Array<{ time: Time; open: number; high: number; low: number; close: number }> = [];
     const volumeData: Array<{ time: Time; value: number; color: string }> = [];
-    const timeToPoint = new Map<number | string, HistoricalPrice>();
+    const timeToPoint = new Map<string, HistoricalPrice>();
 
     sortedPoints.forEach((point) => {
       const d = new Date(point.date);
-      const time = isIntraday ? Math.floor(d.getTime() / 1000) as Time : d.toISOString().split("T")[0] as Time;
+      const time = isIntraday ? Math.floor(d.getTime() / 1000) as Time : getIstDate(d) as Time;
       const numTime = typeof time === "number" ? time : new Date(time as string).getTime();
       
       if (!seenTimes.has(numTime)) {
@@ -92,12 +101,10 @@ export default function InteractiveChart({ points, isIntraday = false }: Interac
         const isUp = (point.close as number) >= (point.open as number);
         volumeData.push({
           time,
-          value: point.volume as number,
+          value: point.volume ?? 0,
           color: isUp ? "rgba(38, 166, 154, 0.4)" : "rgba(239, 83, 80, 0.4)",
         });
-        
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        timeToPoint.set(time as any, point);
+        timeToPoint.set(timeKey(time), point);
       }
     });
 
@@ -111,8 +118,7 @@ export default function InteractiveChart({ points, isIntraday = false }: Interac
       if (currentPinned) return; // Ignore hover if pinned
       
       if (param.time && param.seriesData.get(candleSeries)) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const point = timeToPoint.get(param.time as any);
+        const point = timeToPoint.get(timeKey(param.time));
         if (point) setHovered(point);
       } else {
         setHovered(null);
@@ -130,8 +136,7 @@ export default function InteractiveChart({ points, isIntraday = false }: Interac
         setPinned(null);
         currentPinned = null;
       } else {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const point = timeToPoint.get(param.time as any);
+        const point = timeToPoint.get(timeKey(param.time));
         if (point) {
           setPinned(point);
           currentPinned = point;
@@ -139,12 +144,19 @@ export default function InteractiveChart({ points, isIntraday = false }: Interac
       }
     });
 
+    const observer = new MutationObserver(() => {
+      const dark = document.documentElement.dataset.theme === 'dark';
+      const grid = dark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)';
+      chart.applyOptions({ layout: { textColor: dark ? '#A3A3A3' : '#52525B' }, grid: { vertLines: { color: grid }, horzLines: { color: grid } } });
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
     return () => {
+      observer.disconnect();
       chart.remove();
     };
   }, [points, isIntraday]);
 
-  const activePoint = pinned || hovered;
+  const activePoint = pinned || hovered || points.at(-1);
   const isUp = activePoint && (activePoint.close as number) >= (activePoint.open as number);
 
   return (
@@ -156,26 +168,27 @@ export default function InteractiveChart({ points, isIntraday = false }: Interac
               month: "short",
               day: "numeric",
               year: "numeric",
+              timeZone: "Asia/Kolkata",
               ...(isIntraday && { hour: "numeric", minute: "numeric", hour12: true }),
             })}
             {pinned && <span className={styles.pinnedBadge}>Pinned (Click to unpin)</span>}
           </div>
           <div className={styles.tooltipGrid}>
-            <div><span>O</span> <strong>{formatINR(activePoint.open, "0")}</strong></div>
-            <div><span>H</span> <strong>{formatINR(activePoint.high, "0")}</strong></div>
-            <div><span>L</span> <strong>{formatINR(activePoint.low, "0")}</strong></div>
-            <div><span>C</span> <strong className={isUp ? styles.upText : styles.downText}>{formatINR(activePoint.close, "0")}</strong></div>
-            <div><span>V</span> <strong>{formatIndianNumber(activePoint.volume as number, "0")}</strong></div>
+            <div><span>O</span> <strong>{formatINR(activePoint.open)}</strong></div>
+            <div><span>H</span> <strong>{formatINR(activePoint.high)}</strong></div>
+            <div><span>L</span> <strong>{formatINR(activePoint.low)}</strong></div>
+            <div><span>C</span> <strong className={isUp ? styles.upText : styles.downText}>{formatINR(activePoint.close)}</strong></div>
+            <div><span>V</span> <strong>{formatIndianNumber(activePoint.volume as number)}</strong></div>
             <div>
               <span>%</span> 
               <strong className={isUp ? styles.upText : styles.downText}>
-                {formatPercent(((activePoint.close as number) - (activePoint.open as number)) / (activePoint.open as number) * 100, "0")}
+                {formatPercent(((activePoint.close as number) - (activePoint.open as number)) / (activePoint.open as number) * 100)}
               </strong>
             </div>
           </div>
         </div>
       )}
-      <div ref={chartContainerRef} className={styles.chartContainer} />
+      <div ref={chartContainerRef} className={styles.chartContainer} role="img" aria-label="Historical candlestick price chart with volume" />
       <div className={styles.attribution}>
         <a href="https://tradingview.com/" target="_blank" rel="noopener noreferrer">
           Powered by TradingView Lightweight Charts

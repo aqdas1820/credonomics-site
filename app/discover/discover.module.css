@@ -7,7 +7,7 @@
 .hero{
   display:grid;
   grid-template-columns:minmax(0,1.25fr) minmax(300px,.55fr);
-  align-items:end;
+  align-items:flex-end;
   gap:70px;
   padding-bottom:66px;
 }
@@ -118,7 +118,7 @@
 .sectionHead{
   display:grid;
   grid-template-columns:1fr minmax(280px,.5fr);
-  align-items:end;
+  align-items:flex-end;
   gap:40px;
   margin-bottom:28px;
 }

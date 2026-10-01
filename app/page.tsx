@@ -3,11 +3,12 @@ import LatestReportBanner from './components/LatestReportBanner'
 import HomepageDiscovery from './components/HomepageDiscovery'
 import Link from "next/link";
 import SiteFrame from "./components/SiteFrame";
-import { publicIpos } from "./data/ipo-public";
+import { getPublicIpos } from "./data/ipo-public";
 import { researchArticles } from "./data/research-articles";
 import { PUBLIC_REVIEW_DATE } from "./data/tool-registry";
 import styles from "./home-investment.module.css";
 import HomeIntelligenceRail from './components/HomeIntelligenceRail'
+import HomeMarketStatus from './components/HomeMarketStatus'
 
 const quickActions = [
   ['Markets', '/markets'],
@@ -60,10 +61,6 @@ const terminalRows = [
 ];
 
 const latestArticle = researchArticles[0];
-const featuredIpo =
-  publicIpos.find((ipo) => ipo.status === "open") ??
-  publicIpos.find((ipo) => ipo.status === "upcoming") ??
-  publicIpos[0];
 
 function displayDate(value?: string) {
   if (!value) return "Date shown on source record";
@@ -78,7 +75,15 @@ function displayDate(value?: string) {
   }).format(date);
 }
 
+export const revalidate = 60;
+
 export default function HomePage() {
+  const publicIpos = getPublicIpos();
+const featuredIpo =
+  publicIpos.find((ipo) => ipo.status === "open") ??
+  publicIpos.find((ipo) => ipo.status === "announced") ??
+  publicIpos[0];
+
   return (
     <SiteFrame>
       <div className={styles.page}>
@@ -90,11 +95,7 @@ export default function HomePage() {
           <h1>Financial intelligence,<br />without the noise.</h1>
           <p>Markets, research and practical decision tools in one source-aware workspace.</p>
         </div>
-        <div className={styles.marketStatus} aria-label="Market data status">
-          <div><span>Market status</span><strong>Live index feed unavailable</strong></div>
-          <p>Verified market values will appear here when the connected provider is available.</p>
-          <Link href="/markets">Open Markets <span>→</span></Link>
-        </div>
+        <HomeMarketStatus />
         <div className={styles.pulsePanel}>
           <div><span className={styles.sectionEyebrow}>MARKET PULSE</span><h2>Intelligence data pending</h2><p>A composite score is intentionally withheld until verified inputs and methodology are connected.</p></div>
           <Link href="/methodology">How data is handled</Link>
@@ -113,10 +114,10 @@ export default function HomePage() {
               Independent Market Intelligence
             </div>
 
-            <h1>
+            <h2>
               Research beyond{' '}
               <em>market noise.</em>
-            </h1>
+            </h2>
 
             <p className={styles.heroText}>
               CredoNomics Investment Solutions combines valuation frameworks,

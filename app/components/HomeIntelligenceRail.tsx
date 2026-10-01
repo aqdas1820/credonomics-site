@@ -48,13 +48,13 @@ type IntelligencePayload = {
 
 function formatUpdatedAt(value: string) {
   if (!value) {
-    return 'Data refresh active'
+    return 'Publication date unavailable'
   }
 
   const date = new Date(value)
 
   if (Number.isNaN(date.getTime())) {
-    return 'Data refresh active'
+    return 'Publication date unavailable'
   }
 
   return new Intl.DateTimeFormat('en-IN', {
@@ -144,7 +144,7 @@ export default function HomeIntelligenceRail() {
             <Clock3 size={15} />
             <span>
               {data
-                ? formatUpdatedAt(data.generatedAt)
+                ? `Published snapshot: ${formatUpdatedAt(data.generatedAt)}`
                 : failed
                   ? 'Data status temporarily unavailable'
                   : 'Loading latest intelligence...'}

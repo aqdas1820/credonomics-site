@@ -9,7 +9,7 @@
 .libraryHero{
   display:grid;
   grid-template-columns:minmax(0,1fr) minmax(310px,.55fr);
-  align-items:end;
+  align-items:flex-end;
   gap:70px;
   padding:22px 0 54px;
 }
@@ -396,7 +396,7 @@
 .reportBodyGrid{
   display:grid;
   grid-template-columns:minmax(0,1fr) 350px;
-  align-items:start;
+  align-items:flex-start;
   gap:40px;
 }
 
@@ -534,7 +534,7 @@
 
 .pdfSectionHead{
   display:flex;
-  align-items:end;
+  align-items:flex-end;
   justify-content:space-between;
   gap:20px;
   margin-bottom:18px;
@@ -665,7 +665,7 @@
   }
 
   .pdfSectionHead{
-    align-items:start;
+    align-items:flex-start;
     flex-direction:column;
   }
 }
@@ -707,7 +707,7 @@
   }
 
   .libraryHero{
-    align-items:start;
+    align-items:flex-start;
   }
 
   .libraryPrinciple{

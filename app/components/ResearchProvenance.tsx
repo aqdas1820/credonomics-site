@@ -2,11 +2,12 @@ import { CalendarDays, Database, FileSearch, ShieldAlert } from 'lucide-react'
 import styles from '../core-v4.module.css'
 
 type Props = {
-  updated: string
-  source: string
-  period: string
-  limitations: string
+  updated?: string
+  source?: string
+  period?: string
+  limitations?: string
   methodologyHref?: string
+  metadata?: Partial<{ source: string; asOf: string | null; reportingPeriod: string | null; quality: string; availability: string }>
 }
 
 export default function ResearchProvenance({
@@ -15,14 +16,19 @@ export default function ResearchProvenance({
   period,
   limitations,
   methodologyHref = '/methodology',
+  metadata
 }: Props) {
+  const finalSource = source || metadata?.source || 'CredoNomics / Exchange';
+  const finalPeriod = period || metadata?.reportingPeriod || (metadata?.asOf ? new Intl.DateTimeFormat('en-IN').format(new Date(metadata.asOf)) : 'Not specified');
+  const finalUpdated = updated || (metadata?.asOf ? `Data as of ${new Intl.DateTimeFormat('en-IN').format(new Date(metadata.asOf))}` : 'Review pending');
+  const finalLimitations = limitations || (metadata?.availability === 'partial' ? 'Partial coverage' : 'Source freshness and coverage vary');
   return (
     <aside className={styles.provenanceBar} aria-label="Research provenance">
       <div className={styles.provenanceItem}>
         <CalendarDays size={15} />
         <span>
           <small>Updated</small>
-          <strong>{updated}</strong>
+          <strong>{finalUpdated}</strong>
         </span>
       </div>
 
@@ -30,7 +36,7 @@ export default function ResearchProvenance({
         <Database size={15} />
         <span>
           <small>Primary source</small>
-          <strong>{source}</strong>
+          <strong>{finalSource}</strong>
         </span>
       </div>
 
@@ -38,7 +44,7 @@ export default function ResearchProvenance({
         <FileSearch size={15} />
         <span>
           <small>Data period</small>
-          <strong>{period}</strong>
+          <strong>{finalPeriod}</strong>
         </span>
       </div>
 
@@ -46,7 +52,7 @@ export default function ResearchProvenance({
         <ShieldAlert size={15} />
         <span>
           <small>Limitations</small>
-          <strong>{limitations}</strong>
+          <strong>{finalLimitations}</strong>
         </span>
       </div>
 

@@ -3,8 +3,24 @@ import type { MFPortfolioData } from '../../../src/domain/mf/types'
 import styles from '../../stocks/[exchange]/[symbol]/stock-detail.module.css'
 
 export default function MFPortfolioUI({ data }: { data: MFPortfolioData }) {
+  const getStatusColor = (status?: string) => {
+    switch (status) {
+      case 'NEW':
+      case 'INCREASED':
+        return 'var(--up-color)';
+      case 'DECREASED':
+      case 'EXITED':
+        return 'var(--down-color)';
+      default:
+        return 'var(--text-secondary)';
+    }
+  };
+
   return (
     <>
+      <div style={{ marginBottom: '16px', color: 'var(--text-secondary)', fontSize: '13px' }}>
+        <strong>Provenance:</strong> HDFC Mutual Fund official disclosures • As of {new Intl.DateTimeFormat("en-IN", { day: "2-digit", month: "short", year: "numeric" }).format(new Date(data.asOfDate))}
+      </div>
       <section className={styles.chartCard} style={{ marginBottom: '24px' }}>
         <h2>Stock Concentration</h2>
         <div className={styles.brokerGrid} style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
@@ -30,16 +46,35 @@ export default function MFPortfolioUI({ data }: { data: MFPortfolioData }) {
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
               <thead>
                 <tr style={{ borderBottom: '1px solid var(--card-border)', color: 'var(--text-secondary)', textAlign: 'left' }}>
-                  <th style={{ padding: '12px 8px' }}>Instrument</th>
+                  <th style={{ padding: '12px 8px' }}>Instrument & ISIN</th>
                   <th style={{ padding: '12px 8px' }}>Sector</th>
+                  <th style={{ padding: '12px 8px', textAlign: 'center' }}>MoM Change</th>
                   <th style={{ padding: '12px 8px', textAlign: 'right' }}>Weight</th>
                 </tr>
               </thead>
               <tbody>
                 {data.holdings.map((h, i) => (
-                  <tr key={i} style={{ borderBottom: '1px solid var(--card-border)' }}>
-                    <td style={{ padding: '12px 8px', fontWeight: 600 }}>{h.instrumentName} <br/><small style={{ color: 'var(--text-secondary)', fontWeight: 400 }}>{h.instrumentType}</small></td>
+                  <tr key={i} style={{ borderBottom: '1px solid var(--card-border)', opacity: h.changeStatus === 'EXITED' ? 0.6 : 1 }}>
+                    <td style={{ padding: '12px 8px', fontWeight: 600 }}>
+                      {h.instrumentName}
+                      <br/>
+                      <small style={{ color: 'var(--text-secondary)', fontWeight: 400, fontFamily: 'monospace' }}>
+                        {h.isin || 'ISIN UNAVAILABLE'} • {h.quality || 'N/A'}
+                      </small>
+                    </td>
                     <td style={{ padding: '12px 8px', color: 'var(--text-secondary)' }}>{h.sector || '—'}</td>
+                    <td style={{ padding: '12px 8px', textAlign: 'center' }}>
+                      <span style={{ 
+                        color: getStatusColor(h.changeStatus),
+                        fontSize: '12px',
+                        padding: '2px 6px',
+                        borderRadius: '4px',
+                        background: 'var(--bg-secondary)',
+                        fontWeight: 600
+                      }}>
+                        {h.changeStatus || '—'}
+                      </span>
+                    </td>
                     <td style={{ padding: '12px 8px', textAlign: 'right', fontWeight: 600 }}>{h.weight.toFixed(2)}%</td>
                   </tr>
                 ))}

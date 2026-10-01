@@ -1,5 +1,6 @@
 'use client'
 
+import { serializeJsonLd } from '../../src/lib/json-ld'
 import { ArrowUpRight, Search, SlidersHorizontal } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { searchIndex } from '../data/search-index.generated'
@@ -114,7 +115,7 @@ export default function SearchWorkspace({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: serializeJsonLd({
             '@context': 'https://schema.org',
             '@type': 'WebSite',
             name: 'CredoNomics',

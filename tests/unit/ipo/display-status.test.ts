@@ -20,9 +20,9 @@ describe('IPO Display Status Logic', () => {
     expect(getIpoDisplayStatus({ listingDate: '2026-09-05' })).toBe('listed');
   });
 
-  it('identifies future open dates as upcoming', () => {
+  it('identifies future open dates as announced', () => {
     setTime('2026-09-07T10:00:00+05:30');
-    expect(getIpoDisplayStatus({ openDate: '2026-09-08' })).toBe('upcoming');
+    expect(getIpoDisplayStatus({ openDate: '2026-09-08' })).toBe('announced');
   });
 
   it('evaluates closing today vs recently closed at 5 PM IST strict cutoff', () => {
@@ -30,7 +30,7 @@ describe('IPO Display Status Logic', () => {
     
     // 2:00 PM IST
     setTime('2026-09-07T14:00:00+05:30');
-    expect(getIpoDisplayStatus({ closeDate: '2026-09-07' })).toBe('closing_today');
+    expect(getIpoDisplayStatus({ closeDate: '2026-09-07' })).toBe('open');
     
     // 5:01 PM IST
     setTime('2026-09-07T17:01:00+05:30');
@@ -48,10 +48,9 @@ describe('IPO Display Status Logic', () => {
   });
 
   it('correctly maps status labels', () => {
-    expect(ipoStatusLabel('closing_today')).toBe('Closing today');
-    expect(ipoStatusLabel('upcoming')).toBe('Upcoming');
+    expect(ipoStatusLabel('announced')).toBe('Announced');
     expect(ipoStatusLabel('open')).toBe('Open');
-    expect(ipoStatusLabel('closed')).toBe('Recently Closed');
+    expect(ipoStatusLabel('closed')).toBe('Closed');
     expect(ipoStatusLabel('listed')).toBe('Listed');
   });
 });

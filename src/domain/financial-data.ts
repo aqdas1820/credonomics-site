@@ -9,7 +9,7 @@ export const DATA_AVAILABILITIES = [
 export type DataAvailability = (typeof DATA_AVAILABILITIES)[number];
 export type DataQuality = "verified" | "high" | "medium" | "low" | "unknown";
 
-export type FinancialDataMetadata = {
+export type FinancialDataMetadata = Partial<import('./provenance').FinancialProvenance> & {
   source: string;
   asOf: string | null;
   generatedAt: string;

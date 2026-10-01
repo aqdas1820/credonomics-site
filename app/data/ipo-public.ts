@@ -23,7 +23,7 @@ function marketToPublic(record: IpoMarketRecord, normalizedAt: string): PublicIp
     companyName: record.companyName,
     symbol: record.symbol,
     marketSegment: record.marketSegment,
-    status: getIpoDisplayStatus({ ...record.issue, providerStatus: record.status }),
+    status: getIpoDisplayStatus({ ...record.issue, providerStatus: record.status }, new Date(normalizedAt)),
     issue: record.issue,
     financials: [],
     subscription: record.subscription,
@@ -36,7 +36,7 @@ function marketToPublic(record: IpoMarketRecord, normalizedAt: string): PublicIp
       },
     ],
     lastUpdated: record.fetchedAt,
-    providerUpdatedAt: record.fetchedAt,
+    providerUpdatedAt: '',
     normalizedAt,
     provider: record.marketSource.toLowerCase(),
     researchState: 'exchange-live',
@@ -49,9 +49,9 @@ function marketToPublic(record: IpoMarketRecord, normalizedAt: string): PublicIp
 function verifiedToPublic(record: VerifiedIpoRecord, normalizedAt: string): PublicIpoRecord {
   return {
     ...record,
-    status: getIpoDisplayStatus({ ...record.issue, providerStatus: record.status }),
+    status: getIpoDisplayStatus({ ...record.issue, providerStatus: record.status }, new Date(normalizedAt)),
     lastUpdated: record.lastVerified,
-    providerUpdatedAt: record.lastVerified,
+    providerUpdatedAt: '',
     normalizedAt,
     provider: 'official-filing',
     researchState: 'normalized',
@@ -76,7 +76,7 @@ function mergeMarketIntoVerified(
       closeDate: market.issue.closeDate || verified.issue.closeDate,
       listingDate: verified.issue.listingDate,
       providerStatus: market.status === 'unknown' ? verified.status : market.status,
-    }),
+    }, new Date(verified.normalizedAt ?? verified.lastUpdated)),
     issue: {
       ...market.issue,
       ...verified.issue,
@@ -126,7 +126,7 @@ export function getPublicIpos(now = new Date()): PublicIpoRecord[] {
     .filter((record) => !verifiedNames.has(normalizeName(record.companyName)))
     .map((record) => marketToPublic(record, normalizedAt)),
 ]).sort((a, b) => {
-  const statusOrder = { closing_today: 0, open: 1, upcoming: 2, closed: 3, listed: 4, draft: 5, unknown: 6, withdrawn: 7 }
+  const statusOrder = { open: 0, announced: 1, closed: 2, listed: 3, draft: 4, unknown: 5, withdrawn: 6 }
   const aStatus = statusOrder[a.status] ?? 9
   const bStatus = statusOrder[b.status] ?? 9
   return aStatus - bStatus ||
