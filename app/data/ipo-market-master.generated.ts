@@ -4,68 +4,16 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-10-01T10:02:57.637Z",
-  "recordCount": 5,
-  "nseCount": 5,
+  "generatedAt": "2026-10-02T09:41:01.196Z",
+  "recordCount": 3,
+  "nseCount": 3,
   "bseCount": 0,
-  "activeCount": 5,
+  "activeCount": 3,
   "upcomingCount": 0,
-  "sourceStatus": "NSE API 5 · BSE SME unavailable · BSE mainboard 0"
+  "sourceStatus": "NSE API 3 · BSE SME unavailable · BSE mainboard 0"
 } as const
 
 export const ipoMarketMaster: IpoMarketRecord[] = [
-  {
-    "slug": "green-asia-impex-ltd-06e7139",
-    "companyName": "Green Asia Impex Limited",
-    "symbol": "GREENASIA",
-    "marketSegment": "sme",
-    "status": "open",
-    "securityType": "SME",
-    "issue": {
-      "openDate": "2026-09-24",
-      "closeDate": "2026-10-01",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 0.97,
-      "updatedAt": "2026-10-01T10:02:57.637Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=GREENASIA&type=Active"
-    },
-    "sharesOffered": 7057600,
-    "sharesBid": 6851200,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=GREENASIA&type=Active",
-    "fetchedAt": "2026-10-01T10:02:57.637Z"
-  },
-  {
-    "slug": "papadmalji-agro-foods-ltd-4497863",
-    "companyName": "Papadmalji Agro Foods Limited",
-    "symbol": "PAPADMALJI",
-    "marketSegment": "sme",
-    "status": "open",
-    "securityType": "SME",
-    "issue": {
-      "openDate": "2026-09-29",
-      "closeDate": "2026-10-01",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 2.38,
-      "updatedAt": "2026-10-01T10:02:57.637Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=PAPADMALJI&type=Active"
-    },
-    "sharesOffered": 2803200,
-    "sharesBid": 6672000,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=PAPADMALJI&type=Active",
-    "fetchedAt": "2026-10-01T10:02:57.637Z"
-  },
   {
     "slug": "eventions-ltd-a765320",
     "companyName": "Eventions Limited",
@@ -81,16 +29,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 1.65,
-      "updatedAt": "2026-10-01T10:02:57.637Z",
+      "total": 1.75,
+      "updatedAt": "2026-10-02T09:41:01.196Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=EVENTIONS&type=Active"
     },
     "sharesOffered": 3230400,
-    "sharesBid": 5340000,
+    "sharesBid": 5664000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=EVENTIONS&type=Active",
-    "fetchedAt": "2026-10-01T10:02:57.637Z"
+    "fetchedAt": "2026-10-02T09:41:01.196Z"
   },
   {
     "slug": "nityas-gems-and-jewellery-ltd-c3e7846",
@@ -109,17 +57,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.27537354731599334,
-      "updatedAt": "2026-10-01T10:02:57.637Z",
+      "total": 0.4291228555617045,
+      "updatedAt": "2026-10-02T09:41:01.196Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=NITYAS&type=Active"
     },
     "sharesOffered": 14456000,
-    "sharesBid": 3980800,
+    "sharesBid": 6203400,
     "estimatedIssueValueCr": 108.42,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=NITYAS&type=Active",
-    "fetchedAt": "2026-10-01T10:02:57.637Z"
+    "fetchedAt": "2026-10-02T09:41:01.196Z"
   },
   {
     "slug": "vishal-nirmiti-ltd-5d86d9a",
@@ -138,16 +86,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.39590360367709093,
-      "updatedAt": "2026-10-01T10:02:57.637Z",
+      "total": 0.4393630949647586,
+      "updatedAt": "2026-10-02T09:41:01.196Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VNL&type=Active"
     },
     "sharesOffered": 8471153,
-    "sharesBid": 3353760,
+    "sharesBid": 3721912,
     "estimatedIssueValueCr": 186.37,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VNL&type=Active",
-    "fetchedAt": "2026-10-01T10:02:57.637Z"
+    "fetchedAt": "2026-10-02T09:41:01.196Z"
   }
 ]

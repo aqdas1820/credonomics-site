@@ -2,14 +2,25 @@
 import type { IpoDiscoveryRecord } from './ipo-types'
 
 export const ipoDiscoveryMeta = {
-  "generatedAt": "2026-10-01T10:03:09.779Z",
+  "generatedAt": "2026-10-02T09:41:13.712Z",
   "source": "SEBI Public Issues",
   "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
-  "recordCount": 27,
+  "recordCount": 28,
   "note": "Discovery layer only. Financial ranking requires separately normalized offer-document data."
 } as const
 
 export const ipoDiscovery: IpoDiscoveryRecord[] = [
+  {
+    "id": "arohan-financial-services-limited-addendum-5cfcca",
+    "companyName": "Arohan Financial Services Limited",
+    "filingTitle": "Arohan Financial Services Limited - Addendum to DRHP",
+    "filingDate": "2026-10-01",
+    "documentStage": "addendum",
+    "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/arohan-financial-services-limited-addendum-to-drhp_104860.html",
+    "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
+    "firstSeen": "2026-10-02T09:41:13.712Z",
+    "lastSeen": "2026-10-02T09:41:13.712Z"
+  },
   {
     "id": "rayzon-solar-limited-addendum-e842f4",
     "companyName": "Rayzon Solar Limited",
@@ -19,7 +30,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/sep-2026/rayzon-solar-limited-addendum-to-the-drhp_104532.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-09-17T08:35:52.118Z",
-    "lastSeen": "2026-10-01T10:03:09.779Z"
+    "lastSeen": "2026-10-02T09:41:13.712Z"
   },
   {
     "id": "sterlite-electric-limited-second-addendum-to-drhp-addendum-2cf6a4",
@@ -30,7 +41,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/sep-2026/sterlite-electric-limited-second-addendum-to-drhp_104506.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-09-16T14:10:53.929Z",
-    "lastSeen": "2026-10-01T10:03:09.779Z"
+    "lastSeen": "2026-10-02T09:41:13.712Z"
   },
   {
     "id": "german-green-steel-and-power-limited-addendum-bd7415",
@@ -41,7 +52,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/sep-2026/german-green-steel-and-power-limited-addendum-ii-to-drhp_104480.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-09-15T08:37:18.468Z",
-    "lastSeen": "2026-10-01T10:03:09.779Z"
+    "lastSeen": "2026-10-02T09:41:13.712Z"
   },
   {
     "id": "runwal-enterprises-limited-addendum-2e4d3f",
