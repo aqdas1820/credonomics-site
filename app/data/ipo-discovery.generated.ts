@@ -2,7 +2,7 @@
 import type { IpoDiscoveryRecord } from './ipo-types'
 
 export const ipoDiscoveryMeta = {
-  "generatedAt": "2026-10-02T09:41:13.712Z",
+  "generatedAt": "2026-10-05T10:19:55.962Z",
   "source": "SEBI Public Issues",
   "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
   "recordCount": 28,
@@ -19,7 +19,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/arohan-financial-services-limited-addendum-to-drhp_104860.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-10-02T09:41:13.712Z",
-    "lastSeen": "2026-10-02T09:41:13.712Z"
+    "lastSeen": "2026-10-05T10:19:55.962Z"
   },
   {
     "id": "rayzon-solar-limited-addendum-e842f4",
