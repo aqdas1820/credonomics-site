@@ -4,100 +4,16 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-10-05T10:19:44.113Z",
-  "recordCount": 5,
-  "nseCount": 5,
+  "generatedAt": "2026-10-06T10:11:29.829Z",
+  "recordCount": 2,
+  "nseCount": 2,
   "bseCount": 0,
-  "activeCount": 5,
+  "activeCount": 2,
   "upcomingCount": 0,
-  "sourceStatus": "NSE API 5 · BSE SME unavailable · BSE mainboard 0"
+  "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard 0"
 } as const
 
 export const ipoMarketMaster: IpoMarketRecord[] = [
-  {
-    "slug": "eventions-ltd-a765320",
-    "companyName": "Eventions Limited",
-    "symbol": "EVENTIONS",
-    "marketSegment": "sme",
-    "status": "open",
-    "securityType": "SME",
-    "issue": {
-      "openDate": "2026-09-30",
-      "closeDate": "2026-10-05",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 2.3,
-      "updatedAt": "2026-10-05T10:19:44.113Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=EVENTIONS&type=Active"
-    },
-    "sharesOffered": 3230400,
-    "sharesBid": 7425600,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=EVENTIONS&type=Active",
-    "fetchedAt": "2026-10-05T10:19:44.113Z"
-  },
-  {
-    "slug": "nityas-gems-and-jewellery-ltd-c3e7846",
-    "companyName": "Nityas Gems and Jewellery Limited",
-    "symbol": "NITYAS",
-    "marketSegment": "mainboard",
-    "status": "open",
-    "securityType": "EQ",
-    "issue": {
-      "priceBandLow": 70,
-      "priceBandHigh": 75,
-      "openDate": "2026-09-30",
-      "closeDate": "2026-10-05",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 1.3038461538461539,
-      "updatedAt": "2026-10-05T10:19:44.113Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=NITYAS&type=Active"
-    },
-    "sharesOffered": 14456000,
-    "sharesBid": 18848400,
-    "estimatedIssueValueCr": 108.42,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=NITYAS&type=Active",
-    "fetchedAt": "2026-10-05T10:19:44.113Z"
-  },
-  {
-    "slug": "vishal-nirmiti-ltd-5d86d9a",
-    "companyName": "Vishal Nirmiti Limited",
-    "symbol": "VNL",
-    "marketSegment": "mainboard",
-    "status": "open",
-    "securityType": "EQ",
-    "issue": {
-      "priceBandLow": 208,
-      "priceBandHigh": 220,
-      "openDate": "2026-09-30",
-      "closeDate": "2026-10-05",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 1.1418993376698543,
-      "updatedAt": "2026-10-05T10:19:44.113Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VNL&type=Active"
-    },
-    "sharesOffered": 8471153,
-    "sharesBid": 9673204,
-    "estimatedIssueValueCr": 186.37,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=VNL&type=Active",
-    "fetchedAt": "2026-10-05T10:19:44.113Z"
-  },
   {
     "slug": "r-k-fashion-accessories-ltd-9e52c38",
     "companyName": "R.K. Fashion Accessories Limited",
@@ -113,16 +29,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.33,
-      "updatedAt": "2026-10-05T10:19:44.113Z",
+      "total": 0.45,
+      "updatedAt": "2026-10-06T10:11:29.829Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=RKFAL&type=Active"
     },
     "sharesOffered": 4267200,
-    "sharesBid": 1417600,
+    "sharesBid": 1912000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=RKFAL&type=Active",
-    "fetchedAt": "2026-10-05T10:19:44.113Z"
+    "fetchedAt": "2026-10-06T10:11:29.829Z"
   },
   {
     "slug": "smc-global-securities-ltd-86eb7e9",
@@ -141,16 +57,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0,
-      "updatedAt": "2026-10-05T10:19:44.113Z",
+      "total": 0.01,
+      "updatedAt": "2026-10-06T10:11:29.829Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMCG04&type=Active"
     },
     "sharesOffered": 750000,
-    "sharesBid": 1418,
+    "sharesBid": 4514,
     "estimatedIssueValueCr": 75,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMCG04&type=Active",
-    "fetchedAt": "2026-10-05T10:19:44.113Z"
+    "fetchedAt": "2026-10-06T10:11:29.829Z"
   }
 ]
