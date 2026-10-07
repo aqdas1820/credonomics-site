@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generatedAt": "2026-10-06T10:11:29.829Z",
-    "recordCount": 2,
-    "nseCount": 2,
+    "generatedAt": "2026-10-07T10:10:37.904Z",
+    "recordCount": 3,
+    "nseCount": 3,
     "bseCount": 0,
-    "activeCount": 2,
+    "activeCount": 3,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard 0"
+    "sourceStatus": "NSE API 3 · BSE SME unavailable · BSE mainboard 0"
   },
   "records": [
     {
@@ -24,16 +24,16 @@
         ]
       },
       "subscription": {
-        "total": 0.45,
-        "updatedAt": "2026-10-06T10:11:29.829Z",
+        "total": 2.46,
+        "updatedAt": "2026-10-07T10:10:37.904Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=RKFAL&type=Active"
       },
       "sharesOffered": 4267200,
-      "sharesBid": 1912000,
+      "sharesBid": 10481600,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=RKFAL&type=Active",
-      "fetchedAt": "2026-10-06T10:11:29.829Z"
+      "fetchedAt": "2026-10-07T10:10:37.904Z"
     },
     {
       "slug": "smc-global-securities-ltd-86eb7e9",
@@ -53,16 +53,45 @@
       },
       "subscription": {
         "total": 0.01,
-        "updatedAt": "2026-10-06T10:11:29.829Z",
+        "updatedAt": "2026-10-07T10:10:37.904Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMCG04&type=Active"
       },
       "sharesOffered": 750000,
-      "sharesBid": 4514,
+      "sharesBid": 5277,
       "estimatedIssueValueCr": 75,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMCG04&type=Active",
-      "fetchedAt": "2026-10-06T10:11:29.829Z"
+      "fetchedAt": "2026-10-07T10:10:37.904Z"
+    },
+    {
+      "slug": "grace-cancer-foundation-zczp-e2f46f0",
+      "companyName": "Grace Cancer Foundation - ZCZP",
+      "symbol": "GCFZCZP",
+      "marketSegment": "unknown",
+      "status": "open",
+      "securityType": "DEBT",
+      "issue": {
+        "priceBandLow": 10,
+        "priceBandHigh": 10,
+        "openDate": "2026-10-07",
+        "closeDate": "2026-10-09",
+        "exchange": [
+          "NSE"
+        ]
+      },
+      "subscription": {
+        "total": 0,
+        "updatedAt": "2026-10-07T10:10:37.904Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=GCFZCZP&type=Active"
+      },
+      "sharesOffered": 1000000,
+      "sharesBid": 3800,
+      "estimatedIssueValueCr": 1,
+      "marketSource": "NSE",
+      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=GCFZCZP&type=Active",
+      "fetchedAt": "2026-10-07T10:10:37.904Z"
     }
   ]
 }
