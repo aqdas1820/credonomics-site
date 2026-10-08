@@ -35,12 +35,13 @@ export type AutoCardCatalogRecord = {
 }
 
 export const autoCardCatalogMeta = {
-  "generatedAt": "2026-10-05T09:10:09.176Z",
+  "generatedAt": "2026-10-08T09:04:04.425Z",
   "sourceCount": 14,
-  "successfulSources": 13,
-  "failedSources": 1,
-  "recordCount": 233,
+  "successfulSources": 12,
+  "failedSources": 2,
+  "recordCount": 250,
   "failedIssuers": [
+    "SBI Card",
     "YES BANK"
   ],
   "note": "Automatically extracted from official issuer catalogue/product pages. Verify source before acting."
@@ -53,7 +54,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AXIS BANK PRIVILEGE Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -94,7 +95,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndiGo Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -136,7 +137,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "FLIPKART AXIS BANK Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 500,
     "joiningFee": 0,
@@ -180,7 +181,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Neo Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -230,7 +231,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank REWARDS Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -273,7 +274,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndiGo Axis Bank Premium Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 5000000,
     "joiningFee": 5000,
@@ -314,7 +315,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HORIZON Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 3000000,
     "joiningFee": 3000,
@@ -357,7 +358,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank My Zone Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 500000,
     "joiningFee": 500,
@@ -398,7 +399,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "INDIANOIL AXIS BANK Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 500000,
     "joiningFee": 500,
@@ -450,7 +451,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Select Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 3000,
     "joiningFee": 3000,
@@ -488,7 +489,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Scapia Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "high",
     "annualFee": 0,
     "joiningFee": 0,
@@ -546,7 +547,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AXIS BANK MAGNUS Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 12500000,
     "joiningFee": 12500,
@@ -589,7 +590,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank ACE Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "high",
     "annualFee": 499000,
     "joiningFee": 499,
@@ -659,7 +660,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Google Pay Flex Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -710,7 +711,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Reserve Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 50000000,
     "joiningFee": 50000,
@@ -749,7 +750,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank MY Zone Easy Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -800,7 +801,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Airtel Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 500000,
     "joiningFee": 500,
@@ -854,7 +855,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Cashback Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "high",
     "annualFee": 1000,
     "joiningFee": 1000,
@@ -916,7 +917,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndianOil Easy Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -968,7 +969,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Privilege Easy Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 1500,
     "joiningFee": 1500,
@@ -1007,7 +1008,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Atlas Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 5000000,
     "joiningFee": 5000,
@@ -1047,7 +1048,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank AURA Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "low",
     "annualFee": 749000,
     "joiningFee": 749,
@@ -1085,7 +1086,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndianOil Axis Bank Premium Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "high",
     "annualFee": 1000000,
     "joiningFee": 1000,
@@ -1139,7 +1140,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Pride Platinum Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 250000,
     "joiningFee": 0,
@@ -1179,7 +1180,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Pride Signature Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 500000,
     "joiningFee": 0,
@@ -1225,7 +1226,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Flipkart Axis Bank Super Elite Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "high",
     "annualFee": 500000,
     "joiningFee": 500,
@@ -1280,7 +1281,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "SpiceJet Axis Bank Voyage Black Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 2000,
     "joiningFee": 2000,
@@ -1318,7 +1319,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Samsung Axis Bank Infinite Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 5000000,
     "joiningFee": 5000,
@@ -1366,7 +1367,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Fibe Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "high",
     "annualFee": 0,
     "joiningFee": 0,
@@ -1420,7 +1421,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Shoppers Stop Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 500000,
     "joiningFee": 500,
@@ -1460,7 +1461,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "SpiceJet Axis Bank Voyage Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 750000,
     "joiningFee": 750,
@@ -1501,7 +1502,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Samsung Axis Bank Signature Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 500000,
     "joiningFee": 500,
@@ -1549,7 +1550,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Miles and More Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 3500000,
     "joiningFee": 3500,
@@ -1593,7 +1594,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Freecharge Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 250000,
     "joiningFee": 250,
@@ -1632,7 +1633,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Freecharge Plus Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "high",
     "annualFee": 0,
     "joiningFee": 350,
@@ -1691,7 +1692,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "LIC Axis Bank Signature Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "high",
     "annualFee": 0,
     "joiningFee": 0,
@@ -1745,7 +1746,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "LIC Axis Bank Platinum Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -1798,7 +1799,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AXIS BANK VISTARA SIGNATURE Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 3000000,
     "joiningFee": 3000,
@@ -1837,7 +1838,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AXIS BANK VISTARA Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 1500000,
     "joiningFee": 1500,
@@ -1876,7 +1877,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Kwik Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -1928,7 +1929,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Vistara Infinite Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "medium",
     "annualFee": 10000000,
     "joiningFee": 10000,
@@ -1968,7 +1969,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit card application made easy",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2000,7 +2001,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Choose your Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2027,12 +2028,9511 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "detectedPercentages": []
   },
   {
-    "id": "fc8dd56e466a3c",
+    "id": "05b2ffe456143a",
     "issuer": "Axis Bank",
-    "name": "Credit Card against Fixed Deposit",
+    "name": "1. What is Credit Card?",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "shopping"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 8,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "3f1d61949e9de0",
+    "issuer": "HDFC Bank",
+    "name": "Business Credit Cards",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 39,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "ad0d4a9b82cabb",
+    "issuer": "HDFC Bank",
+    "name": "Types of Credit Cards",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "lifetime-free"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 8,
+      "travel": 12,
+      "shopping": 8,
+      "grocery": 0,
+      "dining": 8,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 59,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "0fa3a0750edab2",
+    "issuer": "HDFC Bank",
+    "name": "IndianOil Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "a3222e3fa9ad81",
+    "issuer": "HDFC Bank",
+    "name": "Tata Neu Plus Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [
+      "Extraordinary Rewards, Ready for You."
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "8bb312425bb2eb",
+    "issuer": "HDFC Bank",
+    "name": "PhonePe HDFC Bank Ultimo Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "c80636d9e37e84",
+    "issuer": "HDFC Bank",
+    "name": "PhonePe HDFC Bank Uno Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "bbf7cfc5a8e7f1",
+    "issuer": "HDFC Bank",
+    "name": "Marriott Bonvoy HDFC Bank Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "32959915bfc2d2",
+    "issuer": "HDFC Bank",
+    "name": "Tata Neu Infinity HDFC Bank Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [
+      "Extraordinary Rewards. Ready for You."
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "3f2c7775a00b6e",
+    "issuer": "HDFC Bank",
+    "name": "Shoppers Stop Black HDFC Bank Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [
+      "Rewarding Style. Ready for You"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "b2f53c16d2b8fa",
+    "issuer": "HDFC Bank",
+    "name": "Shoppers Stop HDFC Bank Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [
+      "Rewarding Style, Ready for you"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "2caf0c112cbc3d",
+    "issuer": "HDFC Bank",
+    "name": "Swiggy Ornge HDFC Bank Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [
+      "Delightful Rewards. Ready For You"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "49e6a7214285e6",
+    "issuer": "HDFC Bank",
+    "name": "Swiggy BLCK HDFC Bank Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [
+      "Delightful Rewards. Ready For You"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "1e0ad3366b154a",
+    "issuer": "HDFC Bank",
+    "name": "HDFC Bank UPI RuPay Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "upi"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 8,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "HDFC Bank UPI RuPay Credit Card"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "c5be4921742ed0",
+    "issuer": "HDFC Bank",
+    "name": "Swiggy HDFC Bank Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [
+      "Delightful Rewards. Ready For You"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "3b214580367375",
+    "issuer": "HDFC Bank",
+    "name": "Platinum Plus Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "fuel"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 8,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "More Rewards and Fuel Surcharge Waivers"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "baeb0717b8dd85",
+    "issuer": "HDFC Bank",
+    "name": "Visa Signature Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "loungeVisits": 1,
+    "categories": [
+      "lounge"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 8,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Global Lounge Access with Fuel Waivers"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "98d4b47298d132",
+    "issuer": "HDFC Bank",
+    "name": "Diners ClubMiles Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "travel"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 8,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Diners ClubMiles Credit Card"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "e5b2d2adc64e24",
+    "issuer": "HDFC Bank",
+    "name": "InterMiles HDFC Bank Diners Club Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "travel"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 8,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "InterMiles HDFC Bank Diners Club Credit Card",
+      "Welcome Bonuses & Travel Discounts"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "b76d964dc98264",
+    "issuer": "HDFC Bank",
+    "name": "InterMiles HDFC Bank Signature Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "travel"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 8,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "InterMiles HDFC Bank Signature Credit Card",
+      "InterMiles Rewards and Silver Membership"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "efbdd088b60437",
+    "issuer": "HDFC Bank",
+    "name": "InterMiles HDFC Bank Platinum Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "travel"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 8,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "InterMiles HDFC Bank Platinum Credit Card",
+      "Travel More, Earn Rewards"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "e5d77c98af1509",
+    "issuer": "HDFC Bank",
+    "name": "Pine Labs HDFC Bank Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 39,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "India's Premier Business Credit Card for Rewards"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "fecb2fce6a8096",
+    "issuer": "HDFC Bank",
+    "name": "Regalia Activ HDFC Bank Credit Card",
+    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 39,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "India's Premier Business Credit Card for Rewards"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "8315f2022978a2",
+    "issuer": "ICICI Bank",
+    "name": "Get the best Credit Card",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/sapphiro-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 3500,
+    "joiningFee": 6500,
+    "renewalFee": 3500,
+    "feeWaiverSpend": 600000,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "upiRate": 1,
+    "forexMarkup": 3.5,
+    "loungeVisits": 2,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 8,
+      "fuel": 43,
+      "travel": 71,
+      "shopping": 20,
+      "grocery": 0,
+      "dining": 12,
+      "utilities": 16,
+      "upi": 30,
+      "forex": 35,
+      "lounge": 40,
+      "premium": 70,
+      "business": 47,
+      "lifetime-free": 0,
+      "beginner": 39,
+      "low-fee": 16,
+      "co-branded": 60
+    },
+    "detectedBenefits": [
+      "ICICI Bank Sapphiro Credit Card: Travel and Lifestyle Rewards",
+      "Unified Payments Interface (UPI)",
+      "Foreign Currency Non-Resident (FCNR)(B) Deposit",
+      "Resident Foreign Currency (RFC) Deposit",
+      "Foreign Account Tax Compliance Act (FATCA)"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 1,
+        "context": "ct the Concierge team, please call 1800-26-78729(Rupay Variant) Fuel surcharge waiver Get 1% waiver on fuel transactions of up to ₹4,000 at all fuel pumps Earn and Use Reward Points Earn Points on ever"
+      },
+      {
+        "value": 3.5,
+        "context": "T (Spend over ₹6 lakh and get your Annual Fee waived off for the next year) Forex Markup 3.5% ATM Withdrawal Pay 3.75% interest per month If only minimum due is paid Pay 3.75% interest per month For la"
+      },
+      {
+        "value": 3.75,
+        "context": "get your Annual Fee waived off for the next year) Forex Markup 3.5% ATM Withdrawal Pay 3.75% interest per month If only minimum due is paid Pay 3.75% interest per month For late bill payment Ranging f"
+      },
+      {
+        "value": 3.75,
+        "context": "arkup 3.5% ATM Withdrawal Pay 3.75% interest per month If only minimum due is paid Pay 3.75% interest per month For late bill payment Ranging from ₹100 to ₹1,300 Most Important Terms & Conditions Plea"
+      },
+      {
+        "value": 1,
+        "context": "nt. What is the fuel surcharge waiver offered to Cardholders? Cardholders can avail of a 1% fuel surcharge waiver on all fuel transactions of up to ₹4,000 at any fuel outlet in India. This benefit appl"
+      }
+    ]
+  },
+  {
+    "id": "9dc5a6933f9e68",
+    "issuer": "ICICI Bank",
+    "name": "Find the ideal Credit Card",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/compare-cards",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 8,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 8,
+      "upi": 8,
+      "forex": 24,
+      "lounge": 0,
+      "premium": 8,
+      "business": 47,
+      "lifetime-free": 0,
+      "beginner": 39,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Compare Credit Cards – Features, Rewards & Benefits | ICICI Bank",
+      "Unified Payments Interface (UPI)",
+      "Foreign Currency Non-Resident (FCNR)(B) Deposit",
+      "Resident Foreign Currency (RFC) Deposit",
+      "Foreign Account Tax Compliance Act (FATCA)"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "d80a175fec84b9",
+    "issuer": "ICICI Bank",
+    "name": "Pre-Approved Credit Card",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/pre-approved-credit-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 1,
+    "categories": [
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 28,
+      "travel": 41.5,
+      "shopping": 32,
+      "grocery": 0,
+      "dining": 16,
+      "utilities": 8,
+      "upi": 8,
+      "forex": 24,
+      "lounge": 28,
+      "premium": 21,
+      "business": 47,
+      "lifetime-free": 0,
+      "beginner": 39,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Unified Payments Interface (UPI)",
+      "Foreign Currency Non-Resident (FCNR)(B) Deposit",
+      "Resident Foreign Currency (RFC) Deposit",
+      "Foreign Account Tax Compliance Act (FATCA)",
+      "Corporate Sapphiro Forex Card"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "dece0fbabb6773",
+    "issuer": "ICICI Bank",
+    "name": "Personal Loan Credit Card",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/personal-loan-on-credit-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 8,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 8,
+      "upi": 8,
+      "forex": 24,
+      "lounge": 0,
+      "premium": 8,
+      "business": 47,
+      "lifetime-free": 0,
+      "beginner": 39,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Unified Payments Interface (UPI)",
+      "Foreign Currency Non-Resident (FCNR)(B) Deposit",
+      "Resident Foreign Currency (RFC) Deposit",
+      "Foreign Account Tax Compliance Act (FATCA)",
+      "Corporate Sapphiro Forex Card"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 1,
+        "context": "eatures of Personal Loan on Credit Card Lowest Processing fee Enjoy a Processing Fee of 1%, one of the lowest in the market Time taken for the fund transfer • Customers who have an instant offer will"
+      },
+      {
+        "value": 11,
+        "context": "can avail a Personal Loan on Credit Card at an attractive interest rate, starting at just 11%, with a flexible repayment tenure of up to 60 months. How will the funds get transferred The loan amount wil"
+      },
+      {
+        "value": 90,
+        "context": "nt, the loan amount offered will be within your Credit Card limit and you may avail up to 90% of the unused credit limit. The loan amount will be blocked from your available Credit Card limit. 2. Persona"
+      }
+    ]
+  },
+  {
+    "id": "27d97125aeb78a",
+    "issuer": "ICICI Bank",
+    "name": "Benefits of ICICI Bank Credit Cards",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "shopping",
+      "beginner"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 8,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 39,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Online shopping, bill payments and in-store purchases are all made simple and rewarding with ICICI Bank Credit Cards.",
+      "Make your purchases more fulfilling with discounts and reward points on almost every transaction."
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "6980950178a827",
+    "issuer": "ICICI Bank",
+    "name": "Types of Credit Cards in India",
+    "sourceUrl": "https://www.icicibank.com/blogs/credit-card/type-of-credit-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 99,
+    "loungeUnlimited": true,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 16,
+      "fuel": 44,
+      "travel": 248.5,
+      "shopping": 48,
+      "grocery": 0,
+      "dining": 20,
+      "utilities": 16,
+      "upi": 8,
+      "forex": 24,
+      "lounge": 69,
+      "premium": 61,
+      "business": 59,
+      "lifetime-free": 0,
+      "beginner": 59,
+      "low-fee": 0,
+      "co-branded": 100
+    },
+    "detectedBenefits": [
+      "Unified Payments Interface (UPI)",
+      "Foreign Currency Non-Resident (FCNR)(B) Deposit",
+      "Resident Foreign Currency (RFC) Deposit",
+      "Foreign Account Tax Compliance Act (FATCA)",
+      "Corporate Sapphiro Forex Card"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "349bf4968e9352",
+    "issuer": "ICICI Bank",
+    "name": "Credit Card fees and interest rates",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 8,
+      "co-branded": 36
+    },
+    "detectedBenefits": [
+      "Joining Fee and Annual Fee",
+      "The Joining Fee is the initial cost of owning the Credit Card. It varies from bank to bank and also depends on the type of card. It is usually followed by an Annual Fee."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 3.75,
+        "context": "n outstanding dues, due to non-payment of the same by the due date. The maximum charge is 3.75% per month. Late Payment Fee If you are unable to pay the outstanding amount, the Bank will notify you to pay"
+      },
+      {
+        "value": 2.5,
+        "context": "old. If you spend beyond this limit, the bank will charge an over-the-limit fee which is ~2.50% on the amount spent beyond the credit limit. GST Goods and Service Tax (GST) is applicable on certain Credit"
+      },
+      {
+        "value": 18,
+        "context": "n Credit Card transactions. Presently, the GST rate for banking and financial services is 18%. To know more about fees and charges please refer to the MITC - PDF (Most Important Terms and Conditions)."
+      }
+    ]
+  },
+  {
+    "id": "0d59a6b9485f66",
+    "issuer": "ICICI Bank",
+    "name": "Tips for secure Credit Card usage",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 39,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "1a0bd017701701",
+    "issuer": "ICICI Bank",
+    "name": "Can I use my ICICI Bank Credit Card for international transactions?",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "forex"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 12,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "254183a0eeb8b8",
+    "issuer": "ICICI Bank",
+    "name": "Can I get a Loan on an ICICI Bank Credit Card?",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/personal-loan-on-credit-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 8,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 8,
+      "upi": 8,
+      "forex": 24,
+      "lounge": 0,
+      "premium": 8,
+      "business": 47,
+      "lifetime-free": 0,
+      "beginner": 39,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Unified Payments Interface (UPI)",
+      "Foreign Currency Non-Resident (FCNR)(B) Deposit",
+      "Resident Foreign Currency (RFC) Deposit",
+      "Foreign Account Tax Compliance Act (FATCA)",
+      "Corporate Sapphiro Forex Card"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 1,
+        "context": "eatures of Personal Loan on Credit Card Lowest Processing fee Enjoy a Processing Fee of 1%, one of the lowest in the market Time taken for the fund transfer • Customers who have an instant offer will"
+      },
+      {
+        "value": 11,
+        "context": "can avail a Personal Loan on Credit Card at an attractive interest rate, starting at just 11%, with a flexible repayment tenure of up to 60 months. How will the funds get transferred The loan amount wil"
+      },
+      {
+        "value": 90,
+        "context": "nt, the loan amount offered will be within your Credit Card limit and you may avail up to 90% of the unused credit limit. The loan amount will be blocked from your available Credit Card limit. 2. Persona"
+      }
+    ]
+  },
+  {
+    "id": "8f838a507e9dc2",
+    "issuer": "ICICI Bank",
+    "name": "Credit Card Rewards",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/credit-card-services/rewards",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 16,
+      "upi": 8,
+      "forex": 28,
+      "lounge": 0,
+      "premium": 8,
+      "business": 47,
+      "lifetime-free": 0,
+      "beginner": 39,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "ICICI Bank Credit Card Rewards – Learn How to Redeem Reward Points",
+      "Unified Payments Interface (UPI)",
+      "Foreign Currency Non-Resident (FCNR)(B) Deposit",
+      "Resident Foreign Currency (RFC) Deposit",
+      "Foreign Account Tax Compliance Act (FATCA)"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "b1bff8975ab92e",
+    "issuer": "ICICI Bank",
+    "name": "Credit Card Experience Program",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/experience",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxRewardRate": 25,
+    "travelRate": 6,
+    "forexMarkup": 0.99,
+    "loungeVisits": 99,
+    "loungeUnlimited": true,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 16,
+      "fuel": 52,
+      "travel": 290.5,
+      "shopping": 24,
+      "grocery": 0,
+      "dining": 56,
+      "utilities": 8,
+      "upi": 24,
+      "forex": 67.08,
+      "lounge": 77,
+      "premium": 113,
+      "business": 47,
+      "lifetime-free": 0,
+      "beginner": 43,
+      "low-fee": 0,
+      "co-branded": 88
+    },
+    "detectedBenefits": [
+      "ICICI Bank Credit Card Experience | Premium Privileges and Rewards",
+      "Unified Payments Interface (UPI)",
+      "Foreign Currency Non-Resident (FCNR)(B) Deposit",
+      "Resident Foreign Currency (RFC) Deposit",
+      "Foreign Account Tax Compliance Act (FATCA)"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 1.49,
+        "context": "ST FOR EaseMyTrip Voucher worth ₹10,000 Lifestyle Gift Cards from Toni&Guy and Interflora 1.49% Forex Markup Exclusive access to The Quorum Club APPLY DETAILS prev next Emeralde Private Metal save comp"
+      },
+      {
+        "value": 6,
+        "context": "redit Card save compare BEST FOR Travel Enthusiasts Seeking Value and Flexibility up to 6% myCash | 0.99% Forex markup | MakeMyTrip BLACK (MMTBLACK) membership more APPLY DETAILS Close More Info Make"
+      },
+      {
+        "value": 0.99,
+        "context": "ave compare BEST FOR Travel Enthusiasts Seeking Value and Flexibility up to 6% myCash | 0.99% Forex markup | MakeMyTrip BLACK (MMTBLACK) membership more APPLY DETAILS Close More Info MakeMyTrip Credit C"
+      },
+      {
+        "value": 6,
+        "context": "ACK) membership more APPLY DETAILS Close More Info MakeMyTrip Credit Card BEST FOR Up to 6% myCash on MakeMyTrip Bookings 0.99% Forex markup Unlimited myCash Rewards that never expire Complimentary 1-"
+      },
+      {
+        "value": 0.99,
+        "context": "Close More Info MakeMyTrip Credit Card BEST FOR Up to 6% myCash on MakeMyTrip Bookings 0.99% Forex markup Unlimited myCash Rewards that never expire Complimentary 1-year MMTBLACK Gold membership APPLY"
+      },
+      {
+        "value": 1.49,
+        "context": "ST FOR EaseMyTrip Voucher worth ₹10,000 Lifestyle Gift Cards from Toni&Guy and Interflora 1.49% Forex Markup Exclusive access to The Quorum Club APPLY DETAILS Emeralde Emeralde save compare BEST FOR Lux"
+      },
+      {
+        "value": 6,
+        "context": "redit Card save compare BEST FOR Travel Enthusiasts Seeking Value and Flexibility up to 6% myCash | 0.99% Forex markup | MakeMyTrip BLACK (MMTBLACK) membership more APPLY DETAILS Close More Info Make"
+      },
+      {
+        "value": 0.99,
+        "context": "ave compare BEST FOR Travel Enthusiasts Seeking Value and Flexibility up to 6% myCash | 0.99% Forex markup | MakeMyTrip BLACK (MMTBLACK) membership more APPLY DETAILS Close More Info MakeMyTrip Credit C"
+      },
+      {
+        "value": 6,
+        "context": "ACK) membership more APPLY DETAILS Close More Info MakeMyTrip Credit Card BEST FOR Up to 6% myCash on MakeMyTrip Bookings 0.99% Forex markup Unlimited myCash Rewards that never expire Complimentary 1-"
+      },
+      {
+        "value": 0.99,
+        "context": "Close More Info MakeMyTrip Credit Card BEST FOR Up to 6% myCash on MakeMyTrip Bookings 0.99% Forex markup Unlimited myCash Rewards that never expire Complimentary 1-year MMTBLACK Gold membership APPLY"
+      }
+    ]
+  },
+  {
+    "id": "be5661ef31bc1b",
+    "issuer": "ICICI Bank",
+    "name": "Business Advantage Blue Card",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "5e4f26f119a216",
+    "issuer": "ICICI Bank",
+    "name": "Business Ascent Card",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "4a6d0181946b93",
+    "issuer": "ICICI Bank",
+    "name": "Business Advantage Black Card",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "1cce1cfda81014",
+    "issuer": "ICICI Bank",
+    "name": "Business Essential Credit Card",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "ae1363b20b2ebf",
+    "issuer": "ICICI Bank",
+    "name": "Sapphiro Business Debit Card",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "ae05e2af3131fc",
+    "issuer": "ICICI Bank",
+    "name": "Coral Business Debit Card",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "49ffd732de1135",
+    "issuer": "ICICI Bank",
+    "name": "Business Titanium Debit Card",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "64d761ab760832",
+    "issuer": "ICICI Bank",
+    "name": "Purchase Card",
+    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "dda94ff11295a6",
+    "issuer": "IDFC FIRST Bank",
+    "name": "All IDFC FIRST Bank Credit Cards now come with Zero Forex Markup",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "forex"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 8,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "All IDFC FIRST Bank Credit Cards now come with Zero Forex Markup"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "bfdae98982a9e7",
+    "issuer": "IDFC FIRST Bank",
+    "name": "A Credit Card for Everyone",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 1,
+    "categories": [
+      "travel",
+      "forex",
+      "lounge",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 9.5,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 12,
+      "lounge": 12,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 36
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "43ff4abfb23048",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Explore our range of credit cards",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "premium",
+      "business",
+      "lifetime-free"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 8,
+      "business": 35,
+      "lifetime-free": 59,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "81abda6d52dd1e",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Quantum+ Credit Card",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/quantum-plus-credit-card?utm_source=website&utm_medium=PDPQuantum+&utm_campaign=Knowmore",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxCashbackRate": 6.5,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "utilityRate": 1,
+    "travelRate": 3,
+    "upiRate": 2,
+    "foreignRewardRate": 2,
+    "forexMarkup": 2,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 68,
+      "fuel": 25,
+      "travel": 114.5,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 34,
+      "upi": 60,
+      "forex": 81,
+      "lounge": 16,
+      "premium": 65,
+      "business": 47,
+      "lifetime-free": 71,
+      "beginner": 55,
+      "low-fee": 12,
+      "co-branded": 96
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
+      "Foreign Exchange Solution"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "f1251e92dab618",
+    "issuer": "IDFC FIRST Bank",
+    "name": "IndiGo IDFC Dual Cards",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/indigo-credit-card?utm_source=website&utm_medium=PDPIndigoIDFCFIRST&utm_campaign=Knowmore",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "travel",
+      "forex",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 8,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 8,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 36
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "924cfeadd09673",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Micro Enterprise Credit Card",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/micro-enterprise-credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 1000,
+    "joiningFee": 0,
+    "renewalFee": 1000,
+    "feeWaiverSpend": 20000,
+    "maxCashbackRate": 1,
+    "maxRewardRate": 18,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "travelRate": 1,
+    "upiRate": 1,
+    "foreignRewardRate": 0,
+    "forexMarkup": 0,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 41,
+      "travel": 56.5,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 28,
+      "upi": 42,
+      "forex": 87,
+      "lounge": 16,
+      "premium": 65,
+      "business": 51,
+      "lifetime-free": 71,
+      "beginner": 39,
+      "low-fee": 25.33,
+      "co-branded": 88
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
+      "Foreign Exchange Solution"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "7759947a1b4a82",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Get 100% guaranteed approval with an FD backed credit card",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/quantum-plus-credit-card?utm_source=website&utm_medium=PDPQuantum+&utm_campaign=Knowmore",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxCashbackRate": 6.5,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "utilityRate": 1,
+    "travelRate": 3,
+    "upiRate": 2,
+    "foreignRewardRate": 2,
+    "forexMarkup": 2,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 68,
+      "fuel": 25,
+      "travel": 114.5,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 34,
+      "upi": 60,
+      "forex": 81,
+      "lounge": 16,
+      "premium": 65,
+      "business": 47,
+      "lifetime-free": 71,
+      "beginner": 55,
+      "low-fee": 12,
+      "co-branded": 96
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
+      "Foreign Exchange Solution"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "42468d80cee30e",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Add-On Credit Card",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/add-on-credit-card?utm_source=website&utm_medium=PDPAddonCC&utm_campaign=ApplyNow",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 199,
+    "renewalFee": 199,
+    "maxCashbackRate": 1,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "travelRate": 1,
+    "upiRate": 1,
+    "loungeVisits": 10,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 33,
+      "travel": 90,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 12,
+      "upi": 26,
+      "forex": 36,
+      "lounge": 64,
+      "premium": 78,
+      "business": 55,
+      "lifetime-free": 71,
+      "beginner": 61,
+      "low-fee": 42.68,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
+      "Foreign Exchange Solution"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "fd046bd8c494b7",
+    "issuer": "IDFC FIRST Bank",
+    "name": "All our credit cards are UPI-ready",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/rupay-credit-card/steps-to-activate?utm_source=website&utm_medium=PDPAOCCUPIR&utm_campaign=ActivateUPI",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxCashbackRate": 1,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "travelRate": 1,
+    "upiRate": 1,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 25,
+      "travel": 52.5,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 12,
+      "upi": 42,
+      "forex": 36,
+      "lounge": 16,
+      "premium": 65,
+      "business": 47,
+      "lifetime-free": 71,
+      "beginner": 39,
+      "low-fee": 0,
+      "co-branded": 88
+    },
+    "detectedBenefits": [
+      "Scan and Activate UPI on Rupay Credit Card | IDFC FIRST Bank",
+      "Zero Forex Markup Account",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "7ed4d83c4a6603",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Apply for a credit card online",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "04dabdba674ce9",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Credit card fees and charges",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/mitc?utm_source=website&utm_medium=PDPCCFC&utm_campaign=CheckNow",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxCashbackRate": 1,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "travelRate": 1,
+    "upiRate": 1,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 25,
+      "travel": 52.5,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 12,
+      "upi": 26,
+      "forex": 36,
+      "lounge": 16,
+      "premium": 65,
+      "business": 55,
+      "lifetime-free": 71,
+      "beginner": 39,
+      "low-fee": 0,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "Foreign Exchange Solutions",
+      "Savings with Zero Forex Markup",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover WhatsApp banking Say ‘Hi 👋’ on"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      }
+    ]
+  },
+  {
+    "id": "221c3e57d2f20b",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Learn about Credit Card in Detail",
+    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/first-select-vs-first-wealth-credit-card-comparison",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "feeWaiverSpend": 20000,
+    "maxCashbackRate": 25,
+    "maxRewardRate": 1.49,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "shoppingRate": 9.99,
+    "diningRate": 1,
+    "travelRate": 5,
+    "upiRate": 25,
+    "forexMarkup": 1.5,
+    "loungeVisits": 20,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 216,
+      "fuel": 51,
+      "travel": 137,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 29,
+      "utilities": 20,
+      "upi": 266,
+      "forex": 63,
+      "lounge": 80,
+      "premium": 92,
+      "business": 47,
+      "lifetime-free": 71,
+      "beginner": 39,
+      "low-fee": 12,
+      "co-branded": 76
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
+      "Foreign Exchange Solution"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "6b731ac059f14e",
+    "issuer": "IDFC FIRST Bank",
+    "name": "FIRST Select vs. FIRST Wealth - Which credit card suits your financial planning?",
+    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/first-select-vs-first-wealth-credit-card-comparison",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "feeWaiverSpend": 20000,
+    "maxCashbackRate": 25,
+    "maxRewardRate": 1.49,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "shoppingRate": 9.99,
+    "diningRate": 1,
+    "travelRate": 5,
+    "upiRate": 25,
+    "forexMarkup": 1.5,
+    "loungeVisits": 20,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 216,
+      "fuel": 51,
+      "travel": 137,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 29,
+      "utilities": 20,
+      "upi": 266,
+      "forex": 63,
+      "lounge": 80,
+      "premium": 92,
+      "business": 47,
+      "lifetime-free": 71,
+      "beginner": 39,
+      "low-fee": 12,
+      "co-branded": 76
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
+      "Foreign Exchange Solution"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "0051741bcf8407",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Metal credit cards: Redefining luxury for sophisticated minimalists",
+    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/luxury-lifestyle-why-metal-credit-card-are-worth-the-hype",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 800000,
+    "joiningFee": 5999,
+    "renewalFee": 800000,
+    "maxCashbackRate": 1,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "travelRate": 1,
+    "upiRate": 1,
+    "forexMarkup": 0,
+    "loungeVisits": 4,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 29,
+      "travel": 101,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 8,
+      "utilities": 12,
+      "upi": 34,
+      "forex": 71,
+      "lounge": 48,
+      "premium": 104,
+      "business": 47,
+      "lifetime-free": 71,
+      "beginner": 39,
+      "low-fee": 0,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
+      "Foreign Exchange Solution"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "d07b026fc1bc1a",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Compare Credit Card Fees & Benefits",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [
+      "Check reward points, cashback, welcome offers, lifestyle benefits and joining fees, annual fees, and any other fees and charges applicable. This helps you understand the actual value you may get from the card."
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "606661ca685eb9",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Things to keep in mind when applying for a credit card online",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 8,
+      "co-branded": 32
+    },
+    "detectedBenefits": [
+      "4. Rewards and benefits: Look for cards that offer rewards, cashback deals, or travel benefits that match your lifestyle. Consider if the rewards are worth any additional costs."
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "5c2a250fb35266",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Are there any EMI conversion charges on my IDFC FIRST Bank Credit Card",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "0c14d69053b0b9",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Can I apply for an add-on card?",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/add-on-credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 199,
+    "renewalFee": 199,
+    "maxCashbackRate": 1,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "travelRate": 1,
+    "upiRate": 1,
+    "loungeVisits": 10,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 33,
+      "travel": 90,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 12,
+      "upi": 26,
+      "forex": 36,
+      "lounge": 64,
+      "premium": 78,
+      "business": 55,
+      "lifetime-free": 71,
+      "beginner": 61,
+      "low-fee": 42.68,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
+      "Foreign Exchange Solution"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "43d078cf0fa92f",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Can I pay my Credit Card bill online via NEFT?",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "shopping"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 8,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "fda7722efda01f",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Can I use my Credit Card for international transactions?",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/wow",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 0,
+    "joiningFee": 750,
+    "renewalFee": 0,
+    "feeWaiverSpend": 25,
+    "maxCashbackRate": 1,
+    "maxRewardRate": 25,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "travelRate": 16.7,
+    "upiRate": 16.7,
+    "forexMarkup": 0,
+    "loungeVisits": 16,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 29,
+      "travel": 224.9,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 36,
+      "upi": 183,
+      "forex": 111,
+      "lounge": 68,
+      "premium": 92,
+      "business": 47,
+      "lifetime-free": 71,
+      "beginner": 77,
+      "low-fee": 46,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "Apply for FIRST WOW! - Zero Forex Markup Credit Card | IDFC FIRST Bank",
+      "Zero Forex Markup Account",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "1e13abf9e16e32",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Can I withdraw cash using my Credit Card?",
+    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/key-factors-for-credit-card-cash-withdrawal",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "adb52a4c01e64c",
+    "issuer": "IDFC FIRST Bank",
+    "name": "I already have an IDFC FIRST Bank Credit Card. Can I apply for another one?",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "121f90c9d779bf",
+    "issuer": "RBL Bank",
+    "name": "Benefits for Platinum Maxima Plus Credit Card",
+    "sourceUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards/platinum-maxima-plus-credit-card",
+    "catalogueUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxCashbackRate": 2.8,
+    "maxRewardRate": 2.8,
+    "groceryRate": 2.8,
+    "diningRate": 2.8,
+    "loungeVisits": 2,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "grocery",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 26.4,
+      "fuel": 12,
+      "travel": 111,
+      "shopping": 39.6,
+      "grocery": 33.2,
+      "dining": 57.2,
+      "utilities": 28,
+      "upi": 16,
+      "forex": 28,
+      "lounge": 36,
+      "premium": 0,
+      "business": 51,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "Borderless Prepaid Forex card",
+      "Foreign Currency Cheques",
+      "Flights, Hotels & Travel",
+      "Food Delivery & Dining",
+      "Redeem Reward Points"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 2.8,
+        "context": "dit Card Platinum Maxima Plus Credit Card Upgrade your Lifestyle, amplify your Rewards! 2.8% Value Back on Grocery & Dining 2 Lounge access within every quarter Apply Now *T&C Apply Welcome Benefits"
+      }
+    ]
+  },
+  {
+    "id": "043f2416f30cf0",
+    "issuer": "RBL Bank",
+    "name": "Benefits for Icon Credit Card",
+    "sourceUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards/icon-credit-card",
+    "catalogueUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxCashbackRate": 6,
+    "maxRewardRate": 6,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "diningRate": 6,
+    "travelRate": 6,
+    "loungeVisits": 2,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 52,
+      "fuel": 39,
+      "travel": 157,
+      "shopping": 62,
+      "grocery": 0,
+      "dining": 86,
+      "utilities": 16,
+      "upi": 16,
+      "forex": 28,
+      "lounge": 40,
+      "premium": 34,
+      "business": 51,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "Borderless Prepaid Forex card",
+      "Foreign Currency Cheques",
+      "Flights, Hotels & Travel",
+      "Food Delivery & Dining",
+      "Redeem Reward Points"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 6,
+        "context": "Credit Cards Icon Credit Card Icon Credit Card Rewarding Milestones worth INR 13,500 6% Value Back on Weekend Dining, International Purchases Golf & Concierge Benefits worth 9X of Annual Fee Appl"
+      },
+      {
+        "value": 1,
+        "context": "rge Desk by calling our Customer Services at 022 6232 7777 . Fuel Surcharge Waiver Enjoy 1% fuel surcharge waiver across all fuel stations. Valid for fuel transactions between INR 500 and INR 4,000. Ma"
+      }
+    ]
+  },
+  {
+    "id": "36b43e63d00643",
+    "issuer": "RBL Bank",
+    "name": "Benefits for Cookies Credit Card",
+    "sourceUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards/cookies-credit-card",
+    "catalogueUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "feeWaiverSpend": 5000,
+    "maxCashbackRate": 10,
+    "maxRewardRate": 10,
+    "shoppingRate": 10,
+    "diningRate": 10,
+    "travelRate": 10,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 96,
+      "fuel": 20,
+      "travel": 146,
+      "shopping": 122,
+      "grocery": 0,
+      "dining": 126,
+      "utilities": 28,
+      "upi": 16,
+      "forex": 28,
+      "lounge": 0,
+      "premium": 0,
+      "business": 51,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 96
+    },
+    "detectedBenefits": [
+      "Borderless Prepaid Forex card",
+      "Foreign Currency Cheques",
+      "Flights, Hotels & Travel",
+      "Food Delivery & Dining",
+      "Redeem Reward Points"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 10,
+        "context": "nu Home Personal Banking Cards Credit Cards Cookies Credit Card Cookies Credit Card 10% cashback on your favourites up to INR 300 per brand per month Unlimited 5x Reward Points on Online purchases"
+      },
+      {
+        "value": 10,
+        "context": "roduct Benefits Fees & Charges Quick Links Apply Now Eat, ride, shop, watch - and get 10% back A Card designed to suit your daily lifestyle. Host of benefits with a low monthly fee of just INR 100. W"
+      },
+      {
+        "value": 10,
+        "context": "spends. Make the Most of Your Points: Redeem up to INR 0.20 per point. A Deal to Seek – 10% Cashback on Popular Brands (Zomato, Myntra, and Uber) Start maximizing your savings today with 10% savings on"
+      },
+      {
+        "value": 10,
+        "context": "ack on Popular Brands (Zomato, Myntra, and Uber) Start maximizing your savings today with 10% savings on your Food, Fashion and Travel spends. Enjoy 10% cashback on Zomato, Myntra, and Uber—on top of any"
+      },
+      {
+        "value": 10,
+        "context": "mizing your savings today with 10% savings on your Food, Fashion and Travel spends. Enjoy 10% cashback on Zomato, Myntra, and Uber—on top of any discounts you receive on these apps! Max Cashback is cappe"
+      },
+      {
+        "value": 10,
+        "context": "e waive your subsequent month’s membership fee of INR 100 + GST. BookMyShow Movie Benefit 10% instant discount up to INR 300 per month on BookMyShow. Avail this benefit on the BookMyShow app/website. Mov"
+      }
+    ]
+  },
+  {
+    "id": "86854710aa3c80",
+    "issuer": "Kotak Mahindra Bank",
+    "name": "Get your Lifetime Free Kotak League Credit Card",
+    "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
+    "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "lifetime-free"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 59,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "045011156a2b92",
+    "issuer": "Kotak Mahindra Bank",
+    "name": "Types of Credit Cards in India Offered by Kotak Mahindra Bank",
+    "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards/get-movie-credit-cards.html",
+    "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 1500,
+    "joiningFee": 1500,
+    "renewalFee": 1500,
+    "feeWaiverSpend": 50000,
+    "maxCashbackRate": 20,
+    "maxRewardRate": 20,
+    "fuelRate": 5,
+    "shoppingRate": 20,
+    "groceryRate": 20,
+    "diningRate": 5,
+    "travelRate": 5,
+    "foreignRewardRate": 2,
+    "forexMarkup": 1,
+    "loungeVisits": 99,
+    "loungeUnlimited": true,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "grocery",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 176,
+      "fuel": 77,
+      "travel": 307.5,
+      "shopping": 172,
+      "grocery": 200,
+      "dining": 77,
+      "utilities": 40,
+      "upi": 12,
+      "forex": 93,
+      "lounge": 77,
+      "premium": 65,
+      "business": 51,
+      "lifetime-free": 67,
+      "beginner": 35,
+      "low-fee": 16,
+      "co-branded": 68
+    },
+    "detectedBenefits": [
+      "Loan/Utility Payment",
+      "See All Travel Insurance",
+      "See All Forex & Remittance",
+      "See All Loan/Utility Payment",
+      "Free Movie Tickets | 5% Cashback on OTT & Entertainment Offers| Food Delivery Rewards Access to Airport Lounges|| PVR INOX Offers"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 5,
+        "context": "Cards Credit Card Get Movie Credit Cards Kotak Movie Credit Card Free Movie Tickets | 5% Cashback on OTT & Entertainment Offers| Food Delivery Rewards Access to Airport Lounges|| PVR INOX Offers Ap"
+      },
+      {
+        "value": 5,
+        "context": "hback+ Credit Card Joining Fee: ₹0 | Annual Fee: ₹750 Joining Fee: ₹0 | Annual Fee: ₹750 5% cashback on Online food deliveries, groceries and entertainment 3% cashback on fuel spends across fuel statio"
+      },
+      {
+        "value": 3,
+        "context": "₹0 | Annual Fee: ₹750 5% cashback on Online food deliveries, groceries and entertainment 3% cashback on fuel spends across fuel stations 0.5% unlimited cashback on other eligible spends Apply Now Know"
+      },
+      {
+        "value": 0.5,
+        "context": "d deliveries, groceries and entertainment 3% cashback on fuel spends across fuel stations 0.5% unlimited cashback on other eligible spends Apply Now Know More League Platinum Credit Card Joining Fee: IN"
+      },
+      {
+        "value": 2,
+        "context": "ntary 2 International & 4 Domestic Lounge Access annually Low Foreign Currency Mark-up of 2% Apply Now Know More Kotak Air Credit Card Joining Fee ₹0 | Annual Fee ₹999 Compare Joining Fee ₹0 | Annual"
+      },
+      {
+        "value": 5,
+        "context": "ining Fee: INR 449 | Annual Fee: INR 449 Joining Fee: INR 449 | Annual Fee: INR 449 Save 5%* on Fuel spends at IndianOil fuel pumps Earn 2%** back as Reward Points on Grocery and Dining spends Annual"
+      },
+      {
+        "value": 2,
+        "context": "Fee: INR 449 | Annual Fee: INR 449 Save 5%* on Fuel spends at IndianOil fuel pumps Earn 2%** back as Reward Points on Grocery and Dining spends Annual Fee waiver on retail spends of INR 50,000 in the"
+      },
+      {
+        "value": 20,
+        "context": "Fee: INR 499 Unlimited* Movie Tickets: one ticket for every INR 10,000 spent on the card 20% Instant Discount* on Food & Beverages 5% Instant Discount* on movie tickets Apply Now Know More White Reser"
+      },
+      {
+        "value": 5,
+        "context": "e ticket for every INR 10,000 spent on the card 20% Instant Discount* on Food & Beverages 5% Instant Discount* on movie tickets Apply Now Know More White Reserve Credit Card Joining Fees: INR 12,500 |"
+      },
+      {
+        "value": 1.99,
+        "context": "ard Built to grow your business Built to grow your business Enjoy a low interest rate of 1.99% per month Turn your spends into rewards! Earn up to 7X points and redeem it easily on Kotak Unbox Avail of a"
+      }
+    ]
+  },
+  {
+    "id": "b1ae345f356165",
+    "issuer": "Kotak Mahindra Bank",
+    "name": "Key features and benefits of Kotak bank Credit Card",
+    "sourceUrl": "https://www.kotak.com/en/stories-in-focus/cards/credit-cards/what-is-a-credit-card-what-are-the-credit-card-benefits.html",
+    "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 16,
+      "fuel": 0,
+      "travel": 61.5,
+      "shopping": 32,
+      "grocery": 0,
+      "dining": 12,
+      "utilities": 32,
+      "upi": 0,
+      "forex": 20,
+      "lounge": 20,
+      "premium": 33,
+      "business": 51,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Loan/Utility Payment",
+      "See All Travel Insurance",
+      "See All Forex & Remittance",
+      "See All Loan/Utility Payment",
+      "Rewards Credit Cards: Offer reward points on every eligible purchase, which can later be redeemed for products, vouchers, or services."
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "165c0ff09add23",
+    "issuer": "Kotak Mahindra Bank",
+    "name": "Credit Card Interest Rates & Charges",
+    "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards/credit-card-services/credit-card-payments.html",
+    "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 12,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 28,
+      "upi": 8,
+      "forex": 16,
+      "lounge": 0,
+      "premium": 28,
+      "business": 47,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 48
+    },
+    "detectedBenefits": [
+      "Loan/Utility Payment",
+      "See All Travel Insurance",
+      "See All Forex & Remittance",
+      "See All Loan/Utility Payment",
+      "Select your Savings Bank Netbanking/UPI/Rupay Card option from the dropdown."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 5,
+        "context": "minimum amount for credit card bill payment? The minimum amount is generally computed as 5% of the total amount due in your monthly credit card statement. Please note; EMIs, Joining Fees & all processi"
+      }
+    ]
+  },
+  {
+    "id": "e7d7dd6f971a24",
+    "issuer": "Kotak Mahindra Bank",
+    "name": "Things to Know Before Applying for a Credit Card",
+    "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards/credit-card-services/credit-card-payments.html",
+    "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 12,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 28,
+      "upi": 8,
+      "forex": 16,
+      "lounge": 0,
+      "premium": 28,
+      "business": 47,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 48
+    },
+    "detectedBenefits": [
+      "Loan/Utility Payment",
+      "See All Travel Insurance",
+      "See All Forex & Remittance",
+      "See All Loan/Utility Payment",
+      "Select your Savings Bank Netbanking/UPI/Rupay Card option from the dropdown."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 5,
+        "context": "minimum amount for credit card bill payment? The minimum amount is generally computed as 5% of the total amount due in your monthly credit card statement. Please note; EMIs, Joining Fees & all processi"
+      }
+    ]
+  },
+  {
+    "id": "5942380dec9a72",
+    "issuer": "AU Small Finance Bank",
+    "name": "Presenting AU Credit Cards, A World of Limitless Possibilities.",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "622c8d941ad665",
+    "issuer": "AU Small Finance Bank",
+    "name": "Zenith+ Credit Card",
+    "sourceUrl": "https://www.au.bank.in/premium-banking/credit-cards/zenith-plus-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "diningRate": 10,
+    "upiRate": 1,
+    "forexMarkup": 0.99,
+    "loungeVisits": 16,
+    "categories": [
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 43,
+      "travel": 112,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 102,
+      "utilities": 24,
+      "upi": 42,
+      "forex": 63.08,
+      "lounge": 80,
+      "premium": 84,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Business Cashback Credit Card",
+      "Exciting Welcome Benefit",
+      "Brand Voucher worth Rs.5,000 or 5000 Reward Points, you can choose either of them.",
+      "Elite Rewards on Spends",
+      "Up to 2 Reward Points per Rs.100 spent on dining, travel & international spends."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 1,
+        "context": "Unlock amazing offers curated for Zenith+ RuPay Credit Card. Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver (up to ₹1000) for transactions between ₹400 and ₹5,000 at all fuel stations across the"
+      },
+      {
+        "value": 0.99,
+        "context": "pplication Customer support Make payments Adding more benefits Lower forex markup fees at 0.99% --> Heyy --> 24x7 Global Concierge Assistance --> Heyy --> Xpress EMI --> Heyy --> Contactless card usage -->"
+      },
+      {
+        "value": 1,
+        "context": "ierge Assistance --> Heyy --> Xpress EMI --> Heyy --> Contactless card usage --> Heyy --> 1% Fuel Surcharge Waiver (Max 1000 per statement cycle) --> Heyy --> Priority customer service ( [email protecte"
+      },
+      {
+        "value": 50,
+        "context": "ain with an array of brands offer available at 40+ properties). Stay for 3, Pay for 2 and 50% savings on the 2nd night. Know More Exclusive Stay Offers with Elivaas (Curated luxury villa vacations at c"
+      },
+      {
+        "value": 50,
+        "context": "d Indian destinations, offers available at 150+ luxury villas). Stay for 3, Pay for 2 and 50% savings on the 2nd night. Know More Complimentary Visa Meet & Greet services (available at all major Indian"
+      },
+      {
+        "value": 10,
+        "context": "der active customers meeting a specific spends threshold and repeat customers can avail a 10% discount. Know More Premium Dining Program Dine with Visa, offering reservations & curated menus that help"
+      }
+    ]
+  },
+  {
+    "id": "303416cb86dbd4",
+    "issuer": "AU Small Finance Bank",
+    "name": "Ananta Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/ananta-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 2000,
+    "joiningFee": 2000,
+    "renewalFee": 2000,
+    "feeWaiverSpend": 400,
+    "maxCashbackRate": 15,
+    "maxRewardRate": 15,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "shoppingRate": 15,
+    "diningRate": 15,
+    "travelRate": 50,
+    "loungeVisits": 4,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 136,
+      "fuel": 47,
+      "travel": 452,
+      "shopping": 149,
+      "grocery": 0,
+      "dining": 151,
+      "utilities": 28,
+      "upi": 16,
+      "forex": 16,
+      "lounge": 44,
+      "premium": 32,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 12,
+      "co-branded": 60
+    },
+    "detectedBenefits": [
+      "Business Cashback Credit Card",
+      "Thoughtfully crafted for elevated lifestyles, travel and dining",
+      "Exciting Travel Benefits",
+      "Accelerated Reward Points on Shopping, Dining & Travel spends",
+      "Kickstart your journey with 8,000 Bonus Reward Points on card activation*"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 15,
+        "context": "Card Thoughtfully crafted for elevated lifestyles, travel and dining Apply Now --> Up to 15% instant discount with merchant partners Exciting Travel Benefits Accelerated Reward Points on Shopping, Dinin"
+      },
+      {
+        "value": 15,
+        "context": "eward Points on Shopping, Dining & Travel spends Benefits that match your lifestyle Up to 15% instant discount with merchant partners Exciting Travel Benefits Accelerated Reward Points on Shopping, Dinin"
+      },
+      {
+        "value": 15,
+        "context": "ds* — amongst the best rewards Credit Cards in its category Always on Savings Enjoy up to 15% instant discount at partner merchants* Travel Made Easier Enjoy complimentary Domestic Airport Lounge Access"
+      },
+      {
+        "value": 1,
+        "context": "tner Offers Special offers basis your selected network variant Fuel Surcharge Waiver Save 1% surcharge on fuel spends ₹400–₹5,000 across India* (Maximum ₹200 per statement cycle) AU Rewardz Redeem your"
+      },
+      {
+        "value": 15,
+        "context": "re What merchant discounts are available on AU Ananta Credit Card? --> --> You can enjoy 15% instant discounts on Amazon Fashion, Dining by District, Hotel bookings via AU Rewardz. Spend Category Shopp"
+      },
+      {
+        "value": 1,
+        "context": "more Is fuel surcharge waiver available on AU Ananta Credit Card? --> --> Yes. You get a 1% fuel surcharge waiver, up to ₹200 per statement cycle. See more What all insurance and protection benefits a"
+      },
+      {
+        "value": 15,
+        "context": "ul transaction within 30 days of card issuance. Know More Always on Savings Earn up to 15% instant discount on Amazon Fashion every month (max cashback Rs. 500 per month) Know More Earn up to 15 % i"
+      },
+      {
+        "value": 15,
+        "context": "unt on Amazon Fashion every month (max cashback Rs. 500 per month) Know More Earn up to 15 % instant discount on Dining with District App every month max cashback Rs. 500 per month Know More Earn up t"
+      },
+      {
+        "value": 15,
+        "context": "ining with District App every month max cashback Rs. 500 per month Know More Earn up to 15% instant discount on Hotel Booking on AU Rewardz Hotel booking instant discount can be availed by Primary Car"
+      },
+      {
+        "value": 15,
+        "context": "a Cardholders MakeMyTrip : 2 Complimentary Domestic Flight Seats (max value ₹350) + Flat 15% off hotels. Know more Times Prime Membership : Complimentary Annual Membership. Know more Alaya Stays : Sta"
+      }
+    ]
+  },
+  {
+    "id": "9c574851456324",
+    "issuer": "AU Small Finance Bank",
+    "name": "Laksya Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/laksya-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 1000,
+    "joiningFee": 1000,
+    "renewalFee": 1000,
+    "feeWaiverSpend": 400,
+    "maxCashbackRate": 15,
+    "maxRewardRate": 15,
+    "fuelRate": 50,
+    "surchargeWaiverRate": 50,
+    "shoppingRate": 15,
+    "groceryRate": 15,
+    "diningRate": 15,
+    "travelRate": 15,
+    "loungeVisits": 8,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "grocery",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 136,
+      "fuel": 782,
+      "travel": 173,
+      "shopping": 137,
+      "grocery": 155,
+      "dining": 163,
+      "utilities": 28,
+      "upi": 16,
+      "forex": 16,
+      "lounge": 64,
+      "premium": 36,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 25.33,
+      "co-branded": 64
+    },
+    "detectedBenefits": [
+      "Business Cashback Credit Card",
+      "Turn everyday expenses into the most rewarding experiences",
+      "Complimentary Airport Lounge Access",
+      "Accelerated Reward Points",
+      "4,000 Bonus Reward Points or ₹1,000 Brand Voucher on card activation*"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 15,
+        "context": "edit Card Turn everyday expenses into the most rewarding experiences Apply Now --> Up to 15% instant discount with merchant partners Complimentary Airport Lounge Access Accelerated Reward Points Benefit"
+      },
+      {
+        "value": 15,
+        "context": "Airport Lounge Access Accelerated Reward Points Benefits that match your lifestyle Up to 15% instant discount with merchant partners Complimentary Airport Lounge Access Accelerated Reward Points Benefit"
+      },
+      {
+        "value": 15,
+        "context": "0 on Grocery, Departmental Stores & Contactless payments. Partner Privileges Enjoy a flat 15% off at partner merchants and Buy-One-Get-One Movie Tickets every month. Airport Lounge Comfort Enjoy 8 compli"
+      },
+      {
+        "value": 1,
+        "context": "fits to your loved ones through the lifetime-free add-on card Fuel Surcharge Waiver Save 1% surcharge on fuel spends ₹400–₹5,000 across India* (Maximum ₹150 per statement cycle) AU Rewardz Redeem your"
+      },
+      {
+        "value": 15,
+        "context": "merchant discounts are available on AU Laksya Credit Card? --> --> Cardholders can enjoy 15% instant discounts on groceries via Amazon Fresh, on food delivery via Zomato and Buy One Get One (BOGO) on mo"
+      },
+      {
+        "value": 1,
+        "context": "fuel surcharge waiver available on AU Laksya Credit Card? --> --> Yes. Cardholders get a 1% fuel surcharge waiver, up to ₹150 per statement cycle. See more What all insurance and protection benefits a"
+      },
+      {
+        "value": 15,
+        "context": "n to claim the Welcome benefit via SMS/Email. Know More . Partner Privileges Earn up to 15% instant discount on Amazon Grocery/Amazon Now every month (max cashback ₹250 per month). Know More Earn up"
+      },
+      {
+        "value": 15,
+        "context": "zon Grocery/Amazon Now every month (max cashback ₹250 per month). Know More Earn up to 15% instant discount on Food Deliveries via Zomato App every month (max cashback ₹ 250 per month). Know More Bu"
+      },
+      {
+        "value": 15,
+        "context": "a Cardholders MakeMyTrip : 2 Complimentary Domestic Flight Seats (max value ₹350) + Flat 15% off hotels Times Prime Membership : Complimentary Annual Membership Alaya Stays : Stay 3 nights, pay 2 nights"
+      },
+      {
+        "value": 50,
+        "context": "Membership : Complimentary Annual Membership Alaya Stays : Stay 3 nights, pay 2 nights + 50% off 2nd night 1% Fuel Surcharge Waiver 1% Fuel Surcharge Waiver for fuel transactions done between ₹400 and"
+      }
+    ]
+  },
+  {
+    "id": "34dc5673fcf05f",
+    "issuer": "AU Small Finance Bank",
+    "name": "Tejas Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/tejas-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 500,
+    "joiningFee": 500,
+    "renewalFee": 500,
+    "feeWaiverSpend": 400,
+    "maxCashbackRate": 10,
+    "maxRewardRate": 10,
+    "fuelRate": 50,
+    "surchargeWaiverRate": 50,
+    "shoppingRate": 10,
+    "groceryRate": 10,
+    "diningRate": 10,
+    "travelRate": 15,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "grocery",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 96,
+      "fuel": 782,
+      "travel": 150.5,
+      "shopping": 110,
+      "grocery": 102,
+      "dining": 122,
+      "utilities": 20,
+      "upi": 16,
+      "forex": 16,
+      "lounge": 8,
+      "premium": 29,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 57,
+      "low-fee": 33.67,
+      "co-branded": 64
+    },
+    "detectedBenefits": [
+      "Business Cashback Credit Card",
+      "Maximise your savings and rewards with each spend",
+      "10% Cashback on your favourite categories",
+      "5 Reward Points on AU Rewardz",
+      "Welcome benefits on activation"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 10,
+        "context": "Card Tejas Credit Card Maximise your savings and rewards with each spend Apply Now --> 10% Cashback on your favourite categories 5 Reward Points on AU Rewardz Welcome benefits on activation Benefits t"
+      },
+      {
+        "value": 10,
+        "context": "rd Points on AU Rewardz Welcome benefits on activation Benefits that match your lifestyle 10% Cashback on your favourite categories 5 Reward Points on AU Rewardz Welcome benefits on activation Benefits E"
+      },
+      {
+        "value": 10,
+        "context": "Bonus Reward Points or ₹500 Brand Voucher on card activation* Discounts that Matter Flat 10% cashback on spends at partner merchants - movies, grocery delivery & food delivery, Cab booking, and Bill pay"
+      },
+      {
+        "value": 1,
+        "context": "₹500 and above with a minimum total value of ₹2,000 into EMIs. Fuel Surcharge Waiver Save 1% surcharge on fuel spends ₹400–₹5,000 across India* (Maximum ₹100 per statement cycle) AU Rewardz Redeem your"
+      },
+      {
+        "value": 1,
+        "context": "ce Protection Plan. See more Is there any fuel surcharge waiver? --> --> Yes. You get a 1% fuel surcharge waiver, up to ₹100 per statement cycle. See more What merchant discounts are available on AU"
+      },
+      {
+        "value": 10,
+        "context": "What merchant discounts are available on AU Laksya Credit Card? --> --> You can enjoy a 10% discount at Amazon Fresh, on Food Delivery via Zomato, Movies by District, on Cab Services: Uber / Ola / Rapi"
+      },
+      {
+        "value": 10,
+        "context": "Payment Merchant District Amazon Fresh Zomato Uber/Ola/Rapido AU 0101 Discount/Cashback 10% 10% 10% 10% 10% Max Discount Rs 50 Rs 50 Rs 50 Rs 50 Rs 50 Min Trxn Amount Rs 150 Rs 150 Rs 150 Rs 150 Rs 150"
+      },
+      {
+        "value": 10,
+        "context": "ment Merchant District Amazon Fresh Zomato Uber/Ola/Rapido AU 0101 Discount/Cashback 10% 10% 10% 10% 10% Max Discount Rs 50 Rs 50 Rs 50 Rs 50 Rs 50 Min Trxn Amount Rs 150 Rs 150 Rs 150 Rs 150 Rs 150 Fre"
+      },
+      {
+        "value": 10,
+        "context": "Merchant District Amazon Fresh Zomato Uber/Ola/Rapido AU 0101 Discount/Cashback 10% 10% 10% 10% 10% Max Discount Rs 50 Rs 50 Rs 50 Rs 50 Rs 50 Min Trxn Amount Rs 150 Rs 150 Rs 150 Rs 150 Rs 150 Frequen"
+      },
+      {
+        "value": 10,
+        "context": "rchant District Amazon Fresh Zomato Uber/Ola/Rapido AU 0101 Discount/Cashback 10% 10% 10% 10% 10% Max Discount Rs 50 Rs 50 Rs 50 Rs 50 Rs 50 Min Trxn Amount Rs 150 Rs 150 Rs 150 Rs 150 Rs 150 Frequency O"
+      }
+    ]
+  },
+  {
+    "id": "e9650ff58f1d9a",
+    "issuer": "AU Small Finance Bank",
+    "name": "Prathama Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/prathama-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 100,
+    "joiningFee": 100,
+    "renewalFee": 100,
+    "feeWaiverSpend": 400,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "travelRate": 1,
+    "loungeVisits": 1,
+    "categories": [
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 47,
+      "travel": 40.5,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 32,
+      "upi": 16,
+      "forex": 16,
+      "lounge": 8,
+      "premium": 29,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 57,
+      "low-fee": 40.33,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Business Cashback Credit Card",
+      "Up to 2 Reward Points on Contactless transactions",
+      "500 Bonus Rewards Points on setting up each recurring payment",
+      "1% Fuel Surcharge Waiver",
+      "Earn up to 2 Reward Points on every ₹100 spent"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 1,
+        "context": "on Contactless transactions 500 Bonus Rewards Points on setting up each recurring payment 1% Fuel Surcharge Waiver Benefits that match your lifestyle Up to 2 Reward Points on Contactless transactions 50"
+      },
+      {
+        "value": 1,
+        "context": "on Contactless transactions 500 Bonus Rewards Points on setting up each recurring payment 1% Fuel Surcharge Waiver Benefits Eligibilty Fees & charges Customer support Accelerated Rewards Earn up to 2 Re"
+      },
+      {
+        "value": 1,
+        "context": "₹500 and above with a minimum total value of ₹2,000 into EMIs. Fuel Surcharge Waiver Save 1% surcharge on fuel spends ₹400–₹5,000 across India* (Maximum ₹100 per statement cycle) AU Rewardz Redeem your"
+      },
+      {
+        "value": 1,
+        "context": "re Is fuel surcharge waiver available on AU Prathama Credit Card? --> --> Yes. You get a 1% fuel surcharge waiver, up to ₹100 per statement cycle on fuel transactions between ₹ 400 and ₹ 5,000 See more"
+      },
+      {
+        "value": 1,
+        "context": "ht/Hotel bookings Much more on AU Rewardz Click Here to explore our AU Rewardz offerings 1% Fuel Surcharge Waiver 1% Fuel Surcharge Waiver for fuel transactions done between ₹400 and ₹5,000, across al"
+      },
+      {
+        "value": 1,
+        "context": "e on AU Rewardz Click Here to explore our AU Rewardz offerings 1% Fuel Surcharge Waiver 1% Fuel Surcharge Waiver for fuel transactions done between ₹400 and ₹5,000, across all fuel stations in the cou"
+      }
+    ]
+  },
+  {
+    "id": "26f1de2b84f250",
+    "issuer": "AU Small Finance Bank",
+    "name": "LIT Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/lit-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxCashbackRate": 5,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "shoppingRate": 5,
+    "groceryRate": 1,
+    "travelRate": 5,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "grocery",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 56,
+      "fuel": 35,
+      "travel": 68.5,
+      "shopping": 67,
+      "grocery": 13,
+      "dining": 0,
+      "utilities": 16,
+      "upi": 16,
+      "forex": 24,
+      "lounge": 24,
+      "premium": 33,
+      "business": 35,
+      "lifetime-free": 59,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 60
+    },
+    "detectedBenefits": [
+      "Business Cashback Credit Card",
+      "Up To 10x Reward Points",
+      "Exciting Cashback on your favorite categories",
+      "1% Fuel Surcharge Waiver",
+      "Enjoy 1% Fuel Surcharge Waiver for transactions between ₹400 and ₹5,000 at all fuel stations across the country for ₹49."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 1,
+        "context": "e transactions Exciting Cashback on your favorite categories Groceries, Apparel and more 1% Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver for transactions between ₹400 and ₹5,000 at all fuel sta"
+      },
+      {
+        "value": 1,
+        "context": "k on your favorite categories Groceries, Apparel and more 1% Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver for transactions between ₹400 and ₹5,000 at all fuel stations across the country for ₹4"
+      },
+      {
+        "value": 5,
+        "context": "emberships for ZEE5 & Amazon Prime. Milestone Cashback Shop till you drop! Get additional 5% and 2% cashback on your retail spends at ₹199*. Your Financial Security. Our #1 Priority. Stay protected in t"
+      },
+      {
+        "value": 2,
+        "context": "ips for ZEE5 & Amazon Prime. Milestone Cashback Shop till you drop! Get additional 5% and 2% cashback on your retail spends at ₹199*. Your Financial Security. Our #1 Priority. Stay protected in the unfo"
+      },
+      {
+        "value": 5,
+        "context": "99. Maximum 2 visits can be selected for a 90-day period. Milestone Cashback Additional 5% cashback on minimum spends of ₹10,000. Additional 2% cashback on minimum spends of ₹15,000. Get 3-months Of"
+      },
+      {
+        "value": 2,
+        "context": "od. Milestone Cashback Additional 5% cashback on minimum spends of ₹10,000. Additional 2% cashback on minimum spends of ₹15,000. Get 3-months Of Subscriptions For: ZEE5 2,800+ blockbusters, 150+ we"
+      }
+    ]
+  },
+  {
+    "id": "cd0dfe1d2dbbf9",
+    "issuer": "AU Small Finance Bank",
+    "name": "CA Metal Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/ca-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxCashbackRate": 25,
+    "maxRewardRate": 25,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "travelRate": 15,
+    "forexMarkup": 1.99,
+    "loungeVisits": 2,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 208,
+      "fuel": 39,
+      "travel": 172,
+      "shopping": 191,
+      "grocery": 0,
+      "dining": 20,
+      "utilities": 28,
+      "upi": 16,
+      "forex": 43.08,
+      "lounge": 32,
+      "premium": 50,
+      "business": 35,
+      "lifetime-free": 59,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 52
+    },
+    "detectedBenefits": [
+      "Business Cashback Credit Card",
+      "Accelerated Reward Points for Business & Personal Spends",
+      "Accelerated Rewards Points for Business & Personal Spends",
+      "2000 Bonus Reward Points on spending ₹5000 within 30 days of card activation",
+      "Get flat 25% cashback on renewing your annual ICAI Membership Fee. Know more"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 25,
+        "context": "ints on spending ₹5000 within 30 days of card activation ICAI Membership Renewal Get flat 25% cashback on renewing your annual ICAI Membership Fee. Know more Accelerated Rewards Program 8 Reward Points"
+      },
+      {
+        "value": 1,
+        "context": "and leisure experiences with our Global Concierge Assistance. Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver (up to ₹250) for transactions between ₹400 and ₹5,000 at all fuel stations across the c"
+      },
+      {
+        "value": 1.99,
+        "context": "lounges click here . For detailed terms and conditions, click here . Low Forex Markup of 1.99% on all international transactions Welcome Benefits 2000 Bonus Reward Points on spending ₹5000 within 30 days"
+      },
+      {
+        "value": 15,
+        "context": ": Avail 2 Complimentary domestic flights seats booking (max value of up to ₹350) and Flat 15% off on select domestic hotels as MyCash. Know More Complimentary Annual Times Prime Membership that gives a"
+      },
+      {
+        "value": 50,
+        "context": "t coveted Indian destinations, offers available at 200+ villas) Stay for 3, Pay for 2 and 50% savings on the 2nd night. Know More Blogs What is MDR? Full Form, Meaning and How Merchant Discount Rate W"
+      }
+    ]
+  },
+  {
+    "id": "aa554ee1bf2171",
+    "issuer": "AU Small Finance Bank",
+    "name": "AU CS Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/au-cs-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxCashbackRate": 25,
+    "maxRewardRate": 25,
+    "fuelRate": 50,
+    "surchargeWaiverRate": 50,
+    "travelRate": 15,
+    "loungeVisits": 2,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 216,
+      "fuel": 782,
+      "travel": 176,
+      "shopping": 191,
+      "grocery": 0,
+      "dining": 20,
+      "utilities": 24,
+      "upi": 16,
+      "forex": 16,
+      "lounge": 28,
+      "premium": 42,
+      "business": 35,
+      "lifetime-free": 67,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 52
+    },
+    "detectedBenefits": [
+      "AU CS Credit Card: 25% ICSI Cashback & 8X Rewards | AU Small Finance Bank",
+      "Business Cashback Credit Card",
+      "25% Cashback* on ICSI Membership Renewal",
+      "8 Reward Points per ₹100 for Business & Personal Spends",
+      "2000 Bonus Reward Points on spending ₹5000 within 30 days of card activation."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 25,
+        "context": "AU CS Credit Card: 25% ICSI Cashback & 8X Rewards | AU Small Finance Bank --> Personal Business NRI Premium Language --> Research"
+      },
+      {
+        "value": 25,
+        "context": "it Card Empowering India’s Corporate Governance Experts. AU CS Credit Card Apply Now --> 25% Cashback* on ICSI Membership Renewal 8 Reward Points per ₹100 for Business & Personal Spends Lifetime Free Ca"
+      },
+      {
+        "value": 25,
+        "context": "ess & Personal Spends Lifetime Free Card Empowering India’s Corporate Governance Experts. 25% Cashback* on ICSI Membership Renewal 8 Reward Points per ₹100 for Business & Personal Spends Lifetime Free Ca"
+      },
+      {
+        "value": 25,
+        "context": "nts on spending ₹5000 within 30 days of card activation. ICSI Membership Renewal Get flat 25% cashback on renewing your annual ICSI Membership Fee. Know More Accelerated Rewards Program 8 Reward Points"
+      },
+      {
+        "value": 1,
+        "context": "and leisure experiences with our Global Concierge Assistance. Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver (up to ₹250) for transactions between ₹400 and ₹5,000 at all fuel stations across the c"
+      },
+      {
+        "value": 6.75,
+        "context": "Membership and Alaya stays. AU Royale Savings Account for Company Secretaries Earn up to 6.75% p.a.* interest. No minimum balance requirement. Premium AU Debit Card with CS logo Quick links Card activati"
+      },
+      {
+        "value": 15,
+        "context": "Avail 2 Complimentary domestic flights, seats, booking (max value of up to ₹350) and Flat 15% off on select domestic hotels as MyCash. Know More Complimentary Annual Times Prime Membership that gives ac"
+      },
+      {
+        "value": 50,
+        "context": "t coveted Indian destinations, offers available at 200+ villas) Stay for 3, Pay for 2 and 50% savings on the 2nd night. Know More 1% Fuel Surcharge Waiver 1% Fuel Surcharge Waiver for fuel transactions"
+      },
+      {
+        "value": 1,
+        "context": "ilable at 200+ villas) Stay for 3, Pay for 2 and 50% savings on the 2nd night. Know More 1% Fuel Surcharge Waiver 1% Fuel Surcharge Waiver for fuel transactions done between ₹400 and ₹5,000, across al"
+      },
+      {
+        "value": 1,
+        "context": "y for 3, Pay for 2 and 50% savings on the 2nd night. Know More 1% Fuel Surcharge Waiver 1% Fuel Surcharge Waiver for fuel transactions done between ₹400 and ₹5,000, across all fuel stations in the cou"
+      }
+    ]
+  },
+  {
+    "id": "dccce864b22ee2",
+    "issuer": "AU Small Finance Bank",
+    "name": "Vetta Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/vetta-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "feeWaiverSpend": 90,
+    "maxCashbackRate": 1,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "travelRate": 15,
+    "upiRate": 50,
+    "loungeVisits": 4,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 20,
+      "fuel": 47,
+      "travel": 203,
+      "shopping": 23,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 28,
+      "upi": 536,
+      "forex": 28,
+      "lounge": 48,
+      "premium": 48,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 52
+    },
+    "detectedBenefits": [
+      "Apply Online for Vetta Credit Card – Rewards & Benefits | AU Small Finance Bank",
+      "Business Cashback Credit Card",
+      "Premium Lifestyle Deserves Premium Rewards",
+      "Quarterly and Yearly Milestone Benefits",
+      "Complimentary Lounge Access"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 1,
+        "context": "up to ₹5000. Add-on Cards Extend our love to your loved ones with add-on cards for free. 1% Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver (up to ₹100) for transactions between ₹400 and ₹5,000 at"
+      },
+      {
+        "value": 1,
+        "context": "nd our love to your loved ones with add-on cards for free. 1% Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver (up to ₹100) for transactions between ₹400 and ₹5,000 at all fuel stations across the c"
+      },
+      {
+        "value": 3.49,
+        "context": "ross the country. Lower International Mark-Up Fees Cross currency foreign mark-up fees of 3.49% applicable on your international transactions Card Liability Cover Zero liability on fraudulent transactions"
+      },
+      {
+        "value": 1,
+        "context": "n a RuPay Credit Card? --> --> AU RuPay InstaPay Credit Card offers extensive cashback of 1% on selected merchant categories capped at ₹100 per statement cycle. See All Can I convert a UPI transaction"
+      },
+      {
+        "value": 15,
+        "context": "vail 2 Complimentary domestic flights seats booking (max value of up to INR 350) and Flat 15% off on select domestic hotels as MyCash. Know More Complimentary Annual Times Prime Membership that gives ac"
+      },
+      {
+        "value": 50,
+        "context": "t coveted Indian destinations, offers available at 200+ villas) Stay for 3, Pay for 2 and 50% savings on the 2nd night. Know More RuPay Offer Enjoy now amazing offers available on your Vetta RuPay Cred"
+      },
+      {
+        "value": 1,
+        "context": "us and relax. Call us on our 24 x 7 number at 1800 210 0298 (toll free) or 022-42320298. 1% Fuel Surcharge Waiver 1% Fuel Surcharge Waiver for fuel transactions done between ₹400 and ₹5,000, across al"
+      },
+      {
+        "value": 1,
+        "context": "our 24 x 7 number at 1800 210 0298 (toll free) or 022-42320298. 1% Fuel Surcharge Waiver 1% Fuel Surcharge Waiver for fuel transactions done between ₹400 and ₹5,000, across all fuel stations in the cou"
+      }
+    ]
+  },
+  {
+    "id": "8a5f350c1d1637",
+    "issuer": "AU Small Finance Bank",
+    "name": "Spont Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/au-spont-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 299,
+    "renewalFee": 299,
+    "maxCashbackRate": 1,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "travelRate": 1,
+    "upiRate": 1,
+    "loungeVisits": 2,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 39,
+      "travel": 58,
+      "shopping": 23,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 16,
+      "upi": 58,
+      "forex": 16,
+      "lounge": 40,
+      "premium": 30,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 57,
+      "low-fee": 29.02,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Business Cashback Credit Card",
+      "Turning every UPI transaction into big rewards.",
+      "1% Cashback on all Transactions",
+      "1% Cashback on all transactions like eComm, POS, Contactless and even all UPI transactions made via any UPI channel",
+      "Earn Coins on UPI transactions"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 1,
+        "context": "it Card Turning every UPI transaction into big rewards. Apply Now --> Coins on UPI spends 1% Cashback on all Transactions Milestone Benefits Benefits that match your lifestyle Coins on UPI spends 1% Cas"
+      },
+      {
+        "value": 1,
+        "context": "ll Transactions Milestone Benefits Benefits that match your lifestyle Coins on UPI spends 1% Cashback on all Transactions Milestone Benefits Benefits Eligibilty Fee & Charges Customer support Cashback N"
+      },
+      {
+        "value": 1,
+        "context": "Milestone Benefits Benefits Eligibilty Fee & Charges Customer support Cashback Never Ends 1% Cashback on all transactions like eComm, POS, Contactless and even all UPI transactions made via any UPI chan"
+      },
+      {
+        "value": 1,
+        "context": "expiring coins on UPI transactions. Fuel Surcharge Waiver Save more on your commutes. Get 1% Fuel Surcharge Waiver for transactions between ₹400 and ₹5,000 at all fuel stations across the country (up to"
+      }
+    ]
+  },
+  {
+    "id": "59185956769886",
+    "issuer": "AU Small Finance Bank",
+    "name": "NOMO Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/nomo-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "joiningFee": 199,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "forexMarkup": 0.99,
+    "loungeVisits": 10,
+    "categories": [
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 39,
+      "travel": 55,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 20,
+      "upi": 16,
+      "forex": 67.08,
+      "lounge": 68,
+      "premium": 34,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 47,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Business Cashback Credit Card",
+      "Earn 500 reward points on your 1st transaction",
+      "Earn 2 Reward Points per ₹100 on retail spends and 1 Reward Point on utility & insurance.",
+      "Spend ₹25,000 on retail in a quarter & earn 500 points. Double it at ₹50,000 spends. (Fuel & cash not included)",
+      "a lower Forex Markup of just 0.99%."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 0.99,
+        "context": "t included) Markup Fee Enjoy international transactions with a lower Forex Markup of just 0.99%. Domestic Airport Lounge Access With effect from 10 th April 2026, enjoy 2 complimentary Domestic Lounge visi"
+      },
+      {
+        "value": 1,
+        "context": "cardholders. Click here to see the list of lounges and T&Cs. Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver (up to ₹100) for transactions between ₹400 and ₹5,000 at all fuel stations across the c"
+      },
+      {
+        "value": 0.5,
+        "context": "d Deposit Grow your savings and earn high interest rates. Senior Citizens* Can Earn Up To 0.50% p.a. additionally, Choice of Interest Payout Quick links Card activation Make payment Convert to EMI Report"
+      },
+      {
+        "value": 0.5,
+        "context": "gs with high interest rates & choice of interest payment. Senior Citizens* can earn up to 0.50% p.a. additional interest --> Heyy --> More credit card(s) like this AU InstaPay Credit Card Virtual card. Rea"
+      },
+      {
+        "value": 100,
+        "context": "ed to use this Credit Card. Upon successful creation of your FD, a lien will be marked on 100% of the FD value. See more How does an FD act as collateral to avail AU NOMO Credit Card? --> --> A Fixed Dep"
+      },
+      {
+        "value": 99,
+        "context": "ard? --> --> Reward Points: 2 Reward Points per ₹100 on retails spends* (1 RP = ₹0.25). O.99% Forex Markup: Enjoy lowest Forex Markup Fee on your international spends. Airport Lounge Access: AU NOMO prov"
+      }
+    ]
+  },
+  {
+    "id": "def871a5a2b7c5",
+    "issuer": "AU Small Finance Bank",
+    "name": "Traverse Credit Card for NRIs",
+    "sourceUrl": "https://www.au.bank.in/premium-banking/credit-cards/traverse-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 600000,
+    "renewalFee": 600000,
+    "feeWaiverSpend": 600000,
+    "maxRewardRate": 7.1,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "travelRate": 0.99,
+    "forexMarkup": 0.99,
+    "loungeVisits": 500,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 8,
+      "fuel": 39,
+      "travel": 828.93,
+      "shopping": 20,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 24,
+      "upi": 16,
+      "forex": 71.08,
+      "lounge": 80,
+      "premium": 60,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 52
+    },
+    "detectedBenefits": [
+      "AU Traverse Credit Card for NRIs – Premium Global Benefits & Rewards",
+      "Business Cashback Credit Card",
+      "Global Convenience & Unmatched Rewards",
+      "Unlock An Exclusive Welcome Gift",
+      "Complimentary Airport Lounge Access"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 0.99,
+        "context": "lock An Exclusive Welcome Gift Get a MakeMyTrip voucher worth ₹5,000. Low Forex Mark-Up A 0.99% fee on international expenses. Complimentary Airport Lounge Access Elevate your travel experience with domest"
+      },
+      {
+        "value": 1,
+        "context": "ry Airport Spa Access De-stress with 4 airport spa accesses per year (up to 1 a quarter). 1% Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver (up to ₹250) for transactions between ₹400 and ₹5,000 at"
+      },
+      {
+        "value": 1,
+        "context": "with 4 airport spa accesses per year (up to 1 a quarter). 1% Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver (up to ₹250) for transactions between ₹400 and ₹5,000 at all fuel stations across the c"
+      },
+      {
+        "value": 7.1,
+        "context": "e deserves premium rewards. --> Heyy --> More NRI Services AU FCNR (B) Deposit Earn up to 7.10%* p.a. Returns with AU FCNR (B) Deposit --> Heyy --> AU Remit Send Money Abroad with 0 Markup & 0 Charges -->"
+      }
+    ]
+  },
+  {
+    "id": "ea8d72530a0cf8",
+    "issuer": "AU Small Finance Bank",
+    "name": "CheQ AU Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/cheq-au-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "maxRewardRate": 12,
+    "diningRate": 12,
+    "upiRate": 12,
+    "categories": [
+      "dining",
+      "upi"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 112,
+      "utilities": 0,
+      "upi": 124,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "12% Rewards On Favourite Brands",
+      "2.5% Rewards On CheQ UPI"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 12,
+        "context": "CheQ AU Credit Card 12% Rewards On Favourite Brands 2.5% Rewards On CheQ UPI Complimentary EazyDiner Membership --> Learn More Apply"
+      },
+      {
+        "value": 2.5,
+        "context": "CheQ AU Credit Card 12% Rewards On Favourite Brands 2.5% Rewards On CheQ UPI Complimentary EazyDiner Membership --> Learn More Apply Now -->"
+      }
+    ]
+  },
+  {
+    "id": "ceff92c84a4bc6",
+    "issuer": "AU Small Finance Bank",
+    "name": "Paytm AU Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/paytm-au-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxRewardRate": 5,
+    "travelRate": 5,
+    "loungeVisits": 1,
+    "categories": [
+      "travel",
+      "lounge",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 44.5,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 8,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 40
+    },
+    "detectedBenefits": [
+      "Up to 2% rewards on Paytm Scan & Pay",
+      "5% back on Paytm Travel & Gold",
+      "Complimentary lounge access*"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 2,
+        "context": "Paytm AU Credit Card Up to 2% rewards on Paytm Scan & Pay 5% back on Paytm Travel & Gold Complimentary lounge access* --> Learn More Apply"
+      },
+      {
+        "value": 5,
+        "context": "Paytm AU Credit Card Up to 2% rewards on Paytm Scan & Pay 5% back on Paytm Travel & Gold Complimentary lounge access* --> Learn More Apply Now -->"
+      }
+    ]
+  },
+  {
+    "id": "138e53d2633013",
+    "issuer": "AU Small Finance Bank",
+    "name": "Altura Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/altura-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 1,
+    "categories": [
+      "travel",
+      "lounge"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 9.5,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 8,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Railway Lounge Access"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "7b15554c6b7c50",
+    "issuer": "AU Small Finance Bank",
+    "name": "Corporate Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/commercial-credit-cards/corporate-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 1,
+    "categories": [
+      "fuel",
+      "travel",
+      "lounge",
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 8,
+      "travel": 9.5,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 12,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Complimentary Airport Lounge Access",
+      "Fuel Surcharge Waiver"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "3694473a6d4ec5",
+    "issuer": "AU Small Finance Bank",
+    "name": "Business Cashback Credit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/commercial-credit-cards/business-cashback-credit-card",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxCashbackRate": 1,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "lounge",
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 16,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 8,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Business Cashback Credit Card",
+      "1% Cashback on Repayments",
+      "Complimentary Access to Railway Lounge"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 1,
+        "context": "Business Cashback Credit Card 1% Cashback on Repayments Instant Loan for your business Complimentary Access to Railway Lounge --> Learn more"
+      }
+    ]
+  },
+  {
+    "id": "73def34e015b8d",
+    "issuer": "AU Small Finance Bank",
+    "name": "Go through the Credit Card MITC or Key Fact Statement for details of applicable fees and charges.",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "c4121f161ae7a6",
+    "issuer": "AU Small Finance Bank",
+    "name": "Is there any Annual fees applicable on my Credit Card?",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "annualFee": 1000,
+    "joiningFee": 999,
+    "renewalFee": 199,
+    "feeWaiverSpend": 1,
+    "categories": [
+      "cashback",
+      "business",
+      "lifetime-free",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 8,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 59,
+      "beginner": 0,
+      "low-fee": 37.33,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Is there any Annual fees applicable on my Credit Card?",
+      "Yes, Card Annual fees is applicable on all credit card variants. However, the Card fee is only applicable if the retail spends based fee waiver condition is not met. Please have a quick look at Card fee details below:",
+      "Business Cashback - ₹99 per month",
+      "Spends Conditions for Annual / Renewal Fee Waiver",
+      "1st Year Annual Fee waiver"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "4e1f4eb67eb110",
+    "issuer": "AU Small Finance Bank",
+    "name": "Is there any charge applicable for doing International transaction on Credit Card?",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "maxCashbackRate": 3.5,
+    "categories": [
+      "cashback",
+      "shopping",
+      "forex",
+      "business",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 32,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 24.5,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 20,
+      "lounge": 0,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 40
+    },
+    "detectedBenefits": [
+      "Foreign Currency Transaction - Cross Currency Mark-up Charges",
+      "Altura, Altura Plus, LIT, Business Cashback, InstaPay, AU SPONT, SwipeUp - Xcite Series of Cards - 3.49%"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 3.5,
+        "context": "reign Currency Transaction - Cross Currency Mark-up Charges ABC FLEX, ABC NXT, ABC BIZ - 3.50% Altura, Altura Plus, LIT, Business Cashback, InstaPay, AU SPONT, SwipeUp - Xcite Series of Cards - 3.49% Vett"
+      },
+      {
+        "value": 3.49,
+        "context": "ltura Plus, LIT, Business Cashback, InstaPay, AU SPONT, SwipeUp - Xcite Series of Cards - 3.49% Vetta - 2.99% Zenith, ABC PRO - 1.99% Zenith+, NOMO - 0.99% ixigo AU - 0% Note - Taxes as applicable See More"
+      },
+      {
+        "value": 2.99,
+        "context": "T, Business Cashback, InstaPay, AU SPONT, SwipeUp - Xcite Series of Cards - 3.49% Vetta - 2.99% Zenith, ABC PRO - 1.99% Zenith+, NOMO - 0.99% ixigo AU - 0% Note - Taxes as applicable See More See all Try"
+      },
+      {
+        "value": 1.99,
+        "context": "staPay, AU SPONT, SwipeUp - Xcite Series of Cards - 3.49% Vetta - 2.99% Zenith, ABC PRO - 1.99% Zenith+, NOMO - 0.99% ixigo AU - 0% Note - Taxes as applicable See More See all Try saying something Cancel"
+      },
+      {
+        "value": 0.99,
+        "context": "eUp - Xcite Series of Cards - 3.49% Vetta - 2.99% Zenith, ABC PRO - 1.99% Zenith+, NOMO - 0.99% ixigo AU - 0% Note - Taxes as applicable See More See all Try saying something Cancel"
+      },
+      {
+        "value": 0,
+        "context": "s of Cards - 3.49% Vetta - 2.99% Zenith, ABC PRO - 1.99% Zenith+, NOMO - 0.99% ixigo AU - 0% Note - Taxes as applicable See More See all Try saying something Cancel"
+      }
+    ]
+  },
+  {
+    "id": "59cf15fa30710b",
+    "issuer": "AU Small Finance Bank",
+    "name": "Do I get Cashback or Reward Points for transactions done on my Add-on card?",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "cashback"
+    ],
+    "categoryScores": {
+      "cashback": 8,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Do I get Cashback or Reward Points for transactions done on my Add-on card?",
+      "Yes, the primary cardholder gets eligible cashback or Reward Points as per card feature, for transactions done on Add-on cards."
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "22763c4c0019ef",
+    "issuer": "AU Small Finance Bank",
+    "name": "I have not received my monthly Credit Card statement, what can I do?",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "51f9b355f62ed3",
+    "issuer": "AU Small Finance Bank",
+    "name": "Is there any exception to the kind of FDs that can be used to apply for an FD based Credit Card?",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "beginner"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "7a0e07dc2939fd",
+    "issuer": "AU Small Finance Bank",
+    "name": "AU Royale Business Debit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "1a2dbc6dcef8c4",
+    "issuer": "AU Small Finance Bank",
+    "name": "Visa Business Gold Debit Card",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "4e26500cb4c5ad",
+    "issuer": "AU Small Finance Bank",
+    "name": "Cards",
+    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "6995328d534108",
+    "issuer": "IndusInd Bank",
+    "name": "Steps to apply for a Credit Card Online",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "travel",
+      "shopping",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 12,
+      "shopping": 20,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 40
+    },
+    "detectedBenefits": [
+      "1) Reward points on everyday spending",
+      "2) Reward points that never expire",
+      "3) Exclusive travel privileges and discounts"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "2d3b2751d6b9a5",
+    "issuer": "IndusInd Bank",
+    "name": "Types of Credit Cards",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 1,
+    "categories": [
+      "travel",
+      "lounge",
+      "premium",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 37.5,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 12,
+      "premium": 21,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 36
+    },
+    "detectedBenefits": [
+      "Rewards Credit Cards : Designed for those who seek benefits, rewards credit cards offer points, cashback, or discounts on specific purchases.",
+      "Travel Credit Cards : Geared towards frequent travelers, these cards provide travel-related perks such as air miles, frequent flyer program memberships and airport lounge access.",
+      "Premium Credit Cards : Tailored for high-income individuals, premium cards offer exclusive privileges like concierge services, golf privileges, luxury travel benefits, and access to elite events.",
+      "Co-branded Credit Cards : These cards are in partnership with specific brands, airlines, or retailers, offering specialized rewards and discounts with those partners."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 100,
+        "context": "e also offer a range of instant credit cards that offer best-in-class benefits and have a 100% digital application process. Head on to the Instant Credit Cards section below and apply for credit card of y"
+      }
+    ]
+  },
+  {
+    "id": "ed5323b42d77a2",
+    "issuer": "IndusInd Bank",
+    "name": "IndusInd Platinum RuPay Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-rupay-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxRewardRate": 2,
+    "fuelRate": 7,
+    "surchargeWaiverRate": 7,
+    "shoppingRate": 7,
+    "travelRate": 1,
+    "upiRate": 7.75,
+    "foreignRewardRate": 1.8,
+    "forexMarkup": 3.5,
+    "categories": [
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 153,
+      "travel": 47,
+      "shopping": 65,
+      "grocery": 0,
+      "dining": 16,
+      "utilities": 16,
+      "upi": 125.5,
+      "forex": 55.6,
+      "lounge": 0,
+      "premium": 48,
+      "business": 67,
+      "lifetime-free": 79,
+      "beginner": 47,
+      "low-fee": 12,
+      "co-branded": 76
+    },
+    "detectedBenefits": [
+      "SFlexible options to pay through EMI, Reward points or Credit.",
+      "Tata Neu IndusInd Bank Forex Card",
+      "Check Credit Card Rewards",
+      "Unlock 2X rewards on UPI payments this festive season",
+      "Pay Now with UPI on your IndusInd Bank Platinum RuPay Credit Card."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 4,
+        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
+      },
+      {
+        "value": 7,
+        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
+      },
+      {
+        "value": 7.75,
+        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
+      },
+      {
+        "value": 6,
+        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
+      },
+      {
+        "value": 4,
+        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
+      },
+      {
+        "value": 2,
+        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
+      },
+      {
+        "value": 2,
+        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
+      },
+      {
+        "value": 4,
+        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
+      },
+      {
+        "value": 7,
+        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
+      },
+      {
+        "value": 100,
+        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
+      }
+    ]
+  },
+  {
+    "id": "6e860c4ddee827",
+    "issuer": "IndusInd Bank",
+    "name": "EazyDiner IndusInd Bank Platinum Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/eazydiner-platinum-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 500,
+    "joiningFee": 500,
+    "renewalFee": 500,
+    "feeWaiverSpend": 30000,
+    "maxRewardRate": 50,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "shoppingRate": 7,
+    "diningRate": 50,
+    "upiRate": 4,
+    "categories": [
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 39,
+      "travel": 32,
+      "shopping": 69,
+      "grocery": 0,
+      "dining": 502,
+      "utilities": 28,
+      "upi": 88,
+      "forex": 20,
+      "lounge": 0,
+      "premium": 48,
+      "business": 67,
+      "lifetime-free": 75,
+      "beginner": 69,
+      "low-fee": 25.67,
+      "co-branded": 80
+    },
+    "detectedBenefits": [
+      "EazyDiner Platinum Credit Card - Apply for EazyDiner Platinum Credit Card for Dining | IndusInd Bank",
+      "SFlexible options to pay through EMI, Reward points or Credit.",
+      "Tata Neu IndusInd Bank Forex Card",
+      "Check Credit Card Rewards",
+      "Unlock 2X rewards on UPI payments this festive season"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 4,
+        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
+      },
+      {
+        "value": 7,
+        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
+      },
+      {
+        "value": 7.75,
+        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
+      },
+      {
+        "value": 6,
+        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
+      },
+      {
+        "value": 4,
+        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
+      },
+      {
+        "value": 2,
+        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
+      },
+      {
+        "value": 2,
+        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
+      },
+      {
+        "value": 4,
+        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
+      },
+      {
+        "value": 7,
+        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
+      },
+      {
+        "value": 100,
+        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
+      }
+    ]
+  },
+  {
+    "id": "910bcdb33ada92",
+    "issuer": "IndusInd Bank",
+    "name": "Legend Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/legend-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "feeWaiverSpend": 2,
+    "maxRewardRate": 2,
+    "fuelRate": 7,
+    "surchargeWaiverRate": 7,
+    "shoppingRate": 7.75,
+    "diningRate": 7.75,
+    "travelRate": 15,
+    "upiRate": 4,
+    "foreignRewardRate": 1.8,
+    "forexMarkup": 1,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 8,
+      "fuel": 137,
+      "travel": 198.5,
+      "shopping": 98.25,
+      "grocery": 0,
+      "dining": 101.75,
+      "utilities": 24,
+      "upi": 72,
+      "forex": 87.6,
+      "lounge": 12,
+      "premium": 65,
+      "business": 67,
+      "lifetime-free": 71,
+      "beginner": 51,
+      "low-fee": 0,
+      "co-branded": 84
+    },
+    "detectedBenefits": [
+      "SFlexible options to pay through EMI, Reward points or Credit.",
+      "Tata Neu IndusInd Bank Forex Card",
+      "Check Credit Card Rewards",
+      "Unlock 2X rewards on UPI payments this festive season",
+      "Enjoy world-class privileges on travel, dining and shopping."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 4,
+        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
+      },
+      {
+        "value": 7,
+        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
+      },
+      {
+        "value": 7.75,
+        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
+      },
+      {
+        "value": 6,
+        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
+      },
+      {
+        "value": 4,
+        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
+      },
+      {
+        "value": 2,
+        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
+      },
+      {
+        "value": 2,
+        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
+      },
+      {
+        "value": 4,
+        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
+      },
+      {
+        "value": 7,
+        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
+      },
+      {
+        "value": 100,
+        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
+      }
+    ]
+  },
+  {
+    "id": "65c56d5c8043f8",
+    "issuer": "IndusInd Bank",
+    "name": "EazyDiner Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/eazydiner-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 2999,
+    "joiningFee": 2999,
+    "renewalFee": 2999,
+    "maxRewardRate": 50,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "shoppingRate": 7,
+    "diningRate": 50,
+    "travelRate": 25,
+    "upiRate": 4,
+    "categories": [
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 39,
+      "travel": 207,
+      "shopping": 81,
+      "grocery": 0,
+      "dining": 506,
+      "utilities": 20,
+      "upi": 72,
+      "forex": 20,
+      "lounge": 0,
+      "premium": 48,
+      "business": 67,
+      "lifetime-free": 71,
+      "beginner": 47,
+      "low-fee": 8,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "SFlexible options to pay through EMI, Reward points or Credit.",
+      "Tata Neu IndusInd Bank Forex Card",
+      "Check Credit Card Rewards",
+      "Unlock 2X rewards on UPI payments this festive season",
+      "The Next Revolution in Dining is here"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 4,
+        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
+      },
+      {
+        "value": 7,
+        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
+      },
+      {
+        "value": 7.75,
+        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
+      },
+      {
+        "value": 6,
+        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
+      },
+      {
+        "value": 4,
+        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
+      },
+      {
+        "value": 2,
+        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
+      },
+      {
+        "value": 2,
+        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
+      },
+      {
+        "value": 4,
+        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
+      },
+      {
+        "value": 7,
+        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
+      },
+      {
+        "value": 100,
+        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
+      }
+    ]
+  },
+  {
+    "id": "6a394b8d21faa9",
+    "issuer": "IndusInd Bank",
+    "name": "Platinum Aura Edge Visa/ Master Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-aura-edge-visa-and-mastercard-credit-card-easy-credit.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "maxRewardRate": 2,
+    "fuelRate": 7,
+    "surchargeWaiverRate": 7,
+    "shoppingRate": 7.75,
+    "upiRate": 4,
+    "foreignRewardRate": 1.8,
+    "categories": [
+      "fuel",
+      "travel",
+      "shopping",
+      "grocery",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 145,
+      "travel": 60,
+      "shopping": 94.25,
+      "grocery": 8,
+      "dining": 44,
+      "utilities": 28,
+      "upi": 72,
+      "forex": 40.6,
+      "lounge": 0,
+      "premium": 48,
+      "business": 67,
+      "lifetime-free": 71,
+      "beginner": 55,
+      "low-fee": 0,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "SFlexible options to pay through EMI, Reward points or Credit.",
+      "Tata Neu IndusInd Bank Forex Card",
+      "Check Credit Card Rewards",
+      "Unlock 2X rewards on UPI payments this festive season",
+      "Experience new-age shopping with a contactless card and unlimited privileges."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 4,
+        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
+      },
+      {
+        "value": 7,
+        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
+      },
+      {
+        "value": 7.75,
+        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
+      },
+      {
+        "value": 6,
+        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
+      },
+      {
+        "value": 4,
+        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
+      },
+      {
+        "value": 2,
+        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
+      },
+      {
+        "value": 2,
+        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
+      },
+      {
+        "value": 4,
+        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
+      },
+      {
+        "value": 7,
+        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
+      },
+      {
+        "value": 100,
+        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
+      }
+    ]
+  },
+  {
+    "id": "e13c5560b93847",
+    "issuer": "IndusInd Bank",
+    "name": "Platinum Visa Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-visa-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "maxRewardRate": 2,
+    "fuelRate": 7,
+    "surchargeWaiverRate": 7,
+    "shoppingRate": 7,
+    "upiRate": 4,
+    "foreignRewardRate": 1.8,
+    "categories": [
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 153,
+      "travel": 52,
+      "shopping": 85,
+      "grocery": 0,
+      "dining": 20,
+      "utilities": 16,
+      "upi": 72,
+      "forex": 40.6,
+      "lounge": 0,
+      "premium": 52,
+      "business": 67,
+      "lifetime-free": 71,
+      "beginner": 47,
+      "low-fee": 0,
+      "co-branded": 80
+    },
+    "detectedBenefits": [
+      "SFlexible options to pay through EMI, Reward points or Credit.",
+      "Tata Neu IndusInd Bank Forex Card",
+      "Check Credit Card Rewards",
+      "Unlock 2X rewards on UPI payments this festive season",
+      "The IndusInd Bank Platinum Visa Credit Card offers a comprehensive range of travel and lifestyle benefits to suit your preferences."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 4,
+        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
+      },
+      {
+        "value": 7,
+        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
+      },
+      {
+        "value": 7.75,
+        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
+      },
+      {
+        "value": 6,
+        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
+      },
+      {
+        "value": 4,
+        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
+      },
+      {
+        "value": 2,
+        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
+      },
+      {
+        "value": 2,
+        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
+      },
+      {
+        "value": 4,
+        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
+      },
+      {
+        "value": 7,
+        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
+      },
+      {
+        "value": 100,
+        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
+      }
+    ]
+  },
+  {
+    "id": "7c4b33d8e61f93",
+    "issuer": "IndusInd Bank",
+    "name": "IndusInd Bank Avios Visa Infinite Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/avios-visa-infinite-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxRewardRate": 2,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "shoppingRate": 7,
+    "travelRate": 10,
+    "upiRate": 4,
+    "foreignRewardRate": 1.5,
+    "forexMarkup": 1.5,
+    "loungeVisits": 2,
+    "categories": [
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 31,
+      "travel": 193,
+      "shopping": 81,
+      "grocery": 0,
+      "dining": 32,
+      "utilities": 24,
+      "upi": 72,
+      "forex": 69.5,
+      "lounge": 28,
+      "premium": 66,
+      "business": 67,
+      "lifetime-free": 71,
+      "beginner": 47,
+      "low-fee": 8,
+      "co-branded": 68
+    },
+    "detectedBenefits": [
+      "Avios Visa Infinite Credit Card Online - Check Benefits & Rewards | IndusInd Bank",
+      "SFlexible options to pay through EMI, Reward points or Credit.",
+      "Tata Neu IndusInd Bank Forex Card",
+      "Check Credit Card Rewards",
+      "Unlock 2X rewards on UPI payments this festive season"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 4,
+        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
+      },
+      {
+        "value": 7,
+        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
+      },
+      {
+        "value": 7.75,
+        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
+      },
+      {
+        "value": 6,
+        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
+      },
+      {
+        "value": 4,
+        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
+      },
+      {
+        "value": 2,
+        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
+      },
+      {
+        "value": 2,
+        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
+      },
+      {
+        "value": 4,
+        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
+      },
+      {
+        "value": 7,
+        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
+      },
+      {
+        "value": 100,
+        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
+      }
+    ]
+  },
+  {
+    "id": "8453a8b23e3150",
+    "issuer": "IndusInd Bank",
+    "name": "Pinnacle Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/pinnacle-world-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxRewardRate": 2,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "shoppingRate": 7,
+    "travelRate": 7.75,
+    "upiRate": 4,
+    "loungeVisits": 2026,
+    "categories": [
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 31,
+      "travel": 3197.25,
+      "shopping": 77,
+      "grocery": 0,
+      "dining": 16,
+      "utilities": 16,
+      "upi": 72,
+      "forex": 20,
+      "lounge": 76,
+      "premium": 88,
+      "business": 67,
+      "lifetime-free": 71,
+      "beginner": 47,
+      "low-fee": 0,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "Pinnacle Credit Card - Check Benefits & Rewards Online | IndusInd Bank",
+      "SFlexible options to pay through EMI, Reward points or Credit.",
+      "Tata Neu IndusInd Bank Forex Card",
+      "Check Credit Card Rewards",
+      "Unlock 2X rewards on UPI payments this festive season"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 4,
+        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
+      },
+      {
+        "value": 7,
+        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
+      },
+      {
+        "value": 7.75,
+        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
+      },
+      {
+        "value": 6,
+        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
+      },
+      {
+        "value": 4,
+        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
+      },
+      {
+        "value": 2,
+        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
+      },
+      {
+        "value": 2,
+        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
+      },
+      {
+        "value": 4,
+        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
+      },
+      {
+        "value": 7,
+        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
+      },
+      {
+        "value": 100,
+        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
+      }
+    ]
+  },
+  {
+    "id": "982bbdd8d78363",
+    "issuer": "IndusInd Bank",
+    "name": "Nexxt Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/nexxt-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "maxRewardRate": 12,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "shoppingRate": 7,
+    "upiRate": 4,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 8,
+      "fuel": 55,
+      "travel": 44,
+      "shopping": 89,
+      "grocery": 0,
+      "dining": 24,
+      "utilities": 20,
+      "upi": 72,
+      "forex": 24,
+      "lounge": 0,
+      "premium": 48,
+      "business": 67,
+      "lifetime-free": 71,
+      "beginner": 51,
+      "low-fee": 0,
+      "co-branded": 76
+    },
+    "detectedBenefits": [
+      "SFlexible options to pay through EMI, Reward points or Credit.",
+      "Tata Neu IndusInd Bank Forex Card",
+      "Check Credit Card Rewards",
+      "Unlock 2X rewards on UPI payments this festive season",
+      "Earn 1 Reward Point for every ₹150 spent"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 4,
+        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
+      },
+      {
+        "value": 7,
+        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
+      },
+      {
+        "value": 7.75,
+        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
+      },
+      {
+        "value": 6,
+        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
+      },
+      {
+        "value": 4,
+        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
+      },
+      {
+        "value": 2,
+        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
+      },
+      {
+        "value": 2,
+        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
+      },
+      {
+        "value": 4,
+        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
+      },
+      {
+        "value": 7,
+        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
+      },
+      {
+        "value": 100,
+        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
+      }
+    ]
+  },
+  {
+    "id": "0fcee242d74b04",
+    "issuer": "IndusInd Bank",
+    "name": "IndusInd Bank Tiger Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/tiger-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxRewardRate": 2,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "shoppingRate": 7,
+    "upiRate": 4,
+    "foreignRewardRate": 1.5,
+    "forexMarkup": 1.5,
+    "loungeVisits": 8,
+    "categories": [
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 43,
+      "travel": 100,
+      "shopping": 69,
+      "grocery": 0,
+      "dining": 24,
+      "utilities": 20,
+      "upi": 72,
+      "forex": 73.5,
+      "lounge": 48,
+      "premium": 88,
+      "business": 67,
+      "lifetime-free": 71,
+      "beginner": 47,
+      "low-fee": 0,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "Apply for Tiger Credit Card Online - Check Benefits & Rewards | IndusInd Bank",
+      "SFlexible options to pay through EMI, Reward points or Credit.",
+      "Tata Neu IndusInd Bank Forex Card",
+      "Check Credit Card Rewards",
+      "Unlock 2X rewards on UPI payments this festive season"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 4,
+        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
+      },
+      {
+        "value": 7,
+        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
+      },
+      {
+        "value": 7.75,
+        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
+      },
+      {
+        "value": 6,
+        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
+      },
+      {
+        "value": 4,
+        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
+      },
+      {
+        "value": 2,
+        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
+      },
+      {
+        "value": 2,
+        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
+      },
+      {
+        "value": 4,
+        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
+      },
+      {
+        "value": 7,
+        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
+      },
+      {
+        "value": 100,
+        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
+      }
+    ]
+  },
+  {
+    "id": "1e6f1bc909aa33",
+    "issuer": "IndusInd Bank",
+    "name": "Samman Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/samman-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "feeWaiverSpend": 20000,
+    "maxCashbackRate": 1,
+    "maxRewardRate": 2,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "shoppingRate": 7,
+    "upiRate": 7.75,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 55,
+      "travel": 16,
+      "shopping": 65,
+      "grocery": 0,
+      "dining": 20,
+      "utilities": 16,
+      "upi": 125.5,
+      "forex": 20,
+      "lounge": 0,
+      "premium": 48,
+      "business": 67,
+      "lifetime-free": 71,
+      "beginner": 47,
+      "low-fee": 0,
+      "co-branded": 68
+    },
+    "detectedBenefits": [
+      "SFlexible options to pay through EMI, Reward points or Credit.",
+      "Tata Neu IndusInd Bank Forex Card",
+      "Check Credit Card Rewards",
+      "Unlock 2X rewards on UPI payments this festive season",
+      "Now with the Power of UPI"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 4,
+        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
+      },
+      {
+        "value": 7,
+        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
+      },
+      {
+        "value": 7.75,
+        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
+      },
+      {
+        "value": 6,
+        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
+      },
+      {
+        "value": 4,
+        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
+      },
+      {
+        "value": 2,
+        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
+      },
+      {
+        "value": 2,
+        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
+      },
+      {
+        "value": 4,
+        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
+      },
+      {
+        "value": 7,
+        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
+      },
+      {
+        "value": 100,
+        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
+      }
+    ]
+  },
+  {
+    "id": "a8e27af18ba89f",
+    "issuer": "IndusInd Bank",
+    "name": "IndusInd Bank Jio-bp Mobility+ Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/jio-bp-mobility-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "joiningFee": 499,
+    "maxRewardRate": 2,
+    "fuelRate": 7,
+    "surchargeWaiverRate": 7,
+    "shoppingRate": 7,
+    "upiRate": 4,
+    "forexMarkup": 3.5,
+    "categories": [
+      "fuel",
+      "travel",
+      "shopping",
+      "grocery",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 153,
+      "travel": 16,
+      "shopping": 65,
+      "grocery": 24,
+      "dining": 28,
+      "utilities": 24,
+      "upi": 88,
+      "forex": 31,
+      "lounge": 0,
+      "premium": 40,
+      "business": 67,
+      "lifetime-free": 71,
+      "beginner": 47,
+      "low-fee": 0,
+      "co-branded": 68
+    },
+    "detectedBenefits": [
+      "SFlexible options to pay through EMI, Reward points or Credit.",
+      "Tata Neu IndusInd Bank Forex Card",
+      "Check Credit Card Rewards",
+      "Unlock 2X rewards on UPI payments this festive season",
+      "Earn 400 Bonus Smiles after 1st fuel transaction at Jio-bp in first 30 days from card setup by the Bank"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 4,
+        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
+      },
+      {
+        "value": 7,
+        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
+      },
+      {
+        "value": 7.75,
+        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
+      },
+      {
+        "value": 6,
+        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
+      },
+      {
+        "value": 4,
+        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
+      },
+      {
+        "value": 2,
+        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
+      },
+      {
+        "value": 2,
+        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
+      },
+      {
+        "value": 4,
+        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
+      },
+      {
+        "value": 7,
+        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
+      },
+      {
+        "value": 100,
+        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
+      }
+    ]
+  },
+  {
+    "id": "97238462a621ab",
+    "issuer": "IndusInd Bank",
+    "name": "CRED IndusInd Bank RuPay Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/CRED-IndusInd-Bank-ruPay-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "maxRewardRate": 5,
+    "shoppingRate": 5,
+    "utilityRate": 1,
+    "travelRate": 5,
+    "upiRate": 5,
+    "categories": [
+      "travel",
+      "shopping",
+      "utilities",
+      "upi"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 39,
+      "shopping": 47,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 14,
+      "upi": 58,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Its designed to reward on each spend– Wherever you go, Wherever you shop, Whatever you buy",
+      "Earn 5% back as CRED Reward Points on E-commerce transactions.",
+      "Earn 5% back as CRED Reward Points on CRED Pay, CRED Store, CRED Travel, CRED online Gift Cards and online UPI Payments through CRED.",
+      "Earn 1% back as CRED Reward Points on Scan & Pay transactions through CRED.",
+      "Earn 1% back as CRED Reward Points on Insurance and Utility bills paid via CRED."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 5,
+        "context": "end– Wherever you go, Wherever you shop, Whatever you buy Key Features and Benefits Earn 5% back as CRED Reward Points on E-commerce transactions. Earn 5% back as CRED Reward Points on CRED Pay, CRED S"
+      },
+      {
+        "value": 5,
+        "context": "eatures and Benefits Earn 5% back as CRED Reward Points on E-commerce transactions. Earn 5% back as CRED Reward Points on CRED Pay, CRED Store, CRED Travel, CRED online Gift Cards and online UPI Paymen"
+      },
+      {
+        "value": 1,
+        "context": "ED Store, CRED Travel, CRED online Gift Cards and online UPI Payments through CRED. Earn 1% back as CRED Reward Points on Scan & Pay transactions through CRED. Earn 1% back as CRED Reward Points on Ins"
+      },
+      {
+        "value": 1,
+        "context": "h CRED. Earn 1% back as CRED Reward Points on Scan & Pay transactions through CRED. Earn 1% back as CRED Reward Points on Insurance and Utility bills paid via CRED. Earn 1% back as CRED Reward Points o"
+      },
+      {
+        "value": 1,
+        "context": "ED. Earn 1% back as CRED Reward Points on Insurance and Utility bills paid via CRED. Earn 1% back as CRED Reward Points on all other transactions. Earn 1% back as CRED Reward Points on all online and of"
+      },
+      {
+        "value": 1,
+        "context": "y bills paid via CRED. Earn 1% back as CRED Reward Points on all other transactions. Earn 1% back as CRED Reward Points on all online and offline International transactions. Know More Add to Compare"
+      }
+    ]
+  },
+  {
+    "id": "1bdd9ef0cddbe2",
+    "issuer": "IndusInd Bank",
+    "name": "Poonawalla Fincorp IndusInd Bank eLITE RuPay Credit Card (Discontinued)",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/poonawalla-platinum-rupay-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "categories": [
+      "fuel",
+      "upi",
+      "premium"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 23,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 12,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 12,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Pay Now with UPI on your Poonawalla Fincorp IndusInd Bank eLITE RuPay Credit Card.",
+      "2.5 Reward Points on Ecommerce transactions",
+      "Milestone Benefit of 3000 Reward Points on spends of ₹ 4,00,000 annually*",
+      "1% Fuel Surcharge Waiver"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 1,
+        "context": "y* Buy one movie ticket and get the second one free on BookMyShow every month upto ₹ 200* 1% Fuel Surcharge Waiver Know More Premium Add to Compare"
+      }
+    ]
+  },
+  {
+    "id": "06e805e944a191",
+    "issuer": "IndusInd Bank",
+    "name": "Indus Solitaire Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/solitaire-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 16,
+    "categories": [
+      "travel",
+      "forex",
+      "lounge",
+      "premium"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 32,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 12,
+      "lounge": 52,
+      "premium": 20,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Presenting Indus Solitaire Banking and its finest IndusInd Bank Credit Card with experiences and rewards, handpicked and handcrafted for you.",
+      "Zero Foreign Currency Mark-up on all international spends",
+      "16 International and 16 Domestic lounge visits in a year",
+      "International Travel Health Insurance of USD 25,000"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "f7ea414c0c20ff",
+    "issuer": "IndusInd Bank",
+    "name": "ePay Amex Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/epay-amex-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "maxCashbackRate": 5,
+    "categories": [
+      "cashback",
+      "shopping"
+    ],
+    "categoryScores": {
+      "cashback": 44,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 35,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Unique Transaction based Rewards Program- Earn up to 10 Rewards Points on each transaction",
+      "Loyalty Bonus Rewards Program- 2X Reward Points on all spends in 12th month on being active for previous 11 months in the anniversary year",
+      "5% cashback annually on early payment of total outstanding amount"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 5,
+        "context": "1 months in the anniversary year Times Prime Membership on spends of INR 2 lakh in a year 5% cashback annually on early payment of total outstanding amount Know More Add to Compare"
+      }
+    ]
+  },
+  {
+    "id": "b8e31d0b2b3098",
+    "issuer": "IndusInd Bank",
+    "name": "Club Vistara Explorer Credit Card (Discontinued)",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/club-vistara-indusInd-bank-explorer-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxRewardRate": 1.8,
+    "travelRate": 1.8,
+    "foreignRewardRate": 1.8,
+    "forexMarkup": 1.8,
+    "categories": [
+      "travel",
+      "forex",
+      "business",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 24.6,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 45.2,
+      "lounge": 0,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 36
+    },
+    "detectedBenefits": [
+      "A life that's fully luxurious is a Grand Life. And to give you this experience of a Grand Life, we bring you the Club Vistara Explorer Credit Card - a Card that's laden with luxury, privileges, rewards and more.",
+      "Enjoy discounted foreign currency mark-up of 1.8% on your international spends.",
+      "Complimentary Business Class ticket vouchers upon achieving milestone spends.",
+      "Best-in-class Rewards Program"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 1.8,
+        "context": "rewards and more. Key Features and Benefits Enjoy discounted foreign currency mark-up of 1.8% on your international spends. Complimentary Business Class ticket vouchers upon achieving milestone spends. B"
+      }
+    ]
+  },
+  {
+    "id": "b379d5a0197dcf",
+    "issuer": "IndusInd Bank",
+    "name": "Indulge Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/indulge-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "premium"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 12,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Get 1.5 Reward Points for every ₹ 100 spent"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "0cf0ab8cb0637f",
+    "issuer": "IndusInd Bank",
+    "name": "Pioneer Heritage Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/pioneer-heritage-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "fuel",
+      "premium"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 8,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 8,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "A card that redefines luxury, privilege, rewards and conveniences; so that you get a lot more from your life.",
+      "2.5 Reward Points on every ₹ 100 spent on international transactions and 1 Reward point on every ₹ 100 spent on domestic transactions",
+      "Fuel Surcharge Waiver"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "df289d5beda972",
+    "issuer": "IndusInd Bank",
+    "name": "Pioneer Legacy Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/pioneer-legacy-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "feeWaiverSpend": 2,
+    "categories": [
+      "fuel",
+      "premium"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 8,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 8,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "A credit card that allows you to earn rewards faster and helps you redeem them as per your convenience.​",
+      "For weekday spends Rs 100 spent = 1 reward point and For weekend spends Rs 100 spent = 2 reward points",
+      "Fuel Surcharge Waiver",
+      "Exclusive Bonus Rewards"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "be92272022e902",
+    "issuer": "IndusInd Bank",
+    "name": "Crest Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/crest-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "fuel",
+      "premium"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 8,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 12,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Get 1 Reward Point for every ₹ 100 on domestic spends",
+      "Get 2.5 Reward Points for every ₹ 100 on International spends",
+      "Fuel Surcharge Waiver"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "b06ea5532d0084",
+    "issuer": "IndusInd Bank",
+    "name": "Celesta Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/celesta-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "forex"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 8,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "A credit card that allows you to earn rewards faster and helps you redeem them as per your convenience.​",
+      "International Spends: Get 3 Reward Points for every ₹ 100 spent on International transactions",
+      "Domestic Spends:Get 1 Reward Point for every ₹ 100 spent on Domestic transactions",
+      "Exclusive Privileges in Dining, Lifestyle and Travel and much more!"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "beb43d843b93d0",
+    "issuer": "IndusInd Bank",
+    "name": "Platinum Aura Edge Credit Card Exclusively for Government Sector Employees - (Discontinued)",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-aura-edge-credit-card-for-government-employees.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "maxCashbackRate": 1,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "categories": [
+      "cashback",
+      "fuel"
+    ],
+    "categoryScores": {
+      "cashback": 16,
+      "fuel": 23,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "The IndusInd Bank Aura Edge Credit Card for the government sector offers a comprehensive range of features such as *1% Flat cashback on Spends, Lower ROI on EMI transaction & assured movie tickets.",
+      "Get 1% Cashback on all spends upto Rs. 10,000 per statement cycle",
+      "1% Fuel & Railway Surcharge Waiver"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 1,
+        "context": "e Credit Card for the government sector offers a comprehensive range of features such as *1% Flat cashback on Spends, Lower ROI on EMI transaction & assured movie tickets. Key Features and Benefits Get"
+      },
+      {
+        "value": 1,
+        "context": "nds, Lower ROI on EMI transaction & assured movie tickets. Key Features and Benefits Get 1% Cashback on all spends upto Rs. 10,000 per statement cycle Comprehensive Insurance Benefits 1.1% p.m Interes"
+      },
+      {
+        "value": 1.1,
+        "context": "hback on all spends upto Rs. 10,000 per statement cycle Comprehensive Insurance Benefits 1.1% p.m Interest Rate on Converting Spends to EMI Get one complimentary movie ticket upto INR 200/- every 6 mont"
+      },
+      {
+        "value": 1,
+        "context": "y movie ticket upto INR 200/- every 6 months in a calendar year on booking via BookMyShow 1% Fuel & Railway Surcharge Waiver Know More Add to Compare"
+      }
+    ]
+  },
+  {
+    "id": "f88472d9c9a9ca",
+    "issuer": "IndusInd Bank",
+    "name": "InterMiles Odyssey Amex Credit Card (Discontinued)",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-odyssey-amex-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "travel"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 16,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "InterMiles Odyssey Amex Credit Card (Discontinued)",
+      "A Credit Card which can get you a complimentary membership to InterMiles – the Frequent Flyer program offered by InterMiles.",
+      "Increase your weekend fun by earning 6 InterMiles per ₹ 100 spent",
+      "2x InterMiles on all your InterMiles Spends",
+      "Welcome Bonus of 15000 InterMiles"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "c29c0b1990c2fc",
+    "issuer": "IndusInd Bank",
+    "name": "InterMiles Odyssey Visa Credit Card (Discontinued)",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-odyssey-visa-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "travel"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 16,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "InterMiles Odyssey Visa Credit Card (Discontinued)",
+      "A Credit Card which can get you a complimentary membership to InterMiles – the Frequent Flyer program offered by InterMiles",
+      "Increase your weekend fun by earning 4 InterMiles per ₹ 100 spent",
+      "2x InterMiles Miles on all your InterMiles Spends",
+      "Welcome Bonus of 15000 InterMiles"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "86485308804abd",
+    "issuer": "IndusInd Bank",
+    "name": "InterMiles Voyage Amex Credit Card (Discontinued)",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-voyage-amex-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "fuel",
+      "travel"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 8,
+      "travel": 8,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "InterMiles Voyage Amex Credit Card (Discontinued)",
+      "A credit card that allows you to earn rewards faster and helps you redeem them as per your convenience.​",
+      "Get 4 Intermiles for every Rs 100 spent",
+      "Fuel Surcharge Waiver"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "b1c579ef7c7209",
+    "issuer": "IndusInd Bank",
+    "name": "Intermiles Voyage Visa Credit Card (Discontinued)",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-voyage-visa-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "fuel",
+      "travel"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 8,
+      "travel": 16,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Intermiles Voyage Visa Credit Card (Discontinued)",
+      "Get a complimentary membership to InterMiles on your Card with unique miles benefits.",
+      "Get 3 Intermiles for every Rs 100 spent",
+      "Fuel Surcharge Waiver"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "42045a0a100a87",
+    "issuer": "IndusInd Bank",
+    "name": "Signature Visa Credit Card (Discontinued)",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/signature-visa-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "fuel",
+      "premium"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 8,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 8,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Get 1.5 Reward Points for every ₹ 100 spent",
+      "Fuel Surcharge Waiver"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "2f20b71109dbb5",
+    "issuer": "IndusInd Bank",
+    "name": "Iconia Amex Credit Card (Discontinued)",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/iconia-amex-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 1,
+    "categories": [
+      "fuel",
+      "travel",
+      "lounge",
+      "premium"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 8,
+      "travel": 9.5,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 8,
+      "premium": 9,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Best-in-class Reward Program",
+      "Earn 2 Reward Points on Weekends & 1.5 Reward Points on weekdays for every 100 INR spent",
+      "Fuel Surcharge waiver",
+      "Complimentary Access to Lounges"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "8d80b62d5f4aa9",
+    "issuer": "IndusInd Bank",
+    "name": "Iconia Visa Credit Card (Discontinued)",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/iconia-visa-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "fuel",
+      "premium"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 8,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 8,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Best-in-class Reward Program",
+      "Earn up to 1 Reward Point for every ₹ 100 spent",
+      "Fuel Surcharge waiver"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "26867306dda3c0",
+    "issuer": "IndusInd Bank",
+    "name": "Platinum Aura Credit Card (Discontinued)",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-aura-visa-and-mastercard-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "fuel"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 8,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "The IndusInd Bank Platinum Aura Credit Card offers you best of lifestyle but also the flexibility of rewards points",
+      "Flexibility to choose Reward Plans to suit your lifestyle",
+      "Earn up to 4X Reward Points on select merchant categories",
+      "Fuel Surcharge Waiver"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "4052f703c8dd9d",
+    "issuer": "IndusInd Bank",
+    "name": "Credit Card Features and Benefits",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "lounge",
+      "beginner"
+    ],
+    "categoryScores": {
+      "cashback": 8,
+      "fuel": 20,
+      "travel": 29.5,
+      "shopping": 12,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 20,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 39,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Lifetime Fee Waivers",
+      "Airport Lounge Access",
+      "Rewards That Never Expire",
+      "Fuel Surcharge Waiver",
+      "Choose from a range of cards that come with 0 joining fee and 0 annual fees. Apply for your own Indus Easy Credit Card today and enjoy them for a lifetime without paying a single penny!"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "1df99e9bf9207c",
+    "issuer": "IndusInd Bank",
+    "name": "Documents needed for online credit card application",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 36
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "d36519051dcd41",
+    "issuer": "IndusInd Bank",
+    "name": "Documents Required for Credit Card Application",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "shopping",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 8,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 36
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": [
+      {
+        "value": 100,
+        "context": "ents Required for Credit Card Application Applying for an IndusInd Bank Credit Card is a 100% digital and paperless process. Keep your Aadhaar number and PAN details handy while completing the online for"
+      }
+    ]
+  },
+  {
+    "id": "4fac84f90df97a",
+    "issuer": "IndusInd Bank",
+    "name": "Credit Card Interest Rates",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "diningRate": 47.4,
+    "upiRate": 47.4,
+    "categories": [
+      "dining",
+      "upi",
+      "premium",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 434.6,
+      "utilities": 0,
+      "upi": 486,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 12,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 36
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": [
+      {
+        "value": 1.79,
+        "context": "cash advances vary depending on the credit card. The applicable interest rates range from 1.79% to 3.95% per month, or 21.48% to 47.40% per annum. Credit Card or Card Group Monthly Interest Rate Annual I"
+      },
+      {
+        "value": 3.95,
+        "context": "nces vary depending on the credit card. The applicable interest rates range from 1.79% to 3.95% per month, or 21.48% to 47.40% per annum. Credit Card or Card Group Monthly Interest Rate Annual Interest R"
+      },
+      {
+        "value": 21.48,
+        "context": "on the credit card. The applicable interest rates range from 1.79% to 3.95% per month, or 21.48% to 47.40% per annum. Credit Card or Card Group Monthly Interest Rate Annual Interest Rate Platinum Aura, P"
+      },
+      {
+        "value": 47.4,
+        "context": "dit card. The applicable interest rates range from 1.79% to 3.95% per month, or 21.48% to 47.40% per annum. Credit Card or Card Group Monthly Interest Rate Annual Interest Rate Platinum Aura, Platinum Au"
+      },
+      {
+        "value": 3.95,
+        "context": "gend, Platinum Select, Samman, CRED IndusInd Bank RuPay and Jio-bp Mobility+ Credit Card 3.95% 47.40% EazyDiner Signature, EazyDiner Platinum, Nexxt, Pinnacle, Pioneer Legacy, Indus Solitaire, Iconia, D"
+      },
+      {
+        "value": 47.4,
+        "context": "latinum Select, Samman, CRED IndusInd Bank RuPay and Jio-bp Mobility+ Credit Card 3.95% 47.40% EazyDiner Signature, EazyDiner Platinum, Nexxt, Pinnacle, Pioneer Legacy, Indus Solitaire, Iconia, Duo and P"
+      },
+      {
+        "value": 3.83,
+        "context": "ndus Solitaire, Iconia, Duo and Poonawalla Fincorp IndusInd Bank eLITE RuPay Credit Card 3.83% 46.00% Pioneer Heritage, Celesta, Crest and Platinum Aura Edge Credit Card for Government Sector 2.99% 36"
+      },
+      {
+        "value": 46,
+        "context": "litaire, Iconia, Duo and Poonawalla Fincorp IndusInd Bank eLITE RuPay Credit Card 3.83% 46.00% Pioneer Heritage, Celesta, Crest and Platinum Aura Edge Credit Card for Government Sector 2.99% 36.00% Cl"
+      },
+      {
+        "value": 2.99,
+        "context": "ioneer Heritage, Celesta, Crest and Platinum Aura Edge Credit Card for Government Sector 2.99% 36.00% Club Vistara IndusInd Bank Explorer Credit Card 2.85% 34.00% Indulge Credit Card 1.79% 21.48%"
+      },
+      {
+        "value": 36,
+        "context": "Heritage, Celesta, Crest and Platinum Aura Edge Credit Card for Government Sector 2.99% 36.00% Club Vistara IndusInd Bank Explorer Credit Card 2.85% 34.00% Indulge Credit Card 1.79% 21.48% IndusInd"
+      }
+    ]
+  },
+  {
+    "id": "86741041b2f58d",
+    "issuer": "IndusInd Bank",
+    "name": "Credit Card Fees and Charges",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 100000,
+    "joiningFee": 100000,
+    "renewalFee": 100000,
+    "utilityRate": 1,
+    "foreignRewardRate": 3.5,
+    "forexMarkup": 1.5,
+    "categories": [
+      "utilities",
+      "forex",
+      "premium",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 14,
+      "upi": 0,
+      "forex": 55.5,
+      "lounge": 0,
+      "premium": 24,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 12,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Foreign currency markup ranges from 1.5% to 3.5%, with GST applicable wherever required.",
+      "Fuel transaction charges apply when cumulative spends exceed ₹30,000 or ₹50,000 in a statement cycle, depending on the card.",
+      "Reward redemption charges are ₹149 for cash redemption and ₹100 for other redemption categories."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 2.5,
+        "context": "mounts up to ₹100 to ₹1,300 for outstanding amounts above ₹50,000. Over-limit charges are 2.5% of the over-limit amount, subject to a minimum of ₹500. Cash advance charges are 2.5% of the withdrawn amount"
+      },
+      {
+        "value": 2.5,
+        "context": "are 2.5% of the over-limit amount, subject to a minimum of ₹500. Cash advance charges are 2.5% of the withdrawn amount, subject to a minimum of ₹300. Interest on cash advances is charged separately from t"
+      },
+      {
+        "value": 1.5,
+        "context": "ges range from ₹100 to ₹5,000, depending on the card. Foreign currency markup ranges from 1.5% to 3.5%, with GST applicable wherever required. Dynamic Currency Conversion charges are 1% or 2% plus GST, de"
+      },
+      {
+        "value": 3.5,
+        "context": "e from ₹100 to ₹5,000, depending on the card. Foreign currency markup ranges from 1.5% to 3.5%, with GST applicable wherever required. Dynamic Currency Conversion charges are 1% or 2% plus GST, depending"
+      },
+      {
+        "value": 1,
+        "context": "% to 3.5%, with GST applicable wherever required. Dynamic Currency Conversion charges are 1% or 2% plus GST, depending on the card. A 1% fee plus GST applies to rent payments through third-party merchan"
+      },
+      {
+        "value": 2,
+        "context": ".5%, with GST applicable wherever required. Dynamic Currency Conversion charges are 1% or 2% plus GST, depending on the card. A 1% fee plus GST applies to rent payments through third-party merchants. A"
+      },
+      {
+        "value": 1,
+        "context": "ired. Dynamic Currency Conversion charges are 1% or 2% plus GST, depending on the card. A 1% fee plus GST applies to rent payments through third-party merchants. A 1% fee plus GST applies when utility s"
+      },
+      {
+        "value": 1,
+        "context": "on the card. A 1% fee plus GST applies to rent payments through third-party merchants. A 1% fee plus GST applies when utility spends exceed ₹25,000, wallet-loading spends exceed ₹20,000, education paym"
+      }
+    ]
+  },
+  {
+    "id": "f5c8a2bdb6e745",
+    "issuer": "IndusInd Bank",
+    "name": "Things to Know Before Applying for an Instant Credit Card Online",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "shopping"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 8,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Interest rates & Fee – Keep an eye on the interest rates, annual fees, late payment charges and other fees associated with the card."
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "2e1da22a561340",
+    "issuer": "IndusInd Bank",
+    "name": "Credit Card Safety and Usage Tips",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "shopping",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 12,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 36
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "98cb88b6a3efb0",
+    "issuer": "IndusInd Bank",
+    "name": "Credit Card Sourcing Partners",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "premium"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 8,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "da33d3f9132580",
+    "issuer": "IndusInd Bank",
+    "name": "Can I apply for an add-on card?",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "981dad945e2ca1",
+    "issuer": "IndusInd Bank",
+    "name": "Can students below 21 apply for a credit card?",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "e8c28cdabd9559",
+    "issuer": "IndusInd Bank",
+    "name": "Can I use a credit card for UPI?",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "upi",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 24,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [
+      "Can I use a credit card for UPI?",
+      "Yes, you can use a Credit Card for UPI payments, as per the card’s policies.",
+      "The IndusInd Bank Platinum RuPay Credit Card allows you to transact via UPI and earn reward points on those transactions as well!",
+      "Simply open your UPI-enabled app, add the IndusInd Bank Platinum RuPay Credit Card, and set up the PIN. All UPI transactions done using the Card will reflect in your credit card statement."
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "31a9d0fdafee6c",
+    "issuer": "IndusInd Bank",
+    "name": "Which IndusInd Bank credit cards offer unlimited complimentary lounge access?",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 99,
+    "loungeUnlimited": true,
+    "categories": [
+      "travel",
+      "lounge",
+      "premium",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 164.5,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 61,
+      "premium": 29,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [
+      "Which IndusInd Bank credit cards offer unlimited complimentary lounge access?"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "02e98c65558d26",
+    "issuer": "IndusInd Bank",
+    "name": "Is a credit card a good option for buying jewellery within a ₹50,000 budget?",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "5d00c108af5330",
+    "issuer": "HSBC India",
+    "name": "Credit cards features",
+    "sourceUrl": "https://www.hsbc.co.in/credit-cards/google-pay/",
+    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 12,
+      "fuel": 20,
+      "travel": 16,
+      "shopping": 24,
+      "grocery": 0,
+      "dining": 8,
+      "utilities": 8,
+      "upi": 16,
+      "forex": 12,
+      "lounge": 0,
+      "premium": 32,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Foreign Exchange Rates",
+      "TravelOne Credit Card",
+      "Wealth Shopping Cart",
+      "Dining and Entertainment",
+      "Fuel surcharge waiver"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "f42a3121977402",
+    "issuer": "HSBC India",
+    "name": "Find the right card for you",
+    "sourceUrl": "https://www.hsbc.co.in/credit-cards/compare/",
+    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 16,
+      "fuel": 8,
+      "travel": 36,
+      "shopping": 28,
+      "grocery": 0,
+      "dining": 16,
+      "utilities": 8,
+      "upi": 24,
+      "forex": 8,
+      "lounge": 0,
+      "premium": 28,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 12,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Foreign Exchange Rates",
+      "TravelOne Credit Card",
+      "Wealth Shopping Cart",
+      "Dining and Entertainment",
+      "Compare interest rates, benefits and rewards. Credit is subject to status, affordability and applicable terms and conditions."
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "fd74e5783bfa4a",
+    "issuer": "HSBC India",
+    "name": "HSBC Taj Credit Card",
+    "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/taj/",
+    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 110000,
+    "joiningFee": 110000,
+    "renewalFee": 110000,
+    "maxRewardRate": 20,
+    "diningRate": 30,
+    "travelRate": 25,
+    "loungeVisits": 99,
+    "loungeUnlimited": true,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 12,
+      "fuel": 12,
+      "travel": 399.5,
+      "shopping": 32,
+      "grocery": 0,
+      "dining": 302,
+      "utilities": 12,
+      "upi": 16,
+      "forex": 12,
+      "lounge": 73,
+      "premium": 89,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 48
+    },
+    "detectedBenefits": [
+      "Foreign Exchange Rates",
+      "TravelOne Credit Card",
+      "Wealth Shopping Cart",
+      "Dining and Entertainment",
+      "Unlock a curated collection of benefits at Taj, SeleQtions, Gateway and Vivanta hotels across the globe. Enjoy exquisite stays, gourmet dining, exclusive access, bespoke experiences and much more."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 25,
+        "context": "n extraordinary experience. Enjoy unlimited room upgrades to the next level Get exclusive 25% savings on the Best Available Rate at Taj Hotels and other participating IHCL hotels Get four vouchers for se"
+      },
+      {
+        "value": 25,
+        "context": "ng IHCL hotels Get four vouchers for set meals for two at participating restaurants Enjoy 25% savings on food and beverages and Qmin deliveries Get 30% off, up to INR 1,500, when you book a table with Ea"
+      },
+      {
+        "value": 30,
+        "context": "participating restaurants Enjoy 25% savings on food and beverages and Qmin deliveries Get 30% off, up to INR 1,500, when you book a table with EazyDiner. T&Cs apply (PDF) Pure indulgence Whether you're"
+      },
+      {
+        "value": 15,
+        "context": "elax before you fly with unlimited airport lounge access globally. T&Cs apply (PDF) Save 15% on duty-free with AdaniOne mobile app (once per month; min order INR7,500; max discount INR3,000). T&Cs apply"
+      },
+      {
+        "value": 20,
+        "context": "international chauffer-driven airport transfers in a year. T&Cs apply (PDF) Enjoy up to 20% off up to INR20,000 on business class travel when you book with MakeMyTrip. T&Cs apply (PDF) Save 20%, up to"
+      },
+      {
+        "value": 20,
+        "context": "INR20,000 on business class travel when you book with MakeMyTrip. T&Cs apply (PDF) Save 20%, up to INR10,000, on domestic and international flights with Yatra. T&Cs apply (PDF) Rare rewards Earn rewar"
+      },
+      {
+        "value": 19,
+        "context": "xisting Apple product purchases via the HSBC Unicorn portal. T&Cs apply (PDF) Save up to 19% on EMI purchases Get up to 19% off on EMI Apple purchases via the HSBC Unicorn portal. T&Cs apply (PDF) Get"
+      },
+      {
+        "value": 19,
+        "context": "via the HSBC Unicorn portal. T&Cs apply (PDF) Save up to 19% on EMI purchases Get up to 19% off on EMI Apple purchases via the HSBC Unicorn portal. T&Cs apply (PDF) Get 33X Points at Dyson Earn 50 Poi"
+      },
+      {
+        "value": 20,
+        "context": "ints at Dyson Earn 50 Points per INR100 on direct Dyson purchases. T&Cs apply (PDF) Save 20% at Reliance Brand outlets Get up to INR10,000 off when you spend INR20,000 or more. T&Cs apply (PDF) VISA In"
+      },
+      {
+        "value": 50,
+        "context": "how (max discount per ticket INR 1,000 each, valid twice a month) T&Cs apply (PDF) . Save 50% at Starbucks Get up to INR 150 off your order, 4 times a month. T&Cs apply (PDF) . More exclusive offers View"
+      }
+    ]
+  },
+  {
+    "id": "fc875af6b7d9aa",
+    "issuer": "HSBC India",
+    "name": "HSBC TravelOne Credit Card",
+    "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/travelone/",
+    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 4999,
+    "joiningFee": 4999,
+    "renewalFee": 4999,
+    "shoppingRate": 15,
+    "diningRate": 30,
+    "travelRate": 50,
+    "loungeVisits": 4,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 16,
+      "fuel": 8,
+      "travel": 468,
+      "shopping": 153,
+      "grocery": 0,
+      "dining": 306,
+      "utilities": 8,
+      "upi": 16,
+      "forex": 16,
+      "lounge": 36,
+      "premium": 68,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "HSBC TravelOne Credit Card | Travel Credit Card - HSBC IN",
+      "Foreign Exchange Rates",
+      "TravelOne Credit Card",
+      "Wealth Shopping Cart",
+      "Dining and Entertainment"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 15,
+        "context": "ints to Air Miles 1 to 1 in the app Find out how to redeem instantly Travel in style Save 15% on domestic and international holiday Bookings at Yatra, EaseMyTrip, PayTM Travel and ClearTrip Save up to 20"
+      },
+      {
+        "value": 20,
+        "context": "nternational holiday Bookings at Yatra, EaseMyTrip, PayTM Travel and ClearTrip Save up to 20% at select duty free stores in India Save when booking your getaway at StayVista Enjoy Mastercard World Platfo"
+      },
+      {
+        "value": 15,
+        "context": "unts, hands-free shopping, sale events and reserved parking. Register [@bicester-village] 15% off flights and hotel bookings with Yatra Save on international and domestic flights and hotels when you book"
+      },
+      {
+        "value": 15,
+        "context": "ou book through the Yatra app or website. Use promo code: HSBCTRAVEL1. T&Cs apply (PDF) . 15% off international and domestic flights with EaseMyTrip Save on international and domestic flights and hotels"
+      },
+      {
+        "value": 15,
+        "context": "book through the EaseMyTrip app or website. Use promo code: EMTHSBCT1. T&Cs apply (PDF) . 15% off international and domestic flights with Paytm Save on international and domestic flights when you book th"
+      },
+      {
+        "value": 15,
+        "context": "you book through the Paytm app or website. Use promo code: HSBCTRAVEL. T&Cs apply (PDF) . 15% off international and domestic flights with Cleartrip Save on international and domestic flights when you boo"
+      },
+      {
+        "value": 30,
+        "context": "h the ClearTrip app or website. Use promo code: CTHSBCTRAVELONE. T&Cs apply (PDF) . Up to 30% off on dining with EazyDiner Get unparalleled dining offers with 30% off your bill (up to INR1,000) with Eazy"
+      },
+      {
+        "value": 30,
+        "context": "apply (PDF) . Up to 30% off on dining with EazyDiner Get unparalleled dining offers with 30% off your bill (up to INR1,000) with EazyDiner. T&Cs apply (PDF) . 11% off hotel bookings with StayVista Stay"
+      },
+      {
+        "value": 11,
+        "context": "dining offers with 30% off your bill (up to INR1,000) with EazyDiner. T&Cs apply (PDF) . 11% off hotel bookings with StayVista Stay for less when you make a hotel booking through the StayVista website ("
+      },
+      {
+        "value": 10,
+        "context": "Cs apply (PDF) . Savings on movies and events with the District app by Zomato Enjoy up to 10% off events with promo code HSBCTOEVENTS, and dining with promo code HSBCTODINING. Plus, buy 1 movie ticket an"
+      }
+    ]
+  },
+  {
+    "id": "366fa47d1f8465",
+    "issuer": "HSBC India",
+    "name": "HSBC Live+ Credit Card",
+    "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/live-plus/",
+    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 999,
+    "joiningFee": 999,
+    "renewalFee": 999,
+    "feeWaiverSpend": 200000,
+    "maxCashbackRate": 10,
+    "maxRewardRate": 10,
+    "fuelRate": 10,
+    "shoppingRate": 10,
+    "groceryRate": 10,
+    "diningRate": 20,
+    "utilityRate": 10,
+    "travelRate": 50,
+    "forexMarkup": 1.99,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "grocery",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 96,
+      "fuel": 106,
+      "travel": 419.5,
+      "shopping": 122,
+      "grocery": 106,
+      "dining": 236,
+      "utilities": 124,
+      "upi": 20,
+      "forex": 43.08,
+      "lounge": 28,
+      "premium": 69,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 21.35,
+      "co-branded": 64
+    },
+    "detectedBenefits": [
+      "Cashback Credit Card | HSBC Live+ - HSBC IN",
+      "Foreign Exchange Rates",
+      "TravelOne Credit Card",
+      "Wealth Shopping Cart",
+      "Dining and Entertainment"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 10,
+        "context": "on all the things you love. More categories, more privileges, more ways to get rewarded. 10% accelerated cashback, up to INR1,200 a month, on all dining, food delivery, grocery, shopping[@live-plus-cash"
+      },
+      {
+        "value": 1.5,
+        "context": "elivery, grocery, shopping[@live-plus-cashback-category-clarification] and utility spends 1.5% unlimited cashback on most other spends[@liveplus-unlimited-cashback-exclusions] Joining fee and annual fee J"
+      },
+      {
+        "value": 10,
+        "context": "edit card application This link will open in a new window Our welcome gifts to you Enjoy 10% cashback on shopping at Myntra until 31 October 2026. Experience Starbucks premium coffee tasting sessions an"
+      },
+      {
+        "value": 10,
+        "context": "ard after submitting your income documents with Account Aggregator. T&Cs apply (PDF) Get 10% cashback and more Dine Get 10% cashback on dining and food delivery, and exclusive restaurant benefits with T"
+      },
+      {
+        "value": 10,
+        "context": "e documents with Account Aggregator. T&Cs apply (PDF) Get 10% cashback and more Dine Get 10% cashback on dining and food delivery, and exclusive restaurant benefits with The Live+ Reserve. Shop Enjoy 10"
+      },
+      {
+        "value": 10,
+        "context": "g and food delivery, and exclusive restaurant benefits with The Live+ Reserve. Shop Enjoy 10% cashback on groceries, shopping[@live-plus-cashback-category-clarification] and utility spends, plus 1.5% unl"
+      },
+      {
+        "value": 1.5,
+        "context": "groceries, shopping[@live-plus-cashback-category-clarification] and utility spends, plus 1.5% unlimited cashback[@liveplus-unlimited-cashback-exclusions] at other retailers. Travel Enjoy 2 domestic and 1"
+      },
+      {
+        "value": 1.99,
+        "context": "omplimentary airport lounge visits[@airport-lounge-live-plus], and lower forex mark up of 1.99% on international transactions. Lifestyle Unlock exclusive hotel offers, travel assistance and bespoke lifesty"
+      },
+      {
+        "value": 20,
+        "context": "1 international airport lounge visits each year, plus a complimentary 1GB Global eSIM and 20% off for top-ups.[@airport-lounge-live-plus] Know more (PDF) Save more while you travel internationally with"
+      },
+      {
+        "value": 1.99,
+        "context": "port-lounge-live-plus] Know more (PDF) Save more while you travel internationally with a 1.99% forex mark-up fee[@international-cashback-change] Enjoy a complimentary 3rd night for every 2 consecutive pai"
+      }
+    ]
+  },
+  {
+    "id": "8745a0f6e36003",
+    "issuer": "HSBC India",
+    "name": "HSBC Premier Credit Card",
+    "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/premier/",
+    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 20000,
+    "joiningFee": 12000,
+    "renewalFee": 20000,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "shoppingRate": 10,
+    "diningRate": 30,
+    "travelRate": 20,
+    "loungeVisits": 99,
+    "loungeUnlimited": true,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 16,
+      "fuel": 39,
+      "travel": 368.5,
+      "shopping": 102,
+      "grocery": 0,
+      "dining": 294,
+      "utilities": 8,
+      "upi": 16,
+      "forex": 12,
+      "lounge": 61,
+      "premium": 77,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Foreign Exchange Rates",
+      "TravelOne Credit Card",
+      "Wealth Shopping Cart",
+      "Dining and Entertainment",
+      "From travel to gourmet dining to lifestyle privileges, your HSBC Premier Credit Card offers a range of exclusive benefits."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 1,
+        "context": "n be used on shopping, dining, entertainment and airline miles. Fuel surcharge waiver Get 1% fuel surcharge waiver at all fuel stations across India on transactions from INR400 to INR4,000​​​​​​​[@fuel-"
+      },
+      {
+        "value": 0.99,
+        "context": "port lounge access for cardholders, plus 8 international guest visits[@lounge-list] Get a 0.99% foreign exchange markup, anywhere and any time globally – no conditions apply. Relax with international trave"
+      },
+      {
+        "value": 20,
+        "context": "ance covering lost luggage, delays, travel documents and much more. Know more Save up to 20% on hotel bookings with Agoda. Know more Get one night free when you book an eligible stay at participating h"
+      },
+      {
+        "value": 30,
+        "context": "ith buy one, get one offers at BookMyShow. Know more Get unparalleled dining offers with 30% off your bill (up to INR1,500) with EazyDiner. T&Cs apply (PDF) Enjoy VIP guest experiences, eVIP pass disco"
+      },
+      {
+        "value": 10,
+        "context": "ier Credit Card also gives you: Savings on dining and movies with District by Zomato Save 10% on dining, activities and shopping, and enjoy movies on the big screen for less with buy-one-get-one cinema t"
+      }
+    ]
+  },
+  {
+    "id": "f2dd79a02aa4ab",
+    "issuer": "HSBC India",
+    "name": "HSBC Visa Platinum Credit Card",
+    "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/visa-platinum/",
+    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 0,
+    "joiningFee": 0,
+    "renewalFee": 0,
+    "feeWaiverSpend": 10000,
+    "maxCashbackRate": 15,
+    "shoppingRate": 10,
+    "diningRate": 10,
+    "travelRate": 15,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 136,
+      "fuel": 16,
+      "travel": 197,
+      "shopping": 118,
+      "grocery": 0,
+      "dining": 118,
+      "utilities": 8,
+      "upi": 20,
+      "forex": 8,
+      "lounge": 0,
+      "premium": 40,
+      "business": 35,
+      "lifetime-free": 55,
+      "beginner": 57,
+      "low-fee": 46,
+      "co-branded": 80
+    },
+    "detectedBenefits": [
+      "Foreign Exchange Rates",
+      "TravelOne Credit Card",
+      "Wealth Shopping Cart",
+      "Dining and Entertainment",
+      "The credit card that brings you the best of the best with exciting rewards and exclusive privileges."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 15,
+        "context": "ight seat selections twice a year on domestic flights booked with MakeMyTrip. T&Cs apply 15% cashback added to your MakeMyTrip Wallet in 'My Cash' for hotel stays in India when you book with MakeMyTrip"
+      },
+      {
+        "value": 10,
+        "context": "num Credit Card also comes with Savings on dining and movies with District by Zomato Save 10% on dining, activities and shopping, and enjoy movies on the big screen for less with buy-one-get-one cinema t"
+      }
+    ]
+  },
+  {
+    "id": "2894404edb1902",
+    "issuer": "HSBC India",
+    "name": "HSBC RuPay Platinum Credit Card",
+    "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/rupay-platinum-credit-card/",
+    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "shoppingRate": 10,
+    "diningRate": 10,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 16,
+      "fuel": 20,
+      "travel": 40,
+      "shopping": 118,
+      "grocery": 0,
+      "dining": 114,
+      "utilities": 8,
+      "upi": 36,
+      "forex": 8,
+      "lounge": 0,
+      "premium": 32,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 12,
+      "co-branded": 60
+    },
+    "detectedBenefits": [
+      "Foreign Exchange Rates",
+      "TravelOne Credit Card",
+      "Wealth Shopping Cart",
+      "Dining and Entertainment",
+      "Enjoy exciting rewards, exclusive perks and effortless payments with UPI."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 10,
+        "context": "ay Get even more from your card Savings on dining and movies with District by Zomato Save 10% on dining, activities and shopping, and enjoy movies on the big screen for less with buy-one-get-one cinema t"
+      }
+    ]
+  },
+  {
+    "id": "00805fd0a2471e",
+    "issuer": "HSBC India",
+    "name": "HSBC RuPay Cashback Credit Card",
+    "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/rupay-cashback-credit-card/",
+    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 499,
+    "joiningFee": 499,
+    "renewalFee": 499,
+    "feeWaiverSpend": 200000,
+    "maxCashbackRate": 10,
+    "shoppingRate": 10,
+    "groceryRate": 10,
+    "diningRate": 10,
+    "upiRate": 1,
+    "forexMarkup": 0,
+    "loungeVisits": 10,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "grocery",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 96,
+      "fuel": 8,
+      "travel": 43,
+      "shopping": 114,
+      "grocery": 94,
+      "dining": 110,
+      "utilities": 8,
+      "upi": 46,
+      "forex": 55,
+      "lounge": 52,
+      "premium": 42,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 57,
+      "low-fee": 29.68,
+      "co-branded": 60
+    },
+    "detectedBenefits": [
+      "RuPay Credit Card UPI | Apply Online - HSBC IN",
+      "Foreign Exchange Rates",
+      "TravelOne Credit Card",
+      "Wealth Shopping Cart",
+      "Dining and Entertainment"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 0,
+        "context": "with Account Aggregator. T&Cs apply (PDF) Choose our RuPay Cashback Credit Card to enjoy 0% forex mark-up Save when you spend abroad, with 0% FX mark-up on your transactions until 31 December 2026. T&C"
+      },
+      {
+        "value": 0,
+        "context": "our RuPay Cashback Credit Card to enjoy 0% forex mark-up Save when you spend abroad, with 0% FX mark-up on your transactions until 31 December 2026. T&Cs apply (PDF) . UPI integration Link your credit c"
+      },
+      {
+        "value": 10,
+        "context": "ey to make money Earn up to INR400 on your spending every month, in store and online. Get 10% cashback on dining, food delivery and grocery spending Plus earn 1% cashback on all other eligible spends[@un"
+      },
+      {
+        "value": 1,
+        "context": "tore and online. Get 10% cashback on dining, food delivery and grocery spending Plus earn 1% cashback on all other eligible spends[@unlimited-cashback-exclusions] Make instant UPI payments Enjoy quick,"
+      }
+    ]
+  },
+  {
+    "id": "7be14794fa1896",
+    "issuer": "HSBC India",
+    "name": "Credit card rewards",
+    "sourceUrl": "https://www.hsbc.co.in/credit-cards/rewards/",
+    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 8,
+      "fuel": 8,
+      "travel": 40,
+      "shopping": 28,
+      "grocery": 0,
+      "dining": 16,
+      "utilities": 8,
+      "upi": 20,
+      "forex": 8,
+      "lounge": 0,
+      "premium": 28,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Rewards on Credit Cards | Redeem Reward Points - HSBC IN",
+      "Foreign Exchange Rates",
+      "TravelOne Credit Card",
+      "Wealth Shopping Cart",
+      "Dining and Entertainment"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "f40ee9527309c5",
+    "issuer": "HSBC India",
+    "name": "Ultimate guide to cashback credit cards",
+    "sourceUrl": "https://www.hsbc.co.in/credit-cards/",
+    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "cashback"
+    ],
+    "categoryScores": {
+      "cashback": 8,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Ultimate guide to cashback credit cards",
+      "See how making purchases on your credit card can earn you cashback as a percentage of your spending."
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "b3ec9c953c21c4",
+    "issuer": "Standard Chartered India",
+    "name": "Discover endless benefits & privileges with our range of Credit Cards",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "feeWaiverSpend": 4,
+    "loungeVisits": 1,
+    "categories": [
+      "fuel",
+      "lounge"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 8,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 8,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Earn 4X rewards on all retail spends* + bonus 4X rewards*. No Joining Fee, Free lounge access, Fuel Surcharge waiver and many more."
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "b182c861316471",
+    "issuer": "Standard Chartered India",
+    "name": "Rewards Credit Card",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 1,
+    "categories": [
+      "lounge",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 8,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Get Free Enjoy 4X Lounge access*",
+      "rewards on all retail spends* + bonus 4X rewards* on monthly spends* over INR 20,000. 1 per calendar quarter"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "492155a57b54bf",
+    "issuer": "Standard Chartered India",
+    "name": "Standard Chartered EaseMyTrip Credit Card",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "maxRewardRate": 20,
+    "travelRate": 20,
+    "loungeVisits": 2,
+    "categories": [
+      "travel",
+      "lounge",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 163,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 12,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": [
+      {
+        "value": 20,
+        "context": "Standard Chartered EaseMyTrip Credit Card Flat Get Enjoy 20% & 10% 10x Complimentary flat 20% off on hotels* & 10% off on flights*- Book now at EaseMyTrip. rewards * for"
+      },
+      {
+        "value": 10,
+        "context": "Standard Chartered EaseMyTrip Credit Card Flat Get Enjoy 20% & 10% 10x Complimentary flat 20% off on hotels* & 10% off on flights*- Book now at EaseMyTrip. rewards * for ₹100 s"
+      },
+      {
+        "value": 20,
+        "context": "tandard Chartered EaseMyTrip Credit Card Flat Get Enjoy 20% & 10% 10x Complimentary flat 20% off on hotels* & 10% off on flights*- Book now at EaseMyTrip. rewards * for ₹100 spent at standalone hotel an"
+      },
+      {
+        "value": 10,
+        "context": "eMyTrip Credit Card Flat Get Enjoy 20% & 10% 10x Complimentary flat 20% off on hotels* & 10% off on flights*- Book now at EaseMyTrip. rewards * for ₹100 spent at standalone hotel and airline websites/ap"
+      }
+    ]
+  },
+  {
+    "id": "afe28fc04460b5",
+    "issuer": "Standard Chartered India",
+    "name": "Smart Credit Card",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "maxCashbackRate": 2,
+    "shoppingRate": 2,
+    "categories": [
+      "cashback",
+      "shopping",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 18,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": [
+      {
+        "value": 2,
+        "context": "Smart Credit Card Get EMI Maximize your 2%* Cashback Conversion Credit Card benefits on all online spends and 1%* Cashback on all* other spends. convert"
+      },
+      {
+        "value": 1,
+        "context": "t EMI Maximize your 2%* Cashback Conversion Credit Card benefits on all online spends and 1%* Cashback on all* other spends. convert your eligible transactions into a 3-month EMI and enjoy a special int"
+      },
+      {
+        "value": 0.99,
+        "context": "onvert your eligible transactions into a 3-month EMI and enjoy a special interest rate of 0.99% per month with no processing fee. with an extended 90-day interest free period after issuance* by paying only"
+      }
+    ]
+  },
+  {
+    "id": "2d0959e8140b33",
+    "issuer": "Standard Chartered India",
+    "name": "Ultimate Credit Card",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "maxCashbackRate": 5,
+    "maxRewardRate": 5,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "travel",
+      "shopping",
+      "lounge",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 44,
+      "fuel": 0,
+      "travel": 9.5,
+      "shopping": 35,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 12,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Earn Get Four 5 Reward* points 5% cashback* Complimentary for every INR 150 spent. Each reward point is worth INR 1 on all duty free spends complimentary domestic airport lounge access per quarter"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 5,
+        "context": "Ultimate Credit Card Earn Get Four 5 Reward* points 5% cashback* Complimentary for every INR 150 spent. Each reward point is worth INR 1 on all duty free spends com"
+      }
+    ]
+  },
+  {
+    "id": "7ea3888555d2eb",
+    "issuer": "Standard Chartered India",
+    "name": "Platinum Rewards Card",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Platinum Rewards Card",
+      "Earn Earn Earn 5x 5x 1 reward points per INR 150 spent at fine-dining outlets. reward points per INR 150 spent on fuel reward point per INR 150 spent on all other transactions"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "97006da922bdf4",
+    "issuer": "Standard Chartered India",
+    "name": "Super Value Titanium Credit Card",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "maxCashbackRate": 5,
+    "maxRewardRate": 5,
+    "fuelRate": 5,
+    "utilityRate": 5,
+    "categories": [
+      "cashback",
+      "fuel",
+      "shopping",
+      "utilities"
+    ],
+    "categoryScores": {
+      "cashback": 44,
+      "fuel": 49,
+      "travel": 0,
+      "shopping": 35,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 54,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Enjoy 5%* cashback on fuel, telephone & utility bills & 1 reward point per ₹150 on all other spends"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 5,
+        "context": "Super Value Titanium Credit Card Enjoy 5%* cashback on fuel, telephone & utility bills & 1 reward point per ₹150 on all other spends Know More"
+      }
+    ]
+  },
+  {
+    "id": "18fd321ba2beac",
+    "issuer": "Standard Chartered India",
+    "name": "Manhattan Credit Card",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "maxCashbackRate": 5,
+    "maxRewardRate": 5,
+    "groceryRate": 5,
+    "categories": [
+      "cashback",
+      "shopping",
+      "grocery"
+    ],
+    "categoryScores": {
+      "cashback": 44,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 35,
+      "grocery": 49,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Earn double benefits with both 5%* cashback at supermarkets and 3x rewards for every other purchase."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 5,
+        "context": "Manhattan Credit Card Earn double benefits with both 5%* cashback at supermarkets and 3x rewards for every other purchase. Know More"
+      }
+    ]
+  },
+  {
+    "id": "ba115cf511cd49",
+    "issuer": "Standard Chartered India",
+    "name": "DigiSmart Credit Card",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "shopping"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 8,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "3fdae4dab240dd",
+    "issuer": "Federal Bank",
+    "name": "Step-by-Step Process to Apply for Credit Card",
+    "sourceUrl": "https://www.federal.bank.in/credit-card-activation",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "travel",
+      "shopping",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 8,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 8,
+      "forex": 12,
+      "lounge": 0,
+      "premium": 12,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 47,
+      "low-fee": 0,
+      "co-branded": 48
+    },
+    "detectedBenefits": [
+      "Send Money to India in Foreign Currency"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "4026177c1d0e12",
+    "issuer": "Federal Bank",
+    "name": "Credit Card Features & Benefits",
+    "sourceUrl": "https://www.federal.bank.in/credit-cards",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "fuel"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 16,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Fuel Surcharge Waiver - Save more on every fuel transaction across select fuel stations (T&C apply)"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "ac54ebed35dd8a",
+    "issuer": "Federal Bank",
+    "name": "Documents Required for Credit Card",
+    "sourceUrl": "https://www.federal.bank.in/credit-cards",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 39,
+      "low-fee": 0,
+      "co-branded": 44
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "9eb85fff279de9",
+    "issuer": "Federal Bank",
+    "name": "Federal Bank Credit Card Charges, Fees & Interest Rates",
+    "sourceUrl": "https://www.federal.bank.in/how-to-use-credit-cards-wisely",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "travel",
+      "shopping",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 12,
+      "shopping": 20,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 8,
+      "forex": 12,
+      "lounge": 0,
+      "premium": 24,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 51,
+      "low-fee": 0,
+      "co-branded": 48
+    },
+    "detectedBenefits": [
+      "Send Money to India in Foreign Currency"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "eacf7a8ef1f71a",
+    "issuer": "Federal Bank",
+    "name": "Federal Bank Credit Card EMI",
+    "sourceUrl": "https://www.federal.bank.in/credit-card-emi",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "maxCashbackRate": 1.33,
+    "shoppingRate": 1,
+    "categories": [
+      "cashback",
+      "travel",
+      "shopping",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 26.64,
+      "fuel": 0,
+      "travel": 16,
+      "shopping": 35,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 8,
+      "forex": 12,
+      "lounge": 0,
+      "premium": 12,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 51,
+      "low-fee": 0,
+      "co-branded": 56
+    },
+    "detectedBenefits": [
+      "Credit Card EMI – Flexible Tenure & Cashback Offers | Federal Bank",
+      "Send Money to India in Foreign Currency",
+      "Attractive Cashbacks & Instant Discounts",
+      "Benefit from attractive cashbacks and instant discounts on select merchants and brands.",
+      "Instant discounts and cashback on select brands and merchants."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 1.33,
+        "context": "s Instant discounts and cashback on select brands and merchants. Interest rate starts at 1.33% p.m. Flexible tenures ranging from 3 to 24 months. Low processing fee, starting at just ₹99. Example: Buying"
+      },
+      {
+        "value": 1.33,
+        "context": "ses EMI mode of payment. 3. Customer checks and confirms the interest rate (applicable at 1.33% p.m.) and tenure starting from 3 to 24 months. 4. Processing fees charged @1% or min ₹99 will be applicable."
+      },
+      {
+        "value": 1,
+        "context": "cable at 1.33% p.m.) and tenure starting from 3 to 24 months. 4. Processing fees charged @1% or min ₹99 will be applicable. 5. Customer confirms the transaction by entering the Credit card PIN. 6. Custo"
+      },
+      {
+        "value": 1.33,
+        "context": "nt at the checkout page. 3. Customer checks and confirms the interest rate (applicable at 1.33% p.m.) and tenure starting from 3 to 24 months. 4. Customer confirms the transaction via OTP received on mail/"
+      },
+      {
+        "value": 1.5,
+        "context": "rtner merchants. Tenure options from 3 to 24 months. Lowest interest rates applicalble at 1.5% p.m Lower processing fees starting at ₹ 99. Eligibility Transactions settled and unbilled retail purchases f"
+      },
+      {
+        "value": 18,
+        "context": "nverted into EMI. Rates & Charges Feature Details Post Purchase EMI Interest Rate Flat 18% p.a. (1.5% monthly) across all tenures from 3 to 24 months . Merchant EMI Interest Rate Reduced rate of 15."
+      },
+      {
+        "value": 1.5,
+        "context": "to EMI. Rates & Charges Feature Details Post Purchase EMI Interest Rate Flat 18% p.a. (1.5% monthly) across all tenures from 3 to 24 months . Merchant EMI Interest Rate Reduced rate of 15.99% p.a. (1"
+      },
+      {
+        "value": 15.99,
+        "context": "ly) across all tenures from 3 to 24 months . Merchant EMI Interest Rate Reduced rate of 15.99% p.a. (1.33% monthly) across all tenures from 3 to 24 months . Processing Fees 1% of the transaction amount"
+      },
+      {
+        "value": 1.33,
+        "context": "l tenures from 3 to 24 months . Merchant EMI Interest Rate Reduced rate of 15.99% p.a. (1.33% monthly) across all tenures from 3 to 24 months . Processing Fees 1% of the transaction amount or ₹99 , whi"
+      },
+      {
+        "value": 1,
+        "context": "of 15.99% p.a. (1.33% monthly) across all tenures from 3 to 24 months . Processing Fees 1% of the transaction amount or ₹99 , whichever is higher, during EMI conversion. Foreclosure Charges 3% of th"
+      }
+    ]
+  },
+  {
+    "id": "e184626fde86e7",
+    "issuer": "Federal Bank",
+    "name": "Things to Know Before Applying for a Credit Card",
+    "sourceUrl": "https://www.federal.bank.in/credit-cards-mitc",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "beginner"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": [
+      {
+        "value": 1.7,
+        "context": "%PDF-1.7%���� 1875 0 obj >endobj xref 1875 52 0000000016 00000 n 0000002900 00000 n 0000003051 00000 n 0000003095 0000"
+      },
+      {
+        "value": 0,
+        "context": "00 n 0000002684 00000 n 0000001367 00000 n trailer ]/Prev 697468/XRefStm 2684>> startxref 0 %%EOF 1926 0 obj >stream hެUkLSg\u0018~υ� \u0014N+��5�Pnn#�� h���b�t���t�N�\u000e�\u000et�j\u001as�t�kJ�M.��\u0010\u0007nQȒ���\u0003(03&c:�ܐ2\u0012�t�#\u0012M�˾s"
+      },
+      {
+        "value": 3,
+        "context": "`;q*�������V\u001c��� >stream H��WKo\u001b7\u0010� ��Q �3|\u0003\u0002\u0001i-\u0017)��E\u0005�\u0010�`\u0014��C��ɡ?�3��j�\u0012���\u0018�>�� �\u001f�_��3%\u0015���A(a��\u001aE0 #������;�4��\b���\u0002P\u001c\u001e�3�*\u0001�8�^X\u0015����7i\u0013�|�a>��\u0010����hK�?4B�\u0011���C��FĔ��\u0011^I\u001b�0�I ��H�\u0002�t&;���ퟻ�^\u001c���"
+      },
+      {
+        "value": 2,
+        "context": "}�Z�\u0016��!\u001e\u001b��.�������+������3�m�N˶f��쵒�����RⰭ� �� EP� S�O�!��`��h(���_r\u0014�6��w�Ȯ�K� �ޯ�\u0015�2%��� %TFlu(r� K ���ퟣ*�Ț\u0014\u001d��\u001d����N���r�\u001ct\u001e�\u0014�R�c�j�\u0004� TԻ��!I-�7�\u000fn�4Q�!��{}E�|���yY���U�\u001c���-�\u0016�����^^VԣG����$5"
+      },
+      {
+        "value": 5,
+        "context": "纵kV�2w���lminjl������2\u0019+WT���\u001a��K�� �����,����HO�����D�\u00117�d6��52\u0002���A�-2\u0002[��V �i�Ӫ��ezuv�>5%H�6\u0004�j���hRI1�X�\u001d\u0003\u0006@\u0001�`.��.d����U�\u0016#7\b=E�Z�x�sL�Y��\"�5M � �t��lf�2��\u0018fUV�o�Ԍ Z\u0003���\u0011�UD�; ���ViY5��\u0005�\u0011)�����P�9"
+      },
+      {
+        "value": 8,
+        "context": "\b\u001b=��׍VU�Je\u0015kت|�Em�F6Hh\u0017�Ac�\u0014dQ�j��p��l0�fՀ�BI#,޾lD��\u0017��/���\u0017�\u001f�0�lL2������ \u0016��H/�$\u0015i�l +�8%���.�\u0010��F\u0019��kW�\u0014\\��чQ�%����9B:���K ?�s@3�'���x��\u0002�\u0014F�d�ID��s��\u0005Z��ѹ�tR��NF�S�\u0016��q�y\u0012`]0zB��q�\b�,�/�\u0011\u0017]�e\u000eS�\u0000�\u0007"
+      },
+      {
+        "value": 6,
+        "context": "�$�\u001b��\u001cY�\u0016�#b2\"a��؏�z*����h�f��\u0002u����:� p[u��ʰIA# J\u0002��A��\u0011��\u0005ٲ�\u0006��e�D\u0019*�%E5�c�M�&�NQ��[�!6%�0aF��bՙ��\u0000�j���\u0013�3�5�j@� .h���ji)�ST���j�\u001a\u00164��YL v���\u0010d1Ts\u001a���\u001a��\u0010�G'!8Q��5�u�BUF��� �yk_��\u001du\u00005���\"�7�ޖ,6�\u0006 H"
+      },
+      {
+        "value": 7,
+        "context": "%��\u0016�\u0019뉽Xg�|�� ֘��\u0010,+�|[f�d� �\u0010���d��aW��ߨi\u0000�h�`�Xt�����w�\u001c�E>��u��o}���}_�\u0017���(�׶���� �jd�7%\u0010q���쿽t \"0�R��ca�R\u001f�6��X �\u0014\u0014F�|\u0003���[,\u001f\u0016$\u001f2�͍ ��\\�\\QX6o�ydsB�\u0013�F\u0017�w�.C�QЁ����\u0012��:b��am5�ʐ'PVhГ�`&��+\u001fC`� d\b��;"
+      },
+      {
+        "value": 1,
+        "context": "b7q\u0012�H�\u0003\u0003��m��� _/U�a+�z�¶� g��*�\u0000�\u0014q���4CEɿ\"\bBNE���������D\u000f��\u001ag2\u0003\u0006�ޓ^oR\u000fZRCw$\u0007\u0018C���``G���1%_�z �>2�SoaW\u0012sD�N�Hrlo���X�����F\u0012�x�9Z������嵉�� �뤤���37N/A��Q� �t|[��\u000e��Lr�4�S֮�zЃ�Hn �1\u0003Lo���2\u00143�Kr\u001d� &jdlk�"
+      },
+      {
+        "value": 8,
+        "context": "zˬ\u001cg-C-{e� 8En�KX�p�\u0005߂y03�8��K`y�1XX��yM� �tyC^�\u0002$I�Fc+��� ,�\u001eػ\u001c\u0016V�Hgf_:�\u0001��#�0T��wQW�SD�\\8%��\u001c;�57F���X�\u0003�!9x7q\u0000\\�\u000eA���4C[�`^(\u001f:e���\u0003\u0016�F�Ud��\u0001}\u001a�ȊHD!\u001d��j0�\u001cIv�l�@MK��]�Ѩ�#��\u0019��T |�yo���\u001b!�ν�\u001f�Q*ஊ�I?b4�"
+      }
+    ]
+  },
+  {
+    "id": "945d753850d732",
+    "issuer": "Federal Bank",
+    "name": "Can I cancel my credit card at any time?",
+    "sourceUrl": "https://www.federal.bank.in/credit-cards",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [
+      "Reward points are redeemed (if applicable)"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "ca0aa10f665c49",
+    "issuer": "Federal Bank",
+    "name": "Credit Card Application",
+    "sourceUrl": "https://www.federal.bank.in/credit-cards",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "cf1b5919b2aaf3",
+    "issuer": "Federal Bank",
+    "name": "Additional details about Add-on Card ?",
+    "sourceUrl": "https://www.federal.bank.in/add-on-cards",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "shoppingRate": 1,
+    "diningRate": 1,
+    "travelRate": 1,
+    "loungeVisits": 1,
+    "categories": [
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 27,
+      "travel": 32.5,
+      "shopping": 31,
+      "grocery": 0,
+      "dining": 21,
+      "utilities": 0,
+      "upi": 8,
+      "forex": 12,
+      "lounge": 16,
+      "premium": 13,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 47,
+      "low-fee": 0,
+      "co-branded": 56
+    },
+    "detectedBenefits": [
+      "Send Money to India in Foreign Currency",
+      "Earn 10x Rewards on your first transaction",
+      "Enjoy our bespoke 3-2-1 rewards structure curated for you & your family for spends on various categories",
+      "Gain access to a wide variety of offers and deals , including travel, food & dining, shopping, sports, entertainment, lifestyle and much more.",
+      "1% fuel surcharge waiver at all fuel stations across India. (For Celesta and Imperio Credit Cards)"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 1,
+        "context": "ncluding travel, food & dining, shopping, sports, entertainment, lifestyle and much more. 1% fuel surcharge waiver at all fuel stations across India. (For Celesta and Imperio Credit Cards) Key Points A"
+      }
+    ]
+  },
+  {
+    "id": "fd6d1f676cd301",
+    "issuer": "Federal Bank",
+    "name": "Secured Credit Cards",
+    "sourceUrl": "https://www.federal.bank.in/credit-cards",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
     "confidence": "low",
     "categories": [
       "beginner"
@@ -2057,6 +11557,848 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     },
     "detectedBenefits": [],
     "detectedPercentages": []
+  },
+  {
+    "id": "ac6a1a167dc412",
+    "issuer": "Federal Bank",
+    "name": "Debit Cards Vs Credit Cards",
+    "sourceUrl": "https://www.federal.bank.in/difference-between-debit-cards-and-credit-cards",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "travel",
+      "shopping",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 8,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 8,
+      "forex": 12,
+      "lounge": 0,
+      "premium": 12,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 47,
+      "low-fee": 0,
+      "co-branded": 48
+    },
+    "detectedBenefits": [
+      "Send Money to India in Foreign Currency"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "16cd1ab63e915d",
+    "issuer": "Federal Bank",
+    "name": "Prevent your Credit Card from unauthorised use",
+    "sourceUrl": "https://www.federal.bank.in/prevent-your-credit-card-from-unauthorised-use",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "travel",
+      "shopping",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 8,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 8,
+      "forex": 12,
+      "lounge": 0,
+      "premium": 12,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 47,
+      "low-fee": 0,
+      "co-branded": 48
+    },
+    "detectedBenefits": [
+      "Send Money to India in Foreign Currency"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "893d41d4d8ddcc",
+    "issuer": "Federal Bank",
+    "name": "Everything you should know about Add-On Credit Cards",
+    "sourceUrl": "https://www.federal.bank.in/everything-you-should-know-about-add-on-credit-cards",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 1,
+    "categories": [
+      "travel",
+      "shopping",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 17.5,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 8,
+      "forex": 12,
+      "lounge": 12,
+      "premium": 13,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 51,
+      "low-fee": 0,
+      "co-branded": 48
+    },
+    "detectedBenefits": [
+      "Send Money to India in Foreign Currency",
+      "The same cash back and reward points as the main card apply to transactions made using the add-on card.",
+      "Access to the VIP airport lounge is provided with a few cards."
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "239908f16b2110",
+    "issuer": "Federal Bank",
+    "name": "Lost your federal bank card? Here are the ways to block it.",
+    "sourceUrl": "https://www.federal.bank.in/ways-to-block-a-lost-federal-bank-card",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "travel",
+      "shopping",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 8,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 8,
+      "forex": 12,
+      "lounge": 0,
+      "premium": 12,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 47,
+      "low-fee": 0,
+      "co-branded": 48
+    },
+    "detectedBenefits": [
+      "Send Money to India in Foreign Currency"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "d0dad6d346424b",
+    "issuer": "Federal Bank",
+    "name": "Understand the Components of your Credit Card",
+    "sourceUrl": "https://www.federal.bank.in/understand-the-components-of-your-credit-card",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "travel",
+      "shopping",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 8,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 12,
+      "forex": 12,
+      "lounge": 0,
+      "premium": 12,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 51,
+      "low-fee": 0,
+      "co-branded": 48
+    },
+    "detectedBenefits": [
+      "Send Money to India in Foreign Currency"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "b7901eb1c4930f",
+    "issuer": "Federal Bank",
+    "name": "Unlocking the Secret of Credit Card EMI- How to Buy Now and Pay Later",
+    "sourceUrl": "https://www.federal.bank.in/unlocking-the-secret-of-credit-card-emi-how-to-buy-now-and-pay-later",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "travel",
+      "shopping",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 8,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 8,
+      "forex": 12,
+      "lounge": 0,
+      "premium": 16,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 47,
+      "low-fee": 0,
+      "co-branded": 48
+    },
+    "detectedBenefits": [
+      "Send Money to India in Foreign Currency"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "d57945e32ee627",
+    "issuer": "Federal Bank",
+    "name": "Credit Card Debt Settlement Process- How it Works",
+    "sourceUrl": "https://www.federal.bank.in/credit-card-debt-settlement-process-how-it-works",
+    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "categories": [
+      "travel",
+      "shopping",
+      "upi",
+      "forex",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 8,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 8,
+      "forex": 12,
+      "lounge": 0,
+      "premium": 12,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 47,
+      "low-fee": 0,
+      "co-branded": 48
+    },
+    "detectedBenefits": [
+      "Send Money to India in Foreign Currency",
+      "Post receipt of the refund, any rewards or points earned on the purchase would get debited."
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "2fc08c30b89881",
+    "issuer": "American Express India",
+    "name": "My Card",
+    "sourceUrl": "https://www.americanexpress.com/in/benefits/card-selector.html?inav=en_in_menu_my_account_my_card_card_benefits",
+    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 1,
+    "categories": [
+      "travel",
+      "shopping",
+      "lounge",
+      "premium",
+      "business",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 41.5,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 28,
+      "premium": 17,
+      "business": 51,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 12,
+      "co-branded": 32
+    },
+    "detectedBenefits": [
+      "Help With My Card What are the annual fees that I need to pay?",
+      "Travel Travel Services Travel Insurance",
+      "Travel Benefits Airport Lounges",
+      "Travel with My Points",
+      "Help With Travel Can I use my Card abroad?"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "97b2f353c2dee8",
+    "issuer": "American Express India",
+    "name": "Get Cards",
+    "sourceUrl": "https://www.americanexpress.com/in/credit-cards/card-types/premium-cards/?inav=en_in_menu_cards_get_cards_premium_cards",
+    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 66000,
+    "renewalFee": 66000,
+    "diningRate": 25,
+    "loungeVisits": 1,
+    "categories": [
+      "travel",
+      "shopping",
+      "dining",
+      "lounge",
+      "premium",
+      "business",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 85.5,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 253,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 36,
+      "premium": 93,
+      "business": 51,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 16,
+      "co-branded": 48
+    },
+    "detectedBenefits": [
+      "Help With My Card What are the annual fees that I need to pay?",
+      "Travel Travel Services Travel Insurance",
+      "Travel Benefits Airport Lounges",
+      "Travel with My Points",
+      "Help With Travel Can I use my Card abroad?"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 25,
+        "context": "with a complimentary* wine and/or dessert or exclusive discounts like Diner Dines free or 25%* off including alcohol on select restaurants.To enjoy the benefit at these restaurants, please make the booki"
+      }
+    ]
+  },
+  {
+    "id": "7f0836f348f382",
+    "issuer": "American Express India",
+    "name": "Manage My Card",
+    "sourceUrl": "https://www.americanexpress.com/in/credit-cards/manage-your-card/?inav=en_in_menu_cards_manage_my_card",
+    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 1,
+    "categories": [
+      "travel",
+      "shopping",
+      "lounge",
+      "premium",
+      "business",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 41.5,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 28,
+      "premium": 13,
+      "business": 51,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 12,
+      "co-branded": 40
+    },
+    "detectedBenefits": [
+      "Help With My Card What are the annual fees that I need to pay?",
+      "Travel Travel Services Travel Insurance",
+      "Travel Benefits Airport Lounges",
+      "Travel with My Points",
+      "Help With Travel Can I use my Card abroad?"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "4378e0ade0d698",
+    "issuer": "American Express India",
+    "name": "Help With My Card",
+    "sourceUrl": "https://www.americanexpress.com/in/credit-know-how/credit-card-fees/?inav=en_in_menu_cards_help_with_my_card_what_are_the_annual_fees_that_i_need_to_pay",
+    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 495,
+    "renewalFee": 40000,
+    "feeWaiverSpend": 1,
+    "maxRewardRate": 3.5,
+    "travelRate": 3.5,
+    "loungeVisits": 1,
+    "categories": [
+      "travel",
+      "shopping",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 74,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 36,
+      "premium": 25,
+      "business": 51,
+      "lifetime-free": 0,
+      "beginner": 26,
+      "low-fee": 41.75,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Help With My Card What are the annual fees that I need to pay?",
+      "Travel Travel Services Travel Insurance",
+      "Travel Benefits Airport Lounges",
+      "Travel with My Points",
+      "Help With Travel Can I use my Card abroad?"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 35,
+        "context": "the next statement, and MPR gets levied on that. E.g., if your credit card has an MPR of 35%, you can calculate the daily interest rate by multiplying it by 12 and then dividing it by 365. And this give"
+      },
+      {
+        "value": 1.15,
+        "context": "iplying it by 12 and then dividing it by 365. And this gives you a daily interest rate of 1.15%. If you had an outstanding balance of Rs. 1000 on your card, you would be charged INR150.68 in daily interest"
+      },
+      {
+        "value": 3.5,
+        "context": "Transfer Cash Advance Fee American Express® Platinum Card Charge Card INR 66,000 N/A 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express Platinum Reserve SM Credit Card"
+      },
+      {
+        "value": 3.5,
+        "context": "Reserve SM Credit Card Credit Card INR 10,000 (1 st year) INR 10,000 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express SmartEarn™ Credit C"
+      },
+      {
+        "value": 3.5,
+        "context": "redit Card Credit Card INR 10,000 (1 st year) INR 10,000 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express SmartEarn™ Credit Card Credit Ca"
+      },
+      {
+        "value": 3.5,
+        "context": "xpress SmartEarn™ Credit Card Credit Card INR 495(1st year) INR 495 ## (2nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express® Platinum Travel Cr"
+      },
+      {
+        "value": 3.5,
+        "context": "arn™ Credit Card Credit Card INR 495(1st year) INR 495 ## (2nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express® Platinum Travel Credit Card Cre"
+      },
+      {
+        "value": 3.5,
+        "context": "atinum Travel Credit Card Credit Card INR 5,000 (1 st year) INR 5,000 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express Membership Rewards®"
+      },
+      {
+        "value": 3.5,
+        "context": "Credit Card Credit Card INR 5,000 (1 st year) INR 5,000 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express Membership Rewards® Credit Card"
+      },
+      {
+        "value": 3.5,
+        "context": "ship Rewards® Credit Card Credit Card INR 1,000 (1 st year) INR 4,500 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express® Gold Card Charge"
+      }
+    ]
+  },
+  {
+    "id": "e3d28b72fcb689",
+    "issuer": "American Express India",
+    "name": "Accept Our Cards",
+    "sourceUrl": "https://www.americanexpress.com/in/merchant/accept-amex-cards.html?inav=en_in_menu_business_accept_our_cards_start_accepting_our_cards",
+    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 1,
+    "categories": [
+      "travel",
+      "shopping",
+      "lounge",
+      "premium",
+      "business",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 41.5,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 28,
+      "premium": 13,
+      "business": 51,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 12,
+      "co-branded": 36
+    },
+    "detectedBenefits": [
+      "Help With My Card What are the annual fees that I need to pay?",
+      "Travel Travel Services Travel Insurance",
+      "Travel Benefits Airport Lounges",
+      "Travel with My Points",
+      "Help With Travel Can I use my Card abroad?"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "316ee5a3d58649",
+    "issuer": "American Express India",
+    "name": "Credit Card benefits & features",
+    "sourceUrl": "https://www.americanexpress.com/in/credit-know-how/how-do-credit-cards-work/?intlink=in-acq-creditcard-howcreditcardwork",
+    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 1,
+    "categories": [
+      "travel",
+      "shopping",
+      "lounge",
+      "premium",
+      "business",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 49.5,
+      "shopping": 28,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 28,
+      "premium": 13,
+      "business": 51,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 16,
+      "co-branded": 32
+    },
+    "detectedBenefits": [
+      "Help With My Card What are the annual fees that I need to pay?",
+      "Travel Travel Services Travel Insurance",
+      "Travel Benefits Airport Lounges",
+      "Travel with My Points",
+      "Help With Travel Can I use my Card abroad?"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "c42d818f2988c0",
+    "issuer": "American Express India",
+    "name": "American Express Credit Card comparison",
+    "sourceUrl": "https://www.americanexpress.com/in/credit-cards/all-cards/?intlink=in-acq-creditcards-allcards",
+    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 66000,
+    "renewalFee": 66000,
+    "loungeVisits": 1,
+    "categories": [
+      "travel",
+      "shopping",
+      "lounge",
+      "premium",
+      "business",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 65.5,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 36,
+      "premium": 57,
+      "business": 51,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 16,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Help With My Card What are the annual fees that I need to pay?",
+      "Travel Travel Services Travel Insurance",
+      "Travel Benefits Airport Lounges",
+      "Travel with My Points",
+      "Help With Travel Can I use my Card abroad?"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "45d01577067bb8",
+    "issuer": "American Express India",
+    "name": "Check the Credit Card fees",
+    "sourceUrl": "https://www.americanexpress.com/in/credit-know-how/credit-card-fees/?intlink=in-acq-creditcards-creditcardfees",
+    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "high",
+    "annualFee": 495,
+    "renewalFee": 40000,
+    "feeWaiverSpend": 1,
+    "maxRewardRate": 3.5,
+    "travelRate": 3.5,
+    "loungeVisits": 1,
+    "categories": [
+      "travel",
+      "shopping",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 74,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 36,
+      "premium": 25,
+      "business": 51,
+      "lifetime-free": 0,
+      "beginner": 26,
+      "low-fee": 41.75,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Help With My Card What are the annual fees that I need to pay?",
+      "Travel Travel Services Travel Insurance",
+      "Travel Benefits Airport Lounges",
+      "Travel with My Points",
+      "Help With Travel Can I use my Card abroad?"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 35,
+        "context": "the next statement, and MPR gets levied on that. E.g., if your credit card has an MPR of 35%, you can calculate the daily interest rate by multiplying it by 12 and then dividing it by 365. And this give"
+      },
+      {
+        "value": 1.15,
+        "context": "iplying it by 12 and then dividing it by 365. And this gives you a daily interest rate of 1.15%. If you had an outstanding balance of Rs. 1000 on your card, you would be charged INR150.68 in daily interest"
+      },
+      {
+        "value": 3.5,
+        "context": "Transfer Cash Advance Fee American Express® Platinum Card Charge Card INR 66,000 N/A 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express Platinum Reserve SM Credit Card"
+      },
+      {
+        "value": 3.5,
+        "context": "Reserve SM Credit Card Credit Card INR 10,000 (1 st year) INR 10,000 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express SmartEarn™ Credit C"
+      },
+      {
+        "value": 3.5,
+        "context": "redit Card Credit Card INR 10,000 (1 st year) INR 10,000 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express SmartEarn™ Credit Card Credit Ca"
+      },
+      {
+        "value": 3.5,
+        "context": "xpress SmartEarn™ Credit Card Credit Card INR 495(1st year) INR 495 ## (2nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express® Platinum Travel Cr"
+      },
+      {
+        "value": 3.5,
+        "context": "arn™ Credit Card Credit Card INR 495(1st year) INR 495 ## (2nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express® Platinum Travel Credit Card Cre"
+      },
+      {
+        "value": 3.5,
+        "context": "atinum Travel Credit Card Credit Card INR 5,000 (1 st year) INR 5,000 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express Membership Rewards®"
+      },
+      {
+        "value": 3.5,
+        "context": "Credit Card Credit Card INR 5,000 (1 st year) INR 5,000 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express Membership Rewards® Credit Card"
+      },
+      {
+        "value": 3.5,
+        "context": "ship Rewards® Credit Card Credit Card INR 1,000 (1 st year) INR 4,500 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express® Gold Card Charge"
+      }
+    ]
+  },
+  {
+    "id": "e1e2d8729a689d",
+    "issuer": "American Express India",
+    "name": "Check the Credit Card interest rates",
+    "sourceUrl": "https://www.americanexpress.com/in/credit-know-how/credit-card-interest/?intlink=in-acq-creditcards-creditcardinterest",
+    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "medium",
+    "loungeVisits": 1,
+    "categories": [
+      "travel",
+      "shopping",
+      "lounge",
+      "premium",
+      "business",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 49.5,
+      "shopping": 16,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 28,
+      "premium": 13,
+      "business": 51,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 16,
+      "co-branded": 44
+    },
+    "detectedBenefits": [
+      "Help With My Card What are the annual fees that I need to pay?",
+      "Travel Travel Services Travel Insurance",
+      "Travel Benefits Airport Lounges",
+      "Travel with My Points",
+      "Help With Travel Can I use my Card abroad?"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "c39f24d638c1ed",
+    "issuer": "American Express India",
+    "name": "Can I use my card abroad?",
+    "sourceUrl": "https://www.americanexpress.com/in/credit-cards/",
+    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
+    "fetchedAt": "2026-10-08T09:04:04.425Z",
+    "confidence": "low",
+    "foreignRewardRate": 3.5,
+    "categories": [
+      "forex"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 32.5,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "Yes. You will be charged 3.5% of the transaction amount as a mark-up fee for foreign currency transactions."
+    ],
+    "detectedPercentages": [
+      {
+        "value": 3.5,
+        "context": "Can I use my card abroad? Yes. You will be charged 3.5% of the transaction amount as a mark-up fee for foreign currency transactions. Discover our tips on how to sav"
+      }
+    ]
   },
   {
     "id": "fd3df975da8290",
@@ -2677,9656 +13019,5 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
       "Convert your Travel Credits into Air Miles/Hotel Points, Travel Bookings or choose from a wide array of Catalogue Products"
     ],
     "detectedPercentages": []
-  },
-  {
-    "id": "3f1d61949e9de0",
-    "issuer": "HDFC Bank",
-    "name": "Business Credit Cards",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 39,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "ad0d4a9b82cabb",
-    "issuer": "HDFC Bank",
-    "name": "Types of Credit Cards",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "lifetime-free"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 8,
-      "travel": 12,
-      "shopping": 8,
-      "grocery": 0,
-      "dining": 8,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 59,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "0fa3a0750edab2",
-    "issuer": "HDFC Bank",
-    "name": "IndianOil Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "a3222e3fa9ad81",
-    "issuer": "HDFC Bank",
-    "name": "Tata Neu Plus Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [
-      "Extraordinary Rewards, Ready for You."
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "8bb312425bb2eb",
-    "issuer": "HDFC Bank",
-    "name": "PhonePe HDFC Bank Ultimo Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "c80636d9e37e84",
-    "issuer": "HDFC Bank",
-    "name": "PhonePe HDFC Bank Uno Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "bbf7cfc5a8e7f1",
-    "issuer": "HDFC Bank",
-    "name": "Marriott Bonvoy HDFC Bank Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "32959915bfc2d2",
-    "issuer": "HDFC Bank",
-    "name": "Tata Neu Infinity HDFC Bank Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [
-      "Extraordinary Rewards. Ready for You."
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "3f2c7775a00b6e",
-    "issuer": "HDFC Bank",
-    "name": "Shoppers Stop Black HDFC Bank Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [
-      "Rewarding Style. Ready for You"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "b2f53c16d2b8fa",
-    "issuer": "HDFC Bank",
-    "name": "Shoppers Stop HDFC Bank Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [
-      "Rewarding Style, Ready for you"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "2caf0c112cbc3d",
-    "issuer": "HDFC Bank",
-    "name": "Swiggy Ornge HDFC Bank Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [
-      "Delightful Rewards. Ready For You"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "49e6a7214285e6",
-    "issuer": "HDFC Bank",
-    "name": "Swiggy BLCK HDFC Bank Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [
-      "Delightful Rewards. Ready For You"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "1e0ad3366b154a",
-    "issuer": "HDFC Bank",
-    "name": "HDFC Bank UPI RuPay Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "upi"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 8,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "HDFC Bank UPI RuPay Credit Card"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "c5be4921742ed0",
-    "issuer": "HDFC Bank",
-    "name": "Swiggy HDFC Bank Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [
-      "Delightful Rewards. Ready For You"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "3b214580367375",
-    "issuer": "HDFC Bank",
-    "name": "Platinum Plus Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "fuel"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 8,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "More Rewards and Fuel Surcharge Waivers"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "baeb0717b8dd85",
-    "issuer": "HDFC Bank",
-    "name": "Visa Signature Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "loungeVisits": 1,
-    "categories": [
-      "lounge"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 8,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Global Lounge Access with Fuel Waivers"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "98d4b47298d132",
-    "issuer": "HDFC Bank",
-    "name": "Diners ClubMiles Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "travel"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 8,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Diners ClubMiles Credit Card"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "e5b2d2adc64e24",
-    "issuer": "HDFC Bank",
-    "name": "InterMiles HDFC Bank Diners Club Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "travel"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 8,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "InterMiles HDFC Bank Diners Club Credit Card",
-      "Welcome Bonuses & Travel Discounts"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "b76d964dc98264",
-    "issuer": "HDFC Bank",
-    "name": "InterMiles HDFC Bank Signature Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "travel"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 8,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "InterMiles HDFC Bank Signature Credit Card",
-      "InterMiles Rewards and Silver Membership"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "efbdd088b60437",
-    "issuer": "HDFC Bank",
-    "name": "InterMiles HDFC Bank Platinum Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "travel"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 8,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "InterMiles HDFC Bank Platinum Credit Card",
-      "Travel More, Earn Rewards"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "e5d77c98af1509",
-    "issuer": "HDFC Bank",
-    "name": "Pine Labs HDFC Bank Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 39,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "India's Premier Business Credit Card for Rewards"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "fecb2fce6a8096",
-    "issuer": "HDFC Bank",
-    "name": "Regalia Activ HDFC Bank Credit Card",
-    "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 39,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "India's Premier Business Credit Card for Rewards"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "8315f2022978a2",
-    "issuer": "ICICI Bank",
-    "name": "Get the best Credit Card",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/sapphiro-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 3500,
-    "joiningFee": 6500,
-    "renewalFee": 3500,
-    "feeWaiverSpend": 600000,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "upiRate": 1,
-    "forexMarkup": 3.5,
-    "loungeVisits": 2,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 8,
-      "fuel": 43,
-      "travel": 71,
-      "shopping": 20,
-      "grocery": 0,
-      "dining": 12,
-      "utilities": 16,
-      "upi": 30,
-      "forex": 35,
-      "lounge": 40,
-      "premium": 78,
-      "business": 51,
-      "lifetime-free": 0,
-      "beginner": 39,
-      "low-fee": 16,
-      "co-branded": 60
-    },
-    "detectedBenefits": [
-      "ICICI Bank Sapphiro Credit Card: Travel and Lifestyle Rewards",
-      "Unified Payments Interface (UPI)",
-      "Foreign Currency Non-Resident (FCNR)(B) Deposit",
-      "Resident Foreign Currency (RFC) Deposit",
-      "Foreign Account Tax Compliance Act (FATCA)"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1,
-        "context": "ct the Concierge team, please call 1800-26-78729(Rupay Variant) Fuel surcharge waiver Get 1% waiver on fuel transactions of up to ₹4,000 at all fuel pumps Earn and Use Reward Points Earn Points on ever"
-      },
-      {
-        "value": 3.5,
-        "context": "T (Spend over ₹6 lakh and get your Annual Fee waived off for the next year) Forex Markup 3.5% ATM Withdrawal Pay 3.75% interest per month If only minimum due is paid Pay 3.75% interest per month For la"
-      },
-      {
-        "value": 3.75,
-        "context": "get your Annual Fee waived off for the next year) Forex Markup 3.5% ATM Withdrawal Pay 3.75% interest per month If only minimum due is paid Pay 3.75% interest per month For late bill payment Ranging f"
-      },
-      {
-        "value": 3.75,
-        "context": "arkup 3.5% ATM Withdrawal Pay 3.75% interest per month If only minimum due is paid Pay 3.75% interest per month For late bill payment Ranging from ₹100 to ₹1,300 Most Important Terms & Conditions Plea"
-      },
-      {
-        "value": 1,
-        "context": "nt. What is the fuel surcharge waiver offered to Cardholders? Cardholders can avail of a 1% fuel surcharge waiver on all fuel transactions of up to ₹4,000 at any fuel outlet in India. This benefit appl"
-      }
-    ]
-  },
-  {
-    "id": "9dc5a6933f9e68",
-    "issuer": "ICICI Bank",
-    "name": "Find the ideal Credit Card",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/compare-cards",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 8,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 8,
-      "upi": 8,
-      "forex": 24,
-      "lounge": 0,
-      "premium": 8,
-      "business": 47,
-      "lifetime-free": 0,
-      "beginner": 39,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Compare Credit Cards – Features, Rewards & Benefits | ICICI Bank",
-      "Unified Payments Interface (UPI)",
-      "Foreign Currency Non-Resident (FCNR)(B) Deposit",
-      "Resident Foreign Currency (RFC) Deposit",
-      "Foreign Account Tax Compliance Act (FATCA)"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "d80a175fec84b9",
-    "issuer": "ICICI Bank",
-    "name": "Pre-Approved Credit Card",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/pre-approved-credit-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 1,
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 28,
-      "travel": 41.5,
-      "shopping": 32,
-      "grocery": 0,
-      "dining": 16,
-      "utilities": 8,
-      "upi": 8,
-      "forex": 24,
-      "lounge": 28,
-      "premium": 21,
-      "business": 47,
-      "lifetime-free": 0,
-      "beginner": 39,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Unified Payments Interface (UPI)",
-      "Foreign Currency Non-Resident (FCNR)(B) Deposit",
-      "Resident Foreign Currency (RFC) Deposit",
-      "Foreign Account Tax Compliance Act (FATCA)",
-      "Corporate Sapphiro Forex Card"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "dece0fbabb6773",
-    "issuer": "ICICI Bank",
-    "name": "Personal Loan Credit Card",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/personal-loan-on-credit-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 8,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 8,
-      "upi": 8,
-      "forex": 24,
-      "lounge": 0,
-      "premium": 8,
-      "business": 47,
-      "lifetime-free": 0,
-      "beginner": 39,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Unified Payments Interface (UPI)",
-      "Foreign Currency Non-Resident (FCNR)(B) Deposit",
-      "Resident Foreign Currency (RFC) Deposit",
-      "Foreign Account Tax Compliance Act (FATCA)",
-      "Corporate Sapphiro Forex Card"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1,
-        "context": "eatures of Personal Loan on Credit Card Lowest Processing fee Enjoy a Processing Fee of 1%, one of the lowest in the market Time taken for the fund transfer • Customers who have an instant offer will"
-      },
-      {
-        "value": 11,
-        "context": "can avail a Personal Loan on Credit Card at an attractive interest rate, starting at just 11%, with a flexible repayment tenure of up to 60 months. How will the funds get transferred The loan amount wil"
-      },
-      {
-        "value": 90,
-        "context": "nt, the loan amount offered will be within your Credit Card limit and you may avail up to 90% of the unused credit limit. The loan amount will be blocked from your available Credit Card limit. 2. Persona"
-      }
-    ]
-  },
-  {
-    "id": "27d97125aeb78a",
-    "issuer": "ICICI Bank",
-    "name": "Benefits of ICICI Bank Credit Cards",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "shopping",
-      "beginner"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 8,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 39,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Online shopping, bill payments and in-store purchases are all made simple and rewarding with ICICI Bank Credit Cards.",
-      "Make your purchases more fulfilling with discounts and reward points on almost every transaction."
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "6980950178a827",
-    "issuer": "ICICI Bank",
-    "name": "Types of Credit Cards in India",
-    "sourceUrl": "https://www.icicibank.com/blogs/credit-card/type-of-credit-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 99,
-    "loungeUnlimited": true,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 16,
-      "fuel": 44,
-      "travel": 248.5,
-      "shopping": 48,
-      "grocery": 0,
-      "dining": 20,
-      "utilities": 16,
-      "upi": 8,
-      "forex": 28,
-      "lounge": 69,
-      "premium": 61,
-      "business": 59,
-      "lifetime-free": 0,
-      "beginner": 59,
-      "low-fee": 0,
-      "co-branded": 100
-    },
-    "detectedBenefits": [
-      "Unified Payments Interface (UPI)",
-      "Foreign Currency Non-Resident (FCNR)(B) Deposit",
-      "Resident Foreign Currency (RFC) Deposit",
-      "Foreign Account Tax Compliance Act (FATCA)",
-      "Exchange Earners’ Foreign Currency (EEFC) Account"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "349bf4968e9352",
-    "issuer": "ICICI Bank",
-    "name": "Credit Card fees and interest rates",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 8,
-      "co-branded": 36
-    },
-    "detectedBenefits": [
-      "Joining Fee and Annual Fee",
-      "The Joining Fee is the initial cost of owning the Credit Card. It varies from bank to bank and also depends on the type of card. It is usually followed by an Annual Fee."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 3.75,
-        "context": "n outstanding dues, due to non-payment of the same by the due date. The maximum charge is 3.75% per month. Late Payment Fee If you are unable to pay the outstanding amount, the Bank will notify you to pay"
-      },
-      {
-        "value": 2.5,
-        "context": "old. If you spend beyond this limit, the bank will charge an over-the-limit fee which is ~2.50% on the amount spent beyond the credit limit. GST Goods and Service Tax (GST) is applicable on certain Credit"
-      },
-      {
-        "value": 18,
-        "context": "n Credit Card transactions. Presently, the GST rate for banking and financial services is 18%. To know more about fees and charges please refer to the MITC - PDF (Most Important Terms and Conditions)."
-      }
-    ]
-  },
-  {
-    "id": "0d59a6b9485f66",
-    "issuer": "ICICI Bank",
-    "name": "Tips for secure Credit Card usage",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 39,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "1a0bd017701701",
-    "issuer": "ICICI Bank",
-    "name": "Can I use my ICICI Bank Credit Card for international transactions?",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "forex"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 12,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "254183a0eeb8b8",
-    "issuer": "ICICI Bank",
-    "name": "Can I get a Loan on an ICICI Bank Credit Card?",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/personal-loan-on-credit-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 8,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 8,
-      "upi": 8,
-      "forex": 24,
-      "lounge": 0,
-      "premium": 8,
-      "business": 47,
-      "lifetime-free": 0,
-      "beginner": 39,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Unified Payments Interface (UPI)",
-      "Foreign Currency Non-Resident (FCNR)(B) Deposit",
-      "Resident Foreign Currency (RFC) Deposit",
-      "Foreign Account Tax Compliance Act (FATCA)",
-      "Corporate Sapphiro Forex Card"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1,
-        "context": "eatures of Personal Loan on Credit Card Lowest Processing fee Enjoy a Processing Fee of 1%, one of the lowest in the market Time taken for the fund transfer • Customers who have an instant offer will"
-      },
-      {
-        "value": 11,
-        "context": "can avail a Personal Loan on Credit Card at an attractive interest rate, starting at just 11%, with a flexible repayment tenure of up to 60 months. How will the funds get transferred The loan amount wil"
-      },
-      {
-        "value": 90,
-        "context": "nt, the loan amount offered will be within your Credit Card limit and you may avail up to 90% of the unused credit limit. The loan amount will be blocked from your available Credit Card limit. 2. Persona"
-      }
-    ]
-  },
-  {
-    "id": "8f838a507e9dc2",
-    "issuer": "ICICI Bank",
-    "name": "Credit Card Rewards",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/credit-card-services/rewards",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 16,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 16,
-      "upi": 8,
-      "forex": 28,
-      "lounge": 0,
-      "premium": 8,
-      "business": 47,
-      "lifetime-free": 0,
-      "beginner": 39,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "ICICI Bank Credit Card Rewards – Learn How to Redeem Reward Points",
-      "Unified Payments Interface (UPI)",
-      "Foreign Currency Non-Resident (FCNR)(B) Deposit",
-      "Resident Foreign Currency (RFC) Deposit",
-      "Foreign Account Tax Compliance Act (FATCA)"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "b1bff8975ab92e",
-    "issuer": "ICICI Bank",
-    "name": "Credit Card Experience Program",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/experience",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxRewardRate": 25,
-    "travelRate": 6,
-    "forexMarkup": 0.99,
-    "loungeVisits": 99,
-    "loungeUnlimited": true,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 16,
-      "fuel": 52,
-      "travel": 290.5,
-      "shopping": 24,
-      "grocery": 0,
-      "dining": 56,
-      "utilities": 8,
-      "upi": 24,
-      "forex": 67.08,
-      "lounge": 77,
-      "premium": 113,
-      "business": 47,
-      "lifetime-free": 0,
-      "beginner": 43,
-      "low-fee": 0,
-      "co-branded": 88
-    },
-    "detectedBenefits": [
-      "ICICI Bank Credit Card Experience | Premium Privileges and Rewards",
-      "Unified Payments Interface (UPI)",
-      "Foreign Currency Non-Resident (FCNR)(B) Deposit",
-      "Resident Foreign Currency (RFC) Deposit",
-      "Foreign Account Tax Compliance Act (FATCA)"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1.49,
-        "context": "ST FOR EaseMyTrip Voucher worth ₹10,000 Lifestyle Gift Cards from Toni&Guy and Interflora 1.49% Forex Markup Exclusive access to The Quorum Club APPLY DETAILS prev next Emeralde Private Metal save comp"
-      },
-      {
-        "value": 6,
-        "context": "redit Card save compare BEST FOR Travel Enthusiasts Seeking Value and Flexibility up to 6% myCash | 0.99% Forex markup | MakeMyTrip BLACK (MMTBLACK) membership more APPLY DETAILS Close More Info Make"
-      },
-      {
-        "value": 0.99,
-        "context": "ave compare BEST FOR Travel Enthusiasts Seeking Value and Flexibility up to 6% myCash | 0.99% Forex markup | MakeMyTrip BLACK (MMTBLACK) membership more APPLY DETAILS Close More Info MakeMyTrip Credit C"
-      },
-      {
-        "value": 6,
-        "context": "ACK) membership more APPLY DETAILS Close More Info MakeMyTrip Credit Card BEST FOR Up to 6% myCash on MakeMyTrip Bookings 0.99% Forex markup Unlimited myCash Rewards that never expire Complimentary 1-"
-      },
-      {
-        "value": 0.99,
-        "context": "Close More Info MakeMyTrip Credit Card BEST FOR Up to 6% myCash on MakeMyTrip Bookings 0.99% Forex markup Unlimited myCash Rewards that never expire Complimentary 1-year MMTBLACK Gold membership APPLY"
-      },
-      {
-        "value": 1.49,
-        "context": "ST FOR EaseMyTrip Voucher worth ₹10,000 Lifestyle Gift Cards from Toni&Guy and Interflora 1.49% Forex Markup Exclusive access to The Quorum Club APPLY DETAILS Emeralde Emeralde save compare BEST FOR Lux"
-      },
-      {
-        "value": 6,
-        "context": "redit Card save compare BEST FOR Travel Enthusiasts Seeking Value and Flexibility up to 6% myCash | 0.99% Forex markup | MakeMyTrip BLACK (MMTBLACK) membership more APPLY DETAILS Close More Info Make"
-      },
-      {
-        "value": 0.99,
-        "context": "ave compare BEST FOR Travel Enthusiasts Seeking Value and Flexibility up to 6% myCash | 0.99% Forex markup | MakeMyTrip BLACK (MMTBLACK) membership more APPLY DETAILS Close More Info MakeMyTrip Credit C"
-      },
-      {
-        "value": 6,
-        "context": "ACK) membership more APPLY DETAILS Close More Info MakeMyTrip Credit Card BEST FOR Up to 6% myCash on MakeMyTrip Bookings 0.99% Forex markup Unlimited myCash Rewards that never expire Complimentary 1-"
-      },
-      {
-        "value": 0.99,
-        "context": "Close More Info MakeMyTrip Credit Card BEST FOR Up to 6% myCash on MakeMyTrip Bookings 0.99% Forex markup Unlimited myCash Rewards that never expire Complimentary 1-year MMTBLACK Gold membership APPLY"
-      }
-    ]
-  },
-  {
-    "id": "be5661ef31bc1b",
-    "issuer": "ICICI Bank",
-    "name": "Business Advantage Blue Card",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "5e4f26f119a216",
-    "issuer": "ICICI Bank",
-    "name": "Business Ascent Card",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "4a6d0181946b93",
-    "issuer": "ICICI Bank",
-    "name": "Business Advantage Black Card",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "1cce1cfda81014",
-    "issuer": "ICICI Bank",
-    "name": "Business Essential Credit Card",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "ae1363b20b2ebf",
-    "issuer": "ICICI Bank",
-    "name": "Sapphiro Business Debit Card",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "ae05e2af3131fc",
-    "issuer": "ICICI Bank",
-    "name": "Coral Business Debit Card",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "49ffd732de1135",
-    "issuer": "ICICI Bank",
-    "name": "Business Titanium Debit Card",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "64d761ab760832",
-    "issuer": "ICICI Bank",
-    "name": "Purchase Card",
-    "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "dda94ff11295a6",
-    "issuer": "IDFC FIRST Bank",
-    "name": "All IDFC FIRST Bank Credit Cards now come with Zero Forex Markup",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "forex"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 8,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "All IDFC FIRST Bank Credit Cards now come with Zero Forex Markup"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "bfdae98982a9e7",
-    "issuer": "IDFC FIRST Bank",
-    "name": "A Credit Card for Everyone",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 1,
-    "categories": [
-      "travel",
-      "forex",
-      "lounge",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 9.5,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 12,
-      "lounge": 12,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 36
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "43ff4abfb23048",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Explore our range of credit cards",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "premium",
-      "business",
-      "lifetime-free"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 8,
-      "business": 35,
-      "lifetime-free": 59,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "81abda6d52dd1e",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Quantum+ Credit Card",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/quantum-plus-credit-card?utm_source=website&utm_medium=PDPQuantum+&utm_campaign=Knowmore",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxCashbackRate": 6.5,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "utilityRate": 1,
-    "travelRate": 3,
-    "upiRate": 2,
-    "foreignRewardRate": 2,
-    "forexMarkup": 2,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 68,
-      "fuel": 25,
-      "travel": 114.5,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 34,
-      "upi": 60,
-      "forex": 81,
-      "lounge": 16,
-      "premium": 65,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 59,
-      "low-fee": 12,
-      "co-branded": 96
-    },
-    "detectedBenefits": [
-      "Savings with Zero Forex Markup",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "UPI-enabled Credit Cards"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Travel Credit Cards FIRST WOW! FD-B"
-      }
-    ]
-  },
-  {
-    "id": "f1251e92dab618",
-    "issuer": "IDFC FIRST Bank",
-    "name": "IndiGo IDFC Dual Cards",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/indigo-credit-card?utm_source=website&utm_medium=PDPIndigoIDFCFIRST&utm_campaign=Knowmore",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 4999,
-    "joiningFee": 4999,
-    "renewalFee": 4999,
-    "maxCashbackRate": 1,
-    "maxRewardRate": 1.49,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "travelRate": 1,
-    "upiRate": 1.49,
-    "foreignRewardRate": 0,
-    "forexMarkup": 0,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 29,
-      "travel": 96.5,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 8,
-      "utilities": 24,
-      "upi": 46.9,
-      "forex": 87,
-      "lounge": 16,
-      "premium": 101,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 67,
-      "low-fee": 20,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Savings with Zero Forex Markup",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "UPI-enabled Credit Cards"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Travel Credit Cards FIRST WOW! FD-B"
-      }
-    ]
-  },
-  {
-    "id": "924cfeadd09673",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Micro Enterprise Credit Card",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/micro-enterprise-credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 1000,
-    "joiningFee": 0,
-    "renewalFee": 1000,
-    "feeWaiverSpend": 20000,
-    "maxCashbackRate": 1,
-    "maxRewardRate": 18,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "travelRate": 1,
-    "upiRate": 1,
-    "foreignRewardRate": 0,
-    "forexMarkup": 0,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 41,
-      "travel": 56.5,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 28,
-      "upi": 42,
-      "forex": 87,
-      "lounge": 16,
-      "premium": 65,
-      "business": 51,
-      "lifetime-free": 71,
-      "beginner": 43,
-      "low-fee": 25.33,
-      "co-branded": 88
-    },
-    "detectedBenefits": [
-      "Savings with Zero Forex Markup",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "UPI-enabled Credit Cards"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Travel Credit Cards FIRST WOW! FD-B"
-      }
-    ]
-  },
-  {
-    "id": "7759947a1b4a82",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Get 100% guaranteed approval with an FD backed credit card",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/quantum-plus-credit-card?utm_source=website&utm_medium=PDPQuantum+&utm_campaign=Knowmore",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxCashbackRate": 6.5,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "utilityRate": 1,
-    "travelRate": 3,
-    "upiRate": 2,
-    "foreignRewardRate": 2,
-    "forexMarkup": 2,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 68,
-      "fuel": 25,
-      "travel": 114.5,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 34,
-      "upi": 60,
-      "forex": 81,
-      "lounge": 16,
-      "premium": 65,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 59,
-      "low-fee": 12,
-      "co-branded": 96
-    },
-    "detectedBenefits": [
-      "Savings with Zero Forex Markup",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "UPI-enabled Credit Cards"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Travel Credit Cards FIRST WOW! FD-B"
-      }
-    ]
-  },
-  {
-    "id": "42468d80cee30e",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Add-On Credit Card",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/add-on-credit-card?utm_source=website&utm_medium=PDPAddonCC&utm_campaign=ApplyNow",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 199,
-    "renewalFee": 199,
-    "maxCashbackRate": 1,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "travelRate": 1,
-    "upiRate": 1,
-    "loungeVisits": 10,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 33,
-      "travel": 90,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 12,
-      "upi": 26,
-      "forex": 36,
-      "lounge": 64,
-      "premium": 78,
-      "business": 55,
-      "lifetime-free": 71,
-      "beginner": 65,
-      "low-fee": 42.68,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Savings with Zero Forex Markup",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "UPI-enabled Credit Cards"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Travel Credit Cards FIRST WOW! FD-B"
-      }
-    ]
-  },
-  {
-    "id": "fd046bd8c494b7",
-    "issuer": "IDFC FIRST Bank",
-    "name": "All our credit cards are UPI-ready",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/rupay-credit-card/steps-to-activate?utm_source=website&utm_medium=PDPAOCCUPIR&utm_campaign=ActivateUPI",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxCashbackRate": 1,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "travelRate": 1,
-    "upiRate": 1,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 25,
-      "travel": 52.5,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 12,
-      "upi": 42,
-      "forex": 36,
-      "lounge": 16,
-      "premium": 65,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 43,
-      "low-fee": 0,
-      "co-branded": 88
-    },
-    "detectedBenefits": [
-      "Scan and Activate UPI on Rupay Credit Card | IDFC FIRST Bank",
-      "Savings with Zero Forex Markup",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Travel Credit Cards FIRST WOW! FD-B"
-      }
-    ]
-  },
-  {
-    "id": "7ed4d83c4a6603",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Apply for a credit card online",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "04dabdba674ce9",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Credit card fees and charges",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/mitc?utm_source=website&utm_medium=PDPCCFC&utm_campaign=CheckNow",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxCashbackRate": 1.5,
-    "maxRewardRate": 1.99,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "travelRate": 1.99,
-    "upiRate": 1,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 28,
-      "fuel": 25,
-      "travel": 59.43,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 12,
-      "upi": 26,
-      "forex": 20,
-      "lounge": 16,
-      "premium": 65,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 43,
-      "low-fee": 0,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Foreign Exchange Solutions",
-      "Zero Forex & Travel Credit Cards",
-      "UPI-enabled Credit Cards",
-      "Affordability & Cashback Credit Cards",
-      "Fuel & Insurance Credit Cards"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "rve Zero Forex Travel ₹3,000 Metal Credit Card View All Ashva Credit Card Lifestyle 1% Forex ₹2,999 Mayura Credit Card Lifestyle Zero Forex ₹5,999 Gaj: Credit Card Invite Only Zero Forex"
-      },
-      {
-        "value": 1.99,
-        "context": "sic 10X Rewards Shopping Never Expiring Rewards FIRST Select 10X Rewards Lifestyle 1.99% Forex FIRST Wealth 10X Rewards Lifestyle 1.5% Forex FIRST WOW! FD-Backed Travel Zero Forex Discover"
-      },
-      {
-        "value": 1.5,
-        "context": "FIRST Select 10X Rewards Lifestyle 1.99% Forex FIRST Wealth 10X Rewards Lifestyle 1.5% Forex FIRST WOW! FD-Backed Travel Zero Forex Discover Embrace the oppurtinity to indulge yourself #Seize"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "t Cards Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      }
-    ]
-  },
-  {
-    "id": "221c3e57d2f20b",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Learn about Credit Card in Detail",
-    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/first-select-vs-first-wealth-credit-card-comparison",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "feeWaiverSpend": 20000,
-    "maxCashbackRate": 25,
-    "maxRewardRate": 1.49,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 9.99,
-    "diningRate": 1,
-    "travelRate": 5,
-    "upiRate": 25,
-    "forexMarkup": 1.5,
-    "loungeVisits": 20,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 216,
-      "fuel": 51,
-      "travel": 137,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 29,
-      "utilities": 20,
-      "upi": 266,
-      "forex": 63,
-      "lounge": 80,
-      "premium": 92,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 43,
-      "low-fee": 12,
-      "co-branded": 76
-    },
-    "detectedBenefits": [
-      "Savings with Zero Forex Markup",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "UPI-enabled Credit Cards"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Travel Credit Cards FIRST WOW! FD-B"
-      }
-    ]
-  },
-  {
-    "id": "6b731ac059f14e",
-    "issuer": "IDFC FIRST Bank",
-    "name": "FIRST Select vs. FIRST Wealth - Which credit card suits your financial planning?",
-    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/first-select-vs-first-wealth-credit-card-comparison",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "feeWaiverSpend": 20000,
-    "maxCashbackRate": 25,
-    "maxRewardRate": 1.49,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 9.99,
-    "diningRate": 1,
-    "travelRate": 5,
-    "upiRate": 25,
-    "forexMarkup": 1.5,
-    "loungeVisits": 20,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 216,
-      "fuel": 51,
-      "travel": 137,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 29,
-      "utilities": 20,
-      "upi": 266,
-      "forex": 63,
-      "lounge": 80,
-      "premium": 92,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 43,
-      "low-fee": 12,
-      "co-branded": 76
-    },
-    "detectedBenefits": [
-      "Savings with Zero Forex Markup",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "UPI-enabled Credit Cards"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Travel Credit Cards FIRST WOW! FD-B"
-      }
-    ]
-  },
-  {
-    "id": "0051741bcf8407",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Metal credit cards: Redefining luxury for sophisticated minimalists",
-    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/luxury-lifestyle-why-metal-credit-card-are-worth-the-hype",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 800000,
-    "joiningFee": 5999,
-    "renewalFee": 800000,
-    "maxCashbackRate": 1,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "travelRate": 1,
-    "upiRate": 1,
-    "forexMarkup": 0,
-    "loungeVisits": 4,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 29,
-      "travel": 101,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 8,
-      "utilities": 12,
-      "upi": 34,
-      "forex": 71,
-      "lounge": 48,
-      "premium": 104,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 43,
-      "low-fee": 0,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Savings with Zero Forex Markup",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "UPI-enabled Credit Cards"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Travel Credit Cards FIRST WOW! FD-B"
-      }
-    ]
-  },
-  {
-    "id": "d07b026fc1bc1a",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Compare Credit Card Fees & Benefits",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [
-      "Check reward points, cashback, welcome offers, lifestyle benefits and joining fees, annual fees, and any other fees and charges applicable. This helps you understand the actual value you may get from the card."
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "606661ca685eb9",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Things to keep in mind when applying for a credit card online",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 8,
-      "co-branded": 32
-    },
-    "detectedBenefits": [
-      "4. Rewards and benefits: Look for cards that offer rewards, cashback deals, or travel benefits that match your lifestyle. Consider if the rewards are worth any additional costs."
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "5c2a250fb35266",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Are there any EMI conversion charges on my IDFC FIRST Bank Credit Card",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "0c14d69053b0b9",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Can I apply for an add-on card?",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/add-on-credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 199,
-    "renewalFee": 199,
-    "maxCashbackRate": 1,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "travelRate": 1,
-    "upiRate": 1,
-    "loungeVisits": 10,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 33,
-      "travel": 90,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 12,
-      "upi": 26,
-      "forex": 36,
-      "lounge": 64,
-      "premium": 78,
-      "business": 55,
-      "lifetime-free": 71,
-      "beginner": 65,
-      "low-fee": 42.68,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Savings with Zero Forex Markup",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "UPI-enabled Credit Cards"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Travel Credit Cards FIRST WOW! FD-B"
-      }
-    ]
-  },
-  {
-    "id": "43d078cf0fa92f",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Can I pay my Credit Card bill online via NEFT?",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "shopping"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 8,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "fda7722efda01f",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Can I use my Credit Card for international transactions?",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/wow",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 0,
-    "joiningFee": 750,
-    "renewalFee": 0,
-    "feeWaiverSpend": 25,
-    "maxCashbackRate": 1,
-    "maxRewardRate": 25,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "travelRate": 16.7,
-    "upiRate": 16.7,
-    "forexMarkup": 0,
-    "loungeVisits": 16,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 29,
-      "travel": 224.9,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 36,
-      "upi": 183,
-      "forex": 111,
-      "lounge": 68,
-      "premium": 92,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 81,
-      "low-fee": 46,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Apply for FIRST WOW! - Zero Forex Markup Credit Card | IDFC FIRST Bank",
-      "Savings with Zero Forex Markup",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Travel Credit Cards FIRST WOW! FD-B"
-      }
-    ]
-  },
-  {
-    "id": "1e13abf9e16e32",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Can I withdraw cash using my Credit Card?",
-    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/key-factors-for-credit-card-cash-withdrawal",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "adb52a4c01e64c",
-    "issuer": "IDFC FIRST Bank",
-    "name": "I already have an IDFC FIRST Bank Credit Card. Can I apply for another one?",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "121f90c9d779bf",
-    "issuer": "RBL Bank",
-    "name": "Benefits for Platinum Maxima Plus Credit Card",
-    "sourceUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards/platinum-maxima-plus-credit-card",
-    "catalogueUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxCashbackRate": 2.8,
-    "maxRewardRate": 2.8,
-    "groceryRate": 2.8,
-    "diningRate": 2.8,
-    "loungeVisits": 2,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "grocery",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 26.4,
-      "fuel": 12,
-      "travel": 111,
-      "shopping": 39.6,
-      "grocery": 33.2,
-      "dining": 57.2,
-      "utilities": 28,
-      "upi": 16,
-      "forex": 28,
-      "lounge": 36,
-      "premium": 0,
-      "business": 51,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Borderless Prepaid Forex card",
-      "Foreign Currency Cheques",
-      "Flights, Hotels & Travel",
-      "Food Delivery & Dining",
-      "Redeem Reward Points"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 2.8,
-        "context": "dit Card Platinum Maxima Plus Credit Card Upgrade your Lifestyle, amplify your Rewards! 2.8% Value Back on Grocery & Dining 2 Lounge access within every quarter Apply Now *T&C Apply Welcome Benefits"
-      }
-    ]
-  },
-  {
-    "id": "043f2416f30cf0",
-    "issuer": "RBL Bank",
-    "name": "Benefits for Icon Credit Card",
-    "sourceUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards/icon-credit-card",
-    "catalogueUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxCashbackRate": 6,
-    "maxRewardRate": 6,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "diningRate": 6,
-    "travelRate": 6,
-    "loungeVisits": 2,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 52,
-      "fuel": 39,
-      "travel": 157,
-      "shopping": 62,
-      "grocery": 0,
-      "dining": 86,
-      "utilities": 16,
-      "upi": 16,
-      "forex": 28,
-      "lounge": 40,
-      "premium": 34,
-      "business": 51,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Borderless Prepaid Forex card",
-      "Foreign Currency Cheques",
-      "Flights, Hotels & Travel",
-      "Food Delivery & Dining",
-      "Redeem Reward Points"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 6,
-        "context": "Credit Cards Icon Credit Card Icon Credit Card Rewarding Milestones worth INR 13,500 6% Value Back on Weekend Dining, International Purchases Golf & Concierge Benefits worth 9X of Annual Fee Appl"
-      },
-      {
-        "value": 1,
-        "context": "rge Desk by calling our Customer Services at 022 6232 7777 . Fuel Surcharge Waiver Enjoy 1% fuel surcharge waiver across all fuel stations. Valid for fuel transactions between INR 500 and INR 4,000. Ma"
-      }
-    ]
-  },
-  {
-    "id": "36b43e63d00643",
-    "issuer": "RBL Bank",
-    "name": "Benefits for Cookies Credit Card",
-    "sourceUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards/cookies-credit-card",
-    "catalogueUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "feeWaiverSpend": 5000,
-    "maxCashbackRate": 10,
-    "maxRewardRate": 10,
-    "shoppingRate": 10,
-    "diningRate": 10,
-    "travelRate": 10,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 96,
-      "fuel": 20,
-      "travel": 146,
-      "shopping": 122,
-      "grocery": 0,
-      "dining": 126,
-      "utilities": 28,
-      "upi": 16,
-      "forex": 28,
-      "lounge": 0,
-      "premium": 0,
-      "business": 51,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 96
-    },
-    "detectedBenefits": [
-      "Borderless Prepaid Forex card",
-      "Foreign Currency Cheques",
-      "Flights, Hotels & Travel",
-      "Food Delivery & Dining",
-      "Redeem Reward Points"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 10,
-        "context": "nu Home Personal Banking Cards Credit Cards Cookies Credit Card Cookies Credit Card 10% cashback on your favourites up to INR 300 per brand per month Unlimited 5x Reward Points on Online purchases"
-      },
-      {
-        "value": 10,
-        "context": "roduct Benefits Fees & Charges Quick Links Apply Now Eat, ride, shop, watch - and get 10% back A Card designed to suit your daily lifestyle. Host of benefits with a low monthly fee of just INR 100. W"
-      },
-      {
-        "value": 10,
-        "context": "spends. Make the Most of Your Points: Redeem up to INR 0.20 per point. A Deal to Seek – 10% Cashback on Popular Brands (Zomato, Myntra, and Uber) Start maximizing your savings today with 10% savings on"
-      },
-      {
-        "value": 10,
-        "context": "ack on Popular Brands (Zomato, Myntra, and Uber) Start maximizing your savings today with 10% savings on your Food, Fashion and Travel spends. Enjoy 10% cashback on Zomato, Myntra, and Uber—on top of any"
-      },
-      {
-        "value": 10,
-        "context": "mizing your savings today with 10% savings on your Food, Fashion and Travel spends. Enjoy 10% cashback on Zomato, Myntra, and Uber—on top of any discounts you receive on these apps! Max Cashback is cappe"
-      },
-      {
-        "value": 10,
-        "context": "e waive your subsequent month’s membership fee of INR 100 + GST. BookMyShow Movie Benefit 10% instant discount up to INR 300 per month on BookMyShow. Avail this benefit on the BookMyShow app/website. Mov"
-      }
-    ]
-  },
-  {
-    "id": "86854710aa3c80",
-    "issuer": "Kotak Mahindra Bank",
-    "name": "Get your Lifetime Free Kotak League Credit Card",
-    "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
-    "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "lifetime-free"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 59,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "045011156a2b92",
-    "issuer": "Kotak Mahindra Bank",
-    "name": "Types of Credit Cards in India Offered by Kotak Mahindra Bank",
-    "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards/get-movie-credit-cards.html",
-    "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 1500,
-    "joiningFee": 1500,
-    "renewalFee": 1500,
-    "feeWaiverSpend": 50000,
-    "maxCashbackRate": 20,
-    "maxRewardRate": 20,
-    "fuelRate": 5,
-    "shoppingRate": 20,
-    "groceryRate": 20,
-    "diningRate": 5,
-    "travelRate": 5,
-    "foreignRewardRate": 2,
-    "forexMarkup": 1,
-    "loungeVisits": 99,
-    "loungeUnlimited": true,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "grocery",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 176,
-      "fuel": 77,
-      "travel": 307.5,
-      "shopping": 172,
-      "grocery": 200,
-      "dining": 77,
-      "utilities": 40,
-      "upi": 12,
-      "forex": 93,
-      "lounge": 77,
-      "premium": 65,
-      "business": 51,
-      "lifetime-free": 67,
-      "beginner": 35,
-      "low-fee": 16,
-      "co-branded": 68
-    },
-    "detectedBenefits": [
-      "Loan/Utility Payment",
-      "See All Travel Insurance",
-      "See All Forex & Remittance",
-      "See All Loan/Utility Payment",
-      "Free Movie Tickets | 5% Cashback on OTT & Entertainment Offers| Food Delivery Rewards Access to Airport Lounges|| PVR INOX Offers"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 5,
-        "context": "Cards Credit Card Get Movie Credit Cards Kotak Movie Credit Card Free Movie Tickets | 5% Cashback on OTT & Entertainment Offers| Food Delivery Rewards Access to Airport Lounges|| PVR INOX Offers Ap"
-      },
-      {
-        "value": 5,
-        "context": "hback+ Credit Card Joining Fee: ₹0 | Annual Fee: ₹750 Joining Fee: ₹0 | Annual Fee: ₹750 5% cashback on Online food deliveries, groceries and entertainment 3% cashback on fuel spends across fuel statio"
-      },
-      {
-        "value": 3,
-        "context": "₹0 | Annual Fee: ₹750 5% cashback on Online food deliveries, groceries and entertainment 3% cashback on fuel spends across fuel stations 0.5% unlimited cashback on other eligible spends Apply Now Know"
-      },
-      {
-        "value": 0.5,
-        "context": "d deliveries, groceries and entertainment 3% cashback on fuel spends across fuel stations 0.5% unlimited cashback on other eligible spends Apply Now Know More League Platinum Credit Card Joining Fee: IN"
-      },
-      {
-        "value": 2,
-        "context": "ntary 2 International & 4 Domestic Lounge Access annually Low Foreign Currency Mark-up of 2% Apply Now Know More Kotak Air Credit Card Joining Fee ₹0 | Annual Fee ₹999 Compare Joining Fee ₹0 | Annual"
-      },
-      {
-        "value": 5,
-        "context": "ining Fee: INR 449 | Annual Fee: INR 449 Joining Fee: INR 449 | Annual Fee: INR 449 Save 5%* on Fuel spends at IndianOil fuel pumps Earn 2%** back as Reward Points on Grocery and Dining spends Annual"
-      },
-      {
-        "value": 2,
-        "context": "Fee: INR 449 | Annual Fee: INR 449 Save 5%* on Fuel spends at IndianOil fuel pumps Earn 2%** back as Reward Points on Grocery and Dining spends Annual Fee waiver on retail spends of INR 50,000 in the"
-      },
-      {
-        "value": 20,
-        "context": "Fee: INR 499 Unlimited* Movie Tickets: one ticket for every INR 10,000 spent on the card 20% Instant Discount* on Food & Beverages 5% Instant Discount* on movie tickets Apply Now Know More White Reser"
-      },
-      {
-        "value": 5,
-        "context": "e ticket for every INR 10,000 spent on the card 20% Instant Discount* on Food & Beverages 5% Instant Discount* on movie tickets Apply Now Know More White Reserve Credit Card Joining Fees: INR 12,500 |"
-      },
-      {
-        "value": 1.99,
-        "context": "ard Built to grow your business Built to grow your business Enjoy a low interest rate of 1.99% per month Turn your spends into rewards! Earn up to 7X points and redeem it easily on Kotak Unbox Avail of a"
-      }
-    ]
-  },
-  {
-    "id": "b1ae345f356165",
-    "issuer": "Kotak Mahindra Bank",
-    "name": "Key features and benefits of Kotak bank Credit Card",
-    "sourceUrl": "https://www.kotak.com/en/stories-in-focus/cards/credit-cards/what-is-a-credit-card-what-are-the-credit-card-benefits.html",
-    "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 16,
-      "fuel": 0,
-      "travel": 61.5,
-      "shopping": 32,
-      "grocery": 0,
-      "dining": 12,
-      "utilities": 32,
-      "upi": 0,
-      "forex": 20,
-      "lounge": 20,
-      "premium": 33,
-      "business": 51,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Loan/Utility Payment",
-      "See All Travel Insurance",
-      "See All Forex & Remittance",
-      "See All Loan/Utility Payment",
-      "Rewards Credit Cards: Offer reward points on every eligible purchase, which can later be redeemed for products, vouchers, or services."
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "165c0ff09add23",
-    "issuer": "Kotak Mahindra Bank",
-    "name": "Credit Card Interest Rates & Charges",
-    "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards/credit-card-services/credit-card-payments.html",
-    "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 12,
-      "shopping": 16,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 28,
-      "upi": 8,
-      "forex": 16,
-      "lounge": 0,
-      "premium": 28,
-      "business": 47,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 48
-    },
-    "detectedBenefits": [
-      "Loan/Utility Payment",
-      "See All Travel Insurance",
-      "See All Forex & Remittance",
-      "See All Loan/Utility Payment",
-      "Select your Savings Bank Netbanking/UPI/Rupay Card option from the dropdown."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 5,
-        "context": "minimum amount for credit card bill payment? The minimum amount is generally computed as 5% of the total amount due in your monthly credit card statement. Please note; EMIs, Joining Fees & all processi"
-      }
-    ]
-  },
-  {
-    "id": "e7d7dd6f971a24",
-    "issuer": "Kotak Mahindra Bank",
-    "name": "Things to Know Before Applying for a Credit Card",
-    "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards/credit-card-services/credit-card-payments.html",
-    "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 12,
-      "shopping": 16,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 28,
-      "upi": 8,
-      "forex": 16,
-      "lounge": 0,
-      "premium": 28,
-      "business": 47,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 48
-    },
-    "detectedBenefits": [
-      "Loan/Utility Payment",
-      "See All Travel Insurance",
-      "See All Forex & Remittance",
-      "See All Loan/Utility Payment",
-      "Select your Savings Bank Netbanking/UPI/Rupay Card option from the dropdown."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 5,
-        "context": "minimum amount for credit card bill payment? The minimum amount is generally computed as 5% of the total amount due in your monthly credit card statement. Please note; EMIs, Joining Fees & all processi"
-      }
-    ]
-  },
-  {
-    "id": "5942380dec9a72",
-    "issuer": "AU Small Finance Bank",
-    "name": "Presenting AU Credit Cards, A World of Limitless Possibilities.",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "622c8d941ad665",
-    "issuer": "AU Small Finance Bank",
-    "name": "Zenith+ Credit Card",
-    "sourceUrl": "https://www.au.bank.in/premium-banking/credit-cards/zenith-plus-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "diningRate": 10,
-    "upiRate": 1,
-    "forexMarkup": 0.99,
-    "loungeVisits": 16,
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 43,
-      "travel": 112,
-      "shopping": 16,
-      "grocery": 0,
-      "dining": 102,
-      "utilities": 24,
-      "upi": 42,
-      "forex": 63.08,
-      "lounge": 80,
-      "premium": 84,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Business Cashback Credit Card",
-      "Exciting Welcome Benefit",
-      "Brand Voucher worth Rs.5,000 or 5000 Reward Points, you can choose either of them.",
-      "Elite Rewards on Spends",
-      "Up to 2 Reward Points per Rs.100 spent on dining, travel & international spends."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1,
-        "context": "Unlock amazing offers curated for Zenith+ RuPay Credit Card. Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver (up to ₹1000) for transactions between ₹400 and ₹5,000 at all fuel stations across the"
-      },
-      {
-        "value": 0.99,
-        "context": "pplication Customer support Make payments Adding more benefits Lower forex markup fees at 0.99% --> Heyy --> 24x7 Global Concierge Assistance --> Heyy --> Xpress EMI --> Heyy --> Contactless card usage -->"
-      },
-      {
-        "value": 1,
-        "context": "ierge Assistance --> Heyy --> Xpress EMI --> Heyy --> Contactless card usage --> Heyy --> 1% Fuel Surcharge Waiver (Max 1000 per statement cycle) --> Heyy --> Priority customer service ( [email protecte"
-      },
-      {
-        "value": 50,
-        "context": "ain with an array of brands offer available at 40+ properties). Stay for 3, Pay for 2 and 50% savings on the 2nd night. Know More Exclusive Stay Offers with Elivaas (Curated luxury villa vacations at c"
-      },
-      {
-        "value": 50,
-        "context": "d Indian destinations, offers available at 150+ luxury villas). Stay for 3, Pay for 2 and 50% savings on the 2nd night. Know More Complimentary Visa Meet & Greet services (available at all major Indian"
-      },
-      {
-        "value": 10,
-        "context": "der active customers meeting a specific spends threshold and repeat customers can avail a 10% discount. Know More Premium Dining Program Dine with Visa, offering reservations & curated menus that help"
-      }
-    ]
-  },
-  {
-    "id": "303416cb86dbd4",
-    "issuer": "AU Small Finance Bank",
-    "name": "Ananta Credit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/ananta-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 2000,
-    "joiningFee": 2000,
-    "renewalFee": 2000,
-    "feeWaiverSpend": 400,
-    "maxCashbackRate": 15,
-    "maxRewardRate": 15,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 15,
-    "diningRate": 15,
-    "travelRate": 50,
-    "loungeVisits": 4,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 136,
-      "fuel": 47,
-      "travel": 452,
-      "shopping": 149,
-      "grocery": 0,
-      "dining": 151,
-      "utilities": 28,
-      "upi": 16,
-      "forex": 16,
-      "lounge": 44,
-      "premium": 32,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 12,
-      "co-branded": 60
-    },
-    "detectedBenefits": [
-      "Business Cashback Credit Card",
-      "Thoughtfully crafted for elevated lifestyles, travel and dining",
-      "Exciting Travel Benefits",
-      "Accelerated Reward Points on Shopping, Dining & Travel spends",
-      "Kickstart your journey with 8,000 Bonus Reward Points on card activation*"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 15,
-        "context": "Card Thoughtfully crafted for elevated lifestyles, travel and dining Apply Now --> Up to 15% instant discount with merchant partners Exciting Travel Benefits Accelerated Reward Points on Shopping, Dinin"
-      },
-      {
-        "value": 15,
-        "context": "eward Points on Shopping, Dining & Travel spends Benefits that match your lifestyle Up to 15% instant discount with merchant partners Exciting Travel Benefits Accelerated Reward Points on Shopping, Dinin"
-      },
-      {
-        "value": 15,
-        "context": "ds* — amongst the best rewards Credit Cards in its category Always on Savings Enjoy up to 15% instant discount at partner merchants* Travel Made Easier Enjoy complimentary Domestic Airport Lounge Access"
-      },
-      {
-        "value": 1,
-        "context": "tner Offers Special offers basis your selected network variant Fuel Surcharge Waiver Save 1% surcharge on fuel spends ₹400–₹5,000 across India* (Maximum ₹200 per statement cycle) AU Rewardz Redeem your"
-      },
-      {
-        "value": 15,
-        "context": "re What merchant discounts are available on AU Ananta Credit Card? --> --> You can enjoy 15% instant discounts on Amazon Fashion, Dining by District, Hotel bookings via AU Rewardz. Spend Category Shopp"
-      },
-      {
-        "value": 1,
-        "context": "more Is fuel surcharge waiver available on AU Ananta Credit Card? --> --> Yes. You get a 1% fuel surcharge waiver, up to ₹200 per statement cycle. See more What all insurance and protection benefits a"
-      },
-      {
-        "value": 15,
-        "context": "ul transaction within 30 days of card issuance. Know More Always on Savings Earn up to 15% instant discount on Amazon Fashion every month (max cashback Rs. 500 per month) Know More Earn up to 15 % i"
-      },
-      {
-        "value": 15,
-        "context": "unt on Amazon Fashion every month (max cashback Rs. 500 per month) Know More Earn up to 15 % instant discount on Dining with District App every month max cashback Rs. 500 per month Know More Earn up t"
-      },
-      {
-        "value": 15,
-        "context": "ining with District App every month max cashback Rs. 500 per month Know More Earn up to 15% instant discount on Hotel Booking on AU Rewardz Hotel booking instant discount can be availed by Primary Car"
-      },
-      {
-        "value": 15,
-        "context": "a Cardholders MakeMyTrip : 2 Complimentary Domestic Flight Seats (max value ₹350) + Flat 15% off hotels. Know more Times Prime Membership : Complimentary Annual Membership. Know more Alaya Stays : Sta"
-      }
-    ]
-  },
-  {
-    "id": "9c574851456324",
-    "issuer": "AU Small Finance Bank",
-    "name": "Laksya Credit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/laksya-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 1000,
-    "joiningFee": 1000,
-    "renewalFee": 1000,
-    "feeWaiverSpend": 400,
-    "maxCashbackRate": 15,
-    "maxRewardRate": 15,
-    "fuelRate": 50,
-    "surchargeWaiverRate": 50,
-    "shoppingRate": 15,
-    "groceryRate": 15,
-    "diningRate": 15,
-    "travelRate": 15,
-    "loungeVisits": 8,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "grocery",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 136,
-      "fuel": 782,
-      "travel": 173,
-      "shopping": 137,
-      "grocery": 155,
-      "dining": 163,
-      "utilities": 28,
-      "upi": 16,
-      "forex": 16,
-      "lounge": 64,
-      "premium": 36,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 25.33,
-      "co-branded": 64
-    },
-    "detectedBenefits": [
-      "Business Cashback Credit Card",
-      "Turn everyday expenses into the most rewarding experiences",
-      "Complimentary Airport Lounge Access",
-      "Accelerated Reward Points",
-      "4,000 Bonus Reward Points or ₹1,000 Brand Voucher on card activation*"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 15,
-        "context": "edit Card Turn everyday expenses into the most rewarding experiences Apply Now --> Up to 15% instant discount with merchant partners Complimentary Airport Lounge Access Accelerated Reward Points Benefit"
-      },
-      {
-        "value": 15,
-        "context": "Airport Lounge Access Accelerated Reward Points Benefits that match your lifestyle Up to 15% instant discount with merchant partners Complimentary Airport Lounge Access Accelerated Reward Points Benefit"
-      },
-      {
-        "value": 15,
-        "context": "0 on Grocery, Departmental Stores & Contactless payments. Partner Privileges Enjoy a flat 15% off at partner merchants and Buy-One-Get-One Movie Tickets every month. Airport Lounge Comfort Enjoy 8 compli"
-      },
-      {
-        "value": 1,
-        "context": "fits to your loved ones through the lifetime-free add-on card Fuel Surcharge Waiver Save 1% surcharge on fuel spends ₹400–₹5,000 across India* (Maximum ₹150 per statement cycle) AU Rewardz Redeem your"
-      },
-      {
-        "value": 15,
-        "context": "merchant discounts are available on AU Laksya Credit Card? --> --> Cardholders can enjoy 15% instant discounts on groceries via Amazon Fresh, on food delivery via Zomato and Buy One Get One (BOGO) on mo"
-      },
-      {
-        "value": 1,
-        "context": "fuel surcharge waiver available on AU Laksya Credit Card? --> --> Yes. Cardholders get a 1% fuel surcharge waiver, up to ₹150 per statement cycle. See more What all insurance and protection benefits a"
-      },
-      {
-        "value": 15,
-        "context": "n to claim the Welcome benefit via SMS/Email. Know More . Partner Privileges Earn up to 15% instant discount on Amazon Grocery/Amazon Now every month (max cashback ₹250 per month). Know More Earn up"
-      },
-      {
-        "value": 15,
-        "context": "zon Grocery/Amazon Now every month (max cashback ₹250 per month). Know More Earn up to 15% instant discount on Food Deliveries via Zomato App every month (max cashback ₹ 250 per month). Know More Bu"
-      },
-      {
-        "value": 15,
-        "context": "a Cardholders MakeMyTrip : 2 Complimentary Domestic Flight Seats (max value ₹350) + Flat 15% off hotels Times Prime Membership : Complimentary Annual Membership Alaya Stays : Stay 3 nights, pay 2 nights"
-      },
-      {
-        "value": 50,
-        "context": "Membership : Complimentary Annual Membership Alaya Stays : Stay 3 nights, pay 2 nights + 50% off 2nd night 1% Fuel Surcharge Waiver 1% Fuel Surcharge Waiver for fuel transactions done between ₹400 and"
-      }
-    ]
-  },
-  {
-    "id": "34dc5673fcf05f",
-    "issuer": "AU Small Finance Bank",
-    "name": "Tejas Credit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/tejas-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 500,
-    "joiningFee": 500,
-    "renewalFee": 500,
-    "feeWaiverSpend": 400,
-    "maxCashbackRate": 10,
-    "maxRewardRate": 10,
-    "fuelRate": 50,
-    "surchargeWaiverRate": 50,
-    "shoppingRate": 10,
-    "groceryRate": 10,
-    "diningRate": 10,
-    "travelRate": 15,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "grocery",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 96,
-      "fuel": 782,
-      "travel": 150.5,
-      "shopping": 110,
-      "grocery": 102,
-      "dining": 122,
-      "utilities": 20,
-      "upi": 16,
-      "forex": 16,
-      "lounge": 8,
-      "premium": 29,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 57,
-      "low-fee": 33.67,
-      "co-branded": 64
-    },
-    "detectedBenefits": [
-      "Business Cashback Credit Card",
-      "Maximise your savings and rewards with each spend",
-      "10% Cashback on your favourite categories",
-      "5 Reward Points on AU Rewardz",
-      "Welcome benefits on activation"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 10,
-        "context": "Card Tejas Credit Card Maximise your savings and rewards with each spend Apply Now --> 10% Cashback on your favourite categories 5 Reward Points on AU Rewardz Welcome benefits on activation Benefits t"
-      },
-      {
-        "value": 10,
-        "context": "rd Points on AU Rewardz Welcome benefits on activation Benefits that match your lifestyle 10% Cashback on your favourite categories 5 Reward Points on AU Rewardz Welcome benefits on activation Benefits E"
-      },
-      {
-        "value": 10,
-        "context": "Bonus Reward Points or ₹500 Brand Voucher on card activation* Discounts that Matter Flat 10% cashback on spends at partner merchants - movies, grocery delivery & food delivery, Cab booking, and Bill pay"
-      },
-      {
-        "value": 1,
-        "context": "₹500 and above with a minimum total value of ₹2,000 into EMIs. Fuel Surcharge Waiver Save 1% surcharge on fuel spends ₹400–₹5,000 across India* (Maximum ₹100 per statement cycle) AU Rewardz Redeem your"
-      },
-      {
-        "value": 1,
-        "context": "ce Protection Plan. See more Is there any fuel surcharge waiver? --> --> Yes. You get a 1% fuel surcharge waiver, up to ₹100 per statement cycle. See more What merchant discounts are available on AU"
-      },
-      {
-        "value": 10,
-        "context": "What merchant discounts are available on AU Laksya Credit Card? --> --> You can enjoy a 10% discount at Amazon Fresh, on Food Delivery via Zomato, Movies by District, on Cab Services: Uber / Ola / Rapi"
-      },
-      {
-        "value": 10,
-        "context": "Payment Merchant District Amazon Fresh Zomato Uber/Ola/Rapido AU 0101 Discount/Cashback 10% 10% 10% 10% 10% Max Discount Rs 50 Rs 50 Rs 50 Rs 50 Rs 50 Min Trxn Amount Rs 150 Rs 150 Rs 150 Rs 150 Rs 150"
-      },
-      {
-        "value": 10,
-        "context": "ment Merchant District Amazon Fresh Zomato Uber/Ola/Rapido AU 0101 Discount/Cashback 10% 10% 10% 10% 10% Max Discount Rs 50 Rs 50 Rs 50 Rs 50 Rs 50 Min Trxn Amount Rs 150 Rs 150 Rs 150 Rs 150 Rs 150 Fre"
-      },
-      {
-        "value": 10,
-        "context": "Merchant District Amazon Fresh Zomato Uber/Ola/Rapido AU 0101 Discount/Cashback 10% 10% 10% 10% 10% Max Discount Rs 50 Rs 50 Rs 50 Rs 50 Rs 50 Min Trxn Amount Rs 150 Rs 150 Rs 150 Rs 150 Rs 150 Frequen"
-      },
-      {
-        "value": 10,
-        "context": "rchant District Amazon Fresh Zomato Uber/Ola/Rapido AU 0101 Discount/Cashback 10% 10% 10% 10% 10% Max Discount Rs 50 Rs 50 Rs 50 Rs 50 Rs 50 Min Trxn Amount Rs 150 Rs 150 Rs 150 Rs 150 Rs 150 Frequency O"
-      }
-    ]
-  },
-  {
-    "id": "e9650ff58f1d9a",
-    "issuer": "AU Small Finance Bank",
-    "name": "Prathama Credit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/prathama-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 100,
-    "joiningFee": 100,
-    "renewalFee": 100,
-    "feeWaiverSpend": 400,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "travelRate": 1,
-    "loungeVisits": 1,
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 47,
-      "travel": 40.5,
-      "shopping": 16,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 32,
-      "upi": 16,
-      "forex": 16,
-      "lounge": 8,
-      "premium": 29,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 57,
-      "low-fee": 40.33,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Business Cashback Credit Card",
-      "Up to 2 Reward Points on Contactless transactions",
-      "500 Bonus Rewards Points on setting up each recurring payment",
-      "1% Fuel Surcharge Waiver",
-      "Earn up to 2 Reward Points on every ₹100 spent"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1,
-        "context": "on Contactless transactions 500 Bonus Rewards Points on setting up each recurring payment 1% Fuel Surcharge Waiver Benefits that match your lifestyle Up to 2 Reward Points on Contactless transactions 50"
-      },
-      {
-        "value": 1,
-        "context": "on Contactless transactions 500 Bonus Rewards Points on setting up each recurring payment 1% Fuel Surcharge Waiver Benefits Eligibilty Fees & charges Customer support Accelerated Rewards Earn up to 2 Re"
-      },
-      {
-        "value": 1,
-        "context": "₹500 and above with a minimum total value of ₹2,000 into EMIs. Fuel Surcharge Waiver Save 1% surcharge on fuel spends ₹400–₹5,000 across India* (Maximum ₹100 per statement cycle) AU Rewardz Redeem your"
-      },
-      {
-        "value": 1,
-        "context": "re Is fuel surcharge waiver available on AU Prathama Credit Card? --> --> Yes. You get a 1% fuel surcharge waiver, up to ₹100 per statement cycle on fuel transactions between ₹ 400 and ₹ 5,000 See more"
-      },
-      {
-        "value": 1,
-        "context": "ht/Hotel bookings Much more on AU Rewardz Click Here to explore our AU Rewardz offerings 1% Fuel Surcharge Waiver 1% Fuel Surcharge Waiver for fuel transactions done between ₹400 and ₹5,000, across al"
-      },
-      {
-        "value": 1,
-        "context": "e on AU Rewardz Click Here to explore our AU Rewardz offerings 1% Fuel Surcharge Waiver 1% Fuel Surcharge Waiver for fuel transactions done between ₹400 and ₹5,000, across all fuel stations in the cou"
-      }
-    ]
-  },
-  {
-    "id": "26f1de2b84f250",
-    "issuer": "AU Small Finance Bank",
-    "name": "LIT Credit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/lit-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxCashbackRate": 5,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 5,
-    "groceryRate": 1,
-    "travelRate": 5,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "grocery",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 56,
-      "fuel": 35,
-      "travel": 68.5,
-      "shopping": 67,
-      "grocery": 13,
-      "dining": 0,
-      "utilities": 16,
-      "upi": 16,
-      "forex": 24,
-      "lounge": 24,
-      "premium": 33,
-      "business": 35,
-      "lifetime-free": 59,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 60
-    },
-    "detectedBenefits": [
-      "Business Cashback Credit Card",
-      "Up To 10x Reward Points",
-      "Exciting Cashback on your favorite categories",
-      "1% Fuel Surcharge Waiver",
-      "Enjoy 1% Fuel Surcharge Waiver for transactions between ₹400 and ₹5,000 at all fuel stations across the country for ₹49."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1,
-        "context": "e transactions Exciting Cashback on your favorite categories Groceries, Apparel and more 1% Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver for transactions between ₹400 and ₹5,000 at all fuel sta"
-      },
-      {
-        "value": 1,
-        "context": "k on your favorite categories Groceries, Apparel and more 1% Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver for transactions between ₹400 and ₹5,000 at all fuel stations across the country for ₹4"
-      },
-      {
-        "value": 5,
-        "context": "emberships for ZEE5 & Amazon Prime. Milestone Cashback Shop till you drop! Get additional 5% and 2% cashback on your retail spends at ₹199*. Your Financial Security. Our #1 Priority. Stay protected in t"
-      },
-      {
-        "value": 2,
-        "context": "ips for ZEE5 & Amazon Prime. Milestone Cashback Shop till you drop! Get additional 5% and 2% cashback on your retail spends at ₹199*. Your Financial Security. Our #1 Priority. Stay protected in the unfo"
-      },
-      {
-        "value": 5,
-        "context": "99. Maximum 2 visits can be selected for a 90-day period. Milestone Cashback Additional 5% cashback on minimum spends of ₹10,000. Additional 2% cashback on minimum spends of ₹15,000. Get 3-months Of"
-      },
-      {
-        "value": 2,
-        "context": "od. Milestone Cashback Additional 5% cashback on minimum spends of ₹10,000. Additional 2% cashback on minimum spends of ₹15,000. Get 3-months Of Subscriptions For: ZEE5 2,800+ blockbusters, 150+ we"
-      }
-    ]
-  },
-  {
-    "id": "cd0dfe1d2dbbf9",
-    "issuer": "AU Small Finance Bank",
-    "name": "CA Metal Credit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/ca-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxCashbackRate": 25,
-    "maxRewardRate": 25,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "travelRate": 15,
-    "forexMarkup": 1.99,
-    "loungeVisits": 2,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 208,
-      "fuel": 39,
-      "travel": 172,
-      "shopping": 191,
-      "grocery": 0,
-      "dining": 20,
-      "utilities": 28,
-      "upi": 16,
-      "forex": 43.08,
-      "lounge": 32,
-      "premium": 50,
-      "business": 35,
-      "lifetime-free": 59,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 52
-    },
-    "detectedBenefits": [
-      "Business Cashback Credit Card",
-      "Accelerated Reward Points for Business & Personal Spends",
-      "Accelerated Rewards Points for Business & Personal Spends",
-      "2000 Bonus Reward Points on spending ₹5000 within 30 days of card activation",
-      "Get flat 25% cashback on renewing your annual ICAI Membership Fee. Know more"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 25,
-        "context": "ints on spending ₹5000 within 30 days of card activation ICAI Membership Renewal Get flat 25% cashback on renewing your annual ICAI Membership Fee. Know more Accelerated Rewards Program 8 Reward Points"
-      },
-      {
-        "value": 1,
-        "context": "and leisure experiences with our Global Concierge Assistance. Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver (up to ₹250) for transactions between ₹400 and ₹5,000 at all fuel stations across the c"
-      },
-      {
-        "value": 1.99,
-        "context": "lounges click here . For detailed terms and conditions, click here . Low Forex Markup of 1.99% on all international transactions Welcome Benefits 2000 Bonus Reward Points on spending ₹5000 within 30 days"
-      },
-      {
-        "value": 15,
-        "context": ": Avail 2 Complimentary domestic flights seats booking (max value of up to ₹350) and Flat 15% off on select domestic hotels as MyCash. Know More Complimentary Annual Times Prime Membership that gives a"
-      },
-      {
-        "value": 50,
-        "context": "t coveted Indian destinations, offers available at 200+ villas) Stay for 3, Pay for 2 and 50% savings on the 2nd night. Know More Blogs What is MDR? Full Form, Meaning and How Merchant Discount Rate W"
-      }
-    ]
-  },
-  {
-    "id": "aa554ee1bf2171",
-    "issuer": "AU Small Finance Bank",
-    "name": "AU CS Credit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/au-cs-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxCashbackRate": 25,
-    "maxRewardRate": 25,
-    "fuelRate": 50,
-    "surchargeWaiverRate": 50,
-    "travelRate": 15,
-    "loungeVisits": 2,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 216,
-      "fuel": 782,
-      "travel": 176,
-      "shopping": 191,
-      "grocery": 0,
-      "dining": 20,
-      "utilities": 24,
-      "upi": 16,
-      "forex": 16,
-      "lounge": 28,
-      "premium": 42,
-      "business": 35,
-      "lifetime-free": 67,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 52
-    },
-    "detectedBenefits": [
-      "AU CS Credit Card: 25% ICSI Cashback & 8X Rewards | AU Small Finance Bank",
-      "Business Cashback Credit Card",
-      "25% Cashback* on ICSI Membership Renewal",
-      "8 Reward Points per ₹100 for Business & Personal Spends",
-      "2000 Bonus Reward Points on spending ₹5000 within 30 days of card activation."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 25,
-        "context": "AU CS Credit Card: 25% ICSI Cashback & 8X Rewards | AU Small Finance Bank --> Personal Business NRI Premium Language --> Research"
-      },
-      {
-        "value": 25,
-        "context": "it Card Empowering India’s Corporate Governance Experts. AU CS Credit Card Apply Now --> 25% Cashback* on ICSI Membership Renewal 8 Reward Points per ₹100 for Business & Personal Spends Lifetime Free Ca"
-      },
-      {
-        "value": 25,
-        "context": "ess & Personal Spends Lifetime Free Card Empowering India’s Corporate Governance Experts. 25% Cashback* on ICSI Membership Renewal 8 Reward Points per ₹100 for Business & Personal Spends Lifetime Free Ca"
-      },
-      {
-        "value": 25,
-        "context": "nts on spending ₹5000 within 30 days of card activation. ICSI Membership Renewal Get flat 25% cashback on renewing your annual ICSI Membership Fee. Know More Accelerated Rewards Program 8 Reward Points"
-      },
-      {
-        "value": 1,
-        "context": "and leisure experiences with our Global Concierge Assistance. Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver (up to ₹250) for transactions between ₹400 and ₹5,000 at all fuel stations across the c"
-      },
-      {
-        "value": 6.75,
-        "context": "Membership and Alaya stays. AU Royale Savings Account for Company Secretaries Earn up to 6.75% p.a.* interest. No minimum balance requirement. Premium AU Debit Card with CS logo Quick links Card activati"
-      },
-      {
-        "value": 15,
-        "context": "Avail 2 Complimentary domestic flights, seats, booking (max value of up to ₹350) and Flat 15% off on select domestic hotels as MyCash. Know More Complimentary Annual Times Prime Membership that gives ac"
-      },
-      {
-        "value": 50,
-        "context": "t coveted Indian destinations, offers available at 200+ villas) Stay for 3, Pay for 2 and 50% savings on the 2nd night. Know More 1% Fuel Surcharge Waiver 1% Fuel Surcharge Waiver for fuel transactions"
-      },
-      {
-        "value": 1,
-        "context": "ilable at 200+ villas) Stay for 3, Pay for 2 and 50% savings on the 2nd night. Know More 1% Fuel Surcharge Waiver 1% Fuel Surcharge Waiver for fuel transactions done between ₹400 and ₹5,000, across al"
-      },
-      {
-        "value": 1,
-        "context": "y for 3, Pay for 2 and 50% savings on the 2nd night. Know More 1% Fuel Surcharge Waiver 1% Fuel Surcharge Waiver for fuel transactions done between ₹400 and ₹5,000, across all fuel stations in the cou"
-      }
-    ]
-  },
-  {
-    "id": "dccce864b22ee2",
-    "issuer": "AU Small Finance Bank",
-    "name": "Vetta Credit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/vetta-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "feeWaiverSpend": 90,
-    "maxCashbackRate": 1,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "travelRate": 15,
-    "upiRate": 50,
-    "loungeVisits": 4,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 20,
-      "fuel": 47,
-      "travel": 203,
-      "shopping": 23,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 28,
-      "upi": 536,
-      "forex": 28,
-      "lounge": 48,
-      "premium": 48,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 52
-    },
-    "detectedBenefits": [
-      "Apply Online for Vetta Credit Card – Rewards & Benefits | AU Small Finance Bank",
-      "Business Cashback Credit Card",
-      "Premium Lifestyle Deserves Premium Rewards",
-      "Quarterly and Yearly Milestone Benefits",
-      "Complimentary Lounge Access"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1,
-        "context": "up to ₹5000. Add-on Cards Extend our love to your loved ones with add-on cards for free. 1% Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver (up to ₹100) for transactions between ₹400 and ₹5,000 at"
-      },
-      {
-        "value": 1,
-        "context": "nd our love to your loved ones with add-on cards for free. 1% Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver (up to ₹100) for transactions between ₹400 and ₹5,000 at all fuel stations across the c"
-      },
-      {
-        "value": 3.49,
-        "context": "ross the country. Lower International Mark-Up Fees Cross currency foreign mark-up fees of 3.49% applicable on your international transactions Card Liability Cover Zero liability on fraudulent transactions"
-      },
-      {
-        "value": 1,
-        "context": "n a RuPay Credit Card? --> --> AU RuPay InstaPay Credit Card offers extensive cashback of 1% on selected merchant categories capped at ₹100 per statement cycle. See All Can I convert a UPI transaction"
-      },
-      {
-        "value": 15,
-        "context": "vail 2 Complimentary domestic flights seats booking (max value of up to INR 350) and Flat 15% off on select domestic hotels as MyCash. Know More Complimentary Annual Times Prime Membership that gives ac"
-      },
-      {
-        "value": 50,
-        "context": "t coveted Indian destinations, offers available at 200+ villas) Stay for 3, Pay for 2 and 50% savings on the 2nd night. Know More RuPay Offer Enjoy now amazing offers available on your Vetta RuPay Cred"
-      },
-      {
-        "value": 1,
-        "context": "us and relax. Call us on our 24 x 7 number at 1800 210 0298 (toll free) or 022-42320298. 1% Fuel Surcharge Waiver 1% Fuel Surcharge Waiver for fuel transactions done between ₹400 and ₹5,000, across al"
-      },
-      {
-        "value": 1,
-        "context": "our 24 x 7 number at 1800 210 0298 (toll free) or 022-42320298. 1% Fuel Surcharge Waiver 1% Fuel Surcharge Waiver for fuel transactions done between ₹400 and ₹5,000, across all fuel stations in the cou"
-      }
-    ]
-  },
-  {
-    "id": "8a5f350c1d1637",
-    "issuer": "AU Small Finance Bank",
-    "name": "Spont Credit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/au-spont-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 299,
-    "renewalFee": 299,
-    "maxCashbackRate": 1,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "travelRate": 1,
-    "upiRate": 1,
-    "loungeVisits": 2,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 39,
-      "travel": 58,
-      "shopping": 23,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 16,
-      "upi": 58,
-      "forex": 16,
-      "lounge": 40,
-      "premium": 30,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 57,
-      "low-fee": 29.02,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Business Cashback Credit Card",
-      "Turning every UPI transaction into big rewards.",
-      "1% Cashback on all Transactions",
-      "1% Cashback on all transactions like eComm, POS, Contactless and even all UPI transactions made via any UPI channel",
-      "Earn Coins on UPI transactions"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1,
-        "context": "it Card Turning every UPI transaction into big rewards. Apply Now --> Coins on UPI spends 1% Cashback on all Transactions Milestone Benefits Benefits that match your lifestyle Coins on UPI spends 1% Cas"
-      },
-      {
-        "value": 1,
-        "context": "ll Transactions Milestone Benefits Benefits that match your lifestyle Coins on UPI spends 1% Cashback on all Transactions Milestone Benefits Benefits Eligibilty Fee & Charges Customer support Cashback N"
-      },
-      {
-        "value": 1,
-        "context": "Milestone Benefits Benefits Eligibilty Fee & Charges Customer support Cashback Never Ends 1% Cashback on all transactions like eComm, POS, Contactless and even all UPI transactions made via any UPI chan"
-      },
-      {
-        "value": 1,
-        "context": "expiring coins on UPI transactions. Fuel Surcharge Waiver Save more on your commutes. Get 1% Fuel Surcharge Waiver for transactions between ₹400 and ₹5,000 at all fuel stations across the country (up to"
-      }
-    ]
-  },
-  {
-    "id": "59185956769886",
-    "issuer": "AU Small Finance Bank",
-    "name": "NOMO Credit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/nomo-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "joiningFee": 199,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "forexMarkup": 0.99,
-    "loungeVisits": 10,
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 39,
-      "travel": 55,
-      "shopping": 16,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 20,
-      "upi": 16,
-      "forex": 67.08,
-      "lounge": 68,
-      "premium": 34,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 47,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Business Cashback Credit Card",
-      "Earn 500 reward points on your 1st transaction",
-      "Earn 2 Reward Points per ₹100 on retail spends and 1 Reward Point on utility & insurance.",
-      "Spend ₹25,000 on retail in a quarter & earn 500 points. Double it at ₹50,000 spends. (Fuel & cash not included)",
-      "a lower Forex Markup of just 0.99%."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 0.99,
-        "context": "t included) Markup Fee Enjoy international transactions with a lower Forex Markup of just 0.99%. Domestic Airport Lounge Access With effect from 10 th April 2026, enjoy 2 complimentary Domestic Lounge visi"
-      },
-      {
-        "value": 1,
-        "context": "cardholders. Click here to see the list of lounges and T&Cs. Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver (up to ₹100) for transactions between ₹400 and ₹5,000 at all fuel stations across the c"
-      },
-      {
-        "value": 0.5,
-        "context": "d Deposit Grow your savings and earn high interest rates. Senior Citizens* Can Earn Up To 0.50% p.a. additionally, Choice of Interest Payout Quick links Card activation Make payment Convert to EMI Report"
-      },
-      {
-        "value": 0.5,
-        "context": "gs with high interest rates & choice of interest payment. Senior Citizens* can earn up to 0.50% p.a. additional interest --> Heyy --> More credit card(s) like this AU InstaPay Credit Card Virtual card. Rea"
-      },
-      {
-        "value": 100,
-        "context": "ed to use this Credit Card. Upon successful creation of your FD, a lien will be marked on 100% of the FD value. See more How does an FD act as collateral to avail AU NOMO Credit Card? --> --> A Fixed Dep"
-      },
-      {
-        "value": 99,
-        "context": "ard? --> --> Reward Points: 2 Reward Points per ₹100 on retails spends* (1 RP = ₹0.25). O.99% Forex Markup: Enjoy lowest Forex Markup Fee on your international spends. Airport Lounge Access: AU NOMO prov"
-      }
-    ]
-  },
-  {
-    "id": "def871a5a2b7c5",
-    "issuer": "AU Small Finance Bank",
-    "name": "Traverse Credit Card for NRIs",
-    "sourceUrl": "https://www.au.bank.in/premium-banking/credit-cards/traverse-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 600000,
-    "renewalFee": 600000,
-    "feeWaiverSpend": 600000,
-    "maxRewardRate": 7.1,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "travelRate": 0.99,
-    "forexMarkup": 0.99,
-    "loungeVisits": 500,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 8,
-      "fuel": 39,
-      "travel": 828.93,
-      "shopping": 20,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 24,
-      "upi": 16,
-      "forex": 71.08,
-      "lounge": 80,
-      "premium": 60,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 52
-    },
-    "detectedBenefits": [
-      "AU Traverse Credit Card for NRIs – Premium Global Benefits & Rewards",
-      "Business Cashback Credit Card",
-      "Global Convenience & Unmatched Rewards",
-      "Unlock An Exclusive Welcome Gift",
-      "Complimentary Airport Lounge Access"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 0.99,
-        "context": "lock An Exclusive Welcome Gift Get a MakeMyTrip voucher worth ₹5,000. Low Forex Mark-Up A 0.99% fee on international expenses. Complimentary Airport Lounge Access Elevate your travel experience with domest"
-      },
-      {
-        "value": 1,
-        "context": "ry Airport Spa Access De-stress with 4 airport spa accesses per year (up to 1 a quarter). 1% Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver (up to ₹250) for transactions between ₹400 and ₹5,000 at"
-      },
-      {
-        "value": 1,
-        "context": "with 4 airport spa accesses per year (up to 1 a quarter). 1% Fuel Surcharge Waiver Enjoy 1% Fuel Surcharge Waiver (up to ₹250) for transactions between ₹400 and ₹5,000 at all fuel stations across the c"
-      },
-      {
-        "value": 7.1,
-        "context": "e deserves premium rewards. --> Heyy --> More NRI Services AU FCNR (B) Deposit Earn up to 7.10%* p.a. Returns with AU FCNR (B) Deposit --> Heyy --> AU Remit Send Money Abroad with 0 Markup & 0 Charges -->"
-      }
-    ]
-  },
-  {
-    "id": "ea8d72530a0cf8",
-    "issuer": "AU Small Finance Bank",
-    "name": "CheQ AU Credit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/cheq-au-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "maxRewardRate": 12,
-    "diningRate": 12,
-    "upiRate": 12,
-    "categories": [
-      "dining",
-      "upi"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 112,
-      "utilities": 0,
-      "upi": 124,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "12% Rewards On Favourite Brands",
-      "2.5% Rewards On CheQ UPI"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 12,
-        "context": "CheQ AU Credit Card 12% Rewards On Favourite Brands 2.5% Rewards On CheQ UPI Complimentary EazyDiner Membership --> Learn More Apply"
-      },
-      {
-        "value": 2.5,
-        "context": "CheQ AU Credit Card 12% Rewards On Favourite Brands 2.5% Rewards On CheQ UPI Complimentary EazyDiner Membership --> Learn More Apply Now -->"
-      }
-    ]
-  },
-  {
-    "id": "ceff92c84a4bc6",
-    "issuer": "AU Small Finance Bank",
-    "name": "Paytm AU Credit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/paytm-au-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxRewardRate": 5,
-    "travelRate": 5,
-    "loungeVisits": 1,
-    "categories": [
-      "travel",
-      "lounge",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 44.5,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 8,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 40
-    },
-    "detectedBenefits": [
-      "Up to 2% rewards on Paytm Scan & Pay",
-      "5% back on Paytm Travel & Gold",
-      "Complimentary lounge access*"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 2,
-        "context": "Paytm AU Credit Card Up to 2% rewards on Paytm Scan & Pay 5% back on Paytm Travel & Gold Complimentary lounge access* --> Learn More Apply"
-      },
-      {
-        "value": 5,
-        "context": "Paytm AU Credit Card Up to 2% rewards on Paytm Scan & Pay 5% back on Paytm Travel & Gold Complimentary lounge access* --> Learn More Apply Now -->"
-      }
-    ]
-  },
-  {
-    "id": "138e53d2633013",
-    "issuer": "AU Small Finance Bank",
-    "name": "Altura Credit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/altura-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 1,
-    "categories": [
-      "travel",
-      "lounge"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 9.5,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 8,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Railway Lounge Access"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "7b15554c6b7c50",
-    "issuer": "AU Small Finance Bank",
-    "name": "Corporate Credit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/commercial-credit-cards/corporate-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 1,
-    "categories": [
-      "fuel",
-      "travel",
-      "lounge",
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 8,
-      "travel": 9.5,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 12,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Complimentary Airport Lounge Access",
-      "Fuel Surcharge Waiver"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "3694473a6d4ec5",
-    "issuer": "AU Small Finance Bank",
-    "name": "Business Cashback Credit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/commercial-credit-cards/business-cashback-credit-card",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxCashbackRate": 1,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "lounge",
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 16,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 8,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Business Cashback Credit Card",
-      "1% Cashback on Repayments",
-      "Complimentary Access to Railway Lounge"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1,
-        "context": "Business Cashback Credit Card 1% Cashback on Repayments Instant Loan for your business Complimentary Access to Railway Lounge --> Learn more"
-      }
-    ]
-  },
-  {
-    "id": "73def34e015b8d",
-    "issuer": "AU Small Finance Bank",
-    "name": "Go through the Credit Card MITC or Key Fact Statement for details of applicable fees and charges.",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "c4121f161ae7a6",
-    "issuer": "AU Small Finance Bank",
-    "name": "Is there any Annual fees applicable on my Credit Card?",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "annualFee": 1000,
-    "joiningFee": 999,
-    "renewalFee": 199,
-    "feeWaiverSpend": 1,
-    "categories": [
-      "cashback",
-      "business",
-      "lifetime-free",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 8,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 59,
-      "beginner": 0,
-      "low-fee": 37.33,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Is there any Annual fees applicable on my Credit Card?",
-      "Yes, Card Annual fees is applicable on all credit card variants. However, the Card fee is only applicable if the retail spends based fee waiver condition is not met. Please have a quick look at Card fee details below:",
-      "Business Cashback - ₹99 per month",
-      "Spends Conditions for Annual / Renewal Fee Waiver",
-      "1st Year Annual Fee waiver"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "4e1f4eb67eb110",
-    "issuer": "AU Small Finance Bank",
-    "name": "Is there any charge applicable for doing International transaction on Credit Card?",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "maxCashbackRate": 3.5,
-    "categories": [
-      "cashback",
-      "shopping",
-      "forex",
-      "business",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 32,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 24.5,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 20,
-      "lounge": 0,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 40
-    },
-    "detectedBenefits": [
-      "Foreign Currency Transaction - Cross Currency Mark-up Charges",
-      "Altura, Altura Plus, LIT, Business Cashback, InstaPay, AU SPONT, SwipeUp - Xcite Series of Cards - 3.49%"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 3.5,
-        "context": "reign Currency Transaction - Cross Currency Mark-up Charges ABC FLEX, ABC NXT, ABC BIZ - 3.50% Altura, Altura Plus, LIT, Business Cashback, InstaPay, AU SPONT, SwipeUp - Xcite Series of Cards - 3.49% Vett"
-      },
-      {
-        "value": 3.49,
-        "context": "ltura Plus, LIT, Business Cashback, InstaPay, AU SPONT, SwipeUp - Xcite Series of Cards - 3.49% Vetta - 2.99% Zenith, ABC PRO - 1.99% Zenith+, NOMO - 0.99% ixigo AU - 0% Note - Taxes as applicable See More"
-      },
-      {
-        "value": 2.99,
-        "context": "T, Business Cashback, InstaPay, AU SPONT, SwipeUp - Xcite Series of Cards - 3.49% Vetta - 2.99% Zenith, ABC PRO - 1.99% Zenith+, NOMO - 0.99% ixigo AU - 0% Note - Taxes as applicable See More See all Try"
-      },
-      {
-        "value": 1.99,
-        "context": "staPay, AU SPONT, SwipeUp - Xcite Series of Cards - 3.49% Vetta - 2.99% Zenith, ABC PRO - 1.99% Zenith+, NOMO - 0.99% ixigo AU - 0% Note - Taxes as applicable See More See all Try saying something Cancel"
-      },
-      {
-        "value": 0.99,
-        "context": "eUp - Xcite Series of Cards - 3.49% Vetta - 2.99% Zenith, ABC PRO - 1.99% Zenith+, NOMO - 0.99% ixigo AU - 0% Note - Taxes as applicable See More See all Try saying something Cancel"
-      },
-      {
-        "value": 0,
-        "context": "s of Cards - 3.49% Vetta - 2.99% Zenith, ABC PRO - 1.99% Zenith+, NOMO - 0.99% ixigo AU - 0% Note - Taxes as applicable See More See all Try saying something Cancel"
-      }
-    ]
-  },
-  {
-    "id": "59cf15fa30710b",
-    "issuer": "AU Small Finance Bank",
-    "name": "Do I get Cashback or Reward Points for transactions done on my Add-on card?",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "cashback"
-    ],
-    "categoryScores": {
-      "cashback": 8,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Do I get Cashback or Reward Points for transactions done on my Add-on card?",
-      "Yes, the primary cardholder gets eligible cashback or Reward Points as per card feature, for transactions done on Add-on cards."
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "22763c4c0019ef",
-    "issuer": "AU Small Finance Bank",
-    "name": "I have not received my monthly Credit Card statement, what can I do?",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "51f9b355f62ed3",
-    "issuer": "AU Small Finance Bank",
-    "name": "Is there any exception to the kind of FDs that can be used to apply for an FD based Credit Card?",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "beginner"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "7a0e07dc2939fd",
-    "issuer": "AU Small Finance Bank",
-    "name": "AU Royale Business Debit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "1a2dbc6dcef8c4",
-    "issuer": "AU Small Finance Bank",
-    "name": "Visa Business Gold Debit Card",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "4e26500cb4c5ad",
-    "issuer": "AU Small Finance Bank",
-    "name": "Cards",
-    "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "6995328d534108",
-    "issuer": "IndusInd Bank",
-    "name": "Steps to apply for a Credit Card Online",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "travel",
-      "shopping",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 12,
-      "shopping": 20,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 40
-    },
-    "detectedBenefits": [
-      "1) Reward points on everyday spending",
-      "2) Reward points that never expire",
-      "3) Exclusive travel privileges and discounts"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "2d3b2751d6b9a5",
-    "issuer": "IndusInd Bank",
-    "name": "Types of Credit Cards",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 1,
-    "categories": [
-      "travel",
-      "lounge",
-      "premium",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 37.5,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 12,
-      "premium": 21,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 36
-    },
-    "detectedBenefits": [
-      "Rewards Credit Cards : Designed for those who seek benefits, rewards credit cards offer points, cashback, or discounts on specific purchases.",
-      "Travel Credit Cards : Geared towards frequent travelers, these cards provide travel-related perks such as air miles, frequent flyer program memberships and airport lounge access.",
-      "Premium Credit Cards : Tailored for high-income individuals, premium cards offer exclusive privileges like concierge services, golf privileges, luxury travel benefits, and access to elite events.",
-      "Co-branded Credit Cards : These cards are in partnership with specific brands, airlines, or retailers, offering specialized rewards and discounts with those partners."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 100,
-        "context": "e also offer a range of instant credit cards that offer best-in-class benefits and have a 100% digital application process. Head on to the Instant Credit Cards section below and apply for credit card of y"
-      }
-    ]
-  },
-  {
-    "id": "ed5323b42d77a2",
-    "issuer": "IndusInd Bank",
-    "name": "IndusInd Platinum RuPay Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-rupay-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxRewardRate": 2,
-    "fuelRate": 7,
-    "surchargeWaiverRate": 7,
-    "shoppingRate": 7,
-    "travelRate": 1,
-    "upiRate": 7.75,
-    "foreignRewardRate": 1.8,
-    "forexMarkup": 3.5,
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 153,
-      "travel": 47,
-      "shopping": 65,
-      "grocery": 0,
-      "dining": 16,
-      "utilities": 16,
-      "upi": 125.5,
-      "forex": 55.6,
-      "lounge": 0,
-      "premium": 48,
-      "business": 67,
-      "lifetime-free": 79,
-      "beginner": 47,
-      "low-fee": 12,
-      "co-branded": 76
-    },
-    "detectedBenefits": [
-      "SFlexible options to pay through EMI, Reward points or Credit.",
-      "Tata Neu IndusInd Bank Forex Card",
-      "Check Credit Card Rewards",
-      "Unlock 2X rewards on UPI payments this festive season",
-      "Pay Now with UPI on your IndusInd Bank Platinum RuPay Credit Card."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 4,
-        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
-      },
-      {
-        "value": 7,
-        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
-      },
-      {
-        "value": 7.75,
-        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
-      },
-      {
-        "value": 6,
-        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
-      },
-      {
-        "value": 4,
-        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
-      },
-      {
-        "value": 2,
-        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
-      },
-      {
-        "value": 2,
-        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
-      },
-      {
-        "value": 4,
-        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
-      },
-      {
-        "value": 7,
-        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
-      },
-      {
-        "value": 100,
-        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
-      }
-    ]
-  },
-  {
-    "id": "6e860c4ddee827",
-    "issuer": "IndusInd Bank",
-    "name": "EazyDiner IndusInd Bank Platinum Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/eazydiner-platinum-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 500,
-    "joiningFee": 500,
-    "renewalFee": 500,
-    "feeWaiverSpend": 30000,
-    "maxRewardRate": 50,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 7,
-    "diningRate": 50,
-    "upiRate": 4,
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 39,
-      "travel": 32,
-      "shopping": 69,
-      "grocery": 0,
-      "dining": 502,
-      "utilities": 28,
-      "upi": 88,
-      "forex": 20,
-      "lounge": 0,
-      "premium": 48,
-      "business": 67,
-      "lifetime-free": 75,
-      "beginner": 69,
-      "low-fee": 25.67,
-      "co-branded": 80
-    },
-    "detectedBenefits": [
-      "EazyDiner Platinum Credit Card - Apply for EazyDiner Platinum Credit Card for Dining | IndusInd Bank",
-      "SFlexible options to pay through EMI, Reward points or Credit.",
-      "Tata Neu IndusInd Bank Forex Card",
-      "Check Credit Card Rewards",
-      "Unlock 2X rewards on UPI payments this festive season"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 4,
-        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
-      },
-      {
-        "value": 7,
-        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
-      },
-      {
-        "value": 7.75,
-        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
-      },
-      {
-        "value": 6,
-        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
-      },
-      {
-        "value": 4,
-        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
-      },
-      {
-        "value": 2,
-        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
-      },
-      {
-        "value": 2,
-        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
-      },
-      {
-        "value": 4,
-        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
-      },
-      {
-        "value": 7,
-        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
-      },
-      {
-        "value": 100,
-        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
-      }
-    ]
-  },
-  {
-    "id": "910bcdb33ada92",
-    "issuer": "IndusInd Bank",
-    "name": "Legend Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/legend-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "feeWaiverSpend": 2,
-    "maxRewardRate": 2,
-    "fuelRate": 7,
-    "surchargeWaiverRate": 7,
-    "shoppingRate": 7.75,
-    "diningRate": 7.75,
-    "travelRate": 15,
-    "upiRate": 4,
-    "foreignRewardRate": 1.8,
-    "forexMarkup": 1,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 8,
-      "fuel": 137,
-      "travel": 198.5,
-      "shopping": 98.25,
-      "grocery": 0,
-      "dining": 101.75,
-      "utilities": 24,
-      "upi": 72,
-      "forex": 87.6,
-      "lounge": 12,
-      "premium": 65,
-      "business": 67,
-      "lifetime-free": 71,
-      "beginner": 51,
-      "low-fee": 0,
-      "co-branded": 84
-    },
-    "detectedBenefits": [
-      "SFlexible options to pay through EMI, Reward points or Credit.",
-      "Tata Neu IndusInd Bank Forex Card",
-      "Check Credit Card Rewards",
-      "Unlock 2X rewards on UPI payments this festive season",
-      "Enjoy world-class privileges on travel, dining and shopping."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 4,
-        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
-      },
-      {
-        "value": 7,
-        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
-      },
-      {
-        "value": 7.75,
-        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
-      },
-      {
-        "value": 6,
-        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
-      },
-      {
-        "value": 4,
-        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
-      },
-      {
-        "value": 2,
-        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
-      },
-      {
-        "value": 2,
-        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
-      },
-      {
-        "value": 4,
-        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
-      },
-      {
-        "value": 7,
-        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
-      },
-      {
-        "value": 100,
-        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
-      }
-    ]
-  },
-  {
-    "id": "65c56d5c8043f8",
-    "issuer": "IndusInd Bank",
-    "name": "EazyDiner Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/eazydiner-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 2999,
-    "joiningFee": 2999,
-    "renewalFee": 2999,
-    "maxRewardRate": 50,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 7,
-    "diningRate": 50,
-    "travelRate": 25,
-    "upiRate": 4,
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 39,
-      "travel": 207,
-      "shopping": 81,
-      "grocery": 0,
-      "dining": 506,
-      "utilities": 20,
-      "upi": 72,
-      "forex": 20,
-      "lounge": 0,
-      "premium": 48,
-      "business": 67,
-      "lifetime-free": 71,
-      "beginner": 47,
-      "low-fee": 8,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "SFlexible options to pay through EMI, Reward points or Credit.",
-      "Tata Neu IndusInd Bank Forex Card",
-      "Check Credit Card Rewards",
-      "Unlock 2X rewards on UPI payments this festive season",
-      "The Next Revolution in Dining is here"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 4,
-        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
-      },
-      {
-        "value": 7,
-        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
-      },
-      {
-        "value": 7.75,
-        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
-      },
-      {
-        "value": 6,
-        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
-      },
-      {
-        "value": 4,
-        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
-      },
-      {
-        "value": 2,
-        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
-      },
-      {
-        "value": 2,
-        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
-      },
-      {
-        "value": 4,
-        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
-      },
-      {
-        "value": 7,
-        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
-      },
-      {
-        "value": 100,
-        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
-      }
-    ]
-  },
-  {
-    "id": "6a394b8d21faa9",
-    "issuer": "IndusInd Bank",
-    "name": "Platinum Aura Edge Visa/ Master Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-aura-edge-visa-and-mastercard-credit-card-easy-credit.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "maxRewardRate": 2,
-    "fuelRate": 7,
-    "surchargeWaiverRate": 7,
-    "shoppingRate": 7.75,
-    "upiRate": 4,
-    "foreignRewardRate": 1.8,
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "grocery",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 145,
-      "travel": 60,
-      "shopping": 94.25,
-      "grocery": 8,
-      "dining": 44,
-      "utilities": 28,
-      "upi": 72,
-      "forex": 40.6,
-      "lounge": 0,
-      "premium": 48,
-      "business": 67,
-      "lifetime-free": 71,
-      "beginner": 55,
-      "low-fee": 0,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "SFlexible options to pay through EMI, Reward points or Credit.",
-      "Tata Neu IndusInd Bank Forex Card",
-      "Check Credit Card Rewards",
-      "Unlock 2X rewards on UPI payments this festive season",
-      "Experience new-age shopping with a contactless card and unlimited privileges."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 4,
-        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
-      },
-      {
-        "value": 7,
-        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
-      },
-      {
-        "value": 7.75,
-        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
-      },
-      {
-        "value": 6,
-        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
-      },
-      {
-        "value": 4,
-        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
-      },
-      {
-        "value": 2,
-        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
-      },
-      {
-        "value": 2,
-        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
-      },
-      {
-        "value": 4,
-        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
-      },
-      {
-        "value": 7,
-        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
-      },
-      {
-        "value": 100,
-        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
-      }
-    ]
-  },
-  {
-    "id": "e13c5560b93847",
-    "issuer": "IndusInd Bank",
-    "name": "Platinum Visa Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-visa-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "maxRewardRate": 2,
-    "fuelRate": 7,
-    "surchargeWaiverRate": 7,
-    "shoppingRate": 7,
-    "upiRate": 4,
-    "foreignRewardRate": 1.8,
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 153,
-      "travel": 52,
-      "shopping": 85,
-      "grocery": 0,
-      "dining": 20,
-      "utilities": 16,
-      "upi": 72,
-      "forex": 40.6,
-      "lounge": 0,
-      "premium": 52,
-      "business": 67,
-      "lifetime-free": 71,
-      "beginner": 47,
-      "low-fee": 0,
-      "co-branded": 80
-    },
-    "detectedBenefits": [
-      "SFlexible options to pay through EMI, Reward points or Credit.",
-      "Tata Neu IndusInd Bank Forex Card",
-      "Check Credit Card Rewards",
-      "Unlock 2X rewards on UPI payments this festive season",
-      "The IndusInd Bank Platinum Visa Credit Card offers a comprehensive range of travel and lifestyle benefits to suit your preferences."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 4,
-        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
-      },
-      {
-        "value": 7,
-        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
-      },
-      {
-        "value": 7.75,
-        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
-      },
-      {
-        "value": 6,
-        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
-      },
-      {
-        "value": 4,
-        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
-      },
-      {
-        "value": 2,
-        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
-      },
-      {
-        "value": 2,
-        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
-      },
-      {
-        "value": 4,
-        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
-      },
-      {
-        "value": 7,
-        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
-      },
-      {
-        "value": 100,
-        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
-      }
-    ]
-  },
-  {
-    "id": "7c4b33d8e61f93",
-    "issuer": "IndusInd Bank",
-    "name": "IndusInd Bank Avios Visa Infinite Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/avios-visa-infinite-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxRewardRate": 2,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 7,
-    "travelRate": 10,
-    "upiRate": 4,
-    "foreignRewardRate": 1.5,
-    "forexMarkup": 1.5,
-    "loungeVisits": 2,
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 31,
-      "travel": 193,
-      "shopping": 81,
-      "grocery": 0,
-      "dining": 32,
-      "utilities": 24,
-      "upi": 72,
-      "forex": 69.5,
-      "lounge": 28,
-      "premium": 66,
-      "business": 67,
-      "lifetime-free": 71,
-      "beginner": 47,
-      "low-fee": 8,
-      "co-branded": 68
-    },
-    "detectedBenefits": [
-      "Avios Visa Infinite Credit Card Online - Check Benefits & Rewards | IndusInd Bank",
-      "SFlexible options to pay through EMI, Reward points or Credit.",
-      "Tata Neu IndusInd Bank Forex Card",
-      "Check Credit Card Rewards",
-      "Unlock 2X rewards on UPI payments this festive season"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 4,
-        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
-      },
-      {
-        "value": 7,
-        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
-      },
-      {
-        "value": 7.75,
-        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
-      },
-      {
-        "value": 6,
-        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
-      },
-      {
-        "value": 4,
-        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
-      },
-      {
-        "value": 2,
-        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
-      },
-      {
-        "value": 2,
-        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
-      },
-      {
-        "value": 4,
-        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
-      },
-      {
-        "value": 7,
-        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
-      },
-      {
-        "value": 100,
-        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
-      }
-    ]
-  },
-  {
-    "id": "8453a8b23e3150",
-    "issuer": "IndusInd Bank",
-    "name": "Pinnacle Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/pinnacle-world-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxRewardRate": 2,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 7,
-    "travelRate": 7.75,
-    "upiRate": 4,
-    "loungeVisits": 2026,
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 31,
-      "travel": 3197.25,
-      "shopping": 77,
-      "grocery": 0,
-      "dining": 16,
-      "utilities": 16,
-      "upi": 72,
-      "forex": 20,
-      "lounge": 76,
-      "premium": 88,
-      "business": 67,
-      "lifetime-free": 71,
-      "beginner": 47,
-      "low-fee": 0,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Pinnacle Credit Card - Check Benefits & Rewards Online | IndusInd Bank",
-      "SFlexible options to pay through EMI, Reward points or Credit.",
-      "Tata Neu IndusInd Bank Forex Card",
-      "Check Credit Card Rewards",
-      "Unlock 2X rewards on UPI payments this festive season"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 4,
-        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
-      },
-      {
-        "value": 7,
-        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
-      },
-      {
-        "value": 7.75,
-        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
-      },
-      {
-        "value": 6,
-        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
-      },
-      {
-        "value": 4,
-        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
-      },
-      {
-        "value": 2,
-        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
-      },
-      {
-        "value": 2,
-        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
-      },
-      {
-        "value": 4,
-        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
-      },
-      {
-        "value": 7,
-        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
-      },
-      {
-        "value": 100,
-        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
-      }
-    ]
-  },
-  {
-    "id": "982bbdd8d78363",
-    "issuer": "IndusInd Bank",
-    "name": "Nexxt Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/nexxt-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "maxRewardRate": 12,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 7,
-    "upiRate": 4,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 8,
-      "fuel": 55,
-      "travel": 44,
-      "shopping": 89,
-      "grocery": 0,
-      "dining": 24,
-      "utilities": 20,
-      "upi": 72,
-      "forex": 24,
-      "lounge": 0,
-      "premium": 48,
-      "business": 67,
-      "lifetime-free": 71,
-      "beginner": 51,
-      "low-fee": 0,
-      "co-branded": 76
-    },
-    "detectedBenefits": [
-      "SFlexible options to pay through EMI, Reward points or Credit.",
-      "Tata Neu IndusInd Bank Forex Card",
-      "Check Credit Card Rewards",
-      "Unlock 2X rewards on UPI payments this festive season",
-      "Earn 1 Reward Point for every ₹150 spent"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 4,
-        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
-      },
-      {
-        "value": 7,
-        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
-      },
-      {
-        "value": 7.75,
-        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
-      },
-      {
-        "value": 6,
-        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
-      },
-      {
-        "value": 4,
-        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
-      },
-      {
-        "value": 2,
-        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
-      },
-      {
-        "value": 2,
-        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
-      },
-      {
-        "value": 4,
-        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
-      },
-      {
-        "value": 7,
-        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
-      },
-      {
-        "value": 100,
-        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
-      }
-    ]
-  },
-  {
-    "id": "0fcee242d74b04",
-    "issuer": "IndusInd Bank",
-    "name": "IndusInd Bank Tiger Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/tiger-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxRewardRate": 2,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 7,
-    "upiRate": 4,
-    "foreignRewardRate": 1.5,
-    "forexMarkup": 1.5,
-    "loungeVisits": 8,
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 43,
-      "travel": 100,
-      "shopping": 69,
-      "grocery": 0,
-      "dining": 24,
-      "utilities": 20,
-      "upi": 72,
-      "forex": 73.5,
-      "lounge": 48,
-      "premium": 88,
-      "business": 67,
-      "lifetime-free": 71,
-      "beginner": 47,
-      "low-fee": 0,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Apply for Tiger Credit Card Online - Check Benefits & Rewards | IndusInd Bank",
-      "SFlexible options to pay through EMI, Reward points or Credit.",
-      "Tata Neu IndusInd Bank Forex Card",
-      "Check Credit Card Rewards",
-      "Unlock 2X rewards on UPI payments this festive season"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 4,
-        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
-      },
-      {
-        "value": 7,
-        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
-      },
-      {
-        "value": 7.75,
-        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
-      },
-      {
-        "value": 6,
-        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
-      },
-      {
-        "value": 4,
-        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
-      },
-      {
-        "value": 2,
-        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
-      },
-      {
-        "value": 2,
-        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
-      },
-      {
-        "value": 4,
-        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
-      },
-      {
-        "value": 7,
-        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
-      },
-      {
-        "value": 100,
-        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
-      }
-    ]
-  },
-  {
-    "id": "1e6f1bc909aa33",
-    "issuer": "IndusInd Bank",
-    "name": "Samman Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/samman-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "feeWaiverSpend": 20000,
-    "maxCashbackRate": 1,
-    "maxRewardRate": 2,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 7,
-    "upiRate": 7.75,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 55,
-      "travel": 16,
-      "shopping": 65,
-      "grocery": 0,
-      "dining": 20,
-      "utilities": 16,
-      "upi": 125.5,
-      "forex": 20,
-      "lounge": 0,
-      "premium": 48,
-      "business": 67,
-      "lifetime-free": 71,
-      "beginner": 47,
-      "low-fee": 0,
-      "co-branded": 68
-    },
-    "detectedBenefits": [
-      "SFlexible options to pay through EMI, Reward points or Credit.",
-      "Tata Neu IndusInd Bank Forex Card",
-      "Check Credit Card Rewards",
-      "Unlock 2X rewards on UPI payments this festive season",
-      "Now with the Power of UPI"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 4,
-        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
-      },
-      {
-        "value": 7,
-        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
-      },
-      {
-        "value": 7.75,
-        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
-      },
-      {
-        "value": 6,
-        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
-      },
-      {
-        "value": 4,
-        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
-      },
-      {
-        "value": 2,
-        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
-      },
-      {
-        "value": 2,
-        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
-      },
-      {
-        "value": 4,
-        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
-      },
-      {
-        "value": 7,
-        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
-      },
-      {
-        "value": 100,
-        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
-      }
-    ]
-  },
-  {
-    "id": "a8e27af18ba89f",
-    "issuer": "IndusInd Bank",
-    "name": "IndusInd Bank Jio-bp Mobility+ Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/jio-bp-mobility-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "joiningFee": 499,
-    "maxRewardRate": 2,
-    "fuelRate": 7,
-    "surchargeWaiverRate": 7,
-    "shoppingRate": 7,
-    "upiRate": 4,
-    "forexMarkup": 3.5,
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "grocery",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 153,
-      "travel": 16,
-      "shopping": 65,
-      "grocery": 24,
-      "dining": 28,
-      "utilities": 24,
-      "upi": 88,
-      "forex": 31,
-      "lounge": 0,
-      "premium": 40,
-      "business": 67,
-      "lifetime-free": 71,
-      "beginner": 47,
-      "low-fee": 0,
-      "co-branded": 68
-    },
-    "detectedBenefits": [
-      "SFlexible options to pay through EMI, Reward points or Credit.",
-      "Tata Neu IndusInd Bank Forex Card",
-      "Check Credit Card Rewards",
-      "Unlock 2X rewards on UPI payments this festive season",
-      "Earn 400 Bonus Smiles after 1st fuel transaction at Jio-bp in first 30 days from card setup by the Bank"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 4,
-        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
-      },
-      {
-        "value": 7,
-        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
-      },
-      {
-        "value": 7.75,
-        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
-      },
-      {
-        "value": 6,
-        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
-      },
-      {
-        "value": 4,
-        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
-      },
-      {
-        "value": 2,
-        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
-      },
-      {
-        "value": 2,
-        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
-      },
-      {
-        "value": 4,
-        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
-      },
-      {
-        "value": 7,
-        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
-      },
-      {
-        "value": 100,
-        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
-      }
-    ]
-  },
-  {
-    "id": "97238462a621ab",
-    "issuer": "IndusInd Bank",
-    "name": "CRED IndusInd Bank RuPay Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/CRED-IndusInd-Bank-ruPay-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "maxRewardRate": 5,
-    "shoppingRate": 5,
-    "utilityRate": 1,
-    "travelRate": 5,
-    "upiRate": 5,
-    "categories": [
-      "travel",
-      "shopping",
-      "utilities",
-      "upi"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 39,
-      "shopping": 47,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 14,
-      "upi": 58,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Its designed to reward on each spend– Wherever you go, Wherever you shop, Whatever you buy",
-      "Earn 5% back as CRED Reward Points on E-commerce transactions.",
-      "Earn 5% back as CRED Reward Points on CRED Pay, CRED Store, CRED Travel, CRED online Gift Cards and online UPI Payments through CRED.",
-      "Earn 1% back as CRED Reward Points on Scan & Pay transactions through CRED.",
-      "Earn 1% back as CRED Reward Points on Insurance and Utility bills paid via CRED."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 5,
-        "context": "end– Wherever you go, Wherever you shop, Whatever you buy Key Features and Benefits Earn 5% back as CRED Reward Points on E-commerce transactions. Earn 5% back as CRED Reward Points on CRED Pay, CRED S"
-      },
-      {
-        "value": 5,
-        "context": "eatures and Benefits Earn 5% back as CRED Reward Points on E-commerce transactions. Earn 5% back as CRED Reward Points on CRED Pay, CRED Store, CRED Travel, CRED online Gift Cards and online UPI Paymen"
-      },
-      {
-        "value": 1,
-        "context": "ED Store, CRED Travel, CRED online Gift Cards and online UPI Payments through CRED. Earn 1% back as CRED Reward Points on Scan & Pay transactions through CRED. Earn 1% back as CRED Reward Points on Ins"
-      },
-      {
-        "value": 1,
-        "context": "h CRED. Earn 1% back as CRED Reward Points on Scan & Pay transactions through CRED. Earn 1% back as CRED Reward Points on Insurance and Utility bills paid via CRED. Earn 1% back as CRED Reward Points o"
-      },
-      {
-        "value": 1,
-        "context": "ED. Earn 1% back as CRED Reward Points on Insurance and Utility bills paid via CRED. Earn 1% back as CRED Reward Points on all other transactions. Earn 1% back as CRED Reward Points on all online and of"
-      },
-      {
-        "value": 1,
-        "context": "y bills paid via CRED. Earn 1% back as CRED Reward Points on all other transactions. Earn 1% back as CRED Reward Points on all online and offline International transactions. Know More Add to Compare"
-      }
-    ]
-  },
-  {
-    "id": "1bdd9ef0cddbe2",
-    "issuer": "IndusInd Bank",
-    "name": "Poonawalla Fincorp IndusInd Bank eLITE RuPay Credit Card (Discontinued)",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/poonawalla-platinum-rupay-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "categories": [
-      "fuel",
-      "upi",
-      "premium"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 23,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 12,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 12,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Pay Now with UPI on your Poonawalla Fincorp IndusInd Bank eLITE RuPay Credit Card.",
-      "2.5 Reward Points on Ecommerce transactions",
-      "Milestone Benefit of 3000 Reward Points on spends of ₹ 4,00,000 annually*",
-      "1% Fuel Surcharge Waiver"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1,
-        "context": "y* Buy one movie ticket and get the second one free on BookMyShow every month upto ₹ 200* 1% Fuel Surcharge Waiver Know More Premium Add to Compare"
-      }
-    ]
-  },
-  {
-    "id": "06e805e944a191",
-    "issuer": "IndusInd Bank",
-    "name": "Indus Solitaire Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/solitaire-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 16,
-    "categories": [
-      "travel",
-      "forex",
-      "lounge",
-      "premium"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 32,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 12,
-      "lounge": 52,
-      "premium": 20,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Presenting Indus Solitaire Banking and its finest IndusInd Bank Credit Card with experiences and rewards, handpicked and handcrafted for you.",
-      "Zero Foreign Currency Mark-up on all international spends",
-      "16 International and 16 Domestic lounge visits in a year",
-      "International Travel Health Insurance of USD 25,000"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "f7ea414c0c20ff",
-    "issuer": "IndusInd Bank",
-    "name": "ePay Amex Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/epay-amex-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "maxCashbackRate": 5,
-    "categories": [
-      "cashback",
-      "shopping"
-    ],
-    "categoryScores": {
-      "cashback": 44,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 35,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Unique Transaction based Rewards Program- Earn up to 10 Rewards Points on each transaction",
-      "Loyalty Bonus Rewards Program- 2X Reward Points on all spends in 12th month on being active for previous 11 months in the anniversary year",
-      "5% cashback annually on early payment of total outstanding amount"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 5,
-        "context": "1 months in the anniversary year Times Prime Membership on spends of INR 2 lakh in a year 5% cashback annually on early payment of total outstanding amount Know More Add to Compare"
-      }
-    ]
-  },
-  {
-    "id": "b8e31d0b2b3098",
-    "issuer": "IndusInd Bank",
-    "name": "Club Vistara Explorer Credit Card (Discontinued)",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/club-vistara-indusInd-bank-explorer-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "maxRewardRate": 1.8,
-    "travelRate": 1.8,
-    "foreignRewardRate": 1.8,
-    "forexMarkup": 1.8,
-    "categories": [
-      "travel",
-      "forex",
-      "business",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 24.6,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 45.2,
-      "lounge": 0,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 36
-    },
-    "detectedBenefits": [
-      "A life that's fully luxurious is a Grand Life. And to give you this experience of a Grand Life, we bring you the Club Vistara Explorer Credit Card - a Card that's laden with luxury, privileges, rewards and more.",
-      "Enjoy discounted foreign currency mark-up of 1.8% on your international spends.",
-      "Complimentary Business Class ticket vouchers upon achieving milestone spends.",
-      "Best-in-class Rewards Program"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1.8,
-        "context": "rewards and more. Key Features and Benefits Enjoy discounted foreign currency mark-up of 1.8% on your international spends. Complimentary Business Class ticket vouchers upon achieving milestone spends. B"
-      }
-    ]
-  },
-  {
-    "id": "b379d5a0197dcf",
-    "issuer": "IndusInd Bank",
-    "name": "Indulge Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/indulge-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "premium"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 12,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Get 1.5 Reward Points for every ₹ 100 spent"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "0cf0ab8cb0637f",
-    "issuer": "IndusInd Bank",
-    "name": "Pioneer Heritage Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/pioneer-heritage-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "fuel",
-      "premium"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 8,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 8,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "A card that redefines luxury, privilege, rewards and conveniences; so that you get a lot more from your life.",
-      "2.5 Reward Points on every ₹ 100 spent on international transactions and 1 Reward point on every ₹ 100 spent on domestic transactions",
-      "Fuel Surcharge Waiver"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "df289d5beda972",
-    "issuer": "IndusInd Bank",
-    "name": "Pioneer Legacy Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/pioneer-legacy-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "feeWaiverSpend": 2,
-    "categories": [
-      "fuel",
-      "premium"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 8,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 8,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "A credit card that allows you to earn rewards faster and helps you redeem them as per your convenience.​",
-      "For weekday spends Rs 100 spent = 1 reward point and For weekend spends Rs 100 spent = 2 reward points",
-      "Fuel Surcharge Waiver",
-      "Exclusive Bonus Rewards"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "be92272022e902",
-    "issuer": "IndusInd Bank",
-    "name": "Crest Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/crest-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "fuel",
-      "premium"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 8,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 12,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Get 1 Reward Point for every ₹ 100 on domestic spends",
-      "Get 2.5 Reward Points for every ₹ 100 on International spends",
-      "Fuel Surcharge Waiver"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "b06ea5532d0084",
-    "issuer": "IndusInd Bank",
-    "name": "Celesta Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/celesta-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "forex"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 8,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "A credit card that allows you to earn rewards faster and helps you redeem them as per your convenience.​",
-      "International Spends: Get 3 Reward Points for every ₹ 100 spent on International transactions",
-      "Domestic Spends:Get 1 Reward Point for every ₹ 100 spent on Domestic transactions",
-      "Exclusive Privileges in Dining, Lifestyle and Travel and much more!"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "beb43d843b93d0",
-    "issuer": "IndusInd Bank",
-    "name": "Platinum Aura Edge Credit Card Exclusively for Government Sector Employees - (Discontinued)",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-aura-edge-credit-card-for-government-employees.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "maxCashbackRate": 1,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "categories": [
-      "cashback",
-      "fuel"
-    ],
-    "categoryScores": {
-      "cashback": 16,
-      "fuel": 23,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "The IndusInd Bank Aura Edge Credit Card for the government sector offers a comprehensive range of features such as *1% Flat cashback on Spends, Lower ROI on EMI transaction & assured movie tickets.",
-      "Get 1% Cashback on all spends upto Rs. 10,000 per statement cycle",
-      "1% Fuel & Railway Surcharge Waiver"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1,
-        "context": "e Credit Card for the government sector offers a comprehensive range of features such as *1% Flat cashback on Spends, Lower ROI on EMI transaction & assured movie tickets. Key Features and Benefits Get"
-      },
-      {
-        "value": 1,
-        "context": "nds, Lower ROI on EMI transaction & assured movie tickets. Key Features and Benefits Get 1% Cashback on all spends upto Rs. 10,000 per statement cycle Comprehensive Insurance Benefits 1.1% p.m Interes"
-      },
-      {
-        "value": 1.1,
-        "context": "hback on all spends upto Rs. 10,000 per statement cycle Comprehensive Insurance Benefits 1.1% p.m Interest Rate on Converting Spends to EMI Get one complimentary movie ticket upto INR 200/- every 6 mont"
-      },
-      {
-        "value": 1,
-        "context": "y movie ticket upto INR 200/- every 6 months in a calendar year on booking via BookMyShow 1% Fuel & Railway Surcharge Waiver Know More Add to Compare"
-      }
-    ]
-  },
-  {
-    "id": "f88472d9c9a9ca",
-    "issuer": "IndusInd Bank",
-    "name": "InterMiles Odyssey Amex Credit Card (Discontinued)",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-odyssey-amex-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "travel"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 16,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "InterMiles Odyssey Amex Credit Card (Discontinued)",
-      "A Credit Card which can get you a complimentary membership to InterMiles – the Frequent Flyer program offered by InterMiles.",
-      "Increase your weekend fun by earning 6 InterMiles per ₹ 100 spent",
-      "2x InterMiles on all your InterMiles Spends",
-      "Welcome Bonus of 15000 InterMiles"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "c29c0b1990c2fc",
-    "issuer": "IndusInd Bank",
-    "name": "InterMiles Odyssey Visa Credit Card (Discontinued)",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-odyssey-visa-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "travel"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 16,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "InterMiles Odyssey Visa Credit Card (Discontinued)",
-      "A Credit Card which can get you a complimentary membership to InterMiles – the Frequent Flyer program offered by InterMiles",
-      "Increase your weekend fun by earning 4 InterMiles per ₹ 100 spent",
-      "2x InterMiles Miles on all your InterMiles Spends",
-      "Welcome Bonus of 15000 InterMiles"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "86485308804abd",
-    "issuer": "IndusInd Bank",
-    "name": "InterMiles Voyage Amex Credit Card (Discontinued)",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-voyage-amex-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "fuel",
-      "travel"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 8,
-      "travel": 8,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "InterMiles Voyage Amex Credit Card (Discontinued)",
-      "A credit card that allows you to earn rewards faster and helps you redeem them as per your convenience.​",
-      "Get 4 Intermiles for every Rs 100 spent",
-      "Fuel Surcharge Waiver"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "b1c579ef7c7209",
-    "issuer": "IndusInd Bank",
-    "name": "Intermiles Voyage Visa Credit Card (Discontinued)",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-voyage-visa-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "fuel",
-      "travel"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 8,
-      "travel": 16,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Intermiles Voyage Visa Credit Card (Discontinued)",
-      "Get a complimentary membership to InterMiles on your Card with unique miles benefits.",
-      "Get 3 Intermiles for every Rs 100 spent",
-      "Fuel Surcharge Waiver"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "42045a0a100a87",
-    "issuer": "IndusInd Bank",
-    "name": "Signature Visa Credit Card (Discontinued)",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/signature-visa-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "fuel",
-      "premium"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 8,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 8,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Get 1.5 Reward Points for every ₹ 100 spent",
-      "Fuel Surcharge Waiver"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "2f20b71109dbb5",
-    "issuer": "IndusInd Bank",
-    "name": "Iconia Amex Credit Card (Discontinued)",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/iconia-amex-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 1,
-    "categories": [
-      "fuel",
-      "travel",
-      "lounge",
-      "premium"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 8,
-      "travel": 9.5,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 8,
-      "premium": 9,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Best-in-class Reward Program",
-      "Earn 2 Reward Points on Weekends & 1.5 Reward Points on weekdays for every 100 INR spent",
-      "Fuel Surcharge waiver",
-      "Complimentary Access to Lounges"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "8d80b62d5f4aa9",
-    "issuer": "IndusInd Bank",
-    "name": "Iconia Visa Credit Card (Discontinued)",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/iconia-visa-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "fuel",
-      "premium"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 8,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 8,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Best-in-class Reward Program",
-      "Earn up to 1 Reward Point for every ₹ 100 spent",
-      "Fuel Surcharge waiver"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "26867306dda3c0",
-    "issuer": "IndusInd Bank",
-    "name": "Platinum Aura Credit Card (Discontinued)",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-aura-visa-and-mastercard-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "fuel"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 8,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "The IndusInd Bank Platinum Aura Credit Card offers you best of lifestyle but also the flexibility of rewards points",
-      "Flexibility to choose Reward Plans to suit your lifestyle",
-      "Earn up to 4X Reward Points on select merchant categories",
-      "Fuel Surcharge Waiver"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "4052f703c8dd9d",
-    "issuer": "IndusInd Bank",
-    "name": "Credit Card Features and Benefits",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "lounge",
-      "beginner"
-    ],
-    "categoryScores": {
-      "cashback": 8,
-      "fuel": 20,
-      "travel": 29.5,
-      "shopping": 12,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 20,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 39,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Lifetime Fee Waivers",
-      "Airport Lounge Access",
-      "Rewards That Never Expire",
-      "Fuel Surcharge Waiver",
-      "Choose from a range of cards that come with 0 joining fee and 0 annual fees. Apply for your own Indus Easy Credit Card today and enjoy them for a lifetime without paying a single penny!"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "1df99e9bf9207c",
-    "issuer": "IndusInd Bank",
-    "name": "Documents needed for online credit card application",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 36
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "d36519051dcd41",
-    "issuer": "IndusInd Bank",
-    "name": "Documents Required for Credit Card Application",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "shopping",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 8,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 36
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": [
-      {
-        "value": 100,
-        "context": "ents Required for Credit Card Application Applying for an IndusInd Bank Credit Card is a 100% digital and paperless process. Keep your Aadhaar number and PAN details handy while completing the online for"
-      }
-    ]
-  },
-  {
-    "id": "4fac84f90df97a",
-    "issuer": "IndusInd Bank",
-    "name": "Credit Card Interest Rates",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "diningRate": 47.4,
-    "upiRate": 47.4,
-    "categories": [
-      "dining",
-      "upi",
-      "premium",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 434.6,
-      "utilities": 0,
-      "upi": 486,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 12,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 36
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": [
-      {
-        "value": 1.79,
-        "context": "cash advances vary depending on the credit card. The applicable interest rates range from 1.79% to 3.95% per month, or 21.48% to 47.40% per annum. Credit Card or Card Group Monthly Interest Rate Annual I"
-      },
-      {
-        "value": 3.95,
-        "context": "nces vary depending on the credit card. The applicable interest rates range from 1.79% to 3.95% per month, or 21.48% to 47.40% per annum. Credit Card or Card Group Monthly Interest Rate Annual Interest R"
-      },
-      {
-        "value": 21.48,
-        "context": "on the credit card. The applicable interest rates range from 1.79% to 3.95% per month, or 21.48% to 47.40% per annum. Credit Card or Card Group Monthly Interest Rate Annual Interest Rate Platinum Aura, P"
-      },
-      {
-        "value": 47.4,
-        "context": "dit card. The applicable interest rates range from 1.79% to 3.95% per month, or 21.48% to 47.40% per annum. Credit Card or Card Group Monthly Interest Rate Annual Interest Rate Platinum Aura, Platinum Au"
-      },
-      {
-        "value": 3.95,
-        "context": "gend, Platinum Select, Samman, CRED IndusInd Bank RuPay and Jio-bp Mobility+ Credit Card 3.95% 47.40% EazyDiner Signature, EazyDiner Platinum, Nexxt, Pinnacle, Pioneer Legacy, Indus Solitaire, Iconia, D"
-      },
-      {
-        "value": 47.4,
-        "context": "latinum Select, Samman, CRED IndusInd Bank RuPay and Jio-bp Mobility+ Credit Card 3.95% 47.40% EazyDiner Signature, EazyDiner Platinum, Nexxt, Pinnacle, Pioneer Legacy, Indus Solitaire, Iconia, Duo and P"
-      },
-      {
-        "value": 3.83,
-        "context": "ndus Solitaire, Iconia, Duo and Poonawalla Fincorp IndusInd Bank eLITE RuPay Credit Card 3.83% 46.00% Pioneer Heritage, Celesta, Crest and Platinum Aura Edge Credit Card for Government Sector 2.99% 36"
-      },
-      {
-        "value": 46,
-        "context": "litaire, Iconia, Duo and Poonawalla Fincorp IndusInd Bank eLITE RuPay Credit Card 3.83% 46.00% Pioneer Heritage, Celesta, Crest and Platinum Aura Edge Credit Card for Government Sector 2.99% 36.00% Cl"
-      },
-      {
-        "value": 2.99,
-        "context": "ioneer Heritage, Celesta, Crest and Platinum Aura Edge Credit Card for Government Sector 2.99% 36.00% Club Vistara IndusInd Bank Explorer Credit Card 2.85% 34.00% Indulge Credit Card 1.79% 21.48%"
-      },
-      {
-        "value": 36,
-        "context": "Heritage, Celesta, Crest and Platinum Aura Edge Credit Card for Government Sector 2.99% 36.00% Club Vistara IndusInd Bank Explorer Credit Card 2.85% 34.00% Indulge Credit Card 1.79% 21.48% IndusInd"
-      }
-    ]
-  },
-  {
-    "id": "86741041b2f58d",
-    "issuer": "IndusInd Bank",
-    "name": "Credit Card Fees and Charges",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 100000,
-    "joiningFee": 100000,
-    "renewalFee": 100000,
-    "utilityRate": 1,
-    "foreignRewardRate": 3.5,
-    "forexMarkup": 1.5,
-    "categories": [
-      "utilities",
-      "forex",
-      "premium",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 14,
-      "upi": 0,
-      "forex": 55.5,
-      "lounge": 0,
-      "premium": 24,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 12,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Foreign currency markup ranges from 1.5% to 3.5%, with GST applicable wherever required.",
-      "Fuel transaction charges apply when cumulative spends exceed ₹30,000 or ₹50,000 in a statement cycle, depending on the card.",
-      "Reward redemption charges are ₹149 for cash redemption and ₹100 for other redemption categories."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 2.5,
-        "context": "mounts up to ₹100 to ₹1,300 for outstanding amounts above ₹50,000. Over-limit charges are 2.5% of the over-limit amount, subject to a minimum of ₹500. Cash advance charges are 2.5% of the withdrawn amount"
-      },
-      {
-        "value": 2.5,
-        "context": "are 2.5% of the over-limit amount, subject to a minimum of ₹500. Cash advance charges are 2.5% of the withdrawn amount, subject to a minimum of ₹300. Interest on cash advances is charged separately from t"
-      },
-      {
-        "value": 1.5,
-        "context": "ges range from ₹100 to ₹5,000, depending on the card. Foreign currency markup ranges from 1.5% to 3.5%, with GST applicable wherever required. Dynamic Currency Conversion charges are 1% or 2% plus GST, de"
-      },
-      {
-        "value": 3.5,
-        "context": "e from ₹100 to ₹5,000, depending on the card. Foreign currency markup ranges from 1.5% to 3.5%, with GST applicable wherever required. Dynamic Currency Conversion charges are 1% or 2% plus GST, depending"
-      },
-      {
-        "value": 1,
-        "context": "% to 3.5%, with GST applicable wherever required. Dynamic Currency Conversion charges are 1% or 2% plus GST, depending on the card. A 1% fee plus GST applies to rent payments through third-party merchan"
-      },
-      {
-        "value": 2,
-        "context": ".5%, with GST applicable wherever required. Dynamic Currency Conversion charges are 1% or 2% plus GST, depending on the card. A 1% fee plus GST applies to rent payments through third-party merchants. A"
-      },
-      {
-        "value": 1,
-        "context": "ired. Dynamic Currency Conversion charges are 1% or 2% plus GST, depending on the card. A 1% fee plus GST applies to rent payments through third-party merchants. A 1% fee plus GST applies when utility s"
-      },
-      {
-        "value": 1,
-        "context": "on the card. A 1% fee plus GST applies to rent payments through third-party merchants. A 1% fee plus GST applies when utility spends exceed ₹25,000, wallet-loading spends exceed ₹20,000, education paym"
-      }
-    ]
-  },
-  {
-    "id": "f5c8a2bdb6e745",
-    "issuer": "IndusInd Bank",
-    "name": "Things to Know Before Applying for an Instant Credit Card Online",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "shopping"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 8,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Interest rates & Fee – Keep an eye on the interest rates, annual fees, late payment charges and other fees associated with the card."
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "2e1da22a561340",
-    "issuer": "IndusInd Bank",
-    "name": "Credit Card Safety and Usage Tips",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "shopping",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 12,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 36
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "98cb88b6a3efb0",
-    "issuer": "IndusInd Bank",
-    "name": "Credit Card Sourcing Partners",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "premium"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 8,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "da33d3f9132580",
-    "issuer": "IndusInd Bank",
-    "name": "Can I apply for an add-on card?",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "981dad945e2ca1",
-    "issuer": "IndusInd Bank",
-    "name": "Can students below 21 apply for a credit card?",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "e8c28cdabd9559",
-    "issuer": "IndusInd Bank",
-    "name": "Can I use a credit card for UPI?",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "upi",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 24,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [
-      "Can I use a credit card for UPI?",
-      "Yes, you can use a Credit Card for UPI payments, as per the card’s policies.",
-      "The IndusInd Bank Platinum RuPay Credit Card allows you to transact via UPI and earn reward points on those transactions as well!",
-      "Simply open your UPI-enabled app, add the IndusInd Bank Platinum RuPay Credit Card, and set up the PIN. All UPI transactions done using the Card will reflect in your credit card statement."
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "31a9d0fdafee6c",
-    "issuer": "IndusInd Bank",
-    "name": "Which IndusInd Bank credit cards offer unlimited complimentary lounge access?",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 99,
-    "loungeUnlimited": true,
-    "categories": [
-      "travel",
-      "lounge",
-      "premium",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 164.5,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 61,
-      "premium": 29,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [
-      "Which IndusInd Bank credit cards offer unlimited complimentary lounge access?"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "02e98c65558d26",
-    "issuer": "IndusInd Bank",
-    "name": "Is a credit card a good option for buying jewellery within a ₹50,000 budget?",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "5d00c108af5330",
-    "issuer": "HSBC India",
-    "name": "Credit cards features",
-    "sourceUrl": "https://www.hsbc.co.in/credit-cards/google-pay/",
-    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 12,
-      "fuel": 20,
-      "travel": 16,
-      "shopping": 24,
-      "grocery": 0,
-      "dining": 8,
-      "utilities": 8,
-      "upi": 16,
-      "forex": 12,
-      "lounge": 0,
-      "premium": 32,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Foreign Exchange Rates",
-      "TravelOne Credit Card",
-      "Wealth Shopping Cart",
-      "Dining and Entertainment",
-      "Fuel surcharge waiver"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "f42a3121977402",
-    "issuer": "HSBC India",
-    "name": "Find the right card for you",
-    "sourceUrl": "https://www.hsbc.co.in/credit-cards/compare/",
-    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 16,
-      "fuel": 8,
-      "travel": 36,
-      "shopping": 28,
-      "grocery": 0,
-      "dining": 16,
-      "utilities": 8,
-      "upi": 24,
-      "forex": 8,
-      "lounge": 0,
-      "premium": 28,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 12,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Foreign Exchange Rates",
-      "TravelOne Credit Card",
-      "Wealth Shopping Cart",
-      "Dining and Entertainment",
-      "Compare interest rates, benefits and rewards. Credit is subject to status, affordability and applicable terms and conditions."
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "fd74e5783bfa4a",
-    "issuer": "HSBC India",
-    "name": "HSBC Taj Credit Card",
-    "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/taj/",
-    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 110000,
-    "joiningFee": 110000,
-    "renewalFee": 110000,
-    "maxRewardRate": 20,
-    "diningRate": 30,
-    "travelRate": 25,
-    "loungeVisits": 99,
-    "loungeUnlimited": true,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 12,
-      "fuel": 12,
-      "travel": 399.5,
-      "shopping": 32,
-      "grocery": 0,
-      "dining": 302,
-      "utilities": 12,
-      "upi": 16,
-      "forex": 12,
-      "lounge": 73,
-      "premium": 89,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 48
-    },
-    "detectedBenefits": [
-      "Foreign Exchange Rates",
-      "TravelOne Credit Card",
-      "Wealth Shopping Cart",
-      "Dining and Entertainment",
-      "Unlock a curated collection of benefits at Taj, SeleQtions, Gateway and Vivanta hotels across the globe. Enjoy exquisite stays, gourmet dining, exclusive access, bespoke experiences and much more."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 25,
-        "context": "n extraordinary experience. Enjoy unlimited room upgrades to the next level Get exclusive 25% savings on the Best Available Rate at Taj Hotels and other participating IHCL hotels Get four vouchers for se"
-      },
-      {
-        "value": 25,
-        "context": "ng IHCL hotels Get four vouchers for set meals for two at participating restaurants Enjoy 25% savings on food and beverages and Qmin deliveries Get 30% off, up to INR 1,500, when you book a table with Ea"
-      },
-      {
-        "value": 30,
-        "context": "participating restaurants Enjoy 25% savings on food and beverages and Qmin deliveries Get 30% off, up to INR 1,500, when you book a table with EazyDiner. T&Cs apply (PDF) Pure indulgence Whether you're"
-      },
-      {
-        "value": 15,
-        "context": "elax before you fly with unlimited airport lounge access globally. T&Cs apply (PDF) Save 15% on duty-free with AdaniOne mobile app (once per month; min order INR7,500; max discount INR3,000). T&Cs apply"
-      },
-      {
-        "value": 20,
-        "context": "international chauffer-driven airport transfers in a year. T&Cs apply (PDF) Enjoy up to 20% off up to INR20,000 on business class travel when you book with MakeMyTrip. T&Cs apply (PDF) Save 20%, up to"
-      },
-      {
-        "value": 20,
-        "context": "INR20,000 on business class travel when you book with MakeMyTrip. T&Cs apply (PDF) Save 20%, up to INR10,000, on domestic and international flights with Yatra. T&Cs apply (PDF) Rare rewards Earn rewar"
-      },
-      {
-        "value": 19,
-        "context": "xisting Apple product purchases via the HSBC Unicorn portal. T&Cs apply (PDF) Save up to 19% on EMI purchases Get up to 19% off on EMI Apple purchases via the HSBC Unicorn portal. T&Cs apply (PDF) Get"
-      },
-      {
-        "value": 19,
-        "context": "via the HSBC Unicorn portal. T&Cs apply (PDF) Save up to 19% on EMI purchases Get up to 19% off on EMI Apple purchases via the HSBC Unicorn portal. T&Cs apply (PDF) Get 33X Points at Dyson Earn 50 Poi"
-      },
-      {
-        "value": 20,
-        "context": "ints at Dyson Earn 50 Points per INR100 on direct Dyson purchases. T&Cs apply (PDF) Save 20% at Reliance Brand outlets Get up to INR10,000 off when you spend INR20,000 or more. T&Cs apply (PDF) VISA In"
-      },
-      {
-        "value": 50,
-        "context": "how (max discount per ticket INR 1,000 each, valid twice a month) T&Cs apply (PDF) . Save 50% at Starbucks Get up to INR 150 off your order, 4 times a month. T&Cs apply (PDF) . More exclusive offers View"
-      }
-    ]
-  },
-  {
-    "id": "fc875af6b7d9aa",
-    "issuer": "HSBC India",
-    "name": "HSBC TravelOne Credit Card",
-    "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/travelone/",
-    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 4999,
-    "joiningFee": 4999,
-    "renewalFee": 4999,
-    "shoppingRate": 15,
-    "diningRate": 30,
-    "travelRate": 50,
-    "loungeVisits": 4,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 16,
-      "fuel": 8,
-      "travel": 468,
-      "shopping": 153,
-      "grocery": 0,
-      "dining": 306,
-      "utilities": 8,
-      "upi": 16,
-      "forex": 16,
-      "lounge": 36,
-      "premium": 68,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "HSBC TravelOne Credit Card | Travel Credit Card - HSBC IN",
-      "Foreign Exchange Rates",
-      "TravelOne Credit Card",
-      "Wealth Shopping Cart",
-      "Dining and Entertainment"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 15,
-        "context": "ints to Air Miles 1 to 1 in the app Find out how to redeem instantly Travel in style Save 15% on domestic and international holiday Bookings at Yatra, EaseMyTrip, PayTM Travel and ClearTrip Save up to 20"
-      },
-      {
-        "value": 20,
-        "context": "nternational holiday Bookings at Yatra, EaseMyTrip, PayTM Travel and ClearTrip Save up to 20% at select duty free stores in India Save when booking your getaway at StayVista Enjoy Mastercard World Platfo"
-      },
-      {
-        "value": 15,
-        "context": "unts, hands-free shopping, sale events and reserved parking. Register [@bicester-village] 15% off flights and hotel bookings with Yatra Save on international and domestic flights and hotels when you book"
-      },
-      {
-        "value": 15,
-        "context": "ou book through the Yatra app or website. Use promo code: HSBCTRAVEL1. T&Cs apply (PDF) . 15% off international and domestic flights with EaseMyTrip Save on international and domestic flights and hotels"
-      },
-      {
-        "value": 15,
-        "context": "book through the EaseMyTrip app or website. Use promo code: EMTHSBCT1. T&Cs apply (PDF) . 15% off international and domestic flights with Paytm Save on international and domestic flights when you book th"
-      },
-      {
-        "value": 15,
-        "context": "you book through the Paytm app or website. Use promo code: HSBCTRAVEL. T&Cs apply (PDF) . 15% off international and domestic flights with Cleartrip Save on international and domestic flights when you boo"
-      },
-      {
-        "value": 30,
-        "context": "h the ClearTrip app or website. Use promo code: CTHSBCTRAVELONE. T&Cs apply (PDF) . Up to 30% off on dining with EazyDiner Get unparalleled dining offers with 30% off your bill (up to INR1,000) with Eazy"
-      },
-      {
-        "value": 30,
-        "context": "apply (PDF) . Up to 30% off on dining with EazyDiner Get unparalleled dining offers with 30% off your bill (up to INR1,000) with EazyDiner. T&Cs apply (PDF) . 11% off hotel bookings with StayVista Stay"
-      },
-      {
-        "value": 11,
-        "context": "dining offers with 30% off your bill (up to INR1,000) with EazyDiner. T&Cs apply (PDF) . 11% off hotel bookings with StayVista Stay for less when you make a hotel booking through the StayVista website ("
-      },
-      {
-        "value": 10,
-        "context": "Cs apply (PDF) . Savings on movies and events with the District app by Zomato Enjoy up to 10% off events with promo code HSBCTOEVENTS, and dining with promo code HSBCTODINING. Plus, buy 1 movie ticket an"
-      }
-    ]
-  },
-  {
-    "id": "366fa47d1f8465",
-    "issuer": "HSBC India",
-    "name": "HSBC Live+ Credit Card",
-    "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/live-plus/",
-    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 999,
-    "joiningFee": 999,
-    "renewalFee": 999,
-    "feeWaiverSpend": 200000,
-    "maxCashbackRate": 10,
-    "maxRewardRate": 10,
-    "fuelRate": 10,
-    "shoppingRate": 10,
-    "groceryRate": 10,
-    "diningRate": 20,
-    "utilityRate": 10,
-    "travelRate": 50,
-    "forexMarkup": 1.99,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "grocery",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 96,
-      "fuel": 106,
-      "travel": 419.5,
-      "shopping": 122,
-      "grocery": 106,
-      "dining": 236,
-      "utilities": 124,
-      "upi": 20,
-      "forex": 43.08,
-      "lounge": 28,
-      "premium": 69,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 21.35,
-      "co-branded": 64
-    },
-    "detectedBenefits": [
-      "Cashback Credit Card | HSBC Live+ - HSBC IN",
-      "Foreign Exchange Rates",
-      "TravelOne Credit Card",
-      "Wealth Shopping Cart",
-      "Dining and Entertainment"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 10,
-        "context": "on all the things you love. More categories, more privileges, more ways to get rewarded. 10% accelerated cashback, up to INR1,200 a month, on all dining, food delivery, grocery, shopping[@live-plus-cash"
-      },
-      {
-        "value": 1.5,
-        "context": "elivery, grocery, shopping[@live-plus-cashback-category-clarification] and utility spends 1.5% unlimited cashback on most other spends[@liveplus-unlimited-cashback-exclusions] Joining fee and annual fee J"
-      },
-      {
-        "value": 10,
-        "context": "edit card application This link will open in a new window Our welcome gifts to you Enjoy 10% cashback on shopping at Myntra until 31 October 2026. Experience Starbucks premium coffee tasting sessions an"
-      },
-      {
-        "value": 10,
-        "context": "ard after submitting your income documents with Account Aggregator. T&Cs apply (PDF) Get 10% cashback and more Dine Get 10% cashback on dining and food delivery, and exclusive restaurant benefits with T"
-      },
-      {
-        "value": 10,
-        "context": "e documents with Account Aggregator. T&Cs apply (PDF) Get 10% cashback and more Dine Get 10% cashback on dining and food delivery, and exclusive restaurant benefits with The Live+ Reserve. Shop Enjoy 10"
-      },
-      {
-        "value": 10,
-        "context": "g and food delivery, and exclusive restaurant benefits with The Live+ Reserve. Shop Enjoy 10% cashback on groceries, shopping[@live-plus-cashback-category-clarification] and utility spends, plus 1.5% unl"
-      },
-      {
-        "value": 1.5,
-        "context": "groceries, shopping[@live-plus-cashback-category-clarification] and utility spends, plus 1.5% unlimited cashback[@liveplus-unlimited-cashback-exclusions] at other retailers. Travel Enjoy 2 domestic and 1"
-      },
-      {
-        "value": 1.99,
-        "context": "omplimentary airport lounge visits[@airport-lounge-live-plus], and lower forex mark up of 1.99% on international transactions. Lifestyle Unlock exclusive hotel offers, travel assistance and bespoke lifesty"
-      },
-      {
-        "value": 20,
-        "context": "1 international airport lounge visits each year, plus a complimentary 1GB Global eSIM and 20% off for top-ups.[@airport-lounge-live-plus] Know more (PDF) Save more while you travel internationally with"
-      },
-      {
-        "value": 1.99,
-        "context": "port-lounge-live-plus] Know more (PDF) Save more while you travel internationally with a 1.99% forex mark-up fee[@international-cashback-change] Enjoy a complimentary 3rd night for every 2 consecutive pai"
-      }
-    ]
-  },
-  {
-    "id": "8745a0f6e36003",
-    "issuer": "HSBC India",
-    "name": "HSBC Premier Credit Card",
-    "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/premier/",
-    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 20000,
-    "joiningFee": 12000,
-    "renewalFee": 20000,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 10,
-    "diningRate": 30,
-    "travelRate": 20,
-    "loungeVisits": 99,
-    "loungeUnlimited": true,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 16,
-      "fuel": 39,
-      "travel": 368.5,
-      "shopping": 102,
-      "grocery": 0,
-      "dining": 294,
-      "utilities": 8,
-      "upi": 16,
-      "forex": 12,
-      "lounge": 61,
-      "premium": 77,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Foreign Exchange Rates",
-      "TravelOne Credit Card",
-      "Wealth Shopping Cart",
-      "Dining and Entertainment",
-      "From travel to gourmet dining to lifestyle privileges, your HSBC Premier Credit Card offers a range of exclusive benefits."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1,
-        "context": "n be used on shopping, dining, entertainment and airline miles. Fuel surcharge waiver Get 1% fuel surcharge waiver at all fuel stations across India on transactions from INR400 to INR4,000​​​​​​​[@fuel-"
-      },
-      {
-        "value": 0.99,
-        "context": "port lounge access for cardholders, plus 8 international guest visits[@lounge-list] Get a 0.99% foreign exchange markup, anywhere and any time globally – no conditions apply. Relax with international trave"
-      },
-      {
-        "value": 20,
-        "context": "ance covering lost luggage, delays, travel documents and much more. Know more Save up to 20% on hotel bookings with Agoda. Know more Get one night free when you book an eligible stay at participating h"
-      },
-      {
-        "value": 30,
-        "context": "ith buy one, get one offers at BookMyShow. Know more Get unparalleled dining offers with 30% off your bill (up to INR1,500) with EazyDiner. T&Cs apply (PDF) Enjoy VIP guest experiences, eVIP pass disco"
-      },
-      {
-        "value": 10,
-        "context": "ier Credit Card also gives you: Savings on dining and movies with District by Zomato Save 10% on dining, activities and shopping, and enjoy movies on the big screen for less with buy-one-get-one cinema t"
-      }
-    ]
-  },
-  {
-    "id": "f2dd79a02aa4ab",
-    "issuer": "HSBC India",
-    "name": "HSBC Visa Platinum Credit Card",
-    "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/visa-platinum/",
-    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 0,
-    "joiningFee": 0,
-    "renewalFee": 0,
-    "feeWaiverSpend": 10000,
-    "maxCashbackRate": 15,
-    "shoppingRate": 10,
-    "diningRate": 10,
-    "travelRate": 15,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 136,
-      "fuel": 16,
-      "travel": 197,
-      "shopping": 118,
-      "grocery": 0,
-      "dining": 118,
-      "utilities": 8,
-      "upi": 20,
-      "forex": 8,
-      "lounge": 0,
-      "premium": 40,
-      "business": 35,
-      "lifetime-free": 55,
-      "beginner": 57,
-      "low-fee": 46,
-      "co-branded": 80
-    },
-    "detectedBenefits": [
-      "Foreign Exchange Rates",
-      "TravelOne Credit Card",
-      "Wealth Shopping Cart",
-      "Dining and Entertainment",
-      "The credit card that brings you the best of the best with exciting rewards and exclusive privileges."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 15,
-        "context": "ight seat selections twice a year on domestic flights booked with MakeMyTrip. T&Cs apply 15% cashback added to your MakeMyTrip Wallet in 'My Cash' for hotel stays in India when you book with MakeMyTrip"
-      },
-      {
-        "value": 10,
-        "context": "num Credit Card also comes with Savings on dining and movies with District by Zomato Save 10% on dining, activities and shopping, and enjoy movies on the big screen for less with buy-one-get-one cinema t"
-      }
-    ]
-  },
-  {
-    "id": "2894404edb1902",
-    "issuer": "HSBC India",
-    "name": "HSBC RuPay Platinum Credit Card",
-    "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/rupay-platinum-credit-card/",
-    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "shoppingRate": 10,
-    "diningRate": 10,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 16,
-      "fuel": 20,
-      "travel": 40,
-      "shopping": 118,
-      "grocery": 0,
-      "dining": 114,
-      "utilities": 8,
-      "upi": 36,
-      "forex": 8,
-      "lounge": 0,
-      "premium": 32,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 12,
-      "co-branded": 60
-    },
-    "detectedBenefits": [
-      "Foreign Exchange Rates",
-      "TravelOne Credit Card",
-      "Wealth Shopping Cart",
-      "Dining and Entertainment",
-      "Enjoy exciting rewards, exclusive perks and effortless payments with UPI."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 10,
-        "context": "ay Get even more from your card Savings on dining and movies with District by Zomato Save 10% on dining, activities and shopping, and enjoy movies on the big screen for less with buy-one-get-one cinema t"
-      }
-    ]
-  },
-  {
-    "id": "00805fd0a2471e",
-    "issuer": "HSBC India",
-    "name": "HSBC RuPay Cashback Credit Card",
-    "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/rupay-cashback-credit-card/",
-    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 499,
-    "joiningFee": 499,
-    "renewalFee": 499,
-    "feeWaiverSpend": 200000,
-    "maxCashbackRate": 10,
-    "shoppingRate": 10,
-    "groceryRate": 10,
-    "diningRate": 10,
-    "upiRate": 1,
-    "forexMarkup": 0,
-    "loungeVisits": 10,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "grocery",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 96,
-      "fuel": 8,
-      "travel": 43,
-      "shopping": 114,
-      "grocery": 94,
-      "dining": 110,
-      "utilities": 8,
-      "upi": 46,
-      "forex": 55,
-      "lounge": 52,
-      "premium": 42,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 57,
-      "low-fee": 29.68,
-      "co-branded": 60
-    },
-    "detectedBenefits": [
-      "RuPay Credit Card UPI | Apply Online - HSBC IN",
-      "Foreign Exchange Rates",
-      "TravelOne Credit Card",
-      "Wealth Shopping Cart",
-      "Dining and Entertainment"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 0,
-        "context": "with Account Aggregator. T&Cs apply (PDF) Choose our RuPay Cashback Credit Card to enjoy 0% forex mark-up Save when you spend abroad, with 0% FX mark-up on your transactions until 31 December 2026. T&C"
-      },
-      {
-        "value": 0,
-        "context": "our RuPay Cashback Credit Card to enjoy 0% forex mark-up Save when you spend abroad, with 0% FX mark-up on your transactions until 31 December 2026. T&Cs apply (PDF) . UPI integration Link your credit c"
-      },
-      {
-        "value": 10,
-        "context": "ey to make money Earn up to INR400 on your spending every month, in store and online. Get 10% cashback on dining, food delivery and grocery spending Plus earn 1% cashback on all other eligible spends[@un"
-      },
-      {
-        "value": 1,
-        "context": "tore and online. Get 10% cashback on dining, food delivery and grocery spending Plus earn 1% cashback on all other eligible spends[@unlimited-cashback-exclusions] Make instant UPI payments Enjoy quick,"
-      }
-    ]
-  },
-  {
-    "id": "7be14794fa1896",
-    "issuer": "HSBC India",
-    "name": "Credit card rewards",
-    "sourceUrl": "https://www.hsbc.co.in/credit-cards/rewards/",
-    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 8,
-      "fuel": 8,
-      "travel": 40,
-      "shopping": 28,
-      "grocery": 0,
-      "dining": 16,
-      "utilities": 8,
-      "upi": 20,
-      "forex": 8,
-      "lounge": 0,
-      "premium": 28,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Rewards on Credit Cards | Redeem Reward Points - HSBC IN",
-      "Foreign Exchange Rates",
-      "TravelOne Credit Card",
-      "Wealth Shopping Cart",
-      "Dining and Entertainment"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "f40ee9527309c5",
-    "issuer": "HSBC India",
-    "name": "Ultimate guide to cashback credit cards",
-    "sourceUrl": "https://www.hsbc.co.in/credit-cards/",
-    "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "cashback"
-    ],
-    "categoryScores": {
-      "cashback": 8,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Ultimate guide to cashback credit cards",
-      "See how making purchases on your credit card can earn you cashback as a percentage of your spending."
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "b3ec9c953c21c4",
-    "issuer": "Standard Chartered India",
-    "name": "Discover endless benefits & privileges with our range of Credit Cards",
-    "sourceUrl": "https://www.sc.com/in/credit-cards/",
-    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "feeWaiverSpend": 4,
-    "loungeVisits": 1,
-    "categories": [
-      "fuel",
-      "lounge"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 8,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 8,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Earn 4X rewards on all retail spends* + bonus 4X rewards*. No Joining Fee, Free lounge access, Fuel Surcharge waiver and many more."
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "b182c861316471",
-    "issuer": "Standard Chartered India",
-    "name": "Rewards Credit Card",
-    "sourceUrl": "https://www.sc.com/in/credit-cards/",
-    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 1,
-    "categories": [
-      "lounge",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 8,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Get Free Enjoy 4X Lounge access*",
-      "rewards on all retail spends* + bonus 4X rewards* on monthly spends* over INR 20,000. 1 per calendar quarter"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "492155a57b54bf",
-    "issuer": "Standard Chartered India",
-    "name": "Standard Chartered EaseMyTrip Credit Card",
-    "sourceUrl": "https://www.sc.com/in/credit-cards/",
-    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "maxRewardRate": 20,
-    "travelRate": 20,
-    "loungeVisits": 2,
-    "categories": [
-      "travel",
-      "lounge",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 163,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 12,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": [
-      {
-        "value": 20,
-        "context": "Standard Chartered EaseMyTrip Credit Card Flat Get Enjoy 20% & 10% 10x Complimentary flat 20% off on hotels* & 10% off on flights*- Book now at EaseMyTrip. rewards * for"
-      },
-      {
-        "value": 10,
-        "context": "Standard Chartered EaseMyTrip Credit Card Flat Get Enjoy 20% & 10% 10x Complimentary flat 20% off on hotels* & 10% off on flights*- Book now at EaseMyTrip. rewards * for ₹100 s"
-      },
-      {
-        "value": 20,
-        "context": "tandard Chartered EaseMyTrip Credit Card Flat Get Enjoy 20% & 10% 10x Complimentary flat 20% off on hotels* & 10% off on flights*- Book now at EaseMyTrip. rewards * for ₹100 spent at standalone hotel an"
-      },
-      {
-        "value": 10,
-        "context": "eMyTrip Credit Card Flat Get Enjoy 20% & 10% 10x Complimentary flat 20% off on hotels* & 10% off on flights*- Book now at EaseMyTrip. rewards * for ₹100 spent at standalone hotel and airline websites/ap"
-      }
-    ]
-  },
-  {
-    "id": "afe28fc04460b5",
-    "issuer": "Standard Chartered India",
-    "name": "Smart Credit Card",
-    "sourceUrl": "https://www.sc.com/in/credit-cards/",
-    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "maxCashbackRate": 2,
-    "shoppingRate": 2,
-    "categories": [
-      "cashback",
-      "shopping",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 18,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": [
-      {
-        "value": 2,
-        "context": "Smart Credit Card Get EMI Maximize your 2%* Cashback Conversion Credit Card benefits on all online spends and 1%* Cashback on all* other spends. convert"
-      },
-      {
-        "value": 1,
-        "context": "t EMI Maximize your 2%* Cashback Conversion Credit Card benefits on all online spends and 1%* Cashback on all* other spends. convert your eligible transactions into a 3-month EMI and enjoy a special int"
-      },
-      {
-        "value": 0.99,
-        "context": "onvert your eligible transactions into a 3-month EMI and enjoy a special interest rate of 0.99% per month with no processing fee. with an extended 90-day interest free period after issuance* by paying only"
-      }
-    ]
-  },
-  {
-    "id": "2d0959e8140b33",
-    "issuer": "Standard Chartered India",
-    "name": "Ultimate Credit Card",
-    "sourceUrl": "https://www.sc.com/in/credit-cards/",
-    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "maxCashbackRate": 5,
-    "maxRewardRate": 5,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "travel",
-      "shopping",
-      "lounge",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 44,
-      "fuel": 0,
-      "travel": 9.5,
-      "shopping": 35,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 12,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Earn Get Four 5 Reward* points 5% cashback* Complimentary for every INR 150 spent. Each reward point is worth INR 1 on all duty free spends complimentary domestic airport lounge access per quarter"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 5,
-        "context": "Ultimate Credit Card Earn Get Four 5 Reward* points 5% cashback* Complimentary for every INR 150 spent. Each reward point is worth INR 1 on all duty free spends com"
-      }
-    ]
-  },
-  {
-    "id": "7ea3888555d2eb",
-    "issuer": "Standard Chartered India",
-    "name": "Platinum Rewards Card",
-    "sourceUrl": "https://www.sc.com/in/credit-cards/",
-    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Platinum Rewards Card",
-      "Earn Earn Earn 5x 5x 1 reward points per INR 150 spent at fine-dining outlets. reward points per INR 150 spent on fuel reward point per INR 150 spent on all other transactions"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "97006da922bdf4",
-    "issuer": "Standard Chartered India",
-    "name": "Super Value Titanium Credit Card",
-    "sourceUrl": "https://www.sc.com/in/credit-cards/",
-    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "maxCashbackRate": 5,
-    "maxRewardRate": 5,
-    "fuelRate": 5,
-    "utilityRate": 5,
-    "categories": [
-      "cashback",
-      "fuel",
-      "shopping",
-      "utilities"
-    ],
-    "categoryScores": {
-      "cashback": 44,
-      "fuel": 49,
-      "travel": 0,
-      "shopping": 35,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 54,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Enjoy 5%* cashback on fuel, telephone & utility bills & 1 reward point per ₹150 on all other spends"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 5,
-        "context": "Super Value Titanium Credit Card Enjoy 5%* cashback on fuel, telephone & utility bills & 1 reward point per ₹150 on all other spends Know More"
-      }
-    ]
-  },
-  {
-    "id": "18fd321ba2beac",
-    "issuer": "Standard Chartered India",
-    "name": "Manhattan Credit Card",
-    "sourceUrl": "https://www.sc.com/in/credit-cards/",
-    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "maxCashbackRate": 5,
-    "maxRewardRate": 5,
-    "groceryRate": 5,
-    "categories": [
-      "cashback",
-      "shopping",
-      "grocery"
-    ],
-    "categoryScores": {
-      "cashback": 44,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 35,
-      "grocery": 49,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Earn double benefits with both 5%* cashback at supermarkets and 3x rewards for every other purchase."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 5,
-        "context": "Manhattan Credit Card Earn double benefits with both 5%* cashback at supermarkets and 3x rewards for every other purchase. Know More"
-      }
-    ]
-  },
-  {
-    "id": "ba115cf511cd49",
-    "issuer": "Standard Chartered India",
-    "name": "DigiSmart Credit Card",
-    "sourceUrl": "https://www.sc.com/in/credit-cards/",
-    "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "categories": [
-      "shopping"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 8,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "2fc08c30b89881",
-    "issuer": "American Express India",
-    "name": "My Card",
-    "sourceUrl": "https://www.americanexpress.com/in/benefits/card-selector.html?inav=en_in_menu_my_account_my_card_card_benefits",
-    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 1,
-    "categories": [
-      "travel",
-      "shopping",
-      "lounge",
-      "premium",
-      "business",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 41.5,
-      "shopping": 16,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 28,
-      "premium": 17,
-      "business": 51,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 12,
-      "co-branded": 32
-    },
-    "detectedBenefits": [
-      "Help With My Card What are the annual fees that I need to pay?",
-      "Travel Travel Services Travel Insurance",
-      "Travel Benefits Airport Lounges",
-      "Travel with My Points",
-      "Help With Travel Can I use my Card abroad?"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "97b2f353c2dee8",
-    "issuer": "American Express India",
-    "name": "Get Cards",
-    "sourceUrl": "https://www.americanexpress.com/in/credit-cards/card-types/premium-cards/?inav=en_in_menu_cards_get_cards_premium_cards",
-    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 66000,
-    "renewalFee": 66000,
-    "diningRate": 25,
-    "loungeVisits": 1,
-    "categories": [
-      "travel",
-      "shopping",
-      "dining",
-      "lounge",
-      "premium",
-      "business",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 85.5,
-      "shopping": 16,
-      "grocery": 0,
-      "dining": 253,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 36,
-      "premium": 93,
-      "business": 51,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 16,
-      "co-branded": 48
-    },
-    "detectedBenefits": [
-      "Help With My Card What are the annual fees that I need to pay?",
-      "Travel Travel Services Travel Insurance",
-      "Travel Benefits Airport Lounges",
-      "Travel with My Points",
-      "Help With Travel Can I use my Card abroad?"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 25,
-        "context": "with a complimentary* wine and/or dessert or exclusive discounts like Diner Dines free or 25%* off including alcohol on select restaurants.To enjoy the benefit at these restaurants, please make the booki"
-      }
-    ]
-  },
-  {
-    "id": "7f0836f348f382",
-    "issuer": "American Express India",
-    "name": "Manage My Card",
-    "sourceUrl": "https://www.americanexpress.com/in/credit-cards/manage-your-card/?inav=en_in_menu_cards_manage_my_card",
-    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 1,
-    "categories": [
-      "travel",
-      "shopping",
-      "lounge",
-      "premium",
-      "business",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 41.5,
-      "shopping": 16,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 28,
-      "premium": 13,
-      "business": 51,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 12,
-      "co-branded": 40
-    },
-    "detectedBenefits": [
-      "Help With My Card What are the annual fees that I need to pay?",
-      "Travel Travel Services Travel Insurance",
-      "Travel Benefits Airport Lounges",
-      "Travel with My Points",
-      "Help With Travel Can I use my Card abroad?"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "4378e0ade0d698",
-    "issuer": "American Express India",
-    "name": "Help With My Card",
-    "sourceUrl": "https://www.americanexpress.com/in/credit-know-how/credit-card-fees/?inav=en_in_menu_cards_help_with_my_card_what_are_the_annual_fees_that_i_need_to_pay",
-    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 495,
-    "renewalFee": 40000,
-    "feeWaiverSpend": 1,
-    "maxRewardRate": 3.5,
-    "travelRate": 3.5,
-    "loungeVisits": 1,
-    "categories": [
-      "travel",
-      "shopping",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 74,
-      "shopping": 16,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 36,
-      "premium": 25,
-      "business": 51,
-      "lifetime-free": 0,
-      "beginner": 26,
-      "low-fee": 41.75,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Help With My Card What are the annual fees that I need to pay?",
-      "Travel Travel Services Travel Insurance",
-      "Travel Benefits Airport Lounges",
-      "Travel with My Points",
-      "Help With Travel Can I use my Card abroad?"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 35,
-        "context": "the next statement, and MPR gets levied on that. E.g., if your credit card has an MPR of 35%, you can calculate the daily interest rate by multiplying it by 12 and then dividing it by 365. And this give"
-      },
-      {
-        "value": 1.15,
-        "context": "iplying it by 12 and then dividing it by 365. And this gives you a daily interest rate of 1.15%. If you had an outstanding balance of Rs. 1000 on your card, you would be charged INR150.68 in daily interest"
-      },
-      {
-        "value": 3.5,
-        "context": "Transfer Cash Advance Fee American Express® Platinum Card Charge Card INR 66,000 N/A 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express Platinum Reserve SM Credit Card"
-      },
-      {
-        "value": 3.5,
-        "context": "Reserve SM Credit Card Credit Card INR 10,000 (1 st year) INR 10,000 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express SmartEarn™ Credit C"
-      },
-      {
-        "value": 3.5,
-        "context": "redit Card Credit Card INR 10,000 (1 st year) INR 10,000 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express SmartEarn™ Credit Card Credit Ca"
-      },
-      {
-        "value": 3.5,
-        "context": "xpress SmartEarn™ Credit Card Credit Card INR 495(1st year) INR 495 ## (2nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express® Platinum Travel Cr"
-      },
-      {
-        "value": 3.5,
-        "context": "arn™ Credit Card Credit Card INR 495(1st year) INR 495 ## (2nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express® Platinum Travel Credit Card Cre"
-      },
-      {
-        "value": 3.5,
-        "context": "atinum Travel Credit Card Credit Card INR 5,000 (1 st year) INR 5,000 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express Membership Rewards®"
-      },
-      {
-        "value": 3.5,
-        "context": "Credit Card Credit Card INR 5,000 (1 st year) INR 5,000 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express Membership Rewards® Credit Card"
-      },
-      {
-        "value": 3.5,
-        "context": "ship Rewards® Credit Card Credit Card INR 1,000 (1 st year) INR 4,500 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express® Gold Card Charge"
-      }
-    ]
-  },
-  {
-    "id": "e3d28b72fcb689",
-    "issuer": "American Express India",
-    "name": "Accept Our Cards",
-    "sourceUrl": "https://www.americanexpress.com/in/merchant/accept-amex-cards.html?inav=en_in_menu_business_accept_our_cards_start_accepting_our_cards",
-    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 1,
-    "categories": [
-      "travel",
-      "shopping",
-      "lounge",
-      "premium",
-      "business",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 41.5,
-      "shopping": 16,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 28,
-      "premium": 13,
-      "business": 51,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 12,
-      "co-branded": 36
-    },
-    "detectedBenefits": [
-      "Help With My Card What are the annual fees that I need to pay?",
-      "Travel Travel Services Travel Insurance",
-      "Travel Benefits Airport Lounges",
-      "Travel with My Points",
-      "Help With Travel Can I use my Card abroad?"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "316ee5a3d58649",
-    "issuer": "American Express India",
-    "name": "Credit Card benefits & features",
-    "sourceUrl": "https://www.americanexpress.com/in/credit-know-how/how-do-credit-cards-work/?intlink=in-acq-creditcard-howcreditcardwork",
-    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 1,
-    "categories": [
-      "travel",
-      "shopping",
-      "lounge",
-      "premium",
-      "business",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 49.5,
-      "shopping": 28,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 28,
-      "premium": 13,
-      "business": 51,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 16,
-      "co-branded": 32
-    },
-    "detectedBenefits": [
-      "Help With My Card What are the annual fees that I need to pay?",
-      "Travel Travel Services Travel Insurance",
-      "Travel Benefits Airport Lounges",
-      "Travel with My Points",
-      "Help With Travel Can I use my Card abroad?"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "c42d818f2988c0",
-    "issuer": "American Express India",
-    "name": "American Express Credit Card comparison",
-    "sourceUrl": "https://www.americanexpress.com/in/credit-cards/all-cards/?intlink=in-acq-creditcards-allcards",
-    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 66000,
-    "renewalFee": 66000,
-    "loungeVisits": 1,
-    "categories": [
-      "travel",
-      "shopping",
-      "lounge",
-      "premium",
-      "business",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 65.5,
-      "shopping": 16,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 36,
-      "premium": 57,
-      "business": 51,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 16,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Help With My Card What are the annual fees that I need to pay?",
-      "Travel Travel Services Travel Insurance",
-      "Travel Benefits Airport Lounges",
-      "Travel with My Points",
-      "Help With Travel Can I use my Card abroad?"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "45d01577067bb8",
-    "issuer": "American Express India",
-    "name": "Check the Credit Card fees",
-    "sourceUrl": "https://www.americanexpress.com/in/credit-know-how/credit-card-fees/?intlink=in-acq-creditcards-creditcardfees",
-    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "high",
-    "annualFee": 495,
-    "renewalFee": 40000,
-    "feeWaiverSpend": 1,
-    "maxRewardRate": 3.5,
-    "travelRate": 3.5,
-    "loungeVisits": 1,
-    "categories": [
-      "travel",
-      "shopping",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 74,
-      "shopping": 16,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 36,
-      "premium": 25,
-      "business": 51,
-      "lifetime-free": 0,
-      "beginner": 26,
-      "low-fee": 41.75,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Help With My Card What are the annual fees that I need to pay?",
-      "Travel Travel Services Travel Insurance",
-      "Travel Benefits Airport Lounges",
-      "Travel with My Points",
-      "Help With Travel Can I use my Card abroad?"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 35,
-        "context": "the next statement, and MPR gets levied on that. E.g., if your credit card has an MPR of 35%, you can calculate the daily interest rate by multiplying it by 12 and then dividing it by 365. And this give"
-      },
-      {
-        "value": 1.15,
-        "context": "iplying it by 12 and then dividing it by 365. And this gives you a daily interest rate of 1.15%. If you had an outstanding balance of Rs. 1000 on your card, you would be charged INR150.68 in daily interest"
-      },
-      {
-        "value": 3.5,
-        "context": "Transfer Cash Advance Fee American Express® Platinum Card Charge Card INR 66,000 N/A 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express Platinum Reserve SM Credit Card"
-      },
-      {
-        "value": 3.5,
-        "context": "Reserve SM Credit Card Credit Card INR 10,000 (1 st year) INR 10,000 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express SmartEarn™ Credit C"
-      },
-      {
-        "value": 3.5,
-        "context": "redit Card Credit Card INR 10,000 (1 st year) INR 10,000 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express SmartEarn™ Credit Card Credit Ca"
-      },
-      {
-        "value": 3.5,
-        "context": "xpress SmartEarn™ Credit Card Credit Card INR 495(1st year) INR 495 ## (2nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express® Platinum Travel Cr"
-      },
-      {
-        "value": 3.5,
-        "context": "arn™ Credit Card Credit Card INR 495(1st year) INR 495 ## (2nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express® Platinum Travel Credit Card Cre"
-      },
-      {
-        "value": 3.5,
-        "context": "atinum Travel Credit Card Credit Card INR 5,000 (1 st year) INR 5,000 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express Membership Rewards®"
-      },
-      {
-        "value": 3.5,
-        "context": "Credit Card Credit Card INR 5,000 (1 st year) INR 5,000 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express Membership Rewards® Credit Card"
-      },
-      {
-        "value": 3.5,
-        "context": "ship Rewards® Credit Card Credit Card INR 1,000 (1 st year) INR 4,500 (2 nd year onwards) 3.5%*** p.m. 3.5% of the Cash Advance amount, subject to a minimum of INR 250 American Express® Gold Card Charge"
-      }
-    ]
-  },
-  {
-    "id": "e1e2d8729a689d",
-    "issuer": "American Express India",
-    "name": "Check the Credit Card interest rates",
-    "sourceUrl": "https://www.americanexpress.com/in/credit-know-how/credit-card-interest/?intlink=in-acq-creditcards-creditcardinterest",
-    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "medium",
-    "loungeVisits": 1,
-    "categories": [
-      "travel",
-      "shopping",
-      "lounge",
-      "premium",
-      "business",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 49.5,
-      "shopping": 16,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 28,
-      "premium": 13,
-      "business": 51,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 16,
-      "co-branded": 44
-    },
-    "detectedBenefits": [
-      "Help With My Card What are the annual fees that I need to pay?",
-      "Travel Travel Services Travel Insurance",
-      "Travel Benefits Airport Lounges",
-      "Travel with My Points",
-      "Help With Travel Can I use my Card abroad?"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "c39f24d638c1ed",
-    "issuer": "American Express India",
-    "name": "Can I use my card abroad?",
-    "sourceUrl": "https://www.americanexpress.com/in/credit-cards/",
-    "catalogueUrl": "https://www.americanexpress.com/in/credit-cards/",
-    "fetchedAt": "2026-10-05T09:10:09.176Z",
-    "confidence": "low",
-    "foreignRewardRate": 3.5,
-    "categories": [
-      "forex"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 32.5,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Yes. You will be charged 3.5% of the transaction amount as a mark-up fee for foreign currency transactions."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 3.5,
-        "context": "Can I use my card abroad? Yes. You will be charged 3.5% of the transaction amount as a mark-up fee for foreign currency transactions. Discover our tips on how to sav"
-      }
-    ]
   }
 ]
