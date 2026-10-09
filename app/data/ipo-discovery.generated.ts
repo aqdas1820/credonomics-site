@@ -2,7 +2,7 @@
 import type { IpoDiscoveryRecord } from './ipo-types'
 
 export const ipoDiscoveryMeta = {
-  "generatedAt": "2026-10-08T10:29:04.803Z",
+  "generatedAt": "2026-10-09T10:27:40.052Z",
   "source": "SEBI Public Issues",
   "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
   "recordCount": 28,

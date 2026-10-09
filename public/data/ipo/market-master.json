@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-08T10:28:52.793Z",
+    "generatedAt": "2026-10-09T10:27:28.122Z",
     "recordCount": 1,
     "nseCount": 1,
     "bseCount": 0,
@@ -20,23 +20,23 @@
         "priceBandLow": 1000,
         "priceBandHigh": 1000,
         "openDate": "2026-10-05",
-        "closeDate": "2026-10-16",
+        "closeDate": "2026-10-09",
         "exchange": [
           "NSE"
         ]
       },
       "subscription": {
         "total": 0.01,
-        "updatedAt": "2026-10-08T10:28:52.793Z",
+        "updatedAt": "2026-10-09T10:27:28.122Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMCG04&type=Active"
       },
       "sharesOffered": 750000,
-      "sharesBid": 5857,
+      "sharesBid": 8282,
       "estimatedIssueValueCr": 75,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMCG04&type=Active",
-      "fetchedAt": "2026-10-08T10:28:52.793Z"
+      "fetchedAt": "2026-10-09T10:27:28.122Z"
     }
   ]
 }
