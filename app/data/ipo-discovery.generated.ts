@@ -2,14 +2,25 @@
 import type { IpoDiscoveryRecord } from './ipo-types'
 
 export const ipoDiscoveryMeta = {
-  "generatedAt": "2026-10-09T10:27:40.052Z",
+  "generatedAt": "2026-10-12T10:41:09.860Z",
   "source": "SEBI Public Issues",
   "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
-  "recordCount": 28,
+  "recordCount": 29,
   "note": "Discovery layer only. Financial ranking requires separately normalized offer-document data."
 } as const
 
 export const ipoDiscovery: IpoDiscoveryRecord[] = [
+  {
+    "id": "matangi-rubber-limited-addendum-57ae39",
+    "companyName": "Matangi Rubber Limited",
+    "filingTitle": "Matangi Rubber Limited - Addendum to the DRHP",
+    "filingDate": "2026-10-10",
+    "documentStage": "addendum",
+    "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/matangi-rubber-limited-addendum-to-the-drhp_105143.html",
+    "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
+    "firstSeen": "2026-10-12T10:41:09.860Z",
+    "lastSeen": "2026-10-12T10:41:09.860Z"
+  },
   {
     "id": "arohan-financial-services-limited-addendum-5cfcca",
     "companyName": "Arohan Financial Services Limited",
