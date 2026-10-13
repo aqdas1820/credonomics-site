@@ -4,43 +4,69 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-10-12T10:40:57.876Z",
-  "recordCount": 1,
-  "nseCount": 1,
+  "generatedAt": "2026-10-13T10:28:33.453Z",
+  "recordCount": 2,
+  "nseCount": 2,
   "bseCount": 0,
-  "activeCount": 1,
+  "activeCount": 2,
   "upcomingCount": 0,
-  "sourceStatus": "NSE API 0 · BSE SME unavailable · BSE mainboard 0 · preserved previous"
+  "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard 0"
 } as const
 
 export const ipoMarketMaster: IpoMarketRecord[] = [
   {
-    "slug": "smc-global-securities-ltd-86eb7e9",
-    "companyName": "SMC Global Securities Limited",
-    "symbol": "SMCG04",
-    "marketSegment": "unknown",
+    "slug": "hd-fire-protect-ltd-e6301fc",
+    "companyName": "HD Fire Protect Limited",
+    "symbol": "HDFIRE",
+    "marketSegment": "mainboard",
     "status": "open",
-    "securityType": "DEBT",
+    "securityType": "EQ",
     "issue": {
-      "priceBandLow": 1000,
-      "priceBandHigh": 1000,
-      "openDate": "2026-10-05",
-      "closeDate": "2026-10-09",
+      "priceBandLow": 258,
+      "priceBandHigh": 271,
+      "openDate": "2026-10-13",
+      "closeDate": "2026-10-15",
       "exchange": [
         "NSE"
       ]
     },
     "subscription": {
-      "total": 0.01,
-      "updatedAt": "2026-10-09T10:27:28.122Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMCG04&type=Active"
+      "total": 2.9539884168131882,
+      "updatedAt": "2026-10-13T10:28:33.453Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HDFIRE&type=Active"
     },
-    "sharesOffered": 750000,
-    "sharesBid": 8282,
-    "estimatedIssueValueCr": 75,
+    "sharesOffered": 18420492,
+    "sharesBid": 54413920,
+    "estimatedIssueValueCr": 499.2,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMCG04&type=Active",
-    "fetchedAt": "2026-10-09T10:27:28.122Z"
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HDFIRE&type=Active",
+    "fetchedAt": "2026-10-13T10:28:33.453Z"
+  },
+  {
+    "slug": "vaibhav-vyapaar-ltd-19bd181",
+    "companyName": "Vaibhav Vyapaar Limited",
+    "symbol": "LOANFRONT",
+    "marketSegment": "sme",
+    "status": "open",
+    "securityType": "SME",
+    "issue": {
+      "openDate": "2026-10-13",
+      "closeDate": "2026-10-15",
+      "exchange": [
+        "NSE"
+      ]
+    },
+    "subscription": {
+      "total": 0.1,
+      "updatedAt": "2026-10-13T10:28:33.453Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=LOANFRONT&type=Active"
+    },
+    "sharesOffered": 5596000,
+    "sharesBid": 556000,
+    "marketSource": "NSE",
+    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=LOANFRONT&type=Active",
+    "fetchedAt": "2026-10-13T10:28:33.453Z"
   }
 ]
