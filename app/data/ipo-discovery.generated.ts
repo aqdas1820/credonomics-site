@@ -2,7 +2,7 @@
 import type { IpoDiscoveryRecord } from './ipo-types'
 
 export const ipoDiscoveryMeta = {
-  "generatedAt": "2026-10-14T08:38:02.070Z",
+  "generatedAt": "2026-10-14T14:29:13.392Z",
   "source": "SEBI Public Issues",
   "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
   "recordCount": 30,
@@ -19,7 +19,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/oswal-cables-limited-addendum-to-drhp_105234.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-10-14T08:38:02.070Z",
-    "lastSeen": "2026-10-14T08:38:02.070Z"
+    "lastSeen": "2026-10-14T14:29:13.392Z"
   },
   {
     "id": "matangi-rubber-limited-addendum-57ae39",
@@ -30,7 +30,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/matangi-rubber-limited-addendum-to-the-drhp_105143.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-10-12T10:41:09.860Z",
-    "lastSeen": "2026-10-14T08:38:02.070Z"
+    "lastSeen": "2026-10-14T14:29:13.392Z"
   },
   {
     "id": "arohan-financial-services-limited-addendum-5cfcca",

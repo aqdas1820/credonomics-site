@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-10-14T08:37:50.039Z",
+  "generatedAt": "2026-10-14T14:29:01.274Z",
   "recordCount": 4,
   "nseCount": 4,
   "bseCount": 0,
@@ -31,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 8.060055616321215,
-      "updatedAt": "2026-10-14T08:37:50.039Z",
+      "total": 11.009213000391085,
+      "updatedAt": "2026-10-14T14:29:01.274Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HDFIRE&type=Active"
     },
     "sharesOffered": 18420492,
-    "sharesBid": 148470190,
+    "sharesBid": 202795120,
     "estimatedIssueValueCr": 499.2,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HDFIRE&type=Active",
-    "fetchedAt": "2026-10-14T08:37:50.039Z"
+    "fetchedAt": "2026-10-14T14:29:01.274Z"
   },
   {
     "slug": "vaibhav-vyapaar-ltd-19bd181",
@@ -58,16 +58,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.25,
-      "updatedAt": "2026-10-14T08:37:50.039Z",
+      "total": 0.43,
+      "updatedAt": "2026-10-14T14:29:01.274Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=LOANFRONT&type=Active"
     },
     "sharesOffered": 5596000,
-    "sharesBid": 1390000,
+    "sharesBid": 2380000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=LOANFRONT&type=Active",
-    "fetchedAt": "2026-10-14T08:37:50.039Z"
+    "fetchedAt": "2026-10-14T14:29:01.274Z"
   },
   {
     "slug": "fusion-cx-ltd-ce55c0a",
@@ -86,17 +86,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.17640042735042735,
-      "updatedAt": "2026-10-14T08:37:50.039Z",
+      "total": 0.29716944444444443,
+      "updatedAt": "2026-10-14T14:29:01.274Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=FUSIONCX&type=Active"
     },
     "sharesOffered": 14040000,
-    "sharesBid": 2476662,
+    "sharesBid": 4172259,
     "estimatedIssueValueCr": 405.76,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=FUSIONCX&type=Active",
-    "fetchedAt": "2026-10-14T08:37:50.039Z"
+    "fetchedAt": "2026-10-14T14:29:01.274Z"
   },
   {
     "slug": "ravita-engineering-services-ltd-445c68c",
@@ -113,15 +113,15 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.61,
-      "updatedAt": "2026-10-14T08:37:50.039Z",
+      "total": 1.05,
+      "updatedAt": "2026-10-14T14:29:01.274Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=RAVITA&type=Active"
     },
     "sharesOffered": 7413600,
-    "sharesBid": 4531200,
+    "sharesBid": 7818000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=RAVITA&type=Active",
-    "fetchedAt": "2026-10-14T08:37:50.039Z"
+    "fetchedAt": "2026-10-14T14:29:01.274Z"
   }
 ]
