@@ -4,71 +4,16 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-10-15T14:08:14.185Z",
-  "recordCount": 8,
-  "nseCount": 8,
+  "generatedAt": "2026-10-16T08:05:49.005Z",
+  "recordCount": 6,
+  "nseCount": 6,
   "bseCount": 0,
-  "activeCount": 8,
+  "activeCount": 6,
   "upcomingCount": 0,
-  "sourceStatus": "NSE API 8 · BSE SME unavailable · BSE mainboard unavailable"
+  "sourceStatus": "NSE API 6 · BSE SME unavailable · BSE mainboard 0"
 } as const
 
 export const ipoMarketMaster: IpoMarketRecord[] = [
-  {
-    "slug": "hd-fire-protect-ltd-e6301fc",
-    "companyName": "HD Fire Protect Limited",
-    "symbol": "HDFIRE",
-    "marketSegment": "mainboard",
-    "status": "open",
-    "securityType": "EQ",
-    "issue": {
-      "priceBandLow": 258,
-      "priceBandHigh": 271,
-      "openDate": "2026-10-13",
-      "closeDate": "2026-10-15",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 82.41370425936506,
-      "updatedAt": "2026-10-15T14:08:14.185Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HDFIRE&type=Active"
-    },
-    "sharesOffered": 18420492,
-    "sharesBid": 1518100980,
-    "estimatedIssueValueCr": 499.2,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=HDFIRE&type=Active",
-    "fetchedAt": "2026-10-15T14:08:14.185Z"
-  },
-  {
-    "slug": "vaibhav-vyapaar-ltd-19bd181",
-    "companyName": "Vaibhav Vyapaar Limited",
-    "symbol": "LOANFRONT",
-    "marketSegment": "sme",
-    "status": "open",
-    "securityType": "SME",
-    "issue": {
-      "openDate": "2026-10-13",
-      "closeDate": "2026-10-15",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 3.08,
-      "updatedAt": "2026-10-15T14:08:14.185Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=LOANFRONT&type=Active"
-    },
-    "sharesOffered": 5596000,
-    "sharesBid": 17212000,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=LOANFRONT&type=Active",
-    "fetchedAt": "2026-10-15T14:08:14.185Z"
-  },
   {
     "slug": "fusion-cx-ltd-ce55c0a",
     "companyName": "Fusion CX Limited",
@@ -86,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.8071004273504273,
-      "updatedAt": "2026-10-15T14:08:14.185Z",
+      "total": 1.346323717948718,
+      "updatedAt": "2026-10-16T08:05:49.005Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=FUSIONCX&type=Active"
     },
     "sharesOffered": 14040000,
-    "sharesBid": 11331690,
+    "sharesBid": 18902385,
     "estimatedIssueValueCr": 405.76,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=FUSIONCX&type=Active",
-    "fetchedAt": "2026-10-15T14:08:14.185Z"
+    "fetchedAt": "2026-10-16T08:05:49.005Z"
   },
   {
     "slug": "ravita-engineering-services-ltd-445c68c",
@@ -113,16 +58,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 1.62,
-      "updatedAt": "2026-10-15T14:08:14.185Z",
+      "total": 2.72,
+      "updatedAt": "2026-10-16T08:05:49.005Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=RAVITA&type=Active"
     },
     "sharesOffered": 7413600,
-    "sharesBid": 12010800,
+    "sharesBid": 20187600,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=RAVITA&type=Active",
-    "fetchedAt": "2026-10-15T14:08:14.185Z"
+    "fetchedAt": "2026-10-16T08:05:49.005Z"
   },
   {
     "slug": "bonfiglioli-transmissions-ltd-8d678aa",
@@ -141,17 +86,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.34321748029296295,
-      "updatedAt": "2026-10-15T14:08:14.185Z",
+      "total": 0.5267626368248414,
+      "updatedAt": "2026-10-16T08:05:49.005Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BONFIG&type=Active"
     },
     "sharesOffered": 30282330,
-    "sharesBid": 10393425,
+    "sharesBid": 15951600,
     "estimatedIssueValueCr": 1774.54,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BONFIG&type=Active",
-    "fetchedAt": "2026-10-15T14:08:14.185Z"
+    "fetchedAt": "2026-10-16T08:05:49.005Z"
   },
   {
     "slug": "sahajanand-medical-technologies-ltd-346d039",
@@ -170,17 +115,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.1343474096972847,
-      "updatedAt": "2026-10-15T14:08:14.185Z",
+      "total": 0.21468948919653408,
+      "updatedAt": "2026-10-16T08:05:49.005Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMT&type=Active"
     },
     "sharesOffered": 9750482,
-    "sharesBid": 1309952,
+    "sharesBid": 2093326,
     "estimatedIssueValueCr": 335.42,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMT&type=Active",
-    "fetchedAt": "2026-10-15T14:08:14.185Z"
+    "fetchedAt": "2026-10-16T08:05:49.005Z"
   },
   {
     "slug": "tonbo-imaging-india-ltd-b7f2320",
@@ -199,17 +144,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 2.6147755937608967,
-      "updatedAt": "2026-10-15T14:08:14.185Z",
+      "total": 4.182151300610729,
+      "updatedAt": "2026-10-16T08:05:49.005Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TONBO&type=Active"
     },
     "sharesOffered": 8526033,
-    "sharesBid": 22293663,
+    "sharesBid": 35657160,
     "estimatedIssueValueCr": 596.82,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TONBO&type=Active",
-    "fetchedAt": "2026-10-15T14:08:14.185Z"
+    "fetchedAt": "2026-10-16T08:05:49.005Z"
   },
   {
     "slug": "zetwerk-manufacturing-businesses-ltd-805420f",
@@ -228,16 +173,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.13649843655139848,
-      "updatedAt": "2026-10-15T14:08:14.185Z",
+      "total": 0.15579057934445253,
+      "updatedAt": "2026-10-16T08:05:49.005Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ZETWERK&type=Active"
     },
     "sharesOffered": 185066845,
-    "sharesBid": 25261335,
+    "sharesBid": 28831671,
     "estimatedIssueValueCr": 2794.51,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ZETWERK&type=Active",
-    "fetchedAt": "2026-10-15T14:08:14.185Z"
+    "fetchedAt": "2026-10-16T08:05:49.005Z"
   }
 ]
