@@ -4,7 +4,86 @@ Date: 2026-10-18. Branch: `feature/youpi-payment-entry-prelaunch`. Draft PR #1 o
 
 **Overall result: FAIL / BLOCKED at preflight. No backup or restoration was attempted. Verified staging recovery is NOT established.** This is a prerequisite report, not a successful recovery certificate.
 
-## Repository and authorization
+## Continuation from `34a5b8645289a94f74f637a9b663b51190f10506`
+
+This section supersedes the initial tool-availability findings below. Backup/recovery remains **FAIL / BLOCKED**; no staging credentials, records or exports were read, printed or published.
+
+### Windows and installation assessment
+
+- Windows 11 Home Single Language, version `10.0.26300`, AMD64/64-bit. The current process is **not Administrator**. Node `v26.7.0`, npm `12.0.2` and WinGet `v1.29.380` are available. Scoop/Chocolatey/Homebrew were not found on PATH.
+- CIM reports `HypervisorPresent=true` while processor virtualization/VM-monitor/SLAT indicators return false. These mixed values do not prove a usable Docker backend or justify changing firmware/Windows settings.
+- Docker/Podman executables, matching services, the checked Podman installation directory and Docker engine pipe were not found. No responding free container runtime or its applicable license entitlement was established. No Docker Desktop, WSL, Hyper-V, virtualization, firewall, account, Windows service or system PATH change was made; no administrator installation was attempted.
+- C: and D: had approximately 46 GiB and 61 GiB free before the public software download. This is capacity for tools, not approval or capacity validation of a backup destination.
+- Selected a **user-local, non-administrator** installation under `%LOCALAPPDATA%/CredoNomicsTools/phase20`, outside the repository. `git -C <tool-root> rev-parse --is-inside-work-tree` did not identify a Git worktree. This directory contains public software only and is not an approved backup/restore-data destination.
+
+### Tools resolved and actual checks
+
+| Item | Result |
+| --- | --- |
+| Supabase CLI | Installed exact npm package `supabase@2.121.0` in the separate tool directory; package metadata reports MIT license and the official Supabase CLI repository. `--version` returns `2.121.0`; `--help` and `db dump --help` execute successfully. No remote link/login/init/start/dump command was run. |
+| PostgreSQL 17 | Downloaded the official EDB-linked `postgresql-17.11-5-windows-x64-binaries.zip` (381,531,864 bytes), extracted client/server binaries, libraries, shared support files and licenses under the separate user-local tool root. All seven `--version` checks returned PostgreSQL **17.11**: `psql`, `pg_dump`, `pg_dumpall`, `pg_restore`, `postgres`, `initdb`, `pg_ctl`. No cluster/server/service was initialized or started. |
+| Administrative/system changes | None. Per-user package files only; no global npm install or package-manager/system setup. |
+
+The installation follows the [official Supabase CLI instructions](https://supabase.com/docs/guides/local-development/cli/getting-started), using a pinned npm dependency in a separate tools directory. PostgreSQL's [official Windows download page](https://www.postgresql.org/download/windows/) explicitly links EDB's binary ZIP option, allowing extraction without its administrator installer. The [PostgreSQL License](https://www.postgresql.org/about/licence/) permits use without fee. The ZIP is public software, not a database backup.
+
+Public software archive SHA-256: `80379b2c04d51c30225532e0ae04509899141e9957ed096fe749d7fd9df8f82f`. This is a measured local integrity reference, not an independently published vendor checksum/signature verification. Extraction paths were checked for absolute/parent traversal entries first; none was found. An initial selective `tar` extraction returned an error for an assumed COPYRIGHT path absent from the ZIP; the actual server and third-party license files were then extracted successfully, and all seven executables ran. The extracted server license includes permission for use without fee. No Visual C++ runtime or administrator installer was required for these version checks.
+
+### Exact remaining stop conditions
+
+1. **Existing export credentials unavailable in checked locations.** Presence-only checks again found no configured `PGPASSFILE`, `PGPASSWORD`, `PGSERVICE`, `PGSERVICEFILE` or `SUPABASE_DB_PASSWORD`; the default PostgreSQL password file is absent. This does not prove that no credential exists elsewhere. The owner was asked for only a protected existing credential-file location or an unavailable response, never its contents. No remote login or dump was attempted and no password was reset.
+2. **Private encrypted destination and independent recovery remain unconfirmed.** The owner was explicitly asked to supply/confirm a folder outside Git and cloud sync, encryption method and availability of an independent recovery key, without providing keys. No folder answer was available at report preparation. Therefore ACLs, encryption, independent decryption recovery, sync exclusions and actual destination capacity could not be checked. The earlier synthetic DPAPI success is insufficient and has not been promoted to recovery proof.
+3. **Faithful full Supabase recovery runtime is unavailable.** The [current Supabase runtime documentation](https://supabase.com/docs/guides/local-development/docker-and-native-runtimes) says its native runtime does not support Windows. A working approved container backend remains a separate requirement for full local-stack testing. Installing/enabling one could require administrator/OS changes and an applicable no-charge license assessment; neither was assumed or performed.
+
+The owner's instruction is to stop on these conditions. No export, database cluster initialization, local database creation or restore follows the credential/destination failure. Tool version checks do not substitute for a real recovery test.
+
+### PostgreSQL-only approach assessed, not executed
+
+The installed CLI help exposes dump flags, but [Supabase's CLI reference](https://supabase.com/docs/reference/cli/supabase-db-dump) documents its normal `db dump` path as container-based. A portable PostgreSQL-only route would use native `pg_dump`/`pg_dumpall` and a separate local PostgreSQL 17 cluster, rather than claiming the CLI's normal dump worked without Docker. It still requires confirmed export authority, private recoverable encryption, coverage review and source/restore validation first.
+
+An authorized later run must explicitly cover roles/memberships/grants, schemas/data, sequence state, migration history and custom auth/storage objects. Native `pg_dump` captures one database; global roles require separate handling. Role password hashes/secrets must not be exposed or automatically transplanted. Preserve private original archives and hashes; separately record any compatibility changes. Storage binaries remain a separate backup item, not included by a logical database dump.
+
+Even a successful native restore cannot prove hosted Supabase Auth/JWT/PostgREST behavior, Storage object retrieval, Realtime, provider configuration or Vault/column-encryption key recovery. Managed roles/extensions/service dependencies must be reviewed individually; skipping failed objects or adding synthetic auth shims is not faithful staging recovery. Object/row-count/constraint/role/RLS comparisons and measured recovery time are **NOT EXECUTED** in this continuation. No fresh Storage inventory or customer-data queries were issued after preflight stopped.
+
+### Actual continuation commands
+
+```powershell
+Get-CimInstance Win32_OperatingSystem
+Get-CimInstance Win32_Processor
+Get-CimInstance Win32_ComputerSystem
+Get-Command winget,scoop,choco,brew,docker,podman,psql,pg_dump,pg_restore,supabase,node,npm,tar.exe -ErrorAction SilentlyContinue
+node --version
+npm --version
+winget --version
+Get-Service '*docker*','*podman*','*postgres*' -ErrorAction SilentlyContinue
+Get-PSDrive C,D
+npm view supabase version license dist.tarball --json
+$toolRoot = Join-Path $env:LOCALAPPDATA 'CredoNomicsTools/phase20'
+npm install --prefix $toolRoot --save-exact --no-audit --no-fund supabase@2.121.0
+& (Join-Path $toolRoot 'node_modules/.bin/supabase.cmd') --version
+& (Join-Path $toolRoot 'node_modules/.bin/supabase.cmd') --help
+& (Join-Path $toolRoot 'node_modules/.bin/supabase.cmd') db dump --help
+$archive = Join-Path $toolRoot 'postgresql-17.11-5-windows-x64-binaries.zip'
+curl.exe --proto '=https' --tlsv1.2 --fail --location --silent --show-error --output $archive 'https://get.enterprisedb.com/postgresql/postgresql-17.11-5-windows-x64-binaries.zip'
+Get-FileHash -Algorithm SHA256 -LiteralPath $archive
+$extractRoot = Join-Path $toolRoot 'postgresql-17.11-5'
+tar.exe -xf $archive -C $extractRoot pgsql/bin pgsql/lib pgsql/share pgsql/doc/postgresql/html/COPYRIGHT
+# Initial extraction reported the nonexistent COPYRIGHT path; corrected license extraction:
+tar.exe -xf $archive -C $extractRoot pgsql/server_license.txt pgsql/commandlinetools_3rd_party_licenses.txt
+$pgBin = Join-Path $extractRoot 'pgsql/bin'
+foreach ($tool in @('psql','pg_dump','pg_dumpall','pg_restore','postgres','initdb','pg_ctl')) {
+  & (Join-Path $pgBin ($tool + '.exe')) --version
+}
+```
+
+CIM output was restricted to OS/architecture and virtualization flags; administrator membership, engine-pipe and credential-file checks printed only non-sensitive metadata/booleans. Official EDB download metadata was checked with an HTTPS HEAD request; public binaries were downloaded over HTTPS outside Git. No password or connection-string arguments were used. Actual continuation tool tests: **7/7 PostgreSQL version probes PASS**, CLI version plus two help commands **PASS**, installed license-file availability and no-fee permission checks **PASS**. No backup, restore or measured recovery test was executed. Full application/SQL suites were not rerun for this documentation/tool-install task. Initial tests below are historical, not newly rerun recovery results.
+
+**All five final gates below remain NOT READY.** The user-local tools improve prerequisites only. No billing migration, exact-ref migration approval, production change or live payment operation is authorized by this continuation. Next owner actions are the pending private-folder/recovery confirmation and local provisioning/location of an existing export credential. Administrator permission is needed only if a later proposed installation actually requires it; it is not being requested for these portable tools.
+
+## Initial preflight record (before continuation)
+
+The remaining sections retain the original `34a5b86` preflight record for audit history. In particular, their missing-tool findings and suggested installation steps are superseded by the successful user-local installations above; their unexecuted backup/restore and unresolved final gates still apply.
+
+### Repository and authorization
 
 - Starting feature SHA after fetching and fast-forwarding: `ba39ab105452c818c0136e9a66725e3358b72efd`. Concurrent Phase 18/19 commits were preserved. The working tree was clean before this report.
 - Main was checked read-only at `b492f55631d383465b9bdfa886287643d0460094`; no main commit, merge or production deployment was performed.
