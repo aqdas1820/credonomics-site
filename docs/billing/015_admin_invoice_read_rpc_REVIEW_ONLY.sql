@@ -56,4 +56,26 @@ end;
 $$;
 revoke all on function public.billing_get_invoice(uuid) from public, anon, authenticated;
 grant execute on function public.billing_get_invoice(uuid) to service_role;
+-- Return only the immutable snapshot after verified full payment, never a
+-- live recalculation that could silently mutate historical receipt amounts.
+create or replace function public.billing_get_receipt(p_invoice_id uuid)
+returns jsonb language plpgsql security definer
+set search_path = pg_catalog, public, billing_private
+as $
+declare v_snapshot jsonb;
+begin
+  if coalesce(auth.role(),'') <> 'service_role' then
+    raise exception 'Not authorized' using errcode='42501';
+  end if;
+  select r.snapshot into v_snapshot
+  from billing_private.receipts r
+  join billing_private.invoices i on i.id=r.invoice_id
+  where r.invoice_id=p_invoice_id and i.status='PAID';
+  if v_snapshot is null then raise exception 'Verified receipt not found'; end if;
+  return v_snapshot;
+end;
+$;
+revoke all on function public.billing_get_receipt(uuid) from public, anon, authenticated;
+grant execute on function public.billing_get_receipt(uuid) to service_role;
+
 commit;
