@@ -15,7 +15,7 @@ describe('private persistent bucket adapter', () => {
     expect(await store.create('synthetic/key', Buffer.from('synthetic'))).toBe('created')
     expect(upload.mock.calls[0][2]).toEqual({ upsert: false, contentType: 'application/json', cacheControl: '0' })
   })
-  it.each([{ public: true }, { file_size_limit: null }, { file_size_limit: 2000001 }, { allowed_mime_types: ['application/pdf'] }])('refuses unsafe bucket metadata', async bad => {
+  it.each([{ public: true }, { file_size_limit: null }, { file_size_limit: 2000001 }, { file_size_limit: -1 }, { file_size_limit: 0.5 }, { file_size_limit: 'invalid' }, { allowed_mime_types: ['application/pdf'] }])('refuses unsafe bucket metadata', async bad => {
     const base = (await getBucket()).data
     getBucket.mockResolvedValue({ data: { ...base, ...bad }, error: null })
     await expect(privateDocumentStore(client)).rejects.toThrow('policy')
