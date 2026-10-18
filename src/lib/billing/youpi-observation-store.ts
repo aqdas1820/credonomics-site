@@ -24,6 +24,9 @@ export async function recordSignedYoupiObservation(
   const observation: YoupiGatewayObservation = verifyYoupiObservation(
     rawBody, signature, process.env.BILLING_YOUPI_WEBHOOK_SECRET,
   )
+  // This adapter accepts issued CredoNomics invoice orders only. The RPC
+  // independently binds that immutable invoice number and exact paise total.
+  if (!/^CN-\d{4}-\d{8}$/.test(observation.orderId)) throw new Error('Unsupported invoice order binding')
   const service = createSupabaseAdminClient()
   if (!service) throw new Error('Private billing database unavailable')
   const { data, error } = await service.rpc('billing_record_youpi_observation', {

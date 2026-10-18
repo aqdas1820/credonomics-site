@@ -7,6 +7,7 @@ import { isBillingAdmin } from '../../admin-policy'
 import { canRenderPaidReceipt } from '../../receipt-policy'
 import { billingDatabaseScopeReady } from '../../db-scope'
 import PrintInvoiceButton from '../../PrintInvoiceButton'
+import ArchiveDocumentButton from '../../ArchiveDocumentButton'
 import styles from './invoice.module.css'
 
 export const dynamic = 'force-dynamic'
@@ -22,7 +23,8 @@ type Invoice = {
 const inr = (paise: number) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(paise / 100)
 
 /** Historical invoice document. Not a separately numbered PAID receipt. */
-export default async function InvoiceDocumentPage({ params }: { params: { id: string } }) {
+export default async function InvoiceDocumentPage({ params: promisedParams }: { params: Promise<{ id: string }> }) {
+  const params = await promisedParams
   if (process.env.BILLING_PORTAL_ENABLED !== 'true' || (process.env.BILLING_API_ENABLED !== 'true' || !billingDatabaseScopeReady())) notFound()
   if (!/^[0-9a-f]{8}-[0-9a-f-]{27,}$/i.test(params.id)) notFound()
   const { user } = await authenticatedUser()
@@ -40,6 +42,7 @@ export default async function InvoiceDocumentPage({ params }: { params: { id: st
       <nav className={styles.controls}>
         <Link href="/billing">← Back to admin billing</Link>
         <PrintInvoiceButton />
+        {process.env.BILLING_PDF_ARCHIVE_ENABLED === 'true' && <ArchiveDocumentButton id={invoice.id} kind="invoice" />}
         {canRenderPaidReceipt(invoice) && <Link href={'/billing/invoices/' + encodeURIComponent(invoice.id) + '/receipt'}>Verified PAID receipt view</Link>}
       </nav>
       <article className={styles.sheet}>

@@ -8,4 +8,12 @@ describe('billing admin authorization', () => {
   it('denies non-allowlisted admin', () => expect(isBillingAdmin({ id, app_metadata: { billing_admin: true } }, '87654321-1234-4234-8234-123456789012')).toBe(false))
   it('allows exact UUID and trusted admin claim', () => expect(isBillingAdmin({ id, app_metadata: { billing_admin: true } }, id)).toBe(true))
   it('denies invalid identity', () => expect(isBillingAdmin({ id: 'admin', app_metadata: { billing_admin: true } }, 'admin')).toBe(false))
+  it('denies malformed UUID even when explicitly allowlisted', () => {
+    const bad = '12345678-' + '-'.repeat(27)
+    expect(isBillingAdmin({ id: bad, app_metadata: { billing_admin: true } }, bad)).toBe(false)
+  })
+  it('denies inherited admin claim and nonboolean claim', () => {
+    expect(isBillingAdmin({ id, app_metadata: Object.create({ billing_admin: true }) }, id)).toBe(false)
+    expect(isBillingAdmin({ id, app_metadata: { billing_admin: 'true' } }, id)).toBe(false)
+  })
 })

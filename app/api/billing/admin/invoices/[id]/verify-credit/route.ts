@@ -18,7 +18,8 @@ const reply = (body: unknown, status: number) => NextResponse.json(body, {
  * independently checked a booked Slice credit may attest to this operation.
  * The service-role-only Postgres RPC must be installed separately after review.
  */
-export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
+export async function POST(request: NextRequest, { params: promisedParams }: { params: Promise<{ id: string }> }) {
+  const params = await promisedParams
   if (process.env.BILLING_API_ENABLED !== 'true' ||
       process.env.BILLING_SETTLEMENT_ENABLED !== 'true' || !billingDatabaseScopeReady()) {
     return reply({ error: 'Bank reconciliation unavailable' }, 503)

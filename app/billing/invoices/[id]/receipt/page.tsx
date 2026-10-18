@@ -7,6 +7,7 @@ import { isBillingAdmin } from '../../../admin-policy'
 import { isValidStoredPaidReceipt } from '../../../receipt-policy'
 import { billingDatabaseScopeReady } from '../../../db-scope'
 import PrintInvoiceButton from '../../../PrintInvoiceButton'
+import ArchiveDocumentButton from '../../../ArchiveDocumentButton'
 import styles from '../invoice.module.css'
 
 export const dynamic = 'force-dynamic'
@@ -24,9 +25,10 @@ const money = (paise: number) => new Intl.NumberFormat('en-IN', { style: 'curren
 
 /**
  * Human-verifiable PAID receipt view, NEVER offered on gateway SUCCESS alone.
- * Receipt data is copied from an append-only database snapshot. PDF binary archival is not implemented.
+ * Receipt data is copied from an append-only database snapshot. Archive access is independently gated.
  */
-export default async function VerifiedReceiptPage({ params }: { params: { id: string } }) {
+export default async function VerifiedReceiptPage({ params: promisedParams }: { params: Promise<{ id: string }> }) {
+  const params = await promisedParams
   if (process.env.BILLING_PORTAL_ENABLED !== 'true' || (process.env.BILLING_API_ENABLED !== 'true' || !billingDatabaseScopeReady())) notFound()
   if (!/^[0-9a-f]{8}-[0-9a-f-]{27,}$/i.test(params.id)) notFound()
   const { user } = await authenticatedUser()
@@ -42,6 +44,7 @@ export default async function VerifiedReceiptPage({ params }: { params: { id: st
       <nav className={styles.controls}>
         <Link href={'/billing/invoices/' + encodeURIComponent(receipt.invoiceId)}>← Invoice details</Link>
         <PrintInvoiceButton />
+        {process.env.BILLING_PDF_ARCHIVE_ENABLED === 'true' && <ArchiveDocumentButton id={receipt.invoiceId} kind="receipt" />}
       </nav>
       <article className={styles.sheet}>
         <header className={styles.header}>

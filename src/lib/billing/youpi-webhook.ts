@@ -53,7 +53,7 @@ export function verifyYoupiObservation(
   const expected = createHmac('sha256', sharedSecret).update(body).digest()
   if (!timingSafeEqual(received, expected)) throw new Error('Unauthenticated gateway observation')
   let parsed: unknown
-  try { parsed = JSON.parse(body.toString('utf8')) }
+  try { parsed = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(body)) }
   catch { throw new Error('Invalid webhook JSON') }
   const event = eventSchema.safeParse(parsed)
   if (!event.success) throw new Error('Invalid signed webhook payload')

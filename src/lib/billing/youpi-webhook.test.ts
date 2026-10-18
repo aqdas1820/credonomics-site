@@ -16,6 +16,17 @@ const sign = (b: Buffer) => 'sha256=' + createHmac('sha256', secret).update(b).d
 const observe = (b: Buffer = body) => verifyYoupiObservation(b, sign(b), secret)
 
 describe('YouPI V2 documented merchant webhook observation', () => {
+  it('rejects invalid UTF-8 even with a valid signature', () => {
+    const invalid = Buffer.concat([Buffer.from('{"extra":"'), Buffer.from([0xff]), Buffer.from('",'), body.subarray(1)])
+    expect(() => observe(invalid)).toThrow('Invalid webhook JSON')
+  })
+  it.each(['COD', 'PAID', 'REFUNDED'])('refuses unsupported event %s', event => {
+    expect(() => observe(Buffer.from(JSON.stringify({ ...payload, event })))).toThrow('Invalid signed')
+  })
+  it('ignores signed authority-looking extensions and returns review-only data', () => {
+    const r = observe(Buffer.from(JSON.stringify({ ...payload, status: 'PAID', settled: true, beneficiary: 'forged' })))
+    expect(r.decision).toBe('REVIEW_REQUIRED'); expect(r).not.toHaveProperty('settled'); expect(r).not.toHaveProperty('beneficiary')
+  })
   it('accepts signed SUCCESS with documented headers and NEVER marks PAID', () => {
     const result = observe()
     expect(result.decision).toBe('REVIEW_REQUIRED')

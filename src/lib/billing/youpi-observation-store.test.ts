@@ -25,6 +25,11 @@ beforeEach(() => {
 afterEach(() => { vi.unstubAllEnvs(); vi.resetAllMocks() })
 
 describe('signed observation adapter (database is mocked)', () => {
+  it('rejects noninvoice order binding before creating a database client', async () => {
+    const invalid = Buffer.from(JSON.stringify({ ...payload, orderId: 'arbitrary-order' }))
+    await expect(record(invalid, sign(invalid))).rejects.toThrow('order binding')
+    expect(client).not.toHaveBeenCalled()
+  })
   it('records only review observations and acknowledges identical retries', async () => {
     expect(await record(body, sign(body))).toEqual({ recorded: true, duplicate: false, decision: 'REVIEW_REQUIRED' })
     rpc.mockResolvedValue({ data: { recorded: false, duplicate: true, decision: 'REVIEW_REQUIRED' }, error: null })

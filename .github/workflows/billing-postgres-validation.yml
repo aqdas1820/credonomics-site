@@ -16,6 +16,12 @@ on:
       - "vitest.config.mts"
       - "package.json"
       - "package-lock.json"
+      - "next.config.mjs"
+      - "assets/fonts/**"
+      - "playwright.billing-*.config.ts"
+      - "tests/staging/**"
+      - "tests/billing-local/**"
+      - "scripts/start-billing-disabled-check.mjs"
       - "scripts/generate-ipo-dashboard.mjs"
       - "scripts/generate-search-index.mjs"
       - "scripts/check-billing-launch-readiness.mjs"
@@ -109,3 +115,6 @@ jobs:
 
       - name: Lint
         run: npm run lint
+
+      - name: List opt-in staging verification cases without accessing staging
+        run: npx playwright test --config=playwright.billing-staging.config.ts --list

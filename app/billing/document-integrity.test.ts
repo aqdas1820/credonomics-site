@@ -44,7 +44,7 @@ function exportFixture(name: string, html: string) {
 
 describe('persisted private document rendering', () => {
   it('loads identity, customer, date, lines and exact paise from the authorized database read', async () => {
-    const html = renderToStaticMarkup(await InvoiceDocumentPage({ params }))
+    const html = renderToStaticMarkup(await InvoiceDocumentPage({ params: Promise.resolve(params) }))
     for (const value of ['CN-2026-00000001', 'Persisted customer', 'Persisted address', 'Persisted service', '2026-10-18', '100.01']) {
       expect(html).toContain(value)
     }
@@ -54,7 +54,7 @@ describe('persisted private document rendering', () => {
   })
   it('shows partial verified credit and outstanding balance without a PAID receipt', async () => {
     rpc.mockResolvedValue({ data: { ...invoice, paidPaise: 4000, status: 'PARTIAL' }, error: null })
-    const html = renderToStaticMarkup(await InvoiceDocumentPage({ params }))
+    const html = renderToStaticMarkup(await InvoiceDocumentPage({ params: Promise.resolve(params) }))
     expect(html).toContain('PARTIAL')
     expect(html).toContain('40.00')
     expect(html).toContain('60.01')
@@ -63,7 +63,7 @@ describe('persisted private document rendering', () => {
   })
   it('links to a separate receipt only on full verified payment', async () => {
     rpc.mockResolvedValue({ data: { ...invoice, paidPaise: 10001, status: 'PAID' }, error: null })
-    const html = renderToStaticMarkup(await InvoiceDocumentPage({ params }))
+    const html = renderToStaticMarkup(await InvoiceDocumentPage({ params: Promise.resolve(params) }))
     expect(html).toContain('Verified PAID receipt view')
     expect(html).toContain('/receipt')
     exportFixture('paid', html)
@@ -74,7 +74,7 @@ describe('persisted private document rendering', () => {
         { position: 0, description: 'D'.repeat(300), quantity: 2147483647, ratePaise: 0, lineTotalPaise: 0 },
         { position: 1, description: 'Payable', quantity: 1, ratePaise: 10000000000, lineTotalPaise: 10000000000 },
       ] }, error: null })
-    const html = renderToStaticMarkup(await InvoiceDocumentPage({ params }))
+    const html = renderToStaticMarkup(await InvoiceDocumentPage({ params: Promise.resolve(params) }))
     expect(html).toContain('2147483647')
     expect(html).toContain('10,00,00,000.00')
     exportFixture('boundary', html)
@@ -86,7 +86,7 @@ describe('persisted private document rendering', () => {
       issuedAt: '2026-10-18T09:00:00Z', issuedBy: id, totalPaise: 10001, paidPaise: 10001, currency: 'INR',
       verifiedCredits: [{ utr: 'TESTUTR00001', amountPaise: 10001, bookedAt: '2026-10-18T08:00:00Z' }],
     }, error: null })
-    const html = renderToStaticMarkup(await ReceiptPage({ params }))
+    const html = renderToStaticMarkup(await ReceiptPage({ params: Promise.resolve(params) }))
     expect(rpc).toHaveBeenCalledWith('billing_get_receipt', { p_invoice_id: id })
     expect(html).toContain('Snapshot customer')
     expect(html).toContain('CN-R-2026-00000001')
@@ -95,15 +95,15 @@ describe('persisted private document rendering', () => {
   it('fails closed for an unauthenticated or unauthorized caller', async () => {
     for (const user of [null, { id, app_metadata: {} }, { id: 'other', app_metadata: { billing_admin: true } }]) {
       auth.mockResolvedValue({ user })
-      await expect(InvoiceDocumentPage({ params })).rejects.toThrow('NOT_FOUND')
-      await expect(ReceiptPage({ params })).rejects.toThrow('NOT_FOUND')
+      await expect(InvoiceDocumentPage({ params: Promise.resolve(params) })).rejects.toThrow('NOT_FOUND')
+      await expect(ReceiptPage({ params: Promise.resolve(params) })).rejects.toThrow('NOT_FOUND')
     }
     expect(rpc).not.toHaveBeenCalled()
   })
   it('refuses both document reads on mismatched project identity', async () => {
     scope.mockReturnValue(false)
-    await expect(InvoiceDocumentPage({ params })).rejects.toThrow('NOT_FOUND')
-    await expect(ReceiptPage({ params })).rejects.toThrow('NOT_FOUND')
+    await expect(InvoiceDocumentPage({ params: Promise.resolve(params) })).rejects.toThrow('NOT_FOUND')
+    await expect(ReceiptPage({ params: Promise.resolve(params) })).rejects.toThrow('NOT_FOUND')
     expect(auth).not.toHaveBeenCalled()
     expect(rpc).not.toHaveBeenCalled()
   })

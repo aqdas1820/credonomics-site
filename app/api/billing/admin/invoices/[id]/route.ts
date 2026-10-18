@@ -11,7 +11,8 @@ const response = (body: unknown, status: number) => NextResponse.json(body, {
 })
 
 /** Read an invoice only after independent server-side admin authorization. */
-export async function GET(_request: Request, { params }: { params: { id: string } }) {
+export async function GET(_request: Request, { params: promisedParams }: { params: Promise<{ id: string }> }) {
+  const params = await promisedParams
   if (process.env.BILLING_API_ENABLED !== 'true' || !billingDatabaseScopeReady()) return response({ error: 'Unavailable' }, 404)
   if (!/^[0-9a-f]{8}-[0-9a-f-]{27,}$/i.test(params.id)) return response({ error: 'Invalid invoice' }, 400)
   try {

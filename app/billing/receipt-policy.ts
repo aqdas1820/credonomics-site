@@ -1,6 +1,6 @@
 /** PAID receipt visibility is strictly derived from independently booked bank credits. */
 export function canRenderPaidReceipt(invoice: { status: string; totalPaise: number; paidPaise: number }): boolean {
-  return invoice.status === 'PAID' &&
+  return !!invoice && typeof invoice === 'object' && invoice.status === 'PAID' &&
     Number.isSafeInteger(invoice.totalPaise) && invoice.totalPaise > 0 &&
     Number.isSafeInteger(invoice.paidPaise) && invoice.paidPaise === invoice.totalPaise
 }
@@ -22,7 +22,7 @@ export type StoredPaidReceipt = {
 }
 
 export function isValidStoredPaidReceipt(receipt: StoredPaidReceipt): boolean {
-  if (!canRenderPaidReceipt(receipt) || receipt.version !== 1 ||
+  if (!receipt || typeof receipt !== 'object' || !canRenderPaidReceipt(receipt) || receipt.version !== 1 ||
       !/^[0-9a-f]{8}-[0-9a-f-]{27,}$/i.test(receipt.invoiceId) ||
       !/^CN-\d{4}-\d{8}$/.test(receipt.invoiceNumber) ||
       receipt.receiptNumber !== 'CN-R-' + receipt.invoiceNumber.slice(3) ||
