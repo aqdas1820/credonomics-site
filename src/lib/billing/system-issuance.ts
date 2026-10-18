@@ -7,7 +7,8 @@ import { billingDatabaseScopeReady } from '../../../app/billing/db-scope'
 /**
  * Callable only from a trusted server-side business event handler.
  * There is intentionally NO public route for unattended SYSTEM invoices.
- * A unique source-event key prevents duplicate invoice issuance on replay.
+ * SQL serializes each source key and compares the validated original payload.
+ * Identical retries return the persisted invoice, including its current status.
  */
 export async function issueAutomaticInvoiceFromTrustedEvent(sourceEventId: string, invoiceInput: unknown) {
   if (process.env.BILLING_API_ENABLED !== 'true' || process.env.BILLING_SYSTEM_ENABLED !== 'true' || !billingDatabaseScopeReady()) {
@@ -31,6 +32,7 @@ export async function issueAutomaticInvoiceFromTrustedEvent(sourceEventId: strin
     p_origin: 'SYSTEM',
     p_source_event_key: sourceEventId,
   })
-  if (error || !data) throw new Error('System invoice rejected or source event already processed')
+  if (error?.code === 'P1701') throw new Error('SYSTEM_EVENT_PAYLOAD_CONFLICT')
+  if (error || !data) throw new Error('System invoice rejected')
   return data
 }

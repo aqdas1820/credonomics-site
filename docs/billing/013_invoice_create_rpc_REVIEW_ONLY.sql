@@ -29,6 +29,9 @@ declare
   v_line_total bigint;
   v_position integer := 0;
   v_line jsonb;
+  v_lines jsonb := '[]'::jsonb;
+  v_existing billing_private.invoices%rowtype;
+  v_existing_lines jsonb;
 begin
   if coalesce(auth.role(), '') <> 'service_role' then
     raise exception 'Not authorized' using errcode = '42501';
@@ -78,8 +81,41 @@ begin
     if v_total > 10000000000 then
       raise exception 'Invoice total exceeds limit';
     end if;
+    v_lines := v_lines || jsonb_build_array(jsonb_build_object(
+      'description', btrim(v_line->>'description'), 'quantity', v_qty,
+      'rate_paise', v_rate, 'line_total_paise', v_line_total
+    ));
   end loop;
   if v_total <= 0 then raise exception 'Invoice total must be positive'; end if;
+
+  -- Serialize the absent-row case as well as retries. Hash collisions only
+  -- serialize unrelated events; the unique source key remains the authority.
+  -- Read committed RPC transactions see the committed winner after this lock.
+  if p_origin = 'SYSTEM' then
+    perform pg_advisory_xact_lock(hashtextextended(p_source_event_key, 0));
+    select * into v_existing from billing_private.invoices
+      where source_event_key = p_source_event_key;
+    if found then
+      select jsonb_agg(jsonb_build_object(
+        'description', description, 'quantity', quantity,
+        'rate_paise', rate_paise, 'line_total_paise', line_total_paise
+      ) order by position) into v_existing_lines
+      from billing_private.invoice_lines where invoice_id = v_existing.id;
+      if v_existing.origin <> 'SYSTEM' or
+         v_existing.customer_name is distinct from btrim(p_customer_name) or
+         v_existing.customer_address is distinct from btrim(p_customer_address) or
+         v_existing.customer_phone_e164 is distinct from p_customer_phone_e164 or
+         v_existing.issued_on is distinct from p_issued_on or
+         v_existing.total_paise is distinct from v_total or
+         v_existing_lines is distinct from v_lines then
+        raise exception 'SYSTEM_EVENT_PAYLOAD_CONFLICT' using errcode = 'P1701';
+      end if;
+      return jsonb_build_object(
+        'id',v_existing.id, 'invoiceNumber',v_existing.invoice_number,
+        'totalPaise',v_existing.total_paise, 'status',v_existing.status
+      );
+    end if;
+  end if;
 
   v_next := nextval('billing_private.invoice_sequence');
   if v_next > 99999999 then raise exception 'Invoice sequence exhausted'; end if;
