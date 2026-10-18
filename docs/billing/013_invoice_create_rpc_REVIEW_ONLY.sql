@@ -19,7 +19,7 @@ create or replace function public.billing_create_invoice(
 ) returns jsonb
 language plpgsql
 security definer
-set search_path = pg_catalog, public, billing_private
+set search_path = pg_catalog, pg_temp
 as $$
 declare
   v_invoice_id uuid;
