@@ -97,6 +97,17 @@ expectation corrected after source inspection. First Next 15 build/typecheck exp
 remaining synchronous query props; converted them and the subsequent build passed.
 No failed or merely listed test is described as passing staging recovery.
 
+### Published-source CI evidence
+
+[GitHub Actions run 39126553463](https://github.com/aqdas1820/credonomics-site/actions/runs/39126553463)
+at exact published source **`16cae854f0fdaaa39a4310423f54acb7e428afc9`** completed
+with **both jobs PASS**: 19 disposable PostgreSQL safety cases, and the source job's
+clean locked install (lifecycle hooks off), release checks, full unit tests,
+production build, TypeScript, lint and staging-test listing. These are independently
+read workflow job/step outcomes, not a new Supabase execution. No hosted recovery,
+real OTP, checkout or live storage validation was run. This follow-up adds sanitized
+CI evidence only; the final report commit SHA follows the tested source commit.
+
 ## Remaining release blockers and shortest safe path
 
 1. Existing database credential unavailable: retain blocked backup/restore, or
