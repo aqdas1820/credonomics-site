@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import { authenticatedUser } from '../../../../../src/lib/supabase/server'
 import { createSupabaseAdminClient } from '../../../../../src/lib/supabase/admin'
 import { isBillingAdmin } from '../../../admin-policy'
-import { canRenderPaidReceipt } from '../../../receipt-policy'
+import { isValidStoredPaidReceipt } from '../../../receipt-policy'
 import PrintInvoiceButton from '../../../PrintInvoiceButton'
 import styles from '../invoice.module.css'
 
@@ -35,8 +35,7 @@ export default async function VerifiedReceiptPage({ params }: { params: { id: st
   const { data, error } = await service.rpc('billing_get_receipt', { p_invoice_id: params.id })
   if (error || !data || typeof data !== 'object') notFound()
   const receipt = data as VerifiedReceiptSnapshot
-  if (!canRenderPaidReceipt(receipt) || receipt.version !== 1 ||
-      typeof receipt.receiptNumber !== 'string' || !Array.isArray(receipt.verifiedCredits)) notFound()
+  if (!isValidStoredPaidReceipt(receipt)) notFound()
   return (
     <main className={styles.page}>
       <nav className={styles.controls}>
