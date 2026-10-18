@@ -3,6 +3,9 @@
 name: Billing PostgreSQL integration (disposable)
 
 on:
+  pull_request:
+    branches:
+      - feature/youpi-payment-entry-prelaunch
   push:
     branches:
       - feature/youpi-payment-entry-prelaunch
@@ -25,6 +28,8 @@ on:
       - "scripts/generate-ipo-dashboard.mjs"
       - "scripts/generate-search-index.mjs"
       - "scripts/check-billing-launch-readiness.mjs"
+      - "scripts/test-billing-archive-recovery.mjs"
+      - "prototypes/worker-market-api/**"
       - "docs/billing/ALL_AT_ONCE_RELEASE_GATES.json"
   workflow_dispatch:
 
@@ -107,6 +112,9 @@ jobs:
       - name: Full unit tests
         run: npm test
 
+      - name: Stateless Worker feasibility prototype (offline fixtures only)
+        run: node --test prototypes/worker-market-api/worker.test.mjs
+
       - name: Local-only Next.js production build (NOT deployment)
         run: npm run build
 
@@ -118,3 +126,14 @@ jobs:
 
       - name: List opt-in staging verification cases without accessing staging
         run: npx playwright test --config=playwright.billing-staging.config.ts --list
+
+      - name: Generate synthetic private-document fixtures
+        env:
+          BILLING_DOCUMENT_FIXTURES: "1"
+        run: npx vitest run app/billing/document-integrity.test.ts
+
+      - name: Install disposable Chromium test runtime
+        run: npx playwright install --with-deps chromium
+
+      - name: Verify disabled billing routes and synthetic mobile/A4 layouts locally
+        run: npx playwright test --config=playwright.billing-local.config.ts

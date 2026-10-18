@@ -1,5 +1,8 @@
 .page { max-width: 890px; margin: 24px auto; padding: 20px; color: #142d45; }
-.controls { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-bottom: 24px; }
+.controls > * { min-width: 0; max-width: 100%; }
+.controls button:focus-visible, .controls a:focus-visible { outline: 3px solid #215b8c; outline-offset: 3px; }
+.controls button:disabled { cursor: wait; opacity: .65; }
 .controls button { padding: 10px 15px; background: #163655; color: white; border: 0; border-radius: 7px; cursor: pointer; }
 .sheet { background: #fff; border: 2px solid #215b8c; padding: 34px; min-height: 600px; overflow-wrap: anywhere; }
 .header { display: flex; justify-content: space-between; gap: 24px; border-bottom: 3px solid #215b8c; padding-bottom: 16px; }
@@ -21,4 +24,6 @@
   .controls { display: none !important; }
   .sheet { border: 2px solid #215b8c; padding: 20px; min-height: 0; }
   .items tr { break-inside: avoid; }
+  .items thead { display: table-header-group; }
+  .header, .totals, .note { break-inside: avoid; }
 }
