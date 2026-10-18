@@ -10,9 +10,27 @@ This section supersedes the initial tool-availability findings below. Backup/rec
 
 ### Automation request: secure preflight and installer preparation
 
-Starting feature SHA: `eed7aec9b2fb8090b0c132f9db83132d784f7e0c`. The latest request asks for actual recovery work but expressly retains approval gates for installation, encryption, credential access and irreversible changes. The prior owner decision to keep encryption changes blocked is not treated as installation approval. No installer was executed and no driver, encrypted container, credential file or database was created as part of this preflight; only public installation/verification files were prepared outside Git.
+Starting feature SHA: `eed7aec9b2fb8090b0c132f9db83132d784f7e0c`. The latest request asks for actual recovery work but expressly retains approval gates for installation, encryption, credential access and irreversible changes. The prior owner decision to keep encryption changes blocked was not treated as installation approval. During that initial preflight, only public installation/verification files were prepared outside Git. The owner subsequently explicitly approved installation and non-system container preparation; the following latest results supersede the earlier not-installed/not-created states.
 
-Fresh metadata checks independently confirm project `jvpiulmcjjnsgozgqgzw`, name `credonomics-staging`, organization `ewesdskrqxonchucazyr` / CredoNomics Staging, **ACTIVE_HEALTHY**, **Free**, PostgreSQL engine 17. Rechecked CLI version `2.121.0`, native `pg_dump` and server executable version `17.11`. D: reports 128,115,011,584 bytes total (approximately 119.3 GiB) and approximately 61.4 GiB free. The session is not elevated. VeraCrypt was not found at the standard install location, on PATH or running. The candidate backup folder still does not exist.
+#### Latest owner-approved installation and destination preparation
+
+The owner explicitly approved **installation and container setup** after reviewing the verified release and its administrator requirement. Installer hash, Authenticode status and IDRIX publisher were rechecked immediately before launching the exact verified file with `Start-Process -Verb RunAs -PassThru`. The installer was launched visibly for owner UAC/GUI participation; no password, key, silent credential or reboot argument was passed. Installation was then independently verified on-machine:
+
+- `C:/Program Files/VeraCrypt/VeraCrypt.exe`: product/file version **1.26.29**, Authenticode **Valid**, publisher **IDRIX SARL**.
+- Installed `VeraCrypt Format.exe`: present, Authenticode **Valid**.
+- `Win32_SystemDriver` reports the `veracrypt` driver **Running**, start mode **System**. Driver registration is part of the explicitly approved installation; no unrelated service/OS security change or reboot was performed. No installer exit-code success is invented; installed-file/version/signature and driver checks are the evidence.
+
+The owner-selected D: parent was created empty using `Directory.CreateDirectory(path, DirectorySecurity)` with the restrictive ACL supplied at creation. Its security descriptor sets the current user as owner, disables inheritance, and grants inheritable FullControl only to that owner and SYSTEM. Inspection verified **owner match PASS**, **inheritance disabled PASS**, and **exactly those two allowed identities PASS**. No unrelated existing folder ACL was changed. The folder itself is not encrypted, and these ACLs are not claimed to resist an administrator taking ownership.
+
+The signed installed volume wizard was launched visibly with `Start-Process -Verb RunAs -PassThru` and **no password/key arguments**. The owner was instructed to create only a new standard 4-GiB file container with AES/SHA-512, NTFS and normal/full format, then mount it on unused R: with caching disabled and retain recovery material independently. Whole-drive/boot encryption was not authorized or attempted.
+
+**Container verification did not pass.** The owner reported creation/mount and independent recovery retention, but the subsequent on-machine check found the expected container file absent. A follow-up metadata-only check found the private parent **empty (0 entries)**, **R: absent**, and the VeraCrypt wizard/application not running. The read-only presence check failed before any write; no synthetic probe or decryption test was created or run. The owner subsequently clarified that **wizard/container setup is incomplete**, superseding the earlier completion/retention report. No independent recovery is established. A fresh presence/signature check confirmed the signed installed wizard is available, the expected container is absent and R: is unused; the wizard was reopened visibly under the existing explicit approval for private owner completion; no paths or credentials were guessed, no unknown file was overwritten, and no alternate drive was written to.
+
+Current status: **VeraCrypt installation PASS; private parent ACL checks PASS; encrypted container/mount NOT VERIFIED; independent recovery NOT EXECUTED; export authentication BLOCKED; database backup/restore NOT EXECUTED.** The current safe directory is the owner's selected D: parent only; there is no verified encrypted backup location yet. Existing database password availability remains unchanged and blocks export independently of container setup.
+
+Additional actual commands/checks: `Get-AuthenticodeSignature`, installed `FileVersionInfo`, `Start-Process -Verb RunAs -PassThru` for the installer and signed wizard, `DirectorySecurity`/`FileSystemAccessRule` with `Directory.CreateDirectory`, `Get-Acl`/`GetAccessRules`, `Get-CimInstance Win32_SystemDriver -Filter "Name='veracrypt'"`, `Get-Item` for the expected container, bounded metadata-only `Get-ChildItem` on the new private parent, `[Environment]::GetLogicalDrives()` and application process-presence checks. Logs contain only non-sensitive booleans/counts, public software metadata and the owner-approved destination path. No container contents, passphrases, recovery keys or customer data were read.
+
+Pre-installation metadata checks independently confirmed project `jvpiulmcjjnsgozgqgzw`, name `credonomics-staging`, organization `ewesdskrqxonchucazyr` / CredoNomics Staging, **ACTIVE_HEALTHY**, **Free**, PostgreSQL engine 17. Rechecked CLI version `2.121.0`, native `pg_dump` and server executable version `17.11`. D: reports 128,115,011,584 bytes total (approximately 119.3 GiB) and approximately 61.4 GiB free. The session is not elevated. VeraCrypt was not found at the standard install location, on PATH or running. The candidate backup folder still does not exist.
 
 The owner now reports D: as **Fully Decrypted / Protection Off**. This is owner-supplied status; this session did not obtain an elevated BitLocker status result. It is therefore not safe to place plaintext dumps or restored database files on D:. The Git-parent and known OneDrive-root probes were repeated with the same results as the directory section below; other sync mappings and final ACL/encryption behavior remain unverified.
 
@@ -28,7 +46,7 @@ The vendor public-key fingerprint is pinned to `5069A233D55A0EEB174A5FC3821ACD02
 
 The Git-bundled GnuPG uses MSYS paths: initial Windows-path invocation failed, then inspection/import was corrected to an isolated `/c/...` keyring. Import/verification uses `--no-options`, `--no-autostart` and `--no-auto-key-retrieve` so it does not start the owner's agent or retrieve unknown keys. Unavailable third-party public-key certifications are not treated as an identity proof; the explicitly pinned vendor primary fingerprint is the trust anchor. Download interruptions/timeouts affected public software only; incomplete downloads were never executed or treated as valid installers.
 
-**Final installer evidence — verified, not installed:**
+**Pre-installation integrity evidence — retained after the approved installation above:**
 
 - Selected upstream artifact: `VeraCrypt.Setup.1.26.29.exe`; complete size **40,832,408 bytes**.
 - Complete SHA-256 **`dca9ddec7934fc0b1c25ac8984db7d504bfe9f37c21861ac91c67a98ecd3964b`**, exactly matching the authenticated upstream checksum entry.
@@ -44,13 +62,13 @@ Actual verification used `Get-FileHash -Algorithm SHA256`, `Get-AuthenticodeSign
 
 #### Proposed next approved action
 
-The next proposed privileged action is installation of the verified official VeraCrypt release, followed by a separately protected **non-system file container** beneath the owner-selected D: parent. Do not format/encrypt D: itself or modify boot/system encryption. Administrator driver installation and container/password configuration still require owner approval/participation. The owner must privately establish independent passphrase/key recovery and demonstrate synthetic-file decryption before any data export. An installer integrity PASS is not backup-encryption PASS.
+Installation and non-system container preparation are now owner-approved, and installation/private-parent preparation are completed as recorded above. The next dependency is completing the owner-confirmed incomplete container wizard and owner-private passphrase/recovery steps, then demonstrating synthetic-file decryption before any data export. Do not format/encrypt D: itself or modify boot/system encryption. No repeat installation approval is needed for the already-authorized scope; private secret entry and a verified independent recovery arrangement cannot be substituted by automation. An installer integrity PASS is not backup-encryption PASS.
 
 An AES-256 archive fallback is **not approved for data use**: an archive alone would not protect unencrypted temporary outputs or the restored PostgreSQL data directory on this decrypted drive. No verified encrypted temporary/restore storage or independently recoverable archive credential exists. This task does not claim that a plaintext-export-then-encrypt sequence meets the requirement.
 
 | Requested recovery validation | Current result |
 | --- | --- |
-| Backup encryption | NOT EXECUTED — no protected destination/container exists. |
+| Backup encryption | NOT VERIFIED — private parent exists, but the expected encrypted container/mount was not found. |
 | Independent decryption/recovery access | NOT EXECUTED — owner-held independent recovery material not established/tested. |
 | Authorized export authentication | NOT EXECUTED / BLOCKED — existing DB password unavailable. |
 | Schema export | NOT EXECUTED. |
