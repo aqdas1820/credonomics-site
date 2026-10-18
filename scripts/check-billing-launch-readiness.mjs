@@ -83,7 +83,7 @@ function selfTest() {
   const prematureGo = clone(m)
   prematureGo.releaseDecision = 'GO'
   assert.throws(() => assessRelease(prematureGo), /GO decision/)
-  process.stdout.write('PASS 5 fail-closed release-gate checks (no provider operations)\\n')
+  process.stdout.write('PASS 5 fail-closed release-gate checks (no provider operations)\n')
 }
 
 const args = new Set(process.argv.slice(2))
@@ -93,8 +93,8 @@ else {
     throw new Error('Unknown launch gate checker argument')
   }
   const result = assessRelease(JSON.parse(readFileSync(file, 'utf8')))
-  process.stdout.write(`CredoNomics ALL_AT_ONCE release: ${result.ready ? 'READY FOR HUMAN REVIEW' : 'NO GO'}; ${result.verified}/${result.total} documented gates; ${result.blocked.length} blocked\\n`)
-  for (const id of result.blocked) process.stdout.write(`BLOCKED: ${id}\\n`)
+  process.stdout.write(`CredoNomics ALL_AT_ONCE release: ${result.ready ? 'READY FOR HUMAN REVIEW' : 'NO GO'}; ${result.verified}/${result.total} documented gates; ${result.blocked.length} blocked\n`)
+  for (const id of result.blocked) process.stdout.write(`BLOCKED: ${id}\n`)
   if (args.has('--require-ready') && !result.ready) process.exitCode = 1
   if (args.has('--assert-blocked') && result.ready) process.exitCode = 1
 }
