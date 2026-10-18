@@ -16,7 +16,7 @@ begin
   select coalesce(jsonb_agg(jsonb_build_object(
     'id', i.id, 'invoiceNumber', i.invoice_number,
     'customer', i.customer_name, 'date', i.issued_on,
-    'totalPaise', i.total_paise, 'status', i.status
+    'totalPaise', i.total_paise, 'status', i.status, 'origin', i.origin
   ) order by i.created_at desc), '[]'::jsonb)
   into v_records
   from (
@@ -40,7 +40,7 @@ begin
   select jsonb_build_object(
     'id',i.id,'invoiceNumber',i.invoice_number,'customer',i.customer_name,
     'address',i.customer_address,'date',i.issued_on,'totalPaise',i.total_paise,
-    'status',i.status,
+    'status',i.status,'origin',i.origin,
     'paidPaise',(select coalesce(sum(c.amount_paise),0)::bigint
       from billing_private.bank_credit_evidence c where c.invoice_id=i.id),
     'items',(select coalesce(jsonb_agg(jsonb_build_object(
