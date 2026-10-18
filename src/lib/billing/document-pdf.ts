@@ -38,7 +38,9 @@ export async function renderDocumentPdf(snapshot: DocumentSnapshot): Promise<Uin
   }
   lines.push('Private document | Version 1 | No payment QR or checkout', 'Not digitally signed. Issuer and tax particulars require release approval.')
   let page = doc.addPage([595, 842]); let y = 798; let x = 40
-  const newline = () => { x = 40; y -= 17; if (y < 42) { page = doc.addPage([595, 842]); y = 798 } }
+  // Allocate a following page only when there is text to draw, not after the
+  // final line (which could otherwise append a blank retained page).
+  const newline = () => { x = 40; y -= 17 }
   const segmenter = new Intl.Segmenter('en', { granularity: 'grapheme' })
   const widths = new Map<string, number>()
   const width = (value: string, index: number) => {
@@ -50,6 +52,7 @@ export async function renderDocumentPdf(snapshot: DocumentSnapshot): Promise<Uin
     let run = ''; let fontIndex = -1
     const flush = () => {
       if (!run) return
+      if (y < 42) { page = doc.addPage([595, 842]); y = 798; x = 40 }
       page.drawText(run, { x, y, size: 10, font: fonts[fontIndex], color: rgb(0, 0, 0) })
       x += width(run, fontIndex); run = ''
     }

@@ -7,7 +7,8 @@ export async function privateDocumentStore(client: SupabaseClient): Promise<Crea
   const bucket = process.env.BILLING_PDF_ARCHIVE_BUCKET
   if (!bucket || !/^[a-z0-9][a-z0-9-]{2,62}$/.test(bucket)) throw new Error('Private archive not configured')
   const { data, error } = await client.storage.getBucket(bucket)
-  if (error || !data || data.public !== false || !data.file_size_limit || Number(data.file_size_limit) > MAX_ARCHIVE_BYTES ||
+  const sizeLimit = Number(data?.file_size_limit)
+  if (error || !data || data.public !== false || !Number.isSafeInteger(sizeLimit) || sizeLimit <= 0 || sizeLimit > MAX_ARCHIVE_BYTES ||
       !data.allowed_mime_types?.includes('application/json')) throw new Error('Private archive policy unavailable')
   const objects = client.storage.from(bucket)
   return {
@@ -24,7 +25,11 @@ export async function privateDocumentStore(client: SupabaseClient): Promise<Crea
       if (bytes.length > MAX_ARCHIVE_BYTES) throw new Error('Archive exceeds cap')
       const { error: failure } = await objects.upload(key, bytes, { upsert: false, contentType: 'application/json', cacheControl: '0' })
       if (!failure) return 'created'
-      if (String((failure as { statusCode?: string }).statusCode) === '409') return 'exists'
+      const status = String(failure.statusCode)
+      const code = 'code' in failure ? failure.code : undefined
+      // Storage documents HTTP 400 for duplicates, too. Permission errors and
+      // arbitrary 400s must never be accepted as successful concurrent writes.
+      if (status === '409' || (status === '400' && code === 'ResourceAlreadyExists')) return 'exists'
       throw new Error('Archive create unavailable')
     },
   }
