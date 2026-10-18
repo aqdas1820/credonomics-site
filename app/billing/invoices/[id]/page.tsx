@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { authenticatedUser } from '../../../../src/lib/supabase/server'
 import { createSupabaseAdminClient } from '../../../../src/lib/supabase/admin'
 import { isBillingAdmin } from '../../admin-policy'
+import { canRenderPaidReceipt } from '../../receipt-policy'
 import PrintInvoiceButton from '../../PrintInvoiceButton'
 import styles from './invoice.module.css'
 
@@ -38,6 +39,7 @@ export default async function InvoiceDocumentPage({ params }: { params: { id: st
       <nav className={styles.controls}>
         <Link href="/billing">← Back to admin billing</Link>
         <PrintInvoiceButton />
+        {canRenderPaidReceipt(invoice) && <Link href={'/billing/invoices/' + encodeURIComponent(invoice.id) + '/receipt'}>Verified PAID receipt view</Link>}
       </nav>
       <article className={styles.sheet}>
         <header className={styles.header}>
