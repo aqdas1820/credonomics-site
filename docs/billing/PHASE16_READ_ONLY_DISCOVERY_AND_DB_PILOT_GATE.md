@@ -7,7 +7,7 @@ This file records evidence, not permission to run migrations, activate payment c
 ## 1. Read-only discovery results
 
 - GitHub: `aqdas1820/credonomics-site`, PR #1 is open and DRAFT; `main` HEAD `b492f55631d383465b9bdfa886287643d0460094`. Feature work reviewed through commit `645f31211d87fad19c92034b3100fa4ee489183f`. This document creates a later feature commit.
-- Vercel: most recently inspected production `main` deployment is READY for `b492f55631d383465b9bdfa886287643d0460094`. Latest observed READY feature deployment corresponds to `15e01eac3cf06680533540a63fb8d902a820ac3e` (90 billing tests reported in that deployment's documented logs). Subsequent commits have **not** been verified through a successful full build; the earlier feature tip showed a Vercel build-rate-limit failure. Do not pay to lift the limit.
+- Vercel: inspected production `main` deployment is READY for `b492f55631d383465b9bdfa886287643d0460094`. **Newer verified READY feature preview**: `645f31211d87fad19c92034b3100fa4ee489183f`; deployment `dpl_6GMz2zE58cheebvGUcoxTUUXnndb`. Build logs independently show **12/12 billing test files and 91/91 tests passed** and `Build Completed in /vercel/output`. This verifies the quantity fix and regression test, but not actual SQL execution, complete project tests, authenticated E2E or production readiness. The prior feature tip had a Vercel build-rate-limit failure, and this *documentation* commit may also be rate-limited; do not upgrade to Pro.
 - Supabase connector (read-only `list_organizations` and `list_projects`): one organization **Credonomics**; one visible project **aqdas1820's Project**, ref `tpllgtskvvkronmbxkmg`, region `ap-south-1`, status **INACTIVE**. The screenshot-referenced project **credonomics-staging** was NOT visible in these connected results. **Do not infer that the visible project is the same database renamed.** The prior handover says the old connector had shown unrelated CardLedger; no CardLedger writes are allowed.
 - No database SQL, migrations, secrets, activation flags, gateway payments, Vercel paid upgrades or production changes were executed as part of this review.
 
@@ -27,7 +27,7 @@ Reviewed `docs/billing/012`–`016`, invoice creation/admin and settlement APIs,
 
 - `app/billing/invoice-math.ts`: reject non-safe / PostgreSQL int4-overrange quantities, including a zero-rate line, so browser/server validation agrees with the SQL `integer` quantity column.
 - `app/billing/invoice-math.test.ts`: regression cases for `2147483648` and `9007199254740993` quantity with an otherwise payable invoice.
-- Locally tested **8 focused Node smoke cases**, all passing, using the exact updated source blob (`7f7c3475bbfd2333d2e063250c935c4fef8f752b`; confirmed by `git hash-object`). **NOT** a run of the complete Vitest suite, Next.js build, TypeScript project check, PostgreSQL integration tests or browser E2E.
+- Locally tested **8 focused Node smoke cases**, all passing, using the exact updated source blob (`7f7c3475bbfd2333d2e063250c935c4fef8f752b`; confirmed by `git hash-object`). Separately, **Vercel ran and passed the 91-test billing Vitest suite and produced a READY Next.js preview build** at the preceding code commit `645f312...`. No PostgreSQL execution or authenticated browser E2E was conducted.
 
 ## 3. Strict GO/NO-GO gates for a database pilot
 
