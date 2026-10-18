@@ -41,6 +41,9 @@ describe('immutable receipt snapshot consistency', () => {
   it('rejects mismatched receipt identity', () => {
     expect(isValidStoredPaidReceipt({ ...receipt, receiptNumber: 'CN-R-2026-00000002' })).toBe(false)
   })
+  it('rejects malformed receipt invoice UUID', () => {
+    expect(isValidStoredPaidReceipt({ ...receipt, invoiceId: '12345678-' + '-'.repeat(27) })).toBe(false)
+  })
   it('rejects stale or partial invoice status', () => {
     expect(isValidStoredPaidReceipt({ ...receipt, status: 'PARTIAL' })).toBe(false)
   })

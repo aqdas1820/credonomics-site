@@ -6,6 +6,7 @@ import { createSupabaseAdminClient } from '../../../../src/lib/supabase/admin'
 import { isBillingAdmin } from '../../admin-policy'
 import { canRenderPaidReceipt } from '../../receipt-policy'
 import { billingDatabaseScopeReady } from '../../db-scope'
+import { isBillingUuid } from '../../uuid-policy'
 import PrintInvoiceButton from '../../PrintInvoiceButton'
 import styles from './invoice.module.css'
 
@@ -24,7 +25,7 @@ const inr = (paise: number) => new Intl.NumberFormat('en-IN', { style: 'currency
 /** Historical invoice document. Not a separately numbered PAID receipt. */
 export default async function InvoiceDocumentPage({ params }: { params: { id: string } }) {
   if (process.env.BILLING_PORTAL_ENABLED !== 'true' || (process.env.BILLING_API_ENABLED !== 'true' || !billingDatabaseScopeReady())) notFound()
-  if (!/^[0-9a-f]{8}-[0-9a-f-]{27,}$/i.test(params.id)) notFound()
+  if (!isBillingUuid(params.id)) notFound()
   const { user } = await authenticatedUser()
   if (!isBillingAdmin(user, process.env.BILLING_ADMIN_USER_IDS)) notFound()
   const service = createSupabaseAdminClient()
@@ -32,6 +33,7 @@ export default async function InvoiceDocumentPage({ params }: { params: { id: st
   const { data, error } = await service.rpc('billing_get_invoice', { p_invoice_id: params.id })
   if (error || !data || typeof data !== 'object') notFound()
   const invoice = data as Invoice
+  if (!isBillingUuid(invoice.id) || invoice.id.toLowerCase() !== params.id.toLowerCase()) notFound()
   if (!Array.isArray(invoice.items) || typeof invoice.totalPaise !== 'number' ||
       typeof invoice.paidPaise !== 'number' || typeof invoice.invoiceNumber !== 'string') notFound()
   const outstanding = invoice.totalPaise - invoice.paidPaise

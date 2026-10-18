@@ -8,4 +8,8 @@ describe('billing admin authorization', () => {
   it('denies non-allowlisted admin', () => expect(isBillingAdmin({ id, app_metadata: { billing_admin: true } }, '87654321-1234-4234-8234-123456789012')).toBe(false))
   it('allows exact UUID and trusted admin claim', () => expect(isBillingAdmin({ id, app_metadata: { billing_admin: true } }, id)).toBe(true))
   it('denies invalid identity', () => expect(isBillingAdmin({ id: 'admin', app_metadata: { billing_admin: true } }, 'admin')).toBe(false))
+  it('denies look-alike UUID even if an allowlist mistakenly contains it', () => {
+    const invalid = '12345678-' + '-'.repeat(27)
+    expect(isBillingAdmin({ id: invalid, app_metadata: { billing_admin: true } }, invalid)).toBe(false)
+  })
 })

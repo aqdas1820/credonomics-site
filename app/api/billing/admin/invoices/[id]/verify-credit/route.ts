@@ -6,6 +6,7 @@ import { prepareBookedCredit } from '../../../../../../billing/credit-input'
 import { sameOrigin } from '../../../../../../billing/request-policy'
 import { readBoundedJsonBody } from '../../../../../../billing/bounded-json-body'
 import { billingDatabaseScopeReady } from '../../../../../../billing/db-scope'
+import { isBillingUuid } from '../../../../../../billing/uuid-policy'
 
 export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'
@@ -26,7 +27,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
   if (!sameOrigin(request.headers.get('origin'), request.nextUrl.origin)) {
     return reply({ error: 'Forbidden' }, 403)
   }
-  if (!/^[0-9a-f]{8}-[0-9a-f-]{27,}$/i.test(params.id)) return reply({ error: 'Invalid invoice' }, 400)
+  if (!isBillingUuid(params.id)) return reply({ error: 'Invalid invoice' }, 400)
   if (!(request.headers.get('content-type') ?? '').toLowerCase().startsWith('application/json')) {
     return reply({ error: 'JSON required' }, 415)
   }
