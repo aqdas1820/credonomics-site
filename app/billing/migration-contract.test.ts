@@ -25,7 +25,7 @@ describe('private billing migration security contracts', () => {
       expect(migration).toContain('security definer')
       expect(migration).toMatch(/set search_path\s*=\s*pg_catalog,\s*pg_temp/)
       expect(migration).not.toMatch(/set search_path\s*=\s*pg_catalog,\s*public/)
-      expect(migration).toContain("coalesce(auth.role(),'') <> 'service_role'")
+      expect(migration).toMatch(/coalesce\(auth\.role\(\),\s*''\)\s*<>\s*'service_role'/)
       expect(migration).toContain('from public, anon, authenticated')
       expect(migration).toContain('to service_role')
     }
