@@ -85,15 +85,15 @@ alter table billing_private.audit_events enable row level security;
 revoke all on all tables in schema billing_private from public, anon, authenticated, service_role;
 revoke all on all sequences in schema billing_private from public, anon, authenticated, service_role;
 
-create or replace function billing_private.reject_financial_mutation()
+create or replace function billing_private.reject_financial_evidence_mutation()
 returns trigger language plpgsql set search_path = pg_catalog
 as $$
 begin
-  raise exception 'Issued financial records are append-only' using errcode = '42501';
+  raise exception 'Billing financial evidence is append-only' using errcode = '42501';
 end;
 $$;
 
-create or replace function billing_private.protect_invoice()
+create or replace function billing_private.preserve_invoice_issuance_fields()
 returns trigger language plpgsql set search_path = pg_catalog
 as $$
 declare v_paid bigint;
@@ -103,7 +103,7 @@ begin
   end if;
   if (to_jsonb(new) - 'status' - 'updated_at') is distinct from
      (to_jsonb(old) - 'status' - 'updated_at') then
-    raise exception 'Issued invoice identity and financial fields are immutable' using errcode = '42501';
+    raise exception 'Issued invoice details cannot be rewritten' using errcode = '42501';
   end if;
   if new.status is distinct from old.status then
     select coalesce(sum(amount_paise),0)::bigint into v_paid
@@ -118,9 +118,9 @@ begin
   return new;
 end;
 $$;
-drop trigger if exists immutable_invoice on billing_private.invoices;
-create trigger immutable_invoice before update or delete on billing_private.invoices
-for each row execute function billing_private.protect_invoice();
+drop trigger if exists immutable_invoice_issuance on billing_private.invoices;
+create trigger immutable_invoice_issuance before update or delete on billing_private.invoices
+for each row execute function billing_private.preserve_invoice_issuance_fields();
 
 create or replace function billing_private.protect_line_insert()
 returns trigger language plpgsql set search_path = pg_catalog
@@ -140,32 +140,32 @@ drop trigger if exists sealed_invoice_lines on billing_private.invoice_lines;
 create trigger sealed_invoice_lines before insert on billing_private.invoice_lines
 for each row execute function billing_private.protect_line_insert();
 
-drop trigger if exists immutable_invoice_lines on billing_private.invoice_lines;
-create trigger immutable_invoice_lines before update or delete on billing_private.invoice_lines
-for each row execute function billing_private.reject_financial_mutation();
-drop trigger if exists immutable_bank_evidence on billing_private.bank_credit_evidence;
-create trigger immutable_bank_evidence before update or delete on billing_private.bank_credit_evidence
-for each row execute function billing_private.reject_financial_mutation();
-drop trigger if exists immutable_audit_events on billing_private.audit_events;
-create trigger immutable_audit_events before update or delete on billing_private.audit_events
-for each row execute function billing_private.reject_financial_mutation();
+drop trigger if exists immutable_invoice_line on billing_private.invoice_lines;
+create trigger immutable_invoice_line before update or delete on billing_private.invoice_lines
+for each row execute function billing_private.reject_financial_evidence_mutation();
+drop trigger if exists immutable_bank_credit on billing_private.bank_credit_evidence;
+create trigger immutable_bank_credit before update or delete on billing_private.bank_credit_evidence
+for each row execute function billing_private.reject_financial_evidence_mutation();
+drop trigger if exists immutable_billing_audit on billing_private.audit_events;
+create trigger immutable_billing_audit before update or delete on billing_private.audit_events
+for each row execute function billing_private.reject_financial_evidence_mutation();
 
 -- Row triggers do not intercept TRUNCATE. Protect that path explicitly too.
 drop trigger if exists no_truncate on billing_private.invoices;
 create trigger no_truncate before truncate on billing_private.invoices
-execute function billing_private.reject_financial_mutation();
+execute function billing_private.reject_financial_evidence_mutation();
 drop trigger if exists no_truncate on billing_private.invoice_lines;
 create trigger no_truncate before truncate on billing_private.invoice_lines
-execute function billing_private.reject_financial_mutation();
+execute function billing_private.reject_financial_evidence_mutation();
 drop trigger if exists no_truncate on billing_private.bank_credit_evidence;
 create trigger no_truncate before truncate on billing_private.bank_credit_evidence
-execute function billing_private.reject_financial_mutation();
+execute function billing_private.reject_financial_evidence_mutation();
 drop trigger if exists no_truncate on billing_private.audit_events;
 create trigger no_truncate before truncate on billing_private.audit_events
-execute function billing_private.reject_financial_mutation();
+execute function billing_private.reject_financial_evidence_mutation();
 drop trigger if exists no_truncate on billing_private.receipts;
 create trigger no_truncate before truncate on billing_private.receipts
-execute function billing_private.reject_financial_mutation();
+execute function billing_private.reject_financial_evidence_mutation();
 revoke all on all functions in schema billing_private from public, anon, authenticated, service_role;
 -- No policies = default-deny to non-owner roles; service-role access requires separate authenticated admin API.
 -- IMPORTANT: A controlled server-side transaction must validate sums, lock invoice row,
