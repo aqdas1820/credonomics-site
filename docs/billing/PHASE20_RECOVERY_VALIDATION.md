@@ -8,6 +8,64 @@ Date: 2026-10-18. Branch: `feature/youpi-payment-entry-prelaunch`. Draft PR #1 o
 
 This section supersedes the initial tool-availability findings below. Backup/recovery remains **FAIL / BLOCKED**; no staging credentials, records or exports were read, printed or published.
 
+### Automation request: secure preflight and installer preparation
+
+Starting feature SHA: `eed7aec9b2fb8090b0c132f9db83132d784f7e0c`. The latest request asks for actual recovery work but expressly retains approval gates for installation, encryption, credential access and irreversible changes. The prior owner decision to keep encryption changes blocked is not treated as installation approval. No installer was executed and no driver, encrypted container, credential file or database was created as part of this preflight; only public installation/verification files were prepared outside Git.
+
+Fresh metadata checks independently confirm project `jvpiulmcjjnsgozgqgzw`, name `credonomics-staging`, organization `ewesdskrqxonchucazyr` / CredoNomics Staging, **ACTIVE_HEALTHY**, **Free**, PostgreSQL engine 17. Rechecked CLI version `2.121.0`, native `pg_dump` and server executable version `17.11`. D: reports 128,115,011,584 bytes total (approximately 119.3 GiB) and approximately 61.4 GiB free. The session is not elevated. VeraCrypt was not found at the standard install location, on PATH or running. The candidate backup folder still does not exist.
+
+The owner now reports D: as **Fully Decrypted / Protection Off**. This is owner-supplied status; this session did not obtain an elevated BitLocker status result. It is therefore not safe to place plaintext dumps or restored database files on D:. The Git-parent and known OneDrive-root probes were repeated with the same results as the directory section below; other sync mappings and final ACL/encryption behavior remain unverified.
+
+The existing database password is still unavailable by owner confirmation. Presence-only checks found no default password file or configured `PGPASSFILE`, `PGPASSWORD` or `SUPABASE_DB_PASSWORD`. No attempt was made to recover secrets from unrelated applications or to use the metadata connector as a substitute for export authentication. No database SQL, export, credential reset or remote mutation was performed.
+
+#### Public installer preparation
+
+Selected official Windows VeraCrypt `1.26.29` EXE, linked directly by the [vendor download page](https://veracrypt.io/en/Downloads.html) to its GitHub release. The vendor [supported-platform page](https://veracrypt.io/en/Supported%20Operating%20Systems.html) lists Windows 11 x64. The exact release's `License.txt` was retrieved from the upstream release tag; it includes the Apache 2.0/TrueCrypt 3.0 terms and a no-charge use grant. This preparation does not redistribute VeraCrypt or purchase any service.
+
+The installer, its detached signature, published checksum file/signature and vendor **public** signing key are stored only under the existing separate user-local tools directory. A new isolated public-key keyring was used, not the owner's normal keyring. Existing Git-bundled GnuPG `2.4.9` was sufficient; no additional security software or root certificate was installed.
+
+The vendor public-key fingerprint is pinned to `5069A233D55A0EEB174A5FC3821ACD02680D16DE`, independently read from the official download page. The downloaded public key matches, and the checksum manifest's detached signature verified successfully against that pinned key. A deliberately altered copy of the public manifest was rejected with GnuPG BADSIG and nonzero exit status. Public software verification artifacts are not database backups or recovery keys.
+
+The Git-bundled GnuPG uses MSYS paths: initial Windows-path invocation failed, then inspection/import was corrected to an isolated `/c/...` keyring. Import/verification uses `--no-options`, `--no-autostart` and `--no-auto-key-retrieve` so it does not start the owner's agent or retrieve unknown keys. Unavailable third-party public-key certifications are not treated as an identity proof; the explicitly pinned vendor primary fingerprint is the trust anchor. Download interruptions/timeouts affected public software only; incomplete downloads were never executed or treated as valid installers.
+
+**Final installer evidence — verified, not installed:**
+
+- Selected upstream artifact: `VeraCrypt.Setup.1.26.29.exe`; complete size **40,832,408 bytes**.
+- Complete SHA-256 **`dca9ddec7934fc0b1c25ac8984db7d504bfe9f37c21861ac91c67a98ecd3964b`**, exactly matching the authenticated upstream checksum entry.
+- Installer detached signature: **PASS** against the same pinned vendor primary public key.
+- Windows Authenticode: **Valid**, publisher **IDRIX SARL**; public signer-certificate thumbprint `86E1D426731E79117452F090188A828426B29B5F`.
+- Six actual integrity/security checks **PASS**: vendor public fingerprint match, signed checksum manifest, tampered-manifest rejection, full installer hash/length, installer PGP signature, Windows Authenticode validity. These are public software tests, not recovery tests.
+
+Slow public downloads required retries. A bounded parallel byte-range attempt timed out, and an initial assembly attempt could not read a file held exclusively by the active Windows downloader. Only that specifically identified download worker was stopped. Already downloaded exact ranges were combined with the missing tail after releasing the handle; the resulting complete file then passed the full upstream hash and both signature checks above. Partial files were not accepted by size alone. No installer or system service was run to perform verification.
+
+The final verified copy remains outside Git beneath `%LOCALAPPDATA%/CredoNomicsTools/phase20/veracrypt-1.26.29-verification/`, named `VeraCrypt.Setup.1.26.29.fullyverified.exe`. This is a local public software artifact; it will not be committed or uploaded. Its name differs from upstream because partial download candidates were retained separately rather than overwritten.
+
+Actual verification used `Get-FileHash -Algorithm SHA256`, `Get-AuthenticodeSignature -LiteralPath <public-installer>`, and Git-bundled `gpg.exe --no-options --homedir <isolated-public-keyring> --batch --no-autostart --no-auto-key-retrieve --status-fd 1 --verify <public-signature> <public-file>`. GnuPG exit status and the matching VALIDSIG primary fingerprint were required; the synthetic negative test required BADSIG/nonzero status. `Invoke-WebRequest`/`curl` fetched only fixed official public URLs; Python standard-library HTTP range requests checked exact HTTP 206 Content-Range values before assembly and full-file hash validation. No credentials or connection strings appeared in download/verification arguments. Whitespace and report credential-marker checks were also run before publication.
+
+#### Proposed next approved action
+
+The next proposed privileged action is installation of the verified official VeraCrypt release, followed by a separately protected **non-system file container** beneath the owner-selected D: parent. Do not format/encrypt D: itself or modify boot/system encryption. Administrator driver installation and container/password configuration still require owner approval/participation. The owner must privately establish independent passphrase/key recovery and demonstrate synthetic-file decryption before any data export. An installer integrity PASS is not backup-encryption PASS.
+
+An AES-256 archive fallback is **not approved for data use**: an archive alone would not protect unencrypted temporary outputs or the restored PostgreSQL data directory on this decrypted drive. No verified encrypted temporary/restore storage or independently recoverable archive credential exists. This task does not claim that a plaintext-export-then-encrypt sequence meets the requirement.
+
+| Requested recovery validation | Current result |
+| --- | --- |
+| Backup encryption | NOT EXECUTED — no protected destination/container exists. |
+| Independent decryption/recovery access | NOT EXECUTED — owner-held independent recovery material not established/tested. |
+| Authorized export authentication | NOT EXECUTED / BLOCKED — existing DB password unavailable. |
+| Schema export | NOT EXECUTED. |
+| Data export | NOT EXECUTED. |
+| Roles and grants export/restore | NOT EXECUTED. |
+| Migration history recovery | NOT EXECUTED. |
+| Storage coverage | NOT EXECUTED — no fresh bucket/binary inventory under a passed backup preflight. |
+| Local database restoration | NOT EXECUTED — no database/cluster created; no recovery time measured. |
+| Restored data consistency | NOT EXECUTED. |
+| RLS and permissions recovery | NOT EXECUTED. |
+| Backup integrity | NOT EXECUTED — no database backup exists. Public installer checks are separate. |
+| Recovery limitations assessment | Completed as a documented assessment below; not proof of functional recovery. |
+
+Only software/preflight verification and sanitized report checks were performed. The official backup documentation was reread. No export/restore command, billing migration, cloud branch/project, live payment, customer authentication, upstream gateway code copy or paid resource was used. Phase 21 remains conditional on real recovery verification and is **not completed**. Exact-ref approval for any future staging migration remains mandatory and is not requested while recovery is blocked.
+
 ### Owner follow-up: candidate directory and credential setup
 
 Follow-up starting SHA: `46728222225626c52303ca646226aa4ac5306798`. The owner supplied a candidate local directory, confirmed no existing PostgreSQL export credential file is configured, and explicitly required approval before encryption/system changes. No encryption change or credential creation is authorized by this report update.
