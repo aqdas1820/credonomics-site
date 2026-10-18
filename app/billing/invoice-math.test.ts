@@ -10,6 +10,8 @@ describe('invoice draft arithmetic', () => {
   it('rejects zero quantity', () => expect(calculateInvoice({ ...base, items: [{ ...base.items[0], quantity: '0' }] }).valid).toBe(false))
   it('rejects unsafe totals', () => expect(calculateInvoice({ ...base, items: [{ ...base.items[0], quantity: '99999999', rate: '99999999' }] }).valid).toBe(false))
   it('rejects empty customer', () => expect(calculateInvoice({ ...base, customer: ' ' }).valid).toBe(false))
+  it('rejects impossible calendar dates', () => expect(calculateInvoice({ ...base, date: '2026-02-30' }).valid).toBe(false))
+  it('accepts leap day', () => expect(calculateInvoice({ ...base, date: '2028-02-29' }).valid).toBe(true))
   it('rejects empty items', () => expect(calculateInvoice({ ...base, items: [] }).valid).toBe(false))
   it('sums lines exactly', () => expect(calculateInvoice({ ...base, items: [{ description: 'A', quantity: '1', rate: '0.10' }, { description: 'B', quantity: '1', rate: '0.20' }] }).totalPaise).toBe(30))
 })
