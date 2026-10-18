@@ -14,6 +14,9 @@ create table if not exists billing_private.invoices (
   currency text not null default 'INR' check (currency = 'INR'),
   total_paise bigint not null check (total_paise > 0 and total_paise <= 10000000000),
   status text not null default 'UNPAID' check (status in ('UNPAID','PARTIAL','PAID','VOID')),
+  origin text not null default 'ADMIN' check (origin in ('ADMIN','SYSTEM')),
+  source_event_key text unique check (source_event_key is null or length(source_event_key) between 8 and 128),
+  check ((origin='ADMIN' and source_event_key is null) or (origin='SYSTEM' and source_event_key is not null)),
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
