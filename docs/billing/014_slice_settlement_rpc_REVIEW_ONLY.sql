@@ -27,7 +27,7 @@ begin
   v_utr := upper(btrim(coalesce(p_utr,'')));
   if p_operator_id is null or p_invoice_id is null or
     v_utr !~ '^[A-Z0-9-]{8,80}$' or
-    p_amount_paise is null or p_amount_paise <= 0 or
+    p_amount_paise is null or p_amount_paise <= 0 or p_amount_paise > 10000000000 or
     p_booked_at is null or p_booked_at > now() + interval '1 minute' or
     length(btrim(coalesce(p_evidence_reference,''))) not between 1 and 500 then
     raise exception 'Invalid booked-credit evidence';
