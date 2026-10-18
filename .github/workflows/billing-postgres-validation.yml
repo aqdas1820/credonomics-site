@@ -17,6 +17,8 @@ on:
       - "package-lock.json"
       - "scripts/generate-ipo-dashboard.mjs"
       - "scripts/generate-search-index.mjs"
+      - "scripts/check-billing-launch-readiness.mjs"
+      - "docs/billing/ALL_AT_ONCE_RELEASE_GATES.json"
   workflow_dispatch:
 
 permissions:
@@ -89,6 +91,11 @@ jobs:
 
       - name: Install locked dependencies without package lifecycle hooks
         run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Check all-at-once release remains fail-closed
+        run: |
+          node scripts/check-billing-launch-readiness.mjs --self-test
+          node scripts/check-billing-launch-readiness.mjs --assert-blocked
 
       - name: Full unit tests
         run: npm test
