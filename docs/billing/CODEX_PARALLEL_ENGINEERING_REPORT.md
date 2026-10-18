@@ -190,10 +190,11 @@ This section records new source-only work; the earlier assignment above remains 
   NOT a production-readiness approval. PR #2 remains draft and unmerged; no main integration.
 
 New branch: `codex/upstox-token-persistence`, stacked on PR #2 to avoid changing its reviewed
-head. Publish as a separate draft against `codex/billing-production-hardening` while PR #2
-is pending. After PR #2 integration, merge/reconcile the latest billing feature into this
-branch without rewriting history, retarget to `feature/youpi-payment-entry-prelaunch`, inspect
-the resulting diff and rerun CI. Never target main. The Git deployment guard disables this
+head. Publish as a separate draft against `feature/youpi-payment-entry-prelaunch`, depending
+on PR #2. Until PR #2 lands, the overall PR diff includes its existing changes; review the
+new implementation from `8f052a5` onward. After PR #2 integration, merge/reconcile the latest
+billing feature without rewriting history, inspect the remaining diff and rerun CI.
+Never target main. The Git deployment guard disables this
 new exact branch; no hosted configuration or deployment was performed.
 
 ## Deliverables and actual local results

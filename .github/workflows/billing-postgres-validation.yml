@@ -6,7 +6,6 @@ on:
   pull_request:
     branches:
       - feature/youpi-payment-entry-prelaunch
-      - codex/billing-production-hardening
   push:
     branches:
       - feature/youpi-payment-entry-prelaunch
