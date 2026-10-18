@@ -3,7 +3,7 @@
 begin;
 create or replace function public.billing_list_invoices(p_limit integer default 25)
 returns jsonb language plpgsql security definer
-set search_path = pg_catalog, public, billing_private
+set search_path = pg_catalog, pg_temp
 as $$
 declare v_records jsonb;
 begin
@@ -30,7 +30,7 @@ grant execute on function public.billing_list_invoices(integer) to service_role;
 
 create or replace function public.billing_get_invoice(p_invoice_id uuid)
 returns jsonb language plpgsql security definer
-set search_path = pg_catalog, public, billing_private
+set search_path = pg_catalog, pg_temp
 as $$
 declare v_invoice jsonb;
 begin
@@ -60,7 +60,7 @@ grant execute on function public.billing_get_invoice(uuid) to service_role;
 -- live recalculation that could silently mutate historical receipt amounts.
 create or replace function public.billing_get_receipt(p_invoice_id uuid)
 returns jsonb language plpgsql security definer
-set search_path = pg_catalog, public, billing_private
+set search_path = pg_catalog, pg_temp
 as $
 declare v_snapshot jsonb;
 begin
