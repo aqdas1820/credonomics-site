@@ -38,7 +38,7 @@ create or replace function public.billing_record_youpi_observation(
   p_amount_paise bigint, p_utr text, p_raw_sha256 text
 ) returns jsonb
 language plpgsql security definer
-set search_path=pg_catalog, public, billing_private
+set search_path=pg_catalog, pg_temp
 as $$
 declare
   v_invoice billing_private.invoices%rowtype;
