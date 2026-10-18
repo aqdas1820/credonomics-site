@@ -5,6 +5,7 @@ import { authenticatedUser } from '../../../../src/lib/supabase/server'
 import { createSupabaseAdminClient } from '../../../../src/lib/supabase/admin'
 import { isBillingAdmin } from '../../admin-policy'
 import { canRenderPaidReceipt } from '../../receipt-policy'
+import { billingDatabaseScopeReady } from '../../db-scope'
 import PrintInvoiceButton from '../../PrintInvoiceButton'
 import styles from './invoice.module.css'
 
@@ -22,7 +23,7 @@ const inr = (paise: number) => new Intl.NumberFormat('en-IN', { style: 'currency
 
 /** Historical invoice document. Not a separately numbered PAID receipt. */
 export default async function InvoiceDocumentPage({ params }: { params: { id: string } }) {
-  if (process.env.BILLING_PORTAL_ENABLED !== 'true' || process.env.BILLING_API_ENABLED !== 'true') notFound()
+  if (process.env.BILLING_PORTAL_ENABLED !== 'true' || (process.env.BILLING_API_ENABLED !== 'true' || !billingDatabaseScopeReady())) notFound()
   if (!/^[0-9a-f]{8}-[0-9a-f-]{27,}$/i.test(params.id)) notFound()
   const { user } = await authenticatedUser()
   if (!isBillingAdmin(user, process.env.BILLING_ADMIN_USER_IDS)) notFound()
