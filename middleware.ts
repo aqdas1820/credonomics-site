@@ -13,8 +13,8 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 308)
   }
 
-  // Deny billing on every non-development runtime (including non-Vercel hosts) until verified admin auth exists.
-  if ((request.nextUrl.pathname === '/billing' || request.nextUrl.pathname.startsWith('/billing/')) && (process.env.NODE_ENV !== 'development' || Boolean(process.env.VERCEL_ENV))) {
+  // Deny hosted invoice portal until explicitly enabled; page performs verified admin authorization.
+  if ((request.nextUrl.pathname === '/billing' || request.nextUrl.pathname.startsWith('/billing/')) && process.env.BILLING_PORTAL_ENABLED !== 'true') {
     return new NextResponse('Not Found', { status: 404, headers: { 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow, noarchive' } })
   }
 
