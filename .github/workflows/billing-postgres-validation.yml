@@ -11,6 +11,7 @@ on:
       - "docs/billing/*.sql"
       - "scripts/test-billing-postgres.py"
       - "app/billing/**"
+      - "app/api/billing/**"
       - "src/lib/billing/**"
       - "vitest.config.mts"
       - "package.json"
