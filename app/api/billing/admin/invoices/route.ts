@@ -44,6 +44,7 @@ export async function POST(request: NextRequest) {
     catch { return json({ error: 'Invalid invoice fields' }, 400) }
     const { data, error } = await service.rpc('billing_create_invoice', {
       p_customer_name: prepared.customerName,
+      p_customer_address: prepared.customerAddress,
       p_issued_on: prepared.issuedOn,
       p_customer_phone_e164: prepared.customerPhone,
       p_lines: prepared.lines,
