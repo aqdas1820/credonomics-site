@@ -82,7 +82,7 @@ export default function BillingForm({ enableSettlement = false }: { enableSettle
         {saved && enableSettlement && <BillingCreditReview key={saved.id} invoiceId={saved.id} invoiceTotalPaise={saved.totalPaise} />}
         {saved && !enableSettlement && <p>Bank-credit verification is disabled until the reviewed settlement workflow is activated.</p>}
       </div>
-      <section className={`cn-sheet ${valid && saved ? "" : "cn-invalid-print"}`} aria-label="Invoice print preview">
+      <section className="cn-sheet" aria-label="Invoice draft preview">
         <header className="cn-head"><div><strong>CredoNomics Investment Solutions</strong><p>Invoice draft · Verify business details before issuance</p></div><div><strong>INVOICE</strong><p>#{saved?.invoiceNumber ?? 'Pending secure allocation'}</p><p>{date}</p></div></header>
         <div className="cn-unpaid">UNPAID · {saved ? "ISSUED INVOICE" : "DRAFT PREVIEW"}</div>
         <div className="cn-billto"><strong>Bill To</strong><p>{customer || 'Customer name'}</p><p>{address}</p></div>
@@ -113,7 +113,7 @@ export default function BillingForm({ enableSettlement = false }: { enableSettle
         .cn-terms { border-top: 1px solid #94a3b8; padding-top: 16px; font-size: 12px; }
         .cn-sheet footer { margin-top: 40px; font-size: 11px; text-align: center; }
         @media(max-width:650px) { .cn-grid,.cn-item { grid-template-columns: 1fr; } .cn-sheet { padding: 16px; } .cn-table { font-size: 11px; } .cn-table td,.cn-table th { padding: 5px; } }
-        @media print { @page { size: A4; margin: 12mm; } body * { visibility: hidden !important; } .cn-sheet, .cn-sheet * { visibility: visible !important; } .cn-sheet { position: absolute; top: 0; left: 0; width: 100%; border: 2px solid #275b90; padding: 20px; } .cn-controls { display: none !important; } .cn-invalid-print, .cn-invalid-print * { display: none !important; visibility: hidden !important; } }
+        @media print { .cn-billing { display: none !important; } }
       `}</style>
     </main>
   )
