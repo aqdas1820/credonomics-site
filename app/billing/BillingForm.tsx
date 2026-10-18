@@ -8,7 +8,7 @@ import BillingCreditReview from './BillingCreditReview'
 type Item = { description: string; quantity: string; rate: string }
 const money = (n: number) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(n)
 
-export default function BillingForm() {
+export default function BillingForm({ enableSettlement = false }: { enableSettlement?: boolean }) {
   const [saved, setSaved] = useState<{ id: string; invoiceNumber: string; totalPaise: number; status: 'UNPAID' } | null>(null)
   const [saving, setSaving] = useState(false)
   const [message, setMessage] = useState('')
@@ -79,7 +79,8 @@ export default function BillingForm() {
         {message && <p role="status">{message}</p>}
         {!valid && <p role="alert">{calculation.errors.join("; ")}</p>}
         <p><strong>Safety:</strong> Invoice printing preserves the original UNPAID document. A distinct PAID receipt needs verified bank credit and an immutable receipt workflow.</p>
-        {saved && <BillingCreditReview key={saved.id} invoiceId={saved.id} invoiceTotalPaise={saved.totalPaise} />}
+        {saved && enableSettlement && <BillingCreditReview key={saved.id} invoiceId={saved.id} invoiceTotalPaise={saved.totalPaise} />}
+        {saved && !enableSettlement && <p>Bank-credit verification is disabled until the reviewed settlement workflow is activated.</p>}
       </div>
       <section className={`cn-sheet ${valid && saved ? "" : "cn-invalid-print"}`} aria-label="Invoice print preview">
         <header className="cn-head"><div><strong>CredoNomics Investment Solutions</strong><p>Invoice draft · Verify business details before issuance</p></div><div><strong>INVOICE</strong><p>#{saved?.invoiceNumber ?? 'Pending secure allocation'}</p><p>{date}</p></div></header>
