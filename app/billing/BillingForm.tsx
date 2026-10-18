@@ -1,10 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import { calculateInvoice } from './invoice-math'
 
 type Item = { description: string; quantity: string; rate: string }
 const money = (n: number) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(n)
-const safeNumber = (s: string) => { const n = Number(s); return Number.isFinite(n) && n >= 0 ? n : NaN }
 
 export default function BillingForm() {
   const [number, setNumber] = useState('')
@@ -12,9 +12,10 @@ export default function BillingForm() {
   const [customer, setCustomer] = useState('')
   const [address, setAddress] = useState('')
   const [items, setItems] = useState<Item[]>([{ description: 'Financial documentation and factual analytics assistance', quantity: '1', rate: '' }])
-  const totals = items.map(x => safeNumber(x.quantity) * safeNumber(x.rate))
-  const valid = number.trim().length > 0 && customer.trim().length > 0 && /^\d{4}-\d{2}-\d{2}$/.test(date) && items.length > 0 && items.every((x, i) => x.description.trim() && Number(x.quantity) > 0 && Number.isFinite(totals[i]) && totals[i] <= 100000000)
-  const total = totals.reduce((a, b) => a + (Number.isFinite(b) ? b : 0), 0)
+  const calculation = calculateInvoice({ number, date, customer, items })
+  const valid = calculation.valid
+  const total = calculation.totalPaise / 100
+  const totals = calculation.linePaise.map(paise => paise / 100)
   const updateItem = (i: number, key: keyof Item, value: string) => setItems(xs => xs.map((x, j) => i === j ? { ...x, [key]: value } : x))
 
   return (
@@ -33,22 +34,22 @@ export default function BillingForm() {
         {items.map((item, i) => (
           <div className="cn-item" key={i}>
             <label>Description<input value={item.description} maxLength={300} onChange={e => updateItem(i, 'description', e.target.value)} /></label>
-            <label>Quantity<input type="number" min="0.01" step="any" value={item.quantity} onChange={e => updateItem(i, 'quantity', e.target.value)} /></label>
+            <label>Quantity<input type="number" min="0.01" step="1" value={item.quantity} onChange={e => updateItem(i, 'quantity', e.target.value)} /></label>
             <label>Rate (₹)<input type="number" min="0" step="0.01" value={item.rate} onChange={e => updateItem(i, 'rate', e.target.value)} /></label>
             <button type="button" disabled={items.length === 1} onClick={() => setItems(xs => xs.filter((_, j) => j !== i))}>Remove</button>
           </div>
         ))}
-        <button type="button" onClick={() => setItems(xs => [...xs, { description: '', quantity: '1', rate: '' }])}>+ Add item</button>
+        <button type="button" disabled={items.length >= 100} onClick={() => setItems(xs => [...xs, { description: '', quantity: '1', rate: '' }])}>+ Add item</button>
         <p role="status"><strong>Total: {money(total)}</strong></p>
         <button type="button" disabled={!valid || total <= 0} onClick={() => window.print()}>Print / Save as PDF (UNPAID)</button>
-        {!valid && <p role="alert">Enter invoice number, date, customer and valid item quantities/rates to enable printing.</p>}
+        {!valid && <p role="alert">{calculation.errors.join("; ")}</p>}
         <p><strong>Safety:</strong> This prototype never marks an invoice PAID. A future PAID receipt requires independent manual Slice bank-credit verification by an authorized admin.</p>
       </div>
       <section className="cn-sheet" aria-label="Invoice print preview">
         <header className="cn-head"><div><strong>CredoNomics Investment Solutions</strong><p>Dhule, Maharashtra, India</p></div><div><strong>INVOICE</strong><p>#{number || '—'}</p><p>{date}</p></div></header>
         <div className="cn-unpaid">UNPAID · DRAFT PREVIEW</div>
         <div className="cn-billto"><strong>Bill To</strong><p>{customer || 'Customer name'}</p><p>{address}</p></div>
-        <table className="cn-table"><thead><tr><th>Item / Service</th><th>Qty</th><th>Rate</th><th>Amount</th></tr></thead><tbody>{items.map((x, i) => <tr key={i}><td>{x.description}</td><td>{x.quantity}</td><td>{money(safeNumber(x.rate) || 0)}</td><td>{money(totals[i] || 0)}</td></tr>)}</tbody></table>
+        <table className="cn-table"><thead><tr><th>Item / Service</th><th>Qty</th><th>Rate</th><th>Amount</th></tr></thead><tbody>{items.map((x, i) => <tr key={i}><td>{x.description}</td><td>{x.quantity}</td><td>{money(Number.isFinite(Number(x.rate)) && Number(x.rate) >= 0 ? Number(x.rate) : 0)}</td><td>{money(totals[i] || 0)}</td></tr>)}</tbody></table>
         <div className="cn-total">Total: {money(total)}</div>
         <div className="cn-terms"><strong>Service notice</strong><p>Financial documentation and factual analytics only. No personalized investment advice or Buy/Sell/Hold recommendations. This document is not a payment receipt.</p></div>
         <footer>Digitally prepared draft invoice · CredoNomics Investment Solutions</footer>
