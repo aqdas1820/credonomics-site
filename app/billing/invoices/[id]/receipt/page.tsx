@@ -66,7 +66,7 @@ export default async function VerifiedReceiptPage({ params: promisedParams }: { 
         <footer className={styles.note}>
           Generated from an append-only, version {receipt.version} database receipt snapshot upon full
           independently verified Slice credit. A YouPI SUCCESS notification alone cannot trigger issuance.
-          Printable document only; an immutable archived PDF file and digital signature are not yet enabled.
+          This printable view is not digitally signed. Use the archived PDF download, when available, for the retained receipt.
         </footer>
       </article>
     </main>

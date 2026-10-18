@@ -5,7 +5,13 @@
 
 Started from `d84d688a7b33ef24a8a6004fab324117c0395bba`; fetched and fast-forwarded
 seven concurrent body-limit/CI commits through `fd6ab8a` before editing. They are
-preserved. No main merge, deploy, migration, password reset, provider activation,
+preserved. Two further concurrent commits through `f5d82d7` were merged while
+finishing validation, preserving their shared UUID policy, cross-invoice RPC
+guards and Phase 21 evidence. Overlapping admin/receipt changes were reconciled
+with both the strict shared UUID guard and own-property admin claim checks;
+the expanded full suite passed 272 tests after reconciliation. Historical
+Phase 21 results describe that contributor's earlier commit, not this new source.
+No main merge, deploy, migration, password reset, provider activation,
 actual payment, customer message or database backup/restore was performed.
 
 ## Source implementation
@@ -69,8 +75,8 @@ or unsafe forced downgrade was used. A clean audit is not a complete security au
 
 | Command/check | Actual result |
 | --- | --- |
-| `npm test` | PASS: 36 files, 262 tests on upgraded React/Next stack; synthetic/mocked, no staging connection. |
-| `npm run test:billing` (also prebuild) | PASS: 20 files, 190 tests. |
+| `npm test` | PASS after concurrent-commit reconciliation: 37 files, 272 tests on upgraded React/Next stack; synthetic/mocked, no staging connection. |
+| `npm run test:billing` (also prebuild) | PASS after reconciliation: 21 files, 200 tests. |
 | `npm run build` | PASS on Next 15.5.28, 178 static pages plus dynamic routes, including archive endpoint. No deployment. |
 | `npm run typecheck` | PASS after async parameter fixes/build-generated types. |
 | `npm run lint` | PASS, exit 0; existing image/hook warnings outside changed billing code and Next lint deprecation remain. |

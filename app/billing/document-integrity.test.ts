@@ -94,7 +94,7 @@ describe('persisted private document rendering', () => {
   })
   it('refuses invoice RPC responses for a different invoice identifier', async () => {
     rpc.mockResolvedValue({ data: { ...invoice, id: '87654321-1234-4234-8234-123456789012' }, error: null })
-    await expect(InvoiceDocumentPage({ params })).rejects.toThrow('NOT_FOUND')
+    await expect(InvoiceDocumentPage({ params: Promise.resolve(params) })).rejects.toThrow('NOT_FOUND')
     expect(rpc).toHaveBeenCalledWith('billing_get_invoice', { p_invoice_id: id })
   })
   it('refuses receipt snapshots issued for a different invoice identifier', async () => {
@@ -104,13 +104,13 @@ describe('persisted private document rendering', () => {
       customer: 'Wrong invoice', totalPaise: 10001, paidPaise: 10001,
       verifiedCredits: [{ utr: 'TESTUTR00001', amountPaise: 10001, bookedAt: '2026-10-18T08:00:00Z' }],
     }, error: null })
-    await expect(ReceiptPage({ params })).rejects.toThrow('NOT_FOUND')
+    await expect(ReceiptPage({ params: Promise.resolve(params) })).rejects.toThrow('NOT_FOUND')
     expect(rpc).toHaveBeenCalledWith('billing_get_receipt', { p_invoice_id: id })
   })
   it('denies malformed invoice identifiers before attempting authentication or RPC', async () => {
     const invalidParams = { id: '12345678-' + '-'.repeat(27) }
-    await expect(InvoiceDocumentPage({ params: invalidParams })).rejects.toThrow('NOT_FOUND')
-    await expect(ReceiptPage({ params: invalidParams })).rejects.toThrow('NOT_FOUND')
+    await expect(InvoiceDocumentPage({ params: Promise.resolve(invalidParams) })).rejects.toThrow('NOT_FOUND')
+    await expect(ReceiptPage({ params: Promise.resolve(invalidParams) })).rejects.toThrow('NOT_FOUND')
     expect(auth).not.toHaveBeenCalled()
     expect(rpc).not.toHaveBeenCalled()
   })
