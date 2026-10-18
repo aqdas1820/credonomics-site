@@ -1,25 +1,21 @@
 import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import SiteFrame from '../components/SiteFrame'
 import BillingForm from './BillingForm'
+import { authenticatedUser } from '../../src/lib/supabase/server'
+import { isBillingAdmin } from './admin-policy'
 
+export const dynamic = 'force-dynamic'
 export const metadata: Metadata = {
-  title: 'Billing — Restricted Development Draft',
-  description: 'Restricted development-only invoice drafting. No payment collection.',
-  robots: { index: false, follow: false },
+  title: 'CredoNomics Billing — Admin Only',
+  description: 'Restricted billing administration. Invoice records are private.',
+  robots: { index: false, follow: false, noarchive: true },
 }
 
-// Explicit opt-in for preview builds only. This is NOT admin authentication.
-// No customer data should be entered until a proper authenticated operator workflow exists.
-export default function BillingPreviewPage() {
-  const enabled = process.env.VERCEL_ENV === 'preview' && process.env.BILLING_DRAFT_ENABLED === 'true'
-  return (
-    <SiteFrame>
-      {enabled ? <BillingForm /> : (
-        <main style={{ maxWidth: 760, margin: '0 auto', padding: '80px 24px' }}>
-          <h1>Billing is not publicly available</h1>
-          <p>CredoNomics Billing is under development. Invoice drafting, customer access and payment collection are disabled on this deployment.</p>
-        </main>
-      )}
-    </SiteFrame>
-  )
+/** No public invoice form: only signed-in, explicitly allowlisted billing admins. */
+export default async function BillingAdminPage() {
+  if (process.env.BILLING_PORTAL_ENABLED !== 'true' || process.env.BILLING_API_ENABLED !== 'true') notFound()
+  const { user } = await authenticatedUser()
+  if (!isBillingAdmin(user, process.env.BILLING_ADMIN_USER_IDS)) notFound()
+  return <SiteFrame><BillingForm /></SiteFrame>
 }
