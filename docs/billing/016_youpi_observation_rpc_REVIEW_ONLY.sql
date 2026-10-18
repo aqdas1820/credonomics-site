@@ -61,8 +61,9 @@ begin
     raise exception 'Gateway amount does not match issued invoice';
   end if;
 
-  -- Both unique(payment_id,event) and unique(raw_sha256) are durable anti-replay
-  -- protections. Retries are acknowledged but do not duplicate any audit entry.
+  -- Both unique(payment_id,event) and unique(raw_sha256) enforce durable replay
+  -- protection. A conflicting signed delivery must NOT be silently treated as
+  -- an identical retry; it requires operator/security investigation.
   insert into billing_private.youpi_observations (
     invoice_id, payment_id, order_id, event,
     amount_paise, utr, raw_sha256
@@ -73,7 +74,20 @@ begin
   returning id into v_id;
 
   if v_id is null then
-    return jsonb_build_object('recorded',false,'decision','REVIEW_REQUIRED','duplicate',true);
+    -- An exact replay is idempotently acknowledged without a second audit entry.
+    -- A distinct signed body for an existing payment+event (or a hash conflict
+    -- for another identity) is contradictory evidence, not a safe duplicate.
+    if exists (
+      select 1 from billing_private.youpi_observations o
+      where o.payment_id = p_payment_id and o.event = p_event
+        and o.invoice_id = v_invoice.id and o.order_id = p_order_id
+        and o.amount_paise = p_amount_paise
+        and o.utr is not distinct from p_utr
+        and o.raw_sha256 = p_raw_sha256
+    ) then
+      return jsonb_build_object('recorded',false,'decision','REVIEW_REQUIRED','duplicate',true);
+    end if;
+    raise exception 'Conflicting gateway observation replay' using errcode='23505';
   end if;
 
   insert into billing_private.audit_events(invoice_id,event_type,actor,details)
