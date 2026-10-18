@@ -4,6 +4,7 @@ import { createSupabaseAdminClient } from '../../../../../src/lib/supabase/admin
 import { isBillingAdmin } from '../../../../billing/admin-policy'
 import { prepareInvoiceCreation } from '../../../../billing/invoice-input'
 import { sameOrigin } from '../../../../billing/request-policy'
+import { readBoundedJsonBody } from '../../../../billing/bounded-json-body'
 import { billingDatabaseScopeReady } from '../../../../billing/db-scope'
 
 export const dynamic = 'force-dynamic'
@@ -29,8 +30,6 @@ export async function POST(request: NextRequest) {
   if (!(request.headers.get('content-type') || '').toLowerCase().startsWith('application/json')) {
     return json({ error: 'JSON required' }, 415)
   }
-  const length = Number(request.headers.get('content-length'))
-  if (!Number.isFinite(length) || length > 65536) return json({ error: 'Request too large' }, 413)
   try {
     const { user } = await authenticatedUser()
     if (!isBillingAdmin(user, process.env.BILLING_ADMIN_USER_IDS)) {
@@ -38,10 +37,10 @@ export async function POST(request: NextRequest) {
     }
     const service = createSupabaseAdminClient()
     if (!service) return json({ error: 'Billing database unavailable' }, 503)
-    const raw = await request.text()
-    if (raw.length > 65536) return json({ error: 'Request too large' }, 413)
+    const body = await readBoundedJsonBody(request, 65536)
+    if (!body.ok) return json({ error: body.reason === 'too-large' ? 'Request too large' : 'Invalid request body' }, body.reason === 'too-large' ? 413 : 400)
     let prepared: ReturnType<typeof prepareInvoiceCreation>
-    try { prepared = prepareInvoiceCreation(JSON.parse(raw)) }
+    try { prepared = prepareInvoiceCreation(JSON.parse(body.text)) }
     catch { return json({ error: 'Invalid invoice fields' }, 400) }
     const { data, error } = await service.rpc('billing_create_invoice', {
       p_customer_name: prepared.customerName,
