@@ -7,52 +7,85 @@ type Item = { description: string; quantity: string; rate: string }
 const money = (n: number) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(n)
 
 export default function BillingForm() {
-  const [number, setNumber] = useState('')
+  const [saved, setSaved] = useState<{ id: string; invoiceNumber: string; totalPaise: number; status: 'UNPAID' } | null>(null)
+  const [saving, setSaving] = useState(false)
+  const [message, setMessage] = useState('')
+  const [phone, setPhone] = useState('')
   const [date, setDate] = useState('')
   const [customer, setCustomer] = useState('')
   const [address, setAddress] = useState('')
   const [items, setItems] = useState<Item[]>([{ description: 'Financial documentation and factual analytics assistance', quantity: '1', rate: '' }])
+  const number = saved?.invoiceNumber ?? 'DRAFT'
   const calculation = calculateInvoice({ number, date, customer, items })
   const valid = calculation.valid
   const total = calculation.totalPaise / 100
   const totals = calculation.linePaise.map(paise => paise / 100)
   const updateItem = (i: number, key: keyof Item, value: string) => setItems(xs => xs.map((x, j) => i === j ? { ...x, [key]: value } : x))
+  const reset = () => {
+    setSaved(null); setMessage(''); setDate(''); setCustomer(''); setAddress(''); setPhone('')
+    setItems([{ description: 'Financial documentation and factual analytics assistance', quantity: '1', rate: '' }])
+  }
+  const save = async () => {
+    if (!valid || saved || saving) return
+    setSaving(true); setMessage('')
+    try {
+      const response = await fetch('/api/billing/admin/invoices', {
+        method: 'POST', credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ date, customer, address, customerPhone: phone || undefined, items }),
+      })
+      const data = await response.json()
+      if (!response.ok) throw new Error(data?.error || 'Invoice could not be issued')
+      const invoice = data?.invoice
+      if (!invoice || typeof invoice.id !== 'string' ||
+          typeof invoice.invoiceNumber !== 'string' || invoice.totalPaise !== calculation.totalPaise ||
+          invoice.status !== 'UNPAID') throw new Error('Unexpected invoice response; verify records')
+      setSaved(invoice)
+      setMessage('Invoice saved with server-generated number. UNPAID copy is ready to print.')
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : 'Invoice creation failed')
+    } finally { setSaving(false) }
+  }
 
   return (
     <main className="cn-billing" style={{ maxWidth: 980, margin: '0 auto', padding: '40px 20px 80px' }}>
       <div className="cn-controls">
         <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.1em' }}>CREDONOMICS · BILLING DEVELOPMENT PREVIEW</p>
-        <h1 style={{ fontSize: 32, margin: '8px 0' }}>UNPAID Invoice Generator</h1>
-        <p>This is a browser-only draft. No invoice is saved, numbered automatically, sent, or connected to Slice or YouPI. Use sample data only on shared devices.</p>
+        <h1 style={{ fontSize: 32, margin: '8px 0' }}>Admin Invoice Generator</h1>
+        <p>Create an UNPAID invoice with a server-issued invoice number. No payment QR, WhatsApp OTP, or automatic PAID status is enabled here.</p>
         <div className="cn-grid">
-          <label>Invoice number<input value={number} maxLength={40} onChange={e => setNumber(e.target.value)} placeholder="e.g. 1511" /></label>
-          <label>Invoice date<input type="date" value={date} onChange={e => setDate(e.target.value)} /></label>
-          <label>Customer name<input value={customer} maxLength={120} onChange={e => setCustomer(e.target.value)} placeholder="Customer name" /></label>
-          <label>Customer address (optional)<input value={address} maxLength={300} onChange={e => setAddress(e.target.value)} /></label>
+          <label>Invoice number<input value={saved?.invoiceNumber ?? "Allocated securely on save"} readOnly /></label>
+          <label>Invoice date<input type="date" disabled={!!saved} value={date} onChange={e => setDate(e.target.value)} /></label>
+          <label>Customer name<input disabled={!!saved} value={customer} maxLength={120} onChange={e => setCustomer(e.target.value)} placeholder="Customer name" /></label>
+          <label>Customer address (optional)<input disabled={!!saved} value={address} maxLength={300} onChange={e => setAddress(e.target.value)} /></label>
+          <label>Customer phone, E.164 (optional)<input disabled={!!saved} value={phone} placeholder="+919876543210" onChange={e => setPhone(e.target.value)} /></label>
         </div>
         <h2 style={{ fontSize: 20, marginTop: 24 }}>Items</h2>
         {items.map((item, i) => (
           <div className="cn-item" key={i}>
-            <label>Description<input value={item.description} maxLength={300} onChange={e => updateItem(i, 'description', e.target.value)} /></label>
-            <label>Quantity<input type="number" min="1" step="1" value={item.quantity} onChange={e => updateItem(i, 'quantity', e.target.value)} /></label>
-            <label>Rate (₹)<input type="number" min="0" step="0.01" value={item.rate} onChange={e => updateItem(i, 'rate', e.target.value)} /></label>
-            <button type="button" disabled={items.length === 1} onClick={() => setItems(xs => xs.filter((_, j) => j !== i))}>Remove</button>
+            <label>Description<input disabled={!!saved} value={item.description} maxLength={300} onChange={e => updateItem(i, 'description', e.target.value)} /></label>
+            <label>Quantity<input disabled={!!saved} type="number" min="1" step="1" value={item.quantity} onChange={e => updateItem(i, 'quantity', e.target.value)} /></label>
+            <label>Rate (₹)<input disabled={!!saved} type="number" min="0" step="0.01" value={item.rate} onChange={e => updateItem(i, 'rate', e.target.value)} /></label>
+            <button type="button" disabled={!!saved || items.length === 1} onClick={() => setItems(xs => xs.filter((_, j) => j !== i))}>Remove</button>
           </div>
         ))}
-        <button type="button" disabled={items.length >= 100} onClick={() => setItems(xs => [...xs, { description: '', quantity: '1', rate: '' }])}>+ Add item</button>
+        <button type="button" disabled={!!saved || items.length >= 100} onClick={() => setItems(xs => [...xs, { description: '', quantity: '1', rate: '' }])}>+ Add item</button>
         <p role="status"><strong>Total: {money(total)}</strong></p>
-        <button type="button" disabled={!valid || total <= 0} onClick={() => window.print()}>Print / Save as PDF (UNPAID)</button>
+        <button type="button" disabled={!valid || !!saved || saving || total <= 0} onClick={save}>{saving ? 'Saving…' : 'Save & Issue UNPAID Invoice'}</button>
+        <button type="button" disabled={!saved || !valid} onClick={() => window.print()}>Print / Save as PDF (UNPAID)</button>
+        {saved && <button type="button" onClick={reset}>Create next invoice</button>}
+        {message && <p role="status">{message}</p>}
         {!valid && <p role="alert">{calculation.errors.join("; ")}</p>}
         <p><strong>Safety:</strong> This prototype never marks an invoice PAID. A future PAID receipt requires independent manual Slice bank-credit verification by an authorized admin.</p>
       </div>
-      <section className={`cn-sheet ${valid ? "" : "cn-invalid-print"}`} aria-label="Invoice print preview">
-        <header className="cn-head"><div><strong>CredoNomics Investment Solutions</strong><p>Invoice draft · Verify business details before issuance</p></div><div><strong>INVOICE</strong><p>#{number || '—'}</p><p>{date}</p></div></header>
-        <div className="cn-unpaid">UNPAID · DRAFT PREVIEW</div>
+      <section className={`cn-sheet ${valid && saved ? "" : "cn-invalid-print"}`} aria-label="Invoice print preview">
+        <header className="cn-head"><div><strong>CredoNomics Investment Solutions</strong><p>Invoice draft · Verify business details before issuance</p></div><div><strong>INVOICE</strong><p>#{saved?.invoiceNumber ?? 'Pending secure allocation'}</p><p>{date}</p></div></header>
+        <div className="cn-unpaid">UNPAID · {saved ? "ISSUED INVOICE" : "DRAFT PREVIEW"}</div>
         <div className="cn-billto"><strong>Bill To</strong><p>{customer || 'Customer name'}</p><p>{address}</p></div>
         <table className="cn-table"><thead><tr><th>Item / Service</th><th>Qty</th><th>Rate</th><th>Amount</th></tr></thead><tbody>{items.map((x, i) => <tr key={i}><td>{x.description}</td><td>{x.quantity}</td><td>{money(Number.isFinite(Number(x.rate)) && Number(x.rate) >= 0 ? Number(x.rate) : 0)}</td><td>{money(totals[i] || 0)}</td></tr>)}</tbody></table>
         <div className="cn-total">Total: {money(total)}</div>
         <div className="cn-terms"><strong>Service notice</strong><p>Financial documentation and factual analytics only. No personalized investment advice or Buy/Sell/Hold recommendations. This document is not a payment receipt.</p></div>
-        <footer>Digitally prepared draft invoice · CredoNomics Investment Solutions</footer>
+        <footer>{saved ? 'Digitally prepared UNPAID invoice' : 'Not issued · Draft preview'} · CredoNomics Investment Solutions</footer>
       </section>
       <style jsx global>{`
         .cn-billing .cn-controls { margin-bottom: 30px; }
