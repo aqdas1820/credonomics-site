@@ -2,22 +2,64 @@ import { createHmac } from 'node:crypto'
 import { describe, expect, it } from 'vitest'
 import { verifyYoupiObservation } from './youpi-webhook'
 const secret = 'test-only-example-secret-keep-out-of-production'
-const now = 1792300000000
-const delivery = '12345678-1234-4234-8234-123456789012'
-const payload = { event: 'SUCCESS', orderId: 'CN-2026-00000001', amountPaise: 150000,
-  utr: '405901769153', paymentId: '12345678-1234-4234-8234-123456789012' }
+const payload = {
+  event: 'SUCCESS',
+  orderId: 'CN-2026-00000001',
+  amount: '1500.00',
+  amountPaise: 150000,
+  currency: 'INR',
+  utr: '405901769153',
+  paymentId: '12345678-1234-4234-8234-123456789012',
+}
 const body = Buffer.from(JSON.stringify(payload))
 const sign = (b: Buffer) => 'sha256=' + createHmac('sha256', secret).update(b).digest('hex')
-describe('YouPI raw signed webhook observation', () => {
-  it('marks valid signed SUCCESS for bank review, NOT PAID', () => {
-    expect(verifyYoupiObservation(body, sign(body), String(now), delivery, secret, now).decision).toBe('REVIEW_REQUIRED')
+const observe = (b: Buffer = body) => verifyYoupiObservation(b, sign(b), secret)
+
+describe('YouPI V2 documented merchant webhook observation', () => {
+  it('accepts signed SUCCESS with documented headers and NEVER marks PAID', () => {
+    const result = observe()
+    expect(result.decision).toBe('REVIEW_REQUIRED')
+    expect(result.event).toBe('SUCCESS')
+    expect(result.amountPaise).toBe(150000)
+    expect(result.utr).toBe(payload.utr)
+    expect(result.rawSha256).toMatch(/^[0-9a-f]{64}$/)
   })
-  it('rejects a forged signature', () => expect(() => verifyYoupiObservation(body, 'sha256='+'0'.repeat(64), String(now), delivery, secret, now)).toThrow())
-  it('rejects stale signed replay', () => expect(() => verifyYoupiObservation(body, sign(body), String(now-360000), delivery, secret, now)).toThrow())
-  it('rejects malformed payload despite matching HMAC', () => {
-    const wrong = Buffer.from(JSON.stringify({ ...payload, amountPaise: -5 }))
-    expect(() => verifyYoupiObservation(wrong, sign(wrong), String(now), delivery, secret, now)).toThrow()
+  it('generates deterministic raw SHA-256 for durable replay detection', () => {
+    expect(observe().rawSha256).toBe(observe().rawSha256)
+    expect(observe().rawSha256).not.toBe(observe(Buffer.from(JSON.stringify({ ...payload, utr: '405901769154' }))).rawSha256)
   })
-  it('rejects missing server secret', () => expect(() => verifyYoupiObservation(body, sign(body), String(now), delivery, '', now)).toThrow())
-  it('rejects invalid delivery id', () => expect(() => verifyYoupiObservation(body, sign(body), String(now), 'bad-id', secret, now)).toThrow())
+  it('rejects forged signature', () =>
+    expect(() => verifyYoupiObservation(body, 'sha256=' + '0'.repeat(64), secret)).toThrow())
+  it('rejects unsigned request', () =>
+    expect(() => verifyYoupiObservation(body, null, secret)).toThrow())
+  it('rejects missing shared secret', () =>
+    expect(() => verifyYoupiObservation(body, sign(body), undefined)).toThrow())
+  it('rejects signed amount mismatch', () => {
+    const bad = Buffer.from(JSON.stringify({ ...payload, amount: '1499.99' }))
+    expect(() => observe(bad)).toThrow('Mismatched')
+  })
+  it('rejects missing UTR on SUCCESS', () => {
+    const bad = Buffer.from(JSON.stringify({ ...payload, utr: null }))
+    expect(() => observe(bad)).toThrow('Missing UTR')
+  })
+  it('rejects forged paid status fields', () => {
+    const bad = Buffer.from(JSON.stringify({ ...payload, status: 'PAID', amountPaise: 150001 }))
+    expect(() => observe(bad)).toThrow('Mismatched')
+  })
+  it('allows FAILED without UTR as review-only observation', () => {
+    const bad = Buffer.from(JSON.stringify({ ...payload, event: 'FAILED', utr: null }))
+    expect(observe(bad)).toMatchObject({ decision: 'REVIEW_REQUIRED', event: 'FAILED', utr: null })
+  })
+  it('rejects INR currency mismatch', () => {
+    const bad = Buffer.from(JSON.stringify({ ...payload, currency: 'USD' }))
+    expect(() => observe(bad)).toThrow('Invalid signed')
+  })
+  it('rejects malformed JSON even with a valid signature', () => {
+    const invalid = Buffer.from('not JSON')
+    expect(() => observe(invalid)).toThrow('Invalid webhook JSON')
+  })
+  it('rejects empty and oversized payloads', () => {
+    expect(() => observe(Buffer.alloc(0))).toThrow()
+    expect(() => verifyYoupiObservation(Buffer.alloc(65537), 'sha256='+'0'.repeat(64), secret)).toThrow()
+  })
 })
