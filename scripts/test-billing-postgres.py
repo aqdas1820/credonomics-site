@@ -68,11 +68,14 @@ def credit(invoice, amount, utr=None):
     ]) + ");"
 
 
-def observation(invoice, payment=None, event="SUCCESS", amount=100, utr="TESTUTR00001", digest=None, order=None):
+AUTO_DIGEST = object()
+
+
+def observation(invoice, payment=None, event="SUCCESS", amount=100, utr="TESTUTR00001", digest=AUTO_DIGEST, order=None):
     return "select public.billing_record_youpi_observation(" + ",".join([
         literal(payment or str(uuid.uuid4())) + "::uuid",
         literal(order or invoice["invoiceNumber"]), literal(event), str(amount),
-        literal(utr), literal(digest if digest is not None else uuid.uuid4().hex * 2),
+        literal(utr), literal(uuid.uuid4().hex * 2 if digest is AUTO_DIGEST else digest),
     ]) + ");"
 
 
@@ -206,12 +209,8 @@ class BillingPostgres(unittest.TestCase):
 
     def test_15_invalid_gateway_binding(self):
         invoice = issue()
-        for kwargs in [dict(order="UNKNOWN"), dict(amount=99), dict(utr=None), dict(event="PAID"), dict(digest="bad")]:
+        for kwargs in [dict(order="UNKNOWN"), dict(amount=99), dict(utr=None), dict(event="PAID"), dict(digest="bad"), dict(digest=None)]:
             sql(observation(invoice, **kwargs), service=True, ok=False)
-        query = observation(invoice).replace("'" + ("f" * 64) + "'", "null")
-        # Explicit NULL digest was previously a three-valued-logic hole.
-        query = query[:query.rfind(",")] + ",null);"
-        sql(query, service=True, ok=False)
 
     def test_16_concurrent_gateway_delivery(self):
         invoice = issue()
