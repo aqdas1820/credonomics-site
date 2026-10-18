@@ -5,6 +5,7 @@ import { authenticatedUser } from '../../../../../src/lib/supabase/server'
 import { createSupabaseAdminClient } from '../../../../../src/lib/supabase/admin'
 import { isBillingAdmin } from '../../../admin-policy'
 import { isValidStoredPaidReceipt } from '../../../receipt-policy'
+import { billingDatabaseScopeReady } from '../../../db-scope'
 import PrintInvoiceButton from '../../../PrintInvoiceButton'
 import styles from '../invoice.module.css'
 
@@ -26,7 +27,7 @@ const money = (paise: number) => new Intl.NumberFormat('en-IN', { style: 'curren
  * Receipt data is copied from an append-only database snapshot. PDF binary archival is not implemented.
  */
 export default async function VerifiedReceiptPage({ params }: { params: { id: string } }) {
-  if (process.env.BILLING_PORTAL_ENABLED !== 'true' || process.env.BILLING_API_ENABLED !== 'true') notFound()
+  if (process.env.BILLING_PORTAL_ENABLED !== 'true' || (process.env.BILLING_API_ENABLED !== 'true' || !billingDatabaseScopeReady())) notFound()
   if (!/^[0-9a-f]{8}-[0-9a-f-]{27,}$/i.test(params.id)) notFound()
   const { user } = await authenticatedUser()
   if (!isBillingAdmin(user, process.env.BILLING_ADMIN_USER_IDS)) notFound()
