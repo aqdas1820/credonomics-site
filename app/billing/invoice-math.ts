@@ -34,10 +34,11 @@ export function calculateInvoice(draft: InvoiceDraft): { valid: boolean; totalPa
     const quantitySyntaxValid = /^[1-9]\d*$/.test(line.quantity)
     const qty = quantitySyntaxValid ? Number(line.quantity) : NaN
     const unitPaise = decimalToPaise(line.rate)
-    if (!line.description.trim() || line.description.length > 300 || !Number.isFinite(qty) || qty <= 0 || !Number.isInteger(qty) || unitPaise === null) {
+    if (!line.description.trim() || line.description.length > 300 || !Number.isSafeInteger(qty) || qty <= 0 || qty > 2_147_483_647 || unitPaise === null) {
       errors.push(`Invalid line ${index + 1}`)
       return 0
     }
+    // Match the PostgreSQL integer column even when a line has a zero-paise rate.
     const subtotal = qty * unitPaise
     if (!Number.isSafeInteger(subtotal) || subtotal > MAX_LINE_PAISE) {
       errors.push(`Line ${index + 1} exceeds limit`)
