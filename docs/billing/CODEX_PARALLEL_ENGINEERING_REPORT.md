@@ -169,7 +169,7 @@ retention decisions. These external gates remain BLOCKED. No mock success, fake
 OTP, paid provider or unlicensed gateway workaround is proposed.
 # Follow-up after Draft PR #2 — 2026-10-18
 
-This section records new source-only work; the earlier assignment below remains historical.
+This section records new source-only work; the earlier assignment above remains historical.
 
 ## Verified source and integration review
 
@@ -256,6 +256,3 @@ backend revision propagation plus replay tests; approved Free hosting path and k
 recovery; hosted synthetic recovery/quota/concurrency evidence; independently approved
 Supabase migrations/resources and passing non-skipped hosted acceptance. None authorizes
 production deployment, password resets, paid activation or live payments.
-
----
-
