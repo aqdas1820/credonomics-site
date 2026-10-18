@@ -1,6 +1,7 @@
 import 'server-only'
 import { createSupabaseAdminClient } from '../supabase/admin'
 import { verifyYoupiObservation, type YoupiGatewayObservation } from './youpi-webhook'
+import { billingDatabaseScopeReady } from '../../../app/billing/db-scope'
 
 /**
  * Trusted server-only gateway delivery adapter; not an HTTP endpoint.
@@ -14,7 +15,7 @@ export async function recordSignedYoupiObservation(
   signature: string | null,
 ): Promise<{ recorded: boolean; decision: 'REVIEW_REQUIRED'; duplicate: boolean }> {
   if (process.env.BILLING_API_ENABLED !== 'true' ||
-      process.env.BILLING_YOUPI_OBSERVATION_ENABLED !== 'true') {
+      process.env.BILLING_YOUPI_OBSERVATION_ENABLED !== 'true' || !billingDatabaseScopeReady()) {
     throw new Error('YouPI observation integration disabled')
   }
 
