@@ -6,6 +6,7 @@ on:
   pull_request:
     branches:
       - feature/youpi-payment-entry-prelaunch
+      - codex/billing-production-hardening
   push:
     branches:
       - feature/youpi-payment-entry-prelaunch
@@ -30,6 +31,7 @@ on:
       - "scripts/check-billing-launch-readiness.mjs"
       - "scripts/test-billing-archive-recovery.mjs"
       - "prototypes/worker-market-api/**"
+      - "prototypes/encrypted-token-store/**"
       - "docs/billing/ALL_AT_ONCE_RELEASE_GATES.json"
   workflow_dispatch:
 
@@ -42,7 +44,7 @@ concurrency:
 
 jobs:
   postgres-integration:
-    name: PostgreSQL 17 / 19 synthetic safety cases
+    name: PostgreSQL 17 / 20 synthetic safety cases
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     if: github.repository == 'aqdas1820/credonomics-site'
@@ -75,7 +77,7 @@ jobs:
           fi
           psql --version
 
-      - name: Execute 19 integration tests against disposable local PostgreSQL
+      - name: Execute 20 integration tests against disposable local PostgreSQL
         env:
           PGHOST: 127.0.0.1
           PGPORT: "5432"
@@ -114,6 +116,9 @@ jobs:
 
       - name: Stateless Worker feasibility prototype (offline fixtures only)
         run: node --test prototypes/worker-market-api/worker.test.mjs
+
+      - name: Encrypted token store (synthetic fixtures and disposable local SQLite only)
+        run: node --experimental-sqlite --test prototypes/encrypted-token-store/store.test.mjs
 
       - name: Local-only Next.js production build (NOT deployment)
         run: npm run build
