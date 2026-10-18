@@ -1,5 +1,6 @@
 import { calculateInvoice, type InvoiceDraft } from './invoice-math'
 import { reconcileVerifiedCredits, type BankCredit, type InvoiceSettlementStatus } from './settlement-policy'
+import { isBillingUuid } from './uuid-policy'
 
 /**
  * Shared domain model for admin-created and system-generated invoices.
@@ -23,7 +24,7 @@ export type InvoiceEvent =
 export type InvoiceTransition = { invoice: InvoiceRecord; events: InvoiceEvent[]; issuePaidReceipt: boolean }
 
 export function createInvoiceRecord(id: string, origin: InvoiceOrigin, draft: InvoiceDraft): InvoiceTransition {
-  if (!/^[a-f0-9-]{36}$/i.test(id)) throw new Error('Server-generated invoice UUID required')
+  if (!isBillingUuid(id)) throw new Error('Server-generated invoice UUID required')
   if (origin !== 'ADMIN' && origin !== 'SYSTEM') throw new Error('Invalid invoice origin')
   const result = calculateInvoice(draft)
   if (!result.valid) throw new Error(result.errors.join('; '))

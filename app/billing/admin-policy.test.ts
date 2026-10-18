@@ -16,4 +16,8 @@ describe('billing admin authorization', () => {
     expect(isBillingAdmin({ id, app_metadata: Object.create({ billing_admin: true }) }, id)).toBe(false)
     expect(isBillingAdmin({ id, app_metadata: { billing_admin: 'true' } }, id)).toBe(false)
   })
+  it('denies look-alike UUID even if an allowlist mistakenly contains it', () => {
+    const invalid = '12345678-' + '-'.repeat(27)
+    expect(isBillingAdmin({ id: invalid, app_metadata: { billing_admin: true } }, invalid)).toBe(false)
+  })
 })

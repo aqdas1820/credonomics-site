@@ -17,6 +17,9 @@ describe('invoice lifecycle', () => {
     expect(result.issuePaidReceipt).toBe(false)
   })
   it('creates automatic invoice as UNPAID', () => expect(createInvoiceRecord(id, 'SYSTEM', draft).invoice.status).toBe('UNPAID'))
+  it('rejects malformed invoice identifier before issuing records', () => {
+    expect(() => createInvoiceRecord('12345678-' + '-'.repeat(27), 'ADMIN', draft)).toThrow('UUID')
+  })
   it('rejects invalid invoices', () => expect(() => createInvoiceRecord(id, 'ADMIN', { ...draft, customer: '' })).toThrow())
   it('ignores gateway SUCCESS for paid status', () => {
     const invoice = createInvoiceRecord(id, 'ADMIN', draft).invoice

@@ -6,6 +6,7 @@ import { createSupabaseAdminClient } from '../../../../../src/lib/supabase/admin
 import { isBillingAdmin } from '../../../admin-policy'
 import { isValidStoredPaidReceipt } from '../../../receipt-policy'
 import { billingDatabaseScopeReady } from '../../../db-scope'
+import { isBillingUuid } from '../../../uuid-policy'
 import PrintInvoiceButton from '../../../PrintInvoiceButton'
 import ArchiveDocumentButton from '../../../ArchiveDocumentButton'
 import styles from '../invoice.module.css'
@@ -30,7 +31,7 @@ const money = (paise: number) => new Intl.NumberFormat('en-IN', { style: 'curren
 export default async function VerifiedReceiptPage({ params: promisedParams }: { params: Promise<{ id: string }> }) {
   const params = await promisedParams
   if (process.env.BILLING_PORTAL_ENABLED !== 'true' || (process.env.BILLING_API_ENABLED !== 'true' || !billingDatabaseScopeReady())) notFound()
-  if (!/^[0-9a-f]{8}-[0-9a-f-]{27,}$/i.test(params.id)) notFound()
+  if (!isBillingUuid(params.id)) notFound()
   const { user } = await authenticatedUser()
   if (!isBillingAdmin(user, process.env.BILLING_ADMIN_USER_IDS)) notFound()
   const service = createSupabaseAdminClient()
@@ -38,7 +39,7 @@ export default async function VerifiedReceiptPage({ params: promisedParams }: { 
   const { data, error } = await service.rpc('billing_get_receipt', { p_invoice_id: params.id })
   if (error || !data || typeof data !== 'object') notFound()
   const receipt = data as VerifiedReceiptSnapshot
-  if (!isValidStoredPaidReceipt(receipt)) notFound()
+  if (!isValidStoredPaidReceipt(receipt) || receipt.invoiceId.toLowerCase() !== params.id.toLowerCase()) notFound()
   return (
     <main className={styles.page}>
       <nav className={styles.controls}>
