@@ -25,7 +25,7 @@ if (approved && apiUrl && apiUrl !== expectedApi) {
 test.skip(!approved || apiUrl !== expectedApi, 'Requires verified backup, exact staging approval and exact API origin')
 
 const blocked = [401, 403, 404, 406]
-const privateRelations = ['invoices', 'invoice_lines', 'bank_credits', 'audit_events', 'receipts']
+const privateRelations = ['invoices', 'invoice_lines', 'bank_credit_evidence', 'audit_events', 'receipts']
 
 test('anonymous identity cannot read billing-private relations over PostgREST', async ({ playwright }) => {
   test.skip(!anonKey, 'Requires owner-private staging publishable/anon key')
@@ -55,7 +55,7 @@ test('verified ordinary user cannot read billing-private relations over PostgRES
   try {
     // Validate the token before interpreting negative responses as authorization
     // evidence. Otherwise an expired/invalid token could falsely 'pass' the test.
-    const identity = await api.get('/auth/v1/user', { headers: { 'Accept-Profile': 'public' } })
+    const identity = await api.get('/auth/v1/user')
     expect(identity.status(), 'Ordinary-user JWT must be currently valid').toBe(200)
 
     for (const relation of privateRelations) {
