@@ -15,10 +15,16 @@ function decimalToPaise(value: string): number | null {
   return Number.isSafeInteger(result) && result <= MAX_LINE_PAISE ? result : null
 }
 
+function isValidISODate(value: string): boolean {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false
+  const parsed = new Date(value + 'T00:00:00.000Z')
+  return Number.isFinite(parsed.getTime()) && parsed.toISOString().slice(0, 10) === value
+}
+
 export function calculateInvoice(draft: InvoiceDraft): { valid: boolean; totalPaise: number; linePaise: number[]; errors: string[] } {
   const errors: string[] = []
   if (!draft.number.trim() || draft.number.length > 40) errors.push('Invoice number required')
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(draft.date) || Number.isNaN(Date.parse(draft.date))) errors.push('Valid date required')
+  if (!isValidISODate(draft.date)) errors.push('Valid date required')
   if (!draft.customer.trim() || draft.customer.length > 120) errors.push('Customer required')
   if (draft.items.length === 0 || draft.items.length > 100) errors.push('1 to 100 items required')
   let totalPaise = 0
