@@ -10,6 +10,9 @@ on:
       - ".github/workflows/billing-postgres-validation.yml"
       - "docs/billing/*.sql"
       - "scripts/test-billing-postgres.py"
+      - "app/billing/**"
+      - "src/lib/billing/**"
+      - "vitest.config.mts"
   workflow_dispatch:
 
 permissions:
