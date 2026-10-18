@@ -4,6 +4,7 @@ import { createSupabaseAdminClient } from '../../../../../src/lib/supabase/admin
 import { isBillingAdmin } from '../../../../billing/admin-policy'
 import { prepareInvoiceCreation } from '../../../../billing/invoice-input'
 import { sameOrigin } from '../../../../billing/request-policy'
+import { billingDatabaseScopeReady } from '../../../../billing/db-scope'
 
 export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'
@@ -19,7 +20,7 @@ const json = (body: unknown, status: number) => NextResponse.json(body, { status
  * - exact same-origin POST. No customer/public/payment endpoint.
  */
 export async function POST(request: NextRequest) {
-  if (process.env.BILLING_API_ENABLED !== 'true' || process.env.BILLING_WRITE_ENABLED !== 'true') {
+  if (process.env.BILLING_API_ENABLED !== 'true' || process.env.BILLING_WRITE_ENABLED !== 'true' || !billingDatabaseScopeReady()) {
     return json({ error: 'Billing creation unavailable' }, 503)
   }
   if (!sameOrigin(request.headers.get('origin'), request.nextUrl.origin)) {
@@ -59,7 +60,7 @@ export async function POST(request: NextRequest) {
 
 /** Authenticated operator history, never a public customer invoice lookup. */
 export async function GET() {
-  if (process.env.BILLING_API_ENABLED !== 'true') return json({ error: 'Billing unavailable' }, 404)
+  if (process.env.BILLING_API_ENABLED !== 'true' || !billingDatabaseScopeReady()) return json({ error: 'Billing unavailable' }, 404)
   try {
     const { user } = await authenticatedUser()
     if (!isBillingAdmin(user, process.env.BILLING_ADMIN_USER_IDS)) return json({ error: 'Forbidden' }, 403)
