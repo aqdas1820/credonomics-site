@@ -29,7 +29,10 @@ export function calculateInvoice(draft: InvoiceDraft): { valid: boolean; totalPa
   if (draft.items.length === 0 || draft.items.length > 100) errors.push('1 to 100 items required')
   let totalPaise = 0
   const linePaise = draft.items.map((line, index) => {
-    const qty = Number(line.quantity)
+    // Only canonical decimal integers are quantities. Number() also accepts hex,
+    // exponent notation and whitespace, which must not enter financial records.
+    const quantitySyntaxValid = /^[1-9]\d*$/.test(line.quantity)
+    const qty = quantitySyntaxValid ? Number(line.quantity) : NaN
     const unitPaise = decimalToPaise(line.rate)
     if (!line.description.trim() || line.description.length > 300 || !Number.isFinite(qty) || qty <= 0 || !Number.isInteger(qty) || unitPaise === null) {
       errors.push(`Invalid line ${index + 1}`)
