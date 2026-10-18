@@ -4,6 +4,7 @@ import { createSupabaseAdminClient } from '../../../../../../../src/lib/supabase
 import { isBillingAdmin } from '../../../../../../billing/admin-policy'
 import { prepareBookedCredit } from '../../../../../../billing/credit-input'
 import { sameOrigin } from '../../../../../../billing/request-policy'
+import { readBoundedJsonBody } from '../../../../../../billing/bounded-json-body'
 import { billingDatabaseScopeReady } from '../../../../../../billing/db-scope'
 
 export const dynamic = 'force-dynamic'
@@ -29,18 +30,15 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
   if (!(request.headers.get('content-type') ?? '').toLowerCase().startsWith('application/json')) {
     return reply({ error: 'JSON required' }, 415)
   }
-  if (Number(request.headers.get('content-length')) > 8192) {
-    return reply({ error: 'Request too large' }, 413)
-  }
   try {
     const { user } = await authenticatedUser()
     if (!isBillingAdmin(user, process.env.BILLING_ADMIN_USER_IDS)) return reply({ error: 'Forbidden' }, 403)
     const service = createSupabaseAdminClient()
     if (!service) return reply({ error: 'Private billing database unavailable' }, 503)
-    const raw = await request.text()
-    if (raw.length > 8192) return reply({ error: 'Request too large' }, 413)
+    const body = await readBoundedJsonBody(request, 8192)
+    if (!body.ok) return reply({ error: body.reason === 'too-large' ? 'Request too large' : 'Invalid request body' }, body.reason === 'too-large' ? 413 : 400)
     let credit: ReturnType<typeof prepareBookedCredit>
-    try { credit = prepareBookedCredit(JSON.parse(raw)) }
+    try { credit = prepareBookedCredit(JSON.parse(body.text)) }
     catch { return reply({ error: 'Invalid independent bank-credit evidence' }, 400) }
     const { data, error } = await service.rpc('billing_verify_slice_credit', {
       p_invoice_id: params.id,
