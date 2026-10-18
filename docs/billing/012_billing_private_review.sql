@@ -9,6 +9,7 @@ create table if not exists billing_private.invoices (
   invoice_number text not null unique check (length(invoice_number) between 1 and 40),
   customer_name text not null check (length(customer_name) between 1 and 120),
   customer_phone_e164 text,
+  customer_address text not null default '' check (length(customer_address) <= 300),
   issued_on date not null,
   currency text not null default 'INR' check (currency = 'INR'),
   total_paise bigint not null check (total_paise > 0 and total_paise <= 10000000000),
