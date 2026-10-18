@@ -12,7 +12,7 @@ create or replace function public.billing_verify_slice_credit(
   p_operator_id uuid
 ) returns jsonb
 language plpgsql security definer
-set search_path = pg_catalog, public, billing_private
+set search_path = pg_catalog, pg_temp
 as $$
 declare
   v_invoice billing_private.invoices%rowtype;
