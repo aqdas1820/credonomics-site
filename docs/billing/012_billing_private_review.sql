@@ -99,6 +99,32 @@ create trigger immutable_billing_audit
 before update or delete on billing_private.audit_events
 for each row execute function billing_private.reject_financial_evidence_mutation();
 
+-- Original issued invoice identity and customer/line financial facts are write-once.
+-- Reconciliation may update ONLY status and updated_at on the invoice header;
+-- the underlying original issuance must never be silently rewritten.
+create or replace function billing_private.preserve_invoice_issuance_fields()
+returns trigger language plpgsql set search_path = pg_catalog
+as $
+begin
+  if row(new.id, new.invoice_number, new.customer_name,
+         new.customer_phone_e164, new.customer_address, new.issued_on,
+         new.currency, new.total_paise, new.origin, new.source_event_key,
+         new.created_at)
+     is distinct from
+     row(old.id, old.invoice_number, old.customer_name,
+         old.customer_phone_e164, old.customer_address, old.issued_on,
+         old.currency, old.total_paise, old.origin, old.source_event_key,
+         old.created_at) then
+    raise exception 'Issued invoice details cannot be rewritten';
+  end if;
+  return new;
+end;
+$;
+drop trigger if exists immutable_invoice_issuance on billing_private.invoices;
+create trigger immutable_invoice_issuance
+before update on billing_private.invoices
+for each row execute function billing_private.preserve_invoice_issuance_fields();
+
 alter table billing_private.invoices enable row level security;
 alter table billing_private.invoice_lines enable row level security;
 alter table billing_private.bank_credit_evidence enable row level security;
