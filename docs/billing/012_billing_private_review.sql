@@ -58,11 +58,11 @@ create table if not exists billing_private.receipts (
 
 create or replace function billing_private.reject_receipt_mutation()
 returns trigger language plpgsql set search_path = pg_catalog
-as $
+as $$
 begin
   raise exception 'Verified receipt snapshots are append-only';
 end;
-$;
+$$;
 drop trigger if exists immutable_verified_receipt on billing_private.receipts;
 create trigger immutable_verified_receipt
 before update or delete on billing_private.receipts
