@@ -13,7 +13,7 @@ const all = [schema, create, settle, read, youpi]
 describe('Billing review-only SQL safety contracts (static, not execution)', () => {
   it('rejects broken PL/pgSQL quoting or duplicated migrations', () => {
     for (const s of all) {
-      const open = s.match(/\bas \$\$\n/g) ?? []
+      const open = s.match(/\bas \$\$\r?\n/g) ?? []
       const close = s.match(/\bend;\s*\$\$;/g) ?? []
       expect(open.length).toBeGreaterThan(0)
       expect(open.length).toBe(close.length)
