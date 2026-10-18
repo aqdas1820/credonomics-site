@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { calculateInvoice } from './invoice-math'
+import BillingCreditReview from './BillingCreditReview'
 
 type Item = { description: string; quantity: string; rate: string }
 const money = (n: number) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(n)
@@ -76,7 +77,8 @@ export default function BillingForm() {
         {saved && <button type="button" onClick={reset}>Create next invoice</button>}
         {message && <p role="status">{message}</p>}
         {!valid && <p role="alert">{calculation.errors.join("; ")}</p>}
-        <p><strong>Safety:</strong> This prototype never marks an invoice PAID. A future PAID receipt requires independent manual Slice bank-credit verification by an authorized admin.</p>
+        <p><strong>Safety:</strong> Invoice printing preserves the original UNPAID document. A distinct PAID receipt needs verified bank credit and an immutable receipt workflow.</p>
+        {saved && <BillingCreditReview key={saved.id} invoiceId={saved.id} invoiceTotalPaise={saved.totalPaise} />}
       </div>
       <section className={`cn-sheet ${valid && saved ? "" : "cn-invalid-print"}`} aria-label="Invoice print preview">
         <header className="cn-head"><div><strong>CredoNomics Investment Solutions</strong><p>Invoice draft · Verify business details before issuance</p></div><div><strong>INVOICE</strong><p>#{saved?.invoiceNumber ?? 'Pending secure allocation'}</p><p>{date}</p></div></header>
