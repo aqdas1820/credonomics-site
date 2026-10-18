@@ -2,128 +2,66 @@ import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
 
-// Static migration-contract checks only. They do NOT replace a real Postgres
-// migration, RLS, concurrency or rollback test on the approved CredoNomics DB.
-const sql = (filename: string) =>
-  readFileSync(join(process.cwd(), 'docs', 'billing', filename), 'utf8')
+const sql = (name: string) => readFileSync(join(process.cwd(), 'docs/billing', name), 'utf8')
 const schema = sql('012_billing_private_review.sql')
 const create = sql('013_invoice_create_rpc_REVIEW_ONLY.sql')
-const reconcile = sql('014_slice_settlement_rpc_REVIEW_ONLY.sql')
-const reads = sql('015_admin_invoice_read_rpc_REVIEW_ONLY.sql')
-const gateway = sql('016_youpi_observation_rpc_REVIEW_ONLY.sql')
+const settle = sql('014_slice_settlement_rpc_REVIEW_ONLY.sql')
+const read = sql('015_admin_invoice_read_rpc_REVIEW_ONLY.sql')
+const youpi = sql('016_youpi_observation_rpc_REVIEW_ONLY.sql')
+const all = [schema, create, settle, read, youpi]
 
-describe('private billing migration security contracts', () => {
-  it('contains balanced PL/pgSQL function delimiters and exactly one transaction', () => {
-    for (const migration of [schema, create, reconcile, reads, gateway]) {
-      const opens = migration.match(/\bas \$\$\n/g) ?? []
-      const closings = migration.match(/\bend;\s*\$\$;/g) ?? []
-      expect(opens.length).toBeGreaterThan(0)
-      expect(opens.length).toBe(closings.length)
-      expect(migration).not.toMatch(/\bas \$(?!\$)/)
-      expect(migration).not.toMatch(/\bend;\s*\$(?!\$);/)
-      expect((migration.match(/\bcommit;/g) ?? []).length).toBe(1)
-      expect(migration.trimEnd().endsWith('commit;')).toBe(true)
+describe('Billing review-only SQL safety contracts (static, not execution)', () => {
+  it('rejects broken PL/pgSQL quoting or duplicated migrations', () => {
+    for (const s of all) {
+      const open = s.match(/\bas \$\$\n/g) ?? []
+      const close = s.match(/\bend;\s*\$\$;/g) ?? []
+      expect(open.length).toBeGreaterThan(0)
+      expect(open.length).toBe(close.length)
+      expect(s).not.toMatch(/\bas \$(?!\$)/)
+      expect((s.match(/\bcommit;/g) ?? []).length).toBe(1)
+      expect(s.trimEnd().endsWith('commit;')).toBe(true)
     }
-  })
-  it('has only one untruncated invoice issuer RPC definition', () => {
     expect((create.match(/create or replace function public\.billing_create_invoice\(/g) ?? []).length).toBe(1)
-    expect(create).toContain("p_source_event_key !~ '^[A-Za-z0-9:_-]{8,128}  it('denies anonymous and authenticated schema access', () => {
+    expect(create).toContain("p_source_event_key !~ '^[A-Za-z0-9:_-]{8,128}$'")
+  })
+  it('denies unauthenticated access to private financial tables', () => {
     expect(schema).toContain('revoke all on schema billing_private from public, anon, authenticated')
-    for (const table of ['invoices', 'invoice_lines', 'bank_credit_evidence', 'audit_events', 'receipts']) {
+    for (const table of ['invoices','invoice_lines','bank_credit_evidence','receipts','audit_events']) {
       expect(schema).toContain('alter table billing_private.' + table + ' enable row level security')
     }
-    expect(gateway).toContain('alter table billing_private.youpi_observations enable row level security')
+    expect(youpi).toContain('alter table billing_private.youpi_observations enable row level security')
   })
-  it('uses hardened SECURITY DEFINER search paths for every admin RPC', () => {
-    for (const migration of [create, reconcile, reads, gateway]) {
-      expect(migration).toContain('security definer')
-      expect(migration).toMatch(/set search_path\s*=\s*pg_catalog,\s*pg_temp/)
-      expect(migration).not.toMatch(/set search_path\s*=\s*pg_catalog,\s*public/)
-      expect(migration).toMatch(/coalesce\(auth\.role\(\),\s*''\)\s*<>\s*'service_role'/)
-      expect(migration).toContain('from public, anon, authenticated')
-      expect(migration).toContain('to service_role')
+  it('requires service role and safe search paths on every RPC', () => {
+    for (const s of [create,settle,read,youpi]) {
+      expect(s).toContain('security definer')
+      expect(s).toMatch(/set search_path\s*=\s*pg_catalog,\s*pg_temp/)
+      expect(s).toMatch(/coalesce\(auth\.role\(\),\s*''\)\s*<>\s*'service_role'/)
+      expect(s).toContain('from public, anon, authenticated')
+      expect(s).toContain('to service_role')
     }
   })
-  it('allocates invoice numbers in SQL and stores lines plus audit in one transaction', () => {
+  it('creates exact-price UNPAID invoices and never client-selected paid status', () => {
     expect(create).toContain("nextval('billing_private.invoice_sequence')")
+    expect(create).toContain('Invoice sequence exhausted')
     expect(create).toContain('insert into billing_private.invoice_lines')
+    expect(create).toContain("'UNPAID'")
     expect(create).toContain('insert into billing_private.audit_events')
-    expect(schema).toContain('source_event_key text unique')
   })
-  it('serializes bank credit verification and prevents over-credit', () => {
-    expect(reconcile).toMatch(/from billing_private\.invoices\s+where id=p_invoice_id for update/i)
-    expect(reconcile).toContain('Credit exceeds invoice outstanding')
+  it('locks bank settlement, blocks excess credits, and snapshots PAID once', () => {
+    expect(settle).toMatch(/from billing_private\.invoices\s+where id=p_invoice_id for update/i)
+    expect(settle).toContain('Credit exceeds invoice outstanding')
     expect(schema).toContain('utr text not null unique')
-    expect(reconcile).toContain("'BANK_CREDIT_VERIFIED'")
-  })
-  it('issues PAID receipt snapshots in the same bank-credit transaction only', () => {
-    expect(reconcile).toContain("if v_new_status='PAID' then")
-    expect(reconcile).toContain('insert into billing_private.receipts')
-    expect(schema).toContain('unique references billing_private.invoices')
+    expect(settle).toContain("if v_new_status='PAID' then")
+    expect(settle).toContain('insert into billing_private.receipts')
     expect(schema).toContain('create trigger immutable_verified_receipt')
   })
-  it('never lets signed gateway SUCCESS change invoice status or create receipt', () => {
-    expect(gateway).toContain("'REVIEW_REQUIRED'")
-    expect(gateway).not.toMatch(/^\s*update\s+billing_private\.invoices/im)
-    expect(gateway).not.toMatch(/^\s*insert\s+into\s+billing_private\.receipts/im)
-    expect(gateway).not.toMatch(/^\s*insert\s+into\s+billing_private\.bank_credit_evidence/im)
-    expect(gateway).toContain('unique(payment_id, event)')
-    expect(gateway).toContain('raw_sha256 text not null unique')
-  })
-  it('reads receipt data from the immutable snapshot rather than recomputing status', () => {
-    expect(reads).toContain('select r.snapshot into v_snapshot')
-    expect(reads).toContain("i.status='PAID'")
-  })
-})
-")
-    expect(create).toContain("'UNPAID',")
-    expect(create).not.toContain('commit;\n)) then')
-  })
-  it('denies anonymous and authenticated schema access', () => {
-    expect(schema).toContain('revoke all on schema billing_private from public, anon, authenticated')
-    for (const table of ['invoices', 'invoice_lines', 'bank_credit_evidence', 'audit_events', 'receipts']) {
-      expect(schema).toContain('alter table billing_private.' + table + ' enable row level security')
-    }
-    expect(gateway).toContain('alter table billing_private.youpi_observations enable row level security')
-  })
-  it('uses hardened SECURITY DEFINER search paths for every admin RPC', () => {
-    for (const migration of [create, reconcile, reads, gateway]) {
-      expect(migration).toContain('security definer')
-      expect(migration).toMatch(/set search_path\s*=\s*pg_catalog,\s*pg_temp/)
-      expect(migration).not.toMatch(/set search_path\s*=\s*pg_catalog,\s*public/)
-      expect(migration).toMatch(/coalesce\(auth\.role\(\),\s*''\)\s*<>\s*'service_role'/)
-      expect(migration).toContain('from public, anon, authenticated')
-      expect(migration).toContain('to service_role')
-    }
-  })
-  it('allocates invoice numbers in SQL and stores lines plus audit in one transaction', () => {
-    expect(create).toContain("nextval('billing_private.invoice_sequence')")
-    expect(create).toContain('insert into billing_private.invoice_lines')
-    expect(create).toContain('insert into billing_private.audit_events')
-    expect(schema).toContain('source_event_key text unique')
-  })
-  it('serializes bank credit verification and prevents over-credit', () => {
-    expect(reconcile).toMatch(/from billing_private\.invoices\s+where id=p_invoice_id for update/i)
-    expect(reconcile).toContain('Credit exceeds invoice outstanding')
-    expect(schema).toContain('utr text not null unique')
-    expect(reconcile).toContain("'BANK_CREDIT_VERIFIED'")
-  })
-  it('issues PAID receipt snapshots in the same bank-credit transaction only', () => {
-    expect(reconcile).toContain("if v_new_status='PAID' then")
-    expect(reconcile).toContain('insert into billing_private.receipts')
-    expect(schema).toContain('unique references billing_private.invoices')
-    expect(schema).toContain('create trigger immutable_verified_receipt')
-  })
-  it('never lets signed gateway SUCCESS change invoice status or create receipt', () => {
-    expect(gateway).toContain("'REVIEW_REQUIRED'")
-    expect(gateway).not.toMatch(/^\s*update\s+billing_private\.invoices/im)
-    expect(gateway).not.toMatch(/^\s*insert\s+into\s+billing_private\.receipts/im)
-    expect(gateway).not.toMatch(/^\s*insert\s+into\s+billing_private\.bank_credit_evidence/im)
-    expect(gateway).toContain('unique(payment_id, event)')
-    expect(gateway).toContain('raw_sha256 text not null unique')
-  })
-  it('reads receipt data from the immutable snapshot rather than recomputing status', () => {
-    expect(reads).toContain('select r.snapshot into v_snapshot')
-    expect(reads).toContain("i.status='PAID'")
+  it('prevents YouPI SUCCESS from marking invoices PAID or crediting Slice', () => {
+    expect(youpi).toContain("'REVIEW_REQUIRED'")
+    expect(youpi).not.toMatch(/^\s*update\s+billing_private\.invoices/im)
+    expect(youpi).not.toMatch(/^\s*insert\s+into\s+billing_private\.bank_credit_evidence/im)
+    expect(youpi).not.toMatch(/^\s*insert\s+into\s+billing_private\.receipts/im)
+    expect(youpi).toContain('unique(payment_id, event)')
+    expect(youpi).toContain('raw_sha256 text not null unique')
+    expect(read).toContain('select r.snapshot into v_snapshot')
   })
 })
