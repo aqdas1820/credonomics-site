@@ -4,6 +4,7 @@ import { createSupabaseAdminClient } from '../../../../../../../src/lib/supabase
 import { isBillingAdmin } from '../../../../../../billing/admin-policy'
 import { prepareBookedCredit } from '../../../../../../billing/credit-input'
 import { sameOrigin } from '../../../../../../billing/request-policy'
+import { billingDatabaseScopeReady } from '../../../../../../billing/db-scope'
 
 export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'
@@ -18,7 +19,7 @@ const reply = (body: unknown, status: number) => NextResponse.json(body, {
  */
 export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
   if (process.env.BILLING_API_ENABLED !== 'true' ||
-      process.env.BILLING_SETTLEMENT_ENABLED !== 'true') {
+      process.env.BILLING_SETTLEMENT_ENABLED !== 'true' || !billingDatabaseScopeReady()) {
     return reply({ error: 'Bank reconciliation unavailable' }, 503)
   }
   if (!sameOrigin(request.headers.get('origin'), request.nextUrl.origin)) {
