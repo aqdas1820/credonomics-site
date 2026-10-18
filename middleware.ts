@@ -13,8 +13,8 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 308)
   }
 
-  // Billing is a development-only draft, not an authenticated issuance workflow.
-  if (request.nextUrl.pathname.startsWith('/billing') && process.env.VERCEL_ENV === 'production') {
+  // Deny billing on all hosted Vercel environments until verified admin auth exists.
+  if ((request.nextUrl.pathname === '/billing' || request.nextUrl.pathname.startsWith('/billing/')) && Boolean(process.env.VERCEL_ENV)) {
     return new NextResponse('Not Found', { status: 404, headers: { 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow, noarchive' } })
   }
 
