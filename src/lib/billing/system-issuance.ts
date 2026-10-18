@@ -2,6 +2,7 @@ import 'server-only'
 import { createSupabaseAdminClient } from '../supabase/admin'
 import { prepareInvoiceCreation } from '../../../app/billing/invoice-input'
 import { isValidInvoiceSourceEventId } from '../../../app/billing/source-event-policy'
+import { billingDatabaseScopeReady } from '../../../app/billing/db-scope'
 
 /**
  * Callable only from a trusted server-side business event handler.
@@ -9,7 +10,7 @@ import { isValidInvoiceSourceEventId } from '../../../app/billing/source-event-p
  * A unique source-event key prevents duplicate invoice issuance on replay.
  */
 export async function issueAutomaticInvoiceFromTrustedEvent(sourceEventId: string, invoiceInput: unknown) {
-  if (process.env.BILLING_API_ENABLED !== 'true' || process.env.BILLING_SYSTEM_ENABLED !== 'true') {
+  if (process.env.BILLING_API_ENABLED !== 'true' || process.env.BILLING_SYSTEM_ENABLED !== 'true' || !billingDatabaseScopeReady()) {
     throw new Error('System invoicing disabled')
   }
   if (!isValidInvoiceSourceEventId(sourceEventId)) throw new Error('Invalid trusted business event ID')
