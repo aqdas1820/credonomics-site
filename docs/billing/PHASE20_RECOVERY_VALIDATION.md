@@ -4,6 +4,31 @@ Date: 2026-10-18. Branch: `feature/youpi-payment-entry-prelaunch`. Draft PR #1 o
 
 **Overall result: FAIL / BLOCKED at preflight. No backup or restoration was attempted. Verified staging recovery is NOT established.** This is a prerequisite report, not a successful recovery certificate.
 
+## Latest container verification follow-up (2026-10-18)
+
+This follow-up supersedes the earlier missing-container state below. Starting feature commit: `8b6d38a940e7b5a6588dd8e93e852638ca426667`. The owner authorized container verification, synthetic write/read and dismount/remount recovery, and explicitly prohibited starting a database backup. Existing authorized database credentials remain unavailable.
+
+| Check actually performed | Result and evidence |
+| --- | --- |
+| Expected file container | PASS: owner-selected private D: path exists, exactly 4,294,967,296 bytes (4 GiB), no reparse attribute. |
+| Container file ACL | PASS for inspected identities: owner matches current account; exactly two allow rules, owner and SYSTEM only. The file inherits these from the protected parent; file inheritance is enabled. |
+| Mounted drive and container binding | PASS: QueryDosDevice maps R: to a VeraCrypt device. Read-only driver properties confirm the exact expected file backs R:. Driver version checked first against installed release (0x0126). No password, key, PIM, volume ID or unrelated path displayed. |
+| Encryption configuration | PASS: driver EA/mode/PRF IDs 1/1/1, decoded against exact release sources as AES/XTS/SHA-512; hidden-volume and partition-scope flags false; writable mount. Full-format completion cannot be established retrospectively from these properties. |
+| Filesystem and capacity | PASS for availability: NTFS, 4,294,701,056 bytes usable, 4,270,297,088 bytes initially free. R: root not a reparse point and no root Git marker. Backup/restore size and all sync mappings remain unverified. |
+| Synthetic write/read | PASS: new R:/Phase20-Synthetic-Recovery-Test.txt, 111 fabricated bytes, byte-for-byte immediate read match. Only this deliberately synthetic file read. SHA-256: 7932a63310e8bd3895da1e5ef4cb2b2e3fb3ae3c24ee5d552ee0b0a3526d6ae7. |
+| Normal dismount | PASS: `/u R /q`, exit 0, R: absent afterward, synthetic file inaccessible and original container still present. No force switch. |
+| Cached password availability | Read-only driver cache-status query returned false / Win32 232 (no data) after dismount. No cache contents requested or displayed; no unrelated caches cleared. |
+| Remount and synthetic recovery | PASS: exact-container dialog launched with caching/history disabled and secure desktop enabled; no password argument. R: subsequently returned, the mount process exited, NTFS was available, and the 111-byte synthetic file SHA-256 matched the pre-dismount hash exactly. |
+| Independently retained recovery material | PENDING owner confirmation of using the retained material in the private dialog. Successful synthetic remount/decryption is measured; independent custody, header-loss recovery and recovery on a different machine are not proven. |
+
+Actual commands/checks: Get-Item, Get-Acl/GetAccessRules, IO.DriveInfo, Get-AuthenticodeSignature, read-only QueryDosDevice and DeviceIoControl version/properties/cache-status requests, IO.File.WriteAllBytes/ReadAllBytes on the single new synthetic file, Get-FileHash -Algorithm SHA256, Start-Process with `/u R /q`, then Start-Process with `/v <owner-selected-container> /l R /cache n /history n /secureDesktop y /q`. Get-Volume -DriveLetter R did not enumerate this mount; device mapping and DriveInfo established the results instead. CLI guidance and metadata constants/layouts checked against [official Windows command-line documentation](https://veracrypt.io/en/Command%20Line%20Usage%20for%20Windows.html) and exact VeraCrypt_1.26.29 upstream Apidrvr.h, Tcdefs.h, Crypto.h and Crypto.c. No private volume contents scanned.
+
+Automatic approval review rejected the initial combined synthetic-test/dismount command without a detailed reason; it did not execute. Separate narrowly scoped synthetic-write/read and normal-dismount operations subsequently succeeded. The rejected command is not counted as a test run. A later combined report-write/status shell command was also rejected before execution; the report update used the dedicated file-edit tool instead.
+
+**Overall remains FAIL / BLOCKED.** Synthetic encryption checks are not staging recovery. No database export, SQL command, local database cluster/restore, Storage export, real Auth/RLS test, migration, credential reset or paid operation ran. All five final gates remain NOT READY. Independent recovery proof, credentials, sizing, sync exclusion and faithful Supabase recovery limits remain open. Do not start the database backup under this follow-up authorization.
+
+Earlier sections below are historical snapshots, including superseded container absence and pending owner-setup instructions.
+
 ## Continuation from `34a5b8645289a94f74f637a9b663b51190f10506`
 
 This section supersedes the initial tool-availability findings below. Backup/recovery remains **FAIL / BLOCKED**; no staging credentials, records or exports were read, printed or published.
