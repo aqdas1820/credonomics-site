@@ -20,7 +20,7 @@ create table if not exists billing_private.youpi_observations (
 );
 
 alter table billing_private.youpi_observations enable row level security;
-revoke all on table billing_private.youpi_observations from public, anon, authenticated;
+revoke all on table billing_private.youpi_observations from public, anon, authenticated, service_role;
 -- Append-only gateway observations, including for the service role.
 create or replace function billing_private.reject_observation_mutation()
 returns trigger language plpgsql set search_path=pg_catalog as $$
@@ -32,6 +32,11 @@ drop trigger if exists immutable_youpi_observation on billing_private.youpi_obse
 create trigger immutable_youpi_observation
 before update or delete on billing_private.youpi_observations
 for each row execute function billing_private.reject_observation_mutation();
+drop trigger if exists no_truncate on billing_private.youpi_observations;
+create trigger no_truncate before truncate on billing_private.youpi_observations
+execute function billing_private.reject_observation_mutation();
+revoke all on function billing_private.reject_observation_mutation()
+  from public, anon, authenticated, service_role;
 
 create or replace function public.billing_record_youpi_observation(
   p_payment_id uuid, p_order_id text, p_event text,
@@ -43,17 +48,37 @@ as $$
 declare
   v_invoice billing_private.invoices%rowtype;
   v_id uuid;
+  v_existing billing_private.youpi_observations%rowtype;
 begin
   if coalesce(auth.role(),'') <> 'service_role' then
     raise exception 'Not authorized' using errcode='42501';
   end if;
   if p_payment_id is null or p_order_id is null or p_event is null or
      p_event not in ('SUCCESS','FAILED','EXPIRED','CANCELLED') or
-     p_raw_sha256 !~ '^[0-9a-f]{64}$' or
+     p_raw_sha256 is null or p_raw_sha256 !~ '^[0-9a-f]{64}$' or
      p_amount_paise is null or p_amount_paise <= 0 or p_amount_paise > 10000000000 or
      (p_utr is not null and p_utr !~ '^[A-Z0-9-]{8,80}$') or
      (p_event = 'SUCCESS' and p_utr is null) then
     raise exception 'Invalid gateway observation';
+  end if;
+  -- Lock on payment identity BEFORE checking order/amount, so contradictions
+  -- receive an explicit security result even when the new order is unknown.
+  perform pg_advisory_xact_lock(hashtextextended(p_payment_id::text, 1));
+  select * into v_existing from billing_private.youpi_observations
+    where payment_id=p_payment_id and event=p_event;
+  if found then
+    if v_existing.order_id is distinct from p_order_id or
+       v_existing.amount_paise is distinct from p_amount_paise or
+       v_existing.utr is distinct from p_utr or
+       v_existing.raw_sha256 is distinct from p_raw_sha256 then
+      -- Return (do not raise) so the conflict audit survives transaction commit.
+      insert into billing_private.audit_events(invoice_id,event_type,actor,details)
+      values (v_existing.invoice_id,'YOUPI_OBSERVATION_CONFLICT','YOUPI_GATEWAY',
+        jsonb_build_object('paymentId',p_payment_id,'event',p_event,
+          'sha256',p_raw_sha256,'decision','SECURITY_REVIEW_CONFLICT'));
+      return jsonb_build_object('recorded',false,'decision','SECURITY_REVIEW_CONFLICT','duplicate',false);
+    end if;
+    return jsonb_build_object('recorded',false,'decision','REVIEW_REQUIRED','duplicate',true);
   end if;
   select * into v_invoice from billing_private.invoices where invoice_number=p_order_id;
   if not found then raise exception 'Unknown invoice order'; end if;
@@ -61,20 +86,16 @@ begin
     raise exception 'Gateway amount does not match issued invoice';
   end if;
 
-  -- Both unique(payment_id,event) and unique(raw_sha256) are durable anti-replay
-  -- protections. Retries are acknowledged but do not duplicate any audit entry.
+  -- Identical retries already returned above. Any other unique collision
+  -- fails closed rather than being silently acknowledged as a duplicate.
   insert into billing_private.youpi_observations (
     invoice_id, payment_id, order_id, event,
     amount_paise, utr, raw_sha256
   ) values (
     v_invoice.id, p_payment_id, p_order_id, p_event,
     p_amount_paise, p_utr, p_raw_sha256
-  ) on conflict do nothing
+  )
   returning id into v_id;
-
-  if v_id is null then
-    return jsonb_build_object('recorded',false,'decision','REVIEW_REQUIRED','duplicate',true);
-  end if;
 
   insert into billing_private.audit_events(invoice_id,event_type,actor,details)
   values (v_invoice.id,'YOUPI_OBSERVATION','YOUPI_GATEWAY',jsonb_build_object(

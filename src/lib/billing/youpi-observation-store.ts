@@ -34,9 +34,13 @@ export async function recordSignedYoupiObservation(
     p_utr: observation.utr,
     p_raw_sha256: observation.rawSha256,
   })
+  if (!error && data?.decision === 'SECURITY_REVIEW_CONFLICT') {
+    throw new Error('YOUPI_SECURITY_REVIEW_CONFLICT')
+  }
   if (error || !data || data.decision !== 'REVIEW_REQUIRED' ||
       typeof data.recorded !== 'boolean' || typeof data.duplicate !== 'boolean') {
     throw new Error('YouPI gateway observation was not durably recorded')
   }
+  if (data.recorded === data.duplicate) throw new Error('Invalid YouPI observation acknowledgement')
   return { recorded: data.recorded, duplicate: data.duplicate, decision: 'REVIEW_REQUIRED' }
 }
