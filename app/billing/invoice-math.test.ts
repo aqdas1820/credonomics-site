@@ -13,6 +13,15 @@ describe('invoice draft arithmetic', () => {
     }
   })
   it('rejects zero quantity', () => expect(calculateInvoice({ ...base, items: [{ ...base.items[0], quantity: '0' }] }).valid).toBe(false))
+  it('rejects quantities beyond Postgres int4 even when the line is free', () => {
+    for (const quantity of ['2147483648', '9007199254740993']) {
+      const result = calculateInvoice({ ...base, items: [
+        { description: 'Free item', quantity, rate: '0' },
+        { description: 'Paid item', quantity: '1', rate: '1.00' },
+      ] })
+      expect(result.valid).toBe(false)
+    }
+  })
   it('rejects unsafe totals', () => expect(calculateInvoice({ ...base, items: [{ ...base.items[0], quantity: '99999999', rate: '99999999' }] }).valid).toBe(false))
   it('rejects empty customer', () => expect(calculateInvoice({ ...base, customer: ' ' }).valid).toBe(false))
   it('rejects impossible calendar dates', () => expect(calculateInvoice({ ...base, date: '2026-02-30' }).valid).toBe(false))
