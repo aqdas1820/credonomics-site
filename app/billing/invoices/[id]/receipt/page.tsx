@@ -13,15 +13,17 @@ export const metadata: Metadata = {
   title: 'Verified Payment Receipt — CredoNomics Admin',
   robots: { index: false, follow: false, noarchive: true },
 }
-type PaymentReceiptInvoice = {
-  id: string; invoiceNumber: string; date: string; customer: string
-  totalPaise: number; paidPaise: number; status: string
+type VerifiedReceiptSnapshot = {
+  invoiceId: string; invoiceNumber: string; receiptNumber: string; invoiceDate: string
+  issuedAt: string; customer: string; totalPaise: number; paidPaise: number
+  status: 'PAID'; version: number
+  verifiedCredits: { utr: string; amountPaise: number; bookedAt: string }[]
 }
 const money = (paise: number) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(paise / 100)
 
 /**
  * Human-verifiable PAID receipt view, NEVER offered on gateway SUCCESS alone.
- * Browser printing is available; immutable PDF archival is not implemented.
+ * Receipt data is copied from an append-only database snapshot. PDF binary archival is not implemented.
  */
 export default async function VerifiedReceiptPage({ params }: { params: { id: string } }) {
   if (process.env.BILLING_PORTAL_ENABLED !== 'true' || process.env.BILLING_API_ENABLED !== 'true') notFound()
@@ -30,32 +32,37 @@ export default async function VerifiedReceiptPage({ params }: { params: { id: st
   if (!isBillingAdmin(user, process.env.BILLING_ADMIN_USER_IDS)) notFound()
   const service = createSupabaseAdminClient()
   if (!service) notFound()
-  const { data, error } = await service.rpc('billing_get_invoice', { p_invoice_id: params.id })
+  const { data, error } = await service.rpc('billing_get_receipt', { p_invoice_id: params.id })
   if (error || !data || typeof data !== 'object') notFound()
-  const invoice = data as PaymentReceiptInvoice
-  if (!canRenderPaidReceipt(invoice)) notFound()
+  const receipt = data as VerifiedReceiptSnapshot
+  if (!canRenderPaidReceipt(receipt) || receipt.version !== 1 ||
+      typeof receipt.receiptNumber !== 'string' || !Array.isArray(receipt.verifiedCredits)) notFound()
   return (
     <main className={styles.page}>
       <nav className={styles.controls}>
-        <Link href={'/billing/invoices/' + encodeURIComponent(invoice.id)}>← Invoice details</Link>
+        <Link href={'/billing/invoices/' + encodeURIComponent(receipt.invoiceId)}>← Invoice details</Link>
         <PrintInvoiceButton />
       </nav>
       <article className={styles.sheet}>
         <header className={styles.header}>
           <div><h1>CredoNomics Investment Solutions</h1><p>Verified bank-credit acknowledgment</p></div>
-          <div><strong>PAYMENT RECEIPT VIEW</strong><p>Invoice #{invoice.invoiceNumber}</p><p>Invoice date: {invoice.date}</p></div>
+          <div><strong>PAYMENT RECEIPT VIEW</strong><p>Receipt #{receipt.receiptNumber}</p><p>Invoice #{receipt.invoiceNumber}</p><p>Issued: {receipt.issuedAt}</p></div>
         </header>
         <div className={styles.status}>PAID · FULL SLICE BANK CREDIT INDEPENDENTLY VERIFIED</div>
-        <section><strong>Received From</strong><p>{invoice.customer}</p></section>
+        <section><strong>Received From</strong><p>{receipt.customer}</p></section>
         <section className={styles.totals}>
-          <p><span>Invoice amount</span><strong>{money(invoice.totalPaise)}</strong></p>
-          <p><span>Verified bank credits</span><strong>{money(invoice.paidPaise)}</strong></p>
+          <p><span>Invoice amount</span><strong>{money(receipt.totalPaise)}</strong></p>
+          <p><span>Verified bank credits</span><strong>{money(receipt.paidPaise)}</strong></p>
           <p><span>Outstanding</span><strong>{money(0)}</strong></p>
         </section>
+        <section aria-label="Verified bank references">
+          <strong>Independently verified Slice credits</strong>
+          {receipt.verifiedCredits.map(credit => <p key={credit.utr}>UTR {credit.utr} · {money(credit.amountPaise)} · Bank booked {credit.bookedAt}</p>)}
+        </section>
         <footer className={styles.note}>
-          Generated from server-side verified credit records for this invoice. A YouPI SUCCESS notification
-          does not independently verify Slice credit. This is a printable receipt view, NOT a separately
-          stored or digitally signed immutable PDF. Do not represent it as tax documentation.
+          Generated from an append-only, version {receipt.version} database receipt snapshot upon full
+          independently verified Slice credit. A YouPI SUCCESS notification alone cannot trigger issuance.
+          Printable document only; an immutable archived PDF file and digital signature are not yet enabled.
         </footer>
       </article>
     </main>
