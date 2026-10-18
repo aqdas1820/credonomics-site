@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { calculateInvoice } from './invoice-math'
 import BillingCreditReview from './BillingCreditReview'
 
@@ -42,7 +43,7 @@ export default function BillingForm() {
           typeof invoice.invoiceNumber !== 'string' || invoice.totalPaise !== calculation.totalPaise ||
           invoice.status !== 'UNPAID') throw new Error('Unexpected invoice response; verify records')
       setSaved(invoice)
-      setMessage('Invoice saved with server-generated number. UNPAID copy is ready to print.')
+      setMessage('Invoice saved. Open the server-authoritative invoice to print an UNPAID copy.')
     } catch (error) {
       setMessage(error instanceof Error ? error.message : 'Invoice creation failed')
     } finally { setSaving(false) }
@@ -73,7 +74,7 @@ export default function BillingForm() {
         <button type="button" disabled={!!saved || items.length >= 100} onClick={() => setItems(xs => [...xs, { description: '', quantity: '1', rate: '' }])}>+ Add item</button>
         <p role="status"><strong>Total: {money(total)}</strong></p>
         <button type="button" disabled={!valid || !!saved || saving || total <= 0} onClick={save}>{saving ? 'Saving…' : 'Save & Issue UNPAID Invoice'}</button>
-        <button type="button" disabled={!saved || !valid} onClick={() => window.print()}>Print / Save as PDF (UNPAID)</button>
+        {saved && <Link className="cn-authoritative-link" href={'/billing/invoices/' + encodeURIComponent(saved.id)}>View saved invoice / Print PDF</Link>}
         {saved && <button type="button" onClick={reset}>Create next invoice</button>}
         {message && <p role="status">{message}</p>}
         {!valid && <p role="alert">{calculation.errors.join("; ")}</p>}
@@ -95,6 +96,7 @@ export default function BillingForm() {
         .cn-billing input { padding: 11px; border: 1px solid #94a3b8; border-radius: 7px; background: white; color: #0f172a; width: 100%; }
         .cn-billing button { padding: 10px 16px; margin: 8px 8px 8px 0; border-radius: 7px; border: 1px solid #64748b; background: #0f2744; color: white; cursor: pointer; }
         .cn-billing button:disabled { opacity: .45; cursor: not-allowed; }
+        .cn-billing .cn-authoritative-link { display: inline-block; padding: 10px 16px; margin: 8px 8px 8px 0; border-radius: 7px; background: #115e59; color: white; font-weight: 600; text-decoration: none; }
         .cn-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
         .cn-item { display: grid; grid-template-columns: 3fr 1fr 1fr auto; gap: 10px; align-items: end; margin: 12px 0; }
         .cn-sheet { background: white; color: #10223b; padding: 36px; border: 2px solid #275b90; min-height: 550px; overflow-wrap: anywhere; }
