@@ -35,7 +35,7 @@ create table if not exists billing_private.bank_credit_evidence (
   invoice_id uuid not null references billing_private.invoices(id) on delete restrict,
   bank_name text not null default 'Slice' check (bank_name = 'Slice'),
   utr text not null unique check (length(utr) between 8 and 80),
-  amount_paise bigint not null check (amount_paise > 0),
+  amount_paise bigint not null check (amount_paise > 0 and amount_paise <= 10000000000),
   credited_at timestamptz not null,
   reviewed_by text not null check (length(reviewed_by) between 1 and 200),
   verified_at timestamptz not null,
