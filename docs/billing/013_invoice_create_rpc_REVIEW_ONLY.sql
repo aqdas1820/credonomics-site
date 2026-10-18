@@ -11,6 +11,7 @@ create or replace function public.billing_create_invoice(
   p_customer_name text,
   p_issued_on date,
   p_customer_phone_e164 text,
+  p_customer_address text,
   p_lines jsonb,
   p_operator_id uuid
 ) returns jsonb
@@ -34,6 +35,9 @@ begin
   if p_operator_id is null or p_customer_name is null or
      length(btrim(p_customer_name)) not between 1 and 120 or p_issued_on is null then
     raise exception 'Invalid invoice header';
+  end if;
+  if p_customer_address is null or length(p_customer_address) > 300 then
+    raise exception 'Invalid customer address';
   end if;
   if p_customer_phone_e164 is not null and
      p_customer_phone_e164 !~ '^\+[1-9][0-9]{6,14}$' then
@@ -68,9 +72,9 @@ begin
   v_number := 'CN-' || to_char(p_issued_on,'YYYY') || '-' ||
               lpad(nextval('billing_private.invoice_sequence')::text, 8, '0');
   insert into billing_private.invoices(
-    invoice_number, customer_name, customer_phone_e164, issued_on, total_paise, status
+    invoice_number, customer_name, customer_phone_e164, customer_address, issued_on, total_paise, status
   ) values (
-    v_number, btrim(p_customer_name), p_customer_phone_e164, p_issued_on, v_total, 'UNPAID'
+    v_number, btrim(p_customer_name), p_customer_phone_e164, btrim(p_customer_address), p_issued_on, v_total, 'UNPAID'
   ) returning id into v_invoice_id;
 
   for v_line in select value from jsonb_array_elements(p_lines)
@@ -94,6 +98,6 @@ begin
 end;
 $$;
 
-revoke all on function public.billing_create_invoice(text,date,text,jsonb,uuid) from public, anon, authenticated;
-grant execute on function public.billing_create_invoice(text,date,text,jsonb,uuid) to service_role;
+revoke all on function public.billing_create_invoice(text,date,text,text,jsonb,uuid) from public, anon, authenticated;
+grant execute on function public.billing_create_invoice(text,date,text,text,jsonb,uuid) to service_role;
 commit;
