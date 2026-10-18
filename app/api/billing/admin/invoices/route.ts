@@ -56,3 +56,19 @@ export async function POST(request: NextRequest) {
     return json({ error: 'Billing creation unavailable' }, 503)
   }
 }
+
+/** Authenticated operator history, never a public customer invoice lookup. */
+export async function GET() {
+  if (process.env.BILLING_API_ENABLED !== 'true') return json({ error: 'Billing unavailable' }, 404)
+  try {
+    const { user } = await authenticatedUser()
+    if (!isBillingAdmin(user, process.env.BILLING_ADMIN_USER_IDS)) return json({ error: 'Forbidden' }, 403)
+    const service = createSupabaseAdminClient()
+    if (!service) return json({ error: 'Private billing database unavailable' }, 503)
+    const { data, error } = await service.rpc('billing_list_invoices', { p_limit: 25 })
+    if (error || !Array.isArray(data)) return json({ error: 'Invoice history unavailable' }, 503)
+    return json({ invoices: data }, 200)
+  } catch {
+    return json({ error: 'Invoice history unavailable' }, 503)
+  }
+}
