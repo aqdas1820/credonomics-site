@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { readBoundedJsonBody } from './bounded-json-body'
 
-function request(chunks: Uint8Array[], contentLength?: string | null, onCancel?: () => void) {
+function request(chunks: Uint8Array[], contentLength?: string | null, onCancel?: () => void): Pick<Request, 'headers' | 'body'> {
   const headers = new Headers()
   if (contentLength != null) headers.set('content-length', contentLength)
   let readIndex = 0
@@ -12,7 +12,7 @@ function request(chunks: Uint8Array[], contentLength?: string | null, onCancel?:
     },
     cancel() { onCancel?.() },
   })
-  return { headers, body }
+  return { headers, body: body as Request['body'] }
 }
 
 const bytes = (text: string) => new TextEncoder().encode(text)
@@ -30,7 +30,7 @@ describe('bounded admin billing JSON reader', () => {
   })
 
   it('rejects oversized Content-Length before asking for the stream', async () => {
-    const body = { getReader: () => { throw new Error('body must not be opened') } } as unknown as ReadableStream<Uint8Array>
+    const body = { getReader: () => { throw new Error('body must not be opened') } } as unknown as NonNullable<Request['body']>
     expect(await readBoundedJsonBody({ body, headers: new Headers({ 'content-length': '9000' }) }, 8192))
       .toEqual({ ok: false, reason: 'too-large' })
   })
@@ -75,7 +75,7 @@ describe('bounded admin billing JSON reader', () => {
     expect(await readBoundedJsonBody({ headers: new Headers(), body: null }, 10))
       .toEqual({ ok: true, text: '' })
     const broken = new ReadableStream<Uint8Array>({ start(controller) { controller.error(new Error('disconnected')) } })
-    expect(await readBoundedJsonBody({ headers: new Headers(), body: broken }, 10))
+    expect(await readBoundedJsonBody({ headers: new Headers(), body: broken as Request['body'] }, 10))
       .toEqual({ ok: false, reason: 'invalid' })
   })
 })
