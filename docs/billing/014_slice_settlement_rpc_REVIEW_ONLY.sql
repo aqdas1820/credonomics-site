@@ -70,6 +70,46 @@ begin
     p_invoice_id,case when v_new_status='PAID' then 'INVOICE_FULLY_PAID' else 'INVOICE_PARTIALLY_PAID' end,
     p_operator_id::text,jsonb_build_object('paid_paise',v_paid,'outstanding_paise',v_outstanding)
   );
+  -- Preserve immutable evidence of the FIRST verified full settlement.
+  -- This insert runs in the same transaction as the credit and status update.
+  if v_new_status='PAID' then
+    insert into billing_private.receipts(
+      invoice_id, receipt_number, version, issued_by, snapshot
+    )
+    select
+      i.id,
+      'CN-R-' || substring(i.invoice_number from 4),
+      1,
+      p_operator_id,
+      jsonb_build_object(
+        'invoiceId', i.id,
+        'invoiceNumber', i.invoice_number,
+        'receiptNumber', 'CN-R-' || substring(i.invoice_number from 4),
+        'version', 1,
+        'issuedAt', now(),
+        'issuedBy', p_operator_id,
+        'status', 'PAID',
+        'customer', i.customer_name,
+        'invoiceDate', i.issued_on,
+        'totalPaise', i.total_paise,
+        'paidPaise', v_paid,
+        'currency', 'INR',
+        'verifiedCredits', (
+          select coalesce(jsonb_agg(jsonb_build_object(
+            'utr', c.utr,
+            'amountPaise', c.amount_paise,
+            'bookedAt', c.credited_at
+          ) order by c.credited_at, c.id), '[]'::jsonb)
+          from billing_private.bank_credit_evidence c where c.invoice_id=i.id
+        )
+      )
+    from billing_private.invoices i
+    where i.id=p_invoice_id;
+    insert into billing_private.audit_events(invoice_id,event_type,actor,details)
+    values (p_invoice_id,'PAID_RECEIPT_SNAPSHOT_ISSUED',p_operator_id::text,
+      jsonb_build_object('receiptVersion',1,'amountPaise',v_paid));
+  end if;
+
   return jsonb_build_object(
     'invoiceId',p_invoice_id,'status',v_new_status,
     'paidPaise',v_paid,'outstandingPaise',v_outstanding,
