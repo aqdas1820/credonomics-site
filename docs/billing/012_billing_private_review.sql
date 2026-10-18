@@ -76,6 +76,29 @@ create table if not exists billing_private.audit_events (
   event_at timestamptz not null default now(),
   details jsonb not null default '{}'::jsonb
 );
+-- Preserve issued line items, booked-credit evidence and the audit trail.
+-- Even service-role updates/deletes must fail; corrections require separately
+-- designed compensating entries instead of overwriting historical records.
+create or replace function billing_private.reject_financial_evidence_mutation()
+returns trigger language plpgsql set search_path = pg_catalog
+as $
+begin
+  raise exception 'Billing financial evidence is append-only';
+end;
+$;
+drop trigger if exists immutable_invoice_line on billing_private.invoice_lines;
+create trigger immutable_invoice_line
+before update or delete on billing_private.invoice_lines
+for each row execute function billing_private.reject_financial_evidence_mutation();
+drop trigger if exists immutable_bank_credit on billing_private.bank_credit_evidence;
+create trigger immutable_bank_credit
+before update or delete on billing_private.bank_credit_evidence
+for each row execute function billing_private.reject_financial_evidence_mutation();
+drop trigger if exists immutable_billing_audit on billing_private.audit_events;
+create trigger immutable_billing_audit
+before update or delete on billing_private.audit_events
+for each row execute function billing_private.reject_financial_evidence_mutation();
+
 alter table billing_private.invoices enable row level security;
 alter table billing_private.invoice_lines enable row level security;
 alter table billing_private.bank_credit_evidence enable row level security;
