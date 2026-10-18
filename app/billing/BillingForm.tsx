@@ -8,7 +8,7 @@ const money = (n: number) => new Intl.NumberFormat('en-IN', { style: 'currency',
 
 export default function BillingForm() {
   const [number, setNumber] = useState('')
-  const [date, setDate] = useState('2026-10-18')
+  const [date, setDate] = useState('')
   const [customer, setCustomer] = useState('')
   const [address, setAddress] = useState('')
   const [items, setItems] = useState<Item[]>([{ description: 'Financial documentation and factual analytics assistance', quantity: '1', rate: '' }])
@@ -34,7 +34,7 @@ export default function BillingForm() {
         {items.map((item, i) => (
           <div className="cn-item" key={i}>
             <label>Description<input value={item.description} maxLength={300} onChange={e => updateItem(i, 'description', e.target.value)} /></label>
-            <label>Quantity<input type="number" min="0.01" step="1" value={item.quantity} onChange={e => updateItem(i, 'quantity', e.target.value)} /></label>
+            <label>Quantity<input type="number" min="1" step="1" value={item.quantity} onChange={e => updateItem(i, 'quantity', e.target.value)} /></label>
             <label>Rate (₹)<input type="number" min="0" step="0.01" value={item.rate} onChange={e => updateItem(i, 'rate', e.target.value)} /></label>
             <button type="button" disabled={items.length === 1} onClick={() => setItems(xs => xs.filter((_, j) => j !== i))}>Remove</button>
           </div>
@@ -46,7 +46,7 @@ export default function BillingForm() {
         <p><strong>Safety:</strong> This prototype never marks an invoice PAID. A future PAID receipt requires independent manual Slice bank-credit verification by an authorized admin.</p>
       </div>
       <section className={`cn-sheet ${valid ? "" : "cn-invalid-print"}`} aria-label="Invoice print preview">
-        <header className="cn-head"><div><strong>CredoNomics Investment Solutions</strong><p>Dhule, Maharashtra, India</p></div><div><strong>INVOICE</strong><p>#{number || '—'}</p><p>{date}</p></div></header>
+        <header className="cn-head"><div><strong>CredoNomics Investment Solutions</strong><p>Invoice draft · Verify business details before issuance</p></div><div><strong>INVOICE</strong><p>#{number || '—'}</p><p>{date}</p></div></header>
         <div className="cn-unpaid">UNPAID · DRAFT PREVIEW</div>
         <div className="cn-billto"><strong>Bill To</strong><p>{customer || 'Customer name'}</p><p>{address}</p></div>
         <table className="cn-table"><thead><tr><th>Item / Service</th><th>Qty</th><th>Rate</th><th>Amount</th></tr></thead><tbody>{items.map((x, i) => <tr key={i}><td>{x.description}</td><td>{x.quantity}</td><td>{money(Number.isFinite(Number(x.rate)) && Number(x.rate) >= 0 ? Number(x.rate) : 0)}</td><td>{money(totals[i] || 0)}</td></tr>)}</tbody></table>
