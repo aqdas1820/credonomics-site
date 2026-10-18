@@ -4,6 +4,7 @@ import { calculateInvoice } from './invoice-math'
 const createSchema = z.object({
   date: z.string(),
   customer: z.string().trim().min(1).max(120),
+  address: z.string().trim().max(300).optional(),
   customerPhone: z.string().regex(/^\+[1-9]\d{6,14}$/).optional(),
   items: z.array(z.object({
     description: z.string().trim().min(1).max(300),
@@ -31,7 +32,7 @@ export function prepareInvoiceCreation(input: unknown) {
     }
   })
   return {
-    customerName: draft.customer, issuedOn: draft.date,
+    customerName: draft.customer, customerAddress: draft.address ?? '', issuedOn: draft.date,
     customerPhone: draft.customerPhone ?? null,
     totalPaise: amounts.totalPaise, lines,
   }
