@@ -113,6 +113,9 @@ jobs:
       - name: Full unit tests
         run: npm test
 
+      - name: Synthetic remote backup inventory (no cloud access)
+        run: node --test scripts/railway-backup/remote-inventory.test.cjs
+
       - name: Stateless Worker feasibility prototype (offline fixtures only)
         run: node --test prototypes/worker-market-api/worker.test.mjs
 

@@ -1,1 +1,1 @@
-{"crons":[{"path":"/api/alerts/evaluate","schedule":"0 4 * * 1-5"}],"git":{"deploymentEnabled":{"codex/billing-production-hardening":false,"codex/upstox-token-persistence":false}}}
+{"crons":[{"path":"/api/alerts/evaluate","schedule":"0 4 * * 1-5"}],"git":{"deploymentEnabled":{"codex/billing-production-hardening":false,"codex/upstox-token-persistence":false,"codex/phase23-backup-integration":false}}}

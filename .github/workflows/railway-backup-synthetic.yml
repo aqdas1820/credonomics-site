@@ -1,0 +1,23 @@
+name: Railway backup Windows synthetic safety
+on:
+  pull_request:
+    branches: [feature/youpi-payment-entry-prelaunch]
+    paths: [scripts/railway-backup/**, .github/workflows/railway-backup-synthetic.yml]
+permissions:
+  contents: read
+jobs:
+  windows-synthetic:
+    runs-on: windows-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Windows PowerShell 5.1 backup safety fixtures
+        shell: powershell
+        run: ./scripts/railway-backup/Test-Backup.ps1
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - name: Remote inventory fixtures
+        run: node --test scripts/railway-backup/remote-inventory.test.cjs
