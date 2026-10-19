@@ -18,6 +18,7 @@ import uuid
 
 ROOT = Path(__file__).resolve().parent
 IMAGE = 'supabase/postgres:17.6.1.136@sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00'
+AUTH_IMAGE = 'supabase/gotrue:v2.197.0@sha256:1736a63078f5922b198c4cbe50f80ab9a2d3b54fe8b7b6cfb2e9dc5dbbc12c6b'
 LABEL = 'org.credonomics.phase24'
 
 
@@ -157,6 +158,7 @@ class Docker:
         if info['OSType'] != 'linux' or info['MemTotal'] < 3 * 1024**3:
             raise Blocked('Linux engine with at least 3 GiB RAM required')
         self.run(['image', 'inspect', IMAGE]) # No implicit pull, upgrade or remote service.
+        self.run(['image', 'inspect', AUTH_IMAGE])
 
     def create(self):
         name = 'cn-phase24-' + uuid.uuid4().hex
@@ -167,7 +169,7 @@ class Docker:
                   '--tmpfs', '/tmp:rw,size=128m', '--tmpfs', '/var/log/postgresql:rw,size=64m',
                   '-e', 'POSTGRES_PASSWORD=' + secrets.token_hex(32), '-e', 'POSTGRES_DB=postgres',
                   IMAGE, 'postgres', '-c', 'config_file=/etc/postgresql/postgresql.conf',
-                  '-c', 'listen_addresses=', '-c', 'logging_collector=off', '-c', 'log_statement=none',
+                  '-c', 'listen_addresses=127.0.0.1', '-c', 'logging_collector=off', '-c', 'log_statement=none',
                   '-c', 'log_min_error_statement=panic', '-c', 'cron.launch_active_jobs=off'])
         for _ in range(90):
             code, comm = self.run(['exec', name, 'cat', '/proc/1/comm'], ok=False)
@@ -177,12 +179,28 @@ class Docker:
             code, _ = self.run(['exec', name, 'pg_isready', '-U', 'supabase_admin', '-d', 'postgres'], ok=False)
             if code == 0:
                 # Readiness alone is insufficient: initialization may still be applying migrations.
-                code, raw = self.sql(name, "select to_regprocedure('auth.uid()') is not null and to_regprocedure('auth.jwt()') is not null;", ok=False)
+                code, raw = self.sql(name, "select to_regprocedure('auth.uid()') is not null;", ok=False)
                 if code == 0 and raw.strip() == b't':
                     self.inspect(name)
+                    self.migrate_auth(name)
                     return name
             time.sleep(1)
         raise Blocked('Official Supabase baseline did not become ready')
+
+    def migrate_auth(self, name):
+        # Apply the authentic, complete GoTrue migration chain, never handwritten
+        # replacements for auth.uid/role/jwt. No Auth HTTP server is started.
+        password = secrets.token_hex(32)
+        self.sql(name, "ALTER ROLE supabase_auth_admin PASSWORD '"+password+"';")
+        self.run(['run','--rm','--pull=never','--network','container:'+name,
+                  '--label',f'{LABEL}={self.runid}','--log-driver=none','--memory=512m','--memory-swap=512m',
+                  '--read-only','--tmpfs','/tmp:rw,size=64m',
+                  '-e','GOTRUE_DB_DRIVER=postgres',
+                  '-e','GOTRUE_DB_DATABASE_URL=postgres://supabase_auth_admin:'+password+'@127.0.0.1:5432/postgres?sslmode=disable',
+                  '-e','GOTRUE_JWT_SECRET='+secrets.token_hex(32),
+                  '-e','GOTRUE_SITE_URL=http://127.0.0.1',
+                  '-e','API_EXTERNAL_URL=http://127.0.0.1',
+                  AUTH_IMAGE,'auth','migrate'])
 
     def inspect(self, name):
         _, raw = self.run(['inspect', name])
