@@ -2,7 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 vi.mock('server-only',()=>({}))
 import { PDFDocument } from 'pdf-lib'
 import { applyTestCommand, amountFor, type TestLedger } from './personal-model'
-import { localOwner, localRuntime, personalReady, ownerIdentity, sealLedger, openLedger, localSession, validLocalSession, trustedLocalHost } from './personal-security'
+import { localOwner, localRuntime, personalReady, ownerIdentity, sealLedger, openLedger, localSession, validLocalSession, trustedLocalHost, personalOriginAllowed } from './personal-security'
 import { personalPdf } from './personal-pdf'
 const draft={customer:'Synthetic Customer',date:'2026-10-19',items:[{description:'Synthetic service',quantity:'2',rate:'1234.50'},{description:'Second line',quantity:'1',rate:'250.00'}]}
 const id='11111111-1111-4111-8111-111111111111'
@@ -49,6 +49,14 @@ describe('separate TEST ledger',()=>{
  },30000)
 })
 describe('owner authorization and loopback isolation',()=>{
+ it('pins hosted mutation origin and Host to the real canonical domain, independently of Next internal URL',()=>{
+  vi.stubEnv('NODE_ENV','production');vi.stubEnv('PERSONAL_TESTING_RUNTIME','hosted')
+  const request=(origin:string,host:string)=>({url:'http://localhost:3000/api/personal-testing',headers:new Headers({origin,host})})
+  expect(personalOriginAllowed(request('https://www.credonomics.in','www.credonomics.in'))).toBe(true)
+  expect(personalOriginAllowed(request('https://evil.example','www.credonomics.in'))).toBe(false)
+  expect(personalOriginAllowed(request('https://www.credonomics.in','evil.example'))).toBe(false)
+  expect(personalOriginAllowed(request('http://www.credonomics.in','www.credonomics.in'))).toBe(false)
+ })
  it('requires trusted admin claim and exact owner, not another admin or user_metadata',()=>{
   vi.stubEnv('PERSONAL_TESTING_OWNER_ID',id)
   expect(ownerIdentity({id,app_metadata:{billing_admin:true}})).toBe(true)

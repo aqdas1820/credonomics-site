@@ -1,5 +1,6 @@
 import { spawn } from 'node:child_process'
 const env = { ...process.env }
+env.PERSONAL_TESTING_ENABLED = 'false'
 for (const key of ['BILLING_API_ENABLED', 'BILLING_PORTAL_ENABLED', 'BILLING_WRITE_ENABLED', 'BILLING_SETTLEMENT_ENABLED',
   'BILLING_SYSTEM_ENABLED', 'BILLING_YOUPI_OBSERVATION_ENABLED', 'BILLING_PDF_ARCHIVE_ENABLED']) env[key] = 'false'
 // No credential is needed for the disabled-route browser checks.

@@ -17,6 +17,7 @@ scratch/
 *.tsbuildinfo
 phase23-*.local.log
 phase25-*.local.log
+phase26-*.local.log
 railway-backup-profiles/
 data/mf-production-source/
 data/mf-production-diagnostics/

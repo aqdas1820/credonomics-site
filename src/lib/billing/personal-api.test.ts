@@ -11,7 +11,7 @@ beforeEach(()=>{
  vi.stubGlobal('fetch',vi.fn(()=>{throw new Error('No integration/network call allowed')}))
 })
 afterEach(()=>{vi.unstubAllEnvs();vi.unstubAllGlobals();vi.clearAllMocks()})
-const request=(value:unknown,origin='https://www.credonomics.in')=>new Request('https://www.credonomics.in/api/personal-testing',{method:'POST',headers:{origin,'content-type':'application/json'},body:JSON.stringify(value)})
+const request=(value:unknown,origin='https://www.credonomics.in')=>new Request('https://www.credonomics.in/api/personal-testing',{method:'POST',headers:{origin,host:'www.credonomics.in','content-type':'application/json'},body:JSON.stringify(value)})
 it('denies every action including PDF before reading/decrypting data for anonymous users',async()=>{
  actor.mockResolvedValue(null)
  for(const action of ['read','save','transition','pdf']){

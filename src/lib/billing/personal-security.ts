@@ -1,7 +1,7 @@
 import 'server-only'
 import { createCipheriv, createDecipheriv, createHmac, randomBytes, timingSafeEqual } from 'node:crypto'
 import { isBillingAdmin, type BillingIdentity } from '../../../app/billing/admin-policy'
-import { isBillingDatabaseScopeConfirmed } from '../../../app/billing/db-scope'
+import { hostedPersonalReady, personalProductionOrigin } from './personal-config'
 import { validateLedger, type TestLedger } from './personal-model'
 
 export const personalCookie = 'cn_personal_local'
@@ -15,10 +15,7 @@ export function localRuntime() {
 export function personalReady() {
   if (process.env.PERSONAL_TESTING_ENABLED !== 'true' || !/^[a-f0-9]{64}$/.test(process.env.PERSONAL_TESTING_ENCRYPTION_KEY ?? '')) return false
   if (localRuntime()) return true
-  return process.env.PERSONAL_TESTING_RUNTIME !== 'loopback' &&
-    /^[a-f0-9]{8}(-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i.test(process.env.PERSONAL_TESTING_OWNER_ID ?? '') &&
-    isBillingDatabaseScopeConfirmed(process.env.PERSONAL_TESTING_EXPECTED_SUPABASE_PROJECT_REF, process.env.NEXT_PUBLIC_SUPABASE_URL) &&
-    Boolean(process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY)
+  return hostedPersonalReady()
 }
 export function ownerIdentity(user: BillingIdentity | null) {
   return isBillingAdmin(user, process.env.PERSONAL_TESTING_OWNER_ID) && user?.id.toLowerCase() === process.env.PERSONAL_TESTING_OWNER_ID?.toLowerCase()
@@ -31,7 +28,7 @@ export function personalOriginAllowed(request: Pick<Request,'headers'|'url'>) {
     const host=request.headers.get('host')
     return trustedLocalHost(host) && request.headers.get('origin')===`http://${host}`
   }
-  return request.headers.get('origin')===new URL(request.url).origin
+  return request.headers.get('origin') === personalProductionOrigin && request.headers.get('host') === new URL(personalProductionOrigin).host
 }
 const sign = (value: string) => createHmac('sha256', process.env.PERSONAL_TESTING_LOCAL_SESSION_KEY!).update('cn-personal-session-v1:' + value).digest('hex')
 export function localSession(now = Date.now()) { const payload = String(now + 8 * 60 * 60 * 1000); return payload + '.' + sign(payload) }

@@ -4,7 +4,7 @@ const nextConfig = {
   compress: true,
   outputFileTracingIncludes: {
     '/api/billing/admin/invoices/*/documents/*': ['./assets/fonts/*.ttf'],
-    '/api/personal-testing': ['./assets/fonts/*.ttf'],
+    '/api/personal-testing': ['./assets/fonts/*.ttf', './public/credonomics-mark.png'],
   },
 
   async headers() {

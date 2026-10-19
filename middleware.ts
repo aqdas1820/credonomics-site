@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
+import { hostedPersonalReady } from './src/lib/billing/personal-config'
+import { isBillingAdmin } from './app/billing/admin-policy'
 
 const canonicalHost = 'www.credonomics.in'
 
@@ -20,9 +22,24 @@ export async function middleware(request: NextRequest) {
     const headers = { 'Cache-Control': 'private, no-store, max-age=0', 'X-Robots-Tag': 'noindex, nofollow, noarchive', 'Referrer-Policy':'no-referrer' }
     const local = process.env.NODE_ENV === 'development' && process.env.PERSONAL_TESTING_RUNTIME === 'loopback' && !process.env.VERCEL && !process.env.RAILWAY_ENVIRONMENT_ID
     // Deny before rendering: streamed React notFound() can otherwise carry HTTP 200.
-    const authConfigured = Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL?.trim() && process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY?.trim())
-    if (process.env.PERSONAL_TESTING_ENABLED !== 'true' || (!local && !authConfigured)) return new NextResponse('Not Found', { status:404, headers })
-    const response=NextResponse.next({request});Object.entries(headers).forEach(([key,value])=>response.headers.set(key,value));return response
+    const deny = () => new NextResponse('Not Found', { status:404, headers })
+    if (process.env.PERSONAL_TESTING_ENABLED !== 'true' || (!local && !hostedPersonalReady())) return deny()
+    let response = NextResponse.next({ request })
+    if (!local) {
+      try {
+        const client = createServerClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!, {
+          cookies: { getAll: () => request.cookies.getAll(), setAll: values => {
+            values.forEach(({ name, value }) => request.cookies.set(name, value))
+            response = NextResponse.next({ request })
+            values.forEach(({ name, value, options }) => response.cookies.set(name, value, options))
+          } },
+        })
+        const { data: { user }, error } = await client.auth.getUser()
+        if (error || !isBillingAdmin(user, process.env.PERSONAL_TESTING_OWNER_ID) || user?.id.toLowerCase() !== process.env.PERSONAL_TESTING_OWNER_ID?.toLowerCase()) return deny()
+      } catch { return deny() }
+    }
+    Object.entries(headers).forEach(([key,value]) => response.headers.set(key,value))
+    return response
   }
 
   // Deny hosted invoice portal until explicitly enabled; page performs verified admin authorization.

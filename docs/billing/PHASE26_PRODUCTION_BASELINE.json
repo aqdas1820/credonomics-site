@@ -1,0 +1,13 @@
+{
+  "productionMain": "7c6592241953d5b08e1e1f49069b01722b71fe43",
+  "gitBlobs": {
+    "app/data/auto-card-catalog.generated.ts": "f784f39cf7452b4f37d4097b407afc4443e53494",
+    "app/data/card-review-queue.generated.ts": "82f89bd87b92993e8c2148a170bb9ec7fdd9d346",
+    "app/data/ipo-discovery.generated.ts": "5f9e0c2629df5a3a8f1413a5cb5ba75833670248",
+    "app/data/ipo-market-master.generated.ts": "803325a994eda8060388f7cee2e9a842aaa1095e",
+    "public/data/cards/auto-catalog.json": "71ec6613f6db75fdc16dc08f186622c33b38d911",
+    "public/data/cards/review-queue.json": "4207aea84628df3b456584184738e925feac5451",
+    "public/data/ipo/discovery.json": "4f4186d81febb83d8cd0aeeeed47c646da5e6b6a",
+    "public/data/ipo/market-master.json": "cfa80e861cb3a9803f761476b4f14ee75f09e845"
+  }
+}
