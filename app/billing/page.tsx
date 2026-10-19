@@ -19,5 +19,5 @@ export default async function BillingAdminPage() {
   if (process.env.BILLING_PORTAL_ENABLED !== 'true' || (process.env.BILLING_API_ENABLED !== 'true' || !billingDatabaseScopeReady())) notFound()
   const { user } = await authenticatedUser()
   if (!isBillingAdmin(user, process.env.BILLING_ADMIN_USER_IDS)) notFound()
-  return <SiteFrame><BillingForm enableSettlement={process.env.BILLING_SETTLEMENT_ENABLED === 'true'} /><BillingHistory /></SiteFrame>
+  return <SiteFrame><BillingForm enableSettlement={process.env.BILLING_SETTLEMENT_ENABLED === 'true'} enableYoupiLink={process.env.YOUPI_PAYMENT_LINK_ENABLED === 'true'} /><BillingHistory /></SiteFrame>
 }
