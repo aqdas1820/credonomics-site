@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { gatewayConfig } from '../../../../src/lib/billing/youpi-contract'
+import { gatewayConfig, validateInvoice } from '../../../../src/lib/billing/youpi-contract'
+import { billingDatabaseScopeReady } from '../../../billing/db-scope'
+import { createSupabaseAdminClient } from '../../../../src/lib/supabase/admin'
 import { approvedPaymentSiteOrigin, openPaymentLink } from '../../../../src/lib/billing/youpi-payment-link'
 
 export const dynamic = 'force-dynamic'
@@ -26,6 +28,8 @@ export default async function InvoicePaymentLinkPage({
     process.env.YOUPI_SESSION_CREATION_APPROVED !== 'true' ||
     process.env.YOUPI_LICENSE_CONFIRMED !== 'true' ||
     process.env.YOUPI_SECURITY_REVIEW_APPROVED !== 'true' ||
+    process.env.BILLING_API_ENABLED !== 'true' ||
+    !billingDatabaseScopeReady() ||
     !approvedPaymentSiteOrigin(process.env.YOUPI_PUBLIC_SITE_ORIGIN)) notFound()
 
   const { token } = await params
@@ -40,6 +44,33 @@ export default async function InvoicePaymentLinkPage({
   } catch { notFound() }
   const payload = openPaymentLink(token, process.env.YOUPI_PAYMENT_LINK_SIGNING_KEY, merchantId)
   if (!payload) notFound()
+  // Validate the live, canonical invoice before exposing checkout. A signed token
+  // alone must never reopen an invoice already PAID, PARTIAL, VOID or repriced.
+  const client = createSupabaseAdminClient()
+  if (!client) notFound()
+  try {
+    const { data, error } = await client.rpc('billing_get_invoice', { p_invoice_id: payload.invoiceId })
+    if (error) notFound()
+    const invoice = validateInvoice(data, payload.invoiceId)
+    if (invoice.totalPaise !== payload.amountPaise || invoice.invoiceNumber !== payload.invoiceNumber) notFound()
+  } catch { notFound() }
+
+  // Also reject completed/failed/processing YouPI sessions and mismatched orders.
+  // This GET is only a status lookup; it does not create or advance payment.
+  try {
+    const cfg = gatewayConfig()
+    const res = await fetch(cfg.apiOrigin + '/api/v1/payments/' + payload.paymentId, {
+      cache: 'no-store', redirect: 'error', signal: AbortSignal.timeout(6000),
+    })
+    if (!res.ok || Number(res.headers.get('content-length') || 0) > 16384) notFound()
+    const raw = await res.text()
+    if (raw.length > 16384) notFound()
+    const state = JSON.parse(raw) as Record<string, unknown>
+    if (state.paymentId !== payload.paymentId || state.orderId !== 'CN-' + payload.invoiceId ||
+        state.currency !== 'INR' || String(state.amountPaise) !== String(payload.amountPaise) ||
+        !['INITIATED', 'ACTIVE', 'QUEUED'].includes(String(state.status))) notFound()
+  } catch { notFound() }
+
   const checkout = checkoutOrigin + '/checkout/' + payload.paymentId
 
   return <main style={{ maxWidth: 650, margin: '60px auto', padding: '32px 20px', fontFamily: 'system-ui, sans-serif', color: '#0f2923' }}>
