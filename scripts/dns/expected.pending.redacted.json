@@ -1,0 +1,17 @@
+{
+  "domain": "credonomics.in",
+  "source": "Read-only Cloudflare API observation, 2026-10-19; zone status pending; 12 custom records. Not proof of public delegation or ownership validation by hosting providers.",
+  "records": [
+    { "id": "nameservers", "name": "credonomics.in", "type": "NS", "expected": ["conrad.ns.cloudflare.com", "fish.ns.cloudflare.com"] },
+    { "id": "vercel-apex", "name": "credonomics.in", "type": "A", "expected": ["216.198.79.1"] },
+    { "id": "vercel-www", "name": "www.credonomics.in", "type": "CNAME", "expected": ["credonomics.in"] },
+    { "id": "railway-api", "name": "api.credonomics.in", "type": "CNAME", "expected": ["ee9evlpf.up.railway.app"] },
+    { "id": "cardledger", "name": "cardledger.credonomics.in", "type": "CNAME", "expected": ["cardledger-credonomics.pages.dev"] },
+    { "id": "domainconnect", "name": "_domainconnect.credonomics.in", "type": "CNAME", "expected": ["_domainconnect.gd.domaincontrol.com"] },
+    { "id": "improvmx", "name": "credonomics.in", "type": "MX", "expected": ["10 mx1.improvmx.com", "20 mx2.improvmx.com"] },
+    { "id": "spf", "name": "credonomics.in", "type": "TXT", "prefix": "v=spf1", "sha256": ["2ecc7ecc903fc60a5f84f5e1ca5d23388be1c9222ec9856c68e2cae33a635eda"] },
+    { "id": "dmarc", "name": "_dmarc.credonomics.in", "type": "TXT", "prefix": "v=DMARC1", "sha256": ["d127a3cdf5f2d64559fe36ca84b49d20ddbf529e80e183d7e626294ae28da68c"] },
+    { "id": "google", "name": "credonomics.in", "type": "TXT", "prefix": "google-site-verification=", "sha256": ["061c9421b1b1f1610402e55ec84fea99ee0ceb71a4e7e166ce52267d3e48fe3b", "225098961fd4b88263564179b515d5048cabde50627dc63fafef530355695b29"] },
+    { "id": "railway-verification", "name": "_railway-verify.api.credonomics.in", "type": "TXT", "prefix": "railway-verify=", "sha256": ["5b57451f809d435da55a54efc5adaea0a1899c8c79eb7eb35030ab7764200a2e"] }
+  ]
+}

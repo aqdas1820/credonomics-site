@@ -19,7 +19,7 @@ export default function CustomerPaymentLinkButton({ invoiceId }: { invoiceId: st
       })
       const data = await res.json()
       if (!res.ok) throw Error(typeof data?.error === 'string' ? data.error : 'Customer payment link unavailable')
-      if (data?.settlement !== 'NOT_VERIFIED' || data?.gatewayStatus !== 'INITIATED' ||
+      if (data?.settlement !== 'NOT_VERIFIED' || !['INITIATED', 'ACTIVE', 'QUEUED'].includes(data?.gatewayStatus) ||
           typeof data?.customerPaymentLink !== 'string') throw Error('Unexpected gateway response')
       const url = new URL(data.customerPaymentLink)
       if (url.origin !== window.location.origin || !url.pathname.startsWith('/pay/i/') ||

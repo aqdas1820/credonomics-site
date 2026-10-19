@@ -30,6 +30,15 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: '/pay/i/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'private, no-store, max-age=0' },
+          { key: 'Referrer-Policy', value: 'no-referrer' },
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive, nosnippet' },
+          { key: 'Content-Security-Policy', value: "frame-ancestors 'none'; form-action 'none'; base-uri 'none'" },
+        ],
+      },
     ]
   },
 }

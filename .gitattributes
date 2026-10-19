@@ -1,1 +1,3 @@
 public/reports/*.pdf binary
+# Patch context markers and mail signatures contain meaningful trailing spaces.
+docs/billing/patches/*.patch text eol=lf -whitespace

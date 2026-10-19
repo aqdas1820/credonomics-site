@@ -40,7 +40,7 @@ export function paymentLinkSigningReady(secret: string | undefined): boolean {
 
 export function sealPaymentLink(details: PaymentLinkDetails, secret: string, now = Date.now()): string {
   const key = keyFromHex(secret)
-  if (!validateDetails(details) || !Number.isSafeInteger(now) || now <= 0) throw new Error('Invalid payment link payload')
+  if (!validateDetails(details) || !Number.isSafeInteger(now) || !Number.isSafeInteger(now + LIFETIME_MS) || now <= 0) throw new Error('Invalid payment link payload')
   const payload: SignedLinkPayload = {
     v: TOKEN_VERSION,
     invoiceId: details.invoiceId.toLowerCase(),

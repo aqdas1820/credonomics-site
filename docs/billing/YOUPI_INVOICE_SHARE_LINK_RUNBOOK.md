@@ -1,5 +1,7 @@
 # CredoNomics → YouPI invoice share link (development only)
 
+Phase 28 follow-up: see [PHASE28_ENGINEERING_REPORT.md](PHASE28_ENGINEERING_REPORT.md) before using this earlier runbook. Issuance additionally requires the reviewed durable link ledger (`YOUPI_LINK_LEDGER_APPROVED`, default OFF) and a server-only `YOUPI_MERCHANT_KEY` for owner-authenticated merchant/session/method checks. Unregistered stateless PR #9 links are rejected. Do not enable these flags, apply SQL, or rotate hosted secrets as part of this development change.
+
 Date: 2026-10-19. **NOT LIVE FOR COLLECTION.** Adds a real invoice-to-session-to-link workflow on top of the Phase 26 adapter, but all financial operations remain default-disabled. Do not merge/deploy or set approval flags from this change alone.
 
 ## Operator journey (when separate production approval gates pass)
