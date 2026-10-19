@@ -1,69 +1,14 @@
 {
   "meta": {
-    "generatedAt": "2026-10-16T13:55:41.863Z",
-    "recordCount": 6,
-    "nseCount": 6,
+    "generatedAt": "2026-10-19T08:45:53.704Z",
+    "recordCount": 4,
+    "nseCount": 4,
     "bseCount": 0,
-    "activeCount": 6,
+    "activeCount": 4,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 6 · BSE SME unavailable · BSE mainboard 0"
+    "sourceStatus": "NSE API 4 · BSE SME unavailable · BSE mainboard 0"
   },
   "records": [
-    {
-      "slug": "fusion-cx-ltd-ce55c0a",
-      "companyName": "Fusion CX Limited",
-      "symbol": "FUSIONCX",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 275,
-        "priceBandHigh": 289,
-        "openDate": "2026-10-14",
-        "closeDate": "2026-10-16",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 3.3267982905982905,
-        "updatedAt": "2026-10-16T13:55:41.863Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=FUSIONCX&type=Active"
-      },
-      "sharesOffered": 14040000,
-      "sharesBid": 46708248,
-      "estimatedIssueValueCr": 405.76,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=FUSIONCX&type=Active",
-      "fetchedAt": "2026-10-16T13:55:41.863Z"
-    },
-    {
-      "slug": "ravita-engineering-services-ltd-445c68c",
-      "companyName": "Ravita Engineering Services Limited",
-      "symbol": "RAVITA",
-      "marketSegment": "sme",
-      "status": "open",
-      "securityType": "SME",
-      "issue": {
-        "openDate": "2026-10-14",
-        "closeDate": "2026-10-16",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 6.68,
-        "updatedAt": "2026-10-16T13:55:41.863Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=RAVITA&type=Active"
-      },
-      "sharesOffered": 7413600,
-      "sharesBid": 49538400,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=RAVITA&type=Active",
-      "fetchedAt": "2026-10-16T13:55:41.863Z"
-    },
     {
       "slug": "bonfiglioli-transmissions-ltd-8d678aa",
       "companyName": "Bonfiglioli Transmissions Limited",
@@ -81,17 +26,17 @@
         ]
       },
       "subscription": {
-        "total": 0.7071277210175043,
-        "updatedAt": "2026-10-16T13:55:41.863Z",
+        "total": 8.312600945832108,
+        "updatedAt": "2026-10-19T08:45:53.704Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BONFIG&type=Active"
       },
       "sharesOffered": 30282330,
-      "sharesBid": 21413475,
+      "sharesBid": 251724925,
       "estimatedIssueValueCr": 1774.54,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BONFIG&type=Active",
-      "fetchedAt": "2026-10-16T13:55:41.863Z"
+      "fetchedAt": "2026-10-19T08:45:53.704Z"
     },
     {
       "slug": "sahajanand-medical-technologies-ltd-346d039",
@@ -110,17 +55,17 @@
         ]
       },
       "subscription": {
-        "total": 0.2817176627781068,
-        "updatedAt": "2026-10-16T13:55:41.863Z",
+        "total": 1.1892594643013545,
+        "updatedAt": "2026-10-19T08:45:53.704Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMT&type=Active"
       },
       "sharesOffered": 9750482,
-      "sharesBid": 2746883,
+      "sharesBid": 11595853,
       "estimatedIssueValueCr": 335.42,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMT&type=Active",
-      "fetchedAt": "2026-10-16T13:55:41.863Z"
+      "fetchedAt": "2026-10-19T08:45:53.704Z"
     },
     {
       "slug": "tonbo-imaging-india-ltd-b7f2320",
@@ -139,17 +84,17 @@
         ]
       },
       "subscription": {
-        "total": 5.200910904285733,
-        "updatedAt": "2026-10-16T13:55:41.863Z",
+        "total": 41.43649479189208,
+        "updatedAt": "2026-10-19T08:45:53.704Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TONBO&type=Active"
       },
       "sharesOffered": 8526033,
-      "sharesBid": 44343138,
+      "sharesBid": 353288922,
       "estimatedIssueValueCr": 596.82,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TONBO&type=Active",
-      "fetchedAt": "2026-10-16T13:55:41.863Z"
+      "fetchedAt": "2026-10-19T08:45:53.704Z"
     },
     {
       "slug": "zetwerk-manufacturing-businesses-ltd-805420f",
@@ -168,17 +113,17 @@
         ]
       },
       "subscription": {
-        "total": 0.18804703781490412,
-        "updatedAt": "2026-10-16T13:55:41.863Z",
+        "total": 0.8194779513315851,
+        "updatedAt": "2026-10-19T08:45:53.704Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ZETWERK&type=Active"
       },
       "sharesOffered": 185066845,
-      "sharesBid": 34801272,
+      "sharesBid": 151658199,
       "estimatedIssueValueCr": 2794.51,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ZETWERK&type=Active",
-      "fetchedAt": "2026-10-16T13:55:41.863Z"
+      "fetchedAt": "2026-10-19T08:45:53.704Z"
     }
   ]
 }
