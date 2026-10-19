@@ -139,7 +139,8 @@ const pageFiles = walk(appRoot).filter((file) => /[\\/]page\.tsx?$/.test(file))
 
 for (const pageFile of pageFiles) {
   const route = routeFromPage(pageFile)
-  if (!route || route === '/search') continue
+  // Private owner tools must never be advertised by the public search index.
+  if (!route || route === '/search' || route === '/personal-testing' || route.startsWith('/personal-testing/')) continue
 
   const text = fs.readFileSync(pageFile, 'utf8')
   const metadataTitle = firstQuotedProperty(text, 'title')

@@ -1,6 +1,8 @@
 // Real built Next server; synthetic configuration, no cloud keys or calls.
 import { spawn } from 'node:child_process'
 import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
+assert.equal(readFileSync('app/data/search-index.generated.ts','utf8').includes('/personal-testing'),false,'Public search must not advertise owner tools')
 const origin='http://127.0.0.1:3020'
 const env={...process.env,NODE_ENV:'production',NEXT_TELEMETRY_DISABLED:'1',PERSONAL_TESTING_ENABLED:'true',PERSONAL_TESTING_RUNTIME:'hosted',
   PERSONAL_TESTING_ENCRYPTION_KEY:'25'.repeat(32),PERSONAL_TESTING_OWNER_ID:'11111111-1111-4111-8111-111111111111',
