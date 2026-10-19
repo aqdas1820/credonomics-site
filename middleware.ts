@@ -13,6 +13,15 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 308)
   }
 
+  // Dedicated TEST workspace. Page and every API request independently verify owner access.
+  // It does not enable any existing billing flag or touch the financial ledger.
+  if (request.nextUrl.pathname === '/personal-testing' || request.nextUrl.pathname.startsWith('/personal-testing/') ||
+      request.nextUrl.pathname === '/api/personal-testing' || request.nextUrl.pathname.startsWith('/api/personal-testing/')) {
+    const headers = { 'Cache-Control': 'private, no-store, max-age=0', 'X-Robots-Tag': 'noindex, nofollow, noarchive', 'Referrer-Policy':'no-referrer' }
+    if (process.env.PERSONAL_TESTING_ENABLED !== 'true') return new NextResponse('Not Found', { status:404, headers })
+    const response=NextResponse.next({request});Object.entries(headers).forEach(([key,value])=>response.headers.set(key,value));return response
+  }
+
   // Deny hosted invoice portal until explicitly enabled; page performs verified admin authorization.
   if ((request.nextUrl.pathname === '/billing' || request.nextUrl.pathname.startsWith('/billing/')) && process.env.BILLING_PORTAL_ENABLED !== 'true') {
     return new NextResponse('Not Found', { status: 404, headers: { 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow, noarchive' } })

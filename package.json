@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "billing:personal": "node scripts/start-personal-testing.mjs",
+    "test:personal": "playwright test --config=playwright.personal-testing.config.ts",
     "build": "next build",
     "start": "next start",
     "prebuild": "npm run test:billing && node scripts/generate-ipo-dashboard.mjs && node scripts/generate-search-index.mjs",
