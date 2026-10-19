@@ -74,5 +74,13 @@ class RecoverySafety(unittest.TestCase):
     def test_non_vault_path_refused(self):
         with self.assertRaises(r.Blocked): r.private_path('C:/unencrypted/dump.sql')
 
+    def test_scoped_toc(self):
+        r.validate_toc('; SYNTHETIC\n1; 2615 1 SCHEMA - fixture owner\n2; 1259 2 TABLE fixture t owner\n3; 0 2 TABLE DATA fixture t owner', 'fixture')
+
+    def test_toc_scope_and_unknown_records(self):
+        for extra in ['2; 1 1 TABLE auth users owner','2; 1 1 EXTENSION - pgcrypto owner','unparsed','2; 1 1 SCHEMA - fixture owner']:
+            with self.subTest(extra=extra), self.assertRaises(r.Blocked):
+                r.validate_toc('1; 2615 1 SCHEMA - fixture owner\n'+extra,'fixture')
+
 
 if __name__=='__main__': unittest.main()

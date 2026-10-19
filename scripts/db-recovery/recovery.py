@@ -92,6 +92,33 @@ def validate_manifest(m):
     return m
 
 
+def validate_toc(toc, scope):
+    """Fail closed on out-of-scope/global/unknown TOC records; never edit a dump."""
+    descriptions = ('SEQUENCE OWNED BY','TABLE DATA','SEQUENCE SET','FK CONSTRAINT',
+                    'CHECK CONSTRAINT','DEFAULT ACL','ROW SECURITY','CONSTRAINT','TRIGGER',
+                    'FUNCTION','PROCEDURE','SEQUENCE','TABLE','INDEX','POLICY','ACL','COMMENT','SCHEMA')
+    schemas = 0
+    for line in toc.splitlines():
+        if not line.strip() or line.startswith(';'):
+            continue
+        match = re.fullmatch(r'\d+; \d+ \d+ (.+)', line)
+        if not match:
+            raise Blocked('Unrecognized archive TOC record')
+        record = match[1]
+        description = next((x for x in descriptions if record.startswith(x+' ')), None)
+        if description is None:
+            raise Blocked('Global/unsupported object in scoped archive')
+        rest = record[len(description)+1:]
+        if description == 'SCHEMA':
+            if not rest.startswith('- '+scope+' '):
+                raise Blocked('Wrong schema in archive')
+            schemas += 1
+        elif not rest.startswith(scope+' '):
+            raise Blocked('Out-of-scope object in archive')
+    if schemas != 1:
+        raise Blocked('Exactly one scoped schema entry required')
+
+
 class Docker:
     def __init__(self, logdir):
         self.logdir = Path(logdir)
@@ -236,6 +263,13 @@ def synthetic():
             expected = d.catalog(source, 'phase24_fixture')
             archive = Path(tmp) / 'synthetic.dump'
             d.run(['exec', source, 'pg_dump', '-U', 'supabase_admin', '-d', 'postgres', '-Fc', '--schema=phase24_fixture'], output=archive)
+            _, toc = d.run(['exec', '-i', target, 'pg_restore', '--list'], source=archive)
+            validate_toc(toc.decode(), 'phase24_fixture')
+            # Data without schema cannot establish recovery; fail rather than disable checks.
+            code, _ = d.run(['exec','-i',target,'pg_restore','-U','supabase_admin','-d','postgres',
+                             '--data-only','--single-transaction','--exit-on-error'], source=archive, ok=False)
+            if code == 0:
+                raise Blocked('Data-before-schema negative test unexpectedly succeeded')
             # Exact reproduction: missing external role makes restoration fail atomically.
             code, _ = d.run(['exec', '-i', target, 'pg_restore', '-U', 'supabase_admin', '-d', 'postgres',
                              '--single-transaction', '--exit-on-error'], source=archive, ok=False)
@@ -246,6 +280,22 @@ def synthetic():
                 raise Blocked('Failed restore was not atomic')
             before = d.baseline(target)
             d.sql(target, 'CREATE ROLE phase24_auditor NOLOGIN NOSUPERUSER NOBYPASSRLS;')
+            # A template0 DB in the same genuine runtime has no platform schemas.
+            # It must reject this dump; no replacement auth functions are installed.
+            d.sql(target, 'CREATE DATABASE phase24_empty TEMPLATE template0;')
+            code, _ = d.run(['exec','-i',target,'pg_restore','-U','supabase_admin','-d','phase24_empty',
+                             '--single-transaction','--exit-on-error'], source=archive, ok=False)
+            if code == 0:
+                raise Blocked('Missing-auth negative test unexpectedly succeeded')
+            last_error = (d.logdir / f'{d.serial:03d}.stderr').read_text(errors='replace')
+            if classify_log(last_error)['auth_schema_missing'] == 0:
+                raise Blocked('Missing-auth negative test did not reach expected dependency')
+            code, _ = d.sql(target, 'CREATE EXTENSION phase24_nonexistent_extension;', ok=False)
+            if code == 0:
+                raise Blocked('Unavailable-extension negative test unexpectedly succeeded')
+            code, _ = d.sql(target, 'begin; set local role anon; create schema phase24_denied; rollback;', ok=False)
+            if code == 0:
+                raise Blocked('Privilege negative test unexpectedly succeeded')
             d.restore(target, archive)
             if d.catalog(target, 'phase24_fixture') != expected or d.baseline(target) != before:
                 raise Blocked('Restored catalog or platform baseline changed')
@@ -257,7 +307,9 @@ def synthetic():
             if raw.strip() != b'3':
                 raise Blocked('Restored sequence mismatch')
             print(json.dumps({'synthetic': 'PASS', 'rlsAssertions': checks, 'catalog': 'MATCH',
-                              'authBaseline': 'UNCHANGED', 'missingRoleRollback': 'PASS', 'rowsAndSequence': 'PASS', 'image': IMAGE}))
+                              'authBaseline': 'UNCHANGED', 'missingRoleRollback': 'PASS',
+                              'missingAuth': 'PASS', 'dataBeforeSchema': 'PASS', 'extensionAndPrivilegeDenials': 'PASS',
+                              'rowsAndSequence': 'PASS', 'image': IMAGE}))
         except Blocked as exc:
             print('Synthetic failure: ' + str(exc), file=sys.stderr)
             diagnostics = '\n'.join(p.read_text(errors='replace') for p in Path(tmp).glob('*.stderr'))
@@ -280,6 +332,8 @@ def actual(args):
     d = Docker(workspace)
     try:
         d.preflight(); name = d.create(); baseline = d.baseline(name)
+        _, toc = d.run(['exec', '-i', name, 'pg_restore', '--list'], source=archive)
+        validate_toc(toc.decode(), m['scope'])
         if any(baseline['extensions'].get(k) != v for k, v in m['extensions'].items()):
             raise Blocked('Extension versions do not match reviewed source requirements')
         # Roles SQL must be independently reviewed, app-only, no platform roles/functions.

@@ -30,5 +30,9 @@ WITH objects AS (
  UNION ALL
  SELECT 'schema',n.nspname,jsonb_build_object('owner',pg_get_userbyid(n.nspowner),'acl',n.nspacl::text)
  FROM pg_namespace n WHERE n.nspname=:'scope'
+ UNION ALL
+ SELECT 'enum',t.typname,jsonb_agg(e.enumlabel ORDER BY e.enumsortorder)
+ FROM pg_type t JOIN pg_namespace n ON n.oid=t.typnamespace JOIN pg_enum e ON e.enumtypid=t.oid
+ WHERE n.nspname=:'scope' GROUP BY t.typname
 )
 SELECT coalesce(jsonb_agg(jsonb_build_array(kind,name,detail) ORDER BY kind,name),'[]'::jsonb)::text FROM objects;
