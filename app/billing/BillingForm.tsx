@@ -4,11 +4,12 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { calculateInvoice } from './invoice-math'
 import BillingCreditReview from './BillingCreditReview'
+import CustomerPaymentLinkButton from './CustomerPaymentLinkButton'
 
 type Item = { description: string; quantity: string; rate: string }
 const money = (n: number) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(n)
 
-export default function BillingForm({ enableSettlement = false }: { enableSettlement?: boolean }) {
+export default function BillingForm({ enableSettlement = false, enableYoupiLink = false }: { enableSettlement?: boolean; enableYoupiLink?: boolean }) {
   const [saved, setSaved] = useState<{ id: string; invoiceNumber: string; totalPaise: number; status: 'UNPAID' } | null>(null)
   const [saving, setSaving] = useState(false)
   const [message, setMessage] = useState('')
@@ -76,6 +77,7 @@ export default function BillingForm({ enableSettlement = false }: { enableSettle
         <button type="button" disabled={!valid || !!saved || saving || total <= 0} onClick={save}>{saving ? 'Saving…' : 'Save & Issue UNPAID Invoice'}</button>
         {saved && <Link className="cn-authoritative-link" href={'/billing/invoices/' + encodeURIComponent(saved.id)}>View saved invoice / Print PDF</Link>}
         {saved && <button type="button" onClick={reset}>Create next invoice</button>}
+        {saved && enableYoupiLink && <CustomerPaymentLinkButton invoiceId={saved.id} />}
         {message && <p role="status">{message}</p>}
         {!valid && <p role="alert">{calculation.errors.join("; ")}</p>}
         <p><strong>Safety:</strong> Invoice printing preserves the original UNPAID document. A distinct PAID receipt needs verified bank credit and an immutable receipt workflow.</p>
