@@ -3,6 +3,7 @@ import json
 import os
 from pathlib import Path
 import unittest
+import tempfile
 from unittest.mock import patch
 
 spec = importlib.util.spec_from_file_location('recovery', Path(__file__).with_name('recovery.py'))
@@ -91,6 +92,24 @@ class RecoverySafety(unittest.TestCase):
     def test_platform_roles_cannot_be_relabelled_custom(self):
         for roles in [['authenticated'],['supabase_admin'],['pg_read_all_data'],['x','x'],['x;alter']]:
             with self.subTest(roles=roles), self.assertRaises(r.Blocked): r.validate_manifest({**manifest(),'customRoles':roles})
+
+    def test_docker_tmpfs_inspection_formats_and_actual_filesystem(self):
+        with tempfile.TemporaryDirectory(prefix='cn-phase24-unit-') as tmp:
+            d=r.Docker(tmp)
+            name='cn-phase24-'+'a'*32
+            for mounts,tmpfs in [([],{'/var/lib/postgresql/data':'rw,size=1g'}),
+                                  ([{'Destination':'/var/lib/postgresql/data','Type':'tmpfs'}],{})]:
+                item={'Config':{'Labels':{r.LABEL:d.runid}},'HostConfig':{'NetworkMode':'none','PortBindings':{},'LogConfig':{'Type':'none'},'Tmpfs':tmpfs},'Mounts':mounts}
+                with patch.object(d,'run',side_effect=[(0,json.dumps([item]).encode()),(0,b'tmpfs\n')]): d.inspect(name)
+                with patch.object(d,'run',side_effect=[(0,json.dumps([item]).encode()),(0,b'ext4\n')]):
+                    with self.assertRaises(r.Blocked): d.inspect(name)
+
+    def test_cleanup_requires_exact_container_ownership(self):
+        with tempfile.TemporaryDirectory(prefix='cn-phase24-unit-') as tmp:
+            d=r.Docker(tmp)
+            item={'Config':{'Labels':{r.LABEL:'another-run'}}}
+            with patch.object(d,'run',return_value=(0,json.dumps([item]).encode())):
+                with self.assertRaises(r.Blocked): d.inspect('cn-phase24-'+'a'*32,cleanup=True)
 
 
 if __name__=='__main__': unittest.main()

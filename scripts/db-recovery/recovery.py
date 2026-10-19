@@ -215,16 +215,27 @@ class Docker:
                   '-e','API_EXTERNAL_URL=http://127.0.0.1',
                   AUTH_IMAGE,'auth','migrate'])
 
-    def inspect(self, name):
+    def inspect(self, name, *, cleanup=False):
         _, raw = self.run(['inspect', name])
         x = json.loads(raw)[0]
-        if x['Config']['Labels'].get(LABEL) != self.runid or x['HostConfig']['NetworkMode'] != 'none' or x['HostConfig']['PortBindings']:
+        if not re.fullmatch(r'cn-phase24-[a-f0-9]{32}',name) or x['Config']['Labels'].get(LABEL) != self.runid:
+            raise Blocked('Container ownership mismatch')
+        if cleanup:
+            return # Remove our own failed setup even if its isolation check rejected it.
+        if x['HostConfig']['NetworkMode'] != 'none' or x['HostConfig']['PortBindings']:
             raise Blocked('Container identity/network mismatch')
         if x['HostConfig']['LogConfig']['Type'] != ('local' if self.synthetic else 'none'):
             raise Blocked('Container log persistence refused')
         mounts = {m['Destination']: m['Type'] for m in x['Mounts']}
+        for destination in (x['HostConfig'].get('Tmpfs') or {}):
+            if destination in mounts and mounts[destination] != 'tmpfs':
+                raise Blocked('Conflicting tmpfs/persistent mount')
+            mounts[destination] = 'tmpfs'
         if mounts.get('/var/lib/postgresql/data') != 'tmpfs' or any(t == 'bind' for t in mounts.values()):
             raise Blocked('Persistent PGDATA or host bind mount refused')
+        _, raw = self.run(['exec',name,'stat','-f','-c','%T','/var/lib/postgresql/data'])
+        if raw.strip() != b'tmpfs':
+            raise Blocked('PGDATA filesystem is not tmpfs')
 
     def sql(self, name, text, *, ok=True, variables=()):
         return self.run(['exec', '-i', name, 'psql', '-XAtq', '-h', '/var/run/postgresql', '-U', 'supabase_admin', '-d', 'postgres',
@@ -267,7 +278,7 @@ class Docker:
 
     def cleanup(self):
         for name in self.names:
-            self.inspect(name) # Bound to this UUID + label; never prune/reuse an existing container.
+            self.inspect(name, cleanup=True) # Bound to this UUID + label; never prune/reuse an existing container.
             self.run(['rm', '-f', '-v', name])
 
 
