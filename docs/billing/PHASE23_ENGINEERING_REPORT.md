@@ -125,6 +125,33 @@ runs the 20-case suite and full source checks again, plus Windows synthetic back
 checks. Integration evidence is appended after those runs complete; prior PR
 success must not be represented as integration-head success.
 
+### Completed integration CI and merge-readiness decision
+
+[Draft integration PR #4](https://github.com/aqdas1820/credonomics-site/pull/4) is
+open against the billing feature branch. Exact tested head:
+`9278e833611f04235977fee8fa5bbae171a88d3b`; Actions checked out synthetic PR merge
+`8efae3db37640cb6f637b2e23111e95fff05566d`. Its tree matches that head exactly
+(`git diff --quiet` exit 0), with billing base
+`92cd66a1fcce6eef611e05f769a2762c27288d39`.
+
+| Integration job | Result | Exact evidence |
+| --- | --- | --- |
+| Full unit / TypeScript / lint / Next build + browser | PASS: 282 unit tests, 210 billing tests during prebuild, 4 Worker and 17 token-store tests, inventory fixtures, build/typecheck/lint, 7 local browser cases | [Run 39207563411 / job 117913814545](https://github.com/aqdas1820/credonomics-site/actions/runs/39207563411/job/117913814545) |
+| Disposable PostgreSQL **17.11** | PASS: all 20 integration cases; no live Supabase connection | [Run 39207563411 / job 117913814685](https://github.com/aqdas1820/credonomics-site/actions/runs/39207563411/job/117913814685) |
+| Windows PowerShell + native SFTP + Node inventory | PASS: 13 safety cases, real native SFTP pipe fixture, 2 inventory tests | [Run 39207563400 / job 117913609553](https://github.com/aqdas1820/credonomics-site/actions/runs/39207563400/job/117913609553) |
+
+Workflow job logs independently confirm the checkout SHA and test counts.
+The earlier run for `c4e9c3127a22bb6a04594e17248d714a95b03a96` was superseded
+and its source job cancelled when the native SFTP fixture commit arrived; it is
+not counted as a complete successful run. **The tested integration source is
+ready for review/merge into the billing feature branch only.** No merge was
+performed. Subsequent report-only evidence commits do not change the tested
+runtime, SQL, test or workflow files.
+
+Remote refs checked after integration preparation: `main` remains
+`b492f55631d383465b9bdfa886287643d0460094`; billing feature remains
+`92cd66a1fcce6eef611e05f769a2762c27288d39`. PR2/PR3 remain unmerged drafts.
+
 ## Release manifest reconciliation
 
 `ALL_AT_ONCE_RELEASE_GATES.json` remains fail-closed and unmodified. Its historical
