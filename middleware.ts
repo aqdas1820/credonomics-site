@@ -18,7 +18,10 @@ export async function middleware(request: NextRequest) {
   if (request.nextUrl.pathname === '/personal-testing' || request.nextUrl.pathname.startsWith('/personal-testing/') ||
       request.nextUrl.pathname === '/api/personal-testing' || request.nextUrl.pathname.startsWith('/api/personal-testing/')) {
     const headers = { 'Cache-Control': 'private, no-store, max-age=0', 'X-Robots-Tag': 'noindex, nofollow, noarchive', 'Referrer-Policy':'no-referrer' }
-    if (process.env.PERSONAL_TESTING_ENABLED !== 'true') return new NextResponse('Not Found', { status:404, headers })
+    const local = process.env.NODE_ENV === 'development' && process.env.PERSONAL_TESTING_RUNTIME === 'loopback' && !process.env.VERCEL && !process.env.RAILWAY_ENVIRONMENT_ID
+    // Deny before rendering: streamed React notFound() can otherwise carry HTTP 200.
+    const authConfigured = Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL?.trim() && process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY?.trim())
+    if (process.env.PERSONAL_TESTING_ENABLED !== 'true' || (!local && !authConfigured)) return new NextResponse('Not Found', { status:404, headers })
     const response=NextResponse.next({request});Object.entries(headers).forEach(([key,value])=>response.headers.set(key,value));return response
   }
 

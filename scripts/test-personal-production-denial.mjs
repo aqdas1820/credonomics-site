@@ -10,13 +10,13 @@ const env={...process.env,NODE_ENV:'production',NEXT_TELEMETRY_DISABLED:'1',PERS
   BILLING_API_ENABLED:'false',BILLING_PORTAL_ENABLED:'false',BILLING_SETTLEMENT_ENABLED:'false'}
 const child=spawn(process.execPath,['node_modules/next/dist/bin/next','start','-H','127.0.0.1','-p','3020'],{env,stdio:['ignore','ignore','inherit'],windowsHide:true})
 try{
-  let ready=false
+  let ready=false; let lastStatus='no response'
   for(let i=0;i<60;i++){
     if(child.exitCode!==null)throw Error('Built server exited before denial verification')
-    try{const response=await fetch(origin+'/personal-testing',{signal:AbortSignal.timeout(2000)});if(response.status===404){ready=true;break}}catch{}
+    try{const response=await fetch(origin+'/personal-testing',{signal:AbortSignal.timeout(2000)});lastStatus=String(response.status);if(response.status===404){ready=true;break}}catch(error){lastStatus=error.cause?.code??error.name}
     await new Promise(resolve=>setTimeout(resolve,500))
   }
-  assert.equal(ready,true,'Production page must remain unavailable without Auth')
+  assert.equal(ready,true,`Production page must remain unavailable without Auth; last status ${lastStatus}`)
   for(const path of ['/api/personal-testing','/api/personal-testing/session']){
     const response=await fetch(origin+path,{method:'POST',headers:{origin,'Content-Type':'application/json',Cookie:'cn_personal_local=SYNTHETIC-FORGED-COOKIE'},body:JSON.stringify({command:{action:'read'}})})
     assert.equal(response.status,404)
