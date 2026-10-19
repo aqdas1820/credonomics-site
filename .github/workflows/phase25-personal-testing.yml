@@ -47,6 +47,8 @@ jobs:
           npm run typecheck
           npm run lint
       - run: npx playwright install --with-deps chromium
+      - name: Actual production build denies missing Auth even if TEST flag is enabled
+        run: node scripts/test-personal-production-denial.mjs
       - name: Responsive real UI to API workflow and authorization denials
         run: npm run test:personal
       - name: Release remains blocked
