@@ -41,7 +41,7 @@ independently established.** No error line or failed object name is invented.
 
 | Dependency | What is established | What remains unknown for the original dump |
 | --- | --- | --- |
-| `auth` schema/functions | Application policies/FKs can depend on managed Auth objects absent in vanilla PostgreSQL. The pinned Supabase PG image supplies initial Auth objects; later `auth.jwt()` and helper updates are genuine GoTrue migrations. Initial synthetic harness readiness failed because it incorrectly expected the DB image alone to supply `auth.jwt()`. Official migration initialization replaces that assumption. | Whether original export excluded `auth`, failed its creation earlier, or expected managed DDL to pre-exist; exact first statement/error. |
+| `auth` schema/functions | Application policies/FKs can depend on managed Auth objects absent in vanilla PostgreSQL. The pinned Supabase PG image supplies initial Auth objects; later `auth.jwt()` and helper updates are genuine GoTrue migrations. Source review found that expecting the DB image alone to supply `auth.jwt()` was incorrect; official migration initialization replaces that assumption. | Whether original export excluded `auth`, failed its creation earlier, or expected managed DDL to pre-exist; exact first statement/error. |
 | Roles/ownership/grants | A schema archive does not provision all cluster-global prerequisite roles. Missing custom role causes atomic restore failure; ownership, memberships, schema usage and function execute ACLs must be retained. | Original role names/attributes/memberships, missing-role errors, source role-only export and target operator privileges. |
 | Extensions | Supabase PG image contains provider extension binaries; vanilla PG need not. Extension version, namespace, preload configuration and keys are dependencies, not just the extension name. | Exact source versions and whether errors concern unavailable binaries, absent prerequisites, permissions, or keys. |
 | Schema ordering | Managed baseline and roles precede dependent application objects. Archive restore handles pre-data/data/post-data ordering; data-only cannot build missing relations. | Whether original restore used native custom archive, plain SQL, provider-filtered split files or a partial export; which phase failed first. |
@@ -101,7 +101,7 @@ no source database contacted to fill evidence gaps.
 
 ## Tests and results
 
-Local deterministic guard/diagnostic suite: **14 PASS**. Covers manifest/image
+Local deterministic guard/diagnostic suite: **16 PASS**. Covers manifest/image
 versions, unresolved dependencies, missing independent hashes, managed-schema
 rejection, active/key-dependent extensions, strict counts, TOC scope rejection,
 category-only diagnostics, R:-only paths and actual-restore denial in CI or
@@ -132,10 +132,13 @@ Initial CI failures are retained as evidence, not hidden: runs
 [39220033542](https://github.com/aqdas1820/credonomics-site/actions/runs/39220033542),
 [39220260854](https://github.com/aqdas1820/credonomics-site/actions/runs/39220260854),
 and [39220573729](https://github.com/aqdas1820/credonomics-site/actions/runs/39220573729)
-failed at the incorrect DB-image-only Auth readiness prerequisite. Synthetic
-startup diagnostics confirmed PostgreSQL 17.6 itself reached ready state;
-the later Auth migration baseline was missing. The corrected complete-migration
-run and final exact-source results are recorded below after completion.
+failed at harness readiness. Synthetic startup diagnostics confirmed PostgreSQL
+17.6 itself reached ready state at `/var/run/postgresql`; clients now explicitly
+select that socket instead of relying on client defaults. Source review also
+identified the missing later Auth-migration prerequisite. Neither finding is
+attributed to the inaccessible historical private restore logs. The corrected
+complete-migration run and final exact-source results are recorded below after
+completion.
 
 The normal application/TypeScript/build source is unchanged by this phase; its
 previous green exact-head evidence remains in Phase23. New SQL and Python checks

@@ -156,6 +156,8 @@ For the supported app-only route, create a private JSON manifest on R: with:
   "roles": "R:\\<reviewed-app-only-roles.sql>",
   "rolesSha256": "<64 lowercase hex digits from independent inventory>",
   "rolesReviewedAppOnly": true,
+  "customRoles": ["<reviewed custom role name>"],
+  "expectedRoleCatalogSha256": "<independent role attributes/membership digest>",
   "expectedCatalogSha256": "<independently retained canonical catalog digest>",
   "extensions": { "pgcrypto": "<exact source version>" },
   "expectedCounts": { "<table>": 0 },
@@ -175,6 +177,9 @@ redirection may be UTF-16 and is **not** a matching canonical byte representatio
 Custom roles SQL must be reviewed for exact role privileges/memberships and must
 not redefine managed roles/functions, contain external commands or copy live
 passwords. No SQL rewrite engine or global-role reconciliation is provided.
+The separate role fingerprint excludes passwords but preserves custom role
+attributes, settings and membership grantor/admin/inherit/set options. Every
+restored application table must appear in the independent count inventory.
 
 `public`, `auth`, `storage`, platform schemas and active/key-dependent extensions
 are intentionally rejected by this app-only procedure. If the existing dump is

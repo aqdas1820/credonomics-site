@@ -46,8 +46,13 @@ def classify_log(text):
         'relation_or_order': r'relation [^\r\n]+ does not exist|violates foreign key constraint',
         'version_mismatch': r'unrecognized configuration parameter|unsupported version .*file header',
         'restore_errors': r'(?:ERROR|FATAL):|errors ignored on restore:',
+        'socket_or_connection': r'connection to server[^\r\n]*failed|could not connect to server|no response',
     }
     return {key: len(re.findall(p, text, re.I)) for key, p in patterns.items()}
+
+
+def decode_log(raw):
+    return raw.decode('utf-16' if raw.startswith((b'\xff\xfe',b'\xfe\xff')) else 'utf-8-sig', errors='replace')
 
 
 def private_path(path):
@@ -71,7 +76,7 @@ def validate_manifest(m):
     if not re.fullmatch(r'[a-z][a-z0-9_]{0,62}', m.get('scope', '')) or m['scope'] in (
             'auth', 'storage', 'extensions', 'vault', 'pgsodium', 'cron', 'net', 'public'):
         raise Blocked('A dedicated reviewed application schema is required')
-    for key in ('archiveSha256', 'expectedCatalogSha256', 'rolesSha256'):
+    for key in ('archiveSha256', 'expectedCatalogSha256', 'rolesSha256', 'expectedRoleCatalogSha256'):
         if not re.fullmatch(r'[a-f0-9]{64}', m.get(key, '')):
             raise Blocked('Missing independent archive/role/catalog digest')
     if m.get('externalDependenciesReviewed') is not True or m.get('managedSchemaDataRequired') is not False:
@@ -92,6 +97,11 @@ def validate_manifest(m):
         raise Blocked('Independent table counts required')
     if m.get('rolesReviewedAppOnly') is not True:
         raise Blocked('App-only roles/membership SQL requires independent review')
+    if not isinstance(m.get('customRoles'), list) or len(m['customRoles']) != len(set(m['customRoles'])) or not all(
+        re.fullmatch(r'[a-z][a-z0-9_]{0,62}', x) and not x.startswith(('pg_', 'supabase_'))
+        and x not in ('postgres','anon','authenticated','service_role','authenticator') for x in m['customRoles']
+    ):
+        raise Blocked('Reviewed custom role inventory required')
     return m
 
 
@@ -175,7 +185,8 @@ class Docker:
                   '-c', 'log_min_error_statement=panic', '-c', 'archive_mode=off', '-c', 'cron.launch_active_jobs=off'])
         for _ in range(90):
             code, comm = self.run(['exec', name, 'cat', '/proc/1/comm'], ok=False)
-            if code or comm.strip() != b'postgres':
+            # Nix binaries/process titles may be .postgres-wrapped or postgres (main).
+            if code or not comm.strip().startswith((b'postgres', b'.postgres')):
                 time.sleep(1)
                 continue
             code, _ = self.run(['exec', name, 'pg_isready', '-h', '/var/run/postgresql', '-U', 'supabase_admin', '-d', 'postgres'], ok=False)
@@ -237,6 +248,18 @@ class Docker:
         _, raw = self.sql(name, (ROOT / 'catalog.sql').read_text(), variables=('-v', 'scope=' + scope))
         return hashlib.sha256(raw.strip()).hexdigest()
 
+    def role_catalog(self, name, roles):
+        names = ','.join("'"+x+"'" for x in roles) or "''"
+        _, raw = self.sql(name, """SELECT jsonb_build_object(
+          'roles',(SELECT coalesce(jsonb_agg(jsonb_build_array(rolname,rolsuper,rolinherit,rolcreaterole,
+          rolcreatedb,rolcanlogin,rolreplication,rolbypassrls,rolconnlimit,rolvaliduntil,rolconfig)
+          ORDER BY rolname),'[]') FROM pg_roles WHERE rolname IN ("""+names+""")),
+          'memberships',(SELECT coalesce(jsonb_agg(jsonb_build_array(r.rolname,u.rolname,g.rolname,
+          m.admin_option,m.inherit_option,m.set_option) ORDER BY r.rolname,u.rolname,g.rolname),'[]')
+          FROM pg_auth_members m JOIN pg_roles r ON r.oid=m.roleid JOIN pg_roles u ON u.oid=m.member
+          JOIN pg_roles g ON g.oid=m.grantor WHERE r.rolname IN ("""+names+") OR u.rolname IN ("+names+")));" )
+        return hashlib.sha256(raw.strip()).hexdigest()
+
     def restore(self, name, archive):
         self.inspect(name)
         self.run(['exec', '-i', name, 'pg_restore', '-h', '/var/run/postgresql', '-U', 'supabase_admin', '-d', 'postgres',
@@ -282,6 +305,7 @@ def synthetic():
                 d.sql(name, (ROOT / 'fixtures/auth-users.sql').read_text())
             d.sql(source, (ROOT / 'fixtures/schema.sql').read_text())
             expected = d.catalog(source, 'phase24_fixture')
+            expected_roles = d.role_catalog(source, ['phase24_auditor'])
             archive = Path(tmp) / 'synthetic.dump'
             d.run(['exec', source, 'pg_dump', '-h', '/var/run/postgresql', '-U', 'supabase_admin', '-d', 'postgres', '-Fc', '--schema=phase24_fixture'], output=archive)
             _, toc = d.run(['exec', '-i', target, 'pg_restore', '--list'], source=archive)
@@ -318,7 +342,7 @@ def synthetic():
             if code == 0:
                 raise Blocked('Privilege negative test unexpectedly succeeded')
             d.restore(target, archive)
-            if d.catalog(target, 'phase24_fixture') != expected or d.baseline(target) != before:
+            if d.catalog(target, 'phase24_fixture') != expected or d.baseline(target) != before or d.role_catalog(target, ['phase24_auditor']) != expected_roles:
                 raise Blocked('Restored catalog or platform baseline changed')
             checks = rls_checks(d, source) + rls_checks(d, target)
             _, raw = d.sql(target, "select count(*)=2 and sum(amount_paise)=303 from phase24_fixture.documents;")
@@ -366,6 +390,8 @@ def actual(args):
         # This tool does not regex-rewrite SQL or ignore a failed ownership/ACL operation.
         d.run(['exec','-i',name,'psql','-X','-h','/var/run/postgresql','-U','supabase_admin','-d','postgres','-v','ON_ERROR_STOP=1','--single-transaction'], source=roles)
         d.restore(name, archive)
+        if d.role_catalog(name, m['customRoles']) != m['expectedRoleCatalogSha256']:
+            raise Blocked('Custom role attributes/memberships mismatch')
         if d.catalog(name, m['scope']) != m['expectedCatalogSha256'] or d.baseline(name) != baseline:
             raise Blocked('Catalog/platform baseline mismatch')
         _, raw = d.sql(name, "SELECT coalesce(json_agg(c.relname ORDER BY c.relname),'[]') FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace WHERE n.nspname='"+m['scope']+"' AND c.relkind IN ('r','p');")
@@ -402,7 +428,7 @@ def main():
         actual(args)
     else:
         log = private_path(args.log)
-        print(json.dumps(classify_log(log.read_text(encoding='utf-8-sig', errors='replace'))))
+        print(json.dumps(classify_log(decode_log(log.read_bytes()))))
 
 
 if __name__ == '__main__':

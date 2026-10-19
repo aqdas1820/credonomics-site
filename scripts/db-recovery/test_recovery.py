@@ -12,7 +12,7 @@ r = importlib.util.module_from_spec(spec); spec.loader.exec_module(r)
 def manifest():
     return dict(schemaVersion=1, format='app-scoped-custom-archive', sourcePostgresMajor=17,
                 image=r.IMAGE, authImage=r.AUTH_IMAGE, rolesReviewedAppOnly=True, scope='phase24_fixture', archiveSha256='a'*64,
-                rolesSha256='b'*64, expectedCatalogSha256='c'*64,
+                rolesSha256='b'*64, expectedCatalogSha256='c'*64, expectedRoleCatalogSha256='d'*64, customRoles=['phase24_auditor'],
                 externalDependenciesReviewed=True, managedSchemaDataRequired=False,
                 encryptionRootKeyRequired=False, extensions={'pgcrypto':'1.3'}, expectedCounts={'documents':2})
 
@@ -31,7 +31,7 @@ class RecoverySafety(unittest.TestCase):
                 r.validate_manifest({**manifest(),'scope':scope})
 
     def test_missing_independent_hashes_rejected(self):
-        for field in ['archiveSha256','rolesSha256','expectedCatalogSha256']:
+        for field in ['archiveSha256','rolesSha256','expectedCatalogSha256','expectedRoleCatalogSha256']:
             with self.subTest(field=field), self.assertRaises(r.Blocked):
                 r.validate_manifest({**manifest(),field:'not-a-hash'})
 
@@ -81,6 +81,16 @@ class RecoverySafety(unittest.TestCase):
         for extra in ['2; 1 1 TABLE auth users owner','2; 1 1 EXTENSION - pgcrypto owner','unparsed','2; 1 1 SCHEMA - fixture owner']:
             with self.subTest(extra=extra), self.assertRaises(r.Blocked):
                 r.validate_toc('1; 2615 1 SCHEMA - fixture owner\n'+extra,'fixture')
+
+    def test_utf16_private_log_classification(self):
+        raw='ERROR: schema "auth" does not exist\nSYNTHETIC-PRIVATE'.encode('utf-16')
+        result=r.classify_log(r.decode_log(raw))
+        self.assertEqual(result['auth_schema_missing'],1)
+        self.assertNotIn('SYNTHETIC-PRIVATE',json.dumps(result))
+
+    def test_platform_roles_cannot_be_relabelled_custom(self):
+        for roles in [['authenticated'],['supabase_admin'],['pg_read_all_data'],['x','x'],['x;alter']]:
+            with self.subTest(roles=roles), self.assertRaises(r.Blocked): r.validate_manifest({**manifest(),'customRoles':roles})
 
 
 if __name__=='__main__': unittest.main()
