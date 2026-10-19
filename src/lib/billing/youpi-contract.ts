@@ -16,7 +16,7 @@ export function parseOrigin(value: string, allowLocal = false): string {
     const url = new URL(value)
     const local = url.hostname === '127.0.0.1' || url.hostname === 'localhost'
     if ((url.protocol !== 'https:' && !(allowLocal && local && url.protocol === 'http:')) ||
-      (local && !allowLocal) || (isIP(url.hostname) !== 0 && !local) ||
+      (local && !allowLocal) || url.hostname.startsWith('[') || (isIP(url.hostname) !== 0 && !local) ||
       url.username || url.password || url.pathname !== '/' || url.search || url.hash ||
       ['.localhost', '.internal', '.local'].some(x => url.hostname.endsWith(x))) throw new Error('unsafe')
     return url.origin
