@@ -101,11 +101,13 @@ no source database contacted to fill evidence gaps.
 
 ## Tests and results
 
-Local deterministic guard/diagnostic suite: **16 PASS**. Covers manifest/image
+Local deterministic guard/diagnostic suite: **18 PASS**. Covers manifest/image
 versions, unresolved dependencies, missing independent hashes, managed-schema
 rejection, active/key-dependent extensions, strict counts, TOC scope rejection,
-category-only diagnostics, R:-only paths and actual-restore denial in CI or
-without attestations. The wrapper is syntax-checked separately.
+category-only UTF-8/UTF-16 diagnostics, R:-only paths, Docker tmpfs inspection
+formats plus actual filesystem type, cleanup ownership and actual-restore denial
+in CI or without attestations. PowerShell 5.1 parser check: **PASS**. A local
+synthetic invocation exits 1/BLOCKED because Docker is absent, as expected.
 
 The official-runtime CI fixture:
 
@@ -137,8 +139,48 @@ failed at harness readiness. Synthetic startup diagnostics confirmed PostgreSQL
 select that socket instead of relying on client defaults. Source review also
 identified the missing later Auth-migration prerequisite. Neither finding is
 attributed to the inaccessible historical private restore logs. The corrected
-complete-migration run and final exact-source results are recorded below after
-completion.
+complete-migration run and final exact-source results are recorded below.
+
+### Completed exact-source CI
+
+Tested head: **`20e9e779175493809fcf86dbfad893b8b56a0261`**.
+Actions checkout: **`3d76e7b9edf3f974b0a95a5a924810832eedf9fb`**, the synthetic
+merge into PR4 head `487a41976c943f653aa73ea30b16e449a019d222`. Fetched merge
+tree equals the tested head (`git diff --quiet` exit 0).
+
+[Run 39221816608 / job 117958636873](https://github.com/aqdas1820/credonomics-site/actions/runs/39221816608/job/117958636873):
+**PASS**, independently checked through job status and decoded logs.
+
+| Check | Verified result |
+| --- | --- |
+| Deterministic Python suite | 18 tests PASS |
+| Official runtimes | Supabase PostgreSQL **17.6**, image `17.6.1.136` and authentic GoTrue **v2.197.0** complete migrations, immutable digests in code/runbook |
+| Archive round trip | Catalog and custom-role attributes/membership fingerprint MATCH |
+| Platform semantics | `auth` helper definitions, API-role bypass attributes and extension baseline UNCHANGED by app restore |
+| SQL RLS behavior | 10 assertions PASS, source and restored target |
+| Data/sequence | Two synthetic rows sum to 303 paise; next identity value 3 |
+| Missing-role rollback | Expected failure, no partial app schema retained |
+| Missing Auth in template0 DB | Expected failure at missing `auth` dependency; no stub installed |
+| Data-before-schema | Expected failure |
+| Unavailable extension / ordinary-role DDL | Both expected denials |
+| Actual encrypted staging backup | **NOT EXECUTED / NOT VERIFIED** |
+
+Additional intermediate failed runs were harness compatibility failures, not
+successful recovery evidence: Nix PostgreSQL process titles needed recognition;
+database clients now select `/var/run/postgresql`; Docker's `--tmpfs` entries
+must be checked in HostConfig as well as Mounts, with `stat` proving the actual
+filesystem is tmpfs; schema ACL TOC entries use `- SCHEMA <scope>` and must be
+preserved. Runs [39221404046](https://github.com/aqdas1820/credonomics-site/actions/runs/39221404046)
+and [39221589287](https://github.com/aqdas1820/credonomics-site/actions/runs/39221589287)
+record the mount-inspection and schema-ACL refusals respectively. Corrected
+guards retain isolation and scope; no checks were bypassed to obtain the PASS.
+
+Source work is ready for review as a **local recovery tool**, not a certificate
+for the existing encrypted backup or permission to change hosted infrastructure.
+Subsequent report-only evidence commits do not change this tested runtime/SQL.
+Final read-only refs: `main` `ffa81e5683d4a2eae20b58cbe870233bc26ea43d`, billing
+feature `92cd66a1fcce6eef611e05f769a2762c27288d39`, PR4 branch
+`487a41976c943f653aa73ea30b16e449a019d222`; none was modified by this phase.
 
 The normal application/TypeScript/build source is unchanged by this phase; its
 previous green exact-head evidence remains in Phase23. New SQL and Python checks
