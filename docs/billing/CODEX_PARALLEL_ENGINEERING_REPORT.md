@@ -167,3 +167,93 @@ security close-out, approved beneficiary/bank reconciliation, official recurring
 INR 0 WhatsApp OTP entitlement and actual secure delivery, issuer/privacy/tax and
 retention decisions. These external gates remain BLOCKED. No mock success, fake
 OTP, paid provider or unlicensed gateway workaround is proposed.
+# Follow-up after Draft PR #2 — 2026-10-18
+
+This section records new source-only work; the earlier assignment above remains historical.
+
+## Verified source and integration review
+
+- Starting source / PR #2 head: `8f052a531fe74f74ccc3d1a060e569e95724e3b9`.
+- Remote billing feature: `92cd66a1fcce6eef611e05f769a2762c27288d39`.
+- Remote main: `b492f55631d383465b9bdfa886287643d0460094` (untouched).
+- Remote backend main and inspected source: `3bcfe78e24de1924b2be301ad9c66f887c2bd5ed`.
+- Ending implementation commit: `c2ed691c7e56bbe42275e67198cf956ba47ea32e`.
+  The subsequent documentation-only commit is available as this PR's HEAD and in owner delivery.
+- GitHub API confirmed [CI 39138905626](https://github.com/aqdas1820/credonomics-site/actions/runs/39138905626)
+  completed SUCCESS for exact PR #2 head, both source and 19-case PostgreSQL jobs.
+- Reviewed the 18-file PR #2 diff, focusing on duplicate Storage handling, bucket metadata
+  gates, immutable winner verification, PDF pagination, UI in-flight lock, tests, prototype
+  isolation and deployment guard. No blocking source defect found in this scoped review.
+- `git merge-tree --write-tree <feature-sha> <pr2-head>` succeeded, result tree
+  `0cbe6f47c97bb1f1fcec64ab66c28bcc5ecf7786`. This is a local integration check, not a branch merge.
+  Recommendation: suitable for integration into the billing feature after review/promotion;
+  NOT a production-readiness approval. PR #2 remains draft and unmerged; no main integration.
+
+New branch: `codex/upstox-token-persistence`, stacked on PR #2 to avoid changing its reviewed
+head. Publish as a separate draft against `feature/youpi-payment-entry-prelaunch`, depending
+on PR #2. Until PR #2 lands, the overall PR diff includes its existing changes; review the
+new implementation from `8f052a5` onward. After PR #2 integration, merge/reconcile the latest
+billing feature without rewriting history, inspect the remaining diff and rerun CI.
+Never target main. The Git deployment guard disables this
+new exact branch; no hosted configuration or deployment was performed.
+
+## Deliverables and actual local results
+
+| Verification | Actual result |
+| --- | --- |
+| `node --experimental-sqlite --test prototypes/encrypted-token-store/store.test.mjs` | PASS: 17 synthetic cases |
+| `npm test` | PASS: 282 tests / 39 files |
+| `npm run build` | PASS, including 210 billing prebuild tests; existing CSS/autoprefixer/cache warnings |
+| `npm run typecheck` | PASS |
+| `npm run lint` | PASS with existing image/hook warnings and Next lint deprecation |
+| `python scripts/test-billing-postgres.py` | PASS: 20 cases, disposable LOCAL PG17.11, including catalog RLS fault detection |
+| `node --test prototypes/worker-market-api/worker.test.mjs` | PASS: 4 offline cases |
+| `BILLING_DOCUMENT_FIXTURES=1 npx vitest run app/billing/document-integrity.test.ts` | PASS: 11; synthetic fixtures only, variable removed afterward |
+| `npx playwright test --config=playwright.billing-local.config.ts` | PASS: 7 local browser cases |
+| `npx playwright test --config=playwright.billing-staging.config.ts --list` | 9 discovered; no hosted calls |
+| Same staging command without `--list`, with approvals absent | 9 SKIPPED; hosted verification NOT RUN |
+| `node scripts/check-billing-launch-readiness.mjs --assert-blocked` | PASS: release remains NO GO, 2/13 documented gates, 11 blocked |
+| `git diff --check` | PASS |
+
+PG setup used the existing portable `initdb.exe` / `pg_ctl.exe` / `psql.exe` binaries.
+Created a new UUID-named scratch cluster under local application data with `initdb -U
+codex_synthetic -A trust --no-locale -E UTF8`; started it using `pg_ctl -o "-h 127.0.0.1
+-p 55473" -w start`. Set child-shell-only `PGHOST=127.0.0.1`, `PGPORT=55473`,
+`PGUSER=codex_synthetic`, `BILLING_PG_DISPOSABLE=1` and ran the Python suite. Its own
+UUID-named test database was dropped; `pg_ctl -m fast -w stop` succeeded in finally.
+SQL 012–016 ran ONLY in that disposable synthetic database. No owner restore/backup path,
+VeraCrypt setup, hosted connection or Railway volume was accessed. No new tools installed.
+Build-generated IPO/search data changes were reverted in this isolated worktree.
+
+Implementation and exact future cutover/rollback sequence:
+[UPSTOX_TOKEN_PERSISTENCE_DESIGN.md](UPSTOX_TOKEN_PERSISTENCE_DESIGN.md).
+Hosted acceptance fixtures, approvals, commands and limits:
+[HOSTED_ACCEPTANCE_RUNBOOK.md](HOSTED_ACCEPTANCE_RUNBOOK.md).
+
+## Status, blockers and handoff
+
+- Token encryption/CAS/expiry/recovery prototype: PASS locally. Real token migration: NOT RUN.
+  No real token or token hash was read, copied, emitted or committed. Synthetic temporary
+  SQLite files were removed by tests; no database export is tracked.
+- Proposed sustainable zero-additional-cost path: Workers Free + D1 Free within quotas.
+  Actual spend: ₹0. No resource created. Account eligibility/aggregate quota and hosted CPU,
+  primary consistency, provider terms and outage recovery remain unverified.
+- Backend integration BLOCKED on a separate interface/controller PR and hosting/bridge
+  design. This is not a drop-in adapter, a deployed credential service or a replacement for
+  the continuous WebSocket backend. File store race risks are documented, not patched live.
+- Independent production key recovery/checkpoints and global rollback detection are NOT
+  proven. Synthetic key re-import is not owner custody verification. Preserve old volume;
+  never silently fall back to a stale file after the first new remote write.
+- Infrastructure agent: independently finish recovery work; obtain exact-project approvals;
+  verify private archive configuration, key custody and hosted Auth/RLS with synthetic users;
+  only then run separately authorized hosted tests. Do not apply migrations from this report.
+- Auth browser states must privately correspond to the independently verified JWT identities.
+  True hosted RLS behavior, customer OTP ownership, archive concurrency/retention/recovery and
+  PAID receipt acceptance remain separate gates. Private schema denial is not proof of row
+  policy execution. Real YouPI licensing/security and merchant/WhatsApp approvals remain open.
+
+Definition of done for the next stage: feature-only review/integration with exact-head CI;
+backend revision propagation plus replay tests; approved Free hosting path and key/checkpoint
+recovery; hosted synthetic recovery/quota/concurrency evidence; independently approved
+Supabase migrations/resources and passing non-skipped hosted acceptance. None authorizes
+production deployment, password resets, paid activation or live payments.
