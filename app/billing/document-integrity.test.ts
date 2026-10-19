@@ -68,6 +68,13 @@ describe('persisted private document rendering', () => {
     expect(html).toContain('/receipt')
     exportFixture('paid', html)
   })
+  it('keeps archive controls within the authorized private document', async () => {
+    vi.stubEnv('BILLING_PDF_ARCHIVE_ENABLED', 'true')
+    const html = renderToStaticMarkup(await InvoiceDocumentPage({ params: Promise.resolve(params) }))
+    expect(html).toContain('Download archived PDF')
+    expect(html).toContain('aria-busy="false"')
+    exportFixture('archive-controls', html)
+  })
   it('preserves maximum supported amounts and long original lines', async () => {
     rpc.mockResolvedValue({ data: { ...invoice, customer: 'C'.repeat(120), totalPaise: 10000000000,
       items: [

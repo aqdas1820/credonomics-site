@@ -3,6 +3,9 @@
 name: Billing PostgreSQL integration (disposable)
 
 on:
+  pull_request:
+    branches:
+      - feature/youpi-payment-entry-prelaunch
   push:
     branches:
       - feature/youpi-payment-entry-prelaunch
@@ -25,6 +28,9 @@ on:
       - "scripts/generate-ipo-dashboard.mjs"
       - "scripts/generate-search-index.mjs"
       - "scripts/check-billing-launch-readiness.mjs"
+      - "scripts/test-billing-archive-recovery.mjs"
+      - "prototypes/worker-market-api/**"
+      - "prototypes/encrypted-token-store/**"
       - "docs/billing/ALL_AT_ONCE_RELEASE_GATES.json"
   workflow_dispatch:
 
@@ -37,7 +43,7 @@ concurrency:
 
 jobs:
   postgres-integration:
-    name: PostgreSQL 17 / 19 synthetic safety cases
+    name: PostgreSQL 17 / 20 synthetic safety cases
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     if: github.repository == 'aqdas1820/credonomics-site'
@@ -70,7 +76,7 @@ jobs:
           fi
           psql --version
 
-      - name: Execute 19 integration tests against disposable local PostgreSQL
+      - name: Execute 20 integration tests against disposable local PostgreSQL
         env:
           PGHOST: 127.0.0.1
           PGPORT: "5432"
@@ -107,6 +113,15 @@ jobs:
       - name: Full unit tests
         run: npm test
 
+      - name: Synthetic remote backup inventory (no cloud access)
+        run: node --test scripts/railway-backup/remote-inventory.test.cjs
+
+      - name: Stateless Worker feasibility prototype (offline fixtures only)
+        run: node --test prototypes/worker-market-api/worker.test.mjs
+
+      - name: Encrypted token store (synthetic fixtures and disposable local SQLite only)
+        run: node --experimental-sqlite --test prototypes/encrypted-token-store/store.test.mjs
+
       - name: Local-only Next.js production build (NOT deployment)
         run: npm run build
 
@@ -118,3 +133,14 @@ jobs:
 
       - name: List opt-in staging verification cases without accessing staging
         run: npx playwright test --config=playwright.billing-staging.config.ts --list
+
+      - name: Generate synthetic private-document fixtures
+        env:
+          BILLING_DOCUMENT_FIXTURES: "1"
+        run: npx vitest run app/billing/document-integrity.test.ts
+
+      - name: Install disposable Chromium test runtime
+        run: npx playwright install --with-deps chromium
+
+      - name: Verify disabled billing routes and synthetic mobile/A4 layouts locally
+        run: npx playwright test --config=playwright.billing-local.config.ts

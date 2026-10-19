@@ -261,6 +261,17 @@ class BillingPostgres(unittest.TestCase):
                              "and 'search_path=pg_catalog, pg_temp'=any(p.proconfig);"), "6")
 
 
+    def test_20_prepared_hosted_catalog_acceptance_detects_disabled_rls(self):
+        check = (ROOT / 'tests' / 'staging' / 'catalog-acceptance.sql').read_text(encoding='utf-8')
+        self.assertEqual(sql(check), 't|t|t|t|t|t')
+        # Fault injection in THIS disposable synthetic database only.
+        sql('alter table billing_private.invoices disable row level security;')
+        try:
+            self.assertEqual(sql(check), 't|f|t|t|t|t')
+        finally:
+            sql('alter table billing_private.invoices enable row level security;')
+
+
 def main():
     if ENV["PGHOST"] not in ("127.0.0.1", "localhost", "::1"):
         sys.exit("NOT EXECUTED: only a local disposable database is permitted")

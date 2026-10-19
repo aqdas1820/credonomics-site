@@ -17,7 +17,7 @@ export interface CreateOnlyArchiveStore {
   create(key: string, bytes: Uint8Array): Promise<'created' | 'exists'>
 }
 
-function verify(bytes: Uint8Array, expected: DocumentSnapshot) {
+export function verifyArchivedDocument(bytes: Uint8Array, expected: DocumentSnapshot) {
   if (bytes.length > MAX_ARCHIVE_BYTES) throw new Error('Oversized archive')
   const stored = envelope.parse(JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(bytes)))
   if (!timingSafeEqual(Buffer.from(stored.integrityTag, 'hex'), Buffer.from(tag(stored.snapshotSha256, stored.pdfSha256), 'hex'))) throw new Error('Archive integrity failure')
@@ -35,15 +35,15 @@ export async function archivedDocument(store: CreateOnlyArchiveStore, snapshot: 
   render?: (s: DocumentSnapshot) => Promise<Uint8Array>) {
   const key = documentKey(snapshot)
   const existing = await store.read(key)
-  if (existing) return verify(existing, snapshot)
+  if (existing) return verifyArchivedDocument(existing, snapshot)
   if (!render) throw new Error('Document not archived')
   const pdf = await render(snapshot)
   const snapshotSha256 = digest(JSON.stringify(snapshot)); const pdfSha256 = digest(pdf)
   const bytes = Buffer.from(JSON.stringify({ format: 'credonomics-pdf-v1', snapshot,
     snapshotSha256, pdfSha256, pdf: Buffer.from(pdf).toString('base64'), integrityTag: tag(snapshotSha256, pdfSha256) }))
-  verify(bytes, snapshot)
+  verifyArchivedDocument(bytes, snapshot)
   await store.create(key, bytes) // concurrent create conflicts are verified below
   const persisted = await store.read(key)
   if (!persisted) throw new Error('Archive persistence unavailable')
-  return verify(persisted, snapshot)
+  return verifyArchivedDocument(persisted, snapshot)
 }

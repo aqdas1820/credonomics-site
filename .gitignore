@@ -15,6 +15,8 @@ artifacts/
 scratch/
 *.bak
 *.tsbuildinfo
+phase23-*.local.log
+railway-backup-profiles/
 data/mf-production-source/
 data/mf-production-diagnostics/
 data/mf-production-staging/
