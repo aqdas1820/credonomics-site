@@ -63,6 +63,8 @@ def private_path(path):
     for item in (p, *p.parents):
         if item.is_symlink() or (hasattr(item, 'is_junction') and item.is_junction()):
             raise Blocked('Linked private path refused')
+        if item.exists() and getattr(item.lstat(),'st_file_attributes',0) & 0x400:
+            raise Blocked('Windows reparse point refused')
     if p.resolve().drive.upper() != 'R:':
         raise Blocked('Private path escaped encrypted drive')
     return p
@@ -126,6 +128,8 @@ def validate_toc(toc, scope):
             if not rest.startswith('- '+scope+' '):
                 raise Blocked('Wrong schema in archive')
             schemas += 1
+        elif description in ('ACL','COMMENT') and rest.startswith('- SCHEMA '+scope+' '):
+            pass # pg_dump encodes schema ACLs with the global '-' namespace.
         elif not rest.startswith(scope+' '):
             raise Blocked('Out-of-scope object in archive')
     if schemas != 1:
@@ -320,7 +324,11 @@ def synthetic():
             archive = Path(tmp) / 'synthetic.dump'
             d.run(['exec', source, 'pg_dump', '-h', '/var/run/postgresql', '-U', 'supabase_admin', '-d', 'postgres', '-Fc', '--schema=phase24_fixture'], output=archive)
             _, toc = d.run(['exec', '-i', target, 'pg_restore', '--list'], source=archive)
-            validate_toc(toc.decode(), 'phase24_fixture')
+            try:
+                validate_toc(toc.decode(), 'phase24_fixture')
+            except Blocked:
+                print('Synthetic-only archive TOC: '+toc.decode(), file=sys.stderr)
+                raise
             # Data without schema cannot establish recovery; fail rather than disable checks.
             code, _ = d.run(['exec','-i',target,'pg_restore','-h','/var/run/postgresql','-U','supabase_admin','-d','postgres',
                              '--data-only','--single-transaction','--exit-on-error'], source=archive, ok=False)
@@ -370,6 +378,12 @@ def synthetic():
             print('Synthetic failure: ' + str(exc), file=sys.stderr)
             diagnostics = '\n'.join(p.read_text(errors='replace') for p in Path(tmp).glob('*.stderr'))
             print(json.dumps(classify_log(diagnostics)), file=sys.stderr)
+            step = re.search(r'diagnostic step (\d+)',str(exc))
+            if step:
+                detail = (d.logdir / f'{int(step[1]):03d}.stderr').read_text(errors='replace')
+                detail = re.sub(r'postgres(?:ql)?://[^\s]+','[generated local URI]',detail)
+                detail = re.sub(r'[a-f0-9]{64}','[generated value]',detail)
+                print('Synthetic-only failed command diagnostic: '+detail[-3000:],file=sys.stderr)
             # This path is reachable only with generated fixtures, never an actual backup.
             for name in d.names:
                 _, logs = d.run(['logs','--tail','45',name], ok=False)

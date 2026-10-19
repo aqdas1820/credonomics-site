@@ -76,10 +76,10 @@ class RecoverySafety(unittest.TestCase):
         with self.assertRaises(r.Blocked): r.private_path('C:/unencrypted/dump.sql')
 
     def test_scoped_toc(self):
-        r.validate_toc('; SYNTHETIC\n1; 2615 1 SCHEMA - fixture owner\n2; 1259 2 TABLE fixture t owner\n3; 0 2 TABLE DATA fixture t owner', 'fixture')
+        r.validate_toc('; SYNTHETIC\n1; 2615 1 SCHEMA - fixture owner\n2; 1259 2 TABLE fixture t owner\n3; 0 2 TABLE DATA fixture t owner\n4; 0 0 ACL - SCHEMA fixture owner', 'fixture')
 
     def test_toc_scope_and_unknown_records(self):
-        for extra in ['2; 1 1 TABLE auth users owner','2; 1 1 EXTENSION - pgcrypto owner','unparsed','2; 1 1 SCHEMA - fixture owner']:
+        for extra in ['2; 1 1 TABLE auth users owner','2; 1 1 ACL - SCHEMA auth owner','2; 1 1 EXTENSION - pgcrypto owner','unparsed','2; 1 1 SCHEMA - fixture owner']:
             with self.subTest(extra=extra), self.assertRaises(r.Blocked):
                 r.validate_toc('1; 2615 1 SCHEMA - fixture owner\n'+extra,'fixture')
 
