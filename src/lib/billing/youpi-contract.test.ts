@@ -10,7 +10,7 @@ const respond = (data: unknown) => new Response(JSON.stringify(data), { status: 
 describe('YouPI REST integration, disabled by default', () => {
   it('requires explicit merchant and gateway config', () => {
     expect(() => gatewayConfig({ NODE_ENV: 'production' })).toThrow()
-    for (const origin of ['http://127.0.0.1:6100', 'http://example.org', 'https://u:p@example.org', 'https://example.org/path', 'https://192.168.1.4']) {
+    for (const origin of ['http://127.0.0.1:6100', 'http://example.org', 'https://u:p@example.org', 'https://example.org/path', 'https://192.168.1.4', 'https://[::1]:6100']) {
       expect(() => parseOrigin(origin)).toThrow()
     }
     expect(parseOrigin('http://127.0.0.1:6100', true)).toBe('http://127.0.0.1:6100')
