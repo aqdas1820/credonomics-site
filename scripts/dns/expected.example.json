@@ -1,0 +1,15 @@
+{
+  "domain": "credonomics.in",
+  "records": [
+    { "id": "nameservers", "name": "credonomics.in", "type": "NS", "expected": [] },
+    { "id": "vercel-apex", "name": "credonomics.in", "type": "A", "expected": [] },
+    { "id": "vercel-www", "name": "www.credonomics.in", "type": "CNAME", "expected": [] },
+    { "id": "railway-api", "name": "api.credonomics.in", "type": "CNAME", "expected": [] },
+    { "id": "cardledger", "name": "cardledger.credonomics.in", "type": "CNAME", "expected": [] },
+    { "id": "improvmx", "name": "credonomics.in", "type": "MX", "expected": ["10 mx1.improvmx.com", "20 mx2.improvmx.com"] },
+    { "id": "spf", "name": "credonomics.in", "type": "TXT", "prefix": "v=spf1", "sha256": [] },
+    { "id": "dmarc", "name": "_dmarc.credonomics.in", "type": "TXT", "prefix": "v=DMARC1", "sha256": [] },
+    { "id": "google", "name": "credonomics.in", "type": "TXT", "prefix": "google-site-verification=", "sha256": [] },
+    { "id": "railway-verification", "name": "_railway-verify.api.credonomics.in", "type": "TXT", "prefix": "railway-verify=", "sha256": [] }
+  ]
+}

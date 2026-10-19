@@ -15,6 +15,19 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 308)
   }
 
+  if (request.nextUrl.pathname.startsWith('/pay/i/')) {
+    const headers = { 'Cache-Control': 'private, no-store, max-age=0',
+      'Referrer-Policy': 'no-referrer', 'X-Robots-Tag': 'noindex, nofollow, noarchive, nosnippet' }
+    if (process.env.YOUPI_PAYMENT_LINK_ENABLED !== 'true' || process.env.YOUPI_LINK_LEDGER_APPROVED !== 'true') {
+      return new NextResponse('Not Found', { status: 404, headers })
+    }
+    // Bearer pages revalidate the invoice and durable ledger on the server.
+    // Avoid unrelated Auth cookie refresh and remote Auth calls for these URLs.
+    const response = NextResponse.next({ request })
+    Object.entries(headers).forEach(([key, value]) => response.headers.set(key, value))
+    return response
+  }
+
   // Dedicated TEST workspace. Page and every API request independently verify owner access.
   // It does not enable any existing billing flag or touch the financial ledger.
   if (request.nextUrl.pathname === '/personal-testing' || request.nextUrl.pathname.startsWith('/personal-testing/') ||

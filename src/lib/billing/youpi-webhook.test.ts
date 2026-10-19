@@ -4,6 +4,7 @@ import { verifyYoupiObservation } from './youpi-webhook'
 const secret = 'test-only-example-secret-keep-out-of-production'
 const payload = {
   event: 'SUCCESS',
+  method: 'UPI',
   orderId: 'CN-2026-00000001',
   amount: '1500.00',
   amountPaise: 150000,
@@ -16,6 +17,10 @@ const sign = (b: Buffer) => 'sha256=' + createHmac('sha256', secret).update(b).d
 const observe = (b: Buffer = body) => verifyYoupiObservation(b, sign(b), secret)
 
 describe('YouPI V2 documented merchant webhook observation', () => {
+  it('keeps COD separate from bank-credit observations and rejects missing method', () => {
+    expect(observe(Buffer.from(JSON.stringify({ ...payload, method: 'COD', utr: null })))).toMatchObject({ method: 'COD', decision: 'REVIEW_REQUIRED', utr: null })
+    expect(() => observe(Buffer.from(JSON.stringify({ ...payload, method: undefined })))).toThrow('Invalid signed')
+  })
   it('rejects invalid UTF-8 even with a valid signature', () => {
     const invalid = Buffer.concat([Buffer.from('{"extra":"'), Buffer.from([0xff]), Buffer.from('",'), body.subarray(1)])
     expect(() => observe(invalid)).toThrow('Invalid webhook JSON')

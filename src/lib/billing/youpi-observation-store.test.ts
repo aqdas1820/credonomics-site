@@ -8,7 +8,7 @@ vi.mock('../../../app/billing/db-scope', () => ({ billingDatabaseScopeReady: sco
 import { recordSignedYoupiObservation as record } from './youpi-observation-store'
 
 const secret = 'synthetic-only-webhook-secret-for-tests'
-const payload = { event: 'SUCCESS', orderId: 'CN-2026-00000001',
+const payload = { event: 'SUCCESS', method: 'UPI', orderId: 'CN-2026-00000001',
   paymentId: '12345678-1234-4234-8234-123456789012', currency: 'INR',
   amount: '1.00', amountPaise: 100, utr: 'TESTUTR00001' }
 const body = Buffer.from(JSON.stringify(payload))
@@ -25,6 +25,21 @@ beforeEach(() => {
 afterEach(() => { vi.unstubAllEnvs(); vi.resetAllMocks() })
 
 describe('signed observation adapter (database is mocked)', () => {
+  it('binds UUID-order observations through the saved merchant/session ledger', async () => {
+    vi.stubEnv('YOUPI_MERCHANT_ID','22222222-2222-4222-8222-222222222222')
+    vi.stubEnv('YOUPI_API_ORIGIN','https://api.example.org')
+    vi.stubEnv('YOUPI_CHECKOUT_ORIGIN','https://pay.example.org')
+    const uuidOrder = Buffer.from(JSON.stringify({ ...payload, orderId: 'CN-11111111-1111-4111-8111-111111111111' }))
+    await record(uuidOrder, sign(uuidOrder))
+    expect(rpc).toHaveBeenCalledWith('billing_record_youpi_link_observation', expect.objectContaining({
+      p_invoice: '11111111-1111-4111-8111-111111111111', p_merchant: '22222222-2222-4222-8222-222222222222', p_payment: payload.paymentId,
+    }))
+  })
+  it('does not put COD placement into the bank observation ledger', async () => {
+    const cod = Buffer.from(JSON.stringify({ ...payload, method: 'COD', utr: null }))
+    await expect(record(cod, sign(cod))).rejects.toThrow('Unsupported payment method')
+    expect(client).not.toHaveBeenCalled()
+  })
   it('rejects noninvoice order binding before creating a database client', async () => {
     const invalid = Buffer.from(JSON.stringify({ ...payload, orderId: 'arbitrary-order' }))
     await expect(record(invalid, sign(invalid))).rejects.toThrow('order binding')

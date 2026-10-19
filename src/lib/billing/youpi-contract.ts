@@ -1,6 +1,7 @@
 /** Server-to-server YouPI contract. Gateway SUCCESS never proves bank credit. */
 import { createHmac, timingSafeEqual } from 'node:crypto'
 import { isIP } from 'node:net'
+import { lookup } from 'node:dns/promises'
 
 export type YoupiGatewayConfig = { apiOrigin: string; checkoutOrigin: string; merchantId: string; allowLocal: boolean }
 export type YoupiInvoice = { id: string; totalPaise: number; status: 'UNPAID'; paidPaise: number; invoiceNumber: string }
@@ -26,7 +27,7 @@ export function gatewayConfig(env: NodeJS.ProcessEnv = process.env): YoupiGatewa
   const allowLocal = env.NODE_ENV !== 'production' && env.YOUPI_ALLOW_LOCAL === 'true' && !env.VERCEL && !env.RAILWAY_ENVIRONMENT_ID
   if (!env.YOUPI_API_ORIGIN || !env.YOUPI_CHECKOUT_ORIGIN ||
     !env.YOUPI_MERCHANT_ID || !uuid.test(env.YOUPI_MERCHANT_ID)) throw new YoupiBridgeError('YouPI gateway not configured')
-  return { apiOrigin: parseOrigin(env.YOUPI_API_ORIGIN, allowLocal), checkoutOrigin: parseOrigin(env.YOUPI_CHECKOUT_ORIGIN, allowLocal), merchantId: env.YOUPI_MERCHANT_ID, allowLocal }
+  return { apiOrigin: parseOrigin(env.YOUPI_API_ORIGIN, allowLocal), checkoutOrigin: parseOrigin(env.YOUPI_CHECKOUT_ORIGIN, allowLocal), merchantId: env.YOUPI_MERCHANT_ID.toLowerCase(), allowLocal }
 }
 export function validateInvoice(input: unknown, id: string): YoupiInvoice {
   if (!uuid.test(id) || !input || typeof input !== 'object') throw new YoupiBridgeError('Invalid invoice')
@@ -34,16 +35,43 @@ export function validateInvoice(input: unknown, id: string): YoupiInvoice {
   if (typeof invoice.id !== 'string' || invoice.id.toLowerCase() !== id.toLowerCase() ||
     invoice.status !== 'UNPAID' || invoice.paidPaise !== 0 || !Number.isSafeInteger(invoice.totalPaise) ||
     (invoice.totalPaise as number) <= 0 || (invoice.totalPaise as number) > 100_000_000 ||
-    typeof invoice.invoiceNumber !== 'string' || invoice.invoiceNumber.length > 80) {
+    typeof invoice.invoiceNumber !== 'string' || !/^[a-zA-Z0-9][a-zA-Z0-9._/# -]{0,79}$/.test(invoice.invoiceNumber)) {
     throw new YoupiBridgeError('Invoice not eligible for payment session')
   }
-  return invoice as YoupiInvoice
+  return { id: id.toLowerCase(), totalPaise: invoice.totalPaise as number, paidPaise: 0, status: 'UNPAID', invoiceNumber: invoice.invoiceNumber }
 }
-async function boundedJson(res: Response): Promise<unknown> {
+export async function boundedJson(res: Response): Promise<unknown> {
   if (Number(res.headers.get('content-length') || 0) > 16384) throw new YoupiBridgeError('Oversized gateway response')
-  const text = await res.text()
-  if (text.length > 16384) throw new YoupiBridgeError('Oversized gateway response')
+  if (!res.body) throw new YoupiBridgeError('Empty gateway response')
+  const reader = res.body.getReader()
+  const chunks: Uint8Array[] = []
+  let size = 0
+  try {
+    while (true) {
+      const { done, value } = await reader.read()
+      if (done) break
+      size += value.byteLength
+      if (size > 16384) { await reader.cancel(); throw new YoupiBridgeError('Oversized gateway response') }
+      chunks.push(value)
+    }
+  } finally { reader.releaseLock() }
+  const text = new TextDecoder('utf-8', { fatal: true }).decode(Buffer.concat(chunks))
   try { return JSON.parse(text) as unknown } catch { throw new YoupiBridgeError('Invalid gateway response') }
+}
+/** Defense in depth. Production also needs DNS-rebinding-safe network egress policy. */
+export function isPublicAddress(address: string): boolean {
+  if (isIP(address) === 4) {
+    const [a, b] = address.split('.').map(Number)
+    return !(a === 0 || a === 10 || a === 127 || a >= 224 ||
+      (a === 100 && b >= 64 && b <= 127) || (a === 169 && b === 254) ||
+      (a === 172 && b >= 16 && b <= 31) || (a === 192 && [0, 168].includes(b)) ||
+      (a === 198 && [18, 19, 51].includes(b)) || (a === 203 && b === 0))
+  }
+  return isIP(address) === 6 && /^[23][0-9a-f]{3}:/i.test(address) && !address.toLowerCase().startsWith('2001:db8:')
+}
+export async function assertPublicGateway(origin: string): Promise<void> {
+  const records = await lookup(new URL(origin).hostname, { all: true })
+  if (!records.length || records.some(r => !isPublicAddress(r.address))) throw new YoupiBridgeError('Unsafe gateway DNS')
 }
 export async function probeYoupi(config: YoupiGatewayConfig, fetcher: typeof fetch = fetch): Promise<boolean> {
   const api = parseOrigin(config.apiOrigin, config.allowLocal)
@@ -74,6 +102,7 @@ export async function createYoupiSession(config: YoupiGatewayConfig, invoice: Yo
   const safe = validateInvoice(invoice, invoice.id)
   const api = parseOrigin(config.apiOrigin, config.allowLocal)
   if (!uuid.test(config.merchantId)) throw new YoupiBridgeError('Merchant identity invalid')
+  if (fetcher === fetch && !config.allowLocal) await assertPublicGateway(api)
   const orderId = 'CN-' + safe.id.toLowerCase()
   const amountPaise = safe.totalPaise
   const idem = createHmac('sha256', config.merchantId).update(orderId + ':' + amountPaise).digest('hex')
@@ -87,6 +116,24 @@ export async function createYoupiSession(config: YoupiGatewayConfig, invoice: Yo
   } catch { throw new YoupiBridgeError('Gateway request failed') }
   if (res.status !== 200 && res.status !== 201) throw new YoupiBridgeError('Gateway refused session')
   return checkedCheckout(await boundedJson(res), config, orderId, amountPaise)
+}
+
+/** Owner-authenticated status is required to bind a session to this merchant. */
+export async function readYoupiSession(config: YoupiGatewayConfig, paymentId: string, invoice: YoupiInvoice,
+  merchantKey: string | undefined, fetcher: typeof fetch = fetch): Promise<YoupiCheckout> {
+  if (!uuid.test(paymentId) || !merchantKey || merchantKey.length < 32) throw new YoupiBridgeError()
+  const api = parseOrigin(config.apiOrigin, config.allowLocal)
+  if (fetcher === fetch && !config.allowLocal) await assertPublicGateway(api)
+  if (fetcher === fetch && !config.allowLocal) await assertPublicGateway(parseOrigin(config.checkoutOrigin))
+  const res = await fetcher(api + '/api/v1/payments/' + paymentId, {
+    headers: { 'X-Merchant-Key': merchantKey }, redirect: 'error', cache: 'no-store', signal: AbortSignal.timeout(6000),
+  })
+  if (!res.ok) throw new YoupiBridgeError()
+  const state = await boundedJson(res) as Record<string, unknown>
+  if (state.merchantId !== config.merchantId.toLowerCase() || state.paymentId !== paymentId || state.method !== 'UPI' ||
+    !['INITIATED', 'ACTIVE', 'QUEUED'].includes(String(state.status))) throw new YoupiBridgeError()
+  return checkedCheckout({ ...state, checkoutUrl: config.checkoutOrigin + '/checkout/' + paymentId },
+    config, 'CN-' + invoice.id, invoice.totalPaise)
 }
 /** Authenticity only. No webhook listener is enabled until a durable replay-safe inbox exists. */
 export function verifyYoupiWebhook(raw: Buffer, signature: string | null, secret: string): boolean {

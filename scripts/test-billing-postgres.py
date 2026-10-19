@@ -272,6 +272,83 @@ class BillingPostgres(unittest.TestCase):
             sql('alter table billing_private.invoices enable row level security;')
 
 
+class Phase28Links(unittest.TestCase):
+    merchant = '22222222-2222-4222-8222-222222222222'
+
+    def reserve(self, invoice, actor=None, merchant=None):
+        return "select public.billing_youpi_link_reserve(" + ','.join([
+            literal(invoice['id'])+'::uuid', literal(merchant or self.merchant)+'::uuid',
+            literal(actor or str(uuid.uuid4()))+'::uuid']) + ');'
+
+    def complete(self, invoice, payment, digest):
+        return "select public.billing_youpi_link_complete(" + ','.join([
+            literal(invoice['id'])+'::uuid', literal(self.merchant)+'::uuid',
+            literal(payment)+'::uuid', literal(digest)]) + ');'
+
+    def test_01_concurrent_reservation_and_pending_timeout(self):
+        invoice = issue()
+        with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+            results = list(pool.map(lambda _: json.loads(sql(self.reserve(invoice), service=True)), range(8)))
+        self.assertEqual(sum(r['decision']=='CREATE' for r in results), 1)
+        self.assertEqual(sum(r['decision']=='BLOCKED' for r in results), 7)
+        # A pending/ambiguous gateway request is never automatically reclaimed.
+        self.assertEqual(json.loads(sql(self.reserve(invoice), service=True))['decision'], 'BLOCKED')
+
+    def test_02_reuse_revoke_and_no_receipts(self):
+        invoice, payment, digest = issue(), str(uuid.uuid4()), uuid.uuid4().hex*2
+        sql(self.reserve(invoice), service=True)
+        self.assertEqual(sql(self.complete(invoice,payment,digest), service=True), 't')
+        self.assertEqual(json.loads(sql(self.reserve(invoice), service=True))['paymentId'], payment)
+        self.assertEqual(sql(self.complete(invoice,str(uuid.uuid4()),digest), service=True), 'f')
+        access = 'select public.billing_youpi_link_access('+literal(digest)+');'
+        self.assertEqual(sql(access, service=True), 't')
+        sql('select public.billing_get_receipt('+literal(invoice['id'])+'::uuid);', service=True, ok=False)
+        self.assertEqual(sql('select public.billing_youpi_link_revoke('+literal(invoice['id'])+'::uuid,'+literal(ACTOR)+'::uuid);', service=True), 't')
+        self.assertEqual(sql(access, service=True), 'f')
+        self.assertEqual(json.loads(sql(self.reserve(invoice), service=True))['decision'], 'BLOCKED')
+
+    def test_03_rate_limits_and_role_denial(self):
+        invoice, actor = issue(), str(uuid.uuid4())
+        for _ in range(10): sql(self.reserve(invoice,actor), service=True)
+        self.assertEqual(json.loads(sql(self.reserve(invoice,actor), service=True))['decision'], 'RATE_LIMITED')
+        for role in ['anon','authenticated']:
+            sql(f"set role {role}; set request.jwt.claim.role='service_role'; "+self.reserve(invoice), ok=False)
+            sql(f"set role {role}; select * from billing_private.youpi_links;", ok=False)
+        sql(self.reserve(invoice), ok=False)
+
+    def test_04_paid_invoice_and_wrong_merchant_deny(self):
+        invoice, payment, digest = issue(), str(uuid.uuid4()), uuid.uuid4().hex*2
+        sql(self.reserve(invoice), service=True)
+        sql(self.complete(invoice,payment,digest), service=True)
+        self.assertEqual(json.loads(sql(self.reserve(invoice,merchant=str(uuid.uuid4())), service=True))['decision'], 'BLOCKED')
+        sql(credit(invoice,100), service=True)
+        self.assertEqual(sql('select public.billing_youpi_link_access('+literal(digest)+');', service=True), 'f')
+        self.assertEqual(json.loads(sql(self.reserve(invoice), service=True))['decision'], 'BLOCKED')
+
+    def test_05_view_rate_limit_and_expiry(self):
+        invoice, payment, digest = issue(), str(uuid.uuid4()), uuid.uuid4().hex*2
+        sql(self.reserve(invoice), service=True)
+        sql(self.complete(invoice,payment,digest), service=True)
+        # One transaction fixes now() across all accesses, independent of minute rollover.
+        answers = sql('begin; '+('select public.billing_youpi_link_access('+literal(digest)+');')*31+'commit;', service=True).splitlines()
+        self.assertEqual(answers, ['t']*30+['f'])
+        sql('update billing_private.youpi_links set issued_ms=1 where invoice_id='+literal(invoice['id'])+'::uuid;')
+        self.assertEqual(sql('select public.billing_youpi_link_access('+literal(digest)+');', service=True), 'f')
+
+    def test_06_linked_webhook_replay_and_wrong_merchant(self):
+        invoice, payment, digest = issue(), str(uuid.uuid4()), uuid.uuid4().hex*2
+        sql(self.reserve(invoice), service=True)
+        sql(self.complete(invoice,payment,digest), service=True)
+        def linked(merchant):
+            return 'select public.billing_record_youpi_link_observation('+','.join([
+                literal(invoice['id'])+'::uuid',literal(merchant)+'::uuid',literal(payment)+'::uuid',
+                "'SUCCESS'",'100',"'TESTUTR00001'",literal(digest)])+');'
+        self.assertTrue(json.loads(sql(linked(self.merchant),service=True))['recorded'])
+        self.assertTrue(json.loads(sql(linked(self.merchant),service=True))['duplicate'])
+        sql(linked(str(uuid.uuid4())),service=True,ok=False)
+        sql('select public.billing_get_receipt('+literal(invoice['id'])+'::uuid);',service=True,ok=False)
+
+
 def main():
     if ENV["PGHOST"] not in ("127.0.0.1", "localhost", "::1"):
         sys.exit("NOT EXECUTED: only a local disposable database is permitted")
@@ -293,6 +370,10 @@ def main():
             sql((ROOT / "docs" / "billing" / name).read_text(encoding="utf-8"))
             print("APPLIED LOCAL ONLY:", name)
         result = unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(BillingPostgres))
+        if result.wasSuccessful():
+            sql((ROOT / 'docs/billing/PHASE28_LINK_LEDGER_REVIEW_ONLY.sql').read_text(encoding='utf-8'))
+            print('APPLIED LOCAL ONLY: Phase28 link ledger')
+            result = unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Phase28Links))
         return 0 if result.wasSuccessful() else 1
     finally:
         # DB is a locally generated constant, never an owner-supplied target.

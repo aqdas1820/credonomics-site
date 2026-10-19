@@ -1,0 +1,288 @@
+From c4ed4ef9a1b822d01151a0a668aa34cc8375120a Mon Sep 17 00:00:00 2001
+From: Aqdas Shaikh <YOUR-GITHUB-EMAIL>
+Date: Mon, 19 Oct 2026 19:28:32 +0530
+Subject: [PATCH] security: disable unsupported checkout claims and bind
+ merchant status and webhook UTR [skip ci]
+
+---
+ .../src/__tests__/phase28-security.test.js    | 36 +++++++++
+ apps/checkout-portal/src/views/checkout.html  | 78 ++++---------------
+ .../payment-api/src/routes/payments.routes.js |  1 +
+ .../src/__tests__/phase28-webhook.test.js     | 26 +++++++
+ packages/core/src/webhook-engine.js           |  8 ++
+ 5 files changed, 86 insertions(+), 63 deletions(-)
+ create mode 100644 apps/checkout-portal/src/__tests__/phase28-security.test.js
+ create mode 100644 packages/core/src/__tests__/phase28-webhook.test.js
+
+diff --git a/apps/checkout-portal/src/__tests__/phase28-security.test.js b/apps/checkout-portal/src/__tests__/phase28-security.test.js
+new file mode 100644
+index 0000000..03a6fef
+--- /dev/null
++++ b/apps/checkout-portal/src/__tests__/phase28-security.test.js
+@@ -0,0 +1,36 @@
++import { test } from 'node:test';
++import assert from 'node:assert/strict';
++import { readFileSync } from 'node:fs';
++import vm from 'node:vm';
++import { registerPaymentRoutes } from '../../../payment-api/src/routes/payments.routes.js';
++
++test('unsupported promotional slots stay hidden before JS and cannot use branding overrides', () => {
++  const html = readFileSync(new URL('../views/checkout.html', import.meta.url), 'utf8');
++  assert.doesNotMatch(html, /Trusted Business|Verified Business|500\+ orders|100% Payment Protection|Verified & Protected|200\+ orders/i);
++  assert.match(html, /#headerTrustBadge, #headerSubbanner, #pcTrustBadge, #pcSocialProofWrap\s*\{\s*display: none !important;/);
++  assert.doesNotMatch(html, /b\.trustBadgeText|b\.subbannerText/);
++  // Parse every inline script without a browser or contacting a gateway.
++  for (const [, script] of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)) {
++    if (script.trim()) new vm.Script(script);
++  }
++});
++
++test('merchant identity is returned only to the authenticated payment owner', async () => {
++  const handlers = new Map();
++  const server = { get(path, fn) { handlers.set(path, fn); }, post() {}, delete() {} };
++  const session = { id: 'test-payment', merchantId: 'owner', orderId: 'CN-test', amountPaise: 100n,
++    currency: 'INR', status: 'INITIATED', method: 'UPI', metadata: { private: true } };
++  registerPaymentRoutes(server, { sessionRepo: { findById() { return session; } },
++    merchantRepo: { findById() { return { webhookSecret: 'synthetic-owner-key' }; } } });
++  async function read(headers) {
++    let body;
++    const res = { writeHead() {}, end(value) { body = JSON.parse(value); } };
++    await handlers.get('/api/v1/payments/:id')({ headers }, res, { id: session.id });
++    return body;
++  }
++  assert.equal((await read({})).merchantId, undefined);
++  assert.equal((await read({ 'x-merchant-key': 'wrong-owner' })).merchantId, undefined);
++  const owner = await read({ 'x-merchant-key': 'synthetic-owner-key' });
++  assert.equal(owner.merchantId, 'owner');
++  assert.deepEqual(owner.metadata, { private: true });
++});
+diff --git a/apps/checkout-portal/src/views/checkout.html b/apps/checkout-portal/src/views/checkout.html
+index 7404244..7d8de95 100644
+--- a/apps/checkout-portal/src/views/checkout.html
++++ b/apps/checkout-portal/src/views/checkout.html
+@@ -6,6 +6,9 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <title>{{MERCHANT_NAME}} · {{APP_NAME}} Checkout</title>
+   <style>
++    #headerTrustBadge, #headerSubbanner, #pcTrustBadge, #pcSocialProofWrap {
++      display: none !important;
++    }
+     :root {
+       --ypg-blue: #0b63e5;
+       --ypg-blue-dark: #0957cb;
+@@ -311,7 +314,7 @@
+       line-height: 1.25;
+     }
+ 
+-    /* YouPI PG Verified Business Badge */
++    /* Checkout badge styling (unverified promotion slots are disabled). */
+     .ypg-trusted-badge {
+       display: flex;
+       align-items: center;
+@@ -3099,7 +3102,7 @@
+                 <path d="M8.5 12l2.5 2.5 5-5" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"
+                   stroke-linejoin="round" />
+               </svg>
+-              <span id="pcTrustBadgeText">YouPI PG Trusted Business</span>
++              <span id="pcTrustBadgeText">Merchant checkout</span>
+             </div>
+           </div>
+         </div>
+@@ -3111,7 +3114,7 @@
+             <circle cx="20" cy="21" r="1" />
+             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+           </svg>
+-          <span id="pcSocialProofText">500+ orders last month from {{MERCHANT_NAME}}</span>
++          <span id="pcSocialProofText">Check the receiving name and amount in your UPI app.</span>
+         </div>
+ 
+         <!-- Price Summary Card (STRICTLY NO UPI ID VISIBLE) -->
+@@ -3206,7 +3209,7 @@
+               <img id="merchantAvatarImg" alt="Logo" style="display:none;" />
+             </div>
+ 
+-            <!-- Merchant Name & YouPI PG Verified Business Badge -->
++            <!-- Merchant name; unsupported trust claims are disabled. -->
+             <div class="ypg-merchant-text-group">
+               <div class="ypg-merchant-name" id="headerMerchantName">{{MERCHANT_NAME}}</div>
+               <div class="ypg-trusted-badge" id="headerTrustBadge">
+@@ -3215,7 +3218,7 @@
+                   <path d="M8.5 12l2.5 2.5 5-5" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"
+                     stroke-linejoin="round" />
+                 </svg>
+-                <span id="headerTrustBadgeText">YouPI PG Verified Business</span>
++                <span id="headerTrustBadgeText">Merchant checkout</span>
+               </div>
+             </div>
+           </div>
+@@ -3239,7 +3242,7 @@
+             <circle cx="20" cy="21" r="1" />
+             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+           </svg>
+-          <span id="subbannerText">200+ orders verified this month by YouPI PG</span>
++          <span id="subbannerText">Check the receiving name and amount in your UPI app.</span>
+         </div>
+ 
+         <!-- Account Popover Menu -->
+@@ -3585,7 +3588,7 @@
+                     <span style="color:#92400e; font-weight:700;">Pay Cash at Doorstep</span>
+                   </div>
+                   <div class="ypg-offers-right">
+-                    <span style="color:#b45309;">Verified Purchase</span>
++                    <span style="color:#b45309;">Order details</span>
+                   </div>
+                 </div>
+ 
+@@ -5611,33 +5614,10 @@
+         if (letterEl) letterEl.textContent = data.merchantName.charAt(0).toUpperCase();
+       }
+ 
+-      // 4. Verified Trust Badge
+-      const trustBadgeEl = document.getElementById('headerTrustBadge');
+-      const trustBadgeTextEl = document.getElementById('headerTrustBadgeText');
+-      if (trustBadgeEl) {
+-        if (b.hideTrustBadge) {
+-          trustBadgeEl.style.display = 'none';
+-        } else {
+-          trustBadgeEl.style.display = 'inline-flex';
+-          if (trustBadgeTextEl) {
+-            trustBadgeTextEl.textContent = b.trustBadgeText || `${appName} Verified Business`;
+-          }
+-        }
+-      }
+-
+-      // 5. Header Sub-banner
+-      const subbannerEl = document.getElementById('headerSubbanner');
+-      const subbannerTextEl = document.getElementById('subbannerText');
+-      if (subbannerEl) {
+-        if (b.hideSubbanner) {
+-          subbannerEl.style.display = 'none';
+-        } else {
+-          subbannerEl.style.display = 'flex';
+-          if (subbannerTextEl) {
+-            subbannerTextEl.textContent = b.subbannerText || b.sidebarNotice || `Verified & Protected by ${appName}`;
+-          }
+-        }
+-      }
++      // Promotional trust/social-proof slots stay disabled, including merchant overrides.
++      ['headerTrustBadge', 'headerSubbanner', 'pcTrustBadge', 'pcSocialProofWrap'].forEach(id => {
++        document.getElementById(id)?.style.setProperty('display', 'none', 'important');
++      });
+ 
+       // 6. Time-Saving Conversion Banner
+       if (b.hideTimeSavingBanner) {
+@@ -5670,34 +5650,6 @@
+         }
+       }
+ 
+-      // PC Trust Badge Whitelabel
+-      const pcTrust = document.getElementById('pcTrustBadge');
+-      const pcTrustText = document.getElementById('pcTrustBadgeText');
+-      if (pcTrust) {
+-        if (b.hideTrustBadge) {
+-          pcTrust.style.display = 'none';
+-        } else {
+-          pcTrust.style.display = 'inline-flex';
+-          if (pcTrustText) {
+-            pcTrustText.textContent = b.trustBadgeText || `${appName} Trusted Business`;
+-          }
+-        }
+-      }
+-
+-      // PC Social Proof / Subbanner Whitelabel
+-      const pcSocialWrap = document.getElementById('pcSocialProofWrap');
+-      const pcSocialProof = document.getElementById('pcSocialProofText');
+-      if (pcSocialWrap) {
+-        if (b.hideSubbanner) {
+-          pcSocialWrap.style.display = 'none';
+-        } else {
+-          pcSocialWrap.style.display = 'flex';
+-          if (pcSocialProof) {
+-            pcSocialProof.textContent = b.subbannerText || b.sidebarNotice || `500+ orders last month from ${data.merchantName || 'Merchant'}`;
+-          }
+-        }
+-      }
+-
+       const pcCustomerText = document.getElementById('pcCustomerProfileText');
+       if (pcCustomerText) {
+         const c = data.customer || activeCustomer || (typeof getPreservedIdentity === 'function' ? getPreservedIdentity()?.customer : null);
+@@ -6862,4 +6814,4 @@
+   </script>
+ </body>
+ 
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/apps/payment-api/src/routes/payments.routes.js b/apps/payment-api/src/routes/payments.routes.js
+index 1a63fdf..e097088 100644
+--- a/apps/payment-api/src/routes/payments.routes.js
++++ b/apps/payment-api/src/routes/payments.routes.js
+@@ -320,6 +320,7 @@ export function registerPaymentRoutes(server, ctx) {
+ 
+     HttpServer.json(res, 200, {
+       ...publicView,
++      merchantId: session.merchantId,
+       internalStatus: session.status,
+       verificationLevel: session.verificationLevel || 0,
+       verificationSources: session.verificationSources || [],
+diff --git a/packages/core/src/__tests__/phase28-webhook.test.js b/packages/core/src/__tests__/phase28-webhook.test.js
+new file mode 100644
+index 0000000..b575209
+--- /dev/null
++++ b/packages/core/src/__tests__/phase28-webhook.test.js
+@@ -0,0 +1,26 @@
++import { test } from 'node:test';
++import assert from 'node:assert/strict';
++import { createHmac } from 'node:crypto';
++import { WebhookEngine } from '../webhook-engine.js';
++
++test('signed raw webhook includes only the bound observation reference, with no real delivery', async () => {
++  let boundQuery, sent;
++  const engine = new WebhookEngine({ db: {
++    queryOne(sql, args) { boundQuery = { sql, args }; return { bank_reference_number: '123456789012' }; }, execute() {},
++  }, merchantRepo: { findById() { return { id: 'merchant', webhookUrl: 'https://example.org/webhook', webhookSecret: 'synthetic-secret' }; } } });
++  const original = globalThis.fetch;
++  globalThis.fetch = async (_url, init) => { sent = init; return new Response('{}'); };
++  try {
++    await engine.dispatch('SUCCESS', { id: 'payment', merchantId: 'merchant', orderId: 'CN-test',
++      attributedObservationId: 'observation', amountPaise: 100n, currency: 'INR', method: 'UPI' });
++    assert.deepEqual(boundQuery.args, ['observation', 'payment', 100]);
++    assert.match(boundQuery.sql, /attributed_payment_id = \? AND amount_paise = \?/);
++    assert.equal(JSON.parse(sent.body).utr, '123456789012');
++    assert.equal(sent.headers['X-Gateway-Signature'], 'sha256=' + createHmac('sha256', 'synthetic-secret').update(sent.body).digest('hex'));
++    boundQuery = undefined;
++    await engine.dispatch('SUCCESS', { id: 'cod', merchantId: 'merchant', orderId: 'CN-cod', amountPaise: 100n, method: 'COD' });
++    assert.equal(JSON.parse(sent.body).utr, null);
++    assert.equal(JSON.parse(sent.body).method, 'COD');
++    assert.equal(boundQuery, undefined);
++  } finally { globalThis.fetch = original; }
++});
+diff --git a/packages/core/src/webhook-engine.js b/packages/core/src/webhook-engine.js
+index f59384b..9777c89 100644
+--- a/packages/core/src/webhook-engine.js
++++ b/packages/core/src/webhook-engine.js
+@@ -37,6 +37,13 @@ export class WebhookEngine {
+ 
+     const publicOutcome = isTerminalStatus(event) ? toPublicOutcome(event) : event;
+ 
++    // Only carry a bank reference from the observation attributed to this session.
++    // No synthetic UTR for COD/counter orders or sessions without bank evidence.
++    const observation = session.attributedObservationId ? this.db.queryOne(
++      'SELECT bank_reference_number FROM payment_observations WHERE id = ? AND attributed_payment_id = ? AND amount_paise = ?',
++      [session.attributedObservationId, session.id, Number(session.amountPaise)]
++    ) : null;
++
+     const payloadObj = {
+       event: publicOutcome,
+       paymentId: session.id,
+@@ -45,6 +52,7 @@ export class WebhookEngine {
+       amountPaise: Number(session.amountPaise),
+       currency: session.currency || 'INR',
+       method: session.method || 'UPI',
++      utr: observation?.bank_reference_number || null,
+       completedAt: session.completedAt ? session.completedAt.toISOString() : new Date().toISOString(),
+       metadata: session.metadata || {}
+     };
+-- 
+2.55.0.windows.3
+

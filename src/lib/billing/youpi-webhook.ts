@@ -10,6 +10,7 @@ const eventSchema = z.object({
   orderId: z.string().regex(/^[A-Za-z0-9:_-]{1,128}$/),
   paymentId: z.string().uuid(),
   currency: z.literal('INR'),
+  method: z.enum(['UPI', 'COD', 'CASH_COUNTER', 'CARD_COUNTER']),
   amount: z.string().regex(/^(?:0|[1-9]\d*)(?:\.\d{1,2})?$/),
   amountPaise: z.number().int().positive().max(10_000_000_000),
   utr: z.string().regex(/^[A-Za-z0-9-]{8,80}$/).nullish(),
@@ -21,6 +22,7 @@ export type YoupiGatewayObservation = {
   orderId: string
   amountPaise: number
   currency: 'INR'
+  method: 'UPI' | 'COD' | 'CASH_COUNTER' | 'CARD_COUNTER'
   utr: string | null
   paymentId: string
   /** Use this with (paymentId, event) as a durable database replay key. */
@@ -62,7 +64,7 @@ export function verifyYoupiObservation(
   if (!Number.isSafeInteger(calculated) || calculated !== details.amountPaise) {
     throw new Error('Mismatched gateway amount representations')
   }
-  if (details.event === 'SUCCESS' && !details.utr) {
+  if (details.event === 'SUCCESS' && details.method === 'UPI' && !details.utr) {
     throw new Error('Missing UTR on SUCCESS observation')
   }
   return {
@@ -71,6 +73,7 @@ export function verifyYoupiObservation(
     orderId: details.orderId,
     amountPaise: details.amountPaise,
     currency: 'INR',
+    method: details.method,
     utr: details.utr?.toUpperCase() ?? null,
     paymentId: details.paymentId.toLowerCase(),
     rawSha256: createHash('sha256').update(body).digest('hex'),
