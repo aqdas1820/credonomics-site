@@ -2,6 +2,10 @@
 const nextConfig = {
   poweredByHeader: false,
   compress: true,
+  outputFileTracingIncludes: {
+    '/api/billing/admin/invoices/*/documents/*': ['./assets/fonts/*.ttf'],
+    '/api/personal-testing': ['./assets/fonts/*.ttf'],
+  },
 
   async headers() {
     return [

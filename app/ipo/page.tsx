@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   },
 }
 
-export default function IPOPage({ searchParams }: { searchParams?: { view?: string } }) {
+export default async function IPOPage({ searchParams: promisedSearchParams }: { searchParams?: Promise<{ view?: string }> }) {
+  const searchParams = await promisedSearchParams
   const records = getPublicIpos()
   const initialView = ['open', 'upcoming', 'closed', 'listed'].includes(searchParams?.view || '')
     ? searchParams?.view as 'open' | 'upcoming' | 'closed' | 'listed'

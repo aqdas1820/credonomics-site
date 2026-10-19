@@ -72,11 +72,12 @@ export function generateStaticParams() {
   return issues.map((issue) => ({ slug: issue.slug }))
 }
 
-export function generateMetadata({
-  params,
+export async function generateMetadata({
+  params: promisedParams,
 }: {
-  params: { slug: string }
-}): Metadata {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
+  const params = await promisedParams
   const issue = getIssue(params.slug)
 
   if (!issue) {
@@ -97,11 +98,12 @@ export function generateMetadata({
   }
 }
 
-export default function IPOCompanyPage({
-  params,
+export default async function IPOCompanyPage({
+  params: promisedParams,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
+  const params = await promisedParams
   const issue = getIssue(params.slug)
 
   if (!issue) notFound()
