@@ -66,7 +66,7 @@ def private_path(path):
 def validate_manifest(m):
     if m.get('schemaVersion') != 1 or m.get('format') != 'app-scoped-custom-archive':
         raise Blocked('Unknown/raw/complete dump format requires a separate compatibility plan')
-    if m.get('sourcePostgresMajor') != 17 or m.get('image') != IMAGE:
+    if m.get('sourcePostgresMajor') != 17 or m.get('image') != IMAGE or m.get('authImage') != AUTH_IMAGE:
         raise Blocked('Unreviewed PostgreSQL/image version')
     if not re.fullmatch(r'[a-z][a-z0-9_]{0,62}', m.get('scope', '')) or m['scope'] in (
             'auth', 'storage', 'extensions', 'vault', 'pgsodium', 'cron', 'net', 'public'):
@@ -90,6 +90,8 @@ def validate_manifest(m):
         for k, v in m['expectedCounts'].items()
     ):
         raise Blocked('Independent table counts required')
+    if m.get('rolesReviewedAppOnly') is not True:
+        raise Blocked('App-only roles/membership SQL requires independent review')
     return m
 
 
@@ -170,7 +172,7 @@ class Docker:
                   '-e', 'POSTGRES_PASSWORD=' + secrets.token_hex(32), '-e', 'POSTGRES_DB=postgres',
                   IMAGE, 'postgres', '-c', 'config_file=/etc/postgresql/postgresql.conf',
                   '-c', 'listen_addresses=127.0.0.1', '-c', 'logging_collector=off', '-c', 'log_statement=none',
-                  '-c', 'log_min_error_statement=panic', '-c', 'cron.launch_active_jobs=off'])
+                  '-c', 'log_min_error_statement=panic', '-c', 'archive_mode=off', '-c', 'cron.launch_active_jobs=off'])
         for _ in range(90):
             code, comm = self.run(['exec', name, 'cat', '/proc/1/comm'], ok=False)
             if code or comm.strip() != b'postgres':
@@ -366,6 +368,9 @@ def actual(args):
         d.restore(name, archive)
         if d.catalog(name, m['scope']) != m['expectedCatalogSha256'] or d.baseline(name) != baseline:
             raise Blocked('Catalog/platform baseline mismatch')
+        _, raw = d.sql(name, "SELECT coalesce(json_agg(c.relname ORDER BY c.relname),'[]') FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace WHERE n.nspname='"+m['scope']+"' AND c.relkind IN ('r','p');")
+        if set(json.loads(raw)) != set(m['expectedCounts']):
+            raise Blocked('Independent counts must cover every restored table')
         for table, expected in m['expectedCounts'].items():
             _, raw = d.sql(name, f'SELECT count(*) FROM "{m["scope"]}"."{table}";')
             if raw.strip() != str(expected).encode():

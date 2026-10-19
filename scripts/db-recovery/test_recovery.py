@@ -11,7 +11,7 @@ r = importlib.util.module_from_spec(spec); spec.loader.exec_module(r)
 
 def manifest():
     return dict(schemaVersion=1, format='app-scoped-custom-archive', sourcePostgresMajor=17,
-                image=r.IMAGE, scope='phase24_fixture', archiveSha256='a'*64,
+                image=r.IMAGE, authImage=r.AUTH_IMAGE, rolesReviewedAppOnly=True, scope='phase24_fixture', archiveSha256='a'*64,
                 rolesSha256='b'*64, expectedCatalogSha256='c'*64,
                 externalDependenciesReviewed=True, managedSchemaDataRequired=False,
                 encryptionRootKeyRequired=False, extensions={'pgcrypto':'1.3'}, expectedCounts={'documents':2})
