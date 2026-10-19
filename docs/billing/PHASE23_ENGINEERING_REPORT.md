@@ -110,6 +110,11 @@ At merged source `b89bcf7069684c0fe1cd1bc95dc1e698ab08c7c5`:
 - Windows PowerShell 5.1 backup fixtures: **13 passed**; remote helper Node fixtures:
   **2 passed**. No cloud calls, tokens or real keys used. Synthetic native Windows
   argv → Git Bash → Node decoding also passed, covering the PS5.1 quoting boundary.
+- `Test-NativeSftp.ps1`: real Windows OpenSSH SFTP client transferred synthetic
+  hidden/binary/empty files, spaced names and an empty directory through a local
+  Git SFTP server over pipes. Exact destination/inventory and SHA-256 matched.
+  This tests actual `get -R` semantics without keys, networking or Railway; live
+  Railway authentication and export still require the operator boundary above.
 
 The local machine has no discoverable `psql`/Docker runtime; no live database was
 used as a substitute. Existing exact-head CI proves PostgreSQL 17: **19 cases**

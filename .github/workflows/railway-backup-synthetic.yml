@@ -16,6 +16,9 @@ jobs:
       - name: Windows PowerShell 5.1 backup safety fixtures
         shell: powershell
         run: ./scripts/railway-backup/Test-Backup.ps1
+      - name: Real native SFTP client over local fixture pipes (no network or keys)
+        shell: powershell
+        run: ./scripts/railway-backup/Test-NativeSftp.ps1
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22'
