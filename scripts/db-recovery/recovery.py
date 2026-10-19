@@ -120,12 +120,13 @@ def validate_toc(toc, scope):
 
 
 class Docker:
-    def __init__(self, logdir):
+    def __init__(self, logdir, *, synthetic=False):
         self.logdir = Path(logdir)
         self.logdir.mkdir(parents=True, exist_ok=True)
         self.serial = 0
         self.names = []
         self.runid = uuid.uuid4().hex
+        self.synthetic = synthetic
 
     def run(self, args, *, data=None, source=None, output=None, ok=True):
         self.serial += 1
@@ -161,7 +162,7 @@ class Docker:
         name = 'cn-phase24-' + uuid.uuid4().hex
         self.names.append(name)
         self.run(['run', '-d', '--name', name, '--label', f'{LABEL}={self.runid}',
-                  '--pull=never', '--network=none', '--log-driver=none', '--memory=2g', '--memory-swap=2g',
+                  '--pull=never', '--network=none', '--log-driver='+('local' if self.synthetic else 'none'), '--memory=2g', '--memory-swap=2g',
                   '--shm-size=256m', '--tmpfs', '/var/lib/postgresql/data:rw,size=1g',
                   '--tmpfs', '/tmp:rw,size=128m', '--tmpfs', '/var/log/postgresql:rw,size=64m',
                   '-e', 'POSTGRES_PASSWORD=' + secrets.token_hex(32), '-e', 'POSTGRES_DB=postgres',
@@ -188,7 +189,7 @@ class Docker:
         x = json.loads(raw)[0]
         if x['Config']['Labels'].get(LABEL) != self.runid or x['HostConfig']['NetworkMode'] != 'none' or x['HostConfig']['PortBindings']:
             raise Blocked('Container identity/network mismatch')
-        if x['HostConfig']['LogConfig']['Type'] != 'none':
+        if x['HostConfig']['LogConfig']['Type'] != ('local' if self.synthetic else 'none'):
             raise Blocked('Container log persistence refused')
         mounts = {m['Destination']: m['Type'] for m in x['Mounts']}
         if mounts.get('/var/lib/postgresql/data') != 'tmpfs' or any(t == 'bind' for t in mounts.values()):
@@ -252,7 +253,7 @@ def rls_checks(d, name):
 
 def synthetic():
     with tempfile.TemporaryDirectory(prefix='cn-phase24-synthetic-') as tmp:
-        d = Docker(tmp)
+        d = Docker(tmp, synthetic=True)
         try:
             d.preflight()
             source = d.create(); target = d.create()
@@ -314,6 +315,11 @@ def synthetic():
             print('Synthetic failure: ' + str(exc), file=sys.stderr)
             diagnostics = '\n'.join(p.read_text(errors='replace') for p in Path(tmp).glob('*.stderr'))
             print(json.dumps(classify_log(diagnostics)), file=sys.stderr)
+            # This path is reachable only with generated fixtures, never an actual backup.
+            for name in d.names:
+                _, logs = d.run(['logs','--tail','45',name], ok=False)
+                stderr = (d.logdir / f'{d.serial:03d}.stderr').read_bytes()
+                print((logs+stderr).decode(errors='replace')[-5000:], file=sys.stderr)
             raise
         finally:
             d.cleanup()
