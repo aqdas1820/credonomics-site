@@ -178,7 +178,7 @@ class Docker:
             if code or comm.strip() != b'postgres':
                 time.sleep(1)
                 continue
-            code, _ = self.run(['exec', name, 'pg_isready', '-U', 'supabase_admin', '-d', 'postgres'], ok=False)
+            code, _ = self.run(['exec', name, 'pg_isready', '-h', '/var/run/postgresql', '-U', 'supabase_admin', '-d', 'postgres'], ok=False)
             if code == 0:
                 # Readiness alone is insufficient: initialization may still be applying migrations.
                 code, raw = self.sql(name, "select to_regprocedure('auth.uid()') is not null;", ok=False)
@@ -216,7 +216,7 @@ class Docker:
             raise Blocked('Persistent PGDATA or host bind mount refused')
 
     def sql(self, name, text, *, ok=True, variables=()):
-        return self.run(['exec', '-i', name, 'psql', '-XAtq', '-U', 'supabase_admin', '-d', 'postgres',
+        return self.run(['exec', '-i', name, 'psql', '-XAtq', '-h', '/var/run/postgresql', '-U', 'supabase_admin', '-d', 'postgres',
                          '-v', 'ON_ERROR_STOP=1', *variables], data=text.encode(), ok=ok)
 
     def baseline(self, name):
@@ -239,7 +239,7 @@ class Docker:
 
     def restore(self, name, archive):
         self.inspect(name)
-        self.run(['exec', '-i', name, 'pg_restore', '-U', 'supabase_admin', '-d', 'postgres',
+        self.run(['exec', '-i', name, 'pg_restore', '-h', '/var/run/postgresql', '-U', 'supabase_admin', '-d', 'postgres',
                   '--single-transaction', '--exit-on-error'], source=archive)
 
     def cleanup(self):
@@ -283,16 +283,16 @@ def synthetic():
             d.sql(source, (ROOT / 'fixtures/schema.sql').read_text())
             expected = d.catalog(source, 'phase24_fixture')
             archive = Path(tmp) / 'synthetic.dump'
-            d.run(['exec', source, 'pg_dump', '-U', 'supabase_admin', '-d', 'postgres', '-Fc', '--schema=phase24_fixture'], output=archive)
+            d.run(['exec', source, 'pg_dump', '-h', '/var/run/postgresql', '-U', 'supabase_admin', '-d', 'postgres', '-Fc', '--schema=phase24_fixture'], output=archive)
             _, toc = d.run(['exec', '-i', target, 'pg_restore', '--list'], source=archive)
             validate_toc(toc.decode(), 'phase24_fixture')
             # Data without schema cannot establish recovery; fail rather than disable checks.
-            code, _ = d.run(['exec','-i',target,'pg_restore','-U','supabase_admin','-d','postgres',
+            code, _ = d.run(['exec','-i',target,'pg_restore','-h','/var/run/postgresql','-U','supabase_admin','-d','postgres',
                              '--data-only','--single-transaction','--exit-on-error'], source=archive, ok=False)
             if code == 0:
                 raise Blocked('Data-before-schema negative test unexpectedly succeeded')
             # Exact reproduction: missing external role makes restoration fail atomically.
-            code, _ = d.run(['exec', '-i', target, 'pg_restore', '-U', 'supabase_admin', '-d', 'postgres',
+            code, _ = d.run(['exec', '-i', target, 'pg_restore', '-h', '/var/run/postgresql', '-U', 'supabase_admin', '-d', 'postgres',
                              '--single-transaction', '--exit-on-error'], source=archive, ok=False)
             if code == 0:
                 raise Blocked('Missing-role negative test unexpectedly succeeded')
@@ -304,7 +304,7 @@ def synthetic():
             # A template0 DB in the same genuine runtime has no platform schemas.
             # It must reject this dump; no replacement auth functions are installed.
             d.sql(target, 'CREATE DATABASE phase24_empty TEMPLATE template0;')
-            code, _ = d.run(['exec','-i',target,'pg_restore','-U','supabase_admin','-d','phase24_empty',
+            code, _ = d.run(['exec','-i',target,'pg_restore','-h','/var/run/postgresql','-U','supabase_admin','-d','phase24_empty',
                              '--single-transaction','--exit-on-error'], source=archive, ok=False)
             if code == 0:
                 raise Blocked('Missing-auth negative test unexpectedly succeeded')
@@ -364,7 +364,7 @@ def actual(args):
             raise Blocked('Extension versions do not match reviewed source requirements')
         # Roles SQL must be independently reviewed, app-only, no platform roles/functions.
         # This tool does not regex-rewrite SQL or ignore a failed ownership/ACL operation.
-        d.run(['exec','-i',name,'psql','-X','-U','supabase_admin','-d','postgres','-v','ON_ERROR_STOP=1','--single-transaction'], source=roles)
+        d.run(['exec','-i',name,'psql','-X','-h','/var/run/postgresql','-U','supabase_admin','-d','postgres','-v','ON_ERROR_STOP=1','--single-transaction'], source=roles)
         d.restore(name, archive)
         if d.catalog(name, m['scope']) != m['expectedCatalogSha256'] or d.baseline(name) != baseline:
             raise Blocked('Catalog/platform baseline mismatch')
