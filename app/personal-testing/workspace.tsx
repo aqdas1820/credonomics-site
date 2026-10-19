@@ -44,6 +44,9 @@ export default function PersonalWorkspace({owner,local}:{owner:string|null;local
   function edit(value:TestRecord){setDraft({customer:value.customer,date:value.date,items:value.items.map(x=>({...x}))});setEditing(value.id)}
   function line(index:number,key:'description'|'quantity'|'rate',value:string){setDraft(x=>({...x,items:x.items.map((item,i)=>i===index?{...item,[key]:value}:item)}))}
   function save(e:FormEvent){e.preventDefault();void run({action:'save',id:editing,draft})}
+  async function lock(){
+    try{const response=await fetch('/api/personal-testing/session',{method:'DELETE'});if(!response.ok)throw new Error('Unable to lock local session');setLedger(null);setDraft(empty());window.location.reload()}catch{setError('Unable to lock local session')}
+  }
   return <main className={styles.shell}>
     <header className={styles.header}><div><p className={styles.eyebrow}>CREDONOMICS / OWNER WORKSPACE</p><h1>Personal billing lab<span>TEST</span></h1><p>Try the workflow. Keep real money out of it.</p></div><div className={styles.mode}>{local?'Protected localhost':'Verified owner session'}<small>₹0 collected · Banking disconnected</small></div></header>
     <div className={styles.warning} role="note"><strong>TEST records only.</strong> No real invoice, tax document or payment receipt is created. Simulated success is never a bank settlement. Use fictitious customer details.</div>
@@ -70,6 +73,7 @@ export default function PersonalWorkspace({owner,local}:{owner:string|null;local
           <button className={styles.secondary} disabled={busy} onClick={()=>void run({action:'pdf',id:record.id})}>Download TEST PDF</button><button className={styles.secondary} onClick={()=>window.print()}>Print TEST invoice</button>
         </div><details className={styles.controls}><summary>Simulation timeline</summary><ol>{record.events.map((value,i)=><li key={i}>{labels[value.status]} · {new Date(value.at).toLocaleString('en-IN')}</li>)}</ol></details>
       </section>}
+      <div className={styles.controls}>{local?<button className={styles.secondary} onClick={()=>void lock()}>Lock local session</button>:<a href="/account">Account and sign out</a>}</div>
       <p className={`${styles.hint} ${styles.controls}`}>This is a personal practice ledger, not an accounting archive. Browser data clearing or losing the encryption key makes this history unavailable. TEST drafts remain editable until issued.</p>
     </>}
     <div role="status" aria-live="polite" className={styles.message}>{notice}</div>{error&&<p role="alert" className={styles.error}>{error}</p>}

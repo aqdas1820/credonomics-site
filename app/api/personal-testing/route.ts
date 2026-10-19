@@ -1,7 +1,7 @@
 import { randomUUID } from 'node:crypto'
 import { personalActor } from '../../../src/lib/billing/personal-access'
 import { applyTestCommand, commandSchema } from '../../../src/lib/billing/personal-model'
-import { openLedger, sealLedger, privateHeaders, personalReady, localRuntime, trustedLocalHost } from '../../../src/lib/billing/personal-security'
+import { openLedger, sealLedger, privateHeaders, personalReady, personalOriginAllowed } from '../../../src/lib/billing/personal-security'
 import { personalPdf } from '../../../src/lib/billing/personal-pdf'
 import { readBoundedJsonBody } from '../../billing/bounded-json-body'
 import { z } from 'zod'
@@ -14,8 +14,7 @@ export async function POST(request: Request) {
   if (!personalReady()) return fail(404,'Not found')
   const owner = await personalActor()
   if (!owner) return fail(403,'Owner authorization required')
-  const url = new URL(request.url)
-  if (request.headers.get('origin') !== url.origin || (localRuntime() && !trustedLocalHost(request.headers.get('host')))) return fail(403,'Origin rejected')
+  if (!personalOriginAllowed(request)) return fail(403,'Origin rejected')
   if (!request.headers.get('content-type')?.startsWith('application/json')) return fail(415,'JSON required')
   const body = await readBoundedJsonBody(request,260_000)
   if (!body.ok) return fail(body.reason === 'too-large' ? 413 : 400,'Invalid request')

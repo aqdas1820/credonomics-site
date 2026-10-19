@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test'
-import { readFile } from 'node:fs/promises'
+import { readFile, mkdir } from 'node:fs/promises'
 import { PDFDocument } from 'pdf-lib'
 const origin='http://127.0.0.1:3019'
 const code='SYNTHETIC-OWNER-UNLOCK-ONLY-1234567890'
@@ -41,7 +41,11 @@ for(const width of [320,375,768,1280])test(`owner complete TEST lifecycle at ${w
  const pdf=await PDFDocument.load(await readFile(path!));expect(pdf.getTitle()).toContain('TEST');expect(pdf.getSubject()).toContain('No real invoice')
  await page.getByRole('button',{name:'Simulate refund',exact:true}).click();await expect(page.getByText('Simulated refund',{exact:true}).first()).toBeVisible()
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true)
+ if(width===375 || width===1280){await mkdir('artifacts/personal-testing',{recursive:true});await page.screenshot({path:`artifacts/personal-testing/${width}.png`,fullPage:true})}
  await page.emulateMedia({media:'print'});await expect(page.getByRole('heading',{name:'TEST-2026-00001'})).toBeVisible();await expect(page.getByRole('button',{name:'Save TEST draft',exact:true})).toBeHidden()
  const printed=await PDFDocument.load(await page.pdf({preferCSSPageSize:true}));expect(Math.abs(printed.getPage(0).getSize().width-595.28)).toBeLessThan(1)
  expect(errors).toEqual([])
+ await page.emulateMedia({media:'screen'});await page.getByRole('button',{name:'Lock local session',exact:true}).click()
+ await expect(page.getByRole('heading',{name:'Unlock your local workspace'})).toBeVisible()
+ expect((await page.request.post('/api/personal-testing',{headers:{origin},data:{command:{action:'read'}}})).status()).toBe(403)
 })

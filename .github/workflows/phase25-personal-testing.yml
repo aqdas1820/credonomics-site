@@ -4,6 +4,9 @@ on:
     branches: [codex/phase24-offline-db-recovery, feature/youpi-payment-entry-prelaunch]
 permissions:
   contents: read
+concurrency:
+  group: phase25-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   personal-testing:
     runs-on: ubuntu-24.04

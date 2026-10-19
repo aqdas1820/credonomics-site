@@ -26,6 +26,13 @@ export function ownerIdentity(user: BillingIdentity | null) {
 export function trustedLocalHost(host: string | null) {
   return localRuntime() && host === `127.0.0.1:${process.env.PERSONAL_TESTING_LOCAL_PORT ?? '3018'}`
 }
+export function personalOriginAllowed(request: Pick<Request,'headers'|'url'>) {
+  if(localRuntime()){
+    const host=request.headers.get('host')
+    return trustedLocalHost(host) && request.headers.get('origin')===`http://${host}`
+  }
+  return request.headers.get('origin')===new URL(request.url).origin
+}
 const sign = (value: string) => createHmac('sha256', process.env.PERSONAL_TESTING_LOCAL_SESSION_KEY!).update('cn-personal-session-v1:' + value).digest('hex')
 export function localSession(now = Date.now()) { const payload = String(now + 8 * 60 * 60 * 1000); return payload + '.' + sign(payload) }
 export function validLocalSession(value: string | undefined, now = Date.now()) {
