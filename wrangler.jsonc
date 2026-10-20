@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "credonomics-phase32-local",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-10-20",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
+  "observability": { "enabled": false },
+  "vars": {
+    "BILLING_API_ENABLED": "false",
+    "BILLING_PORTAL_ENABLED": "false",
+    "BILLING_SETTLEMENT_ENABLED": "false",
+    "MANUAL_UPI_ENABLED": "false",
+    "MANUAL_UPI_PILOT_APPROVED": "false",
+    "BILLING_YOUPI_WEBHOOK_ENABLED": "false",
+    "YOUPI_PAYMENT_LINK_ENABLED": "false",
+    "PERSONAL_TESTING_ENABLED": "false"
+  }
+}
