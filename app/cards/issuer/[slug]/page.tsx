@@ -12,7 +12,8 @@ export function generateStaticParams() {
   return issuerRegistry.map((issuer) => ({ slug: issuer.slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params: promisedParams }: { params: Promise<{ slug: string }> }) {
+  const params = await promisedParams
   const issuer = issuerBySlug(params.slug)
   if (!issuer) return {}
   return {
@@ -22,7 +23,8 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   }
 }
 
-export default function IssuerPage({ params }: { params: { slug: string } }) {
+export default async function IssuerPage({ params: promisedParams }: { params: Promise<{ slug: string }> }) {
+  const params = await promisedParams
   const issuer = issuerBySlug(params.slug)
   if (!issuer) notFound()
 

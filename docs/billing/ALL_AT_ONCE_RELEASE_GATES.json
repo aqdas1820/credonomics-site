@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "project": "CredoNomics Billing × YouPI-PG",
+  "releaseMode": "ALL_AT_ONCE",
+  "releaseDecision": "NO_GO",
+  "expectedSupabaseProjectRef": "jvpiulmcjjnsgozgqgzw",
+  "productionBranch": "main",
+  "featureBranch": "feature/youpi-payment-entry-prelaunch",
+  "additionalSpendApprovedInr": 0,
+  "lastVerifiedSourceCommit": "ade2ce951bd8a6a99feed0c71fe11a547424dc8a",
+  "note": "This public release manifest contains no credentials or customer information. VERIFIED describes evidence recorded separately, not permission to deploy.",
+  "gates": [
+    {
+      "id": "source_ci",
+      "state": "VERIFIED",
+      "evidence": "https://github.com/aqdas1820/credonomics-site/actions/runs/39116483910",
+      "acceptance": "188 unit tests, 116 billing tests, build/typecheck/lint, 19 disposable PostgreSQL cases pass at a known commit."
+    },
+    {
+      "id": "staging_identity",
+      "state": "VERIFIED",
+      "evidence": "docs/billing/PHASE18_CI_VALIDATION_AND_RELEASE_GATES.md",
+      "acceptance": "Correct credonomics-staging project and Free organization are independently checked read-only."
+    },
+    {
+      "id": "free_recovery",
+      "state": "BLOCKED",
+      "evidence": null,
+      "acceptance": "Private complete logical backup plus storage review and tested restore/rollback, within ₹0 without uploading data to public CI."
+    },
+    {
+      "id": "staging_migration_approval",
+      "state": "BLOCKED",
+      "evidence": null,
+      "acceptance": "Explicit owner go/no-go for exact project jvpiulmcjjnsgozgqgzw after recovery; staged SQL 012-016 only."
+    },
+    {
+      "id": "staging_auth_e2e",
+      "state": "BLOCKED",
+      "evidence": null,
+      "acceptance": "True Supabase JWT/PostgREST access denial, admin allowlist, race/idempotency and browser E2E with synthetic records."
+    },
+    {
+      "id": "issuer_tax_privacy",
+      "state": "BLOCKED",
+      "evidence": null,
+      "acceptance": "Owner-approved issuer name/address, GST/tax position, terms, corrections, privacy, retention and lawful operator roles."
+    },
+    {
+      "id": "whatsapp_otp",
+      "state": "BLOCKED",
+      "evidence": null,
+      "acceptance": "Authorized actual WhatsApp delivery with verified ₹0 recurring terms, secure single-use/expiry/rate limit and customer invoice binding; no fake OTP or unofficial protocol."
+    },
+    {
+      "id": "youpi_license",
+      "state": "BLOCKED",
+      "evidence": null,
+      "acceptance": "Valid explicit commercial redistribution/use rights from upstream owner; published repository alone is insufficient."
+    },
+    {
+      "id": "youpi_security",
+      "state": "BLOCKED",
+      "evidence": null,
+      "acceptance": "Independent close-out of upstream payment attribution, secret exposure, COD/SUCCESS, UPI identity, OTP abuse and observer vulnerabilities."
+    },
+    {
+      "id": "merchant_beneficiary",
+      "state": "BLOCKED",
+      "evidence": null,
+      "acceptance": "Licensed runtime and vetted merchant VPA/beneficiary, immutable invoice+amount order binding, genuine authorized checkout E2E."
+    },
+    {
+      "id": "slice_banked_credit",
+      "state": "BLOCKED",
+      "evidence": null,
+      "acceptance": "Independent official Slice booked credit evidence, UTR and partial/full/over-credit replay proof; gateway SUCCESS alone never marks PAID."
+    },
+    {
+      "id": "pdf_archive",
+      "state": "BLOCKED",
+      "evidence": null,
+      "acceptance": "Versioned immutable stored PDF binary, access-controlled delivery, retention and recovery verified, distinct UNPAID invoice/PAID receipt."
+    },
+    {
+      "id": "production_e2e_approval",
+      "state": "BLOCKED",
+      "evidence": null,
+      "acceptance": "End-to-end negative security tests, no live collection before authorization, owner-approved financial release, separate explicit approval for main merge and payment activation."
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+# Synthetic PostgreSQL integration tests; NO Supabase, Vercel, or live-payment credentials.
+# Uses free standard GitHub-hosted runners for this public repository.
+name: Billing PostgreSQL integration (disposable)
+
+on:
+  push:
+    branches:
+      - feature/youpi-payment-entry-prelaunch
+    paths:
+      - ".github/workflows/billing-postgres-validation.yml"
+      - "docs/billing/*.sql"
+      - "scripts/test-billing-postgres.py"
+      - "app/billing/**"
+      - "app/api/billing/**"
+      - "src/lib/billing/**"
+      - "vitest.config.mts"
+      - "package.json"
+      - "package-lock.json"
+      - "next.config.mjs"
+      - "assets/fonts/**"
+      - "playwright.billing-*.config.ts"
+      - "tests/staging/**"
+      - "tests/billing-local/**"
+      - "scripts/start-billing-disabled-check.mjs"
+      - "scripts/generate-ipo-dashboard.mjs"
+      - "scripts/generate-search-index.mjs"
+      - "scripts/check-billing-launch-readiness.mjs"
+      - "docs/billing/ALL_AT_ONCE_RELEASE_GATES.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: billing-pg-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  postgres-integration:
+    name: PostgreSQL 17 / 19 synthetic safety cases
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    if: github.repository == 'aqdas1820/credonomics-site'
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: ci-disposable-postgres-only
+          POSTGRES_DB: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+
+    steps:
+      - name: Check out reviewed feature source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Ensure PostgreSQL client
+        run: |
+          if ! command -v psql >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq postgresql-client
+          fi
+          psql --version
+
+      - name: Execute 19 integration tests against disposable local PostgreSQL
+        env:
+          PGHOST: 127.0.0.1
+          PGPORT: "5432"
+          PGUSER: postgres
+          PGPASSWORD: ci-disposable-postgres-only
+          BILLING_PG_DISPOSABLE: "1"
+        run: python3 scripts/test-billing-postgres.py
+
+  billing-source:
+    name: Full unit / TypeScript / lint / Next.js build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    if: github.repository == 'aqdas1820/credonomics-site'
+    steps:
+      - name: Check out reviewed feature source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Install pinned Node runtime
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install locked dependencies without package lifecycle hooks
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Check all-at-once release remains fail-closed
+        run: |
+          node scripts/check-billing-launch-readiness.mjs --self-test
+          node scripts/check-billing-launch-readiness.mjs --assert-blocked
+
+      - name: Full unit tests
+        run: npm test
+
+      - name: Local-only Next.js production build (NOT deployment)
+        run: npm run build
+
+      - name: TypeScript project check after generated Next.js types settle
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: List opt-in staging verification cases without accessing staging
+        run: npx playwright test --config=playwright.billing-staging.config.ts --list

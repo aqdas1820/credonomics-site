@@ -1,0 +1,24 @@
+.page { max-width: 890px; margin: 24px auto; padding: 20px; color: #142d45; }
+.controls { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+.controls button { padding: 10px 15px; background: #163655; color: white; border: 0; border-radius: 7px; cursor: pointer; }
+.sheet { background: #fff; border: 2px solid #215b8c; padding: 34px; min-height: 600px; overflow-wrap: anywhere; }
+.header { display: flex; justify-content: space-between; gap: 24px; border-bottom: 3px solid #215b8c; padding-bottom: 16px; }
+.header h1 { font-size: 29px; margin: 0; }
+.header p { margin: 5px 0; }
+.status { margin: 20px 0; padding: 11px; text-align: center; border: 1px solid #64748b; background: #eef4f9; font-weight: 700; }
+.items { width: 100%; border-collapse: collapse; margin-top: 25px; font-size: 14px; }
+.items th, .items td { border-bottom: 1px solid #b9c8d4; padding: 10px; text-align: left; }
+.items th { background: #e9f0f7; }
+.items th:nth-child(2), .items td:nth-child(2) { white-space: nowrap; }
+.right { text-align: right !important; white-space: nowrap; }
+.totals { margin: 20px 0 0 auto; width: 280px; max-width: 100%; }
+.totals p { display: flex; justify-content: space-between; gap: 18px; margin: 9px 0; }
+.note { font-size: 12px; margin-top: 50px; border-top: 1px solid #b9c8d4; padding-top: 12px; }
+@media(max-width:640px) { .page { padding: 7px; } .sheet { padding: 16px; } .header { flex-direction: column; } .items { font-size: 11px; } .items th, .items td { padding: 6px 3px; } .right { white-space: normal; } }
+@media print {
+  @page { size: A4; margin: 12mm; }
+  .page { margin: 0; padding: 0; max-width: none; }
+  .controls { display: none !important; }
+  .sheet { border: 2px solid #215b8c; padding: 20px; min-height: 0; }
+  .items tr { break-inside: avoid; }
+}
