@@ -14,6 +14,12 @@ class RecoveryGuards(unittest.TestCase):
         for key,value in [('host','evil.example'),('port',6543),('environment','production'),('user','anon'),('projectRef','')]:
             p=self.profile();p[key]=value
             with self.assertRaises(ValueError): h.validate_profile(p)
+    def test_role_replay_preserves_grantor_options_and_quotes_identifiers(self):
+        from unittest.mock import Mock
+        r=Mock();h.restore_memberships(r,[['pg_read_all_stats','pg_monitor','postgres',False,True,True],['role"name','member','grantor',True,False,True]])
+        self.assertIn('ADMIN FALSE, INHERIT TRUE, SET TRUE GRANTED BY "postgres"',r.sql.call_args_list[0].args[0])
+        self.assertIn('"role""name"',r.sql.call_args_list[1].args[0])
+        with self.assertRaises(ValueError):h.restore_memberships(r,[['a','b','c','true',True,True]])
     def test_profile_rejects_password_fields(self):
         p=self.profile();p['password']='SYNTHETIC ONLY'
         with self.assertRaises(ValueError):h.validate_profile(p)

@@ -112,9 +112,20 @@ def inventory(r):
         result['rows'][f'{schema}.{table}'] = r.sql(f'SELECT to_jsonb(t)::text FROM {ident} t ORDER BY to_jsonb(t)::text',stream_hash=True)
     result['extensions'] = json.loads(r.sql("select coalesce(json_agg(json_build_array(extname,extversion,nspname) order by extname),'[]') from pg_extension e join pg_namespace n on n.oid=e.extnamespace"))
     result['sequences'] = json.loads(r.sql("select coalesce(json_agg(to_jsonb(s) order by schemaname,sequencename),'[]') from pg_sequences s where schemaname not like 'pg_%'"))
-    result['roles'] = json.loads(r.sql("select coalesce(json_agg(json_build_array(rolname,rolsuper,rolinherit,rolcreaterole,rolcreatedb,rolcanlogin,rolreplication,rolbypassrls,rolconnlimit,rolvaliduntil,rolconfig) order by rolname),'[]') from pg_roles where rolname not like 'cn_restore_%'"))
-    result['memberships'] = json.loads(r.sql("select coalesce(json_agg(json_build_array(r.rolname,m.rolname,g.rolname,a.admin_option,a.inherit_option,a.set_option) order by r.rolname,m.rolname,g.rolname),'[]') from pg_auth_members a join pg_roles r on r.oid=a.roleid join pg_roles m on m.oid=a.member join pg_roles g on g.oid=a.grantor where r.rolname not like 'cn_restore_%' and m.rolname not like 'cn_restore_%' and g.rolname not like 'cn_restore_%'"))
+    ignored=r.env.get('PGUSER','') if r.env.get('PGUSER','').startswith('cn_restore_') else ''
+    ignored_sql=ignored.replace(chr(39),chr(39)*2)
+    result['roles'] = json.loads(r.sql(f"select coalesce(json_agg(json_build_array(rolname,rolsuper,rolinherit,rolcreaterole,rolcreatedb,rolcanlogin,rolreplication,rolbypassrls,rolconnlimit,rolvaliduntil,rolconfig) order by rolname),'[]') from pg_roles where rolname <> '{ignored_sql}'"))
+    result['memberships'] = json.loads(r.sql(f"select coalesce(json_agg(json_build_array(r.rolname,m.rolname,g.rolname,a.admin_option,a.inherit_option,a.set_option) order by r.rolname,m.rolname,g.rolname),'[]') from pg_auth_members a join pg_roles r on r.oid=a.roleid join pg_roles m on m.oid=a.member join pg_roles g on g.oid=a.grantor where r.rolname <> '{ignored_sql}' and m.rolname <> '{ignored_sql}' and g.rolname <> '{ignored_sql}'"))
     return result
+
+def restore_memberships(r, rows):
+    # pg_dumpall omits predefined-role memberships. Replay source grants explicitly
+    # in this new local cluster, preserving grantor and all PG17 option bits.
+    def ident(value): return chr(34)+value.replace(chr(34),chr(34)*2)+chr(34)
+    for role,member,grantor,admin,inherit,can_set in rows:
+        if not all(type(v) is bool for v in (admin,inherit,can_set)): raise ValueError('Invalid role grant options')
+        options=', '.join(k+' '+str(v).upper() for k,v in [('ADMIN',admin),('INHERIT',inherit),('SET',can_set)])
+        r.sql(f'GRANT {ident(role)} TO {ident(member)} WITH {options} GRANTED BY {ident(grantor)}')
 
 def save(path, obj):
     with open(path,'x',encoding='utf-8') as f: json.dump(obj,f,indent=2,sort_keys=True)
@@ -174,6 +185,7 @@ def restore(args):
         started=True
         r.run('pg_ctl','-D',pgdata,'-l',dest/'server.log','-o',f'-h 127.0.0.1 -p {port} -c shared_preload_libraries= -c archive_mode=off -c max_wal_senders=0','-w','start')
         r.run('psql','-X','-v','ON_ERROR_STOP=1','-f',source/'roles.sql')
+        restore_memberships(r,manifest['inventory']['memberships'])
         # New empty database, not an initialized Supabase baseline. Never --clean/disable-triggers/no-owner/no-acl.
         r.sql('CREATE DATABASE recovered TEMPLATE template0')
         r.env['PGDATABASE']='recovered'

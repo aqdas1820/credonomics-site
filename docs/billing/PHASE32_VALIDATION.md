@@ -7,7 +7,7 @@ activation flag or payment was executed. Real payment pilot: BLOCKED.
 Locally executed:
 - 382/382 unit tests, including real financial document rendering/archive/recovery,
   denied admin routes and explicit missing/savings account-type rejection.
-- 25 recovery safety/manifest guards pass; one native Windows synthetic test is
+- 26 recovery safety/manifest guards pass; one native Windows synthetic test is
   intentionally skipped on Linux and runs only on the Windows CI runner.
 - TypeScript noEmit passes.
 - Full Next production build and pinned OpenNext build pass (179 static pages).

@@ -27,12 +27,14 @@ class NativeWindowsRecovery(unittest.TestCase):
             try:
                 source=start('source','postgres')
                 source.sql("CREATE TABLE public.synthetic_invoice(id bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,amount int CHECK(amount>0)); INSERT INTO public.synthetic_invoice(amount) VALUES(123); ALTER TABLE public.synthetic_invoice ENABLE ROW LEVEL SECURITY; CREATE POLICY deny_all ON public.synthetic_invoice USING(false);")
+                source.sql('CREATE ROLE synthetic_reader NOLOGIN; CREATE ROLE synthetic_operator NOLOGIN; GRANT synthetic_reader TO synthetic_operator WITH ADMIN TRUE, INHERIT FALSE, SET TRUE;')
                 expected=h.inventory(source)
                 source.run('pg_dumpall','--roles-only','--no-role-passwords','--file',root/'roles.sql')
                 source.run('pg_dump','--format=custom','--file',root/'database.dump')
                 source.run('pg_restore','--list',root/'database.dump')
                 target=start('target','cn_restore_'+secrets.token_hex(8))
                 target.run('psql','-X','-v','ON_ERROR_STOP=1','-f',root/'roles.sql')
+                h.restore_memberships(target,expected['memberships'])
                 target.sql('CREATE DATABASE recovered TEMPLATE template0');target.env['PGDATABASE']='recovered'
                 target.run('pg_restore','--single-transaction','--exit-on-error','--dbname=recovered',root/'database.dump')
                 target.sql('ALTER DATABASE recovered OWNER TO postgres')

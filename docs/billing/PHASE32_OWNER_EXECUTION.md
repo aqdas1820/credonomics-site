@@ -100,7 +100,10 @@ with an explicit current-user-only ACL compatible with PostgreSQL's restricted
 Windows token. The workspace also inherits current-user-only ACLs; password files
 are deleted in finally. No secret is passed in argv or an interactive child prompt. This creates a new local PGDATA inside R:, random local credentials, loopback-only
 server, no preloaded job/network extensions, fresh database and a single-transaction,
-fail-fast pg_restore with owners/ACLs/triggers intact. It compares the entire source
+fail-fast pg_restore with owners/ACLs/triggers intact. Source role memberships are
+replayed explicitly, including predefined-role grants omitted by pg_dumpall, with
+original grantor and ADMIN/INHERIT/SET options. Only the exact newly created local
+bootstrap principal is excluded from the comparison; other roles remain checked. It compares the entire source
 inventory and archive hashes. Server stops in finally; stopped PGDATA and private
 logs remain in the vault. A mismatch or missing extension prevents result.json PASS.
 Database-level ACL/settings or OS locale mismatches also block recovery; do not
