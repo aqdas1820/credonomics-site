@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-10-20T08:26:43.684Z",
+  "generatedAt": "2026-10-20T14:16:28.216Z",
   "recordCount": 4,
   "nseCount": 4,
   "bseCount": 0,
@@ -32,7 +32,7 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     },
     "subscription": {
       "total": 31.76523900241494,
-      "updatedAt": "2026-10-20T08:26:43.684Z",
+      "updatedAt": "2026-10-20T14:16:28.216Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BONFIG&type=Active"
     },
     "sharesOffered": 30282330,
@@ -41,7 +41,7 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BONFIG&type=Active",
-    "fetchedAt": "2026-10-20T08:26:43.684Z"
+    "fetchedAt": "2026-10-20T14:16:28.216Z"
   },
   {
     "slug": "sahajanand-medical-technologies-ltd-346d039",
@@ -61,7 +61,7 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     },
     "subscription": {
       "total": 4.288056734015816,
-      "updatedAt": "2026-10-20T08:26:43.684Z",
+      "updatedAt": "2026-10-20T14:16:28.216Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMT&type=Active"
     },
     "sharesOffered": 9750482,
@@ -70,7 +70,7 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMT&type=Active",
-    "fetchedAt": "2026-10-20T08:26:43.684Z"
+    "fetchedAt": "2026-10-20T14:16:28.216Z"
   },
   {
     "slug": "tonbo-imaging-india-ltd-b7f2320",
@@ -90,7 +90,7 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     },
     "subscription": {
       "total": 96.88362008451058,
-      "updatedAt": "2026-10-20T08:26:43.684Z",
+      "updatedAt": "2026-10-20T14:16:28.216Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TONBO&type=Active"
     },
     "sharesOffered": 8526033,
@@ -99,7 +99,7 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TONBO&type=Active",
-    "fetchedAt": "2026-10-20T08:26:43.684Z"
+    "fetchedAt": "2026-10-20T14:16:28.216Z"
   },
   {
     "slug": "zetwerk-manufacturing-businesses-ltd-805420f",
@@ -119,7 +119,7 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     },
     "subscription": {
       "total": 1.3724419898118434,
-      "updatedAt": "2026-10-20T08:26:43.684Z",
+      "updatedAt": "2026-10-20T14:16:28.216Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ZETWERK&type=Active"
     },
     "sharesOffered": 185066845,
@@ -128,6 +128,6 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ZETWERK&type=Active",
-    "fetchedAt": "2026-10-20T08:26:43.684Z"
+    "fetchedAt": "2026-10-20T14:16:28.216Z"
   }
 ]
