@@ -4,11 +4,11 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-10-19T16:25:41.131Z",
+  "generatedAt": "2026-10-20T08:26:43.684Z",
   "recordCount": 4,
   "nseCount": 4,
   "bseCount": 0,
-  "activeCount": 4,
+  "activeCount": 0,
   "upcomingCount": 0,
   "sourceStatus": "NSE API 4 · BSE SME unavailable · BSE mainboard 0"
 } as const
@@ -19,7 +19,7 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     "companyName": "Bonfiglioli Transmissions Limited",
     "symbol": "BONFIG",
     "marketSegment": "mainboard",
-    "status": "open",
+    "status": "closed",
     "securityType": "EQ",
     "issue": {
       "priceBandLow": 558,
@@ -32,7 +32,7 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     },
     "subscription": {
       "total": 31.76523900241494,
-      "updatedAt": "2026-10-19T16:25:41.131Z",
+      "updatedAt": "2026-10-20T08:26:43.684Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BONFIG&type=Active"
     },
     "sharesOffered": 30282330,
@@ -41,14 +41,14 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BONFIG&type=Active",
-    "fetchedAt": "2026-10-19T16:25:41.131Z"
+    "fetchedAt": "2026-10-20T08:26:43.684Z"
   },
   {
     "slug": "sahajanand-medical-technologies-ltd-346d039",
     "companyName": "Sahajanand Medical Technologies Limited",
     "symbol": "SMT",
     "marketSegment": "mainboard",
-    "status": "open",
+    "status": "closed",
     "securityType": "EQ",
     "issue": {
       "priceBandLow": 327,
@@ -61,7 +61,7 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     },
     "subscription": {
       "total": 4.288056734015816,
-      "updatedAt": "2026-10-19T16:25:41.131Z",
+      "updatedAt": "2026-10-20T08:26:43.684Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMT&type=Active"
     },
     "sharesOffered": 9750482,
@@ -70,14 +70,14 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMT&type=Active",
-    "fetchedAt": "2026-10-19T16:25:41.131Z"
+    "fetchedAt": "2026-10-20T08:26:43.684Z"
   },
   {
     "slug": "tonbo-imaging-india-ltd-b7f2320",
     "companyName": "Tonbo Imaging India Limited",
     "symbol": "TONBO",
     "marketSegment": "mainboard",
-    "status": "open",
+    "status": "closed",
     "securityType": "EQ",
     "issue": {
       "priceBandLow": 665,
@@ -90,7 +90,7 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     },
     "subscription": {
       "total": 96.88362008451058,
-      "updatedAt": "2026-10-19T16:25:41.131Z",
+      "updatedAt": "2026-10-20T08:26:43.684Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TONBO&type=Active"
     },
     "sharesOffered": 8526033,
@@ -99,14 +99,14 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TONBO&type=Active",
-    "fetchedAt": "2026-10-19T16:25:41.131Z"
+    "fetchedAt": "2026-10-20T08:26:43.684Z"
   },
   {
     "slug": "zetwerk-manufacturing-businesses-ltd-805420f",
     "companyName": "Zetwerk Manufacturing Businesses Limited",
     "symbol": "ZETWERK",
     "marketSegment": "mainboard",
-    "status": "open",
+    "status": "closed",
     "securityType": "EQ",
     "issue": {
       "priceBandLow": 143,
@@ -119,7 +119,7 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     },
     "subscription": {
       "total": 1.3724419898118434,
-      "updatedAt": "2026-10-19T16:25:41.131Z",
+      "updatedAt": "2026-10-20T08:26:43.684Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ZETWERK&type=Active"
     },
     "sharesOffered": 185066845,
@@ -128,6 +128,6 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ZETWERK&type=Active",
-    "fetchedAt": "2026-10-19T16:25:41.131Z"
+    "fetchedAt": "2026-10-20T08:26:43.684Z"
   }
 ]
