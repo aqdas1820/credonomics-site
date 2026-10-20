@@ -55,7 +55,7 @@ jobs:
           NEXT_TELEMETRY_DISABLED: '1'
       - run: npm run typecheck
       - run: node scripts/check-billing-launch-readiness.mjs --assert-blocked
-      - run: npx playwright install --with-deps chromium
+      - run: bash scripts/cloudflare/install-browser-deps-ci.sh
       - run: npx playwright test --config=playwright.manual-upi.config.ts
   windows-recovery:
     runs-on: windows-2025

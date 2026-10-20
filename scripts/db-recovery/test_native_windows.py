@@ -16,12 +16,12 @@ class NativeWindowsRecovery(unittest.TestCase):
         with tempfile.TemporaryDirectory(prefix='cn-synthetic-only-') as temp:
             root=Path(temp); runners=[]
             def start(label,user):
-                work=root/label;work.mkdir();pf=work/'pass';pw=work/'pw';pw.write_text(secrets.token_hex(32))
+                work=root/label;work.mkdir();h.restrict_acl(work,True);pf=work/'pass';pw=work/'pw';pw.write_text(secrets.token_hex(32));h.restrict_acl(pw)
                 with socket.socket() as s:s.bind(('127.0.0.1',0));port=s.getsockname()[1]
                 h.passfile(pf,'127.0.0.1',port,user,pw.read_text())
                 r=h.Runner(os.environ['CN_NATIVE_PG17_BIN'],work,h.environment('127.0.0.1',port,user,pf))
                 self.assertIn(b'17.',r.run('pg_restore','--version'))
-                r.run('initdb','-D',work/'pgdata','-U',user,'--pwprompt','--auth-host=scram-sha-256','--auth-local=scram-sha-256','--encoding=UTF8','--no-locale',input_bytes=((pw.read_text()+'\n')*2).encode())
+                r.run('initdb','-D',work/'pgdata','-U',user,'--pwfile',pw,'--auth-host=scram-sha-256','--auth-local=scram-sha-256','--encoding=UTF8','--no-locale')
                 r.run('pg_ctl','-D',work/'pgdata','-l',work/'server.log','-o',f'-h 127.0.0.1 -p {port}','-w','start');runners.append(r)
                 return r
             try:

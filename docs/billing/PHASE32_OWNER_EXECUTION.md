@@ -95,9 +95,10 @@ OAuth/SMTP configuration or signing-key recovery; inventory these separately if 
   -VaultConfirmed -AuthorizeLocalRestore -NetworkDisconnected -HostMemoryProtected -RolesReviewed
 ```
 
-Native initialization passes its random local password twice through private stdin
-with a detached/no-window child, so neither argv nor a plaintext init password file
-is used. This creates a new local PGDATA inside R:, random local credentials, loopback-only
+Native initialization uses a temporary password file inside the encrypted vault,
+with an explicit current-user-only ACL compatible with PostgreSQL's restricted
+Windows token. The workspace also inherits current-user-only ACLs; password files
+are deleted in finally. No secret is passed in argv or an interactive child prompt. This creates a new local PGDATA inside R:, random local credentials, loopback-only
 server, no preloaded job/network extensions, fresh database and a single-transaction,
 fail-fast pg_restore with owners/ACLs/triggers intact. It compares the entire source
 inventory and archive hashes. Server stops in finally; stopped PGDATA and private

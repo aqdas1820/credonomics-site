@@ -58,30 +58,40 @@ def environment(host, port, user, password_file, readonly=False):
     if readonly: env.update(PGSSLROOTCERT='system', PGOPTIONS='-c default_transaction_read_only=on -c statement_timeout=300000')
     return env
 
+def restrict_acl(path, directory=False):
+    account = subprocess.check_output(['whoami'], text=True).strip()
+    grant = f'{account}:(OI)(CI)F' if directory else f'{account}:F'
+    subprocess.run(['icacls', str(path), '/inheritance:r', '/grant:r', grant], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
 def passfile(path, host, port, user, password):
     def escape(s): return s.replace('\\', '\\\\').replace(':', '\\:')
     if '\n' in password or '\r' in password: raise ValueError('Unsupported password characters')
     path.write_text(f'{escape(host)}:{port}:*:{escape(user)}:{escape(password)}\n', encoding='utf-8')
-    account = subprocess.check_output(['whoami'], text=True).strip()
-    subprocess.run(['icacls', str(path), '/inheritance:r', '/grant:r', f'{account}:F'], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    restrict_acl(path)
 
 class Runner:
     def __init__(self, bin_dir, workspace, env):
         self.bin = Path(bin_dir); self.workspace = workspace; self.env = env; self.seq = 0
-    def run(self, program, *args, stream_hash=False, input_bytes=None):
+    def run(self, program, *args, stream_hash=False):
         self.seq += 1
-        with open(self.workspace / f'command-{self.seq:03}.stderr', 'xb') as err:
-            proc = subprocess.Popen([str(self.bin / (program + '.exe')), *map(str,args)], env=self.env, stdout=subprocess.PIPE, stderr=err, stdin=subprocess.PIPE if input_bytes is not None else subprocess.DEVNULL, creationflags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0)
-            if input_bytes is not None:
-                proc.stdin.write(input_bytes); proc.stdin.close()
-            if stream_hash:
-                h = hashlib.sha256(); count = 0
-                for line in proc.stdout: h.update(line); count += 1
-                output = {'sha256':h.hexdigest(),'rows':count}
-            else: output = proc.stdout.read()
-            proc.stdout.close()
-            if proc.wait() != 0: raise ValueError('Native command failed; inspect private vault diagnostics')
-            return output
+        # Startup descendants can retain Windows stdout handles. File output prevents
+        # a successful pg_ctl from hanging forever waiting for a pipe EOF.
+        with open(self.workspace / f'command-{self.seq:03}.stderr', 'xb') as err, open(self.workspace / f'command-{self.seq:03}.stdout', 'x+b') as out:
+            proc = subprocess.Popen([str(self.bin / (program + '.exe')), *map(str,args)], env=self.env, stdout=subprocess.PIPE if stream_hash else out, stderr=err, stdin=subprocess.DEVNULL, creationflags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0)
+            try:
+                if stream_hash:
+                    h = hashlib.sha256(); count = 0
+                    for line in proc.stdout: h.update(line); count += 1
+                    proc.stdout.close()
+                    output = {'sha256':h.hexdigest(),'rows':count}
+                code = proc.wait(timeout=120 if program in ('initdb','pg_ctl') else 900)
+                if code != 0: raise ValueError('Native command failed; inspect private vault diagnostics')
+                if not stream_hash:
+                    out.seek(0); output=out.read()
+                return output
+            except BaseException:
+                if proc.poll() is None: proc.kill(); proc.wait()
+                raise
     def sql(self, query, **kw): return self.run('psql', '-X', '-qAt', '-v', 'ON_ERROR_STOP=1', '-c', query, **kw)
 
 def inventory(r):
@@ -114,6 +124,7 @@ def export(args):
     dest = vault_path(args.workspace)
     if not args.writers_quiesced or not args.vault_confirmed or not args.host_memory_protected: raise ValueError('Owner must attest encrypted vault custody and quiesced application writers')
     dest.mkdir(parents=False,exist_ok=False)
+    restrict_acl(dest,True)
     password_file = dest/'connection.pgpass'
     try:
         if not sys.stdin.isatty(): raise ValueError('Private interactive console required; no piped password input')
@@ -149,15 +160,17 @@ def restore(args):
     for name in ('roles.sql','database.dump'):
         if digest(source/name) != manifest['files'][name]: raise ValueError('Backup integrity mismatch')
     dest.mkdir(parents=False,exist_ok=False)
+    restrict_acl(dest,True)
     localuser='cn_restore_'+secrets.token_hex(8); password=secrets.token_hex(32)
     with socket.socket() as sock: sock.bind(('127.0.0.1',0)); port=sock.getsockname()[1]
-    pf=dest/'connection.pgpass'; pgdata=dest/'pgdata'
+    pf=dest/'connection.pgpass'; initpw=dest/'init-password'; pgdata=dest/'pgdata'
     started=False
     try:
         passfile(pf,'127.0.0.1',port,localuser,password)
+        initpw.write_text(password,encoding='utf-8'); restrict_acl(initpw)
         r=Runner(args.pg_bin,dest,environment('127.0.0.1',port,localuser,pf))
         if not re.search(rb'\b17\.',r.run('pg_restore','--version')): raise ValueError('Native PG17 required')
-        r.run('initdb','-D',pgdata,'-U',localuser,'--pwprompt','--auth-host=scram-sha-256','--auth-local=scram-sha-256','--encoding=UTF8','--no-locale',input_bytes=((password+'\n')*2).encode())
+        r.run('initdb','-D',pgdata,'-U',localuser,'--pwfile',initpw,'--auth-host=scram-sha-256','--auth-local=scram-sha-256','--encoding=UTF8','--no-locale')
         started=True
         r.run('pg_ctl','-D',pgdata,'-l',dest/'server.log','-o',f'-h 127.0.0.1 -p {port} -c shared_preload_libraries= -c archive_mode=off -c max_wal_senders=0','-w','start')
         r.run('psql','-X','-v','ON_ERROR_STOP=1','-f',source/'roles.sql')
@@ -174,9 +187,10 @@ def restore(args):
         save(dest/'result.json',{'databaseRecovery':'PASS','archiveSha256':manifest['files']['database.dump'],'projectRef':manifest['identity']['projectRef'],'externalServices':'NOT_VERIFIED','authHttpE2E':'NOT_RUN'})
         print('Isolated database restore and complete inventory comparison passed. External Supabase services remain unverified.')
     finally:
-        if started:
-            r.run('pg_ctl','-D',pgdata,'-m','immediate','-w','stop')
-        pf.unlink(missing_ok=True)
+        try:
+            if started: r.run('pg_ctl','-D',pgdata,'-m','immediate','-w','stop')
+        finally:
+            pf.unlink(missing_ok=True); initpw.unlink(missing_ok=True)
         # Keep stopped PGDATA and all diagnostics inside the vault for owner inspection; never remove existing data.
 
 def main():
