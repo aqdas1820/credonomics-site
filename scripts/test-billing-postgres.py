@@ -12,6 +12,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
+import tempfile
 import unittest
 import uuid
 
@@ -391,6 +392,146 @@ class Phase30Claims(unittest.TestCase):
         self.assertTrue(json.loads(sql(observation(invoice,utr=utr),service=True))['recorded'])
 
 
+class Phase31Manual(unittest.TestCase):
+    beneficiary = '22222222-2222-4222-8222-222222222222'
+    fingerprint = 'd'*64
+
+    def reserve_query(self, invoice, fingerprint=None, actor=None):
+        return 'select public.billing_manual_upi_reserve('+','.join([
+            literal(invoice['id'])+'::uuid',literal(self.beneficiary)+'::uuid',"'synthetic@banktest'",
+            "'Synthetic Merchant'","'synthetic-account'",literal(fingerprint or self.fingerprint),literal(actor or str(uuid.uuid4()))+'::uuid'])+');'
+
+    def reserve(self, invoice):
+        return json.loads(sql(self.reserve_query(invoice),service=True))
+
+    def view_query(self, intent, fingerprint=None):
+        return 'select public.billing_manual_upi_view('+literal(intent['intentId'])+'::uuid,'+str(intent['issuedAt'])+','+literal(fingerprint or self.fingerprint)+');'
+
+    def review_query(self, invoice, intent, utr, booked, amount=100, fingerprint=None):
+        return 'select public.billing_verify_manual_upi_credit('+','.join([
+            literal(invoice['id'])+'::uuid',literal(intent['intentId'])+'::uuid',literal(fingerprint or self.fingerprint),
+            literal(utr),str(amount),literal(booked)+'::timestamptz',"'SYNTHETIC OFFICIAL BANK RECORD ONLY'",literal(ACTOR)+'::uuid'])+');'
+
+    def test_01_persistence_idempotency_and_private_instructions(self):
+        invoice=issue(); intent=self.reserve(invoice)
+        self.assertEqual(self.reserve(invoice),intent)
+        view=json.loads(sql(self.view_query(intent),service=True))
+        self.assertEqual((view['status'],view['bankVerified'],view['amountPaise']),('UNPAID',False,100))
+        self.assertFalse(any(k in view for k in ['customer','bank_account_ref','evidence_reference']))
+        self.assertEqual(sql(self.view_query(intent,'e'*64),service=True),'')
+        # Every sql() invocation is a fresh psql process/session.
+        self.assertEqual(json.loads(sql('select public.billing_manual_upi_admin_state('+literal(invoice['id'])+'::uuid,'+literal(self.fingerprint)+');',service=True))['intentId'],intent['intentId'])
+
+    def test_02_concurrent_link_creation(self):
+        invoice=issue()
+        with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+            values=list(pool.map(lambda _:self.reserve(invoice),range(8)))
+        self.assertEqual(len(set(v['intentId'] for v in values)),1)
+
+    def test_03_manual_exact_credit_and_single_receipt_on_concurrent_retry(self):
+        invoice=issue(); intent=self.reserve(invoice); utr=uuid.uuid4().hex.upper()
+        booked=sql('select clock_timestamp();')
+        query=self.review_query(invoice,intent,utr,booked)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+            results=list(pool.map(lambda _:json.loads(sql(query,service=True)),range(4)))
+        self.assertEqual(sum(not r['duplicate'] for r in results),1)
+        self.assertTrue(all(r['status']=='PAID' for r in results))
+        view=json.loads(sql(self.view_query(intent),service=True))
+        self.assertTrue(view['bankVerified']);self.assertNotIn('vpa',view)
+        self.assertEqual(sql('select count(*) from billing_private.receipts where invoice_id='+literal(invoice['id'])+'::uuid;'),'1')
+        sql(self.review_query(invoice,intent,uuid.uuid4().hex.upper(),booked),service=True,ok=False)
+
+    def test_04_amount_identity_and_legacy_settlement_bypass(self):
+        invoice=issue(); intent=self.reserve(invoice); utr=uuid.uuid4().hex.upper(); booked=sql('select clock_timestamp();')
+        for changes in [dict(amount=99),dict(fingerprint='e'*64)]:
+            sql(self.review_query(invoice,intent,utr,booked,**changes),service=True,ok=False)
+        sql(credit(invoice,100),service=True,ok=False)
+        self.assertEqual(sql('select count(*) from billing_private.manual_upi_reviews where invoice_id='+literal(invoice['id'])+'::uuid;'),'0')
+        sql('select public.billing_get_receipt('+literal(invoice['id'])+'::uuid);',service=True,ok=False)
+
+    def test_05_duplicate_bank_reference_different_invoices(self):
+        first,second=issue(),issue(); a,b=self.reserve(first),self.reserve(second)
+        utr=uuid.uuid4().hex.upper(); booked=sql('select clock_timestamp();')
+        sql(self.review_query(first,a,utr,booked),service=True)
+        sql(self.review_query(second,b,utr.lower(),booked),service=True,ok=False)
+        self.assertEqual(sql('select count(*) from billing_private.manual_upi_reviews where invoice_id='+literal(second['id'])+'::uuid;'),'0')
+
+    def test_06_revoke_and_late_booked_credit(self):
+        invoice=issue();intent=self.reserve(invoice)
+        sql('select public.billing_manual_upi_revoke('+literal(invoice['id'])+'::uuid,'+literal(ACTOR)+'::uuid);',service=True)
+        self.assertEqual(sql(self.view_query(intent),service=True),'')
+        sql(self.reserve_query(invoice),service=True,ok=False)
+        # Revocation cannot erase the financial obligation to review a real late credit.
+        self.assertEqual(json.loads(sql(self.review_query(invoice,intent,uuid.uuid4().hex.upper(),sql('select clock_timestamp();')),service=True))['status'],'PAID')
+        self.assertEqual(sql(self.view_query(intent),service=True),'')
+
+    def test_07_roles_immutable_fields_and_rollback(self):
+        invoice=issue();intent=self.reserve(invoice)
+        for role in ['anon','authenticated']:
+            sql(f'set role {role}; '+self.reserve_query(invoice),ok=False)
+            sql(f'set role {role}; '+self.view_query(intent),ok=False)
+        sql('update billing_private.manual_upi_intents set vpa=\'attacker@banktest\' where id='+literal(intent['intentId'])+'::uuid;',ok=False)
+        query=self.review_query(invoice,intent,uuid.uuid4().hex.upper(),sql('select clock_timestamp();'))
+        sql('begin; '+SERVICE+query+' select 1/0; commit;',ok=False)
+        self.assertEqual(json.loads(sql(self.view_query(intent),service=True))['status'],'UNPAID')
+
+    def test_08_no_competing_gateway_instructions_and_limits(self):
+        invoice=issue();self.reserve(invoice)
+        sql(Phase28Links().reserve(invoice),service=True,ok=False)
+        other=issue();sql(Phase28Links().reserve(other),service=True)
+        sql(self.reserve_query(other),service=True,ok=False)
+        limited=issue();actor=str(uuid.uuid4())
+        for _ in range(10):sql(self.reserve_query(limited,actor=actor),service=True)
+        self.assertIn('rate limited',sql(self.reserve_query(limited,actor=actor),service=True,ok=False))
+
+
+def atomic_bundle_drill():
+    if not shutil.which('node'):
+        raise AssertionError('Node is required for review-bundle verification')
+    target='phase31_bundle_'+uuid.uuid4().hex
+    sql(f'create database "{target}";',database='postgres')
+    try:
+        sql("create schema auth; create function auth.role() returns text language sql stable as $$ select nullif(current_setting('request.jwt.claim.role',true),'') $$; grant usage on schema auth to anon,authenticated,service_role;",database=target)
+        with tempfile.TemporaryDirectory(prefix='phase31-review-') as folder:
+            output=Path(folder)/'review.sql'
+            subprocess.run(['node',str(ROOT/'scripts/prepare-billing-pilot-sql.mjs'),'--write',str(output)],capture_output=True,check=True,timeout=30)
+            bundle=output.read_text()
+        # A failure at the final statement must undo ALL eight prerequisite scripts.
+        sql(bundle.rsplit('commit;',1)[0]+'select 1/0; commit;',database=target,ok=False)
+        self_check="select to_regnamespace('billing_private') is null;"
+        assert sql(self_check,database=target)=='t'
+        sql(bundle,database=target)
+        assert sql("select to_regprocedure('public.billing_manual_upi_view(uuid,bigint,text)') is not null;",database=target)=='t'
+        sql(bundle,database=target,ok=False)
+        assert sql("select to_regprocedure('public.billing_manual_upi_view(uuid,bigint,text)') is not null;",database=target)=='t'
+        print('PASS native atomic eight-script bundle: failure rolls back all billing objects; repeat install refuses overwrite')
+    finally:
+        sql(f'drop database "{target}";',database='postgres')
+
+
+def recovery_drill():
+    container=os.environ.get('BILLING_PG_CONTAINER','')
+    if not container:
+        print('NOT EXECUTED: native dump/restore drill requires disposable CI PostgreSQL container')
+        return
+    if not all(c in 'abcdef0123456789' for c in container) or not 12<=len(container)<=64:
+        raise AssertionError('Invalid disposable container identity')
+    archive=subprocess.run(['docker','exec',container,'pg_dump','-U','postgres','-d',DB,'-Fc'],capture_output=True,check=True,timeout=30).stdout
+    recovered='phase31_restore_'+uuid.uuid4().hex
+    sql(f'create database "{recovered}";',database='postgres')
+    try:
+        subprocess.run(['docker','exec','-i',container,'pg_restore','-U','postgres','-d',recovered,'--exit-on-error'],input=archive,capture_output=True,check=True,timeout=30)
+        counts="select (select count(*) from billing_private.invoices),(select count(*) from billing_private.manual_upi_intents),(select count(*) from billing_private.bank_credit_evidence),(select count(*) from billing_private.receipts);"
+        assert sql(counts)==sql(counts,database=recovered)
+        for table in ['invoices','invoice_lines','manual_upi_intents','manual_upi_reviews','bank_credit_evidence','receipts','audit_events']:
+            digest="select md5(coalesce(string_agg(v,'|' order by v),'')) from (select to_jsonb(t)::text v from billing_private."+table+" t) s;"
+            assert sql(digest)==sql(digest,database=recovered)
+        sql("update billing_private.manual_upi_intents set payee_name='ATTACKER';",database=recovered,ok=False)
+        print('PASS native synthetic pg_dump/restore: all seven ledger table digests match; immutable trigger preserved')
+    finally:
+        sql(f'drop database "{recovered}";',database='postgres')
+
+
 def main():
     if ENV["PGHOST"] not in ("127.0.0.1", "localhost", "::1"):
         sys.exit("NOT EXECUTED: only a local disposable database is permitted")
@@ -420,6 +561,13 @@ def main():
             sql((ROOT / 'docs/billing/017_youpi_utr_claims_REVIEW_ONLY.sql').read_text(encoding='utf-8'))
             print('APPLIED LOCAL ONLY: Phase30 reference claims')
             result = unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Phase30Claims))
+        if result.wasSuccessful():
+            sql((ROOT / 'supabase/migrations/20261020144859_manual_upi_pilot.sql').read_text(encoding='utf-8'))
+            print('APPLIED LOCAL ONLY: Phase31 manual UPI pilot')
+            result = unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Phase31Manual))
+        if result.wasSuccessful():
+            atomic_bundle_drill()
+            recovery_drill()
         return 0 if result.wasSuccessful() else 1
     finally:
         # DB is a locally generated constant, never an owner-supplied target.

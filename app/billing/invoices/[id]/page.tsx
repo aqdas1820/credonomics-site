@@ -9,6 +9,7 @@ import { billingDatabaseScopeReady } from '../../db-scope'
 import { isBillingUuid } from '../../uuid-policy'
 import PrintInvoiceButton from '../../PrintInvoiceButton'
 import CustomerPaymentLinkButton from '../../CustomerPaymentLinkButton'
+import ManualUpiPanel from '../../ManualUpiPanel'
 import ArchiveDocumentButton from '../../ArchiveDocumentButton'
 import styles from './invoice.module.css'
 
@@ -48,7 +49,9 @@ export default async function InvoiceDocumentPage({ params: promisedParams }: { 
         {process.env.BILLING_PDF_ARCHIVE_ENABLED === 'true' && <ArchiveDocumentButton id={invoice.id} kind="invoice" />}
         {canRenderPaidReceipt(invoice) && <Link href={'/billing/invoices/' + encodeURIComponent(invoice.id) + '/receipt'}>Verified PAID receipt view</Link>}
       </nav>
-      {process.env.YOUPI_PAYMENT_LINK_ENABLED === 'true' && invoice.status === 'UNPAID' && invoice.paidPaise === 0 && <CustomerPaymentLinkButton invoiceId={invoice.id} />}
+      {process.env.MANUAL_UPI_ENABLED === 'true' && invoice.status === 'UNPAID' && invoice.paidPaise === 0 ?
+        <ManualUpiPanel invoiceId={invoice.id} settlementEnabled={process.env.BILLING_SETTLEMENT_ENABLED === 'true'} /> :
+        process.env.YOUPI_PAYMENT_LINK_ENABLED === 'true' && invoice.status === 'UNPAID' && invoice.paidPaise === 0 && <CustomerPaymentLinkButton invoiceId={invoice.id} />}
       <article className={styles.sheet}>
         <header className={styles.header}>
           <div>
