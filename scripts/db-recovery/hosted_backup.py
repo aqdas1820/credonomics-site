@@ -13,6 +13,7 @@ import secrets
 import socket
 import subprocess
 import sys
+import warnings
 
 ROOT = Path(__file__).resolve().parent
 REF = re.compile(r'^[a-z0-9]{20}$')
@@ -24,6 +25,7 @@ def digest(path):
     return h.hexdigest()
 
 def validate_profile(p):
+    if set(p) != {'projectRef','environment','host','port','database','user'}: raise ValueError('Profile must contain only reviewed identity fields, never credentials')
     ref = p.get('projectRef', '')
     if not REF.fullmatch(ref): raise ValueError('Invalid project ref')
     if p.get('environment') not in ('staging', 'production'): raise ValueError('Explicit environment required')
@@ -110,11 +112,16 @@ def save(path, obj):
 def export(args):
     p = validate_profile(json.loads(Path(args.profile).read_text(encoding='utf-8-sig')))
     dest = vault_path(args.workspace)
-    if not args.writers_quiesced or not args.vault_confirmed: raise ValueError('Owner must attest encrypted vault custody and quiesced application writers')
+    if not args.writers_quiesced or not args.vault_confirmed or not args.host_memory_protected: raise ValueError('Owner must attest encrypted vault custody and quiesced application writers')
     dest.mkdir(parents=False,exist_ok=False)
     password_file = dest/'connection.pgpass'
     try:
-        passfile(password_file,p['host'],p['port'],p['user'],getpass.getpass('Existing database password (never reset): '))
+        if not sys.stdin.isatty(): raise ValueError('Private interactive console required; no piped password input')
+        with warnings.catch_warnings():
+            warnings.simplefilter('error',getpass.GetPassWarning)
+            password=getpass.getpass('Existing database password (never reset): ')
+        passfile(password_file,p['host'],p['port'],p['user'],password)
+        del password
         r = Runner(args.pg_bin,dest,environment(p['host'],p['port'],p['user'],password_file,True))
         version = r.run('pg_dump','--version').decode()
         if not re.search(r'\b17\.',version) or r.sql('show server_version_num').strip()[:2] != b'17': raise ValueError('Both source and installed native tools must be PG17')
@@ -137,6 +144,8 @@ def restore(args):
         raise ValueError('Local restore approval, reviewed roles, disconnected network, encrypted/protected memory and vault attestations required')
     manifest = json.loads((source/'manifest.json').read_text(encoding='utf-8'))
     validate_profile(manifest['identity'])
+    if manifest.get('version') != 1 or set(manifest.get('files',{})) != {'roles.sql','database.dump'} or any(not re.fullmatch('[0-9a-f]{64}',str(v)) for v in manifest['files'].values()):
+        raise ValueError('Unrecognized backup manifest or unsafe file inventory')
     for name in ('roles.sql','database.dump'):
         if digest(source/name) != manifest['files'][name]: raise ValueError('Backup integrity mismatch')
     dest.mkdir(parents=False,exist_ok=False)

@@ -61,7 +61,7 @@ python -m unittest discover -s scripts/db-recovery -p 'test_*.py' -v
 if ($LASTEXITCODE -ne 0) { throw 'Guard tests failed' }
 ./scripts/db-recovery/Invoke-HostedRecovery.ps1 -Mode export -PgBin $PgBin `
   -Profile 'R:\CredoNomics-recovery\staging-profile.json' `
-  -Workspace 'R:\CredoNomics-recovery\phase32-export-001' -VaultConfirmed -WritersQuiesced
+  -Workspace 'R:\CredoNomics-recovery\phase32-export-001' -VaultConfirmed -WritersQuiesced -HostMemoryProtected
 ```
 
 The existing DB password is entered in an echo-free local prompt. A restricted-ACL
@@ -95,7 +95,9 @@ OAuth/SMTP configuration or signing-key recovery; inventory these separately if 
   -VaultConfirmed -AuthorizeLocalRestore -NetworkDisconnected -HostMemoryProtected -RolesReviewed
 ```
 
-This creates a new local PGDATA inside R:, random local credentials, loopback-only
+Native initialization passes its random local password twice through private stdin
+with a detached/no-window child, so neither argv nor a plaintext init password file
+is used. This creates a new local PGDATA inside R:, random local credentials, loopback-only
 server, no preloaded job/network extensions, fresh database and a single-transaction,
 fail-fast pg_restore with owners/ACLs/triggers intact. It compares the entire source
 inventory and archive hashes. Server stops in finally; stopped PGDATA and private

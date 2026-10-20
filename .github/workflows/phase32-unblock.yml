@@ -1,7 +1,5 @@
 name: Phase32 recovery and Workers acceptance (synthetic only)
 on:
-  push:
-    branches: [codex/phase32-recovery-cloudflare]
   pull_request:
     branches: [codex/phase31-manual-upi-pilot]
 permissions:

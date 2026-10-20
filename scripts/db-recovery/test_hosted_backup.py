@@ -14,6 +14,9 @@ class RecoveryGuards(unittest.TestCase):
         for key,value in [('host','evil.example'),('port',6543),('environment','production'),('user','anon'),('projectRef','')]:
             p=self.profile();p[key]=value
             with self.assertRaises(ValueError): h.validate_profile(p)
+    def test_profile_rejects_password_fields(self):
+        p=self.profile();p['password']='SYNTHETIC ONLY'
+        with self.assertRaises(ValueError):h.validate_profile(p)
     def test_session_pooler_requires_project_bound_username_and_session_port(self):
         p=self.profile();p.update(host='aws-1-ap-south-1.pooler.supabase.com',user='postgres.'+p['projectRef'])
         self.assertEqual(h.validate_profile(p),p)
