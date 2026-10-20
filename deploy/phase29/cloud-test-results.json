@@ -1,5 +1,5 @@
 {
-  "testedAt": "2026-10-20T10:01:53.429Z",
+  "testedAt": "2026-10-20T10:07:28.469Z",
   "transport": "ACTUAL_HTTPS",
   "result": {
     "result": "PASS",
@@ -11,8 +11,8 @@
       "customerCheckout": 200,
       "actualDynamicQR": {
         "status": 200,
-        "bytes": 73861,
-        "sha256": "643f0d37543ea07bb61751fbdeac42d39ed5aaa023f3b0b17b3a4486d8f98e65"
+        "bytes": 74984,
+        "sha256": "b631dba4ec11e43c4eabcde837b7c9e15c502e458d2be77f51a5bcd3e82999f1"
       },
       "protectedStatus": {
         "status": 200,
@@ -37,7 +37,8 @@
       "amountMismatch": 409,
       "paidStorageConstraint": "PASS",
       "expiredIsolatedFixture": 410,
-      "failedObservation": 202
+      "failedObservation": 202,
+      "newDeliveryHeaderReplay": 409
     },
     "realPaymentExecuted": false,
     "productionDatabaseAccess": false

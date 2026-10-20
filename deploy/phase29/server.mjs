@@ -31,6 +31,9 @@ db.exec(`PRAGMA journal_mode=WAL; PRAGMA foreign_keys=ON; PRAGMA busy_timeout=50
  CREATE TABLE IF NOT EXISTS observations(delivery TEXT PRIMARY KEY,invoice_id TEXT NOT NULL REFERENCES invoices(id),utr TEXT UNIQUE,event TEXT NOT NULL,received INTEGER NOT NULL);
 `);
 const merchant='00000000-0000-0000-0000-000000000001';
+// Retried deliveries cannot evade replay checks by changing unsigned delivery headers.
+if(!db.prepare('PRAGMA table_info(observations)').all().some(c=>c.name==='raw_hash'))db.exec('ALTER TABLE observations ADD COLUMN raw_hash TEXT');
+db.exec('CREATE UNIQUE INDEX IF NOT EXISTS observation_raw_hash ON observations(raw_hash); CREATE UNIQUE INDEX IF NOT EXISTS observation_invoice_event ON observations(invoice_id,event)');
 const baseHeaders={'Cache-Control':'no-store','Referrer-Policy':'no-referrer','X-Content-Type-Options':'nosniff','X-Robots-Tag':'noindex, nofollow','Strict-Transport-Security':'max-age=86400','Content-Security-Policy':"default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'"};
 const equal=(a,b)=>typeof a==='string'&&typeof b==='string'&&crypto.timingSafeEqual(crypto.createHash('sha256').update(a).digest(),crypto.createHash('sha256').update(b).digest());
 function fail(status,code){throw Object.assign(Error(code),{status,code});}
@@ -99,7 +102,7 @@ const privateHandler=async(req,res)=>{try{
   const row=db.prepare('SELECT * FROM invoices WHERE id=?').get(p.invoiceId);
   if(!row||p.paymentId!==row.payment_id||p.amountPaise!==row.amount||p.currency!=='INR'||p.beneficiary!=='validation@invalid'||!['SUCCESS','FAILED','EXPIRED','CANCELLED'].includes(p.event)||p.bankVerified===true)fail(409,'OBSERVATION_MISMATCH');
   if(p.event==='SUCCESS'&&!/^[A-Za-z0-9-]{8,80}$/.test(p.utr||''))fail(400,'INVALID_UTR');
-  try{db.prepare('INSERT INTO observations VALUES(?,?,?,?,?)').run(delivery,row.id,p.utr?.toUpperCase()||null,p.event,Date.now());}catch{fail(409,'REPLAY_OR_DUPLICATE_UTR');}
+  try{db.prepare('INSERT INTO observations(delivery,invoice_id,utr,event,received,raw_hash) VALUES(?,?,?,?,?,?)').run(delivery,row.id,p.utr?.toUpperCase()||null,p.event,Date.now(),crypto.createHash('sha256').update(raw).digest('hex'));}catch{fail(409,'REPLAY_OR_DUPLICATE_UTR');}
   return send(res,202,{decision:'REVIEW_REQUIRED',invoiceStatus:'PENDING',invoicePaid:false,independentBankVerified:false});
  }
  fail(404,'NOT_FOUND');
