@@ -32,8 +32,14 @@ class NativeWindowsRecovery(unittest.TestCase):
                 source.run('pg_dumpall','--roles-only','--no-role-passwords','--file',root/'roles.sql')
                 source.run('pg_dump','--format=custom','--file',root/'database.dump')
                 source.run('pg_restore','--list',root/'database.dump')
-                target=start('target','cn_restore_'+secrets.token_hex(8))
-                target.run('psql','-X','-v','ON_ERROR_STOP=1','-f',root/'roles.sql')
+                # Original postgres is the PG17 grantor: preserve it as the local
+                # bootstrap role rather than creating a new unentitled superuser.
+                target=start('target','postgres')
+                replay=h.bootstrap_role_replay_sql((root/'roles.sql').read_text(encoding='utf-8'),expected['roles'])
+                replay_path=target.workspace/'roles-replay.sql'
+                replay_path.write_text(replay,encoding='utf-8')
+                h.restrict_acl(replay_path)
+                target.run('psql','-X','-v','ON_ERROR_STOP=1','-f',replay_path)
                 h.restore_memberships(target,expected['memberships'])
                 target.sql('CREATE DATABASE recovered TEMPLATE template0');target.env['PGDATABASE']='recovered'
                 target.run('pg_restore','--single-transaction','--exit-on-error','--dbname=recovered',root/'database.dump')
