@@ -127,6 +127,23 @@ def restore_memberships(r, rows):
         options=', '.join(k+' '+str(v).upper() for k,v in [('ADMIN',admin),('INHERIT',inherit),('SET',can_set)])
         r.sql(f'GRANT {ident(role)} TO {ident(member)} WITH {options} GRANTED BY {ident(grantor)}')
 
+def bootstrap_role_replay_sql(roles_sql, role_inventory):
+    """Reuse source postgres bootstrap role, retaining all source grantors.
+
+    pg_dumpall includes CREATE ROLE postgres but initdb already creates that
+    role. Only the duplicate declaration is skipped, not source ALTER ROLE
+    settings, source memberships, or other CREATE/GRANT statements.
+    """
+    postgres = [role for role in role_inventory if role[0] == 'postgres']
+    if len(postgres) != 1 or postgres[0][1] is not True or postgres[0][5] is not True:
+        raise ValueError('Source postgres login/superuser missing; recovery blocked')
+    lines = roles_sql.splitlines(keepends=True)
+    matches = [i for i, line in enumerate(lines) if line.strip() == 'CREATE ROLE postgres;']
+    if len(matches) != 1:
+        raise ValueError('Exactly one postgres role declaration required')
+    lines[matches[0]] = '-- Existing original postgres bootstrap principal retained.' + chr(10)
+    return ''.join(lines)
+
 def save(path, obj):
     with open(path,'x',encoding='utf-8') as f: json.dump(obj,f,indent=2,sort_keys=True)
 
@@ -172,7 +189,8 @@ def restore(args):
         if digest(source/name) != manifest['files'][name]: raise ValueError('Backup integrity mismatch')
     dest.mkdir(parents=False,exist_ok=False)
     restrict_acl(dest,True)
-    localuser='cn_restore_'+secrets.token_hex(8); password=secrets.token_hex(32)
+    # Use the original PG17 postgres grantor; preserve all role attributes.
+    localuser='postgres'; password=secrets.token_hex(32)
     with socket.socket() as sock: sock.bind(('127.0.0.1',0)); port=sock.getsockname()[1]
     pf=dest/'connection.pgpass'; initpw=dest/'init-password'; pgdata=dest/'pgdata'
     started=False
@@ -184,7 +202,10 @@ def restore(args):
         r.run('initdb','-D',pgdata,'-U',localuser,'--pwfile',initpw,'--auth-host=scram-sha-256','--auth-local=scram-sha-256','--encoding=UTF8','--no-locale')
         started=True
         r.run('pg_ctl','-D',pgdata,'-l',dest/'server.log','-o',f'-h 127.0.0.1 -p {port} -c shared_preload_libraries= -c archive_mode=off -c max_wal_senders=0','-w','start')
-        r.run('psql','-X','-v','ON_ERROR_STOP=1','-f',source/'roles.sql')
+        replay=bootstrap_role_replay_sql((source/'roles.sql').read_text(encoding='utf-8'),manifest['inventory']['roles'])
+        replay_path=dest/'roles-replay.sql'
+        replay_path.write_text(replay,encoding='utf-8'); restrict_acl(replay_path)
+        r.run('psql','-X','-v','ON_ERROR_STOP=1','-f',replay_path)
         restore_memberships(r,manifest['inventory']['memberships'])
         # New empty database, not an initialized Supabase baseline. Never --clean/disable-triggers/no-owner/no-acl.
         r.sql('CREATE DATABASE recovered TEMPLATE template0')
