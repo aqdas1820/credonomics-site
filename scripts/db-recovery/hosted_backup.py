@@ -83,6 +83,10 @@ class Runner:
 def inventory(r):
     schemas = json.loads(r.sql("select coalesce(json_agg(nspname order by nspname),'[]') from pg_namespace where nspname not like 'pg_%' and nspname <> 'information_schema'"))
     result = {'catalog':{}, 'rows':{}}
+    result['database'] = json.loads(r.sql("select json_build_object('owner',pg_get_userbyid(datdba),'acl',datacl::text,'encoding',pg_encoding_to_char(encoding),'collate',datcollate,'ctype',datctype,'localeProvider',datlocprovider,'collationVersion',datcollversion,'connectionLimit',datconnlimit) from pg_database where datname=current_database()"))
+    result['databaseRoleSettings'] = json.loads(r.sql("select coalesce(json_agg(json_build_array(coalesce(p.rolname,'ALL'),s.setconfig) order by p.rolname),'[]') from pg_db_role_setting s left join pg_roles p on p.oid=s.setrole where s.setdatabase=(select oid from pg_database where datname=current_database())"))
+    result['defaultPrivileges'] = json.loads(r.sql("select coalesce(json_agg(json_build_array(pg_get_userbyid(a.defaclrole),coalesce(n.nspname,'ALL'),a.defaclobjtype,a.defaclacl::text) order by a.defaclrole::regrole::text,n.nspname,a.defaclobjtype),'[]') from pg_default_acl a left join pg_namespace n on n.oid=a.defaclnamespace"))
+    result['triggerState'] = json.loads(r.sql("select coalesce(json_agg(json_build_array(n.nspname,c.relname,t.tgname,t.tgenabled,t.tgisinternal) order by n.nspname,c.relname,t.tgname),'[]') from pg_trigger t join pg_class c on c.oid=t.tgrelid join pg_namespace n on n.oid=c.relnamespace where n.nspname not like 'pg_%'"))
     for schema in schemas:
         raw = r.run('psql','-X','-qAt','-v','ON_ERROR_STOP=1','-v',f'scope={schema}','-f',ROOT/'catalog.sql')
         result['catalog'][schema] = hashlib.sha256(raw.strip()).hexdigest()
@@ -150,6 +154,8 @@ def restore(args):
         r.sql('CREATE DATABASE recovered TEMPLATE template0')
         r.env['PGDATABASE']='recovered'
         r.run('pg_restore','--single-transaction','--exit-on-error','--dbname=recovered',source/'database.dump')
+        owner=manifest['inventory']['database']['owner'].replace(chr(34),chr(34)*2)
+        r.sql('ALTER DATABASE recovered OWNER TO '+chr(34)+owner+chr(34))
         actual=inventory(r)
         if actual != manifest['inventory']: raise ValueError('Restored catalog/rows/sequences/roles/extensions differ; recovery BLOCKED')
         for name,expected in manifest['files'].items():

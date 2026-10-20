@@ -35,8 +35,14 @@ class NativeWindowsRecovery(unittest.TestCase):
                 target.run('psql','-X','-v','ON_ERROR_STOP=1','-f',root/'roles.sql')
                 target.sql('CREATE DATABASE recovered TEMPLATE template0');target.env['PGDATABASE']='recovered'
                 target.run('pg_restore','--single-transaction','--exit-on-error','--dbname=recovered',root/'database.dump')
+                target.sql('ALTER DATABASE recovered OWNER TO postgres')
                 self.assertEqual(expected,h.inventory(target))
                 self.assertEqual(target.sql('SELECT amount FROM public.synthetic_invoice').strip(),b'123')
+            except Exception:
+                # This harness has only fresh public synthetic fixtures, never owner data.
+                for log in sorted(root.rglob('*.stderr'))+sorted(root.rglob('server.log')):
+                    print('SYNTHETIC ONLY '+log.name+': '+log.read_text(errors='replace')[-5000:])
+                raise
             finally:
                 for r in reversed(runners):r.run('pg_ctl','-D',r.workspace/'pgdata','-m','immediate','-w','stop')
 if __name__=='__main__':unittest.main()
