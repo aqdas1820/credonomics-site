@@ -13,6 +13,14 @@ notifications, ipos, alerts) have RLS; managed Auth/Storage schemas also exist.
 `billing_private` is absent. Auth users/admins: zero. Storage buckets: zero.
 Existing migration history remains the four September cloud-account/alert migrations.
 Do not reset/recreate this database or run blanket `supabase db push`.
+Read-only dependency audit: plpgsql1.0, pg_stat_statements1.11, uuid-ossp1.1,
+pgcrypto1.3 and **supabase_vault0.3.1**. Public security-definer functions are
+rls_auto_enable, trigger_price_alert, handle_new_user and trigger_alert_v2.
+Legacy own-row policies and public IPO-reference SELECT remain. Seven enabled
+provider/public event triggers include ensure_rls. No legacy objects changed.
+Native Windows PostgreSQL alone is not proven to provide supabase_vault0.3.1;
+a complete real restore must supply the compatible extension and its key recovery,
+or stop. This is a concrete actual-target dependency, not an optional omission.
 
 Google/email providers advertise enabled. This does not verify OAuth client setup,
 redirect allowlists, Google login, cookie refresh or administrator authorization.
@@ -62,7 +70,8 @@ TLS verify-full with system trust and default_transaction_read_only are mandator
 The full native custom archive is not filtered; roles omit passwords. Native export
 permissions or managed objects can block export; do not hide failures or omit rows.
 Private manifest includes source identity, client version, SHA256, complete catalog,
-owner/ACL/RLS/trigger/function fingerprints, row-stream hashes, sequence values,
+owner/ACL/RLS/table-trigger/event-trigger/function fingerprints, default grants,
+database owner/ACL/locale/settings, row-stream hashes, sequence values,
 extensions and password-free role/membership inventories. Actual row bytes are not
 printed. Output and diagnostics stay in R:. Fresh directories only, never overwrite.
 Retain a separately verified encrypted copy and manifest SHA256 in independent custody.
@@ -91,7 +100,8 @@ server, no preloaded job/network extensions, fresh database and a single-transac
 fail-fast pg_restore with owners/ACLs/triggers intact. It compares the entire source
 inventory and archive hashes. Server stops in finally; stopped PGDATA and private
 logs remain in the vault. A mismatch or missing extension prevents result.json PASS.
-Network disconnection/memory custody are explicit owner attestations, not automated
+Database-level ACL/settings or OS locale mismatches also block recovery; do not
+normalize them away. Network disconnection/memory custody are explicit owner attestations, not automated
 OS sandbox guarantees. Do not run malicious/unreviewed dumps. The synthetic Windows
 CI roundtrip does not exercise VeraCrypt or prove actual hosted backup recovery.
 

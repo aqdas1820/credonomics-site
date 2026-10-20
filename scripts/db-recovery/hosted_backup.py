@@ -66,10 +66,12 @@ def passfile(path, host, port, user, password):
 class Runner:
     def __init__(self, bin_dir, workspace, env):
         self.bin = Path(bin_dir); self.workspace = workspace; self.env = env; self.seq = 0
-    def run(self, program, *args, stream_hash=False):
+    def run(self, program, *args, stream_hash=False, input_bytes=None):
         self.seq += 1
         with open(self.workspace / f'command-{self.seq:03}.stderr', 'xb') as err:
-            proc = subprocess.Popen([str(self.bin / (program + '.exe')), *map(str,args)], env=self.env, stdout=subprocess.PIPE, stderr=err)
+            proc = subprocess.Popen([str(self.bin / (program + '.exe')), *map(str,args)], env=self.env, stdout=subprocess.PIPE, stderr=err, stdin=subprocess.PIPE if input_bytes is not None else subprocess.DEVNULL, creationflags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0)
+            if input_bytes is not None:
+                proc.stdin.write(input_bytes); proc.stdin.close()
             if stream_hash:
                 h = hashlib.sha256(); count = 0
                 for line in proc.stdout: h.update(line); count += 1
@@ -86,6 +88,7 @@ def inventory(r):
     result['database'] = json.loads(r.sql("select json_build_object('owner',pg_get_userbyid(datdba),'acl',datacl::text,'encoding',pg_encoding_to_char(encoding),'collate',datcollate,'ctype',datctype,'localeProvider',datlocprovider,'collationVersion',datcollversion,'connectionLimit',datconnlimit) from pg_database where datname=current_database()"))
     result['databaseRoleSettings'] = json.loads(r.sql("select coalesce(json_agg(json_build_array(coalesce(p.rolname,'ALL'),s.setconfig) order by p.rolname),'[]') from pg_db_role_setting s left join pg_roles p on p.oid=s.setrole where s.setdatabase=(select oid from pg_database where datname=current_database())"))
     result['defaultPrivileges'] = json.loads(r.sql("select coalesce(json_agg(json_build_array(pg_get_userbyid(a.defaclrole),coalesce(n.nspname,'ALL'),a.defaclobjtype,a.defaclacl::text) order by a.defaclrole::regrole::text,n.nspname,a.defaclobjtype),'[]') from pg_default_acl a left join pg_namespace n on n.oid=a.defaclnamespace"))
+    result['eventTriggers'] = json.loads(r.sql("select coalesce(json_agg(json_build_array(evtname,evtevent,evtenabled,evttags,evtfoid::regprocedure::text,pg_get_userbyid(evtowner)) order by evtname),'[]') from pg_event_trigger"))
     result['triggerState'] = json.loads(r.sql("select coalesce(json_agg(json_build_array(n.nspname,c.relname,t.tgname,t.tgenabled,t.tgisinternal) order by n.nspname,c.relname,t.tgname),'[]') from pg_trigger t join pg_class c on c.oid=t.tgrelid join pg_namespace n on n.oid=c.relnamespace where n.nspname not like 'pg_%'"))
     for schema in schemas:
         raw = r.run('psql','-X','-qAt','-v','ON_ERROR_STOP=1','-v',f'scope={schema}','-f',ROOT/'catalog.sql')
@@ -139,14 +142,13 @@ def restore(args):
     dest.mkdir(parents=False,exist_ok=False)
     localuser='cn_restore_'+secrets.token_hex(8); password=secrets.token_hex(32)
     with socket.socket() as sock: sock.bind(('127.0.0.1',0)); port=sock.getsockname()[1]
-    pf=dest/'connection.pgpass'; initpw=dest/'init-password'; pgdata=dest/'pgdata'
+    pf=dest/'connection.pgpass'; pgdata=dest/'pgdata'
     started=False
     try:
         passfile(pf,'127.0.0.1',port,localuser,password)
-        initpw.write_text(password,encoding='utf-8')
         r=Runner(args.pg_bin,dest,environment('127.0.0.1',port,localuser,pf))
         if not re.search(rb'\b17\.',r.run('pg_restore','--version')): raise ValueError('Native PG17 required')
-        r.run('initdb','-D',pgdata,'-U',localuser,'--pwfile',initpw,'--auth-host=scram-sha-256','--auth-local=scram-sha-256','--encoding=UTF8','--no-locale')
+        r.run('initdb','-D',pgdata,'-U',localuser,'--pwprompt','--auth-host=scram-sha-256','--auth-local=scram-sha-256','--encoding=UTF8','--no-locale',input_bytes=((password+'\n')*2).encode())
         started=True
         r.run('pg_ctl','-D',pgdata,'-l',dest/'server.log','-o',f'-h 127.0.0.1 -p {port} -c shared_preload_libraries= -c archive_mode=off -c max_wal_senders=0','-w','start')
         r.run('psql','-X','-v','ON_ERROR_STOP=1','-f',source/'roles.sql')
@@ -165,7 +167,7 @@ def restore(args):
     finally:
         if started:
             r.run('pg_ctl','-D',pgdata,'-m','immediate','-w','stop')
-        pf.unlink(missing_ok=True); initpw.unlink(missing_ok=True)
+        pf.unlink(missing_ok=True)
         # Keep stopped PGDATA and all diagnostics inside the vault for owner inspection; never remove existing data.
 
 def main():
