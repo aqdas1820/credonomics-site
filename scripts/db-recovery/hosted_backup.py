@@ -128,20 +128,21 @@ def restore_memberships(r, rows):
         r.sql(f'GRANT {ident(role)} TO {ident(member)} WITH {options} GRANTED BY {ident(grantor)}')
 
 def bootstrap_role_replay_sql(roles_sql, role_inventory):
-    """Preserve original PG17 grantors by reusing the source postgres superuser.
+    """Reuse source postgres bootstrap role, retaining all source grantors.
 
-    pg_dumpall emits CREATE ROLE postgres, but a newly initialized local cluster
-    already has that exact bootstrap principal. Only its duplicate CREATE is
-    replaced; its ALTER and every original membership GRANT remain intact.
-    Never rewrite GRANTED BY, remove grants, or silently skip role failures.
+    pg_dumpall includes CREATE ROLE postgres but initdb already creates that
+    role. Only the duplicate declaration is skipped, not source ALTER ROLE
+    settings, source memberships, or other CREATE/GRANT statements.
     """
-    postgres = [row for row in role_inventory if row[0] == 'postgres']
+    postgres = [role for role in role_inventory if role[0] == 'postgres']
     if len(postgres) != 1 or postgres[0][1] is not True or postgres[0][5] is not True:
-        raise ValueError('Source postgres login/superuser not proven; native role restore blocked')
-    statement = re.compile(r'(?m)^CREATE ROLE postgres;
-    if len(statement.findall(roles_sql)) != 1:
-        raise ValueError('Exactly one postgres role definition required for safe bootstrap reuse')
-    return statement.sub('-- Existing postgres bootstrap role reused; original ALTER ROLE follows.', roles_sql, count=1)
+        raise ValueError('Source postgres login/superuser missing; recovery blocked')
+    lines = roles_sql.splitlines(keepends=True)
+    matches = [i for i, line in enumerate(lines) if line.strip() == 'CREATE ROLE postgres;']
+    if len(matches) != 1:
+        raise ValueError('Exactly one postgres role declaration required')
+    lines[matches[0]] = '-- Existing original postgres bootstrap principal retained.' + chr(10)
+    return ''.join(lines)
 
 def save(path, obj):
     with open(path,'x',encoding='utf-8') as f: json.dump(obj,f,indent=2,sort_keys=True)
@@ -188,8 +189,7 @@ def restore(args):
         if digest(source/name) != manifest['files'][name]: raise ValueError('Backup integrity mismatch')
     dest.mkdir(parents=False,exist_ok=False)
     restrict_acl(dest,True)
-    # Use the original source postgres grantor: a fresh cn_restore_* superuser
-    # lacks the role ADMIN grants required by PG17 GRANTED BY statements.
+    # Use the original PG17 postgres grantor; preserve all role attributes.
     localuser='postgres'; password=secrets.token_hex(32)
     with socket.socket() as sock: sock.bind(('127.0.0.1',0)); port=sock.getsockname()[1]
     pf=dest/'connection.pgpass'; initpw=dest/'init-password'; pgdata=dest/'pgdata'
@@ -202,112 +202,9 @@ def restore(args):
         r.run('initdb','-D',pgdata,'-U',localuser,'--pwfile',initpw,'--auth-host=scram-sha-256','--auth-local=scram-sha-256','--encoding=UTF8','--no-locale')
         started=True
         r.run('pg_ctl','-D',pgdata,'-l',dest/'server.log','-o',f'-h 127.0.0.1 -p {port} -c shared_preload_libraries= -c archive_mode=off -c max_wal_senders=0','-w','start')
-        replay_sql=bootstrap_role_replay_sql((source/'roles.sql').read_text(encoding='utf-8'),manifest['inventory']['roles'])
+        replay=bootstrap_role_replay_sql((source/'roles.sql').read_text(encoding='utf-8'),manifest['inventory']['roles'])
         replay_path=dest/'roles-replay.sql'
-        replay_path.write_text(replay_sql,encoding='utf-8')
-        restrict_acl(replay_path)
-        r.run('psql','-X','-v','ON_ERROR_STOP=1','-f',replay_path)
-        restore_memberships(r,manifest['inventory']['memberships'])
-        # New empty database, not an initialized Supabase baseline. Never --clean/disable-triggers/no-owner/no-acl.
-        r.sql('CREATE DATABASE recovered TEMPLATE template0')
-        r.env['PGDATABASE']='recovered'
-        r.run('pg_restore','--single-transaction','--exit-on-error','--dbname=recovered',source/'database.dump')
-        owner=manifest['inventory']['database']['owner'].replace(chr(34),chr(34)*2)
-        r.sql('ALTER DATABASE recovered OWNER TO '+chr(34)+owner+chr(34))
-        actual=inventory(r)
-        if actual != manifest['inventory']: raise ValueError('Restored catalog/rows/sequences/roles/extensions differ; recovery BLOCKED')
-        for name,expected in manifest['files'].items():
-            if digest(source/name) != expected: raise ValueError('Source archive changed')
-        save(dest/'result.json',{'databaseRecovery':'PASS','archiveSha256':manifest['files']['database.dump'],'projectRef':manifest['identity']['projectRef'],'externalServices':'NOT_VERIFIED','authHttpE2E':'NOT_RUN'})
-        print('Isolated database restore and complete inventory comparison passed. External Supabase services remain unverified.')
-    finally:
-        try:
-            if started: r.run('pg_ctl','-D',pgdata,'-m','immediate','-w','stop')
-        finally:
-            pf.unlink(missing_ok=True); initpw.unlink(missing_ok=True)
-        # Keep stopped PGDATA and all diagnostics inside the vault for owner inspection; never remove existing data.
-
-def main():
-    parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('mode',choices=['export','restore']); parser.add_argument('--pg-bin',required=True)
-    parser.add_argument('--workspace',required=True); parser.add_argument('--profile'); parser.add_argument('--backup')
-    for flag in ('vault-confirmed','writers-quiesced','authorize-local-restore','network-disconnected','host-memory-protected','roles-reviewed'):
-        parser.add_argument('--'+flag,action='store_true')
-    args=parser.parse_args()
-    try: (export if args.mode=='export' else restore)(args)
-    except Exception:
-        print('BLOCKED: no recovery success certified. Inspect the private vault diagnostics; never paste credentials or dump contents.',file=sys.stderr)
-        return 1
-    return 0
-if __name__=='__main__': sys.exit(main())
-)
-    if len(statement.findall(roles_sql)) != 1:
-        raise ValueError('Exactly one postgres role definition required for safe bootstrap reuse')
-    return statement.sub('-- Existing postgres bootstrap role reused; original ALTER ROLE follows.', roles_sql, count=1)
-
-def save(path, obj):
-    with open(path,'x',encoding='utf-8') as f: json.dump(obj,f,indent=2,sort_keys=True)
-
-def export(args):
-    p = validate_profile(json.loads(Path(args.profile).read_text(encoding='utf-8-sig')))
-    dest = vault_path(args.workspace)
-    if not args.writers_quiesced or not args.vault_confirmed or not args.host_memory_protected: raise ValueError('Owner must attest encrypted vault custody and quiesced application writers')
-    dest.mkdir(parents=False,exist_ok=False)
-    restrict_acl(dest,True)
-    password_file = dest/'connection.pgpass'
-    try:
-        if not sys.stdin.isatty(): raise ValueError('Private interactive console required; no piped password input')
-        with warnings.catch_warnings():
-            warnings.simplefilter('error',getpass.GetPassWarning)
-            password=getpass.getpass('Existing database password (never reset): ')
-        passfile(password_file,p['host'],p['port'],p['user'],password)
-        del password
-        r = Runner(args.pg_bin,dest,environment(p['host'],p['port'],p['user'],password_file,True))
-        version = r.run('pg_dump','--version').decode()
-        if not re.search(r'\b17\.',version) or r.sql('show server_version_num').strip()[:2] != b'17': raise ValueError('Both source and installed native tools must be PG17')
-        before = inventory(r)
-        r.run('pg_dumpall','--roles-only','--no-role-passwords','--file',dest/'roles.sql')
-        r.run('pg_dump','--format=custom','--serializable-deferrable','--file',dest/'database.dump')
-        after = inventory(r)
-        if before != after: raise ValueError('Source changed during export; preserve failed attempt and retry after writers stop')
-        r.run('pg_restore','--list',dest/'database.dump')
-        save(dest/'manifest.json',{'version':1,'identity':p,'client':version.strip(),'inventory':before,
-             'files':{n:digest(dest/n) for n in ('roles.sql','database.dump')},
-             'recovery':'NOT_TESTED','scope':'complete native database + password-free roles; external files/keys/OAuth excluded'})
-        print('Export hash/inventory checks passed. Real recovery remains NOT_TESTED until isolated restoration passes.')
-    finally:
-        password_file.unlink(missing_ok=True)
-
-def restore(args):
-    source = vault_path(args.backup); dest = vault_path(args.workspace)
-    if not all((args.authorize_local_restore,args.network_disconnected,args.host_memory_protected,args.vault_confirmed,args.roles_reviewed)):
-        raise ValueError('Local restore approval, reviewed roles, disconnected network, encrypted/protected memory and vault attestations required')
-    manifest = json.loads((source/'manifest.json').read_text(encoding='utf-8'))
-    validate_profile(manifest['identity'])
-    if manifest.get('version') != 1 or set(manifest.get('files',{})) != {'roles.sql','database.dump'} or any(not re.fullmatch('[0-9a-f]{64}',str(v)) for v in manifest['files'].values()):
-        raise ValueError('Unrecognized backup manifest or unsafe file inventory')
-    for name in ('roles.sql','database.dump'):
-        if digest(source/name) != manifest['files'][name]: raise ValueError('Backup integrity mismatch')
-    dest.mkdir(parents=False,exist_ok=False)
-    restrict_acl(dest,True)
-    # Use the original source postgres grantor: a fresh cn_restore_* superuser
-    # lacks the role ADMIN grants required by PG17 GRANTED BY statements.
-    localuser='postgres'; password=secrets.token_hex(32)
-    with socket.socket() as sock: sock.bind(('127.0.0.1',0)); port=sock.getsockname()[1]
-    pf=dest/'connection.pgpass'; initpw=dest/'init-password'; pgdata=dest/'pgdata'
-    started=False
-    try:
-        passfile(pf,'127.0.0.1',port,localuser,password)
-        initpw.write_text(password,encoding='utf-8'); restrict_acl(initpw)
-        r=Runner(args.pg_bin,dest,environment('127.0.0.1',port,localuser,pf))
-        if not re.search(rb'\b17\.',r.run('pg_restore','--version')): raise ValueError('Native PG17 required')
-        r.run('initdb','-D',pgdata,'-U',localuser,'--pwfile',initpw,'--auth-host=scram-sha-256','--auth-local=scram-sha-256','--encoding=UTF8','--no-locale')
-        started=True
-        r.run('pg_ctl','-D',pgdata,'-l',dest/'server.log','-o',f'-h 127.0.0.1 -p {port} -c shared_preload_libraries= -c archive_mode=off -c max_wal_senders=0','-w','start')
-        replay_sql=bootstrap_role_replay_sql((source/'roles.sql').read_text(encoding='utf-8'),manifest['inventory']['roles'])
-        replay_path=dest/'roles-replay.sql'
-        replay_path.write_text(replay_sql,encoding='utf-8')
-        restrict_acl(replay_path)
+        replay_path.write_text(replay,encoding='utf-8'); restrict_acl(replay_path)
         r.run('psql','-X','-v','ON_ERROR_STOP=1','-f',replay_path)
         restore_memberships(r,manifest['inventory']['memberships'])
         # New empty database, not an initialized Supabase baseline. Never --clean/disable-triggers/no-owner/no-acl.
