@@ -1,0 +1,39 @@
+{
+  "expectedStagingProject": "jvpiulmcjjnsgozgqgzw",
+  "hostedApproval": false,
+  "sha256": "be4348be6d987701551b63b8ea34eade9b23110bfd7239e14456d97e2c6e95d1",
+  "files": [
+    {
+      "file": "docs/billing/012_billing_private_review.sql",
+      "sha256": "310c95c6259aa52ff3582c1f46dbe0e3564310a4bba06edfe899fec34b761aa4"
+    },
+    {
+      "file": "docs/billing/013_invoice_create_rpc_REVIEW_ONLY.sql",
+      "sha256": "ba95694fd25cf2de050a545f3bcb1c4dd0767d79cb5e74cbac570f63c7987b87"
+    },
+    {
+      "file": "docs/billing/014_slice_settlement_rpc_REVIEW_ONLY.sql",
+      "sha256": "d972e25d5e8ae74e6c40c391d41587508e4bcc43d7a4d43864ec1884e003359f"
+    },
+    {
+      "file": "docs/billing/015_admin_invoice_read_rpc_REVIEW_ONLY.sql",
+      "sha256": "bcb4695811530f4ffb8723665f1502afeb21bfaf725c136297363da54a963d56"
+    },
+    {
+      "file": "docs/billing/016_youpi_observation_rpc_REVIEW_ONLY.sql",
+      "sha256": "0b0819b730d7d7c9261ad2e340ac14d8dbaef0d902560016b76ab19023e1ed6c"
+    },
+    {
+      "file": "docs/billing/PHASE28_LINK_LEDGER_REVIEW_ONLY.sql",
+      "sha256": "1cb1a64c446ca901523f8afc75cfe8278ff0b1068d8b80e4e8180d4b067ea11a"
+    },
+    {
+      "file": "docs/billing/017_youpi_utr_claims_REVIEW_ONLY.sql",
+      "sha256": "3b5c9bef6ebae5c9afd37cc2b58056664ddcbec2cf2c068859dabbd68d76fb48"
+    },
+    {
+      "file": "supabase/migrations/20261020144859_manual_upi_pilot.sql",
+      "sha256": "9ed14f33e1ddbc7a4c51e4ae72fdc78d7fc8a3a1e10775cf23736798580687e0"
+    }
+  ]
+}

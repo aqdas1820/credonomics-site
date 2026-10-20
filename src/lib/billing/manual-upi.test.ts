@@ -4,7 +4,7 @@ import { manualUpiHtml } from './manual-upi-html'
 const id='11111111-1111-4111-8111-111111111111',key='ab'.repeat(32)
 const env={BILLING_API_ENABLED:'true',MANUAL_UPI_ENABLED:'true',MANUAL_UPI_PILOT_APPROVED:'true',MANUAL_UPI_BENEFICIARY_VERIFIED:'true',MANUAL_UPI_MERCHANT_AUTHORIZED:'true',MANUAL_UPI_HOSTING_APPROVED:'true',
   MANUAL_UPI_SCHEMA_APPROVED:'true',MANUAL_UPI_BANK_REVIEW_APPROVED:'true',MANUAL_UPI_SITE_ORIGIN:'https://www.credonomics.in',
-  MANUAL_UPI_BENEFICIARY_ID:id,MANUAL_UPI_VPA:'synthetic@banktest',MANUAL_UPI_PAYEE_NAME:'Synthetic Merchant',MANUAL_UPI_BANK_NAME:'Slice',
+  MANUAL_UPI_BENEFICIARY_ID:id,MANUAL_UPI_VPA:'synthetic@banktest',MANUAL_UPI_PAYEE_NAME:'Synthetic Merchant',MANUAL_UPI_BANK_NAME:'Slice',MANUAL_UPI_ACCOUNT_TYPE:'BUSINESS_CURRENT',
   MANUAL_UPI_BANK_ACCOUNT_REF:'synthetic-account',MANUAL_UPI_SIGNING_KEY:key}
 const config=manualUpiConfig(env),issuedAt=Date.now()
 const view={intentId:id,invoiceId:id,invoiceNumber:'CN-2026-00000001',amountPaise:12345,issuedAt,status:'UNPAID' as const,bankVerified:false,vpa:config.vpa,payee:config.payee}
@@ -13,7 +13,7 @@ describe('independent manual UPI contract',()=>{
   it('requires all owner gates, exact beneficiary configuration and supported bank',()=>{
     for(const flag of ['BILLING_API_ENABLED','MANUAL_UPI_ENABLED','MANUAL_UPI_PILOT_APPROVED','MANUAL_UPI_BENEFICIARY_VERIFIED','MANUAL_UPI_SCHEMA_APPROVED','MANUAL_UPI_BANK_REVIEW_APPROVED','MANUAL_UPI_MERCHANT_AUTHORIZED','MANUAL_UPI_HOSTING_APPROVED'])
       expect(()=>manualUpiConfig({...env,[flag]:'false'})).toThrow()
-    for(const patch of [{MANUAL_UPI_BANK_NAME:'Other bank'},{MANUAL_UPI_VPA:'attacker@invalid'},{MANUAL_UPI_PAYEE_NAME:'Wrong\nname'},
+    for(const patch of [{MANUAL_UPI_ACCOUNT_TYPE:undefined},{MANUAL_UPI_ACCOUNT_TYPE:'SAVINGS'},{MANUAL_UPI_BANK_NAME:'Other bank'},{MANUAL_UPI_VPA:'attacker@invalid'},{MANUAL_UPI_PAYEE_NAME:'Wrong\nname'},
       {MANUAL_UPI_SITE_ORIGIN:'https://evil.example.org'},{MANUAL_UPI_SIGNING_KEY:'weak'}]) expect(()=>manualUpiConfig({...env,...patch})).toThrow()
     expect(manualUpiConfig({...env,MANUAL_UPI_VPA:'changed@banktest'}).fingerprint).not.toBe(config.fingerprint)
   })

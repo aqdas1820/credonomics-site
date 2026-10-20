@@ -1,0 +1,8 @@
+{
+  "projectRef": "jvpiulmcjjnsgozgqgzw",
+  "environment": "staging",
+  "host": "db.jvpiulmcjjnsgozgqgzw.supabase.co",
+  "port": 5432,
+  "database": "postgres",
+  "user": "postgres"
+}

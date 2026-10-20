@@ -1,7 +1,7 @@
 import 'server-only'
 import 'regenerator-runtime/runtime'
-import { readFile } from 'node:fs/promises'
-import { join } from 'node:path'
+import { documentFontBytes } from './document-fonts'
+import logoData from '../../../public/credonomics-mark.png?inline'
 import { PDFDocument, degrees, rgb, type PDFPage } from 'pdf-lib'
 import fontkit from '@pdf-lib/fontkit'
 import { amountFor, type TestRecord } from './personal-model'
@@ -19,10 +19,9 @@ export async function personalPdf(record: TestRecord) {
   if (totals.totalPaise !== record.totalPaise) throw new Error('Invalid TEST total')
   const doc = await PDFDocument.create()
   doc.registerFontkit(fontkit)
-  const fonts = await Promise.all(['NotoSans-Regular.ttf', 'NotoSansDevanagari-Regular.ttf'].map(async name =>
-    doc.embedFont(await readFile(join(process.cwd(), 'assets/fonts', name)), { subset: true })))
+  const fonts = await Promise.all(documentFontBytes().map(bytes => doc.embedFont(bytes, { subset: true })))
   const glyphs = fonts.map(font => new Set(font.getCharacterSet()))
-  const logo = await doc.embedPng(await readFile(join(process.cwd(), 'public/credonomics-mark.png')))
+  const logo = await doc.embedPng(Buffer.from(logoData.slice(logoData.indexOf(',')+1),'base64'))
   doc.setTitle(`TEST invoice ${record.number} - NOT VALID FOR PAYMENT`)
   doc.setSubject('Simulation only. No real invoice, bank settlement or paid receipt.')
   doc.setProducer('CredoNomics personal TEST workspace')

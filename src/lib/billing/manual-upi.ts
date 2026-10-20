@@ -17,7 +17,7 @@ export function manualUpiConfig(env: Record<string,string|undefined> = process.e
   const beneficiaryId=env.MANUAL_UPI_BENEFICIARY_ID?.toLowerCase()
   const vpa=env.MANUAL_UPI_VPA, payee=env.MANUAL_UPI_PAYEE_NAME, bankRef=env.MANUAL_UPI_BANK_ACCOUNT_REF
   // The existing ledger verifies Slice only. Never label another bank as Slice.
-  if (!origin || !isBillingUuid(beneficiaryId) || env.MANUAL_UPI_BANK_NAME !== 'Slice' ||
+  if (!origin || !isBillingUuid(beneficiaryId) || env.MANUAL_UPI_BANK_NAME !== 'Slice' || env.MANUAL_UPI_ACCOUNT_TYPE !== 'BUSINESS_CURRENT' ||
       !vpa || !/^[a-zA-Z0-9._-]{2,128}@[a-zA-Z0-9.-]{2,64}$/.test(vpa) ||
       /@(invalid|example)(\.|$)/i.test(vpa) || !payee || payee !== payee.trim() ||
       payee.length < 2 || payee.length > 100 || /[\p{C}]/u.test(payee) ||

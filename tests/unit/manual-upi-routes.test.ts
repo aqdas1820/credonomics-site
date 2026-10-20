@@ -22,7 +22,7 @@ beforeEach(()=>{
   vi.resetAllMocks()
   for(const f of ['BILLING_API_ENABLED','BILLING_SETTLEMENT_ENABLED','MANUAL_UPI_ENABLED','MANUAL_UPI_PILOT_APPROVED','MANUAL_UPI_BENEFICIARY_VERIFIED','MANUAL_UPI_SCHEMA_APPROVED','MANUAL_UPI_BANK_REVIEW_APPROVED','MANUAL_UPI_MERCHANT_AUTHORIZED','MANUAL_UPI_HOSTING_APPROVED'])vi.stubEnv(f,'true')
   for(const [k,v]of Object.entries({MANUAL_UPI_SITE_ORIGIN:origin,MANUAL_UPI_BENEFICIARY_ID:actor,MANUAL_UPI_VPA:'synthetic@banktest',MANUAL_UPI_PAYEE_NAME:'Synthetic Merchant',
-    MANUAL_UPI_BANK_NAME:'Slice',MANUAL_UPI_BANK_ACCOUNT_REF:'synthetic-account',MANUAL_UPI_SIGNING_KEY:key,BILLING_ADMIN_USER_IDS:actor}))vi.stubEnv(k,v)
+    MANUAL_UPI_BANK_NAME:'Slice',MANUAL_UPI_ACCOUNT_TYPE:'BUSINESS_CURRENT',MANUAL_UPI_BANK_ACCOUNT_REF:'synthetic-account',MANUAL_UPI_SIGNING_KEY:key,BILLING_ADMIN_USER_IDS:actor}))vi.stubEnv(k,v)
   mock.auth.mockResolvedValue({user:{id:actor,app_metadata:{billing_admin:true}}});mock.scope.mockReturnValue(true);mock.client.mockReturnValue({rpc:mock.rpc})
   mock.rpc.mockResolvedValue({data:{intentId:intent,issuedAt},error:null})
 })

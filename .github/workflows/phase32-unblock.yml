@@ -1,0 +1,98 @@
+name: Phase32 recovery and Workers acceptance (synthetic only)
+on:
+  push:
+    branches: [codex/phase32-recovery-cloudflare]
+  pull_request:
+    branches: [codex/phase31-manual-upi-pilot]
+permissions:
+  contents: read
+concurrency:
+  group: phase32-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+jobs:
+  postgres:
+    if: github.repository == 'aqdas1820/credonomics-site'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: disposable-local-postgres-only
+          POSTGRES_DB: postgres
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U postgres -d postgres"
+          --health-interval 5s --health-timeout 5s --health-retries 12
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Native financial, manual review, concurrency and synthetic recovery tests
+        env:
+          PGHOST: 127.0.0.1
+          PGPORT: '5432'
+          PGUSER: postgres
+          PGPASSWORD: disposable-local-postgres-only
+          BILLING_PG_DISPOSABLE: '1'
+          BILLING_PG_CONTAINER: ${{ job.services.postgres.id }}
+        run: python3 scripts/test-billing-postgres.py
+  source-browser:
+    if: github.repository == 'aqdas1820/credonomics-site'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm test
+      - run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: '1'
+      - run: npm run typecheck
+      - run: node scripts/check-billing-launch-readiness.mjs --assert-blocked
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test --config=playwright.manual-upi.config.ts
+  windows-recovery:
+    runs-on: windows-2025
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Native Windows PG17 synthetic recovery and safety guards
+        shell: powershell
+        run: |
+          $pgBin = 'C:\Program Files\PostgreSQL\17\bin'
+          if (!(Test-Path "$pgBin\pg_dump.exe")) { throw 'Preinstalled PG17 unavailable; no installation or spend authorized' }
+          $env:CN_NATIVE_PG17_BIN=$pgBin
+          python -m unittest discover -s scripts/db-recovery -p 'test_*.py' -v
+          if ($LASTEXITCODE -ne 0) { throw 'Recovery tests failed' }
+          $parseErrors=$null
+          [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path scripts/db-recovery/Invoke-HostedRecovery.ps1),[ref]$null,[ref]$parseErrors) | Out-Null
+          if ($parseErrors.Count) { throw 'PowerShell parser errors' }
+  cloudflare-local:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+      WRANGLER_SEND_METRICS: 'false'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: node scripts/verify-billing-bootstrap.mjs
+      - run: npm run cf:build
+      - run: npm run cf:dry-run
+      - run: node scripts/cloudflare/verify-local.mjs

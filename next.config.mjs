@@ -1,5 +1,18 @@
+import { fileURLToPath } from 'node:url'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  webpack(config) {
+    const excludeInline = rules => rules.forEach(rule => {
+      if (typeof rule.loader === 'string' && rule.loader.includes('next-image-loader')) {
+        rule.resourceQuery = { and: [rule.resourceQuery || /./, { not: [/inline/] }] }
+      }
+      if (rule.oneOf) excludeInline(rule.oneOf)
+    })
+    excludeInline(config.module.rules)
+    config.module.rules.push({ test: /\.(ttf|png)$/, resourceQuery: /inline/, type: 'javascript/auto', use: [{ loader: fileURLToPath(new URL('./scripts/cloudflare/inline-asset-loader.cjs', import.meta.url)) }] })
+    return config
+  },
   poweredByHeader: false,
   compress: true,
   outputFileTracingIncludes: {
