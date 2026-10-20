@@ -103,3 +103,7 @@ recovery. Target production project remains undesignated; only
    verified UTR/amount/beneficiary -> single immutable PAID receipt.
 
 All real-collection, settlement and hosted schema activation gates remain OFF.
+
+CI acceptance uses the existing Phase32 synthetic-only workflow, expanded to
+run for PRs targeting the Phase32 branch. A successful synthetic CI run is
+necessary but **not** permission for hosted DB operations or real collection.
