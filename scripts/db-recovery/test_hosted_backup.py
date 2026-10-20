@@ -22,9 +22,9 @@ class RecoveryGuards(unittest.TestCase):
         with self.assertRaises(ValueError):h.restore_memberships(r,[['a','b','c','true',True,True]])
     def test_pg17_role_bootstrap_reuses_source_grantor_without_stripping_grants(self):
         roles=[['postgres',True,True,True,True,True]]
-        source=('CREATE ROLE postgres;\\nALTER ROLE postgres WITH SUPERUSER LOGIN;\\n'
-                'CREATE ROLE synthetic_reader;\\n'
-                'GRANT synthetic_reader TO synthetic_operator WITH ADMIN OPTION, INHERIT FALSE GRANTED BY postgres;\\n')
+        source=('CREATE ROLE postgres;\nALTER ROLE postgres WITH SUPERUSER LOGIN;\n'
+                'CREATE ROLE synthetic_reader;\n'
+                'GRANT synthetic_reader TO synthetic_operator WITH ADMIN OPTION, INHERIT FALSE GRANTED BY postgres;\n')
         replay=h.bootstrap_role_replay_sql(source,roles)
         self.assertNotIn('CREATE ROLE postgres;',replay)
         self.assertIn('ALTER ROLE postgres WITH SUPERUSER LOGIN;',replay)
@@ -33,8 +33,8 @@ class RecoveryGuards(unittest.TestCase):
         for invalid in ([],[['postgres',False,True,True,True,True]],
                         [['postgres',True,True,True,True,False]]):
             with self.assertRaises(ValueError):h.bootstrap_role_replay_sql(source,invalid)
-        for invalid_sql in ('CREATE ROLE someone_else;\\n',
-                            'CREATE ROLE postgres;\\nCREATE ROLE postgres;\\n'):
+        for invalid_sql in ('CREATE ROLE someone_else;\n',
+                            'CREATE ROLE postgres;\nCREATE ROLE postgres;\n'):
             with self.assertRaises(ValueError):h.bootstrap_role_replay_sql(invalid_sql,roles)
     def test_profile_rejects_password_fields(self):
         p=self.profile();p['password']='SYNTHETIC ONLY'
