@@ -7,7 +7,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: phase31-${{ github.ref }}
+  group: phase31-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
 jobs:
   postgres:

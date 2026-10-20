@@ -7,11 +7,13 @@ export const runtime='nodejs'
 const manualHeaders={'Cache-Control':'private, no-store, max-age=0','Referrer-Policy':'no-referrer',
   'X-Robots-Tag':'noindex, nofollow, noarchive, nosnippet','X-Content-Type-Options':'nosniff',
   'Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; frame-ancestors 'none'; form-action 'none'; base-uri 'none'"}
-export async function GET(_request:Request,{params}:{params:Promise<{token:string}>}) {
+export async function GET(request:Request,{params}:{params:Promise<{token:string}>}) {
   const deny=()=>new Response('Not Found',{status:404,headers:manualHeaders})
   try {
     if (!billingDatabaseScopeReady()) return deny()
-    const config=manualUpiConfig(),{token}=await params,link=openManualUpiLink(token,config.signingKey)
+    const config=manualUpiConfig(),url=new URL(request.url)
+    if (url.origin!==config.origin || url.search) return deny()
+    const {token}=await params,link=openManualUpiLink(token,config.signingKey)
     if (!link) return deny()
     const db=createSupabaseAdminClient()
     if (!db) return deny()

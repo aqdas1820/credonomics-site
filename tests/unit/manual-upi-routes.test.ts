@@ -82,6 +82,11 @@ it('rejects forged/expired URLs before opening the database and fails closed on 
   expect((await publicCall(signManualUpiLink(intent,issuedAt-86400000,key))).status).toBe(404);expect(mock.client).not.toHaveBeenCalled()
   mock.rpc.mockResolvedValue({data:null,error:null});expect((await publicCall()).status).toBe(404)
 })
+it('rejects cross-deployment origins and query-bearing URLs before database access',async()=>{
+  for(const url of ['https://unapproved.example.org/pay/upi/'+token,origin+'/pay/upi/'+token+'?tracking=1'])
+    expect((await checkout(new Request(url),{params:Promise.resolve({token})})).status).toBe(404)
+  expect(mock.client).not.toHaveBeenCalled()
+})
 it('shows verified state without QR or a new payment action',async()=>{
   mock.rpc.mockResolvedValue({data:{...view,status:'PAID',bankVerified:true,vpa:undefined,payee:undefined},error:null})
   const r=await publicCall();expect(r.status).toBe(200);const html=await r.text();expect(html).toContain('bank credit manually verified');expect(html).not.toContain('<svg')
