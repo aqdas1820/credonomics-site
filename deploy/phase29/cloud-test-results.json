@@ -1,0 +1,50 @@
+{
+  "testedAt": "2026-10-20T10:01:53.429Z",
+  "transport": "ACTUAL_HTTPS",
+  "result": {
+    "result": "PASS",
+    "transport": "ACTUAL_HTTPS",
+    "scope": "PHASE29_SYNTHETIC",
+    "checks": {
+      "publicHttpsHealth": 200,
+      "authenticatedInvoiceApiAndSignedLink": 303,
+      "customerCheckout": 200,
+      "actualDynamicQR": {
+        "status": 200,
+        "bytes": 73861,
+        "sha256": "643f0d37543ea07bb61751fbdeac42d39ed5aaa023f3b0b17b3a4486d8f98e65"
+      },
+      "protectedStatus": {
+        "status": 200,
+        "invoicePaid": false,
+        "invoiceStatus": "PENDING",
+        "paymentStatus": "PENDING"
+      },
+      "forgedLink": 401,
+      "internalPaths": "404",
+      "merchantBackendAuthentication": 401,
+      "concurrentCheckoutAndIdempotency": "PASS",
+      "invalidInvoice": 400,
+      "forgedWebhook": 401,
+      "staleWebhook": 401,
+      "syntheticSuccess": {
+        "decision": "REVIEW_REQUIRED",
+        "invoiceStatus": "PENDING",
+        "invoicePaid": false,
+        "independentBankVerified": false
+      },
+      "replayAndDuplicateUTR": 409,
+      "amountMismatch": 409,
+      "paidStorageConstraint": "PASS",
+      "expiredIsolatedFixture": 410,
+      "failedObservation": 202
+    },
+    "realPaymentExecuted": false,
+    "productionDatabaseAccess": false
+  },
+  "runtimeBase": "e123465961adc42800f3e44671767b39db1aeda3",
+  "gatewayOverlaySha256": "f7a3c52b0fa5b842e97e8e922c10fc051fd749ace6c37c144f4d681d0052d1ae",
+  "integrationScope": "Isolated SQLite-backed CredoNomics invoice runner using unchanged Phase28 validateInvoice / sealPaymentLink / openPaymentLink / verifyYoupiWebhook. No Supabase client or production DB credentials.",
+  "stableHostname": "BLOCKED_PENDING_SEPARATE_TUNNEL_APPROVAL",
+  "productionMain": "11088fc1295f6410301b964e79f302ea1f0e857c"
+}

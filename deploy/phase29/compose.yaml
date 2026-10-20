@@ -1,0 +1,25 @@
+name: credonomics-phase29
+services:
+  invoice-staging:
+    image: credonomics-youpi-private:pilot-v1
+    entrypoint: [node, /phase29/server.mjs]
+    network_mode: host
+    user: '1000:1000'
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ['no-new-privileges:true']
+    mem_limit: 192m
+    cpus: 0.5
+    pids_limit: 64
+    tmpfs: ['/tmp:size=16m,uid=1000,gid=1000']
+    env_file: /etc/youpi-phase29/invoice.env
+    volumes:
+      - /opt/credonomics-phase29:/phase29:ro
+      - /opt/credonomics-phase29-state:/state
+      - /opt/youpi/deploy/private/.state/secrets/OWNER_TOKEN:/run/OWNER_TOKEN:ro
+      - /opt/youpi/deploy/private/.state/secrets/localhost.crt:/run/localhost.crt:ro
+      - /opt/youpi/deploy/private/.state/secrets/localhost.key:/run/localhost.key:ro
+    logging:
+      driver: local
+      options: {max-size: 5m, max-file: '2'}
