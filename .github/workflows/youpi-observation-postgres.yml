@@ -1,0 +1,44 @@
+name: YouPI observation PostgreSQL safety
+on:
+  push:
+    branches: [codex/phase30-observation-readiness]
+    paths:
+      - '.github/workflows/youpi-observation-postgres.yml'
+      - 'docs/billing/*.sql'
+      - 'scripts/test-billing-postgres.py'
+  pull_request:
+    branches: [codex/phase29-upi-only]
+    paths:
+      - '.github/workflows/youpi-observation-postgres.yml'
+      - 'docs/billing/*.sql'
+      - 'scripts/test-billing-postgres.py'
+permissions:
+  contents: read
+jobs:
+  postgres:
+    if: github.repository == 'aqdas1820/credonomics-site'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: disposable-local-postgres-only
+          POSTGRES_DB: postgres
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U postgres -d postgres"
+          --health-interval 5s --health-timeout 5s --health-retries 12
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Native PostgreSQL financial, replay and concurrent UTR regression
+        env:
+          PGHOST: 127.0.0.1
+          PGPORT: '5432'
+          PGUSER: postgres
+          PGPASSWORD: disposable-local-postgres-only
+          BILLING_PG_DISPOSABLE: '1'
+        run: python3 scripts/test-billing-postgres.py

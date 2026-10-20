@@ -5,6 +5,8 @@ import { billingDatabaseScopeReady } from '../../../app/billing/db-scope'
 import { gatewayConfig } from './youpi-contract'
 import { isBillingUuid } from '../../../app/billing/uuid-policy'
 
+export class YoupiObservationConflict extends Error {}
+
 /**
  * Trusted server-only gateway delivery adapter; not an HTTP endpoint.
  * The source adapter caller must establish the origin of the raw signed body.
@@ -48,8 +50,9 @@ export async function recordSignedYoupiObservation(
     p_raw_sha256: observation.rawSha256,
   })
   if (!error && data?.decision === 'SECURITY_REVIEW_CONFLICT') {
-    throw new Error('YOUPI_SECURITY_REVIEW_CONFLICT')
+    throw new YoupiObservationConflict('YOUPI_SECURITY_REVIEW_CONFLICT')
   }
+  if (error?.code === '23505') throw new YoupiObservationConflict('YOUPI_SECURITY_REVIEW_CONFLICT')
   if (error || !data || data.decision !== 'REVIEW_REQUIRED' ||
       typeof data.recorded !== 'boolean' || typeof data.duplicate !== 'boolean') {
     throw new Error('YouPI gateway observation was not durably recorded')
