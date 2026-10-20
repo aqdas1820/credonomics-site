@@ -28,6 +28,16 @@ export async function middleware(request: NextRequest) {
     return response
   }
 
+  if (request.nextUrl.pathname.startsWith('/pay/upi/')) {
+    const headers={'Cache-Control':'private, no-store, max-age=0','Referrer-Policy':'no-referrer','X-Robots-Tag':'noindex, nofollow, noarchive, nosnippet'}
+    if (process.env.MANUAL_UPI_ENABLED!=='true' || process.env.MANUAL_UPI_PILOT_APPROVED!=='true') return new NextResponse('Not Found',{status:404,headers})
+    // Standalone bearer route performs its own scope, signature and durable ledger
+    // checks. Do not refresh unrelated Auth cookies or embed site analytics.
+    const response=NextResponse.next({request})
+    Object.entries(headers).forEach(([key,value])=>response.headers.set(key,value))
+    return response
+  }
+
   // Dedicated TEST workspace. Page and every API request independently verify owner access.
   // It does not enable any existing billing flag or touch the financial ledger.
   if (request.nextUrl.pathname === '/personal-testing' || request.nextUrl.pathname.startsWith('/personal-testing/') ||

@@ -15,6 +15,7 @@ artifacts/
 scratch/
 *.bak
 *.tsbuildinfo
+supabase/.temp/
 phase23-*.local.log
 phase25-*.local.log
 phase26-*.local.log
