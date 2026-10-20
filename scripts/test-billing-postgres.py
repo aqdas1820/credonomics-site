@@ -69,13 +69,14 @@ def credit(invoice, amount, utr=None):
 
 
 AUTO_DIGEST = object()
+AUTO_UTR = object()
 
 
-def observation(invoice, payment=None, event="SUCCESS", amount=100, utr="TESTUTR00001", digest=AUTO_DIGEST, order=None):
+def observation(invoice, payment=None, event="SUCCESS", amount=100, utr=AUTO_UTR, digest=AUTO_DIGEST, order=None):
     return "select public.billing_record_youpi_observation(" + ",".join([
         literal(payment or str(uuid.uuid4())) + "::uuid",
         literal(order or invoice["invoiceNumber"]), literal(event), str(amount),
-        literal(utr), literal(uuid.uuid4().hex * 2 if digest is AUTO_DIGEST else digest),
+        literal(uuid.uuid4().hex.upper() if utr is AUTO_UTR else utr), literal(uuid.uuid4().hex * 2 if digest is AUTO_DIGEST else digest),
     ]) + ");"
 
 
@@ -194,11 +195,11 @@ class BillingPostgres(unittest.TestCase):
 
     def test_14_gateway_duplicate_contradictions_and_no_settlement(self):
         invoice, payment = issue(), str(uuid.uuid4())
-        query = observation(invoice, payment, digest="a" * 64)
+        query = observation(invoice, payment, digest="a" * 64, utr="TESTUTR00001")
         self.assertTrue(json.loads(sql(query, service=True))["recorded"])
         self.assertTrue(json.loads(sql(query, service=True))["duplicate"])
         for changes in [dict(amount=200), dict(utr="TESTUTR00002"), dict(order="UNKNOWN"), dict(digest="b" * 64)]:
-            args = dict(digest="a" * 64)
+            args = dict(digest="a" * 64, utr="TESTUTR00001")
             args.update(changes)
             result = json.loads(sql(observation(invoice, payment, **args), service=True))
             self.assertEqual(result, dict(recorded=False, duplicate=False, decision="SECURITY_REVIEW_CONFLICT"))
@@ -337,16 +338,57 @@ class Phase28Links(unittest.TestCase):
 
     def test_06_linked_webhook_replay_and_wrong_merchant(self):
         invoice, payment, digest = issue(), str(uuid.uuid4()), uuid.uuid4().hex*2
+        utr = uuid.uuid4().hex.upper()
         sql(self.reserve(invoice), service=True)
         sql(self.complete(invoice,payment,digest), service=True)
         def linked(merchant):
             return 'select public.billing_record_youpi_link_observation('+','.join([
                 literal(invoice['id'])+'::uuid',literal(merchant)+'::uuid',literal(payment)+'::uuid',
-                "'SUCCESS'",'100',"'TESTUTR00001'",literal(digest)])+');'
+                "'SUCCESS'",'100',literal(utr),literal(digest)])+');'
         self.assertTrue(json.loads(sql(linked(self.merchant),service=True))['recorded'])
         self.assertTrue(json.loads(sql(linked(self.merchant),service=True))['duplicate'])
         sql(linked(str(uuid.uuid4())),service=True,ok=False)
         sql('select public.billing_get_receipt('+literal(invoice['id'])+'::uuid);',service=True,ok=False)
+
+
+class Phase30Claims(unittest.TestCase):
+    def test_01_same_reference_concurrent_different_invoices(self):
+        utr = uuid.uuid4().hex.upper()
+        invoices = [issue() for _ in range(8)]
+        def submit(invoice):
+            try:
+                return json.loads(sql(observation(invoice, utr=utr), service=True))['recorded']
+            except AssertionError as error:
+                self.assertIn('reference already bound', str(error))
+                return False
+        with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+            self.assertEqual(sum(pool.map(submit, invoices)), 1)
+        self.assertEqual(sql('select count(*) from billing_private.youpi_utr_claims where utr='+literal(utr)), '1')
+
+    def test_02_stable_reference_across_payment_events(self):
+        invoice, payment, utr = issue(), str(uuid.uuid4()), uuid.uuid4().hex.upper()
+        for event in ['FAILED','SUCCESS']:
+            self.assertTrue(json.loads(sql(observation(invoice,payment,event=event,utr=utr),service=True))['recorded'])
+        sql(observation(invoice,payment,event='EXPIRED',utr=uuid.uuid4().hex.upper()),service=True,ok=False)
+        sql('select public.billing_get_receipt('+literal(invoice['id'])+'::uuid);',service=True,ok=False)
+        state = json.loads(sql('select public.billing_get_invoice('+literal(invoice['id'])+'::uuid);',service=True))
+        self.assertEqual((state['status'],state['paidPaise']),('UNPAID',0))
+
+    def test_03_immutable_private_claims(self):
+        invoice, utr = issue(), uuid.uuid4().hex.upper()
+        sql(observation(invoice,utr=utr),service=True)
+        for role in ['anon','authenticated','service_role']:
+            sql(f'set role {role}; select * from billing_private.youpi_utr_claims;',ok=False)
+        for query in ['delete from billing_private.youpi_utr_claims',
+                      "update billing_private.youpi_utr_claims set utr='CHANGEDUTR01' where utr="+literal(utr),
+                      'truncate billing_private.youpi_utr_claims']:
+            sql(query,ok=False)
+
+    def test_04_claim_rolls_back_with_observation(self):
+        invoice, utr = issue(), uuid.uuid4().hex.upper()
+        sql('begin; '+SERVICE+observation(invoice,utr=utr)+' select 1/0; commit;',ok=False)
+        self.assertEqual(sql('select count(*) from billing_private.youpi_utr_claims where utr='+literal(utr)), '0')
+        self.assertTrue(json.loads(sql(observation(invoice,utr=utr),service=True))['recorded'])
 
 
 def main():
@@ -374,6 +416,10 @@ def main():
             sql((ROOT / 'docs/billing/PHASE28_LINK_LEDGER_REVIEW_ONLY.sql').read_text(encoding='utf-8'))
             print('APPLIED LOCAL ONLY: Phase28 link ledger')
             result = unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Phase28Links))
+        if result.wasSuccessful():
+            sql((ROOT / 'docs/billing/017_youpi_utr_claims_REVIEW_ONLY.sql').read_text(encoding='utf-8'))
+            print('APPLIED LOCAL ONLY: Phase30 reference claims')
+            result = unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Phase30Claims))
         return 0 if result.wasSuccessful() else 1
     finally:
         # DB is a locally generated constant, never an owner-supplied target.
