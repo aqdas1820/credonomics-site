@@ -127,6 +127,22 @@ def restore_memberships(r, rows):
         options=', '.join(k+' '+str(v).upper() for k,v in [('ADMIN',admin),('INHERIT',inherit),('SET',can_set)])
         r.sql(f'GRANT {ident(role)} TO {ident(member)} WITH {options} GRANTED BY {ident(grantor)}')
 
+def bootstrap_role_replay_sql(roles_sql, role_inventory):
+    """Preserve original PG17 grantors by reusing the source postgres superuser.
+
+    pg_dumpall emits CREATE ROLE postgres, but a newly initialized local cluster
+    already has that exact bootstrap principal. Only its duplicate CREATE is
+    replaced; its ALTER and every original membership GRANT remain intact.
+    Never rewrite GRANTED BY, remove grants, or silently skip role failures.
+    """
+    postgres = [row for row in role_inventory if row[0] == 'postgres']
+    if len(postgres) != 1 or postgres[0][1] is not True or postgres[0][5] is not True:
+        raise ValueError('Source postgres login/superuser not proven; native role restore blocked')
+    statement = re.compile(r'(?m)^CREATE ROLE postgres;(?=\\r?$)')
+    if len(statement.findall(roles_sql)) != 1:
+        raise ValueError('Exactly one postgres role definition required for safe bootstrap reuse')
+    return statement.sub('-- Existing postgres bootstrap role reused; original ALTER ROLE follows.', roles_sql, count=1)
+
 def save(path, obj):
     with open(path,'x',encoding='utf-8') as f: json.dump(obj,f,indent=2,sort_keys=True)
 
@@ -172,7 +188,9 @@ def restore(args):
         if digest(source/name) != manifest['files'][name]: raise ValueError('Backup integrity mismatch')
     dest.mkdir(parents=False,exist_ok=False)
     restrict_acl(dest,True)
-    localuser='cn_restore_'+secrets.token_hex(8); password=secrets.token_hex(32)
+    # Use the original source postgres grantor: a fresh cn_restore_* superuser
+    # lacks the role ADMIN grants required by PG17 GRANTED BY statements.
+    localuser='postgres'; password=secrets.token_hex(32)
     with socket.socket() as sock: sock.bind(('127.0.0.1',0)); port=sock.getsockname()[1]
     pf=dest/'connection.pgpass'; initpw=dest/'init-password'; pgdata=dest/'pgdata'
     started=False
@@ -184,7 +202,11 @@ def restore(args):
         r.run('initdb','-D',pgdata,'-U',localuser,'--pwfile',initpw,'--auth-host=scram-sha-256','--auth-local=scram-sha-256','--encoding=UTF8','--no-locale')
         started=True
         r.run('pg_ctl','-D',pgdata,'-l',dest/'server.log','-o',f'-h 127.0.0.1 -p {port} -c shared_preload_libraries= -c archive_mode=off -c max_wal_senders=0','-w','start')
-        r.run('psql','-X','-v','ON_ERROR_STOP=1','-f',source/'roles.sql')
+        replay_sql=bootstrap_role_replay_sql((source/'roles.sql').read_text(encoding='utf-8'),manifest['inventory']['roles'])
+        replay_path=dest/'roles-replay.sql'
+        replay_path.write_text(replay_sql,encoding='utf-8')
+        restrict_acl(replay_path)
+        r.run('psql','-X','-v','ON_ERROR_STOP=1','-f',replay_path)
         restore_memberships(r,manifest['inventory']['memberships'])
         # New empty database, not an initialized Supabase baseline. Never --clean/disable-triggers/no-owner/no-acl.
         r.sql('CREATE DATABASE recovered TEMPLATE template0')
