@@ -37,7 +37,7 @@ describe('signed observation adapter (database is mocked)', () => {
   })
   it('does not put COD placement into the bank observation ledger', async () => {
     const cod = Buffer.from(JSON.stringify({ ...payload, method: 'COD', utr: null }))
-    await expect(record(cod, sign(cod))).rejects.toThrow('Unsupported payment method')
+    await expect(record(cod, sign(cod))).rejects.toThrow('Invalid signed webhook payload')
     expect(client).not.toHaveBeenCalled()
   })
   it('rejects noninvoice order binding before creating a database client', async () => {

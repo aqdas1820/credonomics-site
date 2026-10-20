@@ -10,7 +10,7 @@ const eventSchema = z.object({
   orderId: z.string().regex(/^[A-Za-z0-9:_-]{1,128}$/),
   paymentId: z.string().uuid(),
   currency: z.literal('INR'),
-  method: z.enum(['UPI', 'COD', 'CASH_COUNTER', 'CARD_COUNTER']),
+  method: z.literal('UPI'),
   amount: z.string().regex(/^(?:0|[1-9]\d*)(?:\.\d{1,2})?$/),
   amountPaise: z.number().int().positive().max(10_000_000_000),
   utr: z.string().regex(/^[A-Za-z0-9-]{8,80}$/).nullish(),
@@ -22,7 +22,7 @@ export type YoupiGatewayObservation = {
   orderId: string
   amountPaise: number
   currency: 'INR'
-  method: 'UPI' | 'COD' | 'CASH_COUNTER' | 'CARD_COUNTER'
+  method: 'UPI'
   utr: string | null
   paymentId: string
   /** Use this with (paymentId, event) as a durable database replay key. */

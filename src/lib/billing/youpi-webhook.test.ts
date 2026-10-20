@@ -17,8 +17,8 @@ const sign = (b: Buffer) => 'sha256=' + createHmac('sha256', secret).update(b).d
 const observe = (b: Buffer = body) => verifyYoupiObservation(b, sign(b), secret)
 
 describe('YouPI V2 documented merchant webhook observation', () => {
-  it('keeps COD separate from bank-credit observations and rejects missing method', () => {
-    expect(observe(Buffer.from(JSON.stringify({ ...payload, method: 'COD', utr: null })))).toMatchObject({ method: 'COD', decision: 'REVIEW_REQUIRED', utr: null })
+  it.each(['COD', 'CASH_COUNTER', 'CARD_COUNTER', 'cod', ' UPI', null])('rejects unsupported method %s even with a valid HMAC', method => {
+    expect(() => observe(Buffer.from(JSON.stringify({ ...payload, method })))).toThrow('Invalid signed')
     expect(() => observe(Buffer.from(JSON.stringify({ ...payload, method: undefined })))).toThrow('Invalid signed')
   })
   it('rejects invalid UTF-8 even with a valid signature', () => {

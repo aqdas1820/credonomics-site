@@ -73,7 +73,7 @@ const limits=new Map();let demoCreating=null;
 function demoLimit(req){const now=Date.now(),ip=req.headers['cf-connecting-ip']||req.socket.remoteAddress;for(const [k,v]of limits)if(v.until<now)limits.delete(k);const v=limits.get(ip)||{n:0,until:now+60000};if(++v.n>4||limits.size>1024)fail(429,'RATE_LIMIT');limits.set(ip,v);}
 const publicHandler=async(req,res)=>{try{
  if(req.url.length>1600)fail(414,'URL_TOO_LONG');const u=new URL(req.url,origin);if(u.search)fail(400,'QUERY_NOT_ALLOWED');
- if(req.method==='GET'&&u.pathname==='/health'){const g=await gw('/health',{limit:16384});return send(res,g.status===200?200:503,{status:g.status===200?'UP':'DOWN',service:'credonomics-phase29',scope:'PHASE29_SYNTHETIC',livePayments:false,gatewayHttps:g.status===200});}
+ if(req.method==='GET'&&u.pathname==='/health'){const g=await gw('/health',{limit:16384});return send(res,g.status===200?200:503,{status:g.status===200?'UP':'DOWN',service:'credonomics-phase29',scope:'PHASE29_SYNTHETIC',livePayments:false,paymentMethods:['UPI'],gatewayHttps:g.status===200});}
  if(req.method==='GET'&&u.pathname==='/'){const token=formToken();return send(res,200,page('CredoNomics Phase 29 staging','<h2>Invoice payment-link integration</h2><strong>Synthetic only — do not pay</strong><p>Creates an isolated CredoNomics invoice using the existing billing validators and signed payment-link implementation, then calls the real AWS YouPI gateway over authenticated HTTPS.</p><form method="post" action="/demo"><input type="hidden" name="csrf" value="'+token+'"><button>Create test invoice and checkout</button></form><p>Invoice remains PENDING until independent bank verification. Real collections disabled.</p>'),'text/html; charset=utf-8');}
  if(req.method==='POST'&&u.pathname==='/demo'){
   if(req.headers.origin!==origin.origin)fail(403,'ORIGIN_REJECTED');demoLimit(req);const raw=await rawBody(req);const token=new URLSearchParams(raw.toString()).get('csrf');if(!equal(token,formToken()))fail(403,'CSRF_REJECTED');
@@ -100,6 +100,7 @@ const privateHandler=async(req,res)=>{try{
   if(!Number.isSafeInteger(stamp)||Math.abs(Date.now()-stamp)>60000||!/^[a-f0-9-]{36}$/i.test(delivery||'')||!verifyYoupiWebhook(raw,req.headers['x-gateway-signature']||null,secrets.webhook))fail(401,'INVALID_WEBHOOK');
   let p;try{p=JSON.parse(raw);}catch{fail(400,'INVALID_JSON');}
   const row=db.prepare('SELECT * FROM invoices WHERE id=?').get(p.invoiceId);
+  if(p.method!=='UPI')fail(409,'UPI_ONLY');
   if(!row||p.paymentId!==row.payment_id||p.amountPaise!==row.amount||p.currency!=='INR'||p.beneficiary!=='validation@invalid'||!['SUCCESS','FAILED','EXPIRED','CANCELLED'].includes(p.event)||p.bankVerified===true)fail(409,'OBSERVATION_MISMATCH');
   if(p.event==='SUCCESS'&&!/^[A-Za-z0-9-]{8,80}$/.test(p.utr||''))fail(400,'INVALID_UTR');
   try{db.prepare('INSERT INTO observations(delivery,invoice_id,utr,event,received,raw_hash) VALUES(?,?,?,?,?,?)').run(delivery,row.id,p.utr?.toUpperCase()||null,p.event,Date.now(),crypto.createHash('sha256').update(raw).digest('hex'));}catch{fail(409,'REPLAY_OR_DUPLICATE_UTR');}

@@ -1,0 +1,72 @@
+{
+  "scope": "ISOLATED_SYNTHETIC_UPI_ONLY",
+  "instance": "i-0a71b217abd5c1367",
+  "stagingUrl": "https://sticks-ours-joint-schools.trycloudflare.com",
+  "gatewayImageId": "sha256:51a3c5ffefb86f67ec965a96bd00d7d818c902ddc1029521c234e41a04cd09df",
+  "linuxRegression": {
+    "result": "PASS",
+    "passed": 28,
+    "commandId": "e1632c69-8738-46ab-bc19-13198e371d20"
+  },
+  "credonomicsFocusedTests": {
+    "result": "PASS",
+    "files": 5,
+    "passed": 54
+  },
+  "deployment": {
+    "commandId": "c97c2e01-fd8f-42bc-b0c6-94c6d3a9d75d",
+    "credentialsPreserved": true,
+    "historicalNonUpiRowsPreserved": true
+  },
+  "actualHttps": {
+    "commandId": "408ef56b-a956-4b9c-ab61-cac80f717f23",
+    "result": "PASS",
+    "transport": "ACTUAL_HTTPS",
+    "scope": "PHASE29_SYNTHETIC",
+    "checks": {
+      "publicHttpsHealth": 200,
+      "authenticatedInvoiceApiAndSignedLink": 303,
+      "customerCheckout": 200,
+      "actualDynamicQR": {
+        "status": 200,
+        "bytes": 77284,
+        "sha256": "484f0eeb8a5c374c21b7402af7d347eeac79a74b469038c63d19e5a84bc9a67c"
+      },
+      "protectedStatus": {
+        "status": 200,
+        "invoicePaid": false,
+        "invoiceStatus": "PENDING",
+        "paymentStatus": "PENDING"
+      },
+      "forgedLink": 401,
+      "internalPaths": "404",
+      "merchantBackendAuthentication": 401,
+      "concurrentCheckoutAndIdempotency": "PASS",
+      "invalidInvoice": 400,
+      "forgedWebhook": 401,
+      "staleWebhook": 401,
+      "nonUpiWebhooksRejected": "PASS",
+      "syntheticSuccess": {
+        "decision": "REVIEW_REQUIRED",
+        "invoiceStatus": "PENDING",
+        "invoicePaid": false,
+        "independentBankVerified": false
+      },
+      "replayAndDuplicateUTR": 409,
+      "crossInvoiceCaseInsensitiveUTR": 409,
+      "amountMismatch": 409,
+      "paidStorageConstraint": "PASS",
+      "expiredIsolatedFixture": 410,
+      "failedObservation": 202,
+      "newDeliveryHeaderReplay": 409
+    },
+    "realPaymentExecuted": false,
+    "productionDatabaseAccess": false
+  },
+  "limitations": [
+    "Existing temporary tunnel only; permanent hostname requires separate approval.",
+    "Isolated Phase29 SQLite invoice flow reuses billing validators and signed links; production Next.js/Supabase integration is unmerged and unchanged.",
+    "Independent bank reconciliation, merchant authorization, beneficiary and commercial licensing are not signed off.",
+    "Focused regression coverage, not a claim that all upstream tests or unseen OmniRush findings are resolved."
+  ]
+}

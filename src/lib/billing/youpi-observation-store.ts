@@ -26,7 +26,7 @@ export async function recordSignedYoupiObservation(
   const observation: YoupiGatewayObservation = verifyYoupiObservation(
     rawBody, signature, process.env.BILLING_YOUPI_WEBHOOK_SECRET,
   )
-  // COD is an order placement; counter confirmation needs a separate till flow.
+  // Only UPI observations are supported; historical records remain untouched.
   if (observation.method !== 'UPI') throw new Error('Unsupported payment method for bank observation')
   // This adapter accepts issued CredoNomics invoice orders only. The RPC
   // independently binds that immutable invoice number and exact paise total.

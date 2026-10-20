@@ -1,0 +1,2057 @@
+diff --git a/apps/checkout-portal/src/server.js b/apps/checkout-portal/src/server.js
+index e67a13a..b304d73 100644
+--- a/apps/checkout-portal/src/server.js
++++ b/apps/checkout-portal/src/server.js
+@@ -127,20 +127,20 @@ export class CheckoutServer {
+     const alertHeading = tier === 'YELLOW' ? 'UPI Server Busy' : 'UPI Server Facing Issues';
+     const alertMsg = indicator.warning || (tier === 'YELLOW'
+       ? 'Your payment may go through extra processing seconds.'
+-      : 'It is not recommended to pay by UPI right now as the server is facing downtime. We recommend paying by cash instead.');
++      : 'It is not recommended to pay by UPI right now as the server is facing downtime. Please retry UPI later.');
+ 
+     const sellingMode = state?.sellingMode || state?.branding?.sellingMode || 'ONLINE';
+-    const enabledMethods = state?.enabledMethods || state?.branding?.enabledPaymentMethods || ['UPI'];
++    const enabledMethods = ['UPI'];
+     const showMethodBar = (enabledMethods && enabledMethods.length > 1) ? 'flex' : 'none';
+-    const tabCodStyle = (sellingMode === 'ONLINE' && enabledMethods.includes('COD')) ? 'display:inline-flex;' : 'display:none;';
+-    const tabCashStyle = (sellingMode === 'OFFLINE' && enabledMethods.includes('CASH_COUNTER')) ? 'display:inline-flex;' : 'display:none;';
+-    const tabCardStyle = (sellingMode === 'OFFLINE' && enabledMethods.includes('CARD_COUNTER')) ? 'display:inline-flex;' : 'display:none;';
+-    const pcCodStyle = (sellingMode === 'ONLINE' && enabledMethods.includes('COD')) ? 'display:block;' : 'display:none;';
+-    const pcCashStyle = (sellingMode === 'OFFLINE' && enabledMethods.includes('CASH_COUNTER')) ? 'display:block;' : 'display:none;';
+-    const pcCardStyle = (sellingMode === 'OFFLINE' && enabledMethods.includes('CARD_COUNTER')) ? 'display:block;' : 'display:none;';
++    const tabCodStyle = 'display:none;';
++    const tabCashStyle = 'display:none;';
++    const tabCardStyle = 'display:none;';
++    const pcCodStyle = 'display:none;';
++    const pcCashStyle = 'display:none;';
++    const pcCardStyle = 'display:none;';
+ 
+-    const downtimeAltBtnDisplay = ((sellingMode === 'ONLINE' && enabledMethods.includes('COD')) || (sellingMode === 'OFFLINE' && enabledMethods.includes('CASH_COUNTER'))) ? 'inline-block' : 'none';
+-    const downtimeAltBtnLabel = (sellingMode === 'ONLINE') ? 'Pay via Cash on Delivery Instead' : 'Pay by Cash at Till Instead';
++    const downtimeAltBtnDisplay = 'none';
++    const downtimeAltBtnLabel = '';
+ 
+     // Everything interpolated below is derived from merchant-supplied or customer-supplied data
+     // (order ids, branding, payee names), so it is HTML-escaped. `{{INITIAL_STATE_JSON}}` is
+diff --git a/apps/checkout-portal/src/views/checkout.html b/apps/checkout-portal/src/views/checkout.html
+index 7404244..4d7dd11 100644
+--- a/apps/checkout-portal/src/views/checkout.html
++++ b/apps/checkout-portal/src/views/checkout.html
+@@ -3380,21 +3380,9 @@
+               <img src="/icons/upi.svg" alt="UPI" class="ypg-tab-icon" style="height:15px;" />
+               <span>UPI QR</span>
+             </button>
+-            <button type="button" class="ypg-method-tab" id="tabMethodCod" onclick="selectPaymentMethod('COD')"
+-              style="{{TAB_COD_STYLE}}">
+-              <img src="/icons/cash.svg" alt="COD" class="ypg-tab-icon" style="height:14px; width:14px;" />
+-              <span>Cash on Delivery</span>
+-            </button>
+-            <button type="button" class="ypg-method-tab" id="tabMethodCash"
+-              onclick="selectPaymentMethod('CASH_COUNTER')" style="{{TAB_CASH_STYLE}}">
+-              <img src="/icons/cash.svg" alt="Cash" class="ypg-tab-icon" style="height:14px; width:14px;" />
+-              <span>Cash</span>
+-            </button>
+-            <button type="button" class="ypg-method-tab" id="tabMethodCard"
+-              onclick="selectPaymentMethod('CARD_COUNTER')" style="{{TAB_CARD_STYLE}}">
+-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px; vertical-align:middle;"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+-              <span>Card</span>
+-            </button>
++
++
++
+           </div>
+ 
+           <!-- PC 2-SUB-COLUMN CONTAINER (Exact Razorpay Frame 002 layout on Desktop) -->
+@@ -3421,51 +3409,13 @@
+               </div>
+ 
+               <!-- Cash at Till Card (Offline Mode) -->
+-              <div class="ypg-pc-method-card" id="pcMethodCardCash" onclick="selectPaymentMethod('CASH_COUNTER')" style="{{PC_CASH_STYLE}}">
+-                <div class="ypg-pc-method-header">
+-                  <img src="/icons/cash.svg" alt="Cash" style="width:16px; height:16px; margin-right:6px; vertical-align:middle;" />
+-                  <div class="ypg-pc-method-title">Cash at Till</div>
+-                  <span class="ypg-pc-cash-pill">Counter</span>
+-                </div>
+-                <div class="ypg-pc-method-sub">Pay cash directly to cashier</div>
+-                <div class="ypg-pc-method-icons" style="margin-top:6px;">
+-                  <span style="font-size:10.5px; font-weight:700; color:#15803d; background:#dcfce7; padding:2px 8px; border-radius:5px; display:inline-flex; align-items:center; gap:4px; border:1px solid #bbf7d0;">
+-                    <img src="/icons/cash.svg" alt="Cash" style="width:12px; height:12px;" />
+-                    Physical Cash
+-                  </span>
+-                </div>
+-              </div>
++
+ 
+               <!-- Card at Counter (Offline Mode) -->
+-              <div class="ypg-pc-method-card" id="pcMethodCardCard" onclick="selectPaymentMethod('CARD_COUNTER')" style="{{PC_CARD_STYLE}}">
+-                <div class="ypg-pc-method-header">
+-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:6px; vertical-align:middle; color:#475569;"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+-                  <div class="ypg-pc-method-title">Card at Counter</div>
+-                  <span class="ypg-pc-cash-pill" style="background:#f1f5f9; color:#475569;">POS</span>
+-                </div>
+-                <div class="ypg-pc-method-sub">Swipe or tap card at POS desk</div>
+-                <div class="ypg-pc-method-icons" style="gap:5px; margin-top:6px; display:flex; align-items:center;">
+-                  <img src="/icons/visa.svg" alt="Visa" style="height:15px; width:auto; object-fit:contain;" />
+-                  <img src="/icons/mastercard.svg" alt="Mastercard" style="height:15px; width:auto; object-fit:contain;" />
+-                  <img src="/icons/rupay.svg" alt="RuPay" style="height:15px; width:auto; object-fit:contain;" />
+-                </div>
+-              </div>
+ 
+-              <!-- Cash on Delivery (COD) Card (Online Mode) -->
+-              <div class="ypg-pc-method-card" id="pcMethodCardCod" onclick="selectPaymentMethod('COD')" style="{{PC_COD_STYLE}}">
+-                <div class="ypg-pc-method-header">
+-                  <img src="/icons/cash.svg" alt="COD" style="width:16px; height:16px; margin-right:6px; vertical-align:middle;" />
+-                  <div class="ypg-pc-method-title">Cash on Delivery</div>
+-                  <span class="ypg-pc-cash-pill" style="background:#fef3c7; color:#92400e;">COD</span>
+-                </div>
+-                <div class="ypg-pc-method-sub">Pay physical cash at doorstep</div>
+-                <div class="ypg-pc-method-icons" style="margin-top:6px;">
+-                  <span style="font-size:10.5px; font-weight:700; color:#b45309; background:#fef3c7; padding:2px 8px; border-radius:5px; display:inline-flex; align-items:center; gap:4px; border:1px solid #fde68a;">
+-                    <img src="/icons/cash.svg" alt="COD" style="width:12px; height:12px;" />
+-                    Doorstep Cash
+-                  </span>
+-                </div>
+-              </div>
++
++
++
+             </div>
+ 
+             <!-- PC RIGHT ACTIVE PAYMENT WORKSPACE -->
+@@ -3562,156 +3512,14 @@
+                 </div>
+               </div>
+ 
+-              <!-- VIEW COD: CASH ON DELIVERY (ONLINE SELLING MODE) -->
+-              <div id="viewCodContent" hidden>
+-                <div class="ypg-section-label-row" style="margin-top:0; margin-bottom:12px;">
+-                  <h2 class="ypg-page-title" style="margin-bottom:0;">Cash on Delivery (COD)</h2>
+-                  <div class="ypg-countdown-pill" id="codTimerBadge">
+-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+-                      stroke-width="2.2">
+-                      <circle cx="12" cy="12" r="10" />
+-                      <polyline points="12 6 12 12 16 14" />
+-                    </svg>
+-                    <span id="codTimerText">05:00</span>
+-                  </div>
+-                </div>
+ 
+-                <!-- COD Notice Pill -->
+-                <div class="ypg-offers-pill" style="background:#fef3c7; border-color:#fde68a;">
+-                  <div class="ypg-offers-left">
+-                    <div class="ypg-offer-icon-badge" style="background:#d97706; color:#fff; display:flex; align-items:center; justify-content:center;">
+-                      <img src="/icons/cash.svg" alt="Cash" style="width:14px; height:14px;" />
+-                    </div>
+-                    <span style="color:#92400e; font-weight:700;">Pay Cash at Doorstep</span>
+-                  </div>
+-                  <div class="ypg-offers-right">
+-                    <span style="color:#b45309;">Verified Purchase</span>
+-                  </div>
+-                </div>
+ 
+-                <!-- Order Summary Card -->
+-                <div
+-                  style="background:#ffffff; border:1px solid var(--ypg-border); border-radius:12px; padding:16px; margin:14px 0;">
+-                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+-                    <span style="font-size:12px; color:#64748b; font-weight:600;">Payable on Delivery</span>
+-                    <strong style="font-size:20px; font-weight:800; color:#0f172a;">₹{{AMOUNT}}</strong>
+-                  </div>
+-                  <div
+-                    style="font-size:12px; color:#334155; line-height:1.5; border-top:1px dashed var(--ypg-border); padding-top:10px;">
+-                    <div>Recipient: <strong id="codCustomerName">Customer</strong></div>
+-                    <div>Contact: <span id="codCustomerPhone" style="font-family:monospace;">-</span></div>
+-                  </div>
+-                </div>
+-
+-                <!-- Doorstep Delivery Guide -->
+-                <div class="ypg-instructions-card">
+-                  <div class="ypg-instruction-step">
+-                    <div class="ypg-step-num">1</div>
+-                    <div>Review and confirm your Cash on Delivery order below.</div>
+-                  </div>
+-                  <div class="ypg-instruction-step">
+-                    <div class="ypg-step-num">2</div>
+-                    <div>Merchant processes and ships your package directly to your destination.</div>
+-                  </div>
+-                  <div class="ypg-instruction-step">
+-                    <div class="ypg-step-num">3</div>
+-                    <div>Hand over <strong>₹{{AMOUNT}}</strong> in physical cash to the courier agent upon arrival.
+-                    </div>
+-                  </div>
+-                </div>
+-
+-                <!-- Action Button with Pre-Purchase Confirmation -->
+-                <button type="button" class="ypg-btn-auth-action" id="btnConfirmCod" onclick="promptConfirmCodOrder()"
+-                  style="background:#0d9f67; font-size:14px; padding:12px;">
+-                  <span>Confirm &amp; Place COD Order (₹{{AMOUNT}})</span> &rsaquo;
+-                </button>
+-              </div>
+ 
+               <!-- VIEW CASH: CASH AT BILLING TILL (OFFLINE SELLING MODE) -->
+-              <div id="viewCashContent" hidden>
+-                <h2 class="ypg-page-title">Pay with Cash at Till</h2>
+-
+-                <div
+-                  style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:12px; padding:16px; margin:14px 0; text-align:center;">
+-                  <div
+-                    style="font-size:12px; font-weight:700; color:#166534; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px;">
+-                    Amount Payable to Cashier</div>
+-                  <div style="font-size:28px; font-weight:800; color:#15803d;">₹{{AMOUNT}}</div>
+-
+-                  <!-- Prominent Cashier Order ID Display -->
+-                  <div
+-                    style="margin-top:12px; padding-top:10px; border-top:1px dashed #86efac; display:flex; align-items:center; justify-content:center; gap:8px;">
+-                    <span style="font-size:12px; font-weight:700; color:#166534;">Store Order ID:</span>
+-                    <span class="cashierOrderIdDisplay"
+-                      style="font-family:monospace; font-size:14.5px; font-weight:900; color:#0f172a; background:#ffffff; padding:3px 10px; border-radius:6px; border:1.5px solid #86efac; letter-spacing:0.5px;">#{{ORDER_ID}}</span>
+-                  </div>
+-                </div>
+ 
+-                <!-- Counter Desk Instructions -->
+-                <div class="ypg-instructions-card">
+-                  <div style="font-size:12.5px; font-weight:700; color:#0f172a; margin-bottom:8px;">Counter Desk
+-                    Instructions</div>
+-                  <p style="font-size:12px; color:#475569; line-height:1.5; margin:0;" id="cashCounterDeskNotice">
+-                    {{COUNTER_INSTRUCTIONS}}
+-                  </p>
+-                </div>
+-
+-                <div class="ypg-live-observer-strip" style="background:#eff6ff; border-color:#bfdbfe; color:#1e40af;">
+-                  <div class="ypg-radar-dot" style="background:#2563eb; box-shadow:0 0 0 0 rgba(37,99,235,0.7);"></div>
+-                  <span>Awaiting Cashier Confirmation at Billing Desk...</span>
+-                </div>
+-
+-                <div style="font-size:12px; color:#64748b; text-align:center; padding:8px;">
+-                  Present this screen and Order ID to the cashier. Your payment will automatically update once confirmed
+-                  by staff.
+-                </div>
+-              </div>
+ 
+               <!-- VIEW CARD: CARD AT POS MACHINE (OFFLINE SELLING MODE) -->
+-              <div id="viewCardContent" hidden>
+-                <h2 class="ypg-page-title">Pay with Card at Counter</h2>
+-                <div style="display:flex; align-items:center; justify-content:center; gap:8px; margin:6px 0 12px 0;">
+-                  <img src="/icons/visa.svg" alt="Visa" style="height:16px; width:auto; object-fit:contain;" />
+-                  <img src="/icons/mastercard.svg" alt="Mastercard" style="height:16px; width:auto; object-fit:contain;" />
+-                  <img src="/icons/rupay.svg" alt="RuPay" style="height:16px; width:auto; object-fit:contain;" />
+-                </div>
+-
+-                <div
+-                  style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin:14px 0; text-align:center;">
+-                  <div
+-                    style="font-size:12px; font-weight:700; color:#475569; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px;">
+-                    POS Terminal Charge</div>
+-                  <div style="font-size:28px; font-weight:800; color:#0f172a;">₹{{AMOUNT}}</div>
+-
+-                  <!-- Prominent Cashier Order ID Display -->
+-                  <div
+-                    style="margin-top:12px; padding-top:10px; border-top:1px dashed #cbd5e1; display:flex; align-items:center; justify-content:center; gap:8px;">
+-                    <span style="font-size:12px; font-weight:700; color:#475569;">Store Order ID:</span>
+-                    <span class="cashierOrderIdDisplay"
+-                      style="font-family:monospace; font-size:14.5px; font-weight:900; color:#0f172a; background:#ffffff; padding:3px 10px; border-radius:6px; border:1.5px solid #cbd5e1; letter-spacing:0.5px;">#{{ORDER_ID}}</span>
+-                  </div>
+-                </div>
+-
+-                <!-- Counter Desk Instructions -->
+-                <div class="ypg-instructions-card">
+-                  <div style="font-size:12.5px; font-weight:700; color:#0f172a; margin-bottom:8px;">POS Terminal
+-                    Instructions</div>
+-                  <p style="font-size:12px; color:#475569; line-height:1.5; margin:0;" id="cardCounterDeskNotice">
+-                    Please swipe, insert, or tap your credit or debit card on the store POS terminal at the billing
+-                    desk.
+-                  </p>
+-                </div>
+ 
+-                <div class="ypg-live-observer-strip" style="background:#eff6ff; border-color:#bfdbfe; color:#1e40af;">
+-                  <div class="ypg-radar-dot" style="background:#2563eb; box-shadow:0 0 0 0 rgba(37,99,235,0.7);"></div>
+-                  <span>Awaiting Cashier Slip Verification...</span>
+-                </div>
+-
+-                <div style="font-size:12px; color:#64748b; text-align:center; padding:8px;">
+-                  Present this screen and Order ID to the cashier. Cashier will verify transaction and approve this
+-                  checkout session.
+-                </div>
+-              </div>
+ 
+               <!-- VIEW B: QUEUE VIEW (WHEN CHANNELS ARE OCCUPIED) -->
+               <div id="viewQueuedContent" hidden>
+@@ -3771,13 +3579,7 @@
+                   <div style="font-size:12px; color:var(--ypg-text-muted); margin-bottom:14px;" id="successDescText">
+                     Your payment was automatically verified by YouPI PG banking observers.
+                   </div>
+-                  <div id="successCodDevApiBox"
+-                    style="display:none; font-size:11.5px; background:#f1f5f9; padding:10px 14px; border-radius:8px; margin-bottom:14px; text-align:left; border:1px solid #e2e8f0;">
+-                    <span style="font-weight:700; color:#334155;">Developer Order API:</span>
+-                    <div
+-                      style="word-break:break-all; font-family:monospace; color:#2563eb; margin-top:3px; font-size:11px;"
+-                      id="successCodDevApiUrl"></div>
+-                  </div>
++
+                   <a href="javascript:void(0)" class="btn-return-merchant" id="btnReturnStore">Return to Merchant</a>
+                 </div>
+               </div>
+@@ -3825,7 +3627,7 @@
+                   </div>
+                   <div class="ypg-blocked-title" id="blockedTitleText">Fraudulent Activity Detected</div>
+                   <div class="ypg-blocked-subtitle" id="blockedSubtitleText">Payment Session Terminated &amp; Account Suspended</div>
+-                  
++
+                   <div class="ypg-blocked-card">
+                     <p class="ypg-blocked-desc" id="blockedNoticeText">
+                       Our automated verification engine detected fraudulent payment activity associated with this transaction. Access has been immediately suspended to protect network integrity.
+@@ -3876,7 +3678,7 @@
+                   </div>
+                   <div class="ypg-duplicate-title" id="dupSessionTitleText">Duplicate Session Detected</div>
+                   <div class="ypg-duplicate-subtitle" id="dupSessionSubtitleText">Payment Session Active on Another Device</div>
+-                  
++
+                   <div class="ypg-duplicate-card">
+                     <p class="ypg-duplicate-desc" style="font-weight:700; color:#0f172a; margin-bottom:6px;">
+                       This payment session was created on another device.
+@@ -5019,8 +4821,6 @@
+ 
+     function hideAllContent() {
+       document.getElementById('viewUpiContent').hidden = true;
+-      const vCod = document.getElementById('viewCodContent');
+-      if (vCod) vCod.hidden = true;
+       const vCash = document.getElementById('viewCashContent');
+       if (vCash) vCash.hidden = true;
+       const vCard = document.getElementById('viewCardContent');
+@@ -5083,84 +4883,15 @@
+     }
+ 
+     function renderMethodSelectorBar(data) {
+-      const bar = document.getElementById('paymentMethodSelectorBar');
+-      const sellingMode = data.sellingMode || 'ONLINE';
+-      const enabledMethods = data.enabledMethods || ['UPI'];
+-
+-      // Populate authenticated customer into COD view
+-      const c = data.customer || activeCustomer;
+-      if (c) {
+-        const nameEl = document.getElementById('codCustomerName');
+-        const phoneEl = document.getElementById('codCustomerPhone');
+-        if (nameEl) nameEl.textContent = c.fullName || c.name || 'Customer';
+-        if (phoneEl) phoneEl.textContent = c.phoneNumber || c.mobileNumber || '-';
+-      }
+-
+-      // Maintain authentic 3-column desktop layout
+-      const pcMethodsList = document.getElementById('pcMethodsList');
+-      const pcActiveView = document.querySelector('.ypg-pc-active-view');
+-      const pcTopbarTitle = document.querySelector('.ypg-pc-topbar-title');
+-
+-      if (pcMethodsList) pcMethodsList.style.removeProperty('display');
+-      if (pcActiveView) pcActiveView.style.width = '';
+-      if (pcTopbarTitle) pcTopbarTitle.textContent = 'Payment Options';
+-
+-      // Mobile selector bar is visible only when more than 1 method is available
+-      if (bar) {
+-        bar.style.display = (!enabledMethods || enabledMethods.length <= 1) ? 'none' : 'flex';
+-      }
+-
+-      const tabUpi = document.getElementById('tabMethodUpi');
+-      const tabCod = document.getElementById('tabMethodCod');
+-      const tabCash = document.getElementById('tabMethodCash');
+-      const tabCard = document.getElementById('tabMethodCard');
+-
+-      if (tabUpi) tabUpi.style.display = 'inline-flex';
+-
+-      const pcUpi = document.getElementById('pcMethodCardUpi');
+-      const pcCod = document.getElementById('pcMethodCardCod');
+-      const pcCash = document.getElementById('pcMethodCardCash');
+-      const pcCard = document.getElementById('pcMethodCardCard');
+-
+-      if (pcUpi) pcUpi.style.display = 'block';
+-
+-      if (sellingMode === 'ONLINE') {
+-        // Online Selling Mode:
+-        // COD works (configurable ON/OFF).
+-        // Cash on counter and Card on counter do NOT exist (hidden).
+-        if (tabCod) tabCod.style.display = enabledMethods.includes('COD') ? 'inline-flex' : 'none';
+-        if (tabCash) tabCash.style.display = 'none';
+-        if (tabCard) tabCard.style.display = 'none';
+-
+-        if (pcCod) pcCod.style.display = enabledMethods.includes('COD') ? 'block' : 'none';
+-        if (pcCash) pcCash.style.display = 'none';
+-        if (pcCard) pcCard.style.display = 'none';
+-      } else {
+-        // Offline Selling Mode:
+-        // Cash works (configurable ON/OFF).
+-        // Card works (configurable ON/OFF).
+-        // COD does NOT exist (hidden).
+-        if (tabCod) tabCod.style.display = 'none';
+-        if (tabCash) tabCash.style.display = enabledMethods.includes('CASH_COUNTER') ? 'inline-flex' : 'none';
+-        if (tabCard) tabCard.style.display = enabledMethods.includes('CARD_COUNTER') ? 'inline-flex' : 'none';
+-
+-        if (pcCod) pcCod.style.display = 'none';
+-        if (pcCash) pcCash.style.display = enabledMethods.includes('CASH_COUNTER') ? 'block' : 'none';
+-        if (pcCard) pcCard.style.display = enabledMethods.includes('CARD_COUNTER') ? 'block' : 'none';
+-      }
+-
+-      if (!enabledMethods.includes(currentSelectedMethod)) {
+-        currentSelectedMethod = 'UPI';
+-      }
+-      updateMethodTabsUI(currentSelectedMethod);
++      currentSelectedMethod='UPI';
++      const bar=document.getElementById('paymentMethodSelectorBar');
++      if(bar)bar.style.display='none';
++      updateMethodTabsUI('UPI');
+     }
+ 
+     function updateMethodTabsUI(method) {
+       const tabs = [
+         { id: 'tabMethodUpi', method: 'UPI' },
+-        { id: 'tabMethodCod', method: 'COD' },
+-        { id: 'tabMethodCash', method: 'CASH_COUNTER' },
+-        { id: 'tabMethodCard', method: 'CARD_COUNTER' }
+       ];
+       tabs.forEach(t => {
+         const el = document.getElementById(t.id);
+@@ -5174,9 +4905,6 @@
+ 
+       const pcCards = [
+         { id: 'pcMethodCardUpi', method: 'UPI' },
+-        { id: 'pcMethodCardCod', method: 'COD' },
+-        { id: 'pcMethodCardCash', method: 'CASH_COUNTER' },
+-        { id: 'pcMethodCardCard', method: 'CARD_COUNTER' }
+       ];
+       pcCards.forEach(c => {
+         const el = document.getElementById(c.id);
+@@ -5189,126 +4917,10 @@
+       });
+     }
+ 
+-    function switchMethodFromDowntime() {
+-      const enabled = state?.enabledMethods || state?.branding?.enabledPaymentMethods || [];
+-      const sellingMode = state?.sellingMode || state?.branding?.sellingMode || 'OFFLINE';
+-      if (sellingMode === 'ONLINE' && enabled.includes('COD')) {
+-        selectPaymentMethod('COD');
+-      } else if (enabled.includes('CASH_COUNTER')) {
+-        selectPaymentMethod('CASH_COUNTER');
+-      }
+-    }
+-
+     async function selectPaymentMethod(method) {
+-      currentSelectedMethod = method;
+-      updateMethodTabsUI(method);
+-      hideAllContent();
+-
+-      if (method === 'UPI') {
+-        document.getElementById('viewUpiContent').hidden = false;
+-        document.getElementById('ypgStickyFooter').style.display = 'flex';
+-      } else if (method === 'COD') {
+-        const vCod = document.getElementById('viewCodContent');
+-        if (vCod) vCod.hidden = false;
+-        document.getElementById('ypgStickyFooter').style.display = 'none';
+-      } else if (method === 'CASH_COUNTER') {
+-        const vCash = document.getElementById('viewCashContent');
+-        if (vCash) vCash.hidden = false;
+-        document.getElementById('ypgStickyFooter').style.display = 'none';
+-      } else if (method === 'CARD_COUNTER') {
+-        const vCard = document.getElementById('viewCardContent');
+-        if (vCard) vCard.hidden = false;
+-        document.getElementById('ypgStickyFooter').style.display = 'none';
+-      }
+-
+-      try {
+-        const res = await fetch(`${API_BASE}/api/v1/checkout/${PAYMENT_ID}/select-method`, {
+-          method: 'POST',
+-          headers: getApiHeaders({ 'Content-Type': 'application/json' }),
+-          body: JSON.stringify({ method, deviceId: DeviceIdentity?.currentDeviceId })
+-        });
+-        const resData = await res.json();
+-        if (res.ok && resData) {
+-          state.method = method;
+-          if (resData.timeRemainingSeconds !== undefined) {
+-            state.timeRemainingSeconds = resData.timeRemainingSeconds;
+-          }
+-          if (resData.status) {
+-            state.status = resData.status;
+-          }
+-
+-          if (method === 'COD') {
+-            runCountdown(resData.timeRemainingSeconds || 300, sec => {
+-              const el = document.getElementById('codTimerText');
+-              if (el) el.textContent = formatTime(sec);
+-            }, () => {
+-              const el = document.getElementById('codTimerText');
+-              if (el) el.textContent = 'Expired';
+-              fetch(`${API_BASE}/api/v1/checkout/${PAYMENT_ID}/expire`, { method: 'POST' }).catch(() => { });
+-              loadState();
+-            });
+-          } else if (method === 'UPI') {
+-            if (resData.status === 'ACTIVE') {
+-              loadQrSvg();
+-              runCountdown(resData.timeRemainingSeconds || 300, sec => {
+-                const el = document.getElementById('activeTimerText');
+-                if (el) el.textContent = formatTime(sec);
+-              }, () => {
+-                const el = document.getElementById('activeTimerText');
+-                if (el) el.textContent = 'Expired';
+-                fetch(`${API_BASE}/api/v1/checkout/${PAYMENT_ID}/expire`, { method: 'POST' }).catch(() => { });
+-                loadState();
+-              });
+-            } else if (resData.status === 'QUEUED') {
+-              loadState();
+-            }
+-          } else {
+-            // Offline Counter mode: no timer countdown
+-            if (countdownTimer) clearInterval(countdownTimer);
+-          }
+-        }
+-      } catch (e) {
+-        console.warn('selectPaymentMethod network error:', e);
+-      }
+-    }
+-
+-    async function promptConfirmCodOrder() {
+-      const amt = state?.amount || '{{AMOUNT}}';
+-      if (!confirm(`Are you sure you want to confirm and place this Cash on Delivery (COD) order for ₹${amt}? You will pay in cash upon doorstep delivery.`)) {
+-        return;
+-      }
+-      await executeConfirmCodOrder();
+-    }
+-
+-    async function executeConfirmCodOrder() {
+-      const btn = document.getElementById('btnConfirmCod');
+-      if (btn) {
+-        btn.disabled = true;
+-        btn.innerText = 'Placing Cash on Delivery Order...';
+-      }
+-
+-      try {
+-        const res = await fetch(`${API_BASE}/api/v1/checkout/${PAYMENT_ID}/confirm-cod`, {
+-          method: 'POST',
+-          headers: { 'Content-Type': 'application/json' }
+-        });
+-        const data = await res.json();
+-        if (res.ok) {
+-          loadState();
+-        } else {
+-          alert(data.error || 'Failed to place COD order');
+-          if (btn) {
+-            btn.disabled = false;
+-            btn.innerHTML = '<span>Confirm &amp; Place COD Order (₹' + (state?.amount || '{{AMOUNT}}') + ')</span> &rsaquo;';
+-          }
+-        }
+-      } catch (e) {
+-        alert('Network error confirming COD order.');
+-        if (btn) {
+-          btn.disabled = false;
+-          btn.innerHTML = '<span>Confirm &amp; Place COD Order (₹' + (state?.amount || '{{AMOUNT}}') + ')</span> &rsaquo;';
+-        }
+-      }
++      if(method!=='UPI')throw new Error('UPI_ONLY');
++      currentSelectedMethod='UPI';
++      await loadState();
+     }
+ 
+     // --- DEVICE IDENTITY & HARDWARE CONTEXT BINDING LAYER ---
+@@ -5959,6 +5571,7 @@
+           return;
+         }
+ 
++        if (data.method && data.method !== 'UPI') { hideAllContent(); return; }
+         if (data.status === 'SUCCESS') {
+           closeProcessingModal();
+           closeCancelPaymentModal();
+@@ -5973,26 +5586,10 @@
+           const amtEl = document.getElementById('successAmountVal');
+           if (amtEl) amtEl.textContent = `₹${data.amount}`;
+ 
+-          const isCodOrder = data.method === 'COD' || data.verificationTag === 'COD_ORDER_PLACED';
+-          const titleEl = document.getElementById('successTitleText');
+-          const descEl = document.getElementById('successDescText');
+-          const codApiBox = document.getElementById('successCodDevApiBox');
+-          const codApiUrl = document.getElementById('successCodDevApiUrl');
+-
+-          if (isCodOrder) {
+-            if (titleEl) titleEl.textContent = 'Order Placed (Cash on Delivery)!';
+-            if (descEl) descEl.textContent = `Your order #${data.orderId} was confirmed. Please keep ₹${data.amount} in cash ready for the courier agent upon arrival.`;
+-            if (codApiBox && codApiUrl) {
+-              codApiBox.style.display = 'block';
+-              codApiUrl.textContent = `${API_BASE}/api/v1/orders/${data.orderId}/cod`;
+-            }
+-          } else {
+-            if (titleEl) titleEl.textContent = 'Payment Successful!';
+-            if (descEl) descEl.textContent = 'Your payment was automatically verified by YouPI PG banking observers.';
+-            if (codApiBox) codApiBox.style.display = 'none';
+-          }
+-
+-          emitTriggerHook('PAYMENT_COMPLETED', { amount: data.amount, method: data.method, isCod: isCodOrder });
++          const titleEl=document.getElementById('successTitleText');
++          const descEl=document.getElementById('successDescText');
++          if(titleEl)titleEl.textContent='Payment requires review';
++          if(descEl)descEl.textContent='Invoice remains pending until independent bank credit verification.';
+ 
+           try {
+             window.parent.postMessage({
+@@ -6121,29 +5718,7 @@
+         renderMethodSelectorBar(data);
+ 
+         hideAllContent();
+-        if (currentSelectedMethod === 'COD') {
+-          const vCod = document.getElementById('viewCodContent');
+-          if (vCod) vCod.hidden = false;
+-          document.getElementById('ypgStickyFooter').style.display = 'none';
+-
+-          runCountdown(data.timeRemainingSeconds || 300, sec => {
+-            const el = document.getElementById('codTimerText');
+-            if (el) el.textContent = formatTime(sec);
+-          }, () => {
+-            const el = document.getElementById('codTimerText');
+-            if (el) el.textContent = 'Expired';
+-            fetch(`${API_BASE}/api/v1/checkout/${PAYMENT_ID}/expire`, { method: 'POST' }).catch(() => { });
+-            loadState();
+-          }, data.expiresAt);
+-        } else if (currentSelectedMethod === 'CASH_COUNTER') {
+-          const vCash = document.getElementById('viewCashContent');
+-          if (vCash) vCash.hidden = false;
+-          document.getElementById('ypgStickyFooter').style.display = 'none';
+-        } else if (currentSelectedMethod === 'CARD_COUNTER') {
+-          const vCard = document.getElementById('viewCardContent');
+-          if (vCard) vCard.hidden = false;
+-          document.getElementById('ypgStickyFooter').style.display = 'none';
+-        } else {
++        {
+           // Default: UPI QR (CRITICAL INVARIANT: ALWAYS SHOWS QR AND RUNS 5:00 TIMER REGARDLESS OF GREEN/YELLOW/RED)
+           document.getElementById('viewUpiContent').hidden = false;
+           document.getElementById('ypgStickyFooter').style.display = 'flex';
+@@ -6209,76 +5784,9 @@
+     // --- PSYCHOLOGICAL TIME-SAVING CONVERSION BANNER ---
+     // Invariant: ONLY display when the customer is actively waiting in the UPI queue!
+     function renderTimeSavingBanners(data) {
+-      const qBanner = document.getElementById('queueTimeSavingBanner');
+-      const uBanner = document.getElementById('upiTimeSavingBanner');
+-      if (uBanner) uBanner.style.display = 'none'; // NEVER show on active UPI session
+-
+-      const isQueued = (data.status === 'QUEUED') || (Number(data.queuePosition || 0) > 0);
+-      if (!isQueued || !qBanner) {
+-        if (qBanner) qBanner.style.display = 'none';
+-        return;
+-      }
+-
+-      const enabled = data.enabledMethods || ['UPI'];
+-      const sellingMode = data.sellingMode || 'OFFLINE';
+-
+-      let altMethodCode = null;
+-      let altMethodName = null;
+-
+-      if (sellingMode === 'ONLINE') {
+-        if (enabled.includes('COD')) {
+-          altMethodCode = 'COD';
+-          altMethodName = 'Cash on Delivery';
+-        } else if (enabled.includes('CARD')) {
+-          altMethodCode = 'CARD';
+-          altMethodName = 'Credit / Debit Card';
+-        } else if (enabled.includes('NETBANKING')) {
+-          altMethodCode = 'NETBANKING';
+-          altMethodName = 'Net Banking';
+-        } else if (enabled.includes('CARD_COUNTER')) {
+-          altMethodCode = 'CARD_COUNTER';
+-          altMethodName = 'Card Payment';
+-        }
+-      } else {
+-        // Offline selling mode (retail till / counter)
+-        if (enabled.includes('CASH_COUNTER')) {
+-          altMethodCode = 'CASH_COUNTER';
+-          altMethodName = 'Cash at Till';
+-        } else if (enabled.includes('CARD_COUNTER')) {
+-          altMethodCode = 'CARD_COUNTER';
+-          altMethodName = 'Card at Counter';
+-        }
++      for(const id of ['queueTimeSavingBanner','upiTimeSavingBanner']){
++        const el=document.getElementById(id);if(el)el.style.display='none';
+       }
+-
+-      // CRITICAL REQUIREMENT: If both cash and card are disabled by merchant, psychological conversion MUST NOT BE SHOWN!
+-      if (!altMethodCode || (!enabled.includes('COD') && !enabled.includes('CASH_COUNTER') && !enabled.includes('CARD') && !enabled.includes('CARD_COUNTER'))) {
+-        qBanner.style.display = 'none';
+-        return;
+-      }
+-
+-      const timeSec = data.timeRemainingSeconds || (data.queuePosition ? data.queuePosition * 30 : 30);
+-      const initialTimerStr = formatTime(timeSec);
+-
+-      const actionText = sellingMode === 'ONLINE'
+-        ? `Skip the UPI wait! Pay with <strong>${altMethodName}</strong> instantly without waiting for a UPI slot.`
+-        : `Don't wait in the UPI line! Pay with <strong>${altMethodName}</strong> right now to complete your purchase instantly.`;
+-
+-      qBanner.innerHTML = `
+-        <div class="ypg-queue-conversion-card">
+-          <div class="ypg-queue-conversion-header">
+-            <div class="ypg-queue-conversion-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:3px;"><path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6.4-4.8-6.4 4.8 2.4-7.2-6-4.8h7.6z"/></svg>Instant Alternative</div>
+-            <div class="ypg-queue-conversion-pill">Save <span class="ypg-banner-running-timer">${initialTimerStr}</span></div>
+-          </div>
+-          <div class="ypg-queue-conversion-text">
+-            ${actionText}
+-          </div>
+-          <button type="button" class="ypg-btn-queue-switch" onclick="selectPaymentMethod('${altMethodCode}')">
+-            <span>Pay with ${altMethodName}</span>
+-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+-          </button>
+-        </div>
+-      `;
+-      qBanner.style.display = 'block';
+     }
+ 
+     // --- PURE QR SVG LOADER (ALWAYS LOADS & SHOWS QR CODE REGARDLESS OF SERVER STATUS) ---
+@@ -6515,7 +6023,7 @@
+       closeCancelPaymentModal();
+       if (countdownTimer) { clearInterval(countdownTimer); countdownTimer = null; }
+       if (queuePollTimer) { clearInterval(queuePollTimer); queuePollTimer = null; }
+-      
++
+       const bar = document.getElementById('paymentMethodSelectorBar');
+       if (bar) bar.style.display = 'none';
+       const footer = document.getElementById('ypgStickyFooter');
+diff --git a/apps/merchant-admin/src/views/admin.html b/apps/merchant-admin/src/views/admin.html
+index 3890448..13cfbfb 100644
+--- a/apps/merchant-admin/src/views/admin.html
++++ b/apps/merchant-admin/src/views/admin.html
+@@ -1189,38 +1189,7 @@
+         </div>
+ 
+         <!-- Mode Card: COD Orders (Online) -->
+-        <div class="card" id="counterDeskCodCard" style="display:none;">
+-          <div class="card-header">
+-            <div>
+-              <div class="card-heading">📦 Cash on Delivery (COD) Verified Orders</div>
+-              <div class="card-subtext">Orders placed with Cash on Delivery payment confirmation. Ready for fulfillment
+-                and dispatch.</div>
+-            </div>
+-            <button class="btn btn-secondary" onclick="fetchCodOrders()">Refresh Orders</button>
+-          </div>
+ 
+-          <div style="overflow-x:auto;">
+-            <table>
+-              <thead>
+-                <tr>
+-                  <th>Order ID</th>
+-                  <th>Payment Ref</th>
+-                  <th>Amount</th>
+-                  <th>Customer Name</th>
+-                  <th>Phone</th>
+-                  <th>Placed At</th>
+-                  <th>Actions</th>
+-                </tr>
+-              </thead>
+-              <tbody id="codOrdersTableBody">
+-                <tr>
+-                  <td colspan="7" style="text-align:center; color:var(--text-muted); padding:1.5rem;">No COD orders
+-                    placed yet.</td>
+-                </tr>
+-              </tbody>
+-            </table>
+-          </div>
+-        </div>
+       </div>
+ 
+       <!-- SUB-VIEW 1.3: TRANSACTIONS LEDGER -->
+@@ -1738,21 +1707,11 @@
+                 <span class="badge badge-primary" id="badgeOnlineActive">ACTIVE</span>
+               </div>
+               <p style="font-size:0.82rem; color:var(--text-muted); line-height:1.45; margin:0;">
+-                For websites and courier deliveries. Supports <strong>UPI QR</strong> (always on) and optional
+-                <strong>Cash on Delivery (COD)</strong>.
++                UPI QR checkout only. Cash and counter payments are unsupported.
+               </p>
+             </div>
+ 
+-            <div id="cardModeOffline" onclick="setSellingMode('OFFLINE', true)" class="selling-mode-card">
+-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+-                <strong style="font-size:1rem; color:var(--text-heading);">🏬 Offline Selling Mode</strong>
+-                <span class="badge badge-warning" id="badgeOfflineActive" style="display:none;">ACTIVE</span>
+-              </div>
+-              <p style="font-size:0.82rem; color:var(--text-muted); line-height:1.45; margin:0;">
+-                For retail stores and physical checkout desks. Supports <strong>UPI QR</strong> (always on),
+-                configurable <strong>Cash</strong>, and configurable <strong>Card POS</strong>.
+-              </p>
+-            </div>
++
+           </div>
+ 
+           <!-- ONLINE PAYMENT MODALITIES -->
+@@ -1773,18 +1732,7 @@
+                 <input type="checkbox" checked disabled style="width:20px; height:20px; opacity:0.85;" />
+               </div>
+ 
+-              <label
+-                style="display:flex; align-items:flex-start; justify-content:space-between; padding:0.85rem; background:var(--bg-card); border:1px solid var(--border); border-radius:0.5rem; cursor:pointer;">
+-                <div>
+-                  <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
+-                    <strong style="font-size:0.9rem; color:var(--text-heading);">Cash on Delivery (COD)</strong>
+-                    <span class="badge badge-info" style="font-size:0.72rem;">Doorstep Cash</span>
+-                  </div>
+-                  <div style="font-size:0.8rem; color:var(--text-muted);">Customers confirm order with pre-purchase
+-                    verification and pay cash upon package arrival.</div>
+-                </div>
+-                <input type="checkbox" id="toggleMethodCod" checked style="width:20px; height:20px; cursor:pointer;" />
+-              </label>
++
+             </div>
+           </div>
+ 
+@@ -1806,31 +1754,9 @@
+                 <input type="checkbox" checked disabled style="width:20px; height:20px; opacity:0.85;" />
+               </div>
+ 
+-              <label
+-                style="display:flex; align-items:flex-start; justify-content:space-between; padding:0.85rem; background:var(--bg-card); border:1px solid var(--border); border-radius:0.5rem; cursor:pointer;">
+-                <div>
+-                  <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
+-                    <strong style="font-size:0.9rem; color:var(--text-heading);">Cash</strong>
+-                    <span class="badge badge-info" style="font-size:0.72rem;">Billing Till</span>
+-                  </div>
+-                  <div style="font-size:0.8rem; color:var(--text-muted);">Customer pays physical cash at till. Cashier
+-                    verifies note and approves in Cashier Dock.</div>
+-                </div>
+-                <input type="checkbox" id="toggleMethodCash" checked style="width:20px; height:20px; cursor:pointer;" />
+-              </label>
+ 
+-              <label
+-                style="display:flex; align-items:flex-start; justify-content:space-between; padding:0.85rem; background:var(--bg-card); border:1px solid var(--border); border-radius:0.5rem; cursor:pointer;">
+-                <div>
+-                  <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
+-                    <strong style="font-size:0.9rem; color:var(--text-heading);">Card</strong>
+-                    <span class="badge badge-info" style="font-size:0.72rem;">Store POS Terminal</span>
+-                  </div>
+-                  <div style="font-size:0.8rem; color:var(--text-muted);">Customer swipes or taps card on physical store
+-                    POS machine.</div>
+-                </div>
+-                <input type="checkbox" id="toggleMethodCard" checked style="width:20px; height:20px; cursor:pointer;" />
+-              </label>
++
++
+             </div>
+           </div>
+ 
+@@ -3636,7 +3562,7 @@
+         initPaymentSimulator();
+       }
+       if (subViewId === 'subViewOpsCounter') {
+-        if (currentSellingMode === 'ONLINE') fetchCodOrders();
++
+         else fetchCounterPayments();
+       }
+       if (subViewId === 'subViewOpsTransactions') fetchPaymentsLedger();
+@@ -3901,7 +3827,7 @@
+ 
+     // --- SELLING MODE & PAYMENT MODALITIES ---
+     function setSellingMode(mode, save = false) {
+-      currentSellingMode = (mode === 'OFFLINE') ? 'OFFLINE' : 'ONLINE';
++      currentSellingMode = 'ONLINE';
+       const cardOnline = document.getElementById('cardModeOnline');
+       const cardOffline = document.getElementById('cardModeOffline');
+       const badgeOnline = document.getElementById('badgeOnlineActive');
+@@ -3961,7 +3887,7 @@
+         updateKpis(pData.payments || [], qData.queue || []);
+ 
+         if (activeSection === 'operations' && activeSubTab === 'subViewOpsCounter') {
+-          if (currentSellingMode === 'ONLINE') fetchCodOrders();
++
+           else renderCounterDesk(pData.payments || []);
+         }
+       } catch (e) { }
+@@ -4161,35 +4087,6 @@
+       }
+     }
+ 
+-    async function fetchCodOrders() {
+-      try {
+-        const res = await fetch(`${API_BASE}/api/v1/admin/cod-orders`);
+-        const data = await res.json();
+-        const tbody = document.getElementById('codOrdersTableBody');
+-        if (!tbody) return;
+-        const orders = data.codOrders || [];
+-        if (orders.length === 0) {
+-          tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; color:var(--text-muted); padding:1.5rem;">No Cash on Delivery orders placed yet.</td></tr>';
+-          return;
+-        }
+-        tbody.innerHTML = orders.map(o => `
+-        <tr>
+-          <td><strong>Order #${escapeHtml(o.orderId)}</strong></td>
+-          <td><code style="font-size:0.75rem;">${o.paymentId.substring(0, 16)}...</code></td>
+-          <td><strong style="color:#34d399; font-size:1.15rem;">₹${(Number(o.amountPaise) / 100).toFixed(2)}</strong></td>
+-          <td>${escapeHtml(o.customerName || 'Customer')}</td>
+-          <td>${escapeHtml(o.customerPhone || '-')}</td>
+-          <td>${new Date(o.placedAt).toLocaleTimeString()}</td>
+-          <td>
+-            <a href="${API_BASE}/api/v1/orders/${o.orderId}/cod" target="_blank" class="btn btn-secondary" style="padding:0.25rem 0.5rem; font-size:0.75rem; text-decoration:none;">
+-              API ↗
+-            </a>
+-          </td>
+-        </tr>
+-      `).join('');
+-      } catch (e) { }
+-    }
+-
+     // --- TRANSACTIONS LEDGER ---
+     async function fetchPaymentsLedger() {
+       try {
+@@ -4582,17 +4479,11 @@
+       const cardCounterInstructions = document.getElementById('settingCardCounterInstructions')?.value.trim() || '';
+       const termsUrl = document.getElementById('settingTermsUrl')?.value.trim() || '';
+ 
+-      const codChecked = document.getElementById('toggleMethodCod')?.checked ?? true;
+-      const cashChecked = document.getElementById('toggleMethodCash')?.checked ?? true;
+-      const cardChecked = document.getElementById('toggleMethodCard')?.checked ?? true;
++      const codChecked = false;
++      const cashChecked = false;
++      const cardChecked = false;
+ 
+       const enabledMethods = ['UPI'];
+-      if (currentSellingMode === 'ONLINE') {
+-        if (codChecked) enabledMethods.push('COD');
+-      } else {
+-        if (cashChecked) enabledMethods.push('CASH_COUNTER');
+-        if (cardChecked) enabledMethods.push('CARD_COUNTER');
+-      }
+ 
+       try {
+         const res = await fetch(`${API_BASE}/api/v1/admin/merchant-settings`, {
+diff --git a/apps/payment-api/src/__tests__/upi-only.test.js b/apps/payment-api/src/__tests__/upi-only.test.js
+new file mode 100644
+index 0000000..0402cc2
+--- /dev/null
++++ b/apps/payment-api/src/__tests__/upi-only.test.js
+@@ -0,0 +1,77 @@
++import { test } from 'node:test';
++import assert from 'node:assert/strict';
++import crypto from 'node:crypto';
++import fs from 'node:fs';
++import vm from 'node:vm';
++import { Database } from '@youpi/db';
++import { WebhookEngine } from '@youpi/core';
++import { startServer } from '../index.js';
++// Self-contained test credentials; no real environment or host secret mounts.
++for(const name of ['ADMIN_API_TOKEN','OBSERVER_API_TOKEN','INTERNAL_SERVICE_TOKEN','ENCRYPTION_MASTER_KEY','COIN_STORE_WEBHOOK_SECRET'])process.env[name]=crypto.randomBytes(32).toString('hex');
++const TEST_ADMIN_TOKEN=process.env.ADMIN_API_TOKEN;
++
++test('UPI-only APIs preserve history and reject executable non-UPI instructions', async t => {
++  const db=new Database({inMemory:true});
++  const api=await startServer(0,db);
++  t.after(async()=>{await api.close();db.close();});
++  const call=(path,body,admin=false)=>fetch(`http://127.0.0.1:${api.port}${path}`,{
++    method:body===undefined?'GET':'POST',headers:{'Content-Type':'application/json',...(admin?{Authorization:'Bearer '+TEST_ADMIN_TOKEN}:{})},
++    body:body===undefined?undefined:JSON.stringify(body)});
++  const create=body=>call('/api/v1/payments',{orderId:crypto.randomUUID(),amount:'1.00',...body});
++  await t.test('direct creation, nested overrides and coercion cannot enable COD',async()=>{
++    for(const method of ['COD','cod','CASH_COUNTER','CARD_COUNTER','UPI ',null,{},['UPI','COD']])assert.equal((await create({method})).status,400);
++    assert.equal((await create({metadata:{paymentMethod:'COD'}})).status,400);
++  });
++  const good=await create({method:'UPI'});assert.equal(good.status,201);
++  const id=(await good.json()).paymentId;
++  await t.test('removed routes and method-switch reject without changing a UPI session',async()=>{
++    const before=db.queryOne('SELECT * FROM payment_sessions WHERE id=?',[id]);
++    for(const route of [`/api/v1/checkout/${id}/confirm-cod`,`/api/v1/checkout/${id}/cod`,`/api/v1/payments/${id}/cod`,`/api/v1/orders/anything/cod`]){
++      const res=await call(route,route.endsWith('confirm-cod')?{}:undefined);assert.ok([404,410].includes(res.status));
++    }
++    assert.equal((await call(`/api/v1/checkout/${id}/select-method`,{method:'COD'})).status,400);
++    assert.deepEqual(db.queryOne('SELECT * FROM payment_sessions WHERE id=?',[id]),before);
++  });
++  await t.test('merchant settings cannot enable unsupported methods at either nesting level',async()=>{
++    for(const body of [{codEnabled:true},{branding:{codEnabled:true}},{enabledPaymentMethods:['UPI','COD']},{branding:{enabledPaymentMethods:['COD']}},{cashEnabled:true},{cardEnabled:true}])assert.equal((await call('/api/v1/admin/merchant-settings',body,true)).status,400);
++    // Persist an old configuration to prove its effective runtime settings cannot enable COD.
++    db.execute('UPDATE merchants SET branding=?',[JSON.stringify({codEnabled:true,enabledPaymentMethods:['UPI','COD']})]);
++    const settings=await (await call('/api/v1/admin/merchant-settings',undefined,true)).json();
++    assert.deepEqual(settings.enabledPaymentMethods,['UPI']);assert.equal(settings.codEnabled,false);assert.equal(settings.branding.codEnabled,false);
++    assert.equal(JSON.parse(db.queryOne('SELECT branding FROM merchants').branding).codEnabled,true);
++  });
++  await t.test('legacy active and SUCCESS COD rows remain intact but cannot checkout or settle',async()=>{
++    const legacy=await create({method:'UPI'});const legacyId=(await legacy.json()).paymentId;
++    db.execute("UPDATE payment_sessions SET method='COD',status='SUCCESS',verification_tag='COD_ORDER_PLACED' WHERE id=?",[legacyId]);
++    const before=db.queryOne('SELECT * FROM payment_sessions WHERE id=?',[legacyId]);
++    for(const route of ['state','qr','events','activate','select-method','confirm-cod']){
++      const body=['activate','select-method','confirm-cod'].includes(route)?{method:'UPI'}:undefined;
++      assert.equal((await call(`/api/v1/checkout/${legacyId}/${route}`,body)).status,410);
++    }
++    assert.equal((await call(`/api/v1/payments/${legacyId}`)).status,410);
++    assert.throws(()=>api.app.context.sessionRepo.transitionToTerminal(legacyId,'SUCCESS'),/LEGACY_METHOD/);
++    assert.throws(()=>api.app.context.sessionRepo.recordVerificationSource(legacyId,'GMAIL','fake'),/LEGACY_METHOD/);
++    const engine=new WebhookEngine({db,merchantRepo:api.app.context.merchantRepo});
++    assert.equal((await engine.dispatch('SUCCESS',api.app.context.sessionRepo.findById(legacyId))).delivered,false);
++    assert.deepEqual(db.queryOne('SELECT * FROM payment_sessions WHERE id=?',[legacyId]),before);
++    db.execute("UPDATE payment_sessions SET status='ACTIVE' WHERE id=?",[legacyId]);
++    assert.equal((await call(`/api/v1/checkout/${legacyId}/select-method`,{method:'UPI'})).status,410);
++    assert.equal(db.queryOne('SELECT method,status FROM payment_sessions WHERE id=?',[legacyId]).status,'ACTIVE');
++  });
++  await t.test('missing device identity cannot bypass active or terminal binding',async()=>{
++    api.app.context.deviceRepo.create({id:'fixture-device',publicKey:'synthetic-test-key',fingerprintHash:'synthetic-test-fingerprint'});
++    api.app.context.sessionRepo.bindDevice(id,'fixture-device');
++    for(const status of ['INITIATED','SUCCESS']){db.execute('UPDATE payment_sessions SET status=? WHERE id=?',[status,id]);const response=await call(`/api/v1/checkout/${id}/state`);assert.equal(response.status,409);assert.doesNotMatch(JSON.stringify(await response.json()),/fixture-device/);}
++  });
++  await t.test('COD retry payloads never reach the network',async()=>{
++    let queried=false;
++    const engine=new WebhookEngine({db:{query:()=>[{payload:JSON.stringify({method:'COD',event:'SUCCESS'})}],queryOne:()=>{queried=true;throw Error('unexpected retry');}},merchantRepo:{findById:()=>{throw Error('unexpected delivery');}}});
++    assert.deepEqual(await engine.retryPending(),[]);assert.equal(queried,false);
++  });
++});
++
++test('checkout template has no COD capability and inline scripts compile',()=>{
++  const html=fs.readFileSync(new URL('../../../checkout-portal/src/views/checkout.html',import.meta.url),'utf8');
++  assert.doesNotMatch(html,/confirm-cod|Cash on Delivery|selectPaymentMethod\('COD'\)|COD_ORDER_PLACED/);
++  for(const match of html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/g))new vm.Script(match[1].replace('{{INITIAL_STATE_JSON}}','{}'));
++});
+diff --git a/apps/payment-api/src/index.js b/apps/payment-api/src/index.js
+index e2bddac..3412576 100644
+--- a/apps/payment-api/src/index.js
++++ b/apps/payment-api/src/index.js
+@@ -1,3 +1,4 @@
++import { installUpiOnlyGuard } from './upi-only.js';
+ import fs from 'node:fs';
+ import { EventEmitter } from 'node:events';
+ import path from 'node:path';
+@@ -114,6 +115,7 @@ export function createPaymentApp(customDb = null, options = {}) {
+ 
+   const server = new HttpServer();
+   server.use(authGuard);
++  installUpiOnlyGuard(server, sessionRepo);
+   let checkoutBaseUrl = process.env.BASE_CHECKOUT_URL || 'http://localhost:7000';
+   try {
+     const rootEnv = path.resolve(__dirname, '../../../.env');
+diff --git a/apps/payment-api/src/routes/admin.routes.js b/apps/payment-api/src/routes/admin.routes.js
+index 1bded92..bcff4b9 100644
+--- a/apps/payment-api/src/routes/admin.routes.js
++++ b/apps/payment-api/src/routes/admin.routes.js
+@@ -1,3 +1,4 @@
++import { effectiveUpiSettings } from '../upi-only.js';
+ import crypto from 'node:crypto';
+ import { HttpServer } from '../server.js';
+ import { PaymentStatus, PaymentMethod, SellingMode, AuditActorType, isValidVpa, toRupeesString, deriveCloudflareRoutes, resolveRuntimeUrls, resolveGmailRedirectUri, createOAuthState, validateOutboundWebhookUrl } from '@youpi/common';
+@@ -6,79 +7,7 @@ import { globalTunnelManager } from '../services/tunnel-manager.js';
+ import { formatQrDataUrl } from '../services/whatsapp-berry.service.js';
+ 
+ function resolveSellingModeAndMethods(body, currentBranding = {}) {
+-  const inputBranding = body.branding || {};
+-  let sellingMode = body.sellingMode || inputBranding.sellingMode || currentBranding.sellingMode;
+-  let rawMethods = body.enabledPaymentMethods || inputBranding.enabledPaymentMethods;
+-
+-  if (!sellingMode) {
+-    if (inputBranding.counterInstructions || currentBranding.counterInstructions || body.cashEnabled !== undefined || body.cardEnabled !== undefined) {
+-      sellingMode = SellingMode.OFFLINE;
+-    } else if (rawMethods && (rawMethods.includes(PaymentMethod.CASH_COUNTER) || rawMethods.includes(PaymentMethod.CARD_COUNTER))) {
+-      sellingMode = SellingMode.OFFLINE;
+-    } else if (currentBranding.enabledPaymentMethods && (currentBranding.enabledPaymentMethods.includes(PaymentMethod.CASH_COUNTER) || currentBranding.enabledPaymentMethods.includes(PaymentMethod.CARD_COUNTER))) {
+-      sellingMode = SellingMode.OFFLINE;
+-    } else {
+-      sellingMode = SellingMode.ONLINE;
+-    }
+-  }
+-
+-  const codOn = body.codEnabled !== undefined 
+-    ? Boolean(body.codEnabled) 
+-    : (inputBranding.codEnabled !== undefined 
+-        ? Boolean(inputBranding.codEnabled) 
+-        : (currentBranding.codEnabled !== undefined ? Boolean(currentBranding.codEnabled) : (currentBranding.enabledPaymentMethods ? currentBranding.enabledPaymentMethods.includes(PaymentMethod.COD) : true)));
+-
+-  const cashOn = body.cashEnabled !== undefined 
+-    ? Boolean(body.cashEnabled) 
+-    : (inputBranding.cashEnabled !== undefined 
+-        ? Boolean(inputBranding.cashEnabled) 
+-        : (currentBranding.cashEnabled !== undefined ? Boolean(currentBranding.cashEnabled) : (currentBranding.enabledPaymentMethods ? currentBranding.enabledPaymentMethods.includes(PaymentMethod.CASH_COUNTER) : true)));
+-
+-  const cardOn = body.cardEnabled !== undefined 
+-    ? Boolean(body.cardEnabled) 
+-    : (inputBranding.cardEnabled !== undefined 
+-        ? Boolean(inputBranding.cardEnabled) 
+-        : (currentBranding.cardEnabled !== undefined ? Boolean(currentBranding.cardEnabled) : (currentBranding.enabledPaymentMethods ? currentBranding.enabledPaymentMethods.includes(PaymentMethod.CARD_COUNTER) : true)));
+-
+-  if (!rawMethods) {
+-    rawMethods = [PaymentMethod.UPI];
+-    if (sellingMode === SellingMode.ONLINE) {
+-      if (codOn) rawMethods.push(PaymentMethod.COD);
+-    } else {
+-      if (cashOn) rawMethods.push(PaymentMethod.CASH_COUNTER);
+-      if (cardOn) rawMethods.push(PaymentMethod.CARD_COUNTER);
+-    }
+-  }
+-
+-  // Strictly filter based on selling mode:
+-  // UPI is always enabled in both modes! Turning it off isn't allowed!
+-  const sanitized = [PaymentMethod.UPI];
+-  if (sellingMode === SellingMode.ONLINE) {
+-    if (rawMethods.includes(PaymentMethod.COD) && codOn) {
+-      sanitized.push(PaymentMethod.COD);
+-    } else if (body.codEnabled === true) {
+-      sanitized.push(PaymentMethod.COD);
+-    }
+-  } else {
+-    if (rawMethods.includes(PaymentMethod.CASH_COUNTER) && cashOn) {
+-      sanitized.push(PaymentMethod.CASH_COUNTER);
+-    } else if (body.cashEnabled === true) {
+-      sanitized.push(PaymentMethod.CASH_COUNTER);
+-    }
+-    if (rawMethods.includes(PaymentMethod.CARD_COUNTER) && cardOn) {
+-      sanitized.push(PaymentMethod.CARD_COUNTER);
+-    } else if (body.cardEnabled === true) {
+-      sanitized.push(PaymentMethod.CARD_COUNTER);
+-    }
+-  }
+-
+-  return {
+-    sellingMode,
+-    enabledPaymentMethods: sanitized,
+-    codEnabled: sanitized.includes(PaymentMethod.COD) || (sellingMode !== SellingMode.ONLINE ? codOn : false),
+-    cashEnabled: sanitized.includes(PaymentMethod.CASH_COUNTER) || (sellingMode !== SellingMode.OFFLINE ? cashOn : false),
+-    cardEnabled: sanitized.includes(PaymentMethod.CARD_COUNTER) || (sellingMode !== SellingMode.OFFLINE ? cardOn : false)
+-  };
++  return { sellingMode: SellingMode.ONLINE, enabledPaymentMethods: [PaymentMethod.UPI], codEnabled: false, cashEnabled: false, cardEnabled: false };
+ }
+ 
+ /**
+@@ -261,72 +190,6 @@ export function registerAdminRoutes(server, ctx) {
+     HttpServer.json(res, 200, { success: true, ticket });
+   });
+ 
+-  // POST /api/v1/admin/counter-confirm
+-  server.post('/api/v1/admin/counter-confirm', async (req, res) => {
+-    const body = await HttpServer.parseBody(req);
+-    const { paymentId, operatorId, method } = body;
+-
+-    if (!paymentId || !operatorId) {
+-      HttpServer.json(res, 400, { error: 'paymentId and operatorId are required.' });
+-      return;
+-    }
+-
+-    const session = ctx.sessionRepo.findById(paymentId);
+-    if (!session) {
+-      HttpServer.json(res, 404, { error: `Payment session not found: ${paymentId}` });
+-      return;
+-    }
+-
+-    // Manual confirmation is only valid for counter payments still awaiting settlement.
+-    // A UPI session must only reach SUCCESS through the verification engine.
+-    if (session.method !== PaymentMethod.CASH_COUNTER && session.method !== PaymentMethod.CARD_COUNTER) {
+-      HttpServer.json(res, 400, { error: `Manual confirmation is only allowed for counter payments (session method is '${session.method}').` });
+-      return;
+-    }
+-    if ([PaymentStatus.SUCCESS, PaymentStatus.FAILED, PaymentStatus.EXPIRED, PaymentStatus.CANCELLED].includes(session.status)) {
+-      HttpServer.json(res, 409, { error: `Cannot confirm a payment in terminal status '${session.status}'.` });
+-      return;
+-    }
+-
+-    const updated = ctx.sessionRepo.transitionToTerminal(paymentId, PaymentStatus.SUCCESS);
+-
+-    ctx.auditRepo.log({
+-      merchantId: session.merchantId,
+-      entityType: 'PAYMENT_SESSION',
+-      entityId: paymentId,
+-      action: 'COUNTER_MANUAL_PAYMENT_CONFIRMED',
+-      actorType: AuditActorType.ADMIN,
+-      actorId: operatorId,
+-      details: { method: method || PaymentMethod.CASH_COUNTER, operatorId }
+-    });
+-
+-    server.broadcastSse(paymentId, 'status_change', {
+-      status: PaymentStatus.SUCCESS,
+-      method: method || PaymentMethod.CASH_COUNTER,
+-      orderId: session.orderId
+-    });
+-    server.broadcastSse(paymentId, 'state_change', {
+-      status: PaymentStatus.SUCCESS,
+-      method: method || PaymentMethod.CASH_COUNTER,
+-      orderId: session.orderId
+-    });
+-
+-    if (ctx.eventEmitter) {
+-      ctx.eventEmitter.emit('PAYMENT.SUCCESS', {
+-        paymentId: updated.id,
+-        orderId: session.orderId,
+-        merchantId: session.merchantId,
+-        amountPaise: session.amountPaise
+-      });
+-    }
+-
+-    HttpServer.json(res, 200, {
+-      confirmed: true,
+-      paymentId: updated.id,
+-      status: PaymentStatus.SUCCESS,
+-      orderId: session.orderId
+-    });
+-  });
+ 
+   // POST /api/v1/admin/counter-decline (Declines/Rejects manual cash or card counter payment)
+   server.post('/api/v1/admin/counter-decline', async (req, res) => {
+@@ -642,7 +505,7 @@ export function registerAdminRoutes(server, ctx) {
+     }
+ 
+     const account = ctx.accountRepo.findActiveForMerchant(merchant.id);
+-    const branding = merchant.branding || {};
++    const branding = effectiveUpiSettings(merchant.branding || {});
+     const modeResult = resolveSellingModeAndMethods({}, branding);
+     const sellingMode = modeResult.sellingMode;
+     const enabledPaymentMethods = modeResult.enabledPaymentMethods;
+@@ -805,11 +668,11 @@ export function registerAdminRoutes(server, ctx) {
+       supportMobiles: updated.branding?.supportMobiles || [],
+       privacyPolicyUrl: updated.branding?.privacyPolicyUrl || '',
+       sellingMode: updated.branding?.sellingMode || 'ONLINE',
+-      enabledPaymentMethods: updated.branding?.enabledPaymentMethods || ['UPI'],
+-      codEnabled: (updated.branding?.enabledPaymentMethods || []).includes('COD'),
+-      cashEnabled: (updated.branding?.enabledPaymentMethods || []).includes('CASH_COUNTER'),
+-      cardEnabled: (updated.branding?.enabledPaymentMethods || []).includes('CARD_COUNTER'),
+-      branding: updated.branding
++      enabledPaymentMethods: ['UPI'],
++      codEnabled: false,
++      cashEnabled: false,
++      cardEnabled: false,
++      branding: effectiveUpiSettings(updated.branding)
+     });
+   });
+ 
+@@ -823,7 +686,7 @@ export function registerAdminRoutes(server, ctx) {
+       return;
+     }
+ 
+-    const branding = merchant.branding || {};
++    const branding = effectiveUpiSettings(merchant.branding || {});
+     const modeResult = resolveSellingModeAndMethods({}, branding);
+     const sellingMode = modeResult.sellingMode;
+     const enabledPaymentMethods = modeResult.enabledPaymentMethods;
+@@ -1048,67 +911,20 @@ export function registerAdminRoutes(server, ctx) {
+       supportMobiles: updated.branding?.supportMobiles || [],
+       privacyPolicyUrl: updated.branding?.privacyPolicyUrl || '',
+       sellingMode: updated.branding?.sellingMode || 'ONLINE',
+-      enabledPaymentMethods: updated.branding?.enabledPaymentMethods || ['UPI'],
+-      codEnabled: (updated.branding?.enabledPaymentMethods || []).includes('COD'),
+-      cashEnabled: (updated.branding?.enabledPaymentMethods || []).includes('CASH_COUNTER'),
+-      cardEnabled: (updated.branding?.enabledPaymentMethods || []).includes('CARD_COUNTER'),
++      enabledPaymentMethods: ['UPI'],
++      codEnabled: false,
++      cashEnabled: false,
++      cardEnabled: false,
+       envMode: updated.branding?.envMode || 'localhost',
+       domainPrefix: updated.branding?.domainPrefix || 'pay',
+       domainTld: updated.branding?.domainTld || '',
+       customDomain: updated.branding?.customDomain || '',
+       cloudflareTunnelCommand: updated.branding?.cloudflareTunnelCommand || '',
+       tunnelStatus: globalTunnelManager.getStatus(),
+-      branding: updated.branding
++      branding: effectiveUpiSettings(updated.branding)
+     });
+   });
+ 
+-  // GET /api/v1/admin/cod-orders (List Cash on Delivery orders)
+-  server.get('/api/v1/admin/cod-orders', async (req, res) => {
+-    let merchant = req.query.merchantId ? ctx.merchantRepo.findById(req.query.merchantId) : null;
+-    if (!merchant) merchant = ctx.merchantRepo.findAll()[0];
+-
+-    if (!merchant) {
+-      HttpServer.json(res, 404, { error: 'Merchant not found' });
+-      return;
+-    }
+-
+-    const codSessions = ctx.sessionRepo.db.query(
+-      `SELECT ps.*, c.name as customer_name, c.mobile_number as customer_mobile, c.email as customer_email
+-       FROM payment_sessions ps
+-       LEFT JOIN customers c ON ps.customer_id = c.id
+-       WHERE ps.merchant_id = ? AND ps.method = 'COD'
+-       ORDER BY ps.created_at DESC LIMIT 50`,
+-      [merchant.id]
+-    );
+-
+-    const formatted = codSessions.map(r => ({
+-      paymentId: r.id,
+-      id: r.id,
+-      orderId: r.order_id,
+-      amount: toRupeesString(r.amount_paise),
+-      amountPaise: r.amount_paise.toString(),
+-      currency: r.currency,
+-      status: r.status,
+-      method: r.method,
+-      verificationTag: r.verification_tag,
+-      customerName: r.customer_name || 'Customer',
+-      customerPhone: r.customer_mobile || '',
+-      customerEmail: r.customer_email || '',
+-      createdAt: r.created_at,
+-      customer: r.customer_id ? {
+-        id: r.customer_id,
+-        name: r.customer_name,
+-        mobileNumber: r.customer_mobile,
+-        email: r.customer_email
+-      } : null
+-    }));
+-
+-    HttpServer.json(res, 200, {
+-      total: formatted.length,
+-      codOrders: formatted,
+-      orders: formatted
+-    });
+-  });
+ 
+   // GET /api/v1/admin/stream (SSE for Live Admin Counter & Queue Events)
+   server.get('/api/v1/admin/stream', async (req, res) => {
+diff --git a/apps/payment-api/src/routes/checkout.routes.js b/apps/payment-api/src/routes/checkout.routes.js
+index f5fc534..bad7f29 100644
+--- a/apps/payment-api/src/routes/checkout.routes.js
++++ b/apps/payment-api/src/routes/checkout.routes.js
+@@ -1,3 +1,4 @@
++import { effectiveUpiSettings } from '../upi-only.js';
+ import { HttpServer } from '../server.js';
+ import { toRupeesString, buildUpiUri, PaymentStatus, PaymentMethod, UPI_PROVIDERS, isInternalServiceRequest } from '@youpi/common';
+ import { validateSessionDeviceAccess } from '@youpi/core';
+@@ -9,10 +10,6 @@ import { validateSessionDeviceAccess } from '@youpi/core';
+  * 2. If session is bound to Device A, Device B receives DUPLICATE_SESSION_DETECTED (HTTP 409).
+  */
+ function checkSessionDeviceAccess(session, req, body = null, ctx = null) {
+-  // If session is already in a terminal state, allow access so terminal status can be rendered
+-  if ([PaymentStatus.SUCCESS, PaymentStatus.FAILED, PaymentStatus.EXPIRED, PaymentStatus.CANCELLED].includes(session.status)) {
+-    return { allowed: true, boundDeviceId: session.deviceId, isTerminal: true };
+-  }
+ 
+   // Only a co-located service holding the shared internal token may bypass device blocking.
+   // The `X-Internal-Render` flag on its own is attacker-controlled and proves nothing.
+@@ -55,15 +52,15 @@ function checkSessionDeviceAccess(session, req, body = null, ctx = null) {
+   }
+ 
+   // If session HAS a bound device:
+-  // Allow if requesting device matches bound device OR if requesting device is omitted on same session
+-  if (!requestingDeviceId || requestingDeviceId === session.deviceId) {
++  // A missing device identifier must not bypass an existing binding.
++  if (requestingDeviceId === session.deviceId) {
+     if (requestingDeviceId && ctx?.deviceRepo) {
+       ctx.deviceRepo.touch(requestingDeviceId);
+     }
+     return { allowed: true, boundDeviceId: session.deviceId };
+   }
+ 
+-  // Device mismatch: only reject if an explicitly DIFFERENT device ID was provided!
++  // Do not disclose the bound device identifier to an untrusted caller.
+   return {
+     allowed: false,
+     statusCode: 409,
+@@ -73,8 +70,7 @@ function checkSessionDeviceAccess(session, req, body = null, ctx = null) {
+       conflicting_session_id: session.id,
+       action: 'END_SESSION_AND_CREATE_NEW',
+       message: 'This payment session was created on another device. For security reasons, this session cannot be continued from this device.',
+-      boundDeviceId: session.deviceId,
+-      requestingDeviceId
++
+     }
+   };
+ }
+@@ -267,9 +263,7 @@ async function checkUpiServerHealth(ctx, enabledMethods = [], sellingMode = 'OFF
+   // Green: Both SMS + Gmail connected -> healthy
+   // Yellow: Either SMS OR Gmail connected -> extra processing time
+   // Red: Neither connected -> server facing issues
+-  const hasCash = sellingMode === 'ONLINE'
+-    ? enabledMethods.includes('COD')
+-    : enabledMethods.includes('CASH_COUNTER');
++  const hasCash = false;
+ 
+   if (smsHealthy && gmailHealthy) {
+     return {
+@@ -321,6 +315,13 @@ export function registerCheckoutRoutes(server, ctx) {
+       return;
+     }
+ 
++    // Device-level session binding validation (Section 8 & 9)
++    const deviceAccess = checkSessionDeviceAccess(session, req, null, ctx);
++    if (!deviceAccess.allowed) {
++      HttpServer.json(res, deviceAccess.statusCode || 409, deviceAccess.body);
++      return;
++    }
++
+     // Server-side Ban & Fraud Enforcement
+     const isCustomerBanned = session.customerId && ctx.customerRepo && ctx.customerRepo.isBanned(session.customerId);
+     const isSessionBlocked = session.status === 'BLOCKED' || (session.metadata?.banReason === 'FRAUDULENT_PAYMENT_INJECTION');
+@@ -370,7 +371,7 @@ export function registerCheckoutRoutes(server, ctx) {
+       const branding = {
+         appName: 'YOUPI PG',
+         primaryColor: '#2563eb',
+-        ...(merchant?.branding || {})
++        ...effectiveUpiSettings(merchant?.branding || {})
+       };
+       HttpServer.json(res, 200, {
+         id: session.id,
+@@ -387,13 +388,6 @@ export function registerCheckoutRoutes(server, ctx) {
+       return;
+     }
+ 
+-    // Device-level session binding validation (Section 8 & 9)
+-    const deviceAccess = checkSessionDeviceAccess(session, req, null, ctx);
+-    if (!deviceAccess.allowed) {
+-      HttpServer.json(res, deviceAccess.statusCode || 409, deviceAccess.body);
+-      return;
+-    }
+-
+     const merchant = ctx.merchantRepo.findById(session.merchantId);
+     const snapshot = session.metadata?.receivingAccountSnapshot;
+     let receivingAccount = session.receivingAccountId
+@@ -448,7 +442,7 @@ export function registerCheckoutRoutes(server, ctx) {
+       logoUrl: null,
+       counterInstructions: 'Please visit the billing counter and present this screen to the cashier.',
+       cardCounterInstructions: 'Please swipe, insert, or tap your credit or debit card on the store POS terminal at the billing desk.',
+-      ...(merchant?.branding || {})
++      ...effectiveUpiSettings(merchant?.branding || {})
+     };
+ 
+     const supportEmails = branding.supportEmails || (merchant?.contactEmail ? [merchant.contactEmail] : []);
+@@ -461,20 +455,7 @@ export function registerCheckoutRoutes(server, ctx) {
+     const sellingMode = merchantBranding.sellingMode || (isCounterSession ? 'OFFLINE' : 'ONLINE');
+     branding.sellingMode = sellingMode;
+ 
+-    let rawEnabled = merchantBranding.enabledPaymentMethods || (sellingMode === 'ONLINE' ? ['UPI', 'COD'] : ['UPI', 'CASH_COUNTER', 'CARD_COUNTER']);
+-    let enabledMethods = ['UPI'];
+-    if (sellingMode === 'ONLINE') {
+-      if (rawEnabled.includes('COD')) {
+-        enabledMethods.push('COD');
+-      }
+-    } else {
+-      if (rawEnabled.includes('CASH_COUNTER')) {
+-        enabledMethods.push('CASH_COUNTER');
+-      }
+-      if (rawEnabled.includes('CARD_COUNTER')) {
+-        enabledMethods.push('CARD_COUNTER');
+-      }
+-    }
++    const enabledMethods = ['UPI'];
+ 
+     const authHeader = req.headers['authorization'] || '';
+     const bearerToken = authHeader.startsWith('Bearer ') ? authHeader.slice(7).trim() : (req.headers['x-customer-token'] || null);
+@@ -576,14 +557,14 @@ export function registerCheckoutRoutes(server, ctx) {
+       status: session.status,
+       reason: session.metadata?.cancelledReason || null,
+       cancelledReason: session.metadata?.cancelledReason || null,
+-      metadata: session.metadata || {},
++      metadata: {}, // No arbitrary merchant metadata in customer-facing state.
+       method: session.method,
+       verificationLevel: session.verificationLevel || 0,
+       verificationSources: session.verificationSources || [],
+       verificationTag: session.verificationTag || 'UNVERIFIED',
+       sellingMode,
+       enabledMethods,
+-      customer,
++      customer: null, // Customer PII is unnecessary for UPI QR checkout.
+       hasActiveSessionConflict,
+       conflictingSession,
+       queuePosition: session.queuePosition || 0,
+@@ -977,390 +958,15 @@ export function registerCheckoutRoutes(server, ctx) {
+     });
+   });
+ 
+-  // POST /api/v1/checkout/:id/select-method (Switches payment method e.g. Cash/Card at Counter, COD, or UPI)
+-  server.post('/api/v1/checkout/:id/select-method', async (req, res, params) => {
+-    const body = await HttpServer.parseBody(req);
+-    const { method } = body;
+-
+-    const session = ctx.sessionRepo.findById(params.id);
+-    if (!session) {
+-      HttpServer.json(res, 404, { error: `Payment session not found: ${params.id}` });
+-      return;
+-    }
+-
+-    const deviceAccess = checkSessionDeviceAccess(session, req, body, ctx);
+-    if (!deviceAccess.allowed) {
+-      HttpServer.json(res, deviceAccess.statusCode || 409, deviceAccess.body);
+-      return;
+-    }
+-
+-    if ([PaymentStatus.SUCCESS, PaymentStatus.FAILED, PaymentStatus.EXPIRED, PaymentStatus.CANCELLED].includes(session.status)) {
+-      HttpServer.json(res, 400, { error: `Cannot switch payment method for terminal session in status '${session.status}'` });
+-      return;
+-    }
+-
+-    const validMethods = [PaymentMethod.UPI, PaymentMethod.COD, PaymentMethod.CASH_COUNTER, PaymentMethod.CARD_COUNTER];
+-    if (!validMethods.includes(method)) {
+-      HttpServer.json(res, 400, { error: `Invalid payment method '${method}'. Allowed: ${validMethods.join(', ')}` });
+-      return;
+-    }
+-
+-    const merchant = ctx.merchantRepo.findById(session.merchantId);
+-    const merchantBranding = merchant?.branding || {};
+-    const isCounterRequested = method === PaymentMethod.CASH_COUNTER || method === PaymentMethod.CARD_COUNTER;
+-    let sellingMode = merchantBranding.sellingMode || (isCounterRequested ? 'OFFLINE' : 'ONLINE');
+-    let rawEnabled = merchantBranding.enabledPaymentMethods || (sellingMode === 'ONLINE' ? ['UPI', 'COD'] : ['UPI', 'CASH_COUNTER', 'CARD_COUNTER']);
+-    let enabledMethods = ['UPI'];
+-    if (sellingMode === 'ONLINE') {
+-      if (rawEnabled.includes('COD')) enabledMethods.push('COD');
+-    } else {
+-      if (rawEnabled.includes('CASH_COUNTER')) enabledMethods.push('CASH_COUNTER');
+-      if (rawEnabled.includes('CARD_COUNTER')) enabledMethods.push('CARD_COUNTER');
+-    }
+-
+-    if (!enabledMethods.includes(method)) {
+-      HttpServer.json(res, 400, { error: `Payment method '${method}' is disabled by the merchant.` });
+-      return;
+-    }
+-
+-    const previousMethod = session.method;
+-    const isCounter = method === PaymentMethod.CASH_COUNTER || method === PaymentMethod.CARD_COUNTER;
+-    const isCod = method === PaymentMethod.COD;
+-    const wasCounter = previousMethod === PaymentMethod.CASH_COUNTER || previousMethod === PaymentMethod.CARD_COUNTER;
+-    const wasCod = previousMethod === PaymentMethod.COD;
+-    const wasUpi = previousMethod === PaymentMethod.UPI || (!wasCounter && !wasCod);
+-    const nowIso = new Date().toISOString();
+-
+-    let updates = `method = ?, updated_at = ?`;
+-    let updateParams = [method, nowIso];
+-
+-    let oldReceivingAccountId = null;
+-    let timeRemainingSeconds = 0;
+-    let newExpiresAt = null;
+-
+-    if (isCounter || isCod) {
+-      // Switching from UPI to COD or Counter:
+-      // Invariant: Concurrency slot and queue window are strictly for UPI payments.
+-      // Immediately invalidate and cancel the UPI queue reservation and its active timer.
+-      if (session.receivingAccountId) {
+-        oldReceivingAccountId = session.receivingAccountId;
+-      }
+-
+-      if (ctx.timingEngine) {
+-        ctx.timingEngine.cancelActiveTimer(session.id);
+-      }
+-
+-      if (isCod) {
+-        // In Online Selling Mode, if Cash on Delivery is selected:
+-        // Run a parallel standalone timer of 5 minutes (300 seconds) which is NOT part of the queue.
+-        newExpiresAt = new Date(Date.now() + 5 * 60 * 1000);
+-        updates += `, receiving_account_id = NULL, status = 'ACTIVE', queue_position = 0, expires_at = ?`;
+-        updateParams.push(newExpiresAt.toISOString());
+-        session.receivingAccountId = null;
+-        session.status = PaymentStatus.ACTIVE;
+-        session.queuePosition = 0;
+-        session.expiresAt = newExpiresAt;
+-
+-        // Start parallel 5-minute timer in timingEngine
+-        if (ctx.timingEngine) {
+-          ctx.timingEngine.startActiveTimer(session.id, newExpiresAt);
+-        }
+-        timeRemainingSeconds = 300;
+-      } else {
+-        // Offline counter payment (CASH_COUNTER or CARD_COUNTER)
+-        updates += `, receiving_account_id = NULL, status = 'ACTIVE', queue_position = 0, expires_at = NULL`;
+-        session.receivingAccountId = null;
+-        session.status = PaymentStatus.ACTIVE;
+-        session.queuePosition = 0;
+-        session.expiresAt = null;
+-        timeRemainingSeconds = 0;
+-      }
+-    } else if (!isCounter && !isCod && (wasCounter || wasCod)) {
+-      // Switching back to UPI:
+-      // Cancel any running parallel COD timer
+-      if (ctx.timingEngine) {
+-        ctx.timingEngine.cancelActiveTimer(session.id);
+-      }
+-
+-      // Re-resolve active receiving account and enqueue/activate into UPI queue
+-      const receivingAccount = ctx.accountRepo.findActiveForMerchant(session.merchantId);
+-      if (receivingAccount) {
+-        const queueResult = ctx.queueEngine.enqueueOrActivate(session.id, receivingAccount.id);
+-        updates += `, receiving_account_id = ?, status = ?, queue_position = ?, expires_at = ?`;
+-        updateParams.push(
+-          receivingAccount.id,
+-          queueResult.status,
+-          queueResult.queuePosition,
+-          queueResult.expiresAt ? queueResult.expiresAt.toISOString() : null
+-        );
+-        session.receivingAccountId = receivingAccount.id;
+-        session.status = queueResult.status;
+-        session.queuePosition = queueResult.queuePosition;
+-        session.expiresAt = queueResult.expiresAt;
+-
+-        if (queueResult.expiresAt && ctx.timingEngine && queueResult.status === PaymentStatus.ACTIVE) {
+-          ctx.timingEngine.startActiveTimer(session.id, queueResult.expiresAt);
+-        }
+-        if (queueResult.expiresAt) {
+-          timeRemainingSeconds = Math.max(0, Math.ceil((queueResult.expiresAt.getTime() - Date.now()) / 1000));
+-        }
+-      }
+-    } else if (!isCounter && !isCod && session.expiresAt) {
+-      timeRemainingSeconds = Math.max(0, Math.ceil((session.expiresAt.getTime() - Date.now()) / 1000));
+-    }
+-
+-    updateParams.push(session.id);
+-    ctx.db.execute(`UPDATE payment_sessions SET ${updates} WHERE id = ?`, updateParams);
+-    session.method = method;
+-
+-    // If slot was released on the receiving account, update receiving account and promote waiting queued sessions!
+-    if (oldReceivingAccountId) {
+-      ctx.db.execute(`
+-        UPDATE payment_receiving_accounts
+-        SET is_slot_busy = 0, current_active_session_id = NULL, updated_at = ?
+-        WHERE id = ? AND (current_active_session_id = ? OR current_active_session_id IS NULL)
+-      `, [nowIso, oldReceivingAccountId, session.id]);
+-
+-      const promoted = ctx.queueEngine.promoteNext(oldReceivingAccountId);
+-      if (promoted) {
+-        if (promoted.expiresAt && ctx.timingEngine) {
+-          ctx.timingEngine.startActiveTimer(promoted.id, promoted.expiresAt);
+-        }
+-        server.broadcastSse(promoted.id, 'status_change', {
+-          status: PaymentStatus.ACTIVE,
+-          queuePosition: 0,
+-          expiresAt: promoted.expiresAt
+-        });
+-        server.broadcastSse(`queue_${oldReceivingAccountId}`, 'queue_update', {
+-          promotedId: promoted.id
+-        });
+-      } else {
+-        ctx.sessionRepo.reindexQueue(oldReceivingAccountId);
+-      }
+-    }
+-
+-    // Broadcast SSE update to customer session channel
+-    server.broadcastSse(session.id, 'status_change', {
+-      status: session.status,
+-      method: session.method,
+-      queuePosition: session.queuePosition || 0,
+-      timeRemainingSeconds,
+-      expiresAt: session.expiresAt ? session.expiresAt.toISOString() : null
+-    });
+-
+-    // Broadcast live event to merchant dashboard counter desk if counter method
+-    if (isCounter) {
+-      server.broadcastSse('admin_counter_events', 'counter_payment_requested', {
+-        paymentId: session.id,
+-        orderId: session.orderId,
+-        amountPaise: session.amountPaise.toString(),
+-        method: session.method,
+-        status: session.status,
+-        createdAt: session.createdAt
+-      });
+-    }
+-
+-    if (ctx.auditRepo) {
+-      ctx.auditRepo.log({
+-        merchantId: session.merchantId,
+-        entityType: 'PAYMENT_SESSION',
+-        entityId: session.id,
+-        action: 'PAYMENT_METHOD_SWITCHED',
+-        actorType: 'CUSTOMER',
+-        details: { from: previousMethod, to: method }
+-      });
+-    }
+-
+-    if (ctx.eventEmitter) {
+-      ctx.eventEmitter.emit('PAYMENT.METHOD_SWITCHED', {
+-        paymentId: session.id,
+-        orderId: session.orderId,
+-        merchantId: session.merchantId,
+-        fromMethod: previousMethod,
+-        toMethod: method
+-      });
+-    }
+-
+-    const counterInstr = method === PaymentMethod.CARD_COUNTER
+-      ? (merchantBranding.cardCounterInstructions || merchantBranding.counterInstructions || 'Please visit the billing counter and pay via Card POS.')
+-      : (merchantBranding.counterInstructions || 'Please visit the billing counter and present this screen to the cashier.');
+-
+-    HttpServer.json(res, 200, {
+-      success: true,
+-      paymentId: session.id,
+-      method: session.method,
+-      status: session.status,
+-      timeRemainingSeconds,
+-      expiresAt: session.expiresAt ? session.expiresAt.toISOString() : null,
+-      counterInstructions: counterInstr
+-    });
+-  });
+-
+-  // POST /api/v1/checkout/:id/confirm-cod (Confirm Cash on Delivery Order)
+-  server.post('/api/v1/checkout/:id/confirm-cod', async (req, res, params) => {
+-    const session = ctx.sessionRepo.findById(params.id);
+-    if (!session) {
+-      HttpServer.json(res, 404, { error: `Payment session not found: ${params.id}` });
+-      return;
+-    }
+-
+-    const deviceAccess = checkSessionDeviceAccess(session, req, null, ctx);
+-    if (!deviceAccess.allowed) {
+-      HttpServer.json(res, deviceAccess.statusCode || 409, deviceAccess.body);
+-      return;
+-    }
+-
+-    // PROCESSING = a UPI payment was already detected and is being verified; switching it to COD would drop that payment.
+-    if ([PaymentStatus.SUCCESS, PaymentStatus.FAILED, PaymentStatus.EXPIRED, PaymentStatus.CANCELLED, PaymentStatus.PROCESSING].includes(session.status)) {
+-      HttpServer.json(res, 400, { error: `Cannot place COD order for session in status '${session.status}'` });
+-      return;
+-    }
+-
+-    const merchant = ctx.merchantRepo.findById(session.merchantId);
+-    const branding = merchant?.branding || {};
+-    const sellingMode = branding.sellingMode || (branding.enabledPaymentMethods?.some(m => m === 'CASH_COUNTER' || m === 'CARD_COUNTER') ? 'OFFLINE' : 'ONLINE');
+-    if (sellingMode !== 'ONLINE') {
+-      HttpServer.json(res, 400, { error: 'Cash on Delivery is only available in Online Selling Mode.' });
+-      return;
+-    }
+-
+-    const rawEnabled = branding.enabledPaymentMethods || ['UPI', 'COD'];
+-    if (!rawEnabled.includes('COD')) {
+-      HttpServer.json(res, 400, { error: 'Cash on Delivery is currently disabled by merchant.' });
+-      return;
+-    }
+-
+-    // Cancel Active Timer
+-    if (ctx.timingEngine) {
+-      if (typeof ctx.timingEngine.cancelActiveTimer === 'function') {
+-        ctx.timingEngine.cancelActiveTimer(session.id);
+-      }
+-    }
+-
+-    // Update payment session to SUCCESS with COD method and release slot
+-    const nowIso = new Date().toISOString();
+-    const oldReceivingAccountId = session.receivingAccountId || session.receiving_account_id;
+-
+-    ctx.sessionRepo.db.execute(`
+-      UPDATE payment_sessions
+-      SET method = 'COD',
+-          status = 'SUCCESS',
+-          verification_tag = 'COD_ORDER_PLACED',
+-          verification_level = 1,
+-          completed_at = ?,
+-          receiving_account_id = NULL,
+-          updated_at = ?
+-      WHERE id = ?
+-    `, [nowIso, nowIso, session.id]);
+-
+-    // Release receiving account slot and promote next queued customer
+-    if (oldReceivingAccountId) {
+-      ctx.sessionRepo.db.execute(`
+-        UPDATE payment_receiving_accounts
+-        SET is_slot_busy = 0, current_active_session_id = NULL, updated_at = ?
+-        WHERE id = ?
+-      `, [nowIso, oldReceivingAccountId]);
+-
+-      const promoted = ctx.queueEngine.promoteNext(oldReceivingAccountId);
+-      if (promoted) {
+-        if (promoted.expiresAt && ctx.timingEngine) {
+-          ctx.timingEngine.startActiveTimer(promoted.id, promoted.expiresAt);
+-        }
+-        server.broadcastSse(promoted.id, 'status_change', {
+-          status: PaymentStatus.ACTIVE,
+-          queuePosition: 0,
+-          expiresAt: promoted.expiresAt
+-        });
+-        server.broadcastSse(`queue_${oldReceivingAccountId}`, 'queue_update', {
+-          promotedId: promoted.id
+-        });
+-      }
+-    }
+-
+-    const updated = ctx.sessionRepo.findById(session.id);
+-
+-    let customer = null;
+-    if (updated.customerId && ctx.customerRepo) {
+-      const c = ctx.customerRepo.findById(updated.customerId);
+-      if (c) {
+-        customer = {
+-          id: c.id,
+-          name: c.name,
+-          email: c.email,
+-          mobileNumber: c.mobileNumber
+-        };
+-      }
+-    }
+-
+-    if (ctx.auditRepo) {
+-      ctx.auditRepo.log({
+-        merchantId: updated.merchantId,
+-        entityType: 'PAYMENT_SESSION',
+-        entityId: updated.id,
+-        action: 'COD_ORDER_PLACED',
+-        actorType: 'CUSTOMER',
+-        details: { orderId: updated.orderId, amountPaise: updated.amountPaise.toString() }
+-      });
+-    }
+-
+-    // Broadcast SSE
+-    server.broadcastSse(params.id, 'status_change', {
+-      status: 'SUCCESS',
+-      method: 'COD',
+-      verificationTag: 'COD_ORDER_PLACED'
+-    });
+-
+-    // Webhook dispatch
+-    if (ctx.webhookEngine && merchant && merchant.webhookUrl) {
+-      ctx.webhookEngine.dispatch('SUCCESS', updated).catch(err => console.error('COD Webhook dispatch failed:', err.message));
+-    }
+-
+-    HttpServer.json(res, 200, {
+-      success: true,
+-      paymentId: updated.id,
+-      orderId: updated.orderId,
+-      amount: toRupeesString(updated.amountPaise),
+-      amountPaise: updated.amountPaise.toString(),
+-      currency: updated.currency,
+-      method: 'COD',
+-      status: 'SUCCESS',
+-      verificationTag: 'COD_ORDER_PLACED',
+-      customer,
+-      returnUrl: session.returnUrl
+-    });
+-  });
+-
+-  // GET /api/v1/checkout/:id/cod (Query COD order info)
+-  server.get('/api/v1/checkout/:id/cod', async (req, res, params) => {
+-    const session = ctx.sessionRepo.findById(params.id);
+-    if (!session) {
+-      HttpServer.json(res, 404, { error: `Payment session not found: ${params.id}` });
+-      return;
+-    }
+-    let customer = null;
+-    if (session.customerId && ctx.customerRepo) {
+-      const c = ctx.customerRepo.findById(session.customerId);
+-      if (c) {
+-        customer = {
+-          id: c.id,
+-          name: c.name,
+-          email: c.email,
+-          mobileNumber: c.mobileNumber
+-        };
+-      }
+-    }
+-    HttpServer.json(res, 200, {
+-      paymentId: session.id,
+-      orderId: session.orderId,
+-      amount: toRupeesString(session.amountPaise),
+-      amountPaise: session.amountPaise.toString(),
+-      currency: session.currency,
+-      method: session.method,
+-      status: session.status,
+-      verificationTag: session.verificationTag,
+-      customer,
+-      placedAt: session.completedAt || session.createdAt
+-    });
++  // UPI is the only supported method; selecting it never resets the session timer.
++  server.post('/api/v1/checkout/:id/select-method', async (req,res,params) => {
++    const body=await HttpServer.parseBody(req);
++    if(body.method!=='UPI'){HttpServer.json(res,400,{error:'UPI_ONLY'});return;}
++    const session=ctx.sessionRepo.findById(params.id);
++    if(!session){HttpServer.json(res,404,{error:'NOT_FOUND'});return;}
++    const access=checkSessionDeviceAccess(session,req,body,ctx);
++    if(!access.allowed){HttpServer.json(res,access.statusCode||409,access.body);return;}
++    HttpServer.json(res,200,{paymentId:session.id,method:'UPI',status:session.status});
+   });
+ 
+   // POST /api/v1/checkout/:id/expire (Explicit Client Expiry Trigger)
+diff --git a/apps/payment-api/src/routes/payments.routes.js b/apps/payment-api/src/routes/payments.routes.js
+index 1a63fdf..ba6f120 100644
+--- a/apps/payment-api/src/routes/payments.routes.js
++++ b/apps/payment-api/src/routes/payments.routes.js
+@@ -329,90 +329,5 @@ export function registerPaymentRoutes(server, ctx) {
+     });
+   });
+ 
+-  // GET /api/v1/payments/:id/cod (Developer COD Info Endpoint)
+-  server.get('/api/v1/payments/:id/cod', async (req, res, params) => {
+-    const session = ctx.sessionRepo.findById(params.id);
+-    if (!session) {
+-      HttpServer.json(res, 404, { error: `Payment session not found: ${params.id}` });
+-      return;
+-    }
+-
+-    let customer = null;
+-    if (session.customerId && ctx.customerRepo) {
+-      const c = ctx.customerRepo.findById(session.customerId);
+-      if (c) {
+-        customer = {
+-          id: c.id,
+-          name: c.name,
+-          email: c.email,
+-          mobileNumber: c.mobileNumber
+-        };
+-      }
+-    }
+-
+-    HttpServer.json(res, 200, {
+-      paymentId: session.id,
+-      orderId: session.orderId,
+-      amount: toRupeesString(session.amountPaise),
+-      amountPaise: session.amountPaise.toString(),
+-      currency: session.currency,
+-      method: session.method,
+-      status: session.status,
+-      verificationTag: session.verificationTag,
+-      isCod: session.method === 'COD',
+-      customer,
+-      placedAt: session.completedAt ? (session.completedAt.toISOString ? session.completedAt.toISOString() : session.completedAt) : (session.createdAt?.toISOString ? session.createdAt.toISOString() : session.createdAt),
+-      metadata: session.metadata
+-    });
+-  });
+ 
+-  // GET /api/v1/orders/:orderId/cod (Developer COD Info by Merchant Order ID)
+-  server.get('/api/v1/orders/:orderId/cod', async (req, res, params) => {
+-    const merchantId = req.headers['x-merchant-id'] || req.query.merchantId;
+-    let merchant;
+-    if (merchantId) {
+-      merchant = ctx.merchantRepo.findById(merchantId);
+-    } else {
+-      merchant = ctx.merchantRepo.getDefault ? ctx.merchantRepo.getDefault() : (ctx.merchantRepo.findById('00000000-0000-0000-0000-000000000001') || ctx.merchantRepo.findAll()[0]);
+-    }
+-
+-    if (!merchant) {
+-      HttpServer.json(res, 404, { error: 'Merchant not found.' });
+-      return;
+-    }
+-
+-    const session = ctx.sessionRepo.findByOrderId(merchant.id, params.orderId);
+-    if (!session) {
+-      HttpServer.json(res, 404, { error: `Order not found: ${params.orderId}` });
+-      return;
+-    }
+-
+-    let customer = null;
+-    if (session.customerId && ctx.customerRepo) {
+-      const c = ctx.customerRepo.findById(session.customerId);
+-      if (c) {
+-        customer = {
+-          id: c.id,
+-          name: c.name,
+-          email: c.email,
+-          mobileNumber: c.mobileNumber
+-        };
+-      }
+-    }
+-
+-    HttpServer.json(res, 200, {
+-      paymentId: session.id,
+-      orderId: session.orderId,
+-      amount: toRupeesString(session.amountPaise),
+-      amountPaise: session.amountPaise.toString(),
+-      currency: session.currency,
+-      method: session.method,
+-      status: session.status,
+-      verificationTag: session.verificationTag,
+-      isCod: session.method === 'COD',
+-      customer,
+-      placedAt: session.completedAt ? (session.completedAt.toISOString ? session.completedAt.toISOString() : session.completedAt) : (session.createdAt?.toISOString ? session.createdAt.toISOString() : session.createdAt),
+-      metadata: session.metadata
+-    });
+-  });
+ }
+diff --git a/apps/payment-api/src/server.js b/apps/payment-api/src/server.js
+index 8ead048..84d6996 100644
+--- a/apps/payment-api/src/server.js
++++ b/apps/payment-api/src/server.js
+@@ -144,6 +144,7 @@ export class HttpServer {
+    * Parses JSON body from request.
+    */
+   static async parseBody(req) {
++    if (Object.hasOwn(req, 'upiValidatedBody')) return req.upiValidatedBody;
+     return new Promise((resolve, reject) => {
+       let body = '';
+       let tooLarge = false;
+diff --git a/apps/payment-api/src/upi-only.js b/apps/payment-api/src/upi-only.js
+new file mode 100644
+index 0000000..f0ad6b3
+--- /dev/null
++++ b/apps/payment-api/src/upi-only.js
+@@ -0,0 +1,42 @@
++import { HttpServer } from './server.js';
++
++// Historical enums/rows remain readable by the private merchant dashboard.
++// They are never executable checkout or settlement instructions.
++export function assertUpiOnly(input) {
++  if (!input || typeof input !== 'object') return;
++  for (const [key, value] of Object.entries(input)) {
++    if ((['method', 'paymentMethod', 'payment_method'].includes(key) && value !== 'UPI') ||
++        (['enabledMethods', 'enabledPaymentMethods'].includes(key) && (!Array.isArray(value) || value.some(v => v !== 'UPI'))) ||
++        (['codEnabled', 'cashEnabled', 'cardEnabled'].includes(key) && value !== false)) {
++      throw Object.assign(new Error('UPI_ONLY'), { status: 400 });
++    }
++    assertUpiOnly(value);
++  }
++}
++
++export function effectiveUpiSettings(value) {
++  if (!value || typeof value !== 'object' || value instanceof Date) return value;
++  if (Array.isArray(value)) return value.map(effectiveUpiSettings);
++  return Object.fromEntries(Object.entries(value).map(([k,v]) => [k,
++    ['enabledMethods','enabledPaymentMethods'].includes(k) ? ['UPI'] :
++    ['codEnabled','cashEnabled','cardEnabled'].includes(k) ? false : effectiveUpiSettings(v)]));
++}
++
++export function installUpiOnlyGuard(server, sessionRepo) {
++  server.use(async (req,res,pathname) => {
++    if (/\/(?:checkout|payments)\/[^/]+\/(confirm-cod|cod)$/.test(pathname) || /\/orders\/[^/]+\/cod$/.test(pathname) || ['/api/v1/admin/counter-confirm','/api/v1/admin/cod-orders'].includes(pathname)) {
++      HttpServer.json(res,410,{error:'PAYMENT_METHOD_REMOVED'}); return true;
++    }
++    const match=pathname.match(/^\/api\/v1\/(?:checkout|payments)\/([^/]+)(?:\/|$)/);
++    const session=match && sessionRepo.findById(match[1]);
++    if(session && session.method !== 'UPI') {
++      HttpServer.json(res,410,{error:'LEGACY_PAYMENT_METHOD_UNSUPPORTED'}); return true;
++    }
++    if (['POST','PUT','PATCH'].includes(req.method) && /^\/api\/v1\//.test(pathname)) {
++      // Cache the bounded body for the original route, avoiding a second stream read.
++      try { req.upiValidatedBody=await HttpServer.parseBody(req); assertUpiOnly(req.upiValidatedBody); }
++      catch { HttpServer.json(res,400,{error:'UPI_ONLY_OR_INVALID_BODY'}); return true; }
++    }
++    return false;
++  });
++}
+diff --git a/deploy/private/bridge.mjs b/deploy/private/bridge.mjs
+index 9a5b23b..c377904 100644
+--- a/deploy/private/bridge.mjs
++++ b/deploy/private/bridge.mjs
+@@ -55,6 +55,7 @@ export function createPrivateBridge({ db, env, core, checkoutPort = 7000, now =
+   function refreshInvoice(invoice) {
+     if(!invoice)return invoice;
+     const session=invoice.payment_id&&core.context.sessionRepo.findById(invoice.payment_id);
++    if(session && session.method !== 'UPI') fail(410,'LEGACY_PAYMENT_METHOD_UNSUPPORTED');
+     if(invoice.state==='PENDING') {
+       const state=session?.status==='SUCCESS'?'REVIEW_REQUIRED':
+         ['FAILED','EXPIRED','CANCELLED'].includes(session?.status)?session.status:
+@@ -124,7 +125,7 @@ export function createPrivateBridge({ db, env, core, checkoutPort = 7000, now =
+       db.prepare('UPDATE invoices SET payment_id=? WHERE id=?').run(payment.paymentId, invoice.id);
+       invoice = find(invoice.id);
+     }
+-    return { invoiceId: invoice.id, orderId: invoice.order_id, amountPaise: invoice.amount_paise,
++    return { paymentId: invoice.payment_id, invoiceId: invoice.id, orderId: invoice.order_id, amountPaise: invoice.amount_paise,
+       currency: 'INR', state: invoice.state, link: signedLink(invoice), mode: 'SYNTHETIC_ONLY' };
+   }
+   async function observe(raw, signature) {
+diff --git a/packages/core/src/webhook-engine.js b/packages/core/src/webhook-engine.js
+index f59384b..6f6f7c7 100644
+--- a/packages/core/src/webhook-engine.js
++++ b/packages/core/src/webhook-engine.js
+@@ -23,6 +23,7 @@ export class WebhookEngine {
+    * @returns {Promise<{ delivered: boolean, deliveryId: string, status?: number, error?: string }>}
+    */
+   async dispatch(event, session) {
++    if (session.method !== 'UPI') return {delivered:false,deliveryId:'',error:'UNSUPPORTED_PAYMENT_METHOD'};
+     const merchant = this.merchantRepo.findById(session.merchantId);
+     if (!merchant || !merchant.webhookUrl) {
+       return { delivered: false, deliveryId: '', error: 'No webhook URL configured for merchant.' };
+@@ -132,6 +133,11 @@ export class WebhookEngine {
+     const backoffs = [5000, 30000, 120000, 600000, 3600000];
+ 
+     for (const item of pending) {
++      // Do not delete history or retry pre-policy COD/counter settlement messages.
++      let payload; try { payload=JSON.parse(item.payload); } catch { continue; }
++      if(payload.method !== 'UPI') continue;
++      const session=this.db.queryOne('SELECT method FROM payment_sessions WHERE id=?',[payload.paymentId]);
++      if(!session || session.method !== 'UPI') continue;
+       const merchant = this.merchantRepo.findById(item.merchant_id);
+       if (!merchant || !item.endpoint_url) continue;
+ 
+diff --git a/packages/db/src/repositories/payment-session.repository.js b/packages/db/src/repositories/payment-session.repository.js
+index ea8d10c..9319999 100644
+--- a/packages/db/src/repositories/payment-session.repository.js
++++ b/packages/db/src/repositories/payment-session.repository.js
+@@ -10,6 +10,7 @@ export class PaymentSessionRepository {
+   }
+ 
+   create(data) {
++    if (data.method !== undefined && data.method !== PaymentMethod.UPI) throw new Error('UPI_ONLY');
+     const id = data.id || crypto.randomUUID();
+     const now = new Date().toISOString();
+     const metadata = typeof data.metadata === 'object' ? JSON.stringify(data.metadata) : (data.metadata || '{}');
+@@ -224,6 +225,8 @@ export class PaymentSessionRepository {
+       const session = this.findById(sessionId);
+       if (!session) throw new Error(`Session not found: ${sessionId}`);
+ 
++      if (session.method !== PaymentMethod.UPI) throw new Error('LEGACY_METHOD_SETTLEMENT_BLOCKED');
++
+       // Terminal states are final
+       const terminalStates = [
+         PaymentStatus.SUCCESS,
+@@ -482,6 +485,8 @@ export class PaymentSessionRepository {
+       const session = this.findById(sessionId);
+       if (!session) throw new Error(`Payment session not found: ${sessionId}`);
+ 
++      if (session.method !== PaymentMethod.UPI) throw new Error('LEGACY_METHOD_SETTLEMENT_BLOCKED');
++
+       // A dead outcome is final. recordVerificationSource is called from the attribution engine
+       // on previously attributed sessions with no status check, so without this guard an
+       // out-of-window or duplicated observation flips an EXPIRED/FAILED/CANCELLED session back

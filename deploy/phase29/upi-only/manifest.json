@@ -1,0 +1,41 @@
+{
+  "upstreamBase": "e123465961adc42800f3e44671767b39db1aeda3",
+  "gatewayRevision": "74d3cacafee5bcb35eba0dcf59c86390662ce447",
+  "patchSha256": "713834d8c2f8cefe3545e433c6532d7d6904487c6772b65a54b9c927ab0d6364",
+  "files": {
+    "Dockerfile": "62f70c773affd645e30b19bfd3ad70e5e3b50bf6935958336e58a253eadd93db",
+    "phase29/uuid-policy.mjs": "46cbd17e7b22aeb4a3a8e8b099f6339577344dc5204c91d9d36930e3d9cd1e79",
+    "phase29/invoice-domain.mjs": "3d559ecf8e2a8e303213c34efee515ff411a0c0dc33944ca534f1c75c450ab38",
+    "phase29/test-cloud.mjs": "509dea0762fea54fd3ab75533e3e4a03a6cb4397f7157213426ab31a3d19c719",
+    "phase29/compose.yaml": "fd94f1844c88a19d92042ed4faa1c1ddd838ef13bf0c543a9a281b9c57784e8d",
+    "phase29/payment-link.mjs": "7ab1cc0a5f1c86858d3c0f4fb9f5f884ada1458b94dc681923120b513d62288b",
+    "phase29/server.mjs": "1bcd4be956403972e9919b624ee06c65cee77089333cb7b76671450d8fd7da33",
+    "gateway/apps/merchant-admin/src/views/admin.html": "d7606802218f1a9ef07812c096d77a4497e39a4fe88c81634d4e5d734d23e22a",
+    "gateway/apps/payment-api/src/index.js": "1e6be0371281df7c5cefe786e699cb3373da1197b88804a0765a78422a564c06",
+    "gateway/apps/payment-api/src/upi-only.js": "c3aace5d47f2e968d2ab432f94d25a8221c36cd9a728fa8af009a79d818780a4",
+    "gateway/apps/payment-api/src/server.js": "be828bf6368e96fa7c446d5da6ab80b0f612c99918b02d4287842573a0019703",
+    "gateway/apps/payment-api/src/routes/admin.routes.js": "94cfbe1888f92ead849e4e685980b65408f042887a0222c495b3d20a8275b535",
+    "gateway/apps/payment-api/src/routes/checkout.routes.js": "f8f515639382c0484574e8021a9673344dea358b1f5bad1355767120e1b85543",
+    "gateway/apps/payment-api/src/routes/payments.routes.js": "594e46f23f2f47ac06bdd3413a11a2df0615f564e85bab0aab64253903054d99",
+    "gateway/apps/payment-api/src/__tests__/upi-only.test.js": "519fa81a82cc67674421936aa187a63c4e82b043b8cd9c162f11961afe8a663b",
+    "gateway/apps/checkout-portal/src/server.js": "4aaf1217d66d13361b26a01a1610e0c4220ba0ca0c9695672f206f6e95fae118",
+    "gateway/apps/checkout-portal/src/views/checkout.html": "ebfb81af9dac445a502886917d27cdae3d928ed4e8de9bf9d09fb9d825d20c0c",
+    "gateway/deploy/private/bridge.mjs": "00c2a7948058d98ae18a78c69ea3cec7add8cfaf45b16a0e2a4add8b08818006",
+    "gateway/packages/core/src/webhook-engine.js": "ab8a2121095ba901924d62f1e0e331bb3d6c104c280c797132a5b225b9ba5355",
+    "gateway/packages/db/src/repositories/payment-session.repository.js": "eb8d91216a495bddbb09bcaed0c0ed38dfb4ec438021d6572c6b3f4cbb187ae7"
+  },
+  "baseImageId": "sha256:967244718680a39a232ff4da6e327609f06950705748c3adf93a3ecf4d654e31",
+  "baseFiles": {
+    "apps/merchant-admin/src/views/admin.html": "5fc0decc1d13d731f0dcc97f5ec732a29151f98d26e27044de7003da0497ef46",
+    "apps/payment-api/src/index.js": "79f9fe51e6b07bf05e2a9f5107b1ed9b9d9ab0a3899fe349dcc9d704fb0edeca",
+    "apps/payment-api/src/server.js": "b6db87bced080e03654fb666b40e37c28bd5ac2c60ee7578ec887817c831e5d0",
+    "apps/payment-api/src/routes/admin.routes.js": "e24f920ff7eb276e8fb6539343e8a4a95fcbe8053756fca6f1424b8e5644ae32",
+    "apps/payment-api/src/routes/checkout.routes.js": "d27811787a29dd9809e4959b285de37709a119bf91833d446406b6b7bf52cfde",
+    "apps/payment-api/src/routes/payments.routes.js": "3fffb258c7d0eda1b93acfc39ab5818345978dae87d689e7f63fdc29ffa0bfe9",
+    "apps/checkout-portal/src/server.js": "e8abbc8ceb14f83dd665bd11ac7a304e27d3791af6356af705c8090a609eda34",
+    "apps/checkout-portal/src/views/checkout.html": "57aa59e5ca6aefc47be873ead88a332b218b22df46be620744785687e6108c13",
+    "deploy/private/bridge.mjs": "e746c1cd9350f0dfd858570fdd77a2d2845bb6f27bd91ed1de58b760d21ae7df",
+    "packages/core/src/webhook-engine.js": "1edbade4a407a24f339126a67cce7f0974435da0c336a791de2f33bd969b9572",
+    "packages/db/src/repositories/payment-session.repository.js": "6e16efc95b07d804e0f506ed57c5435c0a268bad886c774f7a5709e5431dba43"
+  }
+}
