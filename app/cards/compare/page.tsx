@@ -18,11 +18,12 @@ function arrayValue(value: string | string[] | undefined) {
   return Array.isArray(value) ? value : [value]
 }
 
-export default function Page({
-  searchParams,
+export default async function Page({
+  searchParams: promisedSearchParams,
 }: {
-  searchParams?: Record<string, string | string[] | undefined>
+  searchParams?: Promise<Record<string, string | string[] | undefined>>
 }) {
+  const searchParams = await promisedSearchParams
   const categoryParam = typeof searchParams?.category === 'string' ? searchParams.category : 'cashback'
   const category: CardCategorySlug = isCardCategorySlug(categoryParam) ? categoryParam : 'cashback'
   const candidates = realCardsForCategory(category)

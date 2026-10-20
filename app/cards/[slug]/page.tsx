@@ -24,7 +24,8 @@ export function generateStaticParams() {
   ]
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params: promisedParams }: { params: Promise<{ slug: string }> }) {
+  const params = await promisedParams
   if (isCardCategorySlug(params.slug)) {
     const category = cardCategoryMap[params.slug]
     return {
@@ -50,7 +51,8 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   }
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params: promisedParams }: { params: Promise<{ slug: string }> }) {
+  const params = await promisedParams
   if (isCardCategorySlug(params.slug)) {
     const category = cardCategoryMap[params.slug]
     const cards = verifiedRealCards.filter((card) => Boolean(card.terms[category.slug]))

@@ -1,0 +1,95 @@
+name: Phase26 production integration (no deployment)
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: phase26-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  integration:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: ci-disposable-postgres-only
+          POSTGRES_DB: postgres
+        ports: [5432:5432]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s
+          --health-timeout 5s --health-retries 12
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {persist-credentials: false}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with: {node-version: '22', cache: npm}
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Verify exact production card and IPO preservation
+        run: node scripts/check-phase26-production-baseline.mjs
+      - name: Full unit, API and authorization tests plus synthetic PDF fixtures
+        env:
+          PERSONAL_PDF_FIXTURES: '1'
+          BILLING_DOCUMENT_FIXTURES: '1'
+        run: npm test
+      - name: Independent generated-PDF inspection
+        run: |
+          python3 -m pip install pypdf==6.16.1
+          python3 scripts/check-personal-test-pdfs.py
+      - name: PostgreSQL financial integration (20 disposable safety cases)
+        env:
+          PGHOST: 127.0.0.1
+          PGPORT: '5432'
+          PGUSER: postgres
+          PGPASSWORD: ci-disposable-postgres-only
+          BILLING_PG_DISPOSABLE: '1'
+        run: python3 scripts/test-billing-postgres.py
+      - name: Backup inventory and backend prototypes (synthetic only)
+        run: |
+          node --test scripts/railway-backup/remote-inventory.test.cjs
+          node --test prototypes/worker-market-api/worker.test.mjs
+          node --experimental-sqlite --test prototypes/encrypted-token-store/store.test.mjs
+      - name: Production build, TypeScript and lint
+        run: |
+          npm run build
+          npm run typecheck
+          npm run lint
+          node scripts/check-phase26-production-baseline.mjs
+      - run: npx playwright install --with-deps chromium
+      - name: Built production refuses unconfigured Auth and forged local cookie
+        run: node scripts/test-personal-production-denial.mjs
+      - name: Actual production pages, private denials and responsive regressions
+        run: |
+          npx playwright test --config=playwright.phase26-public.config.ts
+          npx playwright test --config=playwright.billing-local.config.ts
+      - name: Owner workspace real UI, API, history, simulation and PDF workflow
+        run: npm run test:personal
+      - name: Real finance release stays blocked
+        run: node scripts/check-billing-launch-readiness.mjs --assert-blocked
+      # No deployment, hosted credentials, private backups or artifact uploads.
+  recovery:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {persist-credentials: false}
+      - run: python3 -m unittest discover -s scripts/db-recovery -p 'test_*.py' -v
+      - name: Cache reviewed official images, then isolated synthetic recovery
+        run: |
+          docker pull supabase/postgres:17.6.1.136@sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00
+          docker pull supabase/gotrue:v2.197.0@sha256:1736a63078f5922b198c4cbe50f80ab9a2d3b54fe8b7b6cfb2e9dc5dbbc12c6b
+          python3 scripts/db-recovery/recovery.py synthetic
+  windows-backup:
+    runs-on: windows-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with: {persist-credentials: false}
+      - name: Windows backup safety and native SFTP fixture regression
+        shell: powershell
+        run: |
+          ./scripts/railway-backup/Test-Backup.ps1
+          ./scripts/railway-backup/Test-NativeSftp.ps1

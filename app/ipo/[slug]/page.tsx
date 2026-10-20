@@ -10,7 +10,8 @@ import { formatIpoDate, formatSubscription } from '../lib/format'
 
 export const dynamic = 'force-dynamic'
 export function generateStaticParams() { return publicIpos.map((ipo) => ({ slug: ipo.slug })) }
-export function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params: promisedParams }: { params: Promise<{ slug: string }> }) {
+  const params = await promisedParams
   const ipo = getPublicIpo(params.slug)
   return ipo ? { title: `${ipo.companyName} IPO — Details, Dates, Subscription & Research`, description: `Source-backed IPO market and research page for ${ipo.companyName}.`, alternates: { canonical: `/ipo/${ipo.slug}` } } : {}
 }
@@ -30,7 +31,8 @@ function sourceLabel(type: string, label: string) {
   return label
 }
 
-export default function IpoDetailPage({ params }: { params: { slug: string } }) {
+export default async function IpoDetailPage({ params: promisedParams }: { params: Promise<{ slug: string }> }) {
+  const params = await promisedParams
   const ipo = getPublicIpo(params.slug)
   if (!ipo) notFound()
   const issue = ipo.issue
