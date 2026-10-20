@@ -1,3 +1,4 @@
 'use client'
+import { authCookieOptions } from './cookie-policy'
 import { createBrowserClient } from '@supabase/ssr'
-export function createSupabaseBrowserClient() { const url=process.env.NEXT_PUBLIC_SUPABASE_URL,key=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;return url&&key?createBrowserClient(url,key):null }
+export function createSupabaseBrowserClient() { const url=process.env.NEXT_PUBLIC_SUPABASE_URL,key=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;return url&&key?createBrowserClient(url,key,{cookieOptions:authCookieOptions()}):null }

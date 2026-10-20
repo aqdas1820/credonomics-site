@@ -29,5 +29,13 @@
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "scratch", "ipo-backups", "mf-backups", "**/*-backups/**"]
+  "exclude": [
+    "node_modules",
+    "scratch",
+    "ipo-backups",
+    "mf-backups",
+    "**/*-backups/**",
+    ".open-next",
+    ".wrangler"
+  ]
 }

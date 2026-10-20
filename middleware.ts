@@ -3,6 +3,8 @@ import { createServerClient } from '@supabase/ssr'
 import { hostedPersonalReady } from './src/lib/billing/personal-config'
 import { isBillingAdmin } from './app/billing/admin-policy'
 
+import { authCookieOptions } from './src/lib/supabase/cookie-policy'
+
 const canonicalHost = 'www.credonomics.in'
 
 export async function middleware(request: NextRequest) {
@@ -51,6 +53,7 @@ export async function middleware(request: NextRequest) {
     if (!local) {
       try {
         const client = createServerClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!, {
+          cookieOptions: authCookieOptions(),
           cookies: { getAll: () => request.cookies.getAll(), setAll: values => {
             values.forEach(({ name, value }) => request.cookies.set(name, value))
             response = NextResponse.next({ request })
@@ -81,7 +84,7 @@ export async function middleware(request: NextRequest) {
 
   let response = NextResponse.next({ request })
   const url=process.env.NEXT_PUBLIC_SUPABASE_URL,key=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
-  if(url&&key){const client=createServerClient(url,key,{cookies:{getAll:()=>request.cookies.getAll(),setAll:values=>{values.forEach(({name,value})=>request.cookies.set(name,value));response=NextResponse.next({request});values.forEach(({name,value,options})=>response.cookies.set(name,value,options))}}});await client.auth.getUser()}
+  if(url&&key){const client=createServerClient(url,key,{cookieOptions:authCookieOptions(),cookies:{getAll:()=>request.cookies.getAll(),setAll:values=>{values.forEach(({name,value})=>request.cookies.set(name,value));response=NextResponse.next({request});values.forEach(({name,value,options})=>response.cookies.set(name,value,options))}}});await client.auth.getUser()}
   if (request.nextUrl.pathname.startsWith('/billing')) {
     response.headers.set('Cache-Control', 'private, no-store, max-age=0')
     response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive')

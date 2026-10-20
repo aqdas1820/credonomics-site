@@ -22,7 +22,11 @@
     "equity:instruments:fetch": "node scripts/equity/fetch-instruments.mjs",
     "equity:instruments:validate": "node scripts/equity/validate-instruments.mjs",
     "equity:instruments:publish": "node scripts/equity/publish-instruments.mjs",
-    "test:billing": "vitest run app/billing src/lib/billing"
+    "test:billing": "vitest run app/billing src/lib/billing",
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:dry-run": "wrangler deploy --dry-run --outdir .wrangler/phase32/full",
+    "cf:local": "wrangler dev --local",
+    "test:recovery-guards": "python -m unittest discover -s scripts/db-recovery -p 'test_*.py'"
   },
   "dependencies": {
     "@pdf-lib/fontkit": "1.1.1",
@@ -39,6 +43,7 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "1.20.12",
     "@playwright/test": "^1.62.1",
     "@types/node": "^20.14.12",
     "@types/pngjs": "6.0.5",
@@ -50,7 +55,8 @@
     "jsqr": "1.4.0",
     "pngjs": "7.0.0",
     "typescript": "^5.5.4",
-    "vitest": "^4.1.11"
+    "vitest": "^4.1.11",
+    "wrangler": "4.151.3"
   },
   "overrides": {
     "postcss": "8.5.30",

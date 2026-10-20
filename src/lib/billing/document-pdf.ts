@@ -1,7 +1,6 @@
 import 'server-only'
 import 'regenerator-runtime/runtime'
-import { readFile } from 'node:fs/promises'
-import { join } from 'node:path'
+import { documentFontBytes } from './document-fonts'
 import { PDFDocument, rgb } from 'pdf-lib'
 import fontkit from '@pdf-lib/fontkit'
 import type { DocumentSnapshot } from './document-snapshot'
@@ -10,8 +9,7 @@ import type { DocumentSnapshot } from './document-snapshot'
 export async function renderDocumentPdf(snapshot: DocumentSnapshot): Promise<Uint8Array> {
   const doc = await PDFDocument.create()
   doc.registerFontkit(fontkit)
-  const fonts = await Promise.all(['NotoSans-Regular.ttf', 'NotoSansDevanagari-Regular.ttf'].map(async name =>
-    doc.embedFont(await readFile(join(process.cwd(), 'assets/fonts', name)), { subset: true })))
+  const fonts = await Promise.all(documentFontBytes().map(bytes => doc.embedFont(bytes, { subset: true })))
   const glyphs = fonts.map(f => new Set(f.getCharacterSet()))
   const choose = (c: string) => {
     const index = glyphs.findIndex(set => Array.from(c).every(ch => set.has(ch.codePointAt(0)!)))
