@@ -1,15 +1,16 @@
 import { it, expect, vi, afterEach } from 'vitest'
 import React from 'react'
 import SupportCredonomics from '../../app/components/SupportCredonomics'
+import { supportConfirmation } from '../../app/components/support-payment'
 
-const hooks = vi.hoisted(() => ({ index: 0, amount: 100, available: true }))
+const hooks = vi.hoisted(() => ({ index: 0, amount: 100, available: true, status: null as 'SUCCESS' | 'PENDING' | null }))
 vi.mock('react', async original => {
   const actual = await original<typeof import('react')>()
   return { ...actual, useEffect: () => {}, useCallback: (fn: unknown) => fn,
     useRef: (initial: unknown) => ({ current: initial }),
-    useState: (initial: unknown) => [hooks.index++ === 0 ? hooks.available : hooks.index === 2 ? hooks.amount : initial, vi.fn()] }
+    useState: (initial: unknown) => { const index = hooks.index++; return [index === 0 ? hooks.available : index === 1 ? hooks.amount : index === 6 ? hooks.status : initial, vi.fn()] } }
 })
-afterEach(() => vi.unstubAllGlobals())
+afterEach(() => { hooks.status = null; vi.unstubAllGlobals() })
 
 function anchor(node: any): any {
   if (!node || typeof node !== 'object') return undefined
@@ -46,4 +47,20 @@ it('collection-disabled button preserves native mailto and existing dismissal wi
   expect(button.props.href).toMatch(/^mailto:hello@credonomics.in\?/)
   expect(request).not.toHaveBeenCalled(); expect(preventDefault).not.toHaveBeenCalled()
   expect(storage).toHaveBeenCalledOnce()
+})
+it('confirmation consumer calls only the signed-receipt server route and rejects unknown statuses', async () => {
+  for (const status of ['SUCCESS', 'PENDING', 'paid-from-email']) {
+    const request = vi.fn(async (_input: RequestInfo | URL) => Response.json({ status }))
+    expect(await supportConfirmation(request)).toBe(status === 'paid-from-email' ? null : status)
+    expect(request.mock.calls[0][0]).toBe('/api/contributions/confirmation')
+  }
+})
+it('existing popup status area consumes confirmed SUCCESS without adding layout or opening the dialog', () => {
+  hooks.index = 0; hooks.status = 'SUCCESS'; hooks.available = false
+  vi.stubGlobal('React', React)
+  const tree = JSON.stringify(SupportCredonomics())
+  expect(tree).toContain('Contribution successful.')
+  expect(tree).toContain('verified bank credit')
+  hooks.index = 0; hooks.status = 'PENDING'
+  expect(JSON.stringify(SupportCredonomics())).not.toContain('Contribution successful.')
 })

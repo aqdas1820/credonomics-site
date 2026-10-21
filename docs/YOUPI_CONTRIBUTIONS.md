@@ -1,39 +1,54 @@
-# Existing support popup → existing YouPI
+# PR #16: existing YouPI secure contribution connection
 
-Status: implemented on an isolated integration branch; **not live-payment enabled**. The existing popup remains an email fallback until both website operator approval and gateway acceptance gates pass. No popup CSS, amounts, timing, dismissal storage, dialog structure, branding or gateway design was changed. The active CTA and notice text change only when the server reports availability.
+**Source implemented; not deployed or payment-enabled.** Follows https://github.com/aqdas1820/credonomics-site/pull/16#pullrequestreview-5598371157. No website/checkout CSS, layout, colors, prompt timing or dismissal behavior changed. Confirmation uses the existing status paragraph.
 
-`SupportCredonomics.tsx` checks the same-origin availability route. When available, its existing anchor calls `/api/contributions` with the selected amount and a retry nonce, then navigates to the returned URL. When unavailable, the original mailto/dismissal behavior remains. Creation failure also falls back to the original mailto. No email is interpreted as proof of payment. No new checkout, observer, tunnel or gateway was created.
+## Minimal transport and threat boundary
 
-The Node server validates JSON, canonical Origin, nonce, and an exact numeric ₹10/₹100/₹500 allowlist. It derives a merchant-scoped HMAC order ID from the nonce and amount, keeping retries stable and separate intentions distinct. It calls the existing private `POST /api/v1/payments` using server-only merchant credentials, with INR/UPI and contribution metadata. Amount, currency, order and exact canonical order-specific checkout URL must match the response. Beneficiary/receiving-account selection and QR generation remain entirely with YouPI. Creation is limited to 20 attempts per server process/hour, ignoring forwarded IP headers; before production approval, apply the website host's durable rate limit as well, since process limits reset on restart and do not span instances.
+Browser -> existing website /api/contributions -> ONLY POST https://pay.credonomics.in/api/v1/merchant/contributions -> existing Windows Checkout (7000) -> loopback Core (6100). Vercel localhost dependency is removed. The existing standalone checkoutUrl is used for top-level navigation. No iframe, new service/domain/tunnel, generic proxy or public Core endpoint.
 
-The only contribution-success response is from `/api/contributions/confirmation`. It accepts a signed HttpOnly/Secure/SameSite=Strict receipt cookie, then reads the exact order through the authenticated private Core API. It requires matching amount, currency, method, order and contribution metadata, Core SUCCESS/internal SUCCESS, verificationLevel ≥ 1, GMAIL verification source and completedAt. Redirect queries, browser events, unsigned emails and a bare SUCCESS without verification remain insufficient. The gateway remains authoritative; its existing durable payment order is the record, with no parallel merchant payment engine or locally fabricated evidence. No new success UI is added to the popup. A future UI consumer must use this server confirmation route. No webhook destination or merchant setting was changed.
+One fixed RPC supports readiness/create/status. Merchant and website origin are bound in the signed JSON body. Headers X-Youpi-Timestamp, X-Youpi-Nonce and X-Youpi-Signature authenticate HMAC-SHA256 over POST, exact path, timestamp, nonce and raw-body SHA256, separated by newlines. Timestamp tolerance is 60 seconds. Gateway ALSO requires the unchanged validated Cloudflare tunnel-origin metadata. The tunnel secret is separate and never copied to Vercel. Existing published-host routing carries the path after a separately approved source reload; no Cloudflare change was made. Reference: https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/routing-to-tunnel/
 
-## Server configuration (leave disabled now)
+Gateway rejects browser Origin/Sec-Fetch-Site/cookies, bad/stale signatures, replay, extra fields, path/query aliases and unsupported operations/amounts. No CORS permissions. Body limits and existing global/IP budgets remain. A separate operational SQLite journal enforces 120 authenticated requests/minute, 20 create attempts/hour and 100/day across website instances and Windows restarts. It prunes expired transport nonces after 48 hours, retaining order/ambiguity history. It never creates its schema in the financial database.
 
-```dotenv
-YOUPI_CONTRIBUTIONS_ENABLED=false
-CONTRIBUTIONS_SITE_ORIGIN=https://credonomics.in
-YOUPI_PRIVATE_CORE_URL=http://127.0.0.1:6100
-YOUPI_MERCHANT_ID=
-YOUPI_MERCHANT_KEY=
-```
+Both sides allow only numeric INR 10/100/500. Gateway recomputes merchant/attempt/amount-bound order IDs. A single existing active, enabled merchant-owned receiving account must match approved ID and VPA hash. Current merchant credential must match the approved rotated fingerprint, distinct from the revoked fingerprint. It rechecks the actual Core-created payment/amount/beneficiary mapping before returning the canonical URL. No supplied beneficiary, customer identity, amount override or auto-activation is forwarded. Original QR generation, receiving account, verification and state machine remain unchanged.
 
-Use the existing merchant's ID and merchant authorization secret through the website host's approved server-secret mechanism; never NEXT_PUBLIC variables, browser scripts, git, chat or email. This code does not read or migrate the gateway's encryption keys. The API key is used only in private Core headers and receipt/order MACs.
+Reservations are durable BEFORE Core transport. Completed retries return the same validated result. A timeout/crash leaves UNCERTAIN and never automatically re-POSTs creation. Operator reconciliation must inspect the existing Core merchant/order record before recovery; do not delete ambiguity records or fabricate replacement payments.
 
-`127.0.0.1` means **the website's server**, not the owner's Windows PC. This implementation permits only loopback Core port 6100. A separately hosted website cannot reach Windows Core by setting localhost or substituting `https://pay.credonomics.in/api/v1/payments`; the public checkout correctly denies that route. No existing private website→Windows Core transport was found in the website source. Before enabling, the existing website backend must have an authorized private Core connection (the current implementation supports a backend on the same host). Any different private transport requires review/explicit URL validation changes; do not expose 6100 or add merchant API routes to the public checkout as a shortcut. No new transport was provisioned.
+## Authentication and confirmation
 
-## Exact current blockers
+Installed fork: password login exists privately in Core but is not exposed by the hardened public facade. Original public checkout uses OTP sign-in. Gateway currently reports WHATSAPP_OTP only when that implemented path is enabled; otherwise anonymous contribution creation remains unavailable. Vercel no longer independently requires OTP from public health. Another mode requires an actually implemented/reviewed public auth path, never a bypass.
 
-Read-only live check: public original Checkout reports collectionEnabled=false and otpDeliveryEnabled=false. Its bank acceptance is still unresolved: verified receiving-VPA linkage to Slice Current Account XX5355, authenticated genuine UPI-credit template/account binding, and operational Gmail submission are separate gateway gates. The existing Slice date-only IMPS/unknown templates remain review-only. This integration neither changes nor bypasses those decisions.
+Website signs an HttpOnly/Secure/SameSite=Strict receipt containing payment/order/amount/attempt/expiry. /api/contributions/confirmation validates it and calls the authenticated RPC status operation. Gateway requires ownership in its completed-order journal, matching Core financial record/metadata, INR/UPI, merchant/account/amount, SUCCESS, verificationLevel >=1, GMAIL source and completedAt PLUS an attributed same-payment/account/amount Gmail observation with bank reference. Browser redirect/query, unverified email or connectivity alone cannot establish success. Existing confirmation remains readable when new collection is paused.
 
-Additionally, this branch has no production website merchant credentials or verified private Core transport configured. Leave website contribution approval false. Only after original gateway financial acceptance, usable customer authentication, private website connectivity, server credential provisioning and durable request limiting are approved should an operator enable the website flag. The handler also independently requires the original public portal's collection and OTP health flags true and production/private Core health before it can issue a creation POST. Health alone is not operator authorization; the website flag is a separate explicit gate.
+Popup consumes this server result in its existing status paragraph. Pending polling is bounded to 12 checks at five-second intervals; absent receipt/unavailable responses stop it. It does not open/dismiss the popup or change its timing. No new success page/UI was added.
 
-## Validation and review
+## Closed settings and credential remediation
 
-- 92/92 unit tests passed across 18 files, including 23 contribution/button tests; `npm run typecheck` passed using the repository lockfile's dependencies installed offline.
-- Actual existing popup click handlers tested for all three amounts, selected JSON amount, returned URL navigation and original dismissal; disabled fallback creates no request.
-- Isolated server transport tests verify distinct order-specific URLs, retry identity, unsupported amounts, cross-origin/extra fields, closed flags, private URL validation, wrong upstream amount/redirect, signed receipts, pending/unverified results and rate limits. All gateway/network responses were fixtures; no real session or QR was created.
-- Popup CSS and `support-logic.ts` are unchanged. Existing working repositories/design branches were not edited; branch starts from main commit `94908357e4525f6197191843ade8e3d8ca794d0e`.
-- No deployment, service restart, Cloudflare change, actual mail/message, bank observation, credential or financial-record modification occurred.
+The encryption-master migration did NOT rotate the previously exposed merchant webhook secret. Coordinated approved rotation must preserve existing encrypted records and webhook consumers. This follow-up performs no live credential read/decryption, rotation, generation or record write. Provision a fresh independent 32-random-byte/64-hex contribution secret through approved server custody; never reuse webhook/master/tunnel secrets or put it in NEXT_PUBLIC, git, chat or browser code.
 
-Before merging with continuing design work, apply only the action wiring in the component if its markup has moved; retain the new server/client modules and tests. Do not replace a newer version of the popup wholesale. Rollback is reverting this integration commit; because the original fallback remains, no payment/data migration is involved. Live click-through with genuine sessions and genuine bank-confirmed contribution success remains **blocked and unverified**; test URLs are synthetic, not real payable links.
+Website server settings: YOUPI_CONTRIBUTIONS_ENABLED=false, CONTRIBUTIONS_SITE_ORIGIN=https://credonomics.in, YOUPI_MERCHANT_ID and YOUPI_CONTRIBUTION_SECRET (unset pending approved provisioning). YOUPI_PRIVATE_CORE_URL and YOUPI_MERCHANT_KEY are no longer used.
+
+Windows settings: CHECKOUT_CONTRIBUTIONS_ENABLED=false; CHECKOUT_CONTRIBUTION_CREDENTIALS_APPROVED=false; leave CHECKOUT_CONTRIBUTION_SECRET, CHECKOUT_CONTRIBUTION_MERCHANT_ID, CHECKOUT_CONTRIBUTION_ACCOUNT_ID, CHECKOUT_CONTRIBUTION_VPA_SHA256, CHECKOUT_CONTRIBUTION_ROTATED_MERCHANT_KEY_SHA256 and CHECKOUT_CONTRIBUTION_REVOKED_MERCHANT_KEY_SHA256 unconfigured pending reviewed custody/rotation/account evidence. CHECKOUT_CONTRIBUTION_SITE_ORIGIN defaults to https://credonomics.in. The new and revoked hashes must differ; current encrypted merchant secret is checked against the approved new hash at runtime. Operator pins are reviewed evidence, not automatic proof of historical key custody.
+
+Windows retains its existing protected master key/database and local observer service credential. None is copied to Vercel. Local privileged credential is used only for hardcoded Core health/create operations; destinations, paths and request headers are never forwarded arbitrarily. Operational journal is data/contribution-adapter.sqlite under the existing protected data directory.
+
+## Exact remaining gates / no deployment
+
+1. Approve/complete exposed webhook-secret remediation and provision the independent signing secret plus merchant/account/hash pins. No master-key migration repeat.
+2. Pass original financial acceptance: independently verified receiving VPA to Slice Current XX5355, authenticated genuine UPI-credit template/account binding, operational Gmail verification and usable public login. Existing date-only IMPS/unknown templates remain review-only.
+3. Review gateway source delta, then separately approve source publication/controlled Checkout-only reload and website merge/configuration. Current technical review explicitly requires NO deployment/live-money activation. Do not restart Core or expose 6100 as a shortcut.
+
+Read-only public check: original Checkout collection=false, OTP=false; new RPC GET returns 404. New source is not loaded; email fallback remains. No service, environment, tunnel route, bank record, OAuth or WhatsApp session was changed.
+
+## Tests and artifacts
+
+- 94/94 website unit tests and website typecheck pass.
+- 47/47 gateway/security/integration tests, zero skips in the explicit cross-repository run, and gateway typecheck pass.
+- Actual website TypeScript handler connected over isolated HTTP to the existing CheckoutServer with synthetic tunnel metadata and stubbed Core. All three amounts returned distinct order-specific URLs. Fake settled-looking status without attributed bank evidence remained PENDING. No real session, QR, observation, message or transfer was created.
+- Covers three amounts, real popup handlers, disabled fallback, private/public route denial, CSRF/CORS/tunnel trust, credential leakage, merchant/account/VPA pins, replay/rate persistence, ambiguous creation, signed receipt and confirmation consumer/status display.
+- Gateway implementation is local at D:\CredoNomicsProject\youpi-pg. docs/youpi-gateway-contributions.patch contains ONLY this follow-up delta against the installed hardened fork; do not apply twice. Unrelated existing repairs are excluded. The upstream gateway remote was not pushed/overwritten.
+- Cross-repo command from gateway (Node with native TypeScript support): set YOUPI_WEBSITE_SOURCE=D:\credonomics-site-youpi-contributions and NODE_ENV=test, then node --test apps/checkout-portal/src/__tests__/contribution-website.integration.test.js.
+
+Rollback source delta/website commit before activation. For a later approved runtime rollback, disable the adapter and reload only Checkout after actual process exit; preserve its journal and all financial data. Never clear ambiguity or rewind the database. Genuine bank-confirmed live contribution acceptance remains unverified.
+
+Draft-branch deployment safeguard: vercel.json disables automatic deployment only for integration/youpi-contributions-20261021, preserving the existing cron and all other branches. This follows https://vercel.com/docs/project-configuration/git-configuration#git.deploymentenabled to honor the no-deployment review constraint. No Vercel deployment command was run.

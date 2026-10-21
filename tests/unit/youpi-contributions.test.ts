@@ -1,3 +1,4 @@
+import { createHash, createHmac } from 'node:crypto'
 import { describe, it, expect, vi } from 'vitest'
 import { createContributionHandlers } from '../../src/lib/server/youpi-contributions'
 import { initiateSupport } from '../../app/components/support-payment'
@@ -5,7 +6,7 @@ import { initiateSupport } from '../../app/components/support-payment'
 const nonce = '11111111-1111-4111-8111-111111111111'
 const id = '22222222-2222-4222-8222-222222222222'
 const env = { YOUPI_CONTRIBUTIONS_ENABLED: 'true', YOUPI_MERCHANT_ID: nonce,
-  YOUPI_MERCHANT_KEY: 'synthetic-only-merchant-secret-never-live-0123456789', CONTRIBUTIONS_SITE_ORIGIN: 'https://credonomics.in' }
+  YOUPI_CONTRIBUTION_SECRET: createHash('sha256').update('synthetic-only-adapter-secret').digest('hex'), CONTRIBUTIONS_SITE_ORIGIN: 'https://credonomics.in' }
 const req = (amount: unknown, extra = {}) => new Request('https://credonomics.in/api/contributions', {
   method: 'POST', headers: { Origin: 'https://credonomics.in', 'Content-Type': 'application/json', 'Idempotency-Key': nonce },
   body: JSON.stringify({ amount, ...extra }),
@@ -15,16 +16,27 @@ function fixture(closed = false) {
   let payment: any = {}
   const transport = vi.fn(async (input: any, init?: RequestInit) => {
     const url = String(input)
-    if (url === 'https://pay.credonomics.in/health') return Response.json({ service: 'checkout-portal', securityProfile: 'public-checkout-v1', collectionEnabled: !closed, otpDeliveryEnabled: !closed })
-    if (url === 'http://127.0.0.1:6100/health') return Response.json({ service: 'payment-api', securityProfile: 'original-checkout-lifecycle-v1', productionMode: true, privateDeployment: true })
-    if (url === 'http://127.0.0.1:6100/api/v1/payments' && init?.method === 'POST') {
-      const body = JSON.parse(init.body as string); creates.push(body)
+    if (url !== 'https://pay.credonomics.in/api/v1/merchant/contributions' || init?.method !== 'POST') throw new Error('Only exact RPC permitted')
+    const headers = new Headers(init.headers)
+    const raw = init.body as string
+    const hash = createHash('sha256').update(raw).digest('hex')
+    const canonical = `POST\n/api/v1/merchant/contributions\n${headers.get('x-youpi-timestamp')}\n${headers.get('x-youpi-nonce')}\n${hash}`
+    expect(headers.get('x-youpi-signature')).toBe(createHmac('sha256', env.YOUPI_CONTRIBUTION_SECRET).update(canonical).digest('hex'))
+    expect(headers.get('x-merchant-key')).toBeNull()
+    const body = JSON.parse(raw)
+    if (body.operation === 'readiness') return Response.json({ available: !closed, authMode: closed ? null : 'WHATSAPP_OTP' })
+    if (body.operation === 'create') {
+      creates.push({ ...body, amount: body.amount.toFixed(2), currency: 'INR', method: 'UPI', metadata: { purpose: 'credonomics_contribution' } })
       const paymentId = body.orderId.slice(-8) + '-2222-4222-8222-222222222222'
-      payment = { paymentId, orderId: body.orderId, amountPaise: String(Number(body.amount) * 100), currency: 'INR',
-        method: 'UPI', metadata: body.metadata, checkoutUrl: `https://pay.credonomics.in/checkout/${paymentId}`, status: 'INITIATED' }
+      payment = { paymentId, orderId: body.orderId, amountPaise: String(body.amount * 100), currency: 'INR',
+        method: 'UPI', metadata: { purpose: 'credonomics_contribution' }, checkoutUrl: `https://pay.credonomics.in/checkout/${paymentId}`, status: 'INITIATED' }
       return Response.json(payment, { status: 201 })
     }
-    if (url === `http://127.0.0.1:6100/api/v1/payments/${payment.paymentId}`) return Response.json(payment)
+    if (body.operation === 'status') {
+      if (payment.amountPaise !== String(body.amount * 100)) return Response.json({}, { status: 503 })
+      const verified = payment.status === 'SUCCESS' && payment.verificationLevel >= 1 && payment.verificationSources?.includes('GMAIL') && payment.completedAt
+      return Response.json({ status: verified ? 'SUCCESS' : 'PENDING' })
+    }
     throw new Error('Non-fixture transport forbidden')
   }) as unknown as typeof fetch
   const handlers = createContributionHandlers({ env, fetch: transport })
@@ -78,9 +90,9 @@ describe('server-owned existing YouPI contributions', () => {
     const cross = req(10); cross.headers.set('origin', 'https://attacker.invalid')
     expect((await f.handlers.POST(cross)).status).toBe(403); expect(f.transport).not.toHaveBeenCalled()
   })
-  it('does not accept public Core, wrong domain, substituted session or amount', async () => {
+  it('rejects invalid credentials and unsafe redirect domains', async () => {
     const f = fixture()
-    const h = createContributionHandlers({ env: { ...env, YOUPI_PRIVATE_CORE_URL: 'https://pay.credonomics.in' }, fetch: f.transport })
+    const h = createContributionHandlers({ env: { ...env, YOUPI_CONTRIBUTION_SECRET: 'invalid-secret' }, fetch: f.transport })
     expect((await h.POST(req(10))).status).toBe(503); expect(f.transport).not.toHaveBeenCalled()
     const badFetch = vi.fn(async () => Response.json({ checkoutUrl: 'https://attacker.invalid' })) as unknown as typeof fetch
     expect(await initiateSupport(10, nonce, badFetch)).toBeNull()
@@ -96,7 +108,7 @@ describe('server-owned existing YouPI contributions', () => {
       const h = createContributionHandlers({ env, fetch: transport })
       const response = await h.POST(req(10))
       expect(response.status).toBe(503)
-      expect(await response.text()).not.toContain(env.YOUPI_MERCHANT_KEY)
+      expect(await response.text()).not.toContain(env.YOUPI_CONTRIBUTION_SECRET)
     }
   })
   it('only private Core bank verification can produce SUCCESS; redirect/query/email assertions cannot', async () => {

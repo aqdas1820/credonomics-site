@@ -11,7 +11,7 @@ import {
   type SupportAmount,
 } from './support-logic'
 import styles from './support-credonomics.module.css'
-import { initiateSupport } from './support-payment'
+import { initiateSupport, supportConfirmation } from './support-payment'
 
 const DISMISSED_KEY = 'credonomics-support-dismissed-until'
 const SESSION_KEY = 'credonomics-support-shown-in-session'
@@ -57,6 +57,21 @@ export default function SupportCredonomics() {
   const [elapsed, setElapsed] = useState(false)
   const [engaged, setEngaged] = useState(false)
   const [hintVisible, setHintVisible] = useState(false)
+  const [contributionStatus, setContributionStatus] = useState<'SUCCESS' | 'PENDING' | null>(null)
+
+  useEffect(() => {
+    let cancelled = false
+    let timer: ReturnType<typeof setTimeout> | undefined
+    let attempts = 0
+    const check = async () => {
+      const status = await supportConfirmation()
+      if (cancelled) return
+      setContributionStatus(status)
+      if (status === 'PENDING' && ++attempts < 12) timer = setTimeout(check, 5000)
+    }
+    void check()
+    return () => { cancelled = true; clearTimeout(timer) }
+  }, [])
 
   const openDialog = useCallback(() => {
     const dialog = dialogRef.current
@@ -200,7 +215,7 @@ export default function SupportCredonomics() {
 
           <div className={styles.paymentNotice} role="status">
             <ShieldCheck size={19} aria-hidden="true" />
-            <p>{collectionAvailable ? <><strong>Contribute through YouPI.</strong> Continue to the original secure checkout. Confirmation requires verified bank credit.</> : <><strong>Online contributions are not active yet.</strong> You can request verified payment details by email. No payment is collected in this popup.</>}</p>
+            <p>{contributionStatus === 'SUCCESS' ? <><strong>Contribution successful.</strong> Thank you. Your contribution was confirmed against verified bank credit.</> : contributionStatus === 'PENDING' ? <><strong>Bank confirmation pending.</strong> A checkout return alone does not confirm payment. Please do not pay again while verification is pending.</> : collectionAvailable ? <><strong>Contribute through YouPI.</strong> Continue to the original secure checkout. Confirmation requires verified bank credit.</> : <><strong>Online contributions are not active yet.</strong> You can request verified payment details by email. No payment is collected in this popup.</>}</p>
           </div>
 
           <a className={styles.emailCta} href={emailHref} onClick={async (event) => {

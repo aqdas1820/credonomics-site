@@ -1,5 +1,14 @@
 import type { SupportAmount } from './support-logic'
 
+export async function supportConfirmation(request: typeof fetch = fetch): Promise<'SUCCESS' | 'PENDING' | null> {
+  try {
+    const response = await request('/api/contributions/confirmation', { credentials: 'same-origin', cache: 'no-store' })
+    if (!response.ok) return null
+    const data = await response.json()
+    return data.status === 'SUCCESS' || data.status === 'PENDING' ? data.status : null
+  } catch { return null }
+}
+
 // No gateway key or Core URL crosses the browser boundary.
 export async function initiateSupport(amount: SupportAmount, nonce: string, request: typeof fetch = fetch): Promise<string | null> {
   try {
