@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-10-21T08:29:20.372Z",
+  "generatedAt": "2026-10-21T14:27:45.140Z",
   "recordCount": 2,
   "nseCount": 2,
   "bseCount": 0,
@@ -31,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.925613990515291,
-      "updatedAt": "2026-10-21T08:29:20.372Z",
+      "total": 1.7373277576806698,
+      "updatedAt": "2026-10-21T14:27:45.140Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JPL&type=Active"
     },
     "sharesOffered": 197525934,
-    "sharesBid": 182832768,
+    "sharesBid": 343167288,
     "estimatedIssueValueCr": 22103.15,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JPL&type=Active",
-    "fetchedAt": "2026-10-21T08:29:20.372Z"
+    "fetchedAt": "2026-10-21T14:27:45.140Z"
   },
   {
     "slug": "paras-healthcare-ltd-8045ae9",
@@ -60,16 +60,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.06693121292464801,
-      "updatedAt": "2026-10-21T08:29:20.372Z",
+      "total": 0.0923345557611556,
+      "updatedAt": "2026-10-21T14:27:45.140Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PARASHLTH&type=Active"
     },
     "sharesOffered": 12083331,
-    "sharesBid": 808752,
+    "sharesBid": 1115709,
     "estimatedIssueValueCr": 837.37,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PARASHLTH&type=Active",
-    "fetchedAt": "2026-10-21T08:29:20.372Z"
+    "fetchedAt": "2026-10-21T14:27:45.140Z"
   }
 ]
