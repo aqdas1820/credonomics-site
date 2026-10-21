@@ -11,6 +11,7 @@ import {
   type SupportAmount,
 } from './support-logic'
 import styles from './support-credonomics.module.css'
+import { initiateSupport } from './support-payment'
 
 const DISMISSED_KEY = 'credonomics-support-dismissed-until'
 const SESSION_KEY = 'credonomics-support-shown-in-session'
@@ -39,6 +40,18 @@ function markPromptSeen() {
 
 export default function SupportCredonomics() {
   const dialogRef = useRef<HTMLDialogElement>(null)
+  const contributionBusy = useRef(false)
+  const contributionNonce = useRef<string | null>(null)
+  const [collectionAvailable, setCollectionAvailable] = useState(false)
+
+  useEffect(() => {
+    const controller = new AbortController()
+    fetch('/api/contributions', { cache: 'no-store', signal: controller.signal })
+      .then(response => response.ok ? response.json() : null)
+      .then(result => setCollectionAvailable(result?.available === true))
+      .catch(() => {})
+    return () => controller.abort()
+  }, [])
   const [amount, setAmount] = useState<SupportAmount>(100)
   const [open, setOpen] = useState(false)
   const [elapsed, setElapsed] = useState(false)
@@ -187,12 +200,24 @@ export default function SupportCredonomics() {
 
           <div className={styles.paymentNotice} role="status">
             <ShieldCheck size={19} aria-hidden="true" />
-            <p><strong>Online contributions are not active yet.</strong> You can request verified payment details by email. No payment is collected in this popup.</p>
+            <p>{collectionAvailable ? <><strong>Contribute through YouPI.</strong> Continue to the original secure checkout. Confirmation requires verified bank credit.</> : <><strong>Online contributions are not active yet.</strong> You can request verified payment details by email. No payment is collected in this popup.</>}</p>
           </div>
 
-          <a className={styles.emailCta} href={emailHref} onClick={dismiss}>
+          <a className={styles.emailCta} href={emailHref} onClick={async (event) => {
+            if (!collectionAvailable) { dismiss(); return }
+            event.preventDefault()
+            if (contributionBusy.current) return
+            contributionBusy.current = true
+            dismiss()
+            try {
+              contributionNonce.current ||= window.crypto.randomUUID()
+              const checkoutUrl = await initiateSupport(amount, contributionNonce.current)
+              window.location.assign(checkoutUrl || emailHref)
+            } catch { window.location.assign(emailHref) }
+            finally { contributionBusy.current = false }
+          }}>
             <Mail size={17} aria-hidden="true" />
-            Ask how to contribute ₹{amount}
+            {collectionAvailable ? 'Contribute' : 'Ask how to contribute'} ₹{amount}
             <ArrowRight size={17} aria-hidden="true" />
           </a>
           <button type="button" className={styles.later} onClick={dismiss}>Maybe later</button>
