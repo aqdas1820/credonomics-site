@@ -9,6 +9,9 @@ import { PUBLIC_REVIEW_DATE } from "./data/tool-registry";
 import styles from "./home-investment.module.css";
 import HomeIntelligenceRail from './components/HomeIntelligenceRail'
 import SupportCredonomics from './components/SupportCredonomics'
+import HomeCreativeHero from './components/HomeCreativeHero'
+import HomeMotionObserver from './components/HomeMotionObserver'
+import motionStyles from './components/homepage-motion.module.css'
 
 const quickActions = [
   ['Markets', '/markets'],
@@ -82,31 +85,28 @@ function displayDate(value?: string) {
 export default function HomePage() {
   return (
     <SiteFrame>
-      <div className={styles.page}>
+      <div className={`${styles.page} ${motionStyles.pageMotion}`} data-cm-home>
       <div className={styles.ambientOne} />
       <div className={styles.ambientTwo} />
+      <HomeMotionObserver />
       <section className={styles.appHome}>
-        <div className={styles.appHomeIntro}>
-          <span className={styles.sectionEyebrow}>CREDONOMICS HOME</span>
-          <h1>Financial intelligence,<br />without the noise.</h1>
-          <p>Markets, research and practical decision tools in one source-aware workspace.</p>
-        </div>
-        <div className={styles.marketStatus} aria-label="Market data status">
+        <HomeCreativeHero />
+        <div className={styles.marketStatus} data-cm-reveal aria-label="Market data status">
           <div><span>Market status</span><strong>Live index feed unavailable</strong></div>
           <p>Verified market values will appear here when the connected provider is available.</p>
           <Link href="/markets">Open Markets <span>→</span></Link>
         </div>
-        <div className={styles.pulsePanel}>
+        <div className={styles.pulsePanel} data-cm-reveal>
           <div><span className={styles.sectionEyebrow}>MARKET PULSE</span><h2>Intelligence data pending</h2><p>A composite score is intentionally withheld until verified inputs and methodology are connected.</p></div>
           <Link href="/methodology">How data is handled</Link>
         </div>
-        <nav className={styles.quickActions} aria-label="Quick actions">
+        <nav className={styles.quickActions} aria-label="Quick actions" data-cm-reveal>
           {quickActions.map(([label, href]) => <Link href={href} key={href}><span>{label}</span><b>→</b></Link>)}
         </nav>
       </section>
       <LatestReportBanner />
       <HomepageDiscovery />
-      <section className={styles.hero}>
+      <section className={styles.hero} data-cm-reveal>
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
             <div className={styles.kicker}>
@@ -236,7 +236,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={styles.latestSection}>
+      <section className={styles.latestSection} data-cm-reveal>
         <div className={styles.sectionShell}>
           <div className={styles.sectionHeading}>
             <div>
@@ -253,7 +253,7 @@ export default function HomePage() {
           <div className={styles.latestGrid}>
             <Link
               href={`/research/articles/${latestArticle.slug}`}
-              className={styles.latestCard}
+              className={styles.latestCard} data-cm-card
             >
               <span className={styles.latestType}>Latest research</span>
               <h3>{latestArticle.title}</h3>
@@ -267,7 +267,7 @@ export default function HomePage() {
             {featuredIpo ? (
               <Link
                 href={`/ipo/${featuredIpo.slug}`}
-                className={styles.latestCard}
+                className={styles.latestCard} data-cm-card
               >
                 <span className={styles.latestType}>
                   IPO · {featuredIpo.status}
@@ -286,7 +286,7 @@ export default function HomePage() {
 
             <Link
               href="/tools/mf-portfolio-tracker"
-              className={styles.latestCard}
+              className={styles.latestCard} data-cm-card
             >
               <span className={styles.latestType}>Portfolio intelligence</span>
               <h3>Mutual Fund Portfolio Intelligence</h3>
@@ -300,7 +300,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/tools" className={styles.latestCard}>
+            <Link href="/tools" className={styles.latestCard} data-cm-card>
               <span className={styles.latestType}>Decision tools</span>
               <h3>Transparent Financial Tools</h3>
               <p>
@@ -316,7 +316,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={styles.capabilitiesSection}>
+      <section className={styles.capabilitiesSection} data-cm-reveal>
         <div className={styles.sectionShell}>
           <div className={styles.sectionHeading}>
             <div>
@@ -334,7 +334,7 @@ export default function HomePage() {
             {capabilities.map((item, index) => (
               <Link
                 href={item.href}
-                className={styles.capabilityCard}
+                className={styles.capabilityCard} data-cm-card
                 key={item.title}
               >
                 <div className={styles.cardMeta}>
@@ -353,7 +353,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={styles.frameworkSection}>
+      <section className={styles.frameworkSection} data-cm-reveal>
         <div className={styles.sectionShell}>
           <div className={styles.frameworkGrid}>
             <div className={styles.frameworkIntro}>
@@ -379,7 +379,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={styles.reportsSection}>
+      <section className={styles.reportsSection} data-cm-reveal>
         <div className={styles.sectionShell}>
           <div className={styles.reportPanel}>
             <div>
@@ -400,7 +400,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={styles.identitySection}>
+      <section className={styles.identitySection} data-cm-reveal>
         <div className={styles.sectionShell}>
           <div className={styles.identityGrid}>
             <div>

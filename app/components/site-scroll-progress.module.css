@@ -1,0 +1,2 @@
+.track{position:fixed;top:0;left:0;right:0;height:3px;z-index:110;pointer-events:none}
+.progress{height:100%;width:100%;transform:scaleX(0);transform-origin:left center;background:linear-gradient(90deg,#50dfaa,#69c9ff,#9084f2);box-shadow:0 0 15px rgba(92,224,172,.36)}
