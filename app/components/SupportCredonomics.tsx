@@ -194,7 +194,7 @@ export default function SupportCredonomics() {
                 aria-pressed={value === amount}
                 onClick={() => { setAmount(value); setCopyState('idle') }}
               >
-                {value === 100 ? <span className={styles.popular}>MOST CHOSEN</span> : null}
+                {value === 100 ? <span className={styles.popular}>RECOMMENDED</span> : null}
                 <span className={styles.amountCheck} aria-hidden="true">{value === amount ? <Check size={12} strokeWidth={3} /> : null}</span>
                 <strong>₹{value}</strong>
                 <small>{value === 10 ? 'Small boost' : value === 100 ? 'Supporter' : 'Champion'}</small>
