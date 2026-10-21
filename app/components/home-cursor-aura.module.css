@@ -1,0 +1,55 @@
+/*
+  Visible, genuinely cursor-reactive spotlight on the CredoNomics homepage.
+  The old 1px element with near-invisible pseudo gradients was unreliable
+  on different light/dark backgrounds. The halo itself now has dimensions.
+*/
+.aura {
+  position: fixed;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  overflow: hidden;
+  contain: layout paint style;
+}
+
+.halo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(-9999px, -9999px, 0);
+  background: radial-gradient(circle,
+    rgba(91, 241, 178, .27) 0%,
+    rgba(51, 221, 175, .19) 18%,
+    rgba(52, 182, 197, .12) 38%,
+    rgba(92, 124, 238, .07) 56%,
+    transparent 76%);
+  transition: opacity .25s ease;
+  will-change: transform;
+}
+
+.halo[data-active='true'] { opacity: 1; }
+
+/* A tiny low-contrast ring makes tracking perceptible even on busy surfaces. */
+.halo::after {
+  content: '';
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(128, 253, 199, .27);
+  border-radius: 50%;
+  box-shadow: 0 0 22px rgba(77, 237, 169, .13);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+@media (max-width: 760px), (prefers-reduced-motion: reduce), (forced-colors: active) {
+  .aura { display: none; }
+  .halo { will-change: auto; transition: none; }
+}
