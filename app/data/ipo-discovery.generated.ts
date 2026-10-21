@@ -2,14 +2,25 @@
 import type { IpoDiscoveryRecord } from './ipo-types'
 
 export const ipoDiscoveryMeta = {
-  "generatedAt": "2026-10-20T14:16:40.243Z",
+  "generatedAt": "2026-10-21T08:29:32.713Z",
   "source": "SEBI Public Issues",
   "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
-  "recordCount": 30,
+  "recordCount": 31,
   "note": "Discovery layer only. Financial ranking requires separately normalized offer-document data."
 } as const
 
 export const ipoDiscovery: IpoDiscoveryRecord[] = [
+  {
+    "id": "tablespace-technologies-limited-addendum-8ef8cf",
+    "companyName": "Tablespace Technologies Limited",
+    "filingTitle": "Tablespace Technologies Limited - Addendum to DRHP",
+    "filingDate": "2026-10-21",
+    "documentStage": "addendum",
+    "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/tablespace-technologies-limited-addendum-to-drhp_105343.html",
+    "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
+    "firstSeen": "2026-10-21T08:29:32.713Z",
+    "lastSeen": "2026-10-21T08:29:32.713Z"
+  },
   {
     "id": "oswal-cables-limited-addendum-225fbb",
     "companyName": "OSWAL CABLES LIMITED",
@@ -19,7 +30,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/oswal-cables-limited-addendum-to-drhp_105234.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-10-14T08:38:02.070Z",
-    "lastSeen": "2026-10-20T14:16:40.243Z"
+    "lastSeen": "2026-10-21T08:29:32.713Z"
   },
   {
     "id": "matangi-rubber-limited-addendum-57ae39",
@@ -30,7 +41,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/matangi-rubber-limited-addendum-to-the-drhp_105143.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-10-12T10:41:09.860Z",
-    "lastSeen": "2026-10-20T14:16:40.243Z"
+    "lastSeen": "2026-10-21T08:29:32.713Z"
   },
   {
     "id": "arohan-financial-services-limited-addendum-5cfcca",

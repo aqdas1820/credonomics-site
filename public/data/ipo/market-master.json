@@ -1,129 +1,71 @@
 {
   "meta": {
-    "generatedAt": "2026-10-20T14:16:28.216Z",
-    "recordCount": 4,
-    "nseCount": 4,
+    "generatedAt": "2026-10-21T08:29:20.372Z",
+    "recordCount": 2,
+    "nseCount": 2,
     "bseCount": 0,
-    "activeCount": 0,
+    "activeCount": 2,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 4 · BSE SME unavailable · BSE mainboard 0"
+    "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard 0"
   },
   "records": [
     {
-      "slug": "bonfiglioli-transmissions-ltd-8d678aa",
-      "companyName": "Bonfiglioli Transmissions Limited",
-      "symbol": "BONFIG",
+      "slug": "jio-platforms-ltd-eaf4897",
+      "companyName": "Jio Platforms Limited",
+      "symbol": "JPL",
       "marketSegment": "mainboard",
-      "status": "closed",
+      "status": "open",
       "securityType": "EQ",
       "issue": {
-        "priceBandLow": 558,
-        "priceBandHigh": 586,
-        "openDate": "2026-10-15",
-        "closeDate": "2026-10-19",
+        "priceBandLow": 1065,
+        "priceBandHigh": 1119,
+        "openDate": "2026-10-21",
+        "closeDate": "2026-10-23",
         "exchange": [
           "NSE"
         ]
       },
       "subscription": {
-        "total": 31.76523900241494,
-        "updatedAt": "2026-10-20T14:16:28.216Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BONFIG&type=Active"
+        "total": 0.925613990515291,
+        "updatedAt": "2026-10-21T08:29:20.372Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JPL&type=Active"
       },
-      "sharesOffered": 30282330,
-      "sharesBid": 961925450,
-      "estimatedIssueValueCr": 1774.54,
+      "sharesOffered": 197525934,
+      "sharesBid": 182832768,
+      "estimatedIssueValueCr": 22103.15,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BONFIG&type=Active",
-      "fetchedAt": "2026-10-20T14:16:28.216Z"
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JPL&type=Active",
+      "fetchedAt": "2026-10-21T08:29:20.372Z"
     },
     {
-      "slug": "sahajanand-medical-technologies-ltd-346d039",
-      "companyName": "Sahajanand Medical Technologies Limited",
-      "symbol": "SMT",
+      "slug": "paras-healthcare-ltd-8045ae9",
+      "companyName": "Paras Healthcare Limited",
+      "symbol": "PARASHLTH",
       "marketSegment": "mainboard",
-      "status": "closed",
+      "status": "open",
       "securityType": "EQ",
       "issue": {
-        "priceBandLow": 327,
-        "priceBandHigh": 344,
-        "openDate": "2026-10-15",
-        "closeDate": "2026-10-19",
+        "priceBandLow": 660,
+        "priceBandHigh": 693,
+        "openDate": "2026-10-21",
+        "closeDate": "2026-10-23",
         "exchange": [
           "NSE"
         ]
       },
       "subscription": {
-        "total": 4.288056734015816,
-        "updatedAt": "2026-10-20T14:16:28.216Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMT&type=Active"
+        "total": 0.06693121292464801,
+        "updatedAt": "2026-10-21T08:29:20.372Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PARASHLTH&type=Active"
       },
-      "sharesOffered": 9750482,
-      "sharesBid": 41810620,
-      "estimatedIssueValueCr": 335.42,
+      "sharesOffered": 12083331,
+      "sharesBid": 808752,
+      "estimatedIssueValueCr": 837.37,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SMT&type=Active",
-      "fetchedAt": "2026-10-20T14:16:28.216Z"
-    },
-    {
-      "slug": "tonbo-imaging-india-ltd-b7f2320",
-      "companyName": "Tonbo Imaging India Limited",
-      "symbol": "TONBO",
-      "marketSegment": "mainboard",
-      "status": "closed",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 665,
-        "priceBandHigh": 700,
-        "openDate": "2026-10-15",
-        "closeDate": "2026-10-19",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 96.88362008451058,
-        "updatedAt": "2026-10-20T14:16:28.216Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TONBO&type=Active"
-      },
-      "sharesOffered": 8526033,
-      "sharesBid": 826032942,
-      "estimatedIssueValueCr": 596.82,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=TONBO&type=Active",
-      "fetchedAt": "2026-10-20T14:16:28.216Z"
-    },
-    {
-      "slug": "zetwerk-manufacturing-businesses-ltd-805420f",
-      "companyName": "Zetwerk Manufacturing Businesses Limited",
-      "symbol": "ZETWERK",
-      "marketSegment": "mainboard",
-      "status": "closed",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 143,
-        "priceBandHigh": 151,
-        "openDate": "2026-10-15",
-        "closeDate": "2026-10-19",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 1.3724419898118434,
-        "updatedAt": "2026-10-20T14:16:28.216Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ZETWERK&type=Active"
-      },
-      "sharesOffered": 185066845,
-      "sharesBid": 253993509,
-      "estimatedIssueValueCr": 2794.51,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=ZETWERK&type=Active",
-      "fetchedAt": "2026-10-20T14:16:28.216Z"
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PARASHLTH&type=Active",
+      "fetchedAt": "2026-10-21T08:29:20.372Z"
     }
   ]
 }
