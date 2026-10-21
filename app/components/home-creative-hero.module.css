@@ -52,3 +52,124 @@
 @media(max-width:860px){.stage{grid-template-columns:1fr;gap:8px;padding:43px 28px 24px}.copy{max-width:720px}.copy h1{font-size:clamp(43px,7vw,65px)}.visual{max-width:620px;margin:auto;height:410px}.researchCard{left:5%}.ipoCard{right:4%}.toolsCard{left:11%}}
 @media(max-width:500px){.stage{padding:31px 16px 21px;border-radius:19px}.eyebrow{font-size:8px;letter-spacing:.08em}.copy h1{font-size:clamp(36px,10.4vw,49px);margin:21px 0}.copy p{font-size:13px;line-height:1.68}.actions{margin-top:23px;gap:8px}.primary,.secondary{font-size:11px;min-height:42px;padding:9px 12px}.proof{margin-top:27px;gap:9px 12px;font-size:9px}.visual{height:335px}.orbitOuter{width:265px;height:265px}.orbitMiddle{width:220px;height:220px}.orbitInner{width:155px;height:155px}.orbitSpark{top:calc(47% - 132px);transform-origin:0 132px}.core{width:116px;height:116px;gap:4px}.core img{max-width:55px;max-height:55px}.core span{font-size:6px}.glassCard{width:155px;gap:7px;padding:9px;border-radius:11px}.tileIcon{flex-basis:24px;height:24px}.tileCopy small{font-size:7px}.tileCopy strong{font-size:10px}.tileCopy em{font-size:8px}.researchCard{left:-1%;top:22px}.ipoCard{right:-1%;top:144px}.toolsCard{left:0;bottom:12px}.visualCaption{font-size:7px}.ribbonSet{gap:20px;padding-right:20px}.ribbonSet span{font-size:9px;gap:9px}}
 @media(prefers-reduced-motion:reduce){.copy,.orbitOuter,.orbitSpark,.core,.glassCard,.ribbonTrack{animation:none!important}.visualInner,.primary,.secondary,.glassCard{transition:none!important}.visualInner{transform:none!important}}
+
+
+/* ─── Cinematic welcome: a single non-blocking first-fold sequence ───
+ * All information and links exist immediately in HTML; only opacity and
+ * transforms animate. No video, no full-screen overlay, no layout shifts.
+ * CSS-only so it fails open if JS is blocked.
+ */
+.welcomeLight{
+  position:absolute;inset:0;z-index:4;pointer-events:none;
+  background:linear-gradient(112deg,transparent 25%,rgba(126,244,198,.12) 46%,rgba(152,183,255,.11) 51%,transparent 70%);
+  transform:translate3d(-120%,0,0);
+  animation:cmWelcomeLight 1.45s .06s ease-in-out both;
+}
+.welcomeIdentity{
+  position:relative;display:inline-flex;align-items:center;gap:12px;
+  min-height:54px;max-width:100%;margin-bottom:15px;
+  animation:cmWelcomeBrand .8s .03s both cubic-bezier(.2,1,.32,1);
+}
+.welcomeLogo{
+  position:relative;display:grid;place-items:center;flex:0 0 48px;
+  width:48px;height:48px;border:1px solid rgba(137,252,208,.32);
+  border-radius:14px;background:radial-gradient(circle at 30% 15%,#245049,#0b2631 83%);
+  box-shadow:0 0 0 6px rgba(107,238,182,.035),0 10px 28px rgba(7,18,25,.34);
+}
+.welcomeLogo img{
+  width:38px;height:38px;object-fit:contain;z-index:1;
+}
+.welcomeLogoHalo{
+  position:absolute;inset:-6px;border:1px solid rgba(141,255,209,.19);border-radius:18px;
+  pointer-events:none;animation:cmWelcomeLogoPulse 1.25s .16s ease-out both;
+}
+.welcomeWordmark{display:flex;flex-direction:column;gap:5px;min-width:0}
+.welcomeWordmark strong{font-size:14px;font-weight:880;letter-spacing:.19em;color:#e4fff0;line-height:1.1}
+.welcomeWordmark small{font-size:8px;font-weight:750;letter-spacing:.14em;color:#94bdb5;white-space:normal}
+.welcomeIdentityLine{
+  position:absolute;left:60px;bottom:-7px;width:104px;height:1px;transform-origin:left center;
+  background:linear-gradient(90deg,#96f1c4,rgba(132,189,245,.4),transparent);
+  animation:cmWelcomeLine .75s .34s both cubic-bezier(.25,.9,.32,1);
+}
+
+/* In the default style .copy had one uniform entrance; the welcome now
+ * sequences each element independently to create a deliberate hierarchy.
+ */
+.copy{animation:none}
+.stage .eyebrow{animation:cmWelcomeRise .58s .18s both cubic-bezier(.22,1,.36,1)}
+.stage .copy h1{margin-top:21px;animation:cmWelcomeTitle .77s .29s both cubic-bezier(.22,1,.36,1)}
+.stage .copy>p{animation:cmWelcomeRise .68s .44s both cubic-bezier(.22,1,.36,1)}
+.stage .actions{animation:cmWelcomeRise .68s .58s both cubic-bezier(.22,1,.36,1)}
+.stage .proof{animation:cmWelcomeRise .65s .76s both cubic-bezier(.22,1,.36,1)}
+
+/* The cards retain their existing infinite float as a second independent
+ * animation, while the first animation plays only once on load. */
+.stage .glassCard{
+  animation-name:cmWelcomeCard,float;
+  animation-duration:.72s,8s;
+  animation-timing-function:cubic-bezier(.22,1,.36,1),ease-in-out;
+  animation-delay:.66s,0s;
+  animation-iteration-count:1,infinite;
+  animation-fill-mode:both,none;
+}
+.stage .ipoCard{animation-delay:.85s,-2s;animation-duration:.72s,9s}
+.stage .toolsCard{animation-delay:1.01s,-4s;animation-duration:.72s,7.5s}
+.stage .core img{animation:cmWelcomeCore 1.18s .16s both cubic-bezier(.22,1,.36,1)}
+.stage .orbitMiddle{animation:cmWelcomeOrbit .95s .3s both ease-out}
+
+@keyframes cmWelcomeBrand{
+  from{opacity:0;transform:translate3d(0,16px,0) scale(.94)}
+  to{opacity:1;transform:translate3d(0,0,0) scale(1)}
+}
+@keyframes cmWelcomeRise{
+  from{opacity:0;transform:translate3d(0,18px,0)}
+  to{opacity:1;transform:translate3d(0,0,0)}
+}
+@keyframes cmWelcomeTitle{
+  from{opacity:0;transform:translate3d(0,26px,0);letter-spacing:-.078em}
+  to{opacity:1;transform:translate3d(0,0,0);letter-spacing:-.066em}
+}
+@keyframes cmWelcomeCard{
+  from{opacity:0;transform:translate3d(0,22px,0) scale(.94)}
+  to{opacity:1;transform:translate3d(0,0,0) scale(1)}
+}
+@keyframes cmWelcomeCore{
+  from{opacity:0;transform:scale(.65);filter:brightness(1.9)}
+  to{opacity:1;transform:scale(1);filter:brightness(1)}
+}
+@keyframes cmWelcomeLogoPulse{
+  from{opacity:0;transform:scale(.73)}
+  42%{opacity:1}
+  to{opacity:.75;transform:scale(1)}
+}
+@keyframes cmWelcomeOrbit{
+  from{opacity:0;scale:.78}
+  to{opacity:1;scale:1}
+}
+@keyframes cmWelcomeLight{
+  0%{opacity:0;transform:translate3d(-120%,0,0)}
+  18%{opacity:1}
+  75%{opacity:.7}
+  100%{opacity:0;transform:translate3d(120%,0,0)}
+}
+@keyframes cmWelcomeLine{
+  from{opacity:0;transform:scaleX(0)}
+  to{opacity:1;transform:scaleX(1)}
+}
+@media(max-width:500px){
+  .welcomeIdentity{gap:9px;margin-bottom:11px;min-height:44px}
+  .welcomeLogo{width:40px;height:40px;flex-basis:40px;border-radius:12px}
+  .welcomeLogo img{width:32px;height:32px}
+  .welcomeWordmark strong{font-size:11px;letter-spacing:.14em}
+  .welcomeWordmark small{font-size:7px;letter-spacing:.09em}
+  .welcomeIdentityLine{left:49px}
+  .stage .copy h1{margin-top:18px}
+}
+@media(prefers-reduced-motion:reduce){
+  .welcomeIdentity,.welcomeLogoHalo,.welcomeIdentityLine,.welcomeLight,
+  .stage .eyebrow,.stage .copy h1,.stage .copy>p,.stage .actions,
+  .stage .proof,.stage .glassCard,.stage .core img,.stage .orbitMiddle{
+    animation:none!important;opacity:1!important;transform:none!important;
+  }
+  .stage .core img{filter:none!important}
+}
