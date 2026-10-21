@@ -1,99 +1,104 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { createPortal } from 'react-dom'
+import { useEffect, useRef, useState } from 'react'
 import styles from './home-cursor-aura.module.css'
 
-const HALO_RADIUS = 260
+const HALO_RADIUS = 250
 
 /**
- * Decorative mouse-following glow. Coordinates remain in the browser.
- * Use actual pointer events rather than requiring the mouse to be the OS's
- * primary pointing device: Windows hybrid touch+mouse setups are supported.
+ * Client-only body portal: escaping the homepage's overflow:hidden and
+ * stacked sections makes the decorative pointer spotlight reliably visible.
+ * Pointer positions stay entirely local and never leave the browser.
  */
 export default function HomeCursorAura() {
-  const glowRef = useRef<HTMLDivElement>(null)
+  const [mounted, setMounted] = useState(false)
+  const haloRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => setMounted(true), [])
 
   useEffect(() => {
-    const glow = glowRef.current
-    if (!glow) return
+    if (!mounted) return
+    const halo = haloRef.current
+    if (!halo) return
 
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)')
     const forcedColors = window.matchMedia('(forced-colors: active)')
     let frame = 0
-    let x = -9999
-    let y = -9999
     let enabled = false
+    let x = -1000
+    let y = -1000
 
     const paint = () => {
       frame = 0
-      glow.style.transform = 'translate3d(' + (x - HALO_RADIUS) + 'px, ' + (y - HALO_RADIUS) + 'px, 0)'
+      halo.style.transform = 'translate3d(' + (x - HALO_RADIUS) + 'px,' + (y - HALO_RADIUS) + 'px,0)'
     }
 
     const moveTo = (clientX: number, clientY: number) => {
       if (!enabled) return
       x = clientX
       y = clientY
-      glow.dataset.active = 'true'
+      halo.dataset.active = 'true'
       if (!frame) frame = window.requestAnimationFrame(paint)
     }
 
-    const onPointerMove = (event: PointerEvent) => {
-      if (event.pointerType === 'touch') return
-      moveTo(event.clientX, event.clientY)
+    const onPointer = (event: PointerEvent) => {
+      if (event.pointerType !== 'touch') moveTo(event.clientX, event.clientY)
     }
-
-    // Legacy browser fallback. On modern browsers pointermove is preferred.
-    const onMouseMove = (event: MouseEvent) => {
+    const onMouse = (event: MouseEvent) => {
       if (!('PointerEvent' in window)) moveTo(event.clientX, event.clientY)
     }
-
-    const hide = () => { glow.dataset.active = 'false' }
+    const hide = () => { halo.dataset.active = 'false' }
     const onMouseOut = (event: MouseEvent) => {
       if (!event.relatedTarget) hide()
     }
     const onVisibility = () => { if (document.hidden) hide() }
-    const onResize = () => sync()
 
-    function sync() {
-      const shouldEnable = window.innerWidth > 760 && !reducedMotion.matches && !forcedColors.matches
-      if (shouldEnable === enabled) return
-      enabled = shouldEnable
+    const sync = () => {
+      const allow = window.innerWidth > 760 && !motionPreference.matches && !forcedColors.matches
+      if (allow === enabled) return
+      enabled = allow
       if (enabled) {
-        window.addEventListener('pointermove', onPointerMove, { passive: true })
-        window.addEventListener('mousemove', onMouseMove, { passive: true })
+        window.addEventListener('pointermove', onPointer, { passive: true })
+        window.addEventListener('mousemove', onMouse, { passive: true })
         document.addEventListener('mouseout', onMouseOut)
         document.addEventListener('visibilitychange', onVisibility)
       } else {
-        window.removeEventListener('pointermove', onPointerMove)
-        window.removeEventListener('mousemove', onMouseMove)
+        window.removeEventListener('pointermove', onPointer)
+        window.removeEventListener('mousemove', onMouse)
         document.removeEventListener('mouseout', onMouseOut)
         document.removeEventListener('visibilitychange', onVisibility)
-        hide()
         window.cancelAnimationFrame(frame)
         frame = 0
+        hide()
       }
     }
 
-    reducedMotion.addEventListener('change', sync)
+    motionPreference.addEventListener('change', sync)
     forcedColors.addEventListener('change', sync)
-    window.addEventListener('resize', onResize, { passive: true })
+    window.addEventListener('resize', sync, { passive: true })
     sync()
 
     return () => {
-      window.removeEventListener('pointermove', onPointerMove)
-      window.removeEventListener('mousemove', onMouseMove)
+      window.removeEventListener('pointermove', onPointer)
+      window.removeEventListener('mousemove', onMouse)
       document.removeEventListener('mouseout', onMouseOut)
       document.removeEventListener('visibilitychange', onVisibility)
-      window.removeEventListener('resize', onResize)
-      reducedMotion.removeEventListener('change', sync)
+      window.removeEventListener('resize', sync)
+      motionPreference.removeEventListener('change', sync)
       forcedColors.removeEventListener('change', sync)
       window.cancelAnimationFrame(frame)
     }
-  }, [])
+  }, [mounted])
 
-  return (
-    <div className={styles.aura} data-cm-cursor-aura aria-hidden="true">
-      <div className={styles.halo} data-cm-cursor-halo ref={glowRef} />
-    </div>
+  if (!mounted) return null
+
+  return createPortal(
+    <div className={styles.aura} aria-hidden="true" data-cm-cursor-aura>
+      <div className={styles.halo} data-cm-cursor-halo ref={haloRef}>
+        <div className={styles.innerRing} />
+      </div>
+    </div>,
+    document.body,
   )
 }

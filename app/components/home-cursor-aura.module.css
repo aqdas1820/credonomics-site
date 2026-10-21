@@ -1,55 +1,53 @@
 /*
-  Visible, genuinely cursor-reactive spotlight on the CredoNomics homepage.
-  The old 1px element with near-invisible pseudo gradients was unreliable
-  on different light/dark backgrounds. The halo itself now has dimensions.
-*/
+ * A true viewport overlay. The previous glow was nested under
+ * .page{overflow:hidden}, and could be obscured by stacked/opaque panels.
+ * Its new body portal paints above page sections and below the top nav/modal.
+ */
 .aura {
   position: fixed;
   inset: 0;
-  z-index: 4;
-  pointer-events: none;
+  z-index: 45;
+  pointer-events: none !important;
   overflow: hidden;
-  contain: layout paint style;
+  isolation: isolate;
 }
 
 .halo {
   position: absolute;
-  top: 0;
   left: 0;
-  width: 520px;
-  height: 520px;
+  top: 0;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
-  pointer-events: none;
+  pointer-events: none !important;
   opacity: 0;
-  transform: translate3d(-9999px, -9999px, 0);
-  background: radial-gradient(circle,
-    rgba(91, 241, 178, .27) 0%,
-    rgba(51, 221, 175, .19) 18%,
-    rgba(52, 182, 197, .12) 38%,
-    rgba(92, 124, 238, .07) 56%,
-    transparent 76%);
-  transition: opacity .25s ease;
+  transform: translate3d(-9999px,-9999px,0);
   will-change: transform;
+  transition: opacity .18s ease;
+  background: radial-gradient(circle,
+    rgba(94,244,181,.42) 0%,
+    rgba(82,239,175,.29) 9%,
+    rgba(60,219,179,.18) 24%,
+    rgba(76,185,216,.12) 43%,
+    rgba(105,141,247,.05) 59%,
+    transparent 77%);
 }
+.halo[data-active="true"] { opacity: 1; }
 
-.halo[data-active='true'] { opacity: 1; }
-
-/* A tiny low-contrast ring makes tracking perceptible even on busy surfaces. */
-.halo::after {
-  content: '';
+.innerRing {
   position: absolute;
-  width: 54px;
-  height: 54px;
-  top: 50%;
   left: 50%;
-  border: 1px solid rgba(128, 253, 199, .27);
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid rgba(141,255,212,.78);
   border-radius: 50%;
-  box-shadow: 0 0 22px rgba(77, 237, 169, .13);
   transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(92,247,176,.28), inset 0 0 13px rgba(87,239,176,.12);
   pointer-events: none;
 }
 
-@media (max-width: 760px), (prefers-reduced-motion: reduce), (forced-colors: active) {
-  .aura { display: none; }
+@media (max-width:760px), (prefers-reduced-motion:reduce), (forced-colors:active) {
+  .aura { display: none !important; }
   .halo { will-change: auto; transition: none; }
 }
