@@ -8,6 +8,9 @@ test('cursor halo follows actual mouse coordinates and remains click-through', a
 
   await expect(aura).toHaveAttribute('aria-hidden', 'true')
   await expect(aura).toHaveCSS('pointer-events', 'none')
+  expect(await aura.evaluate(el => el.parentElement === document.body)).toBe(true)
+  await expect(aura).toHaveCSS('z-index', '45')
+  await expect(halo).toHaveCSS('width', '500px')
 
   await page.mouse.move(150, 180)
   await expect(halo).toHaveAttribute('data-active', 'true')
