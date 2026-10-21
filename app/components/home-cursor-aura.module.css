@@ -1,0 +1,7 @@
+.aura{position:fixed;inset:0;z-index:3;overflow:hidden;pointer-events:none;contain:layout paint style}
+.glow{position:absolute;top:0;left:0;width:1px;height:1px;opacity:0;pointer-events:none;will-change:transform;transition:opacity .28s ease}
+.glow[data-active='true']{opacity:1}
+.glow:before,.glow:after{content:'';position:absolute;border-radius:50%;pointer-events:none}
+.glow:before{width:550px;height:550px;top:-275px;left:-275px;background:radial-gradient(circle,rgba(74,225,156,.14),rgba(54,205,193,.06) 38%,transparent 72%)}
+.glow:after{width:310px;height:310px;top:-155px;left:-155px;background:radial-gradient(circle,rgba(104,153,251,.11),transparent 70%)}
+@media(hover:none),(pointer:coarse),(max-width:760px),(prefers-reduced-motion:reduce),(forced-colors:active){.aura{display:none}.glow{will-change:auto}}

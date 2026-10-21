@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight, HeartHandshake, Mail, ShieldCheck, X } from 'lucide-react'
+import { ArrowRight, Check, Heart, HeartHandshake, Mail, ShieldCheck, Sparkles, X } from 'lucide-react'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import {
   mayAutoPrompt,
@@ -44,11 +44,13 @@ export default function SupportCredonomics() {
   const [elapsed, setElapsed] = useState(false)
   const [engaged, setEngaged] = useState(false)
   const [hintVisible, setHintVisible] = useState(false)
+  const [copyState, setCopyState] = useState<'idle' | 'copied' | 'error'>('idle')
 
   const openDialog = useCallback(() => {
     const dialog = dialogRef.current
     if (!dialog || dialog.open) return
     dialog.showModal()
+    setCopyState('idle')
     markPromptSeen()
     setHintVisible(false)
     setOpen(true)
@@ -103,15 +105,22 @@ export default function SupportCredonomics() {
     }
   }, [open])
 
+  const requestText = 'Hello CredoNomics Team,\n\nI would like to voluntarily contribute ₹' + amount + ' to support the development of your financial research and tools. Please share verified contribution instructions.\n\nThank you.'
   const subject = encodeURIComponent('Voluntary support for CredoNomics')
-  const body = encodeURIComponent(
-    `Hello CredoNomics Team,\n\nI would like to voluntarily contribute ₹${amount} to support your independent financial tools and research. Please share the verified contribution instructions.\n\nThank you.`,
-  )
+  const body = encodeURIComponent(requestText)
   const emailHref = `mailto:hello@credonomics.in?subject=${subject}&body=${body}`
+
+  const copyRequest = async () => {
+    if (!navigator.clipboard?.writeText) { setCopyState('error'); return }
+    try {
+      await navigator.clipboard.writeText(requestText)
+      setCopyState('copied')
+    } catch { setCopyState('error') }
+  }
 
   return (
     <>
-      {!open && (
+      {!open && !hintVisible && (
         <button
           id="support-credonomics"
           type="button"
@@ -120,8 +129,9 @@ export default function SupportCredonomics() {
           aria-haspopup="dialog"
           aria-label="Support CredoNomics"
         >
-          <HeartHandshake size={18} aria-hidden="true" />
+          <span className={styles.launcherHeart}><Heart size={16} fill="currentColor" aria-hidden="true" /></span>
           <span>Support CredoNomics</span>
+          <ArrowRight size={14} aria-hidden="true" />
         </button>
       )}
 
@@ -153,23 +163,28 @@ export default function SupportCredonomics() {
         onClose={() => setOpen(false)}
       >
         <div className={styles.card}>
+          <div className={styles.ambient} aria-hidden="true" />
           <header className={styles.top}>
             <span className={styles.eyebrow}>
-              <HeartHandshake size={16} aria-hidden="true" />
-              COMMUNITY SUPPORTED
+              <img src="/credonomics-mark.png" width="25" height="25" alt="" />
+              <span><strong>CredoNomics</strong><small>Community supported research</small></span>
             </span>
             <button type="button" className={styles.close} onClick={dismiss} aria-label="Close support popup">
               <X size={19} aria-hidden="true" />
             </button>
           </header>
 
-          <h2 id="support-title">Help us build a better CredoNomics.</h2>
+          <div className={styles.visualBadge} aria-hidden="true">
+            <HeartHandshake size={30} strokeWidth={1.6} />
+            <Sparkles size={17} className={styles.badgeSpark} />
+          </div>
+          <p className={styles.subheading}>BUILD SOMETHING BETTER, TOGETHER</p>
+          <h2 id="support-title">A little support. <em>A lot of possibility.</em></h2>
           <p id="support-description" className={styles.intro}>
-            We are developing accessible financial research and practical tools.
-            If our work helps you, an optional contribution supports their ongoing development.
+            We are building practical financial tools and source-aware research. Your optional support helps us keep improving them.
           </p>
 
-          <p className={styles.chooseLabel}>Choose a contribution amount</p>
+          <div className={styles.choiceHeading}><p className={styles.chooseLabel}>Choose your contribution</p><span>100% voluntary</span></div>
           <div className={styles.amounts} role="group" aria-label="Contribution amount">
             {SUPPORT_AMOUNTS.map((value) => (
               <button
@@ -177,28 +192,40 @@ export default function SupportCredonomics() {
                 key={value}
                 className={`${styles.amount} ${value === amount ? styles.selected : ''}`}
                 aria-pressed={value === amount}
-                onClick={() => setAmount(value)}
+                onClick={() => { setAmount(value); setCopyState('idle') }}
               >
+                {value === 100 ? <span className={styles.popular}>MOST CHOSEN</span> : null}
+                <span className={styles.amountCheck} aria-hidden="true">{value === amount ? <Check size={12} strokeWidth={3} /> : null}</span>
                 <strong>₹{value}</strong>
-                <small>{value === 10 ? 'Small support' : value === 100 ? 'Supporter' : 'Champion'}</small>
+                <small>{value === 10 ? 'Small boost' : value === 100 ? 'Supporter' : 'Champion'}</small>
               </button>
             ))}
           </div>
 
+          <div className={styles.selectionSummary} aria-live="polite" aria-atomic="true">
+            <span><Heart size={14} fill="currentColor" aria-hidden="true" /> YOUR SELECTION</span>
+            <strong key={amount}>₹{amount}</strong>
+          </div>
+
           <div className={styles.paymentNotice} role="status">
             <ShieldCheck size={19} aria-hidden="true" />
-            <p><strong>Online contributions are not active yet.</strong> You can request verified payment details by email. No payment is collected in this popup.</p>
+            <p><strong>Online contributions are not active yet.</strong> Request verified instructions by email. This does not collect money, confirm payment, or create a receipt.</p>
           </div>
 
           <a className={styles.emailCta} href={emailHref} onClick={dismiss}>
             <Mail size={17} aria-hidden="true" />
-            Ask how to contribute ₹{amount}
+            Request instructions for ₹{amount}
             <ArrowRight size={17} aria-hidden="true" />
           </a>
+          <button type="button" className={styles.copyCta} onClick={copyRequest}>
+            {copyState === 'copied' ? <Check size={15} aria-hidden="true" /> : <Mail size={15} aria-hidden="true" />}
+            {copyState === 'copied' ? 'Request text copied' : 'Copy request text instead'}
+          </button>
+          {copyState === 'error' ? <p className={styles.copyError} role="status">Copy unavailable. Use the email link instead.</p> : null}
           <button type="button" className={styles.later} onClick={dismiss}>Maybe later</button>
 
           <p className={styles.disclaimer}>
-            100% voluntary · Not an investment · No returns, preferential research access or tax-deduction benefit is promised.
+            Not an investment · No returns, tax deduction or preferential research access promised.
           </p>
         </div>
       </dialog>
