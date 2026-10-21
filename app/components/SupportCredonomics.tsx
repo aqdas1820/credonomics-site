@@ -11,6 +11,7 @@ import {
   type SupportAmount,
 } from './support-logic'
 import styles from './support-credonomics.module.css'
+import { initiateSupport, supportConfirmation } from './support-payment'
 
 const DISMISSED_KEY = 'credonomics-support-dismissed-until'
 const SESSION_KEY = 'credonomics-support-shown-in-session'
@@ -39,11 +40,38 @@ function markPromptSeen() {
 
 export default function SupportCredonomics() {
   const dialogRef = useRef<HTMLDialogElement>(null)
+  const contributionBusy = useRef(false)
+  const contributionNonce = useRef<string | null>(null)
+  const [collectionAvailable, setCollectionAvailable] = useState(false)
+
+  useEffect(() => {
+    const controller = new AbortController()
+    fetch('/api/contributions', { cache: 'no-store', signal: controller.signal })
+      .then(response => response.ok ? response.json() : null)
+      .then(result => setCollectionAvailable(result?.available === true))
+      .catch(() => {})
+    return () => controller.abort()
+  }, [])
   const [amount, setAmount] = useState<SupportAmount>(100)
   const [open, setOpen] = useState(false)
   const [elapsed, setElapsed] = useState(false)
   const [engaged, setEngaged] = useState(false)
   const [hintVisible, setHintVisible] = useState(false)
+  const [contributionStatus, setContributionStatus] = useState<'SUCCESS' | 'PENDING' | null>(null)
+
+  useEffect(() => {
+    let cancelled = false
+    let timer: ReturnType<typeof setTimeout> | undefined
+    let attempts = 0
+    const check = async () => {
+      const status = await supportConfirmation()
+      if (cancelled) return
+      setContributionStatus(status)
+      if (status === 'PENDING' && ++attempts < 12) timer = setTimeout(check, 5000)
+    }
+    void check()
+    return () => { cancelled = true; clearTimeout(timer) }
+  }, [])
   const [copyState, setCopyState] = useState<'idle' | 'copied' | 'error'>('idle')
 
   const openDialog = useCallback(() => {
@@ -209,12 +237,24 @@ export default function SupportCredonomics() {
 
           <div className={styles.paymentNotice} role="status">
             <ShieldCheck size={19} aria-hidden="true" />
-            <p><strong>Online contributions are not active yet.</strong> Request verified instructions by email. This does not collect money, confirm payment, or create a receipt.</p>
+            <p>{contributionStatus === 'SUCCESS' ? <><strong>Contribution successful.</strong> Thank you. Your contribution was confirmed against verified bank credit.</> : contributionStatus === 'PENDING' ? <><strong>Bank confirmation pending.</strong> A checkout return alone does not confirm payment. Please do not pay again while verification is pending.</> : collectionAvailable ? <><strong>Contribute through YouPI.</strong> Continue to the original secure checkout. Confirmation requires verified bank credit.</> : <><strong>Online contributions are not active yet.</strong> Request verified instructions by email. This does not collect money, confirm payment, or create a receipt.</>}</p>
           </div>
 
-          <a className={styles.emailCta} href={emailHref} onClick={dismiss}>
+          <a className={styles.emailCta} href={emailHref} onClick={async (event) => {
+            if (!collectionAvailable) { dismiss(); return }
+            event.preventDefault()
+            if (contributionBusy.current) return
+            contributionBusy.current = true
+            dismiss()
+            try {
+              contributionNonce.current ||= window.crypto.randomUUID()
+              const checkoutUrl = await initiateSupport(amount, contributionNonce.current)
+              window.location.assign(checkoutUrl || emailHref)
+            } catch { window.location.assign(emailHref) }
+            finally { contributionBusy.current = false }
+          }}>
             <Mail size={17} aria-hidden="true" />
-            Request instructions for ₹{amount}
+            {collectionAvailable ? 'Contribute' : 'Request instructions for'} ₹{amount}
             <ArrowRight size={17} aria-hidden="true" />
           </a>
           <button type="button" className={styles.copyCta} onClick={copyRequest}>

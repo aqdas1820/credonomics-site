@@ -1,0 +1,408 @@
+diff --git a/apps/checkout-portal/src/contribution-ledger.js b/apps/checkout-portal/src/contribution-ledger.js
+new file mode 100644
+--- /dev/null
++++ b/apps/checkout-portal/src/contribution-ledger.js
+@@ -0,0 +1,43 @@
++import { DatabaseSync } from 'node:sqlite';
++
++// Separate operational security journal, never the financial database.
++export class ContributionLedger {
++  constructor(file) {
++    this.db = new DatabaseSync(file);
++    this.db.exec(`PRAGMA busy_timeout=3000;
++      CREATE TABLE IF NOT EXISTS requests(nonce TEXT PRIMARY KEY, at INTEGER NOT NULL, operation TEXT NOT NULL);
++      CREATE TABLE IF NOT EXISTS orders(order_id TEXT PRIMARY KEY, amount INTEGER NOT NULL,
++        phase TEXT NOT NULL, payment_id TEXT, response TEXT);`);
++  }
++  consume(nonce, operation, now) {
++    this.db.exec('BEGIN IMMEDIATE');
++    try {
++      // Only expired transport nonces are pruned; order/ambiguity history is retained.
++      this.db.prepare('DELETE FROM requests WHERE at < ?').run(now - 172800000);
++      if (this.db.prepare('SELECT 1 FROM requests WHERE nonce=?').get(nonce)) throw new Error('REPLAY');
++      const count = (since, op) => this.db.prepare(`SELECT count(*) n FROM requests WHERE at>=? ${op ? "AND operation='create'" : ''}`).get(since).n;
++      if (count(now - 60000) >= 120 || operation === 'create' && (count(now - 3600000, true) >= 20 || count(now - 86400000, true) >= 100)) throw new Error('RATE_LIMIT');
++      this.db.prepare('INSERT INTO requests VALUES (?,?,?)').run(nonce, now, operation);
++      this.db.exec('COMMIT');
++    } catch (error) { this.db.exec('ROLLBACK'); throw error; }
++  }
++  reserve(order, amount) {
++    const previous = this.db.prepare('SELECT * FROM orders WHERE order_id=?').get(order);
++    if (previous) {
++      if (previous.amount !== amount) throw new Error('ORDER_CONFLICT');
++      if (previous.phase !== 'COMPLETE') throw new Error('RECONCILIATION_REQUIRED');
++      return JSON.parse(previous.response);
++    }
++    this.db.prepare("INSERT INTO orders(order_id,amount,phase) VALUES (?,?,'UNCERTAIN')").run(order, amount);
++    // Reservation is durable BEFORE transport. A timeout/crash cannot auto-create again.
++    return null;
++  }
++  complete(order, result) {
++    this.db.prepare("UPDATE orders SET phase='COMPLETE',payment_id=?,response=? WHERE order_id=? AND phase='UNCERTAIN'")
++      .run(result.paymentId, JSON.stringify(result), order);
++  }
++  owns(order, amount, payment) {
++    return !!this.db.prepare("SELECT 1 FROM orders WHERE order_id=? AND amount=? AND payment_id=? AND phase='COMPLETE'").get(order, amount, payment);
++  }
++  close() { this.db.close(); }
++}
+diff --git a/apps/checkout-portal/src/contribution-binding.js b/apps/checkout-portal/src/contribution-binding.js
+new file mode 100644
+--- /dev/null
++++ b/apps/checkout-portal/src/contribution-binding.js
+@@ -0,0 +1,32 @@
++import crypto from 'node:crypto';
++import path from 'node:path';
++import { fileURLToPath } from 'node:url';
++import { DatabaseSync } from 'node:sqlite';
++import { decrypt } from '../../../packages/common/src/crypto.js';
++
++const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
++export function readContributionBinding(config, paymentId, env = process.env) {
++  const db = new DatabaseSync(path.resolve(root, env.SQLITE_DB_PATH || 'data/youpi_pg.sqlite'), { readOnly: true });
++  try {
++    db.exec('PRAGMA query_only=ON');
++    const accounts = db.prepare('SELECT id,merchant_id,upi_id,is_merchant_enabled FROM payment_receiving_accounts WHERE merchant_id=? AND is_active=1').all(config.merchantId);
++    const account = accounts[0];
++    if (accounts.length !== 1 || account.id !== config.accountId || !account.is_merchant_enabled ||
++      crypto.createHash('sha256').update(account.upi_id).digest('hex') !== config.vpaHash) throw new Error('ACCOUNT_BINDING_UNVERIFIED');
++    const merchant = db.prepare('SELECT webhook_secret FROM merchants WHERE id=?').get(config.merchantId);
++    let secret = merchant?.webhook_secret;
++    if (secret?.startsWith('enc:v1:')) {
++      if (!env.ENCRYPTION_MASTER_KEY) throw new Error('CREDENTIAL_CUSTODY_UNAVAILABLE');
++      secret = decrypt(secret.slice(7), env.ENCRYPTION_MASTER_KEY);
++    }
++    if (!secret || crypto.createHash('sha256').update(secret).digest('hex') !== config.merchantKeyHash) throw new Error('MERCHANT_ROTATION_UNVERIFIED');
++    if (!paymentId) return { bound: true };
++    const payment = db.prepare('SELECT id,merchant_id,receiving_account_id,order_id,amount_paise,currency,method,status,verification_level,verification_sources,completed_at,metadata FROM payment_sessions WHERE id=?').get(paymentId);
++    if (!payment) throw new Error('PAYMENT_UNAVAILABLE');
++    const evidence = db.prepare(`SELECT id FROM payment_observations WHERE attributed_payment_id=?
++      AND receiving_account_id=? AND amount_paise=? AND source='GMAIL' AND attribution_status='ATTRIBUTED'
++      AND bank_reference_number IS NOT NULL AND length(bank_reference_number)>0 LIMIT 1`)
++      .get(paymentId, config.accountId, payment.amount_paise);
++    return { bound: true, payment, bankEvidence: !!evidence };
++  } finally { db.close(); }
++}
+diff --git a/apps/checkout-portal/src/contributions.js b/apps/checkout-portal/src/contributions.js
+new file mode 100644
+--- /dev/null
++++ b/apps/checkout-portal/src/contributions.js
+@@ -0,0 +1,114 @@
++import crypto from 'node:crypto';
++import fs from 'node:fs';
++import path from 'node:path';
++import { fileURLToPath } from 'node:url';
++import { getObserverToken } from '@youpi/common';
++import { acceptableEncryptionMasterKey } from '../../../packages/common/src/secrets.js';
++import { ContributionLedger } from './contribution-ledger.js';
++import { readContributionBinding } from './contribution-binding.js';
++
++export const CONTRIBUTION_PATH = '/api/v1/merchant/contributions';
++const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
++const UUID = /^[a-f0-9]{8}-[a-f0-9]{4}-[1-8][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i;
++const HASH = /^[a-f0-9]{64}$/;
++const sha = value => crypto.createHash('sha256').update(value).digest('hex');
++const mac = (key, value) => crypto.createHmac('sha256', key).update(value).digest('hex');
++export const contributionSignature = (key, raw, timestamp, nonce) => mac(key, `POST\n${CONTRIBUTION_PATH}\n${timestamp}\n${nonce}\n${sha(raw)}`);
++export const contributionOrder = (key, merchant, attempt, amount) => 'contribution_' + mac(key, `credonomics-contribution-v1:${merchant}:${attempt}:${amount}`).slice(0, 40);
++
++export class ContributionsAdapter {
++  constructor(portal, options = {}) {
++    this.portal = portal; this.env = options.env || process.env; this.now = options.now || Date.now;
++    this.readBinding = options.readBinding || ((config, payment) => readContributionBinding(config, payment, this.env));
++    this.providedLedger = options.ledger; this.ledger = null;
++    this.core = options.core || ((url, init = {}) => portal.coreJson(url, { ...init,
++      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${getObserverToken()}` } }));
++  }
++  config() {
++    const e = this.env;
++    if (e.CHECKOUT_CONTRIBUTIONS_ENABLED !== 'true') return null;
++    const c = { secret: e.CHECKOUT_CONTRIBUTION_SECRET, merchantId: e.CHECKOUT_CONTRIBUTION_MERCHANT_ID,
++      accountId: e.CHECKOUT_CONTRIBUTION_ACCOUNT_ID, vpaHash: e.CHECKOUT_CONTRIBUTION_VPA_SHA256,
++      merchantKeyHash: e.CHECKOUT_CONTRIBUTION_ROTATED_MERCHANT_KEY_SHA256,
++      revokedMerchantKeyHash: e.CHECKOUT_CONTRIBUTION_REVOKED_MERCHANT_KEY_SHA256,
++      origin: e.CHECKOUT_CONTRIBUTION_SITE_ORIGIN || 'https://credonomics.in' };
++    if (e.CHECKOUT_CONTRIBUTION_CREDENTIALS_APPROVED !== 'true' || !acceptableEncryptionMasterKey(c.secret) ||
++      !UUID.test(c.merchantId || '') || !UUID.test(c.accountId || '') || !HASH.test(c.vpaHash || '') ||
++      !HASH.test(c.merchantKeyHash || '') || !HASH.test(c.revokedMerchantKeyHash || '') ||
++      c.merchantKeyHash === c.revokedMerchantKeyHash || sha(c.secret) === c.merchantKeyHash ||
++      !['https://credonomics.in', 'https://www.credonomics.in'].includes(c.origin)) throw new Error('CONFIGURATION_BLOCKED');
++    return c;
++  }
++  journal() {
++    if (!this.ledger) {
++      const file = path.resolve(ROOT, 'data/contribution-adapter.sqlite');
++      const financial = path.resolve(ROOT, this.env.SQLITE_DB_PATH || 'data/youpi_pg.sqlite');
++      if (file.toLowerCase() === financial.toLowerCase() || fs.existsSync(file) &&
++        (fs.lstatSync(file).isSymbolicLink() || fs.existsSync(financial) && fs.statSync(file).ino === fs.statSync(financial).ino)) throw new Error('SEPARATE_LEDGER_REQUIRED');
++      this.ledger = this.providedLedger || new ContributionLedger(file);
++    }
++    return this.ledger;
++  }
++  async available(config) {
++    // The installed public facade currently exposes OTP sign-in only; Core's
++    // password login is not exposed and cannot silently substitute for it.
++    if (!this.portal.collectionEnabled || !this.portal.otpDeliveryEnabled) return false;
++    this.readBinding(config);
++    const h = await this.core('/health');
++    return h.status === 200 && h.data.service === 'payment-api' && h.data.productionMode === true && h.data.privateDeployment === true;
++  }
++  validatePayment(config, id, order, amount) {
++    const proof = this.readBinding(config, id); const p = proof.payment;
++    if (!p || p.id !== id || p.merchant_id !== config.merchantId || p.receiving_account_id !== config.accountId ||
++      p.order_id !== order || String(p.amount_paise) !== String(amount * 100) || p.currency !== 'INR' || p.method !== 'UPI' ||
++      JSON.parse(p.metadata || '{}').purpose !== 'credonomics_contribution') throw new Error('PAYMENT_BINDING_MISMATCH');
++    return proof;
++  }
++  async handle(req, res, context) {
++    const send = (status, data) => { res.writeHead(status, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' }); res.end(JSON.stringify(data)); };
++    try {
++      if (req.method !== 'POST' || req.url !== CONTRIBUTION_PATH) return send(404, { error: 'Route unavailable' });
++      if (!context.trustedTunnel || req.headers.origin || req.headers['sec-fetch-site'] || req.headers.cookie) return send(403, { error: 'Server authentication required' });
++      const c = this.config(); if (!c) return send(404, { error: 'Route unavailable' });
++      const timestamp = req.headers['x-youpi-timestamp']; const nonce = req.headers['x-youpi-nonce']; const signature = req.headers['x-youpi-signature'];
++      if (!/^\d{13}$/.test(timestamp || '') || Math.abs(this.now() - Number(timestamp)) > 60000 || !UUID.test(nonce || '') ||
++        !HASH.test(signature || '') || !/^application\/json(?:;|$)/i.test(req.headers['content-type'] || '')) return send(401, { error: 'Invalid server authentication' });
++      let size = 0; const chunks = [];
++      for await (const chunk of req) { size += chunk.length; if (size > 4096) return send(413, { error: 'Request too large' }); chunks.push(chunk); }
++      const raw = Buffer.concat(chunks);
++      if (!crypto.timingSafeEqual(Buffer.from(signature, 'hex'), Buffer.from(contributionSignature(c.secret, raw, timestamp, nonce), 'hex'))) return send(401, { error: 'Invalid server authentication' });
++      let b; try { b = JSON.parse(raw.toString('utf8')); } catch { return send(400, { error: 'Invalid request' }); }
++      if (!b || Array.isArray(b) || b.origin !== c.origin || b.merchantId !== c.merchantId || !['readiness', 'create', 'status'].includes(b.operation)) return send(403, { error: 'Contribution scope required' });
++      const fields = b.operation === 'readiness' ? ['operation','origin','merchantId'] : ['operation','origin','merchantId','attemptId','orderId','amount', ...(b.operation === 'status' ? ['paymentId'] : [])];
++      if (Object.keys(b).some(key => !fields.includes(key)) || fields.some(key => !(key in b))) return send(400, { error: 'Unexpected fields' });
++      if (b.operation !== 'readiness' && (!UUID.test(b.attemptId || '') || ![10,100,500].includes(b.amount) ||
++        b.orderId !== contributionOrder(c.secret, c.merchantId, b.attemptId, b.amount) || b.operation === 'status' && !UUID.test(b.paymentId || ''))) return send(400, { error: 'Invalid contribution order' });
++      const ledger = this.journal(); ledger.consume(nonce, b.operation, this.now());
++      if (b.operation === 'readiness') return send(200, { available: await this.available(c), authMode: this.portal.otpDeliveryEnabled ? 'WHATSAPP_OTP' : null });
++      if (b.operation === 'status') {
++        if (!ledger.owns(b.orderId, b.amount, b.paymentId)) return send(403, { error: 'Contribution ownership required' });
++        const { payment: p, bankEvidence } = this.validatePayment(c, b.paymentId, b.orderId, b.amount);
++        const sources = JSON.parse(p.verification_sources || '[]');
++        const verified = p.status === 'SUCCESS' && p.verification_level >= 1 && sources.includes('GMAIL') && p.completed_at && bankEvidence;
++        return send(200, { status: verified ? 'SUCCESS' : 'PENDING' });
++      }
++      if (!await this.available(c)) return send(503, { error: 'Payment acceptance unavailable' });
++      const previous = ledger.reserve(b.orderId, b.amount);
++      if (previous) { this.validatePayment(c, previous.paymentId, b.orderId, b.amount); return send(200, previous); }
++      const result = await this.core('/api/v1/payments', { method: 'POST', body: JSON.stringify({
++        orderId: b.orderId, amount: b.amount.toFixed(2), currency: 'INR', method: 'UPI',
++        idempotencyKey: b.orderId, returnUrl: c.origin + '/', metadata: { purpose: 'credonomics_contribution' },
++      }) });
++      const r = result.data;
++      if (![200,201].includes(result.status) || !UUID.test(r?.paymentId || '') || r.orderId !== b.orderId ||
++        r.amountPaise !== String(b.amount * 100) || r.currency !== 'INR' ||
++        r.checkoutUrl !== `https://pay.credonomics.in/checkout/${r.paymentId}`) throw new Error('RECONCILIATION_REQUIRED');
++      this.validatePayment(c, r.paymentId, b.orderId, b.amount);
++      const response = { paymentId: r.paymentId, orderId: b.orderId, amountPaise: r.amountPaise, currency: 'INR', checkoutUrl: r.checkoutUrl };
++      ledger.complete(b.orderId, response); return send(201, response);
++    } catch (error) {
++      return send(error.message === 'REPLAY' ? 409 : error.message === 'RATE_LIMIT' ? 429 : 503,
++        { error: ['REPLAY','RATE_LIMIT','RECONCILIATION_REQUIRED'].includes(error.message) ? error.message : 'Contribution unavailable' });
++    }
++  }
++}
+diff --git a/apps/checkout-portal/src/__tests__/contributions.test.js b/apps/checkout-portal/src/__tests__/contributions.test.js
+new file mode 100644
+--- /dev/null
++++ b/apps/checkout-portal/src/__tests__/contributions.test.js
+@@ -0,0 +1,103 @@
++import { test } from 'node:test';
++import assert from 'node:assert/strict';
++import crypto from 'node:crypto';
++import fs from 'node:fs';
++import os from 'node:os';
++import path from 'node:path';
++import http from 'node:http';
++import { DatabaseSync } from 'node:sqlite';
++import { CheckoutServer } from '../server.js';
++import { ContributionLedger } from '../contribution-ledger.js';
++import { readContributionBinding } from '../contribution-binding.js';
++import { CONTRIBUTION_PATH, contributionOrder, contributionSignature } from '../contributions.js';
++
++const MERCHANT='11111111-1111-4111-8111-111111111111', ACCOUNT='22222222-2222-4222-8222-222222222222';
++const ATTEMPT='33333333-3333-4333-8333-333333333333', ID='44444444-4444-4444-8444-444444444444';
++const SECRET=crypto.randomBytes(32).toString('hex'), TUNNEL='synthetic-tunnel-token-01234567890123456789';
++const sha=v=>crypto.createHash('sha256').update(v).digest('hex');
++const env={CHECKOUT_CONTRIBUTIONS_ENABLED:'true',CHECKOUT_CONTRIBUTION_CREDENTIALS_APPROVED:'true',
++  CHECKOUT_CONTRIBUTION_SECRET:SECRET,CHECKOUT_CONTRIBUTION_MERCHANT_ID:MERCHANT,CHECKOUT_CONTRIBUTION_ACCOUNT_ID:ACCOUNT,
++  CHECKOUT_CONTRIBUTION_VPA_SHA256:sha('synthetic@upi'),CHECKOUT_CONTRIBUTION_ROTATED_MERCHANT_KEY_SHA256:sha('rotated-synthetic-merchant-secret'),CHECKOUT_CONTRIBUTION_REVOKED_MERCHANT_KEY_SHA256:sha('revoked-synthetic-merchant-secret')};
++const base={merchantId:MERCHANT,origin:'https://credonomics.in'};
++const create=(amount=10)=>({...base,operation:'create',amount,attemptId:ATTEMPT,orderId:contributionOrder(SECRET,MERCHANT,ATTEMPT,amount)});
++async function harness(t, enabled=true, extra={}) {
++  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'youpi-contribution-test-'));
++  const ledger=new ContributionLedger(path.join(dir,'security.sqlite')); const calls=[];let payment;
++  const readBinding=(_config,id)=>id?{payment,bankEvidence:!!payment.bankEvidence}:{bound:true};
++  const core=async(url,options)=>{calls.push({url,options});if(url==='/health')return {status:200,data:{service:'payment-api',productionMode:true,privateDeployment:true}};
++    const b=JSON.parse(options.body);payment={id:ID,merchant_id:MERCHANT,receiving_account_id:ACCOUNT,order_id:b.orderId,amount_paise:Number(b.amount)*100,currency:'INR',method:'UPI',metadata:JSON.stringify(b.metadata),status:'INITIATED'};
++    return {status:201,data:{paymentId:ID,orderId:b.orderId,amountPaise:String(payment.amount_paise),currency:'INR',checkoutUrl:`https://pay.credonomics.in/checkout/${ID}`}};};
++  const portal=new CheckoutServer({collectionEnabled:enabled,otpDeliveryEnabled:enabled,tunnelSecret:TUNNEL,apiBaseUrl:'http://127.0.0.1:1',contributions:{env,ledger,readBinding,core,...extra}});
++  const server=portal.createServer();await new Promise(r=>server.listen(0,'127.0.0.1',r));
++  t.after(async()=>{await new Promise(r=>server.close(r));ledger.close();fs.rmSync(dir,{recursive:true,force:true});});
++  const request=(body,{headers={},nonce=crypto.randomUUID(),timestamp=String(Date.now()),route=CONTRIBUTION_PATH,method='POST'}={})=>new Promise((resolve,reject)=>{
++    const raw=JSON.stringify(body);const req=http.request({agent:false,host:'127.0.0.1',port:server.address().port,path:route,method,headers:{Host:'pay.credonomics.in','x-youpi-tunnel-token':TUNNEL,'cf-connecting-ip':'192.0.2.1','cf-ray':'1234567890abcdef-BOM','x-forwarded-proto':'https',
++      'content-type':'application/json','x-youpi-timestamp':timestamp,'x-youpi-nonce':nonce,'x-youpi-signature':contributionSignature(SECRET,raw,timestamp,nonce),...headers}},res=>{let text='';res.on('data',c=>text+=c);res.on('end',()=>{let data;try{data=JSON.parse(text);}catch{}resolve({status:res.statusCode,data,headers:res.headers});});});req.on('error',reject);req.end(raw);
++  });
++  return {request,calls,portal,mutate:value=>Object.assign(payment,value)};
++}
++test('closed collection/auth gates cannot create sessions, readiness remains false',async t=>{
++  const h=await harness(t,false);assert.equal((await h.request(create())).status,503);assert.deepEqual((await h.request({...base,operation:'readiness'})).data,{available:false,authMode:null});assert.equal(h.calls.length,0);
++});
++test('disabled adapter, weak secret and unapproved rotation fail before Core',async t=>{
++  for(const values of [{...env,CHECKOUT_CONTRIBUTIONS_ENABLED:'false'},{...env,CHECKOUT_CONTRIBUTION_SECRET:'1'.repeat(64)},{...env,CHECKOUT_CONTRIBUTION_CREDENTIALS_APPROVED:'false'}]){
++    const h=await harness(t,true,{env:values});assert.ok([404,503].includes((await h.request(create())).status));assert.equal(h.calls.length,0);
++  }
++});
++test('only actual installed sign-in capability permits new anonymous sessions',async t=>{
++  const h=await harness(t,true);h.portal.otpDeliveryEnabled=false;assert.equal((await h.request(create())).status,503);assert.equal(h.calls.length,0);
++  assert.equal((await h.request(create(),{route:'/api/v1/customer/login'})).status,404);
++});
++for(const amount of [10,100,500])test(`narrow authenticated operation creates only INR ${amount} on pinned merchant/account`,async t=>{
++  const h=await harness(t);const b=create(amount);const r=await h.request(b);assert.equal(r.status,201);assert.equal(r.data.checkoutUrl,`https://pay.credonomics.in/checkout/${ID}`);
++  const sent=JSON.parse(h.calls.find(c=>c.url==='/api/v1/payments').options.body);assert.equal(sent.amount,amount.toFixed(2));assert.equal(sent.method,'UPI');assert.equal(sent.autoActivate,undefined);assert.equal(sent.customerId,undefined);
++  assert.equal((await h.request(b)).status,200);assert.equal(h.calls.filter(c=>c.url==='/api/v1/payments').length,1);
++  assert.equal(r.headers['access-control-allow-origin'],undefined);assert.equal(r.headers['set-cookie'],undefined);
++});
++test('missing/forged auth, expired signatures, browser Origin and forged tunnel metadata fail',async t=>{
++  const h=await harness(t);for(const headers of [{'x-youpi-signature':'0'.repeat(64)},{'x-youpi-nonce':'bad'}])assert.equal((await h.request(create(),{headers})).status,401);
++  assert.equal((await h.request(create(),{timestamp:String(Date.now()-120000)})).status,401);
++  assert.equal((await h.request(create(),{headers:{Origin:'https://credonomics.in'}})).status,403);
++  assert.equal((await h.request(create(),{headers:{'sec-fetch-site':'same-origin'}})).status,403);
++  assert.equal((await h.request(create(),{headers:{'x-youpi-tunnel-token':'wrong'}})).status,403);assert.equal(h.calls.length,0);
++});
++test('scope, amount and extra browser fields cannot choose beneficiary or claim success',async t=>{
++  const h=await harness(t);for(const b of [{...create(),merchantId:ACCOUNT},{...create(),origin:'https://attacker.invalid'},{...create(),amount:11},{...create(),amount:'10'},{...create(),payeeVpa:'attacker@upi'},{...create(),status:'SUCCESS'},{...create(),orderId:'unauthorized'}])assert.ok([400,403].includes((await h.request(b)).status));assert.equal(h.calls.length,0);
++});
++test('nonce replay rejects even an authenticated repeated packet; private route namespace stays closed',async t=>{
++  const h=await harness(t);const nonce=crypto.randomUUID();assert.equal((await h.request(create(),{nonce})).status,201);assert.equal((await h.request(create(),{nonce})).status,409);
++  for(const route of ['/api/v1/payments','/api/v1/admin/all-settings','/api/v1/pollers/events','/api/v1/merchant/contributions/extra'])assert.equal((await h.request(create(),{route})).status,404);
++  for(const method of ['GET','OPTIONS'])assert.equal((await h.request(create(),{method})).status,404);
++  assert.equal((await h.request(create(),{route:CONTRIBUTION_PATH+'?operation=create'})).status,404);
++});
++test('timeout after dispatch is durably ambiguous, never automatically retried',async t=>{
++  let creates=0;const h=await harness(t,true,{core:async url=>{if(url==='/health')return {status:200,data:{service:'payment-api',productionMode:true,privateDeployment:true}};creates++;throw Error('timeout');}});
++  assert.equal((await h.request(create())).status,503);assert.equal((await h.request(create())).status,503);assert.equal(creates,1);
++});
++test('wrong actual receiving account suppresses checkout URL and preserves uncertainty',async t=>{
++  const h=await harness(t,true,{readBinding:(_c,id)=>{if(id)throw Error('ACCOUNT_MISMATCH');return {bound:true};}});
++  const result=await h.request(create());assert.equal(result.status,503);assert.equal(result.data.checkoutUrl,undefined);
++});
++test('status requires adapter order ownership, settled Core record AND attributed Gmail evidence',async t=>{
++  const h=await harness(t);const b={...create(),operation:'status',paymentId:ID};assert.equal((await h.request(b)).status,403);await h.request(create());
++  h.mutate({status:'SUCCESS',verification_level:1,verification_sources:'["GMAIL"]',completed_at:new Date().toISOString()});assert.equal((await h.request(b)).data.status,'PENDING');
++  h.mutate({bankEvidence:true});assert.equal((await h.request(b)).data.status,'SUCCESS');
++  h.portal.collectionEnabled=false;assert.equal((await h.request(b)).data.status,'SUCCESS','closed collection must not discard existing genuine confirmation');
++  h.mutate({amount_paise:1});assert.equal((await h.request(b)).status,503);
++});
++test('security ledger preserves replay, ambiguity and rate budgets across restart',()=>{
++  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'contribution-ledger-test-'));const file=path.join(dir,'ledger.sqlite');const now=Date.now();
++  try{let l=new ContributionLedger(file);l.consume('first','create',now);l.reserve('order',10);l.close();l=new ContributionLedger(file);
++    assert.throws(()=>l.consume('first','create',now),/REPLAY/);assert.throws(()=>l.reserve('order',10),/RECONCILIATION_REQUIRED/);
++    for(let n=1;n<20;n++)l.consume('nonce'+n,'create',now);l.close();l=new ContributionLedger(file);assert.throws(()=>l.consume('last','create',now),/RATE_LIMIT/);l.close();
++  }finally{fs.rmSync(dir,{recursive:true,force:true});}
++});
++test('real query-only account binding rejects changed VPA, merchant credential and disabled account',()=>{
++  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'contribution-binding-test-'));const file=path.join(dir,'financial-fixture.sqlite');const db=new DatabaseSync(file);
++  db.exec('CREATE TABLE merchants(id TEXT,webhook_secret TEXT);CREATE TABLE payment_receiving_accounts(id TEXT,merchant_id TEXT,upi_id TEXT,is_active INTEGER,is_merchant_enabled INTEGER)');
++  db.prepare('INSERT INTO merchants VALUES (?,?)').run(MERCHANT,'rotated-synthetic-merchant-secret');db.prepare('INSERT INTO payment_receiving_accounts VALUES (?,?,?,?,?)').run(ACCOUNT,MERCHANT,'synthetic@upi',1,1);db.close();
++  const c={merchantId:MERCHANT,accountId:ACCOUNT,vpaHash:env.CHECKOUT_CONTRIBUTION_VPA_SHA256,merchantKeyHash:env.CHECKOUT_CONTRIBUTION_ROTATED_MERCHANT_KEY_SHA256};const bytes=fs.readFileSync(file);
++  try{assert.deepEqual(readContributionBinding(c,null,{SQLITE_DB_PATH:file}),{bound:true});assert.deepEqual(fs.readFileSync(file),bytes);
++    assert.throws(()=>readContributionBinding({...c,vpaHash:sha('other@upi')},null,{SQLITE_DB_PATH:file}));assert.throws(()=>readContributionBinding({...c,merchantKeyHash:sha('old-secret')},null,{SQLITE_DB_PATH:file}));
++  }finally{fs.rmSync(dir,{recursive:true,force:true});}
++});
+diff --git a/apps/checkout-portal/src/__tests__/contribution-website.integration.test.js b/apps/checkout-portal/src/__tests__/contribution-website.integration.test.js
+new file mode 100644
+--- /dev/null
++++ b/apps/checkout-portal/src/__tests__/contribution-website.integration.test.js
+@@ -0,0 +1,50 @@
++import { test } from 'node:test';
++import assert from 'node:assert/strict';
++import crypto from 'node:crypto';
++import fs from 'node:fs';
++import path from 'node:path';
++import os from 'node:os';
++import http from 'node:http';
++import { pathToFileURL } from 'node:url';
++import { CheckoutServer } from '../server.js';
++import { ContributionLedger } from '../contribution-ledger.js';
++
++test('actual website handler ↔ existing checkout RPC, isolated three-amount transport and confirmation',
++  { skip: !process.env.YOUPI_WEBSITE_SOURCE }, async t => {
++    const { createContributionHandlers } = await import(pathToFileURL(path.join(process.env.YOUPI_WEBSITE_SOURCE, 'src/lib/server/youpi-contributions.ts')).href);
++    const dir=fs.mkdtempSync(path.join(os.tmpdir(),'youpi-cross-repository-'));const ledger=new ContributionLedger(path.join(dir,'security.sqlite'));
++    const secret=crypto.randomBytes(32).toString('hex'), merchant=crypto.randomUUID(),account=crypto.randomUUID(),tunnel='synthetic-cross-repository-origin-secret-0123456789';
++    const payments=new Map();const env={CHECKOUT_CONTRIBUTIONS_ENABLED:'true',CHECKOUT_CONTRIBUTION_CREDENTIALS_APPROVED:'true',CHECKOUT_CONTRIBUTION_SECRET:secret,
++      CHECKOUT_CONTRIBUTION_MERCHANT_ID:merchant,CHECKOUT_CONTRIBUTION_ACCOUNT_ID:account,CHECKOUT_CONTRIBUTION_VPA_SHA256:'a'.repeat(64),CHECKOUT_CONTRIBUTION_ROTATED_MERCHANT_KEY_SHA256:'b'.repeat(64),CHECKOUT_CONTRIBUTION_REVOKED_MERCHANT_KEY_SHA256:'c'.repeat(64)};
++    const portal=new CheckoutServer({collectionEnabled:true,otpDeliveryEnabled:true,tunnelSecret:tunnel,contributions:{env,ledger,
++      readBinding:(_c,id)=>id?{payment:payments.get(id),bankEvidence:payments.get(id)?.bankEvidence===true}:{bound:true},
++      core:async(url,init)=>{
++        if(url==='/health')return {status:200,data:{service:'payment-api',productionMode:true,privateDeployment:true}};
++        assert.equal(url,'/api/v1/payments');const b=JSON.parse(init.body),id=crypto.randomUUID();
++        payments.set(id,{id,merchant_id:merchant,receiving_account_id:account,order_id:b.orderId,amount_paise:Number(b.amount)*100,currency:'INR',method:'UPI',status:'INITIATED',metadata:JSON.stringify(b.metadata)});
++        return {status:201,data:{paymentId:id,orderId:b.orderId,amountPaise:String(Number(b.amount)*100),currency:'INR',checkoutUrl:`https://pay.credonomics.in/checkout/${id}`}};
++      }}});
++    const server=portal.createServer();await new Promise(r=>server.listen(0,'127.0.0.1',r));
++    t.after(async()=>{await new Promise(r=>server.close(r));ledger.close();fs.rmSync(dir,{recursive:true,force:true});});
++    const transport=(url,init)=>new Promise((resolve,reject)=>{
++      assert.equal(url,'https://pay.credonomics.in/api/v1/merchant/contributions');
++      const request=http.request({agent:false,host:'127.0.0.1',port:server.address().port,path:'/api/v1/merchant/contributions',method:init.method,
++        headers:{...init.headers,Host:'pay.credonomics.in','x-youpi-tunnel-token':tunnel,'cf-connecting-ip':'192.0.2.5','cf-ray':'1234567890abcdef-BOM','x-forwarded-proto':'https'}},res=>{
++        let raw='';res.on('data',c=>raw+=c);res.on('end',()=>resolve(new Response(raw,{status:res.statusCode})));});request.on('error',reject);request.end(init.body);
++    });
++    const handlers=createContributionHandlers({env:{YOUPI_CONTRIBUTIONS_ENABLED:'true',YOUPI_MERCHANT_ID:merchant,YOUPI_CONTRIBUTION_SECRET:secret},fetch:transport});
++    const urls=[];let cookie;
++    assert.equal((await(await handlers.GET()).json()).available,true);
++    for(const amount of [10,100,500]){
++      const response=await handlers.POST(new Request('https://credonomics.in/api/contributions',{method:'POST',headers:{Origin:'https://credonomics.in','Content-Type':'application/json','Idempotency-Key':crypto.randomUUID()},body:JSON.stringify({amount})}));
++      assert.equal(response.status,201);const data=await response.json();urls.push(data.checkoutUrl);const id=data.checkoutUrl.split('/').pop();assert.equal(payments.get(id).amount_paise,amount*100);cookie=response.headers.get('set-cookie').split(';')[0];
++    }
++    assert.equal(new Set(urls).size,3);
++    const confirmation=()=>handlers.confirmation(new Request('https://credonomics.in/api/contributions/confirmation?status=SUCCESS',{headers:{Cookie:cookie}}));
++    assert.equal((await(await confirmation()).json()).status,'PENDING');
++    const payment=payments.get(urls[2].split('/').pop());Object.assign(payment,{status:'SUCCESS',verification_level:1,verification_sources:'["GMAIL"]',completed_at:new Date().toISOString()});
++    assert.equal((await(await confirmation()).json()).status,'PENDING');
++    payment.bankEvidence=true;assert.equal((await(await confirmation()).json()).status,'SUCCESS');
++    portal.collectionEnabled=false;assert.equal((await(await handlers.GET()).json()).available,false);
++    const blocked=await handlers.POST(new Request('https://credonomics.in/api/contributions',{method:'POST',headers:{Origin:'https://credonomics.in','Content-Type':'application/json','Idempotency-Key':crypto.randomUUID()},body:'{"amount":10}'}));assert.equal(blocked.status,503);assert.equal(payments.size,3);
++  });
+diff --git a/apps/checkout-portal/src/server.js b/apps/checkout-portal/src/server.js
+--- a/apps/checkout-portal/src/server.js
++++ b/apps/checkout-portal/src/server.js
+@@ -6,6 +6,7 @@
+ import { getInternalServiceToken } from '@youpi/common';
+ import { isPublicCheckoutRoute, isPaymentId, validQrState } from './public-routes.js';
+ import { requestContext, validBrowserWrite, Budget, customerToken, publicState, publicActionResult, jsonHeaders } from './public-security.js';
++import { ContributionsAdapter, CONTRIBUTION_PATH } from './contributions.js';
+ 
+ const __filename = fileURLToPath(import.meta.url);
+ const __dirname = path.dirname(__filename);
+@@ -52,6 +53,7 @@
+    */
+   constructor(options = {}) {
+     this.budget = new Budget();
++    this.contributions = new ContributionsAdapter(this, options.contributions);
+     this.entrySettings = options.entrySettings || (() => ({}));
+     this.apiBaseUrl = options.apiBaseUrl || process.env.BASE_PAYMENT_API_URL || 'http://localhost:6100';
+     const core = new URL(this.apiBaseUrl);
+@@ -339,6 +341,9 @@
+         }
+       }
+ 
++      // One server-authenticated contribution RPC; never a generic Core proxy.
++      if (pathname === CONTRIBUTION_PATH) { await this.contributions.handle(req, res, context); return; }
++
+       if (!this.collectionEnabled) {
+         if (req.method === 'GET' && (pathname === '/' || pathname === '/checkout' || /^\/checkout\/[0-9a-f-]+$/i.test(pathname) && isPaymentId(pathname.split('/')[2]))) {
+           res.writeHead(['/', '/checkout'].includes(pathname) ? 200 : 503, { 'Content-Type': 'text/html; charset=utf-8', 'Retry-After': '3600' });
+diff --git a/scripts/test-all.js b/scripts/test-all.js
+--- a/scripts/test-all.js
++++ b/scripts/test-all.js
+@@ -12,6 +12,8 @@
+   'packages/merchant-sdk/src/__tests__/youpi-universal-integration.test.js',
+   'apps/checkout-portal/src/__tests__/checkout-portal.test.js',
+   'apps/checkout-portal/src/__tests__/public-checkout-security.test.js',
++  'apps/checkout-portal/src/__tests__/contributions.test.js',
++  'apps/checkout-portal/src/__tests__/contribution-website.integration.test.js',
+   'scripts/windows-domain-readiness.test.js',
+   'deploy/tests/encryption-key-migration.test.mjs',
+   'deploy/tests/live-key-switch.test.mjs',
