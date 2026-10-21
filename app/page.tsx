@@ -8,6 +8,7 @@ import { researchArticles } from "./data/research-articles";
 import { PUBLIC_REVIEW_DATE } from "./data/tool-registry";
 import styles from "./home-investment.module.css";
 import HomeIntelligenceRail from './components/HomeIntelligenceRail'
+import SupportCredonomics from './components/SupportCredonomics'
 
 const quickActions = [
   ['Markets', '/markets'],
@@ -437,6 +438,7 @@ export default function HomePage() {
 </div>
     
       <HomeIntelligenceRail />
+      <SupportCredonomics />
     </SiteFrame>
   );
 }
