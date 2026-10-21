@@ -21,7 +21,19 @@ export default function HomeCreativeHero(){
   return <>
     <section className={styles.stage} data-cm-hero aria-labelledby="cm-home-title">
       <div className={styles.grid} aria-hidden="true"/>
+      <div className={styles.welcomeLight} aria-hidden="true"/>
       <div className={styles.copy}>
+        <div className={styles.welcomeIdentity} data-cm-welcome>
+          <span className={styles.welcomeLogo} aria-hidden="true">
+            <img src="/credonomics-mark.png" width="38" height="38" alt=""/>
+            <span className={styles.welcomeLogoHalo}/>
+          </span>
+          <span className={styles.welcomeWordmark}>
+            <strong>CREDONOMICS</strong>
+            <small>RESEARCH · TOOLS · PERSPECTIVE</small>
+          </span>
+          <span className={styles.welcomeIdentityLine} aria-hidden="true"/>
+        </div>
         <div className={styles.eyebrow}><i/>INDEPENDENT FINANCIAL INTELLIGENCE · INDIA FIRST</div>
         <h1 id="cm-home-title">Financial intelligence,<br/><span>without the noise.</span></h1>
         <p>Research that connects the dots. Practical tools that explain the math. A clearer way to study markets, financial products and risk.</p>
