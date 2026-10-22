@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-21T14:27:45.140Z",
+    "generatedAt": "2026-10-22T08:31:54.115Z",
     "recordCount": 2,
     "nseCount": 2,
     "bseCount": 0,
@@ -26,17 +26,17 @@
         ]
       },
       "subscription": {
-        "total": 1.7373277576806698,
-        "updatedAt": "2026-10-21T14:27:45.140Z",
+        "total": 2.390783824872333,
+        "updatedAt": "2026-10-22T08:31:54.115Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JPL&type=Active"
       },
       "sharesOffered": 197525934,
-      "sharesBid": 343167288,
+      "sharesBid": 472241808,
       "estimatedIssueValueCr": 22103.15,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JPL&type=Active",
-      "fetchedAt": "2026-10-21T14:27:45.140Z"
+      "fetchedAt": "2026-10-22T08:31:54.115Z"
     },
     {
       "slug": "paras-healthcare-ltd-8045ae9",
@@ -55,17 +55,17 @@
         ]
       },
       "subscription": {
-        "total": 0.0923345557611556,
-        "updatedAt": "2026-10-21T14:27:45.140Z",
+        "total": 0.16981501210220923,
+        "updatedAt": "2026-10-22T08:31:54.115Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PARASHLTH&type=Active"
       },
       "sharesOffered": 12083331,
-      "sharesBid": 1115709,
+      "sharesBid": 2051931,
       "estimatedIssueValueCr": 837.37,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PARASHLTH&type=Active",
-      "fetchedAt": "2026-10-21T14:27:45.140Z"
+      "fetchedAt": "2026-10-22T08:31:54.115Z"
     }
   ]
 }
