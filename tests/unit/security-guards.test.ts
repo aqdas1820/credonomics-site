@@ -37,6 +37,12 @@ describe('bounded JSON reading', () => {
       method: 'POST', body: JSON.stringify({ instrumentKeys: ['x'] }),
     }), 80)).toEqual({ instrumentKeys: ['x'] })
   })
+  it('accepts normal stock-search text', () => {
+    const controlCharacters = /[\u0000-\u001f\u007f]/
+    expect(controlCharacters.test('Reliance')).toBe(false)
+    expect(controlCharacters.test('TCS')).toBe(false)
+    expect(controlCharacters.test('bad\nline')).toBe(true)
+  })
   it('rejects oversized content even when Content-Length is missing', async () => {
     expect(await readBoundedJson(new Request('https://www.credonomics.in/api/watchlist/quotes', {
       method: 'POST', body: JSON.stringify({ value: 'a'.repeat(1024) }),
