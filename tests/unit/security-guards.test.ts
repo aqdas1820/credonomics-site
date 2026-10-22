@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { isSameOriginMutation, readBoundedJson, safeAuthReturnPath } from '../../src/services/server/security'
+import { isSameOriginMutation, readBoundedJson, safeAuthReturnPath, validEquityInstrumentKey } from '../../src/services/server/security'
 import { rateLimit } from '../../src/services/server/rate-limit'
 
 describe('OAuth callback redirect safety', () => {
@@ -23,6 +23,17 @@ describe('same-origin mutation policy', () => {
   const target = 'https://www.credonomics.in/api/watchlists'
   it('accepts valid same-origin authenticated browser requests', () => {
     expect(isSameOriginMutation(new Request(target, { headers: { origin: 'https://www.credonomics.in', 'sec-fetch-site': 'same-origin' } }))).toBe(true)
+  })
+  it('fails closed when Origin and Fetch Metadata are both absent', () => {
+    expect(isSameOriginMutation(new Request(target, { method: 'POST' }))).toBe(false)
+    expect(isSameOriginMutation(new Request(target, {
+      method: 'POST',
+      headers: { 'sec-fetch-site': 'same-origin' },
+    }))).toBe(true)
+    expect(isSameOriginMutation(new Request(target, {
+      method: 'POST',
+      headers: { 'sec-fetch-site': 'same-site' },
+    }))).toBe(false)
   })
   it('rejects forged cross-site and null origins', () => {
     expect(isSameOriginMutation(new Request(target, { headers: { origin: 'https://evil.example' } }))).toBe(false)
@@ -56,5 +67,18 @@ describe('best-effort local throttling', () => {
     expect(rateLimit(key, 2)).toBe(true)
     expect(rateLimit(key, 2)).toBe(true)
     expect(rateLimit(key, 2)).toBe(false)
+  })
+})
+
+describe('equity instrument validation', () => {
+  it('accepts NSE and BSE ISIN instrument keys', () => {
+    expect(validEquityInstrumentKey('NSE_EQ|INE002A01018')).toBe(true)
+    expect(validEquityInstrumentKey('BSE_EQ|INE002A01018')).toBe(true)
+  })
+  it('rejects invalid or unbounded instrument keys', () => {
+    for (const key of ['NSE_INDEX|Nifty 50', 'NSE_EQ|../secrets',
+      'NSE_EQ|INE002A01018%0a', 'NSE_EQ|ine002a01018', 'x'.repeat(1024)]) {
+      expect(validEquityInstrumentKey(key)).toBe(false)
+    }
   })
 })
