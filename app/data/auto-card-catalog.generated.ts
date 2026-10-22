@@ -35,15 +35,14 @@ export type AutoCardCatalogRecord = {
 }
 
 export const autoCardCatalogMeta = {
-  "generatedAt": "2026-10-19T07:51:59.333Z",
+  "generatedAt": "2026-10-22T07:39:31.541Z",
   "sourceCount": 14,
-  "successfulSources": 10,
-  "failedSources": 4,
-  "recordCount": 243,
+  "successfulSources": 11,
+  "failedSources": 3,
+  "recordCount": 242,
   "failedIssuers": [
     "SBI Card",
     "YES BANK",
-    "IDFC FIRST Bank",
     "American Express India"
   ],
   "note": "Automatically extracted from official issuer catalogue/product pages. Verify source before acting."
@@ -56,7 +55,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AXIS BANK PRIVILEGE Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -97,7 +96,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndiGo Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -139,7 +138,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "FLIPKART AXIS BANK Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 500,
     "joiningFee": 0,
@@ -183,7 +182,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Neo Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -233,7 +232,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank REWARDS Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -276,7 +275,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndiGo Axis Bank Premium Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 5000000,
     "joiningFee": 5000,
@@ -317,7 +316,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HORIZON Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 3000000,
     "joiningFee": 3000,
@@ -360,7 +359,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank My Zone Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 500000,
     "joiningFee": 500,
@@ -401,7 +400,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "INDIANOIL AXIS BANK Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 500000,
     "joiningFee": 500,
@@ -453,7 +452,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Select Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 3000,
     "joiningFee": 3000,
@@ -491,7 +490,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Scapia Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 0,
     "joiningFee": 0,
@@ -549,7 +548,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AXIS BANK MAGNUS Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 12500000,
     "joiningFee": 12500,
@@ -592,7 +591,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank ACE Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 499000,
     "joiningFee": 499,
@@ -662,7 +661,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Google Pay Flex Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -713,7 +712,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Reserve Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 50000000,
     "joiningFee": 50000,
@@ -752,7 +751,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank MY Zone Easy Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -803,7 +802,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Airtel Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 500000,
     "joiningFee": 500,
@@ -857,7 +856,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Cashback Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 1000,
     "joiningFee": 1000,
@@ -919,7 +918,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndianOil Easy Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -971,7 +970,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Privilege Easy Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 1500,
     "joiningFee": 1500,
@@ -1010,7 +1009,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Atlas Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 5000000,
     "joiningFee": 5000,
@@ -1050,7 +1049,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank AURA Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "annualFee": 749000,
     "joiningFee": 749,
@@ -1088,7 +1087,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndianOil Axis Bank Premium Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 1000000,
     "joiningFee": 1000,
@@ -1142,7 +1141,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Pride Platinum Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 250000,
     "joiningFee": 0,
@@ -1182,7 +1181,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Pride Signature Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 500000,
     "joiningFee": 0,
@@ -1228,7 +1227,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Flipkart Axis Bank Super Elite Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 500000,
     "joiningFee": 500,
@@ -1283,7 +1282,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "SpiceJet Axis Bank Voyage Black Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 2000,
     "joiningFee": 2000,
@@ -1321,7 +1320,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Samsung Axis Bank Infinite Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 5000000,
     "joiningFee": 5000,
@@ -1369,7 +1368,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Fibe Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 0,
     "joiningFee": 0,
@@ -1423,7 +1422,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Shoppers Stop Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 500000,
     "joiningFee": 500,
@@ -1463,7 +1462,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "SpiceJet Axis Bank Voyage Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 750000,
     "joiningFee": 750,
@@ -1504,7 +1503,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Samsung Axis Bank Signature Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 500000,
     "joiningFee": 500,
@@ -1552,7 +1551,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Miles and More Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 3500000,
     "joiningFee": 3500,
@@ -1596,7 +1595,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Freecharge Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 250000,
     "joiningFee": 250,
@@ -1635,7 +1634,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Freecharge Plus Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 0,
     "joiningFee": 350,
@@ -1694,7 +1693,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "LIC Axis Bank Signature Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 0,
     "joiningFee": 0,
@@ -1748,7 +1747,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "LIC Axis Bank Platinum Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -1801,7 +1800,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AXIS BANK VISTARA SIGNATURE Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 3000000,
     "joiningFee": 3000,
@@ -1840,7 +1839,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AXIS BANK VISTARA Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 1500000,
     "joiningFee": 1500,
@@ -1879,7 +1878,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Kwik Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -1931,7 +1930,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Vistara Infinite Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 10000000,
     "joiningFee": 10000,
@@ -1971,7 +1970,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit card application made easy",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2003,7 +2002,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Choose your Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2035,7 +2034,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "1. What is Credit Card?",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "shopping"
@@ -2067,7 +2066,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Business Credit Cards",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -2099,7 +2098,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Types of Credit Cards",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "fuel",
@@ -2135,7 +2134,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndianOil Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2167,7 +2166,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Tata Neu Plus Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2201,7 +2200,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "PhonePe HDFC Bank Ultimo Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2233,7 +2232,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "PhonePe HDFC Bank Uno Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2265,7 +2264,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Marriott Bonvoy HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2297,7 +2296,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Tata Neu Infinity HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2331,7 +2330,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Shoppers Stop Black HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2365,7 +2364,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Shoppers Stop HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2399,7 +2398,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Swiggy Ornge HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2433,7 +2432,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Swiggy BLCK HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2467,7 +2466,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HDFC Bank UPI RuPay Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "upi"
@@ -2501,7 +2500,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Swiggy HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2535,7 +2534,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Platinum Plus Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "fuel"
@@ -2569,7 +2568,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Visa Signature Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "loungeVisits": 1,
     "categories": [
@@ -2604,7 +2603,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Diners ClubMiles Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "travel"
@@ -2638,7 +2637,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "InterMiles HDFC Bank Diners Club Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "travel"
@@ -2673,7 +2672,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "InterMiles HDFC Bank Signature Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "travel"
@@ -2708,7 +2707,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "InterMiles HDFC Bank Platinum Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "travel"
@@ -2743,7 +2742,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Pine Labs HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -2777,7 +2776,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Regalia Activ HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -2811,7 +2810,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Get the best Credit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/sapphiro-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 3500,
     "joiningFee": 6500,
@@ -2893,7 +2892,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "More than a Card. A Masterpiece",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/1838-reserve-icici-credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 175000,
     "joiningFee": 175000,
@@ -2971,7 +2970,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Find the ideal Credit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/compare-cards",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "shopping",
@@ -3016,7 +3015,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Pre-Approved Credit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/pre-approved-credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -3066,7 +3065,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Personal Loan Credit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/personal-loan-on-credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "shopping",
@@ -3124,7 +3123,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Rewards",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/credit-card-services/rewards",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "shopping",
@@ -3169,7 +3168,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Experience Program",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/experience",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "maxRewardRate": 25,
     "travelRate": 6,
@@ -3265,7 +3264,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Benefits of ICICI Bank Credit Cards",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "shopping",
@@ -3301,7 +3300,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Types of Credit Cards in India",
     "sourceUrl": "https://www.icicibank.com/personal-banking/blogs/card/credit-card/type-of-credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "loungeVisits": 99,
     "loungeUnlimited": true,
@@ -3353,7 +3352,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card fees and interest rates",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "low-fee",
@@ -3402,7 +3401,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Tips for secure Credit Card usage",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "beginner",
@@ -3435,7 +3434,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Can I use my ICICI Bank Credit Card for international transactions?",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "forex"
@@ -3467,7 +3466,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Can I get a Loan on an ICICI Bank Credit Card?",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/personal-loan-on-credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "shopping",
@@ -3525,7 +3524,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Business Advantage Blue Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -3557,7 +3556,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Business Ascent Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -3589,7 +3588,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Business Advantage Black Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -3621,7 +3620,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Business Essential Credit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -3653,7 +3652,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Sapphiro Business Debit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -3685,7 +3684,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Coral Business Debit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -3717,7 +3716,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Business Titanium Debit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -3749,7 +3748,1567 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Purchase Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "low",
+    "categories": [
+      "business"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 35,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "dda94ff11295a6",
+    "issuer": "IDFC FIRST Bank",
+    "name": "All IDFC FIRST Bank Credit Cards now come with Zero Forex Markup",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "low",
+    "categories": [
+      "forex"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 8,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [
+      "All IDFC FIRST Bank Credit Cards now come with Zero Forex Markup"
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "bfdae98982a9e7",
+    "issuer": "IDFC FIRST Bank",
+    "name": "A Credit Card for Everyone",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "medium",
+    "loungeVisits": 1,
+    "categories": [
+      "travel",
+      "forex",
+      "lounge",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 9.5,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 12,
+      "lounge": 12,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 36
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "43ff4abfb23048",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Explore our range of credit cards",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "low",
+    "categories": [
+      "premium",
+      "business",
+      "lifetime-free"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 8,
+      "business": 35,
+      "lifetime-free": 59,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "81abda6d52dd1e",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Quantum+ Credit Card",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/quantum-plus-credit-card?utm_source=website&utm_medium=PDPQuantum+&utm_campaign=Knowmore",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "high",
+    "maxCashbackRate": 6.5,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "utilityRate": 1,
+    "travelRate": 3,
+    "upiRate": 2,
+    "foreignRewardRate": 2,
+    "forexMarkup": 2,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 68,
+      "fuel": 25,
+      "travel": 114.5,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 34,
+      "upi": 60,
+      "forex": 81,
+      "lounge": 16,
+      "premium": 65,
+      "business": 47,
+      "lifetime-free": 71,
+      "beginner": 59,
+      "low-fee": 12,
+      "co-branded": 96
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "MSME View all Trade Forex Solution",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "f1251e92dab618",
+    "issuer": "IDFC FIRST Bank",
+    "name": "IndiGo IDFC Dual Cards",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/indigo-credit-card?utm_source=website&utm_medium=PDPIndigoIDFCFIRST&utm_campaign=Knowmore",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "high",
+    "annualFee": 4999,
+    "joiningFee": 4999,
+    "renewalFee": 4999,
+    "maxCashbackRate": 1,
+    "maxRewardRate": 1.49,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "travelRate": 1,
+    "upiRate": 1.49,
+    "foreignRewardRate": 0,
+    "forexMarkup": 0,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 29,
+      "travel": 96.5,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 8,
+      "utilities": 24,
+      "upi": 46.9,
+      "forex": 87,
+      "lounge": 16,
+      "premium": 101,
+      "business": 47,
+      "lifetime-free": 71,
+      "beginner": 67,
+      "low-fee": 20,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "MSME View all Trade Forex Solution",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "924cfeadd09673",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Micro Enterprise Credit Card",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/micro-enterprise-credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "high",
+    "annualFee": 1000,
+    "joiningFee": 0,
+    "renewalFee": 1000,
+    "feeWaiverSpend": 20000,
+    "maxCashbackRate": 1,
+    "maxRewardRate": 18,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "travelRate": 1,
+    "upiRate": 1,
+    "foreignRewardRate": 0,
+    "forexMarkup": 0,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 41,
+      "travel": 56.5,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 28,
+      "upi": 42,
+      "forex": 87,
+      "lounge": 16,
+      "premium": 65,
+      "business": 51,
+      "lifetime-free": 71,
+      "beginner": 43,
+      "low-fee": 25.33,
+      "co-branded": 88
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "MSME View all Trade Forex Solution",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "7759947a1b4a82",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Get 100% guaranteed approval with an FD backed credit card",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/quantum-plus-credit-card?utm_source=website&utm_medium=PDPQuantum+&utm_campaign=Knowmore",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "high",
+    "maxCashbackRate": 6.5,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "utilityRate": 1,
+    "travelRate": 3,
+    "upiRate": 2,
+    "foreignRewardRate": 2,
+    "forexMarkup": 2,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 68,
+      "fuel": 25,
+      "travel": 114.5,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 34,
+      "upi": 60,
+      "forex": 81,
+      "lounge": 16,
+      "premium": 65,
+      "business": 47,
+      "lifetime-free": 71,
+      "beginner": 59,
+      "low-fee": 12,
+      "co-branded": 96
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "MSME View all Trade Forex Solution",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "42468d80cee30e",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Add-On Credit Card",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/add-on-credit-card?utm_source=website&utm_medium=PDPAddonCC&utm_campaign=ApplyNow",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "high",
+    "annualFee": 199,
+    "renewalFee": 199,
+    "maxCashbackRate": 1,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "travelRate": 1,
+    "upiRate": 1,
+    "loungeVisits": 10,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 33,
+      "travel": 90,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 12,
+      "upi": 26,
+      "forex": 36,
+      "lounge": 64,
+      "premium": 78,
+      "business": 55,
+      "lifetime-free": 71,
+      "beginner": 65,
+      "low-fee": 42.68,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "MSME View all Trade Forex Solution",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "fd046bd8c494b7",
+    "issuer": "IDFC FIRST Bank",
+    "name": "All our credit cards are UPI-ready",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/rupay-credit-card/steps-to-activate?utm_source=website&utm_medium=PDPAOCCUPIR&utm_campaign=ActivateUPI",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "high",
+    "maxCashbackRate": 1,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "travelRate": 1,
+    "upiRate": 1,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 25,
+      "travel": 52.5,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 12,
+      "upi": 42,
+      "forex": 36,
+      "lounge": 16,
+      "premium": 65,
+      "business": 47,
+      "lifetime-free": 71,
+      "beginner": 43,
+      "low-fee": 0,
+      "co-branded": 88
+    },
+    "detectedBenefits": [
+      "Scan and Activate UPI on Rupay Credit Card | IDFC FIRST Bank",
+      "Zero Forex Markup Account",
+      "MSME View all Trade Forex Solution",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "7ed4d83c4a6603",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Apply for a credit card online",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "low",
+    "categories": [
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 35,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "04dabdba674ce9",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Credit card fees and charges",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/mitc?utm_source=website&utm_medium=PDPCCFC&utm_campaign=CheckNow",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "high",
+    "maxCashbackRate": 1,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "travelRate": 1,
+    "upiRate": 1,
+    "loungeVisits": 1,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 25,
+      "travel": 52.5,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 12,
+      "upi": 26,
+      "forex": 36,
+      "lounge": 16,
+      "premium": 65,
+      "business": 47,
+      "lifetime-free": 71,
+      "beginner": 43,
+      "low-fee": 0,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
+      "Trade & Forex View All"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover WhatsApp banking Say ‘Hi 👋’ on"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      }
+    ]
+  },
+  {
+    "id": "221c3e57d2f20b",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Learn about Credit Card in Detail",
+    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/first-select-vs-first-wealth-credit-card-comparison",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "high",
+    "feeWaiverSpend": 20000,
+    "maxCashbackRate": 25,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "shoppingRate": 9.99,
+    "diningRate": 1,
+    "travelRate": 5,
+    "upiRate": 25,
+    "loungeVisits": 20,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 216,
+      "fuel": 51,
+      "travel": 137,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 29,
+      "utilities": 20,
+      "upi": 266,
+      "forex": 40,
+      "lounge": 80,
+      "premium": 92,
+      "business": 47,
+      "lifetime-free": 71,
+      "beginner": 43,
+      "low-fee": 12,
+      "co-branded": 76
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "MSME View all Trade Forex Solution",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "6b731ac059f14e",
+    "issuer": "IDFC FIRST Bank",
+    "name": "FIRST Select vs. FIRST Wealth - Which credit card suits your financial planning?",
+    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/first-select-vs-first-wealth-credit-card-comparison",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "high",
+    "feeWaiverSpend": 20000,
+    "maxCashbackRate": 25,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "shoppingRate": 9.99,
+    "diningRate": 1,
+    "travelRate": 5,
+    "upiRate": 25,
+    "loungeVisits": 20,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 216,
+      "fuel": 51,
+      "travel": 137,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 29,
+      "utilities": 20,
+      "upi": 266,
+      "forex": 40,
+      "lounge": 80,
+      "premium": 92,
+      "business": 47,
+      "lifetime-free": 71,
+      "beginner": 43,
+      "low-fee": 12,
+      "co-branded": 76
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "MSME View all Trade Forex Solution",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "0051741bcf8407",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Metal credit cards: Redefining luxury for sophisticated minimalists",
+    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/luxury-lifestyle-why-metal-credit-card-are-worth-the-hype",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "high",
+    "annualFee": 800000,
+    "joiningFee": 5999,
+    "renewalFee": 800000,
+    "maxCashbackRate": 1,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "travelRate": 1,
+    "upiRate": 1,
+    "forexMarkup": 0,
+    "loungeVisits": 4,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 29,
+      "travel": 101,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 8,
+      "utilities": 12,
+      "upi": 34,
+      "forex": 71,
+      "lounge": 48,
+      "premium": 104,
+      "business": 47,
+      "lifetime-free": 71,
+      "beginner": 43,
+      "low-fee": 0,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "MSME View all Trade Forex Solution",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "d07b026fc1bc1a",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Compare Credit Card Fees & Benefits",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [
+      "Check reward points, cashback, welcome offers, lifestyle benefits and joining fees, annual fees, and any other fees and charges applicable. This helps you understand the actual value you may get from the card."
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "606661ca685eb9",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Things to keep in mind when applying for a credit card online",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "low",
+    "categories": [
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 8,
+      "co-branded": 32
+    },
+    "detectedBenefits": [
+      "4. Rewards and benefits: Look for cards that offer rewards, cashback deals, or travel benefits that match your lifestyle. Consider if the rewards are worth any additional costs."
+    ],
+    "detectedPercentages": []
+  },
+  {
+    "id": "5c2a250fb35266",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Are there any EMI conversion charges on my IDFC FIRST Bank Credit Card",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "0c14d69053b0b9",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Can I apply for an add-on card?",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/add-on-credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "high",
+    "annualFee": 199,
+    "renewalFee": 199,
+    "maxCashbackRate": 1,
+    "maxRewardRate": 1,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "travelRate": 1,
+    "upiRate": 1,
+    "loungeVisits": 10,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 33,
+      "travel": 90,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 12,
+      "upi": 26,
+      "forex": 36,
+      "lounge": 64,
+      "premium": 78,
+      "business": 55,
+      "lifetime-free": 71,
+      "beginner": 65,
+      "low-fee": 42.68,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "Zero Forex Markup Account",
+      "MSME View all Trade Forex Solution",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account",
+      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "43d078cf0fa92f",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Can I pay my Credit Card bill online via NEFT?",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "low",
+    "categories": [
+      "shopping"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 8,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 0
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "fda7722efda01f",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Can I use my Credit Card for international transactions?",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/wow",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "high",
+    "annualFee": 0,
+    "joiningFee": 750,
+    "renewalFee": 0,
+    "feeWaiverSpend": 25,
+    "maxCashbackRate": 1,
+    "maxRewardRate": 25,
+    "fuelRate": 1,
+    "shoppingRate": 9.99,
+    "travelRate": 16.7,
+    "upiRate": 16.7,
+    "forexMarkup": 0,
+    "loungeVisits": 16,
+    "categories": [
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "low-fee",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 24,
+      "fuel": 29,
+      "travel": 224.9,
+      "shopping": 101.93,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 36,
+      "upi": 183,
+      "forex": 111,
+      "lounge": 68,
+      "premium": 92,
+      "business": 47,
+      "lifetime-free": 71,
+      "beginner": 81,
+      "low-fee": 46,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "Apply for FIRST WOW! - Zero Forex Markup Credit Card | IDFC FIRST Bank",
+      "Zero Forex Markup Account",
+      "MSME View all Trade Forex Solution",
+      "Foreign Exchange Solutions",
+      "Zero Forex Markup Current Account"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 7,
+        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
+      },
+      {
+        "value": 9.99,
+        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
+      },
+      {
+        "value": 1,
+        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
+      },
+      {
+        "value": 1,
+        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
+      },
+      {
+        "value": 1,
+        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
+      },
+      {
+        "value": 7.1,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+      },
+      {
+        "value": 7.25,
+        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
+      },
+      {
+        "value": 7,
+        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
+      },
+      {
+        "value": 1,
+        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
+      }
+    ]
+  },
+  {
+    "id": "1e13abf9e16e32",
+    "issuer": "IDFC FIRST Bank",
+    "name": "Can I withdraw cash using my Credit Card?",
+    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/key-factors-for-credit-card-cash-withdrawal",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "low",
+    "categories": [
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 0,
+      "travel": 0,
+      "shopping": 0,
+      "grocery": 0,
+      "dining": 0,
+      "utilities": 0,
+      "upi": 0,
+      "forex": 0,
+      "lounge": 0,
+      "premium": 0,
+      "business": 0,
+      "lifetime-free": 0,
+      "beginner": 0,
+      "low-fee": 0,
+      "co-branded": 32
+    },
+    "detectedBenefits": [],
+    "detectedPercentages": []
+  },
+  {
+    "id": "adb52a4c01e64c",
+    "issuer": "IDFC FIRST Bank",
+    "name": "I already have an IDFC FIRST Bank Credit Card. Can I apply for another one?",
+    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
+    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -3781,7 +5340,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Benefits for Platinum Maxima Plus Credit Card",
     "sourceUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards/platinum-maxima-plus-credit-card",
     "catalogueUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "maxCashbackRate": 2.8,
     "maxRewardRate": 2.8,
@@ -3822,11 +5381,11 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
       "co-branded": 72
     },
     "detectedBenefits": [
-      "Borderless Prepaid Forex card",
       "Foreign Currency Cheques",
       "Flights, Hotels & Travel",
       "Redeem Reward Points",
-      "Boardless Prepaid Forex Card"
+      "Upgrade your Lifestyle, amplify your Rewards!",
+      "2.8% Value Back on Grocery & Dining"
     ],
     "detectedPercentages": [
       {
@@ -3841,7 +5400,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Benefits for Icon Credit Card",
     "sourceUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards/icon-credit-card",
     "catalogueUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "maxCashbackRate": 6,
     "maxRewardRate": 6,
@@ -3884,11 +5443,11 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
       "co-branded": 72
     },
     "detectedBenefits": [
-      "Borderless Prepaid Forex card",
       "Foreign Currency Cheques",
       "Flights, Hotels & Travel",
       "Redeem Reward Points",
-      "Boardless Prepaid Forex Card"
+      "Rewarding Milestones worth INR 13,500",
+      "6% Value Back on Weekend Dining, International Purchases"
     ],
     "detectedPercentages": [
       {
@@ -3907,7 +5466,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Benefits for Cookies Credit Card",
     "sourceUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards/cookies-credit-card",
     "catalogueUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "feeWaiverSpend": 5000,
     "maxCashbackRate": 10,
@@ -3947,11 +5506,11 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
       "co-branded": 96
     },
     "detectedBenefits": [
-      "Borderless Prepaid Forex card",
       "Foreign Currency Cheques",
       "Flights, Hotels & Travel",
       "Redeem Reward Points",
-      "Boardless Prepaid Forex Card"
+      "10% cashback on your favourites up to INR 300 per brand per month",
+      "Unlimited 5x Reward Points on Online purchases"
     ],
     "detectedPercentages": [
       {
@@ -3986,7 +5545,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Get your Lifetime Free Kotak League Credit Card",
     "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
     "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "lifetime-free"
@@ -4018,7 +5577,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Types of Credit Cards in India Offered by Kotak Mahindra Bank",
     "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards/get-movie-credit-cards.html",
     "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 1500,
     "joiningFee": 1500,
@@ -4127,7 +5686,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Key features and benefits of Kotak bank Credit Card",
     "sourceUrl": "https://www.kotak.com/en/stories-in-focus/cards/credit-cards/what-is-a-credit-card-what-are-the-credit-card-benefits.html",
     "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -4176,7 +5735,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Interest Rates & Charges",
     "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards/credit-card-services/credit-card-payments.html",
     "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "travel",
@@ -4227,7 +5786,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Things to Know Before Applying for a Credit Card",
     "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards/credit-card-services/credit-card-payments.html",
     "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "travel",
@@ -4278,7 +5837,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Presenting AU Credit Cards, A World of Limitless Possibilities.",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -4310,7 +5869,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Zenith+ Credit Card",
     "sourceUrl": "https://www.au.bank.in/premium-banking/credit-cards/zenith-plus-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "fuelRate": 1,
     "surchargeWaiverRate": 1,
@@ -4390,7 +5949,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Ananta Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/ananta-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 2000,
     "joiningFee": 2000,
@@ -4494,7 +6053,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Laksya Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/laksya-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 1000,
     "joiningFee": 1000,
@@ -4600,7 +6159,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Tejas Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/tejas-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 500,
     "joiningFee": 500,
@@ -4706,7 +6265,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Prathama Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/prathama-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 100,
     "joiningFee": 100,
@@ -4789,7 +6348,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "LIT Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/lit-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "maxCashbackRate": 5,
     "fuelRate": 1,
@@ -4872,7 +6431,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "CA Metal Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/ca-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "maxCashbackRate": 25,
     "maxRewardRate": 25,
@@ -4951,7 +6510,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AU CS Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/au-cs-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "maxCashbackRate": 25,
     "maxRewardRate": 25,
@@ -5049,7 +6608,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Vetta Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/vetta-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "feeWaiverSpend": 90,
     "maxCashbackRate": 1,
@@ -5138,7 +6697,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Spont Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/au-spont-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 299,
     "renewalFee": 299,
@@ -5214,7 +6773,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "NOMO Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/nomo-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "joiningFee": 199,
     "fuelRate": 1,
@@ -5292,7 +6851,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Traverse Credit Card for NRIs",
     "sourceUrl": "https://www.au.bank.in/premium-banking/credit-cards/traverse-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 600000,
     "renewalFee": 600000,
@@ -5367,7 +6926,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "CheQ AU Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/cheq-au-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "maxRewardRate": 12,
     "diningRate": 12,
@@ -5415,7 +6974,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Paytm AU Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/paytm-au-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "maxRewardRate": 5,
     "travelRate": 5,
@@ -5465,7 +7024,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Altura Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/altura-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -5501,7 +7060,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Corporate Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/commercial-credit-cards/corporate-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -5540,7 +7099,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Business Cashback Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/commercial-credit-cards/business-cashback-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "maxCashbackRate": 1,
     "loungeVisits": 1,
@@ -5585,7 +7144,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Go through the Credit Card MITC or Key Fact Statement for details of applicable fees and charges.",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -5617,7 +7176,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Is there any Annual fees applicable on my Credit Card?",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "annualFee": 1000,
     "joiningFee": 999,
@@ -5663,7 +7222,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Is there any charge applicable for doing International transaction on Credit Card?",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "maxCashbackRate": 3.5,
     "categories": [
@@ -5728,7 +7287,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Do I get Cashback or Reward Points for transactions done on my Add-on card?",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "cashback"
@@ -5763,7 +7322,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "I have not received my monthly Credit Card statement, what can I do?",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -5795,7 +7354,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Is there any exception to the kind of FDs that can be used to apply for an FD based Credit Card?",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "beginner"
@@ -5827,7 +7386,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AU Royale Business Debit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -5859,7 +7418,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Visa Business Gold Debit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -5891,7 +7450,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Cards",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -5923,7 +7482,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Steps to apply for a Credit Card Online",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "travel",
@@ -5961,7 +7520,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Types of Credit Cards",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -6007,7 +7566,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndusInd Platinum RuPay Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-rupay-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "maxRewardRate": 2,
     "fuelRate": 7,
@@ -6106,7 +7665,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "EazyDiner IndusInd Bank Platinum Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/eazydiner-platinum-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 500,
     "joiningFee": 500,
@@ -6207,7 +7766,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Legend Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/legend-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "feeWaiverSpend": 2,
     "maxRewardRate": 2,
@@ -6310,7 +7869,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "EazyDiner Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/eazydiner-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 2999,
     "joiningFee": 2999,
@@ -6411,7 +7970,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Platinum Aura Edge Visa/ Master Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-aura-edge-visa-and-mastercard-credit-card-easy-credit.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "maxRewardRate": 2,
     "fuelRate": 7,
@@ -6508,7 +8067,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Platinum Visa Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-visa-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "maxRewardRate": 2,
     "fuelRate": 7,
@@ -6599,12 +8158,110 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     ]
   },
   {
+    "id": "8453a8b23e3150",
+    "issuer": "IndusInd Bank",
+    "name": "Pinnacle Credit Card",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/pinnacle-world-credit-card.html",
+    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
+    "confidence": "high",
+    "maxRewardRate": 2,
+    "fuelRate": 1,
+    "surchargeWaiverRate": 1,
+    "shoppingRate": 7,
+    "travelRate": 7.75,
+    "upiRate": 4,
+    "loungeVisits": 2026,
+    "categories": [
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "lifetime-free",
+      "beginner",
+      "co-branded"
+    ],
+    "categoryScores": {
+      "cashback": 0,
+      "fuel": 31,
+      "travel": 3197.25,
+      "shopping": 77,
+      "grocery": 0,
+      "dining": 16,
+      "utilities": 16,
+      "upi": 72,
+      "forex": 20,
+      "lounge": 76,
+      "premium": 88,
+      "business": 67,
+      "lifetime-free": 71,
+      "beginner": 47,
+      "low-fee": 0,
+      "co-branded": 72
+    },
+    "detectedBenefits": [
+      "Pinnacle Credit Card - Check Benefits & Rewards Online | IndusInd Bank",
+      "SFlexible options to pay through EMI, Reward points or Credit.",
+      "Tata Neu IndusInd Bank Forex Card",
+      "Check Credit Card Rewards",
+      "Unlock 2X rewards on UPI payments this festive season"
+    ],
+    "detectedPercentages": [
+      {
+        "value": 4,
+        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
+      },
+      {
+        "value": 7,
+        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
+      },
+      {
+        "value": 7.75,
+        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
+      },
+      {
+        "value": 6,
+        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
+      },
+      {
+        "value": 4,
+        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
+      },
+      {
+        "value": 2,
+        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
+      },
+      {
+        "value": 2,
+        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
+      },
+      {
+        "value": 4,
+        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
+      },
+      {
+        "value": 7,
+        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
+      },
+      {
+        "value": 100,
+        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
+      }
+    ]
+  },
+  {
     "id": "7c4b33d8e61f93",
     "issuer": "IndusInd Bank",
     "name": "IndusInd Bank Avios Visa Infinite Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/avios-visa-infinite-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "maxRewardRate": 2,
     "fuelRate": 1,
@@ -6700,110 +8357,12 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     ]
   },
   {
-    "id": "8453a8b23e3150",
-    "issuer": "IndusInd Bank",
-    "name": "Pinnacle Credit Card",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/pinnacle-world-credit-card.html",
-    "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
-    "confidence": "high",
-    "maxRewardRate": 2,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 7,
-    "travelRate": 7.75,
-    "upiRate": 4,
-    "loungeVisits": 2026,
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 31,
-      "travel": 3197.25,
-      "shopping": 77,
-      "grocery": 0,
-      "dining": 16,
-      "utilities": 16,
-      "upi": 72,
-      "forex": 20,
-      "lounge": 76,
-      "premium": 88,
-      "business": 67,
-      "lifetime-free": 71,
-      "beginner": 47,
-      "low-fee": 0,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Pinnacle Credit Card - Check Benefits & Rewards Online | IndusInd Bank",
-      "SFlexible options to pay through EMI, Reward points or Credit.",
-      "Tata Neu IndusInd Bank Forex Card",
-      "Check Credit Card Rewards",
-      "Unlock 2X rewards on UPI payments this festive season"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 4,
-        "context": "eed Remit FASTag A- A A+ A A Accounts & Deposits Accounts Savings Account Up to 4%* p.a. Corporate Salary Account Uniformed Personnel Account Current Account Capital Gains Account Scheme"
-      },
-      {
-        "value": 7,
-        "context": "el Account Current Account Capital Gains Account Scheme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 da"
-      },
-      {
-        "value": 7.75,
-        "context": "eme Deposits Fixed Deposit Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Acco"
-      },
-      {
-        "value": 6,
-        "context": "Up to 7%* p.a. Recurring Deposit Senior Citizen FD Up to 7.75%* p.a. Auto Sweep FD 6% p.a.* on a tenure of 180 days Locker Safe Deposit Locker Quick Links Savings Account Interest Rate Fixed"
-      },
-      {
-        "value": 4,
-        "context": "me Kit FAQs Manage Mandate(s) Save Today, Enjoy More Tomorrow Earn high interest up to 4%* p.a. on savings Open a Savings Account Cards Credit Card Debit Card Duo Card Corporate Cards Business"
-      },
-      {
-        "value": 2,
-        "context": "rewards on UPI payments this festive season Apply for Credit Card Loans Personal Loan 2% PF (Limited Period) Business Loan Vehicle Loans New Car Loan Used Car Loan Two Wheeler Loan Affordable"
-      },
-      {
-        "value": 2,
-        "context": "iness Loan Personal Loan Interest Rates Celebrate Big with Instant Personal Loan! Enjoy 2% processing fee for a limited period Apply for Personal Loan Apply Online Accounts & Deposits Savings Accou"
-      },
-      {
-        "value": 4,
-        "context": "period Apply for Personal Loan Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan"
-      },
-      {
-        "value": 7,
-        "context": "Apply Online Accounts & Deposits Savings Account Up to 4%* p.a. Fixed Deposit Up to 7%* p.a. Current Account Cards & Loan Credit Cards Forex Card Personal Loan Business Loan Affordable Home"
-      },
-      {
-        "value": 100,
-        "context": "stration Home Loan Quick Links V-KYC Re-KYC Get Mini Statement Refer A Friend Enjoy 100% Digital Process & Instant Approval Choose from a range of lifetime-free credit cards Apply for Credit Card D"
-      }
-    ]
-  },
-  {
     "id": "982bbdd8d78363",
     "issuer": "IndusInd Bank",
     "name": "Nexxt Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/nexxt-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "maxRewardRate": 12,
     "fuelRate": 1,
@@ -6899,7 +8458,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndusInd Bank Tiger Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/tiger-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "maxRewardRate": 2,
     "fuelRate": 1,
@@ -6998,7 +8557,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Samman Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/samman-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "feeWaiverSpend": 20000,
     "maxCashbackRate": 1,
@@ -7096,7 +8655,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndusInd Bank Jio-bp Mobility+ Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/jio-bp-mobility-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "joiningFee": 499,
     "maxRewardRate": 2,
@@ -7194,7 +8753,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "CRED IndusInd Bank RuPay Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/CRED-IndusInd-Bank-ruPay-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "maxRewardRate": 5,
     "shoppingRate": 5,
@@ -7265,7 +8824,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Poonawalla Fincorp IndusInd Bank eLITE RuPay Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/poonawalla-platinum-rupay-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "fuelRate": 1,
     "surchargeWaiverRate": 1,
@@ -7311,7 +8870,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Indus Solitaire Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/solitaire-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "loungeVisits": 16,
     "categories": [
@@ -7352,7 +8911,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "ePay Amex Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/epay-amex-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "maxCashbackRate": 5,
     "categories": [
@@ -7395,7 +8954,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Club Vistara Explorer Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/club-vistara-indusInd-bank-explorer-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "maxRewardRate": 1.8,
     "travelRate": 1.8,
@@ -7444,7 +9003,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Indulge Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/indulge-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "premium"
@@ -7478,7 +9037,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Pioneer Heritage Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/pioneer-heritage-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "fuel",
@@ -7515,7 +9074,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Pioneer Legacy Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/pioneer-legacy-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "feeWaiverSpend": 2,
     "categories": [
@@ -7554,7 +9113,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Crest Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/crest-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "fuel",
@@ -7591,7 +9150,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Celesta Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/celesta-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "forex"
@@ -7628,7 +9187,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Platinum Aura Edge Credit Card Exclusively for Government Sector Employees - (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-aura-edge-credit-card-for-government-employees.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "maxCashbackRate": 1,
     "fuelRate": 1,
@@ -7685,7 +9244,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "InterMiles Odyssey Amex Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-odyssey-amex-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "travel"
@@ -7723,7 +9282,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "InterMiles Odyssey Visa Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-odyssey-visa-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "travel"
@@ -7761,7 +9320,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "InterMiles Voyage Amex Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-voyage-amex-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "fuel",
@@ -7799,7 +9358,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Intermiles Voyage Visa Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-voyage-visa-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "fuel",
@@ -7837,7 +9396,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Signature Visa Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/signature-visa-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "fuel",
@@ -7873,7 +9432,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Iconia Amex Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/iconia-amex-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -7914,7 +9473,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Iconia Visa Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/iconia-visa-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "fuel",
@@ -7951,7 +9510,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Platinum Aura Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-aura-visa-and-mastercard-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "fuel"
@@ -7988,7 +9547,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Features and Benefits",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -8032,7 +9591,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Documents needed for online credit card application",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -8064,7 +9623,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Documents Required for Credit Card Application",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "shopping",
@@ -8102,7 +9661,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Interest Rates",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "diningRate": 47.4,
     "upiRate": 47.4,
@@ -8180,7 +9739,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Fees and Charges",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 100000,
     "joiningFee": 100000,
@@ -8259,7 +9818,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Things to Know Before Applying for an Instant Credit Card Online",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "shopping"
@@ -8293,7 +9852,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Safety and Usage Tips",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "shopping",
@@ -8326,7 +9885,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Sourcing Partners",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "premium"
@@ -8358,7 +9917,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Can I apply for an add-on card?",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -8390,7 +9949,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Can students below 21 apply for a credit card?",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -8422,7 +9981,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Can I use a credit card for UPI?",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "upi",
@@ -8460,7 +10019,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Which IndusInd Bank credit cards offer unlimited complimentary lounge access?",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "loungeVisits": 99,
     "loungeUnlimited": true,
@@ -8499,7 +10058,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Is a credit card a good option for buying jewellery within a ₹50,000 budget?",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -8531,7 +10090,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit cards features",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/google-pay/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "cashback",
@@ -8580,7 +10139,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Find the right card for you",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/compare/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "cashback",
@@ -8630,7 +10189,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HSBC Taj Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/taj/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 110000,
     "joiningFee": 110000,
@@ -8729,7 +10288,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HSBC TravelOne Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/travelone/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 4999,
     "joiningFee": 4999,
@@ -8827,7 +10386,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HSBC Live+ Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/live-plus/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 999,
     "joiningFee": 999,
@@ -8934,7 +10493,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HSBC Premier Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/premier/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 20000,
     "joiningFee": 12000,
@@ -9027,7 +10586,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HSBC Visa Platinum Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/visa-platinum/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 0,
     "joiningFee": 0,
@@ -9095,7 +10654,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HSBC RuPay Platinum Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/rupay-platinum-credit-card/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "shoppingRate": 10,
     "diningRate": 10,
@@ -9152,7 +10711,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HSBC RuPay Cashback Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/rupay-cashback-credit-card/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "high",
     "annualFee": 499,
     "joiningFee": 499,
@@ -9232,7 +10791,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit card rewards",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/rewards/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "cashback",
@@ -9281,7 +10840,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Ultimate guide to cashback credit cards",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "cashback"
@@ -9316,7 +10875,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Discover endless benefits & privileges with our range of Credit Cards",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "feeWaiverSpend": 4,
     "loungeVisits": 1,
@@ -9353,7 +10912,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Rewards Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -9390,7 +10949,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Standard Chartered EaseMyTrip Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "maxRewardRate": 20,
     "travelRate": 20,
@@ -9444,7 +11003,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Smart Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "maxCashbackRate": 2,
     "shoppingRate": 2,
@@ -9493,7 +11052,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Ultimate Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "maxCashbackRate": 5,
     "maxRewardRate": 5,
@@ -9539,7 +11098,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Platinum Rewards Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -9574,7 +11133,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Super Value Titanium Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "maxCashbackRate": 5,
     "maxRewardRate": 5,
@@ -9620,7 +11179,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Manhattan Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "maxCashbackRate": 5,
     "maxRewardRate": 5,
@@ -9664,7 +11223,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "DigiSmart Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "shopping"
@@ -9696,7 +11255,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Step-by-Step Process to Apply for Credit Card",
     "sourceUrl": "https://www.federal.bank.in/credit-card-activation",
     "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "travel",
@@ -9737,7 +11296,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Features & Benefits",
     "sourceUrl": "https://www.federal.bank.in/credit-cards",
     "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "fuel"
@@ -9771,7 +11330,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Documents Required for Credit Card",
     "sourceUrl": "https://www.federal.bank.in/credit-cards",
     "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "beginner",
@@ -9804,7 +11363,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Federal Bank Credit Card Charges, Fees & Interest Rates",
     "sourceUrl": "https://www.federal.bank.in/how-to-use-credit-cards-wisely",
     "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "categories": [
       "travel",
@@ -9845,7 +11404,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Federal Bank Credit Card EMI",
     "sourceUrl": "https://www.federal.bank.in/credit-card-emi",
     "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "medium",
     "maxCashbackRate": 1.33,
     "shoppingRate": 1,
@@ -9934,7 +11493,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Can I cancel my credit card at any time?",
     "sourceUrl": "https://www.federal.bank.in/credit-cards",
     "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -9968,7 +11527,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Application",
     "sourceUrl": "https://www.federal.bank.in/credit-cards",
     "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -9995,72 +11554,12 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "detectedPercentages": []
   },
   {
-    "id": "cf1b5919b2aaf3",
-    "issuer": "Federal Bank",
-    "name": "Additional details about Add-on Card ?",
-    "sourceUrl": "https://www.federal.bank.in/add-on-cards",
-    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
-    "confidence": "high",
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 1,
-    "diningRate": 1,
-    "travelRate": 1,
-    "loungeVisits": 1,
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 27,
-      "travel": 32.5,
-      "shopping": 31,
-      "grocery": 0,
-      "dining": 21,
-      "utilities": 0,
-      "upi": 8,
-      "forex": 12,
-      "lounge": 16,
-      "premium": 13,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 47,
-      "low-fee": 0,
-      "co-branded": 56
-    },
-    "detectedBenefits": [
-      "Send Money to India in Foreign Currency",
-      "Earn 10x Rewards on your first transaction",
-      "Enjoy our bespoke 3-2-1 rewards structure curated for you & your family for spends on various categories",
-      "Gain access to a wide variety of offers and deals , including travel, food & dining, shopping, sports, entertainment, lifestyle and much more.",
-      "1% fuel surcharge waiver at all fuel stations across India. (For Celesta and Imperio Credit Cards)"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1,
-        "context": "ncluding travel, food & dining, shopping, sports, entertainment, lifestyle and much more. 1% fuel surcharge waiver at all fuel stations across India. (For Celesta and Imperio Credit Cards) Key Points A"
-      }
-    ]
-  },
-  {
     "id": "fd6d1f676cd301",
     "issuer": "Federal Bank",
     "name": "Secured Credit Cards",
     "sourceUrl": "https://www.federal.bank.in/credit-cards",
     "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-10-19T07:51:59.333Z",
+    "fetchedAt": "2026-10-22T07:39:31.541Z",
     "confidence": "low",
     "categories": [
       "beginner"
@@ -10704,1566 +12203,6 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
       "Earn 5,000 Bonus Travel Credits on annual spends of Rs. 5 Lakh",
       "Convert your Travel Credits into Air Miles/Hotel Points, Travel Bookings or choose from a wide array of Catalogue Products"
     ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "dda94ff11295a6",
-    "issuer": "IDFC FIRST Bank",
-    "name": "All IDFC FIRST Bank Credit Cards now come with Zero Forex Markup",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "low",
-    "categories": [
-      "forex"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 8,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "All IDFC FIRST Bank Credit Cards now come with Zero Forex Markup"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "bfdae98982a9e7",
-    "issuer": "IDFC FIRST Bank",
-    "name": "A Credit Card for Everyone",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "medium",
-    "loungeVisits": 1,
-    "categories": [
-      "travel",
-      "forex",
-      "lounge",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 9.5,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 12,
-      "lounge": 12,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 36
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "43ff4abfb23048",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Explore our range of credit cards",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "low",
-    "categories": [
-      "premium",
-      "business",
-      "lifetime-free"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 8,
-      "business": 35,
-      "lifetime-free": 59,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "81abda6d52dd1e",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Quantum+ Credit Card",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/quantum-plus-credit-card?utm_source=website&utm_medium=PDPQuantum+&utm_campaign=Knowmore",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "high",
-    "maxCashbackRate": 6.5,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "utilityRate": 1,
-    "travelRate": 3,
-    "upiRate": 2,
-    "foreignRewardRate": 2,
-    "forexMarkup": 2,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 68,
-      "fuel": 25,
-      "travel": 114.5,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 34,
-      "upi": 60,
-      "forex": 81,
-      "lounge": 16,
-      "premium": 65,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 55,
-      "low-fee": 12,
-      "co-branded": 96
-    },
-    "detectedBenefits": [
-      "Zero Forex Markup Account",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "Trade & Forex View All"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
-      }
-    ]
-  },
-  {
-    "id": "f1251e92dab618",
-    "issuer": "IDFC FIRST Bank",
-    "name": "IndiGo IDFC Dual Cards",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/indigo-credit-card?utm_source=website&utm_medium=PDPIndigoIDFCFIRST&utm_campaign=Knowmore",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "high",
-    "annualFee": 4999,
-    "joiningFee": 4999,
-    "renewalFee": 4999,
-    "maxCashbackRate": 1,
-    "maxRewardRate": 1.49,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "travelRate": 1,
-    "upiRate": 1.49,
-    "foreignRewardRate": 0,
-    "forexMarkup": 0,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 29,
-      "travel": 96.5,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 8,
-      "utilities": 24,
-      "upi": 46.9,
-      "forex": 87,
-      "lounge": 16,
-      "premium": 101,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 67,
-      "low-fee": 20,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Zero Forex Markup Account",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "Trade & Forex View All"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
-      }
-    ]
-  },
-  {
-    "id": "924cfeadd09673",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Micro Enterprise Credit Card",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/micro-enterprise-credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "high",
-    "annualFee": 1000,
-    "joiningFee": 0,
-    "renewalFee": 1000,
-    "feeWaiverSpend": 20000,
-    "maxCashbackRate": 1,
-    "maxRewardRate": 18,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "travelRate": 1,
-    "upiRate": 1,
-    "foreignRewardRate": 0,
-    "forexMarkup": 0,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 41,
-      "travel": 56.5,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 28,
-      "upi": 42,
-      "forex": 87,
-      "lounge": 16,
-      "premium": 65,
-      "business": 51,
-      "lifetime-free": 71,
-      "beginner": 39,
-      "low-fee": 25.33,
-      "co-branded": 88
-    },
-    "detectedBenefits": [
-      "Zero Forex Markup Account",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "Trade & Forex View All"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
-      }
-    ]
-  },
-  {
-    "id": "7759947a1b4a82",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Get 100% guaranteed approval with an FD backed credit card",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/quantum-plus-credit-card?utm_source=website&utm_medium=PDPQuantum+&utm_campaign=Knowmore",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "high",
-    "maxCashbackRate": 6.5,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "utilityRate": 1,
-    "travelRate": 3,
-    "upiRate": 2,
-    "foreignRewardRate": 2,
-    "forexMarkup": 2,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 68,
-      "fuel": 25,
-      "travel": 114.5,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 34,
-      "upi": 60,
-      "forex": 81,
-      "lounge": 16,
-      "premium": 65,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 55,
-      "low-fee": 12,
-      "co-branded": 96
-    },
-    "detectedBenefits": [
-      "Zero Forex Markup Account",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "Trade & Forex View All"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
-      }
-    ]
-  },
-  {
-    "id": "42468d80cee30e",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Add-On Credit Card",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/add-on-credit-card?utm_source=website&utm_medium=PDPAddonCC&utm_campaign=ApplyNow",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "high",
-    "annualFee": 199,
-    "renewalFee": 199,
-    "maxCashbackRate": 1,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "travelRate": 1,
-    "upiRate": 1,
-    "loungeVisits": 10,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 33,
-      "travel": 90,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 12,
-      "upi": 26,
-      "forex": 36,
-      "lounge": 64,
-      "premium": 78,
-      "business": 55,
-      "lifetime-free": 71,
-      "beginner": 61,
-      "low-fee": 42.68,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Zero Forex Markup Account",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "Trade & Forex View All"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
-      }
-    ]
-  },
-  {
-    "id": "fd046bd8c494b7",
-    "issuer": "IDFC FIRST Bank",
-    "name": "All our credit cards are UPI-ready",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/rupay-credit-card/steps-to-activate?utm_source=website&utm_medium=PDPAOCCUPIR&utm_campaign=ActivateUPI",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "high",
-    "maxCashbackRate": 1,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "travelRate": 1,
-    "upiRate": 1,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 25,
-      "travel": 52.5,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 12,
-      "upi": 42,
-      "forex": 36,
-      "lounge": 16,
-      "premium": 65,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 39,
-      "low-fee": 0,
-      "co-branded": 88
-    },
-    "detectedBenefits": [
-      "Scan and Activate UPI on Rupay Credit Card | IDFC FIRST Bank",
-      "Zero Forex Markup Account",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
-      }
-    ]
-  },
-  {
-    "id": "7ed4d83c4a6603",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Apply for a credit card online",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "low",
-    "categories": [
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 35,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "04dabdba674ce9",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Credit card fees and charges",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/mitc?utm_source=website&utm_medium=PDPCCFC&utm_campaign=CheckNow",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "high",
-    "maxCashbackRate": 1,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "travelRate": 1,
-    "upiRate": 1,
-    "loungeVisits": 1,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 25,
-      "travel": 52.5,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 12,
-      "upi": 26,
-      "forex": 36,
-      "lounge": 16,
-      "premium": 65,
-      "business": 55,
-      "lifetime-free": 71,
-      "beginner": 39,
-      "low-fee": 0,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Zero Forex Markup Account",
-      "Foreign Exchange Solutions",
-      "Savings with Zero Forex Markup",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover WhatsApp banking Say ‘Hi 👋’ on"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      }
-    ]
-  },
-  {
-    "id": "221c3e57d2f20b",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Learn about Credit Card in Detail",
-    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/first-select-vs-first-wealth-credit-card-comparison",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "high",
-    "feeWaiverSpend": 20000,
-    "maxCashbackRate": 25,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 9.99,
-    "diningRate": 1,
-    "travelRate": 5,
-    "upiRate": 25,
-    "loungeVisits": 20,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 216,
-      "fuel": 51,
-      "travel": 137,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 29,
-      "utilities": 20,
-      "upi": 266,
-      "forex": 40,
-      "lounge": 80,
-      "premium": 92,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 39,
-      "low-fee": 12,
-      "co-branded": 76
-    },
-    "detectedBenefits": [
-      "Zero Forex Markup Account",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "Trade & Forex View All"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
-      }
-    ]
-  },
-  {
-    "id": "6b731ac059f14e",
-    "issuer": "IDFC FIRST Bank",
-    "name": "FIRST Select vs. FIRST Wealth - Which credit card suits your financial planning?",
-    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/first-select-vs-first-wealth-credit-card-comparison",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "high",
-    "feeWaiverSpend": 20000,
-    "maxCashbackRate": 25,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 9.99,
-    "diningRate": 1,
-    "travelRate": 5,
-    "upiRate": 25,
-    "loungeVisits": 20,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 216,
-      "fuel": 51,
-      "travel": 137,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 29,
-      "utilities": 20,
-      "upi": 266,
-      "forex": 40,
-      "lounge": 80,
-      "premium": 92,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 39,
-      "low-fee": 12,
-      "co-branded": 76
-    },
-    "detectedBenefits": [
-      "Zero Forex Markup Account",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "Trade & Forex View All"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
-      }
-    ]
-  },
-  {
-    "id": "0051741bcf8407",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Metal credit cards: Redefining luxury for sophisticated minimalists",
-    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/luxury-lifestyle-why-metal-credit-card-are-worth-the-hype",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "high",
-    "annualFee": 800000,
-    "joiningFee": 5999,
-    "renewalFee": 800000,
-    "maxCashbackRate": 1,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "travelRate": 1,
-    "upiRate": 1,
-    "forexMarkup": 0,
-    "loungeVisits": 4,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 29,
-      "travel": 101,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 8,
-      "utilities": 12,
-      "upi": 34,
-      "forex": 71,
-      "lounge": 48,
-      "premium": 104,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 39,
-      "low-fee": 0,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Zero Forex Markup Account",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "Trade & Forex View All"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
-      }
-    ]
-  },
-  {
-    "id": "d07b026fc1bc1a",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Compare Credit Card Fees & Benefits",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [
-      "Check reward points, cashback, welcome offers, lifestyle benefits and joining fees, annual fees, and any other fees and charges applicable. This helps you understand the actual value you may get from the card."
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "606661ca685eb9",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Things to keep in mind when applying for a credit card online",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "low",
-    "categories": [
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 8,
-      "co-branded": 32
-    },
-    "detectedBenefits": [
-      "4. Rewards and benefits: Look for cards that offer rewards, cashback deals, or travel benefits that match your lifestyle. Consider if the rewards are worth any additional costs."
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "5c2a250fb35266",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Are there any EMI conversion charges on my IDFC FIRST Bank Credit Card",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "0c14d69053b0b9",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Can I apply for an add-on card?",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/add-on-credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "high",
-    "annualFee": 199,
-    "renewalFee": 199,
-    "maxCashbackRate": 1,
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "travelRate": 1,
-    "upiRate": 1,
-    "loungeVisits": 10,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 33,
-      "travel": 90,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 12,
-      "upi": 26,
-      "forex": 36,
-      "lounge": 64,
-      "premium": 78,
-      "business": 55,
-      "lifetime-free": 71,
-      "beginner": 61,
-      "low-fee": 42.68,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Zero Forex Markup Account",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts",
-      "Trade & Forex View All"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
-      }
-    ]
-  },
-  {
-    "id": "43d078cf0fa92f",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Can I pay my Credit Card bill online via NEFT?",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "low",
-    "categories": [
-      "shopping"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 8,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "fda7722efda01f",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Can I use my Credit Card for international transactions?",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card/wow",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "high",
-    "annualFee": 0,
-    "joiningFee": 750,
-    "renewalFee": 0,
-    "feeWaiverSpend": 25,
-    "maxCashbackRate": 1,
-    "maxRewardRate": 25,
-    "fuelRate": 1,
-    "shoppingRate": 9.99,
-    "travelRate": 16.7,
-    "upiRate": 16.7,
-    "forexMarkup": 0,
-    "loungeVisits": 16,
-    "categories": [
-      "cashback",
-      "fuel",
-      "travel",
-      "shopping",
-      "utilities",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "lifetime-free",
-      "beginner",
-      "low-fee",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 24,
-      "fuel": 29,
-      "travel": 224.9,
-      "shopping": 101.93,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 36,
-      "upi": 183,
-      "forex": 111,
-      "lounge": 68,
-      "premium": 92,
-      "business": 47,
-      "lifetime-free": 71,
-      "beginner": 77,
-      "low-fee": 46,
-      "co-branded": 72
-    },
-    "detectedBenefits": [
-      "Apply for FIRST WOW! - Zero Forex Markup Credit Card | IDFC FIRST Bank",
-      "Zero Forex Markup Account",
-      "Foreign Exchange Solutions",
-      "Zero Forex Markup Current Account",
-      "Maximise your savings and boost profitability with our Zero Forex Markup current accounts"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 7,
-        "context": "s Account Interest Calculator Salary Calculator Income Tax Calculator Discover Earn up to 7% interest on your Savings Account Get #MoreFromYourBank Open an Account Deposits View All Fixed Deposit Recur"
-      },
-      {
-        "value": 9.99,
-        "context": "roperty EMI Calculator EMI Calculator Discover Apply for Personal Loan Online Starting at 9.99%* p.a. Apply Now Investment View All Mutual Funds Sovereign Gold Bonds Demat Account Bonds Portfolio Manageme"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Discover Cashback for everyone, on ev"
-      },
-      {
-        "value": 1,
-        "context": "Lifetime Free IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Ashva Credit Card 1% Forex Metal ₹2,999 Mayura Credit Card Zero Forex Metal ₹5,999 Diamond Reserve Zero Forex Travel ₹3,"
-      },
-      {
-        "value": 1,
-        "context": "PI ₹199 Hello Cashback Cashback UPI-ready FD-Backed FIRST EARN Virtual FD-Backed 1% Cashback FIRST Power & Power+ Rewards UPI ₹199 FIRST WOW! Black FD-Backed Virtual Travel IndiGo IDFC"
-      },
-      {
-        "value": 1,
-        "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
-      },
-      {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
-      },
-      {
-        "value": 7.25,
-        "context": "eposit Book Now Current Account Apply Now FASTag Apply Now Savings Account: Earn up to 7.25% p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your"
-      },
-      {
-        "value": 7,
-        "context": "p.a. interest on your Savings Account Apply Now See More Result --> Discover Earn up to 7% interest on your Savings Account Open Account Now WhatsApp banking Say ‘Hi 👋’ on WhatsApp at 9555 555 555 &"
-      },
-      {
-        "value": 1,
-        "context": "Zero Forex Travel FIRST WOW! Zero Forex Travel Lifetime Free FIRST EARN Virtual 1% Cashback ₹499 IndiGo IDFC FIRST Dual Card Travel Lifestyle ₹4,999 Zero Forex & Travel Credit Cards FIR"
-      }
-    ]
-  },
-  {
-    "id": "1e13abf9e16e32",
-    "issuer": "IDFC FIRST Bank",
-    "name": "Can I withdraw cash using my Credit Card?",
-    "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/key-factors-for-credit-card-cash-withdrawal",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "adb52a4c01e64c",
-    "issuer": "IDFC FIRST Bank",
-    "name": "I already have an IDFC FIRST Bank Credit Card. Can I apply for another one?",
-    "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-10-12T09:19:01.643Z",
-    "confidence": "low",
-    "categories": [
-      "business"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
     "detectedPercentages": []
   },
   {
