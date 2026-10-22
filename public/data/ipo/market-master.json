@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generatedAt": "2026-10-22T08:31:54.115Z",
+    "generatedAt": "2026-10-22T14:29:18.562Z",
     "recordCount": 2,
     "nseCount": 2,
     "bseCount": 0,
     "activeCount": 2,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard 0"
+    "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard unavailable"
   },
   "records": [
     {
@@ -26,17 +26,17 @@
         ]
       },
       "subscription": {
-        "total": 2.390783824872333,
-        "updatedAt": "2026-10-22T08:31:54.115Z",
+        "total": 3.129715817468303,
+        "updatedAt": "2026-10-22T14:29:18.562Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JPL&type=Active"
       },
       "sharesOffered": 197525934,
-      "sharesBid": 472241808,
+      "sharesBid": 618200040,
       "estimatedIssueValueCr": 22103.15,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JPL&type=Active",
-      "fetchedAt": "2026-10-22T08:31:54.115Z"
+      "fetchedAt": "2026-10-22T14:29:18.562Z"
     },
     {
       "slug": "paras-healthcare-ltd-8045ae9",
@@ -55,17 +55,17 @@
         ]
       },
       "subscription": {
-        "total": 0.16981501210220923,
-        "updatedAt": "2026-10-22T08:31:54.115Z",
+        "total": 0.23173750681827718,
+        "updatedAt": "2026-10-22T14:29:18.562Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PARASHLTH&type=Active"
       },
       "sharesOffered": 12083331,
-      "sharesBid": 2051931,
+      "sharesBid": 2800161,
       "estimatedIssueValueCr": 837.37,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PARASHLTH&type=Active",
-      "fetchedAt": "2026-10-22T08:31:54.115Z"
+      "fetchedAt": "2026-10-22T14:29:18.562Z"
     }
   ]
 }
