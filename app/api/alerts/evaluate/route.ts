@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { readBoundedJson } from '../../../../src/services/server/security'
 import { alertMatches } from '../../../../src/domain/watchlist/alerts'
 import type { AlertType, PriceAlert } from '../../../../src/domain/watchlist/types'
 import { getMarketDataProvider } from '../../../../src/services/market-data/market-data-service'
@@ -7,7 +8,7 @@ const validKey = /^(NSE|BSE)_EQ\|INE[A-Z0-9]{9}$/
 const types = new Set<AlertType>(['price_above', 'price_below', 'percent_rise', 'percent_fall', '52_week_high', '52_week_low'])
 export async function POST(request: NextRequest) {
   if (Number(request.headers.get('content-length') ?? 0) > 32_768) return NextResponse.json({ data: null, error: { code: 'REQUEST_TOO_LARGE', message: 'Alert request is too large.' } }, { status: 413 })
-  const body = await request.json().catch(() => null) as { alerts?: unknown } | null
+  const body = await readBoundedJson(request, 32_768) as { alerts?: unknown } | null
   if (!Array.isArray(body?.alerts) || !body.alerts.length || body.alerts.length > 100) return NextResponse.json({ data: null, error: { code: 'INVALID_REQUEST', message: 'Provide 1–100 active alerts.' } }, { status: 400 })
   const alerts = body.alerts.filter((value): value is PriceAlert => Boolean(value && typeof value === 'object'))
   const invalid = alerts.length !== body.alerts.length || alerts.some((alert) => typeof alert.id !== 'string' || !validKey.test(alert.instrumentKey) || !types.has(alert.type) || alert.status !== 'active' || (['price_above', 'price_below', 'percent_rise', 'percent_fall'].includes(alert.type) && (typeof alert.threshold !== 'number' || !Number.isFinite(alert.threshold) || alert.threshold <= 0)))

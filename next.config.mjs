@@ -24,6 +24,11 @@ const nextConfig = {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
           },
+          {
+            // Strict security directives without altering Next.js script loading.
+            key: 'Content-Security-Policy',
+            value: "object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'",
+          },
         ],
       },
     ]
