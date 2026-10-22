@@ -5,6 +5,11 @@ export const dynamic = "force-dynamic";
 
 export async function GET(request: NextRequest) {
   const query = request.nextUrl.searchParams.get("q")?.trim() ?? "";
+  if (query.length > 100 || /[\\u0000-\\u001f\\u007f]/.test(query)) {
+    return NextResponse.json({ results: [], error: { code: "INVALID_QUERY", message: "Search must be at most 100 characters." } }, {
+      status: 400, headers: { "Cache-Control": "no-store" },
+    });
+  }
   if (query.length < 2) {
     return NextResponse.json({ results: [], error: null }, { status: 200 });
   }
