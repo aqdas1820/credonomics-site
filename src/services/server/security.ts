@@ -17,7 +17,8 @@ export function isSameOriginMutation(request: Request): boolean {
   const site = request.headers.get('sec-fetch-site')
   if (site === 'cross-site') return false
   const origin = request.headers.get('origin')
-  if (origin === null) return site !== 'same-site'
+  // Fail closed for legacy/ambiguous cookie-authenticated POSTs without either header.
+  if (origin === null) return site === 'same-origin'
   try { return new URL(origin).origin === new URL(request.url).origin }
   catch { return false }
 }
@@ -53,4 +54,9 @@ export async function readBoundedJson(request: Request, maxBytes = 16_384): Prom
     raw += decoder.decode()
     return JSON.parse(raw)
   } catch { try { await reader.cancel() } catch {} return null }
+}
+
+/** Only equity instrument keys are accepted by the public stock endpoints. */
+export function validEquityInstrumentKey(value: unknown): value is string {
+  return typeof value === 'string' && /^(NSE|BSE)_EQ\|INE[A-Z0-9]{9}$/.test(value)
 }
