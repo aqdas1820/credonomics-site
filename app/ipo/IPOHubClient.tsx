@@ -211,7 +211,7 @@ export default function IPOHubClient({
   const hasData = initialIPOs.length > 0;
 
   return (
-    <main className="ipoPage">
+    <div className="ipoPage">
       <div className="ipoShell">
         <section className="hero">
           <div className="heroMain">
@@ -1870,6 +1870,6 @@ export default function IPOHubClient({
           }
         }
       `}</style>
-    </main>
+    </div>
   );
 }

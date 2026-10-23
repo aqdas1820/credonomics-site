@@ -1,11 +1,11 @@
 .workspace{
-  --ink:#0a2035;--muted:#617488;--line:#dce6ee;--surface:#fff;--soft:#f4f8fb;
-  --blue:#2867f0;--teal:#0ca6a3;--navy:#071c31;
+  --ink:var(--cn-text);--muted:var(--cn-muted);--line:var(--cn-border);--surface:var(--cn-surface);--soft:var(--cn-surface-raised);
+  --blue:var(--cn-blue);--teal:var(--cn-cyan);--navy:#071c31;
   display:grid;gap:16px;
   color:var(--ink);
 }
 :global(html[data-theme='dark']) .workspace{
-  --ink:#edf7ff;--muted:#9eb4c6;--line:#20394f;--surface:#0b1d2f;--soft:#10273b;--navy:#061321;
+  --ink:var(--cn-text);--muted:var(--cn-muted);--line:var(--cn-border);--surface:var(--cn-surface);--soft:var(--cn-surface-raised);--navy:#061321;
 }
 .spendPanel,.cardsPanel,.resultsPanel{
   padding:24px;border:1px solid var(--line);border-radius:20px;background:var(--surface);
@@ -74,11 +74,11 @@
 
 /* CredoNomics V13 analyzer visual layer */
 .workspace{
-  --ink:#081827;--muted:#5e6d7b;--line:#d9e1e7;--surface:#fff;--soft:#f0f3f6;--blue:#1769ff;--teal:#00a79d;--navy:#081827;
+  --ink:var(--cn-text);--muted:var(--cn-muted);--line:var(--cn-border);--surface:var(--cn-surface);--soft:var(--cn-surface-raised);--blue:var(--cn-blue);--teal:var(--cn-cyan);--navy:#081827;
   gap:13px
 }
 :global(html[data-theme='dark']) .workspace{
-  --ink:#f4f7fa;--muted:#9aa9b7;--line:#25303d;--surface:#0e141d;--soft:#121a25;--blue:#6b9bff;--teal:#45d2c8;--navy:#070b11
+  --ink:var(--cn-text);--muted:var(--cn-muted);--line:var(--cn-border);--surface:var(--cn-surface);--soft:var(--cn-surface-raised);--blue:var(--cn-blue);--teal:var(--cn-cyan);--navy:#070b11
 }
 .spendPanel,.cardsPanel,.resultsPanel{border-radius:20px;box-shadow:0 8px 28px rgba(8,24,39,.03)}
 .panelHead h2{font-size:25px}.panelHead>div>span{font-size:9px}

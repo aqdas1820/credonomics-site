@@ -1,52 +1,17 @@
 import { expect, test } from '@playwright/test'
 
-test('cursor halo follows actual mouse coordinates and remains click-through', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== 'desktop', 'Desktop pointer experience')
+test('research hero remains usable without a continuous pointer decoration', async ({ page }) => {
   await page.goto('/')
-  const aura = page.locator('[data-cm-cursor-aura]')
-  const halo = page.locator('[data-cm-cursor-halo]')
-
-  await expect(aura).toHaveAttribute('aria-hidden', 'true')
-  await expect(aura).toHaveCSS('pointer-events', 'none')
-  expect(await aura.evaluate(el => el.parentElement === document.body)).toBe(true)
-  await expect(aura).toHaveCSS('z-index', '45')
-  await expect(halo).toHaveCSS('width', '500px')
-
-  await page.mouse.move(150, 180)
-  await expect(halo).toHaveAttribute('data-active', 'true')
-  await expect(halo).toHaveCSS('opacity', '1')
-  const positionA = await halo.evaluate((el) => (el as HTMLElement).style.transform)
-  expect(positionA).toContain('translate3d(')
-
-  await page.mouse.move(770, 490)
-  await expect.poll(() => halo.evaluate((el) => (el as HTMLElement).style.transform))
-    .not.toBe(positionA)
-
-  // The decorative layer must not block links or buttons.
-  await page.getByRole('button', { name: 'Support CredoNomics' }).click()
-  await expect(page.getByRole('dialog')).toBeVisible()
+  await expect(page.locator('[data-cm-cursor-aura]')).toHaveCount(0)
+  await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1)
+  await page.locator('[data-cm-hero]').getByRole('link', { name: /Explore research/ }).click()
+  await expect(page).toHaveURL(/\/research\/?$/)
 })
 
-test('mouse glow supports desktop with touch capabilities', async ({ browser }) => {
-  const context = await browser.newContext({ viewport: { width: 1366, height: 800 }, hasTouch: true })
-  try {
-    const page = await context.newPage()
-    await page.goto('/')
-    await page.mouse.move(390, 300)
-    await expect(page.locator('[data-cm-cursor-halo]')).toHaveAttribute('data-active', 'true')
-  } finally {
-    await context.close()
-  }
-})
-
-test('reduced motion hides cursor effect', async ({ page }) => {
+test('reduced motion leaves all hero content visible', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' })
   await page.goto('/')
-  await expect(page.locator('[data-cm-cursor-aura]')).toHaveCSS('display', 'none')
-})
-
-test('touch-only viewport hides cursor effect', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== 'mobile', 'Mobile viewport')
-  await page.goto('/')
-  await expect(page.locator('[data-cm-cursor-aura]')).toHaveCSS('display', 'none')
+  await expect(page.locator('[data-cm-hero] h1')).toBeVisible()
+  await expect(page.locator('[data-cm-hero] h1')).toHaveCSS('animation-name', 'none')
+  await expect(page.locator('[data-cm-cursor-aura]')).toHaveCount(0)
 })

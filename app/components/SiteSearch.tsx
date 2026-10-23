@@ -58,6 +58,8 @@ export default function SiteSearch() {
   const pathname = usePathname()
   const router = useRouter()
   const inputRef = useRef<HTMLInputElement>(null)
+  const dialogRef = useRef<HTMLDialogElement>(null)
+  const triggerRef = useRef<HTMLButtonElement>(null)
 
   const [open, setOpen] = useState(false)
   const [query, setQuery] = useState('')
@@ -104,6 +106,7 @@ export default function SiteSearch() {
       }
 
       if (!open) return
+      if (event.key !== 'Escape' && event.target !== inputRef.current) return
 
       if (event.key === 'Escape') {
         event.preventDefault()
@@ -141,12 +144,14 @@ export default function SiteSearch() {
     const root = document.documentElement
     const previousOverflow = root.style.overflow
     root.style.overflow = 'hidden'
+    dialogRef.current?.showModal()
 
     const timer = window.setTimeout(() => inputRef.current?.focus(), 40)
 
     return () => {
       window.clearTimeout(timer)
       root.style.overflow = previousOverflow
+      triggerRef.current?.focus({ preventScroll: true })
     }
   }, [open])
 
@@ -154,12 +159,19 @@ export default function SiteSearch() {
     setActiveIndex(0)
   }, [query])
 
+  useEffect(() => {
+    if (open) document.getElementById(`cn-search-result-${activeIndex}`)?.scrollIntoView({ block: 'nearest' })
+  }, [activeIndex, open])
+
   return (
     <>
       <button
+        ref={triggerRef}
         type="button"
         className={styles.searchTrigger}
         aria-label="Search CredoNomics"
+        aria-haspopup="dialog"
+        aria-expanded={open}
         onClick={() => setOpen(true)}
       >
         <Search size={15} />
@@ -171,18 +183,17 @@ export default function SiteSearch() {
       </button>
 
       {open ? (
-        <div
+        <dialog
+          ref={dialogRef}
           className={styles.backdrop}
-          role="presentation"
+          aria-label="CredoNomics Intelligence Search"
+          onCancel={(event) => { event.preventDefault(); close() }}
           onMouseDown={(event) => {
             if (event.target === event.currentTarget) close()
           }}
         >
           <section
             className={styles.palette}
-            role="dialog"
-            aria-modal="true"
-            aria-label="CredoNomics Intelligence Search"
           >
             <div className={styles.searchTop}>
               <Search size={19} />
@@ -192,6 +203,11 @@ export default function SiteSearch() {
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder="Search reports, IPOs, mutual funds, cards, tools..."
                 aria-label="Search CredoNomics intelligence"
+                role="combobox"
+                aria-autocomplete="list"
+                aria-expanded="true"
+                aria-controls="cn-search-results"
+                aria-activedescendant={visibleEntries[activeIndex] ? `cn-search-result-${activeIndex}` : undefined}
               />
               <button type="button" aria-label="Close search" onClick={close}>
                 <X size={18} />
@@ -211,11 +227,14 @@ export default function SiteSearch() {
               </span>
             </div>
 
-            <div className={styles.results}>
+            <div className={styles.results} id="cn-search-results" role="listbox" aria-label="Search results">
               {visibleEntries.length ? (
                 visibleEntries.map((entry, index) => (
                   <button
                     key={entry.id}
+                    id={`cn-search-result-${index}`}
+                    role="option"
+                    aria-selected={index === activeIndex}
                     type="button"
                     className={`${styles.result} ${
                       index === activeIndex ? styles.resultActive : ''
@@ -266,7 +285,7 @@ export default function SiteSearch() {
               </a>
             </footer>
           </section>
-        </div>
+        </dialog>
       ) : null}
     </>
   )

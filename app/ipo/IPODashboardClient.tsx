@@ -137,7 +137,7 @@ export default function IPODashboardClient({ records, initialView = 'open' }: { 
   }, [displayRecords, query, segment, view])
 
   return (
-    <main className={styles.page}>
+    <div className={styles.page}>
       <section className={styles.hero}>
         <span>Primary market intelligence</span>
         <h1>IPO Intelligence</h1>
@@ -273,6 +273,6 @@ export default function IPODashboardClient({ records, initialView = 'open' }: { 
           <span>Last updated {displayRecords[0]?.providerUpdatedAt ? new Intl.DateTimeFormat('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'short', timeStyle: 'medium' }).format(new Date(displayRecords[0].providerUpdatedAt)) : '—'}</span>
         </footer>
       </section>
-    </main>
+    </div>
   )
 }

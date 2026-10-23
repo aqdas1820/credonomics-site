@@ -12,15 +12,15 @@ const investmentLinks = [
 
 const cardLinks = [
   { label: 'Credit Card Intelligence', href: '/cards' },
-  { label: 'Card Directory', href: '/cards' },
-  { label: 'Head-to-Head', href: '/cards' },
+  { label: 'Card Directory', href: '/cards/all' },
+  { label: 'Head-to-Head', href: '/cards/compare' },
   { label: 'Methodology', href: '/methodology' },
 ]
 
 const companyLinks = [
   { label: 'About', href: '/about' },
   { label: 'Official Identity', href: '/official' },
-  { label: 'Contact', href: '/about' },
+  { label: 'Contact', href: '/contact' },
   { label: 'Disclosures', href: '/disclosures' },
   { label: 'Privacy', href: '/privacy' },
   { label: 'Terms', href: '/terms' },

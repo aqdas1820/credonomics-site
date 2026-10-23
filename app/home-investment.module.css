@@ -229,7 +229,7 @@
   box-shadow: 0 0 16px rgba(72,230,166,.9);
 }
 
-.heroCopy h1 {
+.heroCopy h2 {
   max-width: 760px;
   margin: 27px 0 0;
   font-size: clamp(48px, 5.5vw, 78px);
@@ -238,7 +238,7 @@
   font-weight: 720;
 }
 
-.heroCopy h1 em {
+.heroCopy h2 em {
   display: block;
   color: #5e6774;
   font-style: normal;
@@ -931,7 +931,7 @@
   padding-bottom:90px;
 }
 
-.heroCopy h1{
+.heroCopy h2{
   max-width:780px;
   font-size:clamp(51px,5.35vw,76px);
   line-height:.99;
@@ -1100,7 +1100,7 @@
 }
 
 :global(html[data-theme='light']) .brandText strong,
-:global(html[data-theme='light']) .heroCopy h1,
+:global(html[data-theme='light']) .heroCopy h2,
 :global(html[data-theme='light']) .sectionHeading h2,
 :global(html[data-theme='light']) .frameworkIntro h2,
 :global(html[data-theme='light']) .reportPanel h2,
@@ -1128,7 +1128,7 @@
   background:rgba(7,23,44,.018);
 }
 
-:global(html[data-theme='light']) .heroCopy h1 em{
+:global(html[data-theme='light']) .heroCopy h2 em{
   color:#758395;
 }
 
@@ -1891,7 +1891,7 @@
   box-shadow:inset 0 1px 0 rgba(255,255,255,.025);
 }
 
-.heroCopy h1{
+.heroCopy h2{
   max-width:800px;
   margin-top:29px;
   font-size:clamp(53px,5.5vw,78px);
@@ -1899,7 +1899,7 @@
   letter-spacing:-.058em;
 }
 
-.heroCopy h1 em{
+.heroCopy h2 em{
   color:#687280;
 }
 
@@ -2611,7 +2611,7 @@
   font-size:11.5px;
 }
 
-.heroCopy h1{
+.heroCopy h2{
   font-size:clamp(54px,5.5vw,80px);
 }
 
@@ -3238,7 +3238,7 @@
     max-width:100%;
   }
 
-  .heroCopy h1{
+  .heroCopy h2{
     max-width:100%;
     font-size:clamp(46px,10vw,66px);
     line-height:.98;
@@ -3299,14 +3299,14 @@
     line-height:1.35;
   }
 
-  .heroCopy h1{
+  .heroCopy h2{
     margin-top:20px;
     font-size:clamp(38px,12vw,52px);
     line-height:.98;
     letter-spacing:-.05em;
   }
 
-  .heroCopy h1 em{
+  .heroCopy h2 em{
     display:block;
   }
 
@@ -3504,3 +3504,8 @@
 .pulsePanel{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-top:16px;padding:24px;border-radius:18px;background:linear-gradient(135deg,var(--surface),color-mix(in srgb,var(--teal) 7%,var(--surface)))}.pulsePanel h2{margin:8px 0 4px;color:var(--ink);font-size:25px}.pulsePanel p{margin:0;color:var(--muted);font-size:13px}.pulsePanel>a{flex:0 0 auto;color:var(--teal);font-size:12px;font-weight:800}
 .quickActions{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:16px}.quickActions a{display:flex;align-items:center;justify-content:space-between;min-height:62px;padding:0 16px;border-radius:15px;background:var(--surface);font-size:13px;font-weight:800}.quickActions b{color:var(--teal)}
 @media(max-width:760px){.appHome{width:min(100% - 32px,1180px);padding:34px 0 24px}.appHomeIntro h1{font-size:clamp(40px,12vw,56px)}.appHomeIntro p{font-size:16px}.marketStatus{grid-template-columns:1fr;margin-top:28px}.pulsePanel{align-items:flex-start;flex-direction:column}.quickActions{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:5px}.quickActions a{min-width:132px;scroll-snap-align:start}.hero{padding-top:48px}}
+
+/* Shared Midnight Intelligence palette. */
+.page{--bg:var(--cn-bg);--panel:var(--cn-surface);--panel2:var(--cn-surface-raised);--line:var(--cn-border);--muted:var(--cn-muted);--muted2:var(--cn-muted);--text:var(--cn-text);--green:var(--cn-cyan);--green2:var(--cn-blue);background:var(--cn-bg);color:var(--cn-text)}
+.heroCopy h2{font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-.04em;margin:0 0 22px}
+.ambientOne,.ambientTwo{display:none}

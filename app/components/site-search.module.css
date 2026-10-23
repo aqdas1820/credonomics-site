@@ -363,3 +363,11 @@
     border:1px solid var(--line,#dce4eb);
   }
 }
+/* Native modal supplies inert background, Escape handling and focus containment. */
+.backdrop{width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;border:0;color:var(--cn-text);background:transparent;backdrop-filter:none}
+.backdrop::backdrop{background:#080f1ebf;backdrop-filter:blur(6px)}
+.palette{animation:cnSearchIn 220ms var(--cn-ease-out);background:var(--cn-surface);border-color:var(--cn-border)}
+.result{transition:background-color 160ms ease-out,border-color 160ms ease-out;min-height:64px}
+.resultActive{border-inline-start:2px solid var(--cn-cyan)}
+@keyframes cnSearchIn{from{transform:translateY(8px)}to{transform:none}}
+@media(prefers-reduced-motion:reduce){.palette{animation:none}}

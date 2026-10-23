@@ -399,3 +399,10 @@
 }
 
 /* === CREDONOMICS_V17_5_1_BRAND_WEIGHT_END === */
+
+.footerShell{background:linear-gradient(180deg,#111d30,#080f1e);color:#f2f7ff;border-color:#2a3b55}
+.kicker{color:#35d0ea}.ctaButton{color:#080f1e!important;background:#35d0ea;box-shadow:none;border-radius:10px}
+.ctaCopy h2{font-size:clamp(30px,4vw,48px);line-height:1.15}
+.linkColumn a{min-height:32px;display:flex;align-items:center;transition:color 180ms ease-out}
+.linkColumn a:hover{color:#35d0ea}
+@media(max-width:880px){.footerShell{padding-bottom:72px}}

@@ -21,7 +21,7 @@ export default function CalculatorShell({
 }) {
   return (
     <SiteFrame>
-    <main className={styles.shell}>
+    <div className={styles.shell}>
       <div className={styles.calcWrap}>
         <div className={styles.calcHero}>
           <small>{category} · CredoNomics quick calculator</small>
@@ -42,7 +42,7 @@ export default function CalculatorShell({
           <Link href="/methodology">Read CredoNomics methodology →</Link>
         </div>
       </div>
-    </main>
+    </div>
     </SiteFrame>
   )
 }

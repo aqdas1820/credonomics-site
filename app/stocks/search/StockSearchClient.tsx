@@ -35,7 +35,7 @@ export default function StockSearchClient() {
   }, [query]);
 
   return (
-    <main className={styles.page}>
+    <div className={styles.page}>
       <section className={styles.shell}>
         <span className={styles.eyebrow}>EQUITY DATA FOUNDATION</span>
         <h1>Search Indian listed companies.</h1>
@@ -53,6 +53,6 @@ export default function StockSearchClient() {
         {status === "ready" && results.length === 0 ? <FinancialEmptyState title="No verified results" message="Try another company, symbol, BSE code or ISIN." /> : null}
         {results.length ? <ul className={styles.results}>{results.map((stock, index) => <li key={`${stock.exchange}:${stock.symbol}`} className={index === active ? styles.active : ""}><Link href={`/stocks/${stock.exchange.toLowerCase()}/${encodeURIComponent(stock.symbol)}`}><strong>{stock.companyName}</strong><span>{stock.exchange}: {stock.symbol}{stock.isin ? ` · ${stock.isin}` : ""}</span></Link></li>)}</ul> : null}
       </section>
-    </main>
+    </div>
   );
 }
