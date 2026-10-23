@@ -1,0 +1,64 @@
+{
+  "securityId": "ISIN:INE142Q01026",
+  "slug": "sula-vineyards-limited-ine142q01026",
+  "isin": "INE142Q01026",
+  "stock": "SULA VINEYARDS LIMITED",
+  "sector": "Beverages",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 2,
+  "peakNormalizedWeight": 0.04,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.04,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "weight": 0.2,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 2,
+      "totalWeight": 0.24000000000000002,
+      "normalizedWeight": 0.04,
+      "avgHeldWeight": 0.12000000000000001
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.04,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.2,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Small Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

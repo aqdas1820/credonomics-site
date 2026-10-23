@@ -1,0 +1,96 @@
+{
+  "securityId": "ISIN:INE062A01020",
+  "slug": "state-bank-of-india-ine062a01020",
+  "isin": "INE062A01020",
+  "stock": "State Bank of India",
+  "sector": "Banks",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 4,
+  "peakNormalizedWeight": 2.0383333333333336,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "weight": 3.94,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Focused Fund",
+      "weight": 5.1,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 1.42,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 1.77,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 4,
+      "totalWeight": 12.23,
+      "normalizedWeight": 2.0383333333333336,
+      "avgHeldWeight": 3.0575
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 3.94,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Focused Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 5.1,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 1.42,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 1.77,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Flexi Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Focused Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Multi Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

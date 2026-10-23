@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE976I01016",
+  "slug": "tata-capital-ltd-ine976i01016",
+  "isin": "INE976I01016",
+  "stock": "Tata Capital Ltd.",
+  "sector": "Finance",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.16333333333333333,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.98,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.98,
+      "normalizedWeight": 0.16333333333333333,
+      "avgHeldWeight": 0.98
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.98,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Multi Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

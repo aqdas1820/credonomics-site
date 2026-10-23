@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE736A01011",
+  "slug": "central-depository-services-india-ltd-ine736a01011",
+  "isin": "INE736A01011",
+  "stock": "Central Depository Services (India) Ltd.",
+  "sector": "Capital Markets",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.005,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.03,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.03,
+      "normalizedWeight": 0.005,
+      "avgHeldWeight": 0.03
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.03,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

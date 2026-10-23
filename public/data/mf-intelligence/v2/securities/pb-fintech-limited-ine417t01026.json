@@ -1,0 +1,112 @@
+{
+  "securityId": "ISIN:INE417T01026",
+  "slug": "pb-fintech-limited-ine417t01026",
+  "isin": "INE417T01026",
+  "stock": "PB Fintech Limited",
+  "sector": "Financial Technology (Fintech)",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 5,
+  "peakNormalizedWeight": 0.7600000000000001,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "weight": 1.12,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Focused Fund",
+      "weight": 1.17,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.27,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "weight": 1.07,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.93,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 5,
+      "totalWeight": 4.5600000000000005,
+      "normalizedWeight": 0.7600000000000001,
+      "avgHeldWeight": 0.9120000000000001
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 1.12,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Focused Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 1.17,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.27,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 1.07,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.93,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Flexi Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Focused Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Mid Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Multi Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

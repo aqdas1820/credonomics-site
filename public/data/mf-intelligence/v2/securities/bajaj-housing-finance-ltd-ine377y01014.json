@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE377Y01014",
+  "slug": "bajaj-housing-finance-ltd-ine377y01014",
+  "isin": "INE377Y01014",
+  "stock": "Bajaj Housing Finance Ltd.",
+  "sector": "Finance",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.01,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.06,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.06,
+      "normalizedWeight": 0.01,
+      "avgHeldWeight": 0.06
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.06,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

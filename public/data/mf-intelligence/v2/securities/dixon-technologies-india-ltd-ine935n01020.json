@@ -1,0 +1,96 @@
+{
+  "securityId": "ISIN:INE935N01020",
+  "slug": "dixon-technologies-india-ltd-ine935n01020",
+  "isin": "INE935N01020",
+  "stock": "Dixon Technologies (India) Ltd.",
+  "sector": "Consumer Durables",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 4,
+  "peakNormalizedWeight": 0.28500000000000003,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "weight": 0.32,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.05,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "weight": 0.66,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.68,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 4,
+      "totalWeight": 1.7100000000000002,
+      "normalizedWeight": 0.28500000000000003,
+      "avgHeldWeight": 0.42750000000000005
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.32,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.05,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.66,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.68,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Flexi Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Mid Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Multi Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

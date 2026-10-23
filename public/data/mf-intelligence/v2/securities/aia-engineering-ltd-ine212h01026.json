@@ -1,0 +1,64 @@
+{
+  "securityId": "ISIN:INE212H01026",
+  "slug": "aia-engineering-ltd-ine212h01026",
+  "isin": "INE212H01026",
+  "stock": "AIA Engineering Ltd.",
+  "sector": "Industrial Products",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 2,
+  "peakNormalizedWeight": 0.25333333333333335,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.23,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "weight": 1.29,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 2,
+      "totalWeight": 1.52,
+      "normalizedWeight": 0.25333333333333335,
+      "avgHeldWeight": 0.76
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.23,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 1.29,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Mid Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

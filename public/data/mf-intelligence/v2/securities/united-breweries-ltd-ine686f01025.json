@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE686F01025",
+  "slug": "united-breweries-ltd-ine686f01025",
+  "isin": "INE686F01025",
+  "stock": "United Breweries Ltd.",
+  "sector": "Beverages",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.011666666666666667,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.07,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.07,
+      "normalizedWeight": 0.011666666666666667,
+      "avgHeldWeight": 0.07
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.07,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

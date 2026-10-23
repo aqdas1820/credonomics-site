@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE192R01011",
+  "slug": "avenue-supermarts-ltd-ine192r01011",
+  "isin": "INE192R01011",
+  "stock": "Avenue Supermarts Ltd.",
+  "sector": "Retailing",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.045000000000000005,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.27,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.27,
+      "normalizedWeight": 0.045000000000000005,
+      "avgHeldWeight": 0.27
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.27,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

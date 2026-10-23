@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE00F201020",
+  "slug": "prudent-corporate-advisory-services-limited-ine00f201020",
+  "isin": "INE00F201020",
+  "stock": "Prudent Corporate Advisory Services Limited",
+  "sector": "Capital Markets",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.12333333333333334,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.74,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.74,
+      "normalizedWeight": 0.12333333333333334,
+      "avgHeldWeight": 0.74
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.74,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Multi Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

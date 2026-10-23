@@ -1,29 +1,1776 @@
 {
   "schemaVersion": "mf-v2",
-  "latestMonth": "2026-06",
-  "previousMonth": "2026-05",
+  "latestMonth": "2026-09",
+  "previousMonth": null,
   "metadata": {
-    "source": "HDFC Mutual Fund official monthly portfolio disclosures (repository extraction)",
-    "sourceFile": "holdings_public.csv",
-    "asOf": "2026-06-30T23:59:59.000Z",
-    "generatedAt": "2026-08-10T11:24:20.991Z",
+    "source": "HDFC Mutual Fund official monthly XLSX disclosures; historical repository snapshots retained",
+    "sourceFile": "official-sources-2026-09.json",
+    "asOf": "2026-09-30T23:59:59Z",
+    "generatedAt": "2026-10-23T14:44:54.369591Z",
     "quality": "PARTIAL",
     "availability": "partial",
-    "recordCount": 870,
+    "recordCount": 1504,
     "schemaVersion": "mf-v2",
     "coverageStart": "2025-01",
-    "coverageEnd": "2026-06",
-    "schemeCount": 3,
-    "holdingCount": 870,
+    "coverageEnd": "2026-09",
+    "schemeCount": 6,
+    "holdingCount": 1504,
     "validationStatus": "PASSED_WITH_WARNINGS",
-    "sourceSha256": "09e4e46b1314a86409d71300762833c4eb8ca7cbea15ee8cb410747cdbeb204b"
+    "sourceSha256": "ff4eec3f6413fcf162f20c0fee9c039efbc48884e4c6995300d9e0a292a78978"
   },
   "summary": {
-    "holdings": 55,
-    "schemes": 2
+    "holdings": 634,
+    "schemes": 6
   },
-  "topConsensus": [],
+  "topConsensus": [
+    {
+      "securityId": "ISIN:INE914M01019",
+      "slug": "aster-dm-quality-care-limited-ine914m01019",
+      "stock": "Aster DM Quality Care Limited",
+      "sector": "Healthcare Services",
+      "schemeCount": 6,
+      "normalizedWeight": 1.625,
+      "score": 86.25,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.79,
+        "HDFC Focused Fund": 3.3,
+        "HDFC Large and Mid Cap Fund": 0.55,
+        "HDFC Mid Cap Fund": 0.9,
+        "HDFC Multi Cap Fund": 0.84,
+        "HDFC Small Cap Fund": 3.37
+      }
+    },
+    {
+      "securityId": "ISIN:INE758T01015",
+      "slug": "eternal-limited-ine758t01015",
+      "stock": "Eternal Limited",
+      "sector": "Retailing",
+      "schemeCount": 5,
+      "normalizedWeight": 2.1616666666666666,
+      "score": 79.95,
+      "weights": {
+        "HDFC Flexi Cap Fund": 3.46,
+        "HDFC Focused Fund": 4.87,
+        "HDFC Large and Mid Cap Fund": 1.16,
+        "HDFC Mid Cap Fund": 1.35,
+        "HDFC Multi Cap Fund": 2.13
+      }
+    },
+    {
+      "securityId": "ISIN:INE090A01021",
+      "slug": "icici-bank-ltd-ine090a01021",
+      "stock": "ICICI Bank Ltd.",
+      "sector": "Banks",
+      "schemeCount": 4,
+      "normalizedWeight": 4.213333333333334,
+      "score": 76.66666666666666,
+      "weights": {
+        "HDFC Flexi Cap Fund": 8.8,
+        "HDFC Focused Fund": 9.16,
+        "HDFC Large and Mid Cap Fund": 3.66,
+        "HDFC Multi Cap Fund": 3.66
+      }
+    },
+    {
+      "securityId": "ISIN:INE040A01034",
+      "slug": "hdfc-bank-ltd-ine040a01034",
+      "stock": "HDFC Bank Ltd.",
+      "sector": "Banks",
+      "schemeCount": 4,
+      "normalizedWeight": 3.5716666666666668,
+      "score": 76.66666666666666,
+      "weights": {
+        "HDFC Flexi Cap Fund": 6.03,
+        "HDFC Focused Fund": 7.83,
+        "HDFC Large and Mid Cap Fund": 3.64,
+        "HDFC Multi Cap Fund": 3.93
+      }
+    },
+    {
+      "securityId": "ISIN:INE238A01034",
+      "slug": "axis-bank-ltd-ine238a01034",
+      "stock": "Axis Bank Ltd.",
+      "sector": "Banks",
+      "schemeCount": 4,
+      "normalizedWeight": 2.7900000000000005,
+      "score": 74.56666666666666,
+      "weights": {
+        "HDFC Flexi Cap Fund": 6.11,
+        "HDFC Focused Fund": 6.24,
+        "HDFC Large and Mid Cap Fund": 1.95,
+        "HDFC Multi Cap Fund": 2.44
+      }
+    },
+    {
+      "securityId": "ISIN:INE237A01036",
+      "slug": "kotak-mahindra-bank-limited-ine237a01036",
+      "stock": "Kotak Mahindra Bank Limited",
+      "sector": "Banks",
+      "schemeCount": 4,
+      "normalizedWeight": 2.2433333333333336,
+      "score": 69.1,
+      "weights": {
+        "HDFC Flexi Cap Fund": 3.4,
+        "HDFC Focused Fund": 6.91,
+        "HDFC Large and Mid Cap Fund": 1.23,
+        "HDFC Multi Cap Fund": 1.92
+      }
+    },
+    {
+      "securityId": "ISIN:INE062A01020",
+      "slug": "state-bank-of-india-ine062a01020",
+      "stock": "State Bank of India",
+      "sector": "Banks",
+      "schemeCount": 4,
+      "normalizedWeight": 2.0383333333333336,
+      "score": 67.05,
+      "weights": {
+        "HDFC Flexi Cap Fund": 3.94,
+        "HDFC Focused Fund": 5.1,
+        "HDFC Large and Mid Cap Fund": 1.42,
+        "HDFC Multi Cap Fund": 1.77
+      }
+    },
+    {
+      "securityId": "ISIN:INE081A01020",
+      "slug": "tata-steel-ltd-ine081a01020",
+      "stock": "Tata Steel Ltd.",
+      "sector": "Ferrous Metals",
+      "schemeCount": 5,
+      "normalizedWeight": 0.835,
+      "score": 66.68333333333334,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.88,
+        "HDFC Focused Fund": 1.78,
+        "HDFC Large and Mid Cap Fund": 0.56,
+        "HDFC Multi Cap Fund": 1.09,
+        "HDFC Small Cap Fund": 0.7
+      }
+    },
+    {
+      "securityId": "ISIN:INE417T01026",
+      "slug": "pb-fintech-limited-ine417t01026",
+      "stock": "PB Fintech Limited",
+      "sector": "Financial Technology (Fintech)",
+      "schemeCount": 5,
+      "normalizedWeight": 0.7600000000000001,
+      "score": 65.93333333333334,
+      "weights": {
+        "HDFC Flexi Cap Fund": 1.12,
+        "HDFC Focused Fund": 1.17,
+        "HDFC Large and Mid Cap Fund": 0.27,
+        "HDFC Mid Cap Fund": 1.07,
+        "HDFC Multi Cap Fund": 0.93
+      }
+    },
+    {
+      "securityId": "ISIN:INE01EA01019",
+      "slug": "vishal-mega-mart-limited-ine01ea01019",
+      "stock": "Vishal Mega Mart Limited",
+      "sector": "Retailing",
+      "schemeCount": 5,
+      "normalizedWeight": 0.7583333333333334,
+      "score": 65.91666666666667,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.54,
+        "HDFC Large and Mid Cap Fund": 0.34,
+        "HDFC Mid Cap Fund": 2.24,
+        "HDFC Multi Cap Fund": 0.41,
+        "HDFC Small Cap Fund": 1.02
+      }
+    },
+    {
+      "securityId": "ISIN:INE176B01034",
+      "slug": "havells-india-ltd-ine176b01034",
+      "stock": "Havells India Ltd.",
+      "sector": "Consumer Durables",
+      "schemeCount": 5,
+      "normalizedWeight": 0.745,
+      "score": 65.78333333333333,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.46,
+        "HDFC Focused Fund": 2.32,
+        "HDFC Large and Mid Cap Fund": 0.15,
+        "HDFC Mid Cap Fund": 0.84,
+        "HDFC Multi Cap Fund": 0.7
+      }
+    },
+    {
+      "securityId": "ISIN:INE397D01024",
+      "slug": "bharti-airtel-ltd-ine397d01024",
+      "stock": "Bharti Airtel Ltd.",
+      "sector": "Telecom - Services",
+      "schemeCount": 4,
+      "normalizedWeight": 1.6233333333333333,
+      "score": 62.9,
+      "weights": {
+        "HDFC Flexi Cap Fund": 2.62,
+        "HDFC Focused Fund": 3.2,
+        "HDFC Large and Mid Cap Fund": 1.79,
+        "HDFC Multi Cap Fund": 2.13
+      }
+    },
+    {
+      "securityId": "ISIN:INE646L01027",
+      "slug": "interglobe-aviation-ltd-ine646l01027",
+      "stock": "InterGlobe Aviation Ltd.",
+      "sector": "Transport Services",
+      "schemeCount": 4,
+      "normalizedWeight": 1.4816666666666667,
+      "score": 61.483333333333334,
+      "weights": {
+        "HDFC Flexi Cap Fund": 2.99,
+        "HDFC Focused Fund": 4.0,
+        "HDFC Large and Mid Cap Fund": 0.85,
+        "HDFC Multi Cap Fund": 1.05
+      }
+    },
+    {
+      "securityId": "ISIN:INE585B01010",
+      "slug": "maruti-suzuki-india-limited-ine585b01010",
+      "stock": "Maruti Suzuki India Limited",
+      "sector": "Automobiles",
+      "schemeCount": 4,
+      "normalizedWeight": 1.3866666666666667,
+      "score": 60.53333333333333,
+      "weights": {
+        "HDFC Flexi Cap Fund": 2.57,
+        "HDFC Focused Fund": 3.4,
+        "HDFC Large and Mid Cap Fund": 1.23,
+        "HDFC Multi Cap Fund": 1.12
+      }
+    },
+    {
+      "securityId": "ISIN:INE860A01027",
+      "slug": "hcl-technologies-ltd-ine860a01027",
+      "stock": "HCL Technologies Ltd.",
+      "sector": "IT - Software",
+      "schemeCount": 4,
+      "normalizedWeight": 1.3166666666666667,
+      "score": 59.83333333333333,
+      "weights": {
+        "HDFC Flexi Cap Fund": 2.44,
+        "HDFC Focused Fund": 3.54,
+        "HDFC Large and Mid Cap Fund": 0.84,
+        "HDFC Multi Cap Fund": 1.08
+      }
+    },
+    {
+      "securityId": "ISIN:INE066A01021",
+      "slug": "eicher-motors-ltd-ine066a01021",
+      "stock": "Eicher Motors Ltd.",
+      "sector": "Automobiles",
+      "schemeCount": 4,
+      "normalizedWeight": 1.175,
+      "score": 58.416666666666664,
+      "weights": {
+        "HDFC Flexi Cap Fund": 2.3,
+        "HDFC Focused Fund": 3.22,
+        "HDFC Large and Mid Cap Fund": 0.87,
+        "HDFC Multi Cap Fund": 0.66
+      }
+    },
+    {
+      "securityId": "ISIN:INE323A01026",
+      "slug": "bosch-limited-ine323a01026",
+      "stock": "Bosch Limited",
+      "sector": "Auto Components",
+      "schemeCount": 4,
+      "normalizedWeight": 0.9583333333333334,
+      "score": 56.25,
+      "weights": {
+        "HDFC Flexi Cap Fund": 1.3,
+        "HDFC Focused Fund": 2.51,
+        "HDFC Large and Mid Cap Fund": 0.5,
+        "HDFC Mid Cap Fund": 1.44
+      }
+    },
+    {
+      "securityId": "ISIN:INE262H01021",
+      "slug": "persistent-systems-limited-ine262h01021",
+      "stock": "Persistent Systems Limited",
+      "sector": "IT - Software",
+      "schemeCount": 4,
+      "normalizedWeight": 0.7516666666666666,
+      "score": 54.18333333333333,
+      "weights": {
+        "HDFC Flexi Cap Fund": 1.32,
+        "HDFC Large and Mid Cap Fund": 0.73,
+        "HDFC Mid Cap Fund": 1.78,
+        "HDFC Multi Cap Fund": 0.68
+      }
+    },
+    {
+      "securityId": "ISIN:INE356A01018",
+      "slug": "mphasis-limited-ine356a01018",
+      "stock": "MphasiS Limited.",
+      "sector": "IT - Software",
+      "schemeCount": 4,
+      "normalizedWeight": 0.625,
+      "score": 52.916666666666664,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.17,
+        "HDFC Large and Mid Cap Fund": 1.16,
+        "HDFC Mid Cap Fund": 1.55,
+        "HDFC Multi Cap Fund": 0.87
+      }
+    },
+    {
+      "securityId": "ISIN:INE094A01015",
+      "slug": "hindustan-petroleum-corp-ltd-ine094a01015",
+      "stock": "Hindustan Petroleum Corp. Ltd.",
+      "sector": "Petroleum Products",
+      "schemeCount": 4,
+      "normalizedWeight": 0.6,
+      "score": 52.666666666666664,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.23,
+        "HDFC Large and Mid Cap Fund": 0.9,
+        "HDFC Mid Cap Fund": 2.09,
+        "HDFC Multi Cap Fund": 0.38
+      }
+    },
+    {
+      "securityId": "ISIN:INE325A01013",
+      "slug": "timken-india-ltd-ine325a01013",
+      "stock": "Timken India Ltd.",
+      "sector": "Industrial Products",
+      "schemeCount": 4,
+      "normalizedWeight": 0.5633333333333334,
+      "score": 52.3,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.44,
+        "HDFC Mid Cap Fund": 0.6,
+        "HDFC Multi Cap Fund": 1.0,
+        "HDFC Small Cap Fund": 1.34
+      }
+    },
+    {
+      "securityId": "ISIN:INE880J01026",
+      "slug": "jsw-infrastructure-limited-ine880j01026",
+      "stock": "JSW Infrastructure Limited",
+      "sector": "Transport Infrastructure",
+      "schemeCount": 4,
+      "normalizedWeight": 0.5016666666666666,
+      "score": 51.68333333333333,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.61,
+        "HDFC Focused Fund": 1.93,
+        "HDFC Large and Mid Cap Fund": 0.05,
+        "HDFC Multi Cap Fund": 0.42
+      }
+    },
+    {
+      "securityId": "ISIN:INE102D01028",
+      "slug": "godrej-consumer-products-ltd-ine102d01028",
+      "stock": "Godrej Consumer Products Ltd.",
+      "sector": "Personal Products",
+      "schemeCount": 4,
+      "normalizedWeight": 0.4366666666666667,
+      "score": 51.03333333333333,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.01,
+        "HDFC Mid Cap Fund": 0.98,
+        "HDFC Multi Cap Fund": 0.4,
+        "HDFC Small Cap Fund": 1.23
+      }
+    },
+    {
+      "securityId": "ISIN:INE536H01010",
+      "slug": "cie-automotive-india-ltd-ine536h01010",
+      "stock": "CIE Automotive India Ltd",
+      "sector": "Auto Components",
+      "schemeCount": 4,
+      "normalizedWeight": 0.31333333333333335,
+      "score": 49.8,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.36,
+        "HDFC Large and Mid Cap Fund": 0.22,
+        "HDFC Mid Cap Fund": 0.27,
+        "HDFC Small Cap Fund": 1.03
+      }
+    },
+    {
+      "securityId": "ISIN:INE935N01020",
+      "slug": "dixon-technologies-india-ltd-ine935n01020",
+      "stock": "Dixon Technologies (India) Ltd.",
+      "sector": "Consumer Durables",
+      "schemeCount": 4,
+      "normalizedWeight": 0.28500000000000003,
+      "score": 49.516666666666666,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.32,
+        "HDFC Large and Mid Cap Fund": 0.05,
+        "HDFC Mid Cap Fund": 0.66,
+        "HDFC Multi Cap Fund": 0.68
+      }
+    },
+    {
+      "securityId": "ISIN:INE123W01016",
+      "slug": "sbi-life-insurance-company-ltd-ine123w01016",
+      "stock": "SBI Life Insurance Company Ltd.",
+      "sector": "Insurance",
+      "schemeCount": 3,
+      "normalizedWeight": 1.1383333333333334,
+      "score": 46.38333333333333,
+      "weights": {
+        "HDFC Flexi Cap Fund": 3.25,
+        "HDFC Focused Fund": 3.02,
+        "HDFC Large and Mid Cap Fund": 0.56
+      }
+    },
+    {
+      "securityId": "ISIN:INE171A01029",
+      "slug": "the-federal-bank-ltd-ine171a01029",
+      "stock": "The Federal Bank Ltd.",
+      "sector": "Banks",
+      "schemeCount": 3,
+      "normalizedWeight": 1.0266666666666666,
+      "score": 45.266666666666666,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.57,
+        "HDFC Mid Cap Fund": 3.98,
+        "HDFC Small Cap Fund": 1.61
+      }
+    },
+    {
+      "securityId": "ISIN:INE949L01017",
+      "slug": "au-small-finance-bank-ltd-ine949l01017",
+      "stock": "Au Small Finance Bank Ltd.",
+      "sector": "Banks",
+      "schemeCount": 3,
+      "normalizedWeight": 0.94,
+      "score": 44.4,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.69,
+        "HDFC Mid Cap Fund": 3.94,
+        "HDFC Multi Cap Fund": 1.01
+      }
+    },
+    {
+      "securityId": "ISIN:INE180A01020",
+      "slug": "max-financial-services-ltd-ine180a01020",
+      "stock": "Max Financial Services Ltd.",
+      "sector": "Insurance",
+      "schemeCount": 3,
+      "normalizedWeight": 0.9116666666666666,
+      "score": 44.11666666666667,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 1.25,
+        "HDFC Mid Cap Fund": 3.52,
+        "HDFC Multi Cap Fund": 0.7
+      }
+    },
+    {
+      "securityId": "ISIN:INE562A01011",
+      "slug": "indian-bank-ine562a01011",
+      "stock": "Indian Bank",
+      "sector": "Banks",
+      "schemeCount": 3,
+      "normalizedWeight": 0.8966666666666666,
+      "score": 43.96666666666667,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.55,
+        "HDFC Mid Cap Fund": 2.92,
+        "HDFC Small Cap Fund": 1.91
+      }
+    },
+    {
+      "securityId": "ISIN:INE059A01026",
+      "slug": "cipla-ltd-ine059a01026",
+      "stock": "Cipla Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "schemeCount": 3,
+      "normalizedWeight": 0.8866666666666667,
+      "score": 43.86666666666667,
+      "weights": {
+        "HDFC Flexi Cap Fund": 2.47,
+        "HDFC Focused Fund": 2.4,
+        "HDFC Large and Mid Cap Fund": 0.45
+      }
+    },
+    {
+      "securityId": "ISIN:INE002A01018",
+      "slug": "reliance-industries-ltd-ine002a01018",
+      "stock": "Reliance Industries Ltd.",
+      "sector": "Petroleum Products",
+      "schemeCount": 3,
+      "normalizedWeight": 0.8716666666666667,
+      "score": 43.71666666666667,
+      "weights": {
+        "HDFC Flexi Cap Fund": 1.4,
+        "HDFC Large and Mid Cap Fund": 1.42,
+        "HDFC Multi Cap Fund": 2.41
+      }
+    },
+    {
+      "securityId": "ISIN:INE571A01038",
+      "slug": "ipca-laboratories-ltd-ine571a01038",
+      "stock": "Ipca Laboratories Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "schemeCount": 3,
+      "normalizedWeight": 0.8283333333333333,
+      "score": 43.28333333333333,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.95,
+        "HDFC Mid Cap Fund": 3.43,
+        "HDFC Multi Cap Fund": 0.59
+      }
+    },
+    {
+      "securityId": "ISIN:INE018A01030",
+      "slug": "larsen-and-toubro-ltd-ine018a01030",
+      "stock": "Larsen and Toubro Ltd.",
+      "sector": "Construction",
+      "schemeCount": 3,
+      "normalizedWeight": 0.8266666666666667,
+      "score": 43.266666666666666,
+      "weights": {
+        "HDFC Flexi Cap Fund": 3.08,
+        "HDFC Large and Mid Cap Fund": 0.96,
+        "HDFC Multi Cap Fund": 0.92
+      }
+    },
+    {
+      "securityId": "ISIN:INE787D01026",
+      "slug": "balkrishna-industries-ltd-ine787d01026",
+      "stock": "Balkrishna Industries Ltd.",
+      "sector": "Auto Components",
+      "schemeCount": 3,
+      "normalizedWeight": 0.8133333333333334,
+      "score": 43.13333333333333,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.83,
+        "HDFC Mid Cap Fund": 2.98,
+        "HDFC Multi Cap Fund": 1.07
+      }
+    },
+    {
+      "securityId": "ISIN:INE061F01013",
+      "slug": "fortis-healthcare-limited-ine061f01013",
+      "stock": "Fortis Healthcare Limited",
+      "sector": "Healthcare Services",
+      "schemeCount": 3,
+      "normalizedWeight": 0.77,
+      "score": 42.7,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 1.28,
+        "HDFC Mid Cap Fund": 2.4,
+        "HDFC Small Cap Fund": 0.94
+      }
+    },
+    {
+      "securityId": "ISIN:INE591G01025",
+      "slug": "coforge-limited-ine591g01025",
+      "stock": "Coforge Limited",
+      "sector": "IT - Software",
+      "schemeCount": 3,
+      "normalizedWeight": 0.7683333333333334,
+      "score": 42.68333333333334,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.85,
+        "HDFC Mid Cap Fund": 2.68,
+        "HDFC Multi Cap Fund": 1.08
+      }
+    },
+    {
+      "securityId": "ISIN:INE427F01016",
+      "slug": "chalet-hotels-ltd-ine427f01016",
+      "stock": "Chalet Hotels Ltd.",
+      "sector": "Leisure Services",
+      "schemeCount": 3,
+      "normalizedWeight": 0.7033333333333333,
+      "score": 42.03333333333333,
+      "weights": {
+        "HDFC Focused Fund": 1.76,
+        "HDFC Multi Cap Fund": 0.84,
+        "HDFC Small Cap Fund": 1.62
+      }
+    },
+    {
+      "securityId": "ISIN:INE0V6F01027",
+      "slug": "hyundai-motor-india-limited-ine0v6f01027",
+      "stock": "Hyundai Motor India Limited",
+      "sector": "Automobiles",
+      "schemeCount": 3,
+      "normalizedWeight": 0.6683333333333333,
+      "score": 41.68333333333333,
+      "weights": {
+        "HDFC Flexi Cap Fund": 1.68,
+        "HDFC Focused Fund": 1.95,
+        "HDFC Large and Mid Cap Fund": 0.38
+      }
+    },
+    {
+      "securityId": "ISIN:INE068V01023",
+      "slug": "gland-pharma-ltd-ine068v01023",
+      "stock": "Gland Pharma Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "schemeCount": 3,
+      "normalizedWeight": 0.6533333333333333,
+      "score": 41.53333333333333,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 1.42,
+        "HDFC Mid Cap Fund": 1.73,
+        "HDFC Multi Cap Fund": 0.77
+      }
+    },
+    {
+      "securityId": "ISIN:INE540L01014",
+      "slug": "alkem-laboratories-ltd-ine540l01014",
+      "stock": "Alkem Laboratories Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "schemeCount": 3,
+      "normalizedWeight": 0.6216666666666667,
+      "score": 41.21666666666667,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.82,
+        "HDFC Mid Cap Fund": 1.72,
+        "HDFC Multi Cap Fund": 1.19
+      }
+    },
+    {
+      "securityId": "ISIN:INE388Y01029",
+      "slug": "fsn-ecommerce-ventures-limited-nykaa-ine388y01029",
+      "stock": "Fsn Ecommerce Ventures Limited (Nykaa)",
+      "sector": "Retailing",
+      "schemeCount": 3,
+      "normalizedWeight": 0.5916666666666667,
+      "score": 40.916666666666664,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.72,
+        "HDFC Focused Fund": 2.23,
+        "HDFC Large and Mid Cap Fund": 0.6
+      }
+    },
+    {
+      "securityId": "ISIN:INE151A01013",
+      "slug": "tata-communications-limited-ine151a01013",
+      "stock": "Tata Communications Limited",
+      "sector": "Telecom - Services",
+      "schemeCount": 3,
+      "normalizedWeight": 0.5650000000000001,
+      "score": 40.65,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.43,
+        "HDFC Mid Cap Fund": 1.81,
+        "HDFC Multi Cap Fund": 1.15
+      }
+    },
+    {
+      "securityId": "ISIN:INE361B01024",
+      "slug": "divis-laboratories-ltd-ine361b01024",
+      "stock": "Divis Laboratories Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "schemeCount": 3,
+      "normalizedWeight": 0.5516666666666666,
+      "score": 40.516666666666666,
+      "weights": {
+        "HDFC Flexi Cap Fund": 1.62,
+        "HDFC Large and Mid Cap Fund": 0.79,
+        "HDFC Multi Cap Fund": 0.9
+      }
+    },
+    {
+      "securityId": "ISIN:INE891D01026",
+      "slug": "redington-ltd-ine891d01026",
+      "stock": "Redington Ltd.",
+      "sector": "Commercial Services & Supplies",
+      "schemeCount": 3,
+      "normalizedWeight": 0.5016666666666667,
+      "score": 40.016666666666666,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.56,
+        "HDFC Mid Cap Fund": 1.1,
+        "HDFC Small Cap Fund": 1.35
+      }
+    },
+    {
+      "securityId": "ISIN:INE027H01010",
+      "slug": "max-healthcare-institute-limited-ine027h01010",
+      "stock": "Max Healthcare Institute Limited",
+      "sector": "Healthcare Services",
+      "schemeCount": 3,
+      "normalizedWeight": 0.48333333333333334,
+      "score": 39.833333333333336,
+      "weights": {
+        "HDFC Flexi Cap Fund": 1.46,
+        "HDFC Large and Mid Cap Fund": 0.49,
+        "HDFC Multi Cap Fund": 0.95
+      }
+    },
+    {
+      "securityId": "ISIN:INE854D01024",
+      "slug": "united-spirits-limited-ine854d01024",
+      "stock": "United Spirits Limited",
+      "sector": "Beverages",
+      "schemeCount": 3,
+      "normalizedWeight": 0.4766666666666666,
+      "score": 39.766666666666666,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.72,
+        "HDFC Large and Mid Cap Fund": 0.24,
+        "HDFC Mid Cap Fund": 1.9
+      }
+    },
+    {
+      "securityId": "ISIN:INE765G01017",
+      "slug": "icici-lombard-general-insurance-co-ine765g01017",
+      "stock": "ICICI Lombard General Insurance Co",
+      "sector": "Insurance",
+      "schemeCount": 3,
+      "normalizedWeight": 0.47,
+      "score": 39.7,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.42,
+        "HDFC Mid Cap Fund": 0.95,
+        "HDFC Multi Cap Fund": 1.45
+      }
+    },
+    {
+      "securityId": "ISIN:INE326A01037",
+      "slug": "lupin-ltd-ine326a01037",
+      "stock": "Lupin Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "schemeCount": 3,
+      "normalizedWeight": 0.45333333333333337,
+      "score": 39.53333333333333,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.91,
+        "HDFC Large and Mid Cap Fund": 1.0,
+        "HDFC Multi Cap Fund": 0.81
+      }
+    },
+    {
+      "securityId": "ISIN:INE811K01011",
+      "slug": "prestige-estates-projects-ltd-ine811k01011",
+      "stock": "Prestige Estates Projects Ltd.",
+      "sector": "Realty",
+      "schemeCount": 3,
+      "normalizedWeight": 0.45166666666666666,
+      "score": 39.516666666666666,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.46,
+        "HDFC Large and Mid Cap Fund": 1.3,
+        "HDFC Multi Cap Fund": 0.95
+      }
+    },
+    {
+      "securityId": "ISIN:INE465A01025",
+      "slug": "bharat-forge-ltd-ine465a01025",
+      "stock": "Bharat Forge Ltd.",
+      "sector": "Auto Components",
+      "schemeCount": 3,
+      "normalizedWeight": 0.44166666666666665,
+      "score": 39.416666666666664,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.91,
+        "HDFC Mid Cap Fund": 1.22,
+        "HDFC Multi Cap Fund": 0.52
+      }
+    },
+    {
+      "securityId": "ISIN:INE372A01015",
+      "slug": "apar-industries-limited-ine372a01015",
+      "stock": "Apar Industries Limited",
+      "sector": "Electrical Equipment",
+      "schemeCount": 3,
+      "normalizedWeight": 0.435,
+      "score": 39.35,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.27,
+        "HDFC Multi Cap Fund": 0.42,
+        "HDFC Small Cap Fund": 1.92
+      }
+    },
+    {
+      "securityId": "ISIN:INE438A01022",
+      "slug": "apollo-tyres-ltd-ine438a01022",
+      "stock": "Apollo Tyres Ltd.",
+      "sector": "Auto Components",
+      "schemeCount": 3,
+      "normalizedWeight": 0.435,
+      "score": 39.35,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.4,
+        "HDFC Mid Cap Fund": 1.66,
+        "HDFC Multi Cap Fund": 0.55
+      }
+    },
+    {
+      "securityId": "ISIN:INE053A01029",
+      "slug": "indian-hotels-company-ltd-ine053a01029",
+      "stock": "Indian Hotels Company Ltd.",
+      "sector": "Leisure Services",
+      "schemeCount": 3,
+      "normalizedWeight": 0.43333333333333335,
+      "score": 39.333333333333336,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.85,
+        "HDFC Mid Cap Fund": 1.01,
+        "HDFC Multi Cap Fund": 0.74
+      }
+    },
+    {
+      "securityId": "ISIN:INE406M01024",
+      "slug": "eris-lifesciences-ltd-ine406m01024",
+      "stock": "Eris Lifesciences Ltd",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "schemeCount": 3,
+      "normalizedWeight": 0.43,
+      "score": 39.3,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.28,
+        "HDFC Multi Cap Fund": 0.41,
+        "HDFC Small Cap Fund": 1.89
+      }
+    },
+    {
+      "securityId": "ISIN:INE073K01018",
+      "slug": "sona-blw-precision-forgings-ine073k01018",
+      "stock": "Sona Blw Precision Forgings",
+      "sector": "Auto Components",
+      "schemeCount": 3,
+      "normalizedWeight": 0.4266666666666667,
+      "score": 39.266666666666666,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.48,
+        "HDFC Mid Cap Fund": 0.82,
+        "HDFC Multi Cap Fund": 1.26
+      }
+    },
+    {
+      "securityId": "ISIN:INE009A01021",
+      "slug": "infosys-limited-ine009a01021",
+      "stock": "Infosys Limited",
+      "sector": "IT - Software",
+      "schemeCount": 3,
+      "normalizedWeight": 0.38666666666666666,
+      "score": 38.86666666666667,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.46,
+        "HDFC Large and Mid Cap Fund": 1.04,
+        "HDFC Multi Cap Fund": 0.82
+      }
+    },
+    {
+      "securityId": "ISIN:INE263A01024",
+      "slug": "bharat-electronics-ltd-ine263a01024",
+      "stock": "Bharat Electronics Ltd.",
+      "sector": "Aerospace & Defense",
+      "schemeCount": 3,
+      "normalizedWeight": 0.3833333333333333,
+      "score": 38.833333333333336,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.62,
+        "HDFC Large and Mid Cap Fund": 0.68,
+        "HDFC Multi Cap Fund": 1.0
+      }
+    },
+    {
+      "securityId": "ISIN:INE148O01028",
+      "slug": "delhivery-limited-ine148o01028",
+      "stock": "Delhivery Limited",
+      "sector": "Transport Services",
+      "schemeCount": 3,
+      "normalizedWeight": 0.375,
+      "score": 38.75,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.33,
+        "HDFC Mid Cap Fund": 1.27,
+        "HDFC Multi Cap Fund": 0.65
+      }
+    },
+    {
+      "securityId": "ISIN:INE481G01011",
+      "slug": "ultratech-cement-limited-ine481g01011",
+      "stock": "UltraTech Cement Limited",
+      "sector": "Cement & Cement Products",
+      "schemeCount": 3,
+      "normalizedWeight": 0.3416666666666666,
+      "score": 38.416666666666664,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.87,
+        "HDFC Large and Mid Cap Fund": 0.28,
+        "HDFC Multi Cap Fund": 0.9
+      }
+    }
+  ],
   "signals": {},
   "sectorRotation": [],
-  "ownershipMatrix": []
+  "ownershipMatrix": [
+    {
+      "securityId": "ISIN:INE914M01019",
+      "slug": "aster-dm-quality-care-limited-ine914m01019",
+      "stock": "Aster DM Quality Care Limited",
+      "sector": "Healthcare Services",
+      "schemeCount": 6,
+      "normalizedWeight": 1.625,
+      "score": 86.25,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.79,
+        "HDFC Focused Fund": 3.3,
+        "HDFC Large and Mid Cap Fund": 0.55,
+        "HDFC Mid Cap Fund": 0.9,
+        "HDFC Multi Cap Fund": 0.84,
+        "HDFC Small Cap Fund": 3.37
+      }
+    },
+    {
+      "securityId": "ISIN:INE758T01015",
+      "slug": "eternal-limited-ine758t01015",
+      "stock": "Eternal Limited",
+      "sector": "Retailing",
+      "schemeCount": 5,
+      "normalizedWeight": 2.1616666666666666,
+      "score": 79.95,
+      "weights": {
+        "HDFC Flexi Cap Fund": 3.46,
+        "HDFC Focused Fund": 4.87,
+        "HDFC Large and Mid Cap Fund": 1.16,
+        "HDFC Mid Cap Fund": 1.35,
+        "HDFC Multi Cap Fund": 2.13
+      }
+    },
+    {
+      "securityId": "ISIN:INE090A01021",
+      "slug": "icici-bank-ltd-ine090a01021",
+      "stock": "ICICI Bank Ltd.",
+      "sector": "Banks",
+      "schemeCount": 4,
+      "normalizedWeight": 4.213333333333334,
+      "score": 76.66666666666666,
+      "weights": {
+        "HDFC Flexi Cap Fund": 8.8,
+        "HDFC Focused Fund": 9.16,
+        "HDFC Large and Mid Cap Fund": 3.66,
+        "HDFC Multi Cap Fund": 3.66
+      }
+    },
+    {
+      "securityId": "ISIN:INE040A01034",
+      "slug": "hdfc-bank-ltd-ine040a01034",
+      "stock": "HDFC Bank Ltd.",
+      "sector": "Banks",
+      "schemeCount": 4,
+      "normalizedWeight": 3.5716666666666668,
+      "score": 76.66666666666666,
+      "weights": {
+        "HDFC Flexi Cap Fund": 6.03,
+        "HDFC Focused Fund": 7.83,
+        "HDFC Large and Mid Cap Fund": 3.64,
+        "HDFC Multi Cap Fund": 3.93
+      }
+    },
+    {
+      "securityId": "ISIN:INE238A01034",
+      "slug": "axis-bank-ltd-ine238a01034",
+      "stock": "Axis Bank Ltd.",
+      "sector": "Banks",
+      "schemeCount": 4,
+      "normalizedWeight": 2.7900000000000005,
+      "score": 74.56666666666666,
+      "weights": {
+        "HDFC Flexi Cap Fund": 6.11,
+        "HDFC Focused Fund": 6.24,
+        "HDFC Large and Mid Cap Fund": 1.95,
+        "HDFC Multi Cap Fund": 2.44
+      }
+    },
+    {
+      "securityId": "ISIN:INE237A01036",
+      "slug": "kotak-mahindra-bank-limited-ine237a01036",
+      "stock": "Kotak Mahindra Bank Limited",
+      "sector": "Banks",
+      "schemeCount": 4,
+      "normalizedWeight": 2.2433333333333336,
+      "score": 69.1,
+      "weights": {
+        "HDFC Flexi Cap Fund": 3.4,
+        "HDFC Focused Fund": 6.91,
+        "HDFC Large and Mid Cap Fund": 1.23,
+        "HDFC Multi Cap Fund": 1.92
+      }
+    },
+    {
+      "securityId": "ISIN:INE062A01020",
+      "slug": "state-bank-of-india-ine062a01020",
+      "stock": "State Bank of India",
+      "sector": "Banks",
+      "schemeCount": 4,
+      "normalizedWeight": 2.0383333333333336,
+      "score": 67.05,
+      "weights": {
+        "HDFC Flexi Cap Fund": 3.94,
+        "HDFC Focused Fund": 5.1,
+        "HDFC Large and Mid Cap Fund": 1.42,
+        "HDFC Multi Cap Fund": 1.77
+      }
+    },
+    {
+      "securityId": "ISIN:INE081A01020",
+      "slug": "tata-steel-ltd-ine081a01020",
+      "stock": "Tata Steel Ltd.",
+      "sector": "Ferrous Metals",
+      "schemeCount": 5,
+      "normalizedWeight": 0.835,
+      "score": 66.68333333333334,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.88,
+        "HDFC Focused Fund": 1.78,
+        "HDFC Large and Mid Cap Fund": 0.56,
+        "HDFC Multi Cap Fund": 1.09,
+        "HDFC Small Cap Fund": 0.7
+      }
+    },
+    {
+      "securityId": "ISIN:INE417T01026",
+      "slug": "pb-fintech-limited-ine417t01026",
+      "stock": "PB Fintech Limited",
+      "sector": "Financial Technology (Fintech)",
+      "schemeCount": 5,
+      "normalizedWeight": 0.7600000000000001,
+      "score": 65.93333333333334,
+      "weights": {
+        "HDFC Flexi Cap Fund": 1.12,
+        "HDFC Focused Fund": 1.17,
+        "HDFC Large and Mid Cap Fund": 0.27,
+        "HDFC Mid Cap Fund": 1.07,
+        "HDFC Multi Cap Fund": 0.93
+      }
+    },
+    {
+      "securityId": "ISIN:INE01EA01019",
+      "slug": "vishal-mega-mart-limited-ine01ea01019",
+      "stock": "Vishal Mega Mart Limited",
+      "sector": "Retailing",
+      "schemeCount": 5,
+      "normalizedWeight": 0.7583333333333334,
+      "score": 65.91666666666667,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.54,
+        "HDFC Large and Mid Cap Fund": 0.34,
+        "HDFC Mid Cap Fund": 2.24,
+        "HDFC Multi Cap Fund": 0.41,
+        "HDFC Small Cap Fund": 1.02
+      }
+    },
+    {
+      "securityId": "ISIN:INE176B01034",
+      "slug": "havells-india-ltd-ine176b01034",
+      "stock": "Havells India Ltd.",
+      "sector": "Consumer Durables",
+      "schemeCount": 5,
+      "normalizedWeight": 0.745,
+      "score": 65.78333333333333,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.46,
+        "HDFC Focused Fund": 2.32,
+        "HDFC Large and Mid Cap Fund": 0.15,
+        "HDFC Mid Cap Fund": 0.84,
+        "HDFC Multi Cap Fund": 0.7
+      }
+    },
+    {
+      "securityId": "ISIN:INE397D01024",
+      "slug": "bharti-airtel-ltd-ine397d01024",
+      "stock": "Bharti Airtel Ltd.",
+      "sector": "Telecom - Services",
+      "schemeCount": 4,
+      "normalizedWeight": 1.6233333333333333,
+      "score": 62.9,
+      "weights": {
+        "HDFC Flexi Cap Fund": 2.62,
+        "HDFC Focused Fund": 3.2,
+        "HDFC Large and Mid Cap Fund": 1.79,
+        "HDFC Multi Cap Fund": 2.13
+      }
+    },
+    {
+      "securityId": "ISIN:INE646L01027",
+      "slug": "interglobe-aviation-ltd-ine646l01027",
+      "stock": "InterGlobe Aviation Ltd.",
+      "sector": "Transport Services",
+      "schemeCount": 4,
+      "normalizedWeight": 1.4816666666666667,
+      "score": 61.483333333333334,
+      "weights": {
+        "HDFC Flexi Cap Fund": 2.99,
+        "HDFC Focused Fund": 4.0,
+        "HDFC Large and Mid Cap Fund": 0.85,
+        "HDFC Multi Cap Fund": 1.05
+      }
+    },
+    {
+      "securityId": "ISIN:INE585B01010",
+      "slug": "maruti-suzuki-india-limited-ine585b01010",
+      "stock": "Maruti Suzuki India Limited",
+      "sector": "Automobiles",
+      "schemeCount": 4,
+      "normalizedWeight": 1.3866666666666667,
+      "score": 60.53333333333333,
+      "weights": {
+        "HDFC Flexi Cap Fund": 2.57,
+        "HDFC Focused Fund": 3.4,
+        "HDFC Large and Mid Cap Fund": 1.23,
+        "HDFC Multi Cap Fund": 1.12
+      }
+    },
+    {
+      "securityId": "ISIN:INE860A01027",
+      "slug": "hcl-technologies-ltd-ine860a01027",
+      "stock": "HCL Technologies Ltd.",
+      "sector": "IT - Software",
+      "schemeCount": 4,
+      "normalizedWeight": 1.3166666666666667,
+      "score": 59.83333333333333,
+      "weights": {
+        "HDFC Flexi Cap Fund": 2.44,
+        "HDFC Focused Fund": 3.54,
+        "HDFC Large and Mid Cap Fund": 0.84,
+        "HDFC Multi Cap Fund": 1.08
+      }
+    },
+    {
+      "securityId": "ISIN:INE066A01021",
+      "slug": "eicher-motors-ltd-ine066a01021",
+      "stock": "Eicher Motors Ltd.",
+      "sector": "Automobiles",
+      "schemeCount": 4,
+      "normalizedWeight": 1.175,
+      "score": 58.416666666666664,
+      "weights": {
+        "HDFC Flexi Cap Fund": 2.3,
+        "HDFC Focused Fund": 3.22,
+        "HDFC Large and Mid Cap Fund": 0.87,
+        "HDFC Multi Cap Fund": 0.66
+      }
+    },
+    {
+      "securityId": "ISIN:INE323A01026",
+      "slug": "bosch-limited-ine323a01026",
+      "stock": "Bosch Limited",
+      "sector": "Auto Components",
+      "schemeCount": 4,
+      "normalizedWeight": 0.9583333333333334,
+      "score": 56.25,
+      "weights": {
+        "HDFC Flexi Cap Fund": 1.3,
+        "HDFC Focused Fund": 2.51,
+        "HDFC Large and Mid Cap Fund": 0.5,
+        "HDFC Mid Cap Fund": 1.44
+      }
+    },
+    {
+      "securityId": "ISIN:INE262H01021",
+      "slug": "persistent-systems-limited-ine262h01021",
+      "stock": "Persistent Systems Limited",
+      "sector": "IT - Software",
+      "schemeCount": 4,
+      "normalizedWeight": 0.7516666666666666,
+      "score": 54.18333333333333,
+      "weights": {
+        "HDFC Flexi Cap Fund": 1.32,
+        "HDFC Large and Mid Cap Fund": 0.73,
+        "HDFC Mid Cap Fund": 1.78,
+        "HDFC Multi Cap Fund": 0.68
+      }
+    },
+    {
+      "securityId": "ISIN:INE356A01018",
+      "slug": "mphasis-limited-ine356a01018",
+      "stock": "MphasiS Limited.",
+      "sector": "IT - Software",
+      "schemeCount": 4,
+      "normalizedWeight": 0.625,
+      "score": 52.916666666666664,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.17,
+        "HDFC Large and Mid Cap Fund": 1.16,
+        "HDFC Mid Cap Fund": 1.55,
+        "HDFC Multi Cap Fund": 0.87
+      }
+    },
+    {
+      "securityId": "ISIN:INE094A01015",
+      "slug": "hindustan-petroleum-corp-ltd-ine094a01015",
+      "stock": "Hindustan Petroleum Corp. Ltd.",
+      "sector": "Petroleum Products",
+      "schemeCount": 4,
+      "normalizedWeight": 0.6,
+      "score": 52.666666666666664,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.23,
+        "HDFC Large and Mid Cap Fund": 0.9,
+        "HDFC Mid Cap Fund": 2.09,
+        "HDFC Multi Cap Fund": 0.38
+      }
+    },
+    {
+      "securityId": "ISIN:INE325A01013",
+      "slug": "timken-india-ltd-ine325a01013",
+      "stock": "Timken India Ltd.",
+      "sector": "Industrial Products",
+      "schemeCount": 4,
+      "normalizedWeight": 0.5633333333333334,
+      "score": 52.3,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.44,
+        "HDFC Mid Cap Fund": 0.6,
+        "HDFC Multi Cap Fund": 1.0,
+        "HDFC Small Cap Fund": 1.34
+      }
+    },
+    {
+      "securityId": "ISIN:INE880J01026",
+      "slug": "jsw-infrastructure-limited-ine880j01026",
+      "stock": "JSW Infrastructure Limited",
+      "sector": "Transport Infrastructure",
+      "schemeCount": 4,
+      "normalizedWeight": 0.5016666666666666,
+      "score": 51.68333333333333,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.61,
+        "HDFC Focused Fund": 1.93,
+        "HDFC Large and Mid Cap Fund": 0.05,
+        "HDFC Multi Cap Fund": 0.42
+      }
+    },
+    {
+      "securityId": "ISIN:INE102D01028",
+      "slug": "godrej-consumer-products-ltd-ine102d01028",
+      "stock": "Godrej Consumer Products Ltd.",
+      "sector": "Personal Products",
+      "schemeCount": 4,
+      "normalizedWeight": 0.4366666666666667,
+      "score": 51.03333333333333,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.01,
+        "HDFC Mid Cap Fund": 0.98,
+        "HDFC Multi Cap Fund": 0.4,
+        "HDFC Small Cap Fund": 1.23
+      }
+    },
+    {
+      "securityId": "ISIN:INE536H01010",
+      "slug": "cie-automotive-india-ltd-ine536h01010",
+      "stock": "CIE Automotive India Ltd",
+      "sector": "Auto Components",
+      "schemeCount": 4,
+      "normalizedWeight": 0.31333333333333335,
+      "score": 49.8,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.36,
+        "HDFC Large and Mid Cap Fund": 0.22,
+        "HDFC Mid Cap Fund": 0.27,
+        "HDFC Small Cap Fund": 1.03
+      }
+    },
+    {
+      "securityId": "ISIN:INE935N01020",
+      "slug": "dixon-technologies-india-ltd-ine935n01020",
+      "stock": "Dixon Technologies (India) Ltd.",
+      "sector": "Consumer Durables",
+      "schemeCount": 4,
+      "normalizedWeight": 0.28500000000000003,
+      "score": 49.516666666666666,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.32,
+        "HDFC Large and Mid Cap Fund": 0.05,
+        "HDFC Mid Cap Fund": 0.66,
+        "HDFC Multi Cap Fund": 0.68
+      }
+    },
+    {
+      "securityId": "ISIN:INE123W01016",
+      "slug": "sbi-life-insurance-company-ltd-ine123w01016",
+      "stock": "SBI Life Insurance Company Ltd.",
+      "sector": "Insurance",
+      "schemeCount": 3,
+      "normalizedWeight": 1.1383333333333334,
+      "score": 46.38333333333333,
+      "weights": {
+        "HDFC Flexi Cap Fund": 3.25,
+        "HDFC Focused Fund": 3.02,
+        "HDFC Large and Mid Cap Fund": 0.56
+      }
+    },
+    {
+      "securityId": "ISIN:INE171A01029",
+      "slug": "the-federal-bank-ltd-ine171a01029",
+      "stock": "The Federal Bank Ltd.",
+      "sector": "Banks",
+      "schemeCount": 3,
+      "normalizedWeight": 1.0266666666666666,
+      "score": 45.266666666666666,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.57,
+        "HDFC Mid Cap Fund": 3.98,
+        "HDFC Small Cap Fund": 1.61
+      }
+    },
+    {
+      "securityId": "ISIN:INE949L01017",
+      "slug": "au-small-finance-bank-ltd-ine949l01017",
+      "stock": "Au Small Finance Bank Ltd.",
+      "sector": "Banks",
+      "schemeCount": 3,
+      "normalizedWeight": 0.94,
+      "score": 44.4,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.69,
+        "HDFC Mid Cap Fund": 3.94,
+        "HDFC Multi Cap Fund": 1.01
+      }
+    },
+    {
+      "securityId": "ISIN:INE180A01020",
+      "slug": "max-financial-services-ltd-ine180a01020",
+      "stock": "Max Financial Services Ltd.",
+      "sector": "Insurance",
+      "schemeCount": 3,
+      "normalizedWeight": 0.9116666666666666,
+      "score": 44.11666666666667,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 1.25,
+        "HDFC Mid Cap Fund": 3.52,
+        "HDFC Multi Cap Fund": 0.7
+      }
+    },
+    {
+      "securityId": "ISIN:INE562A01011",
+      "slug": "indian-bank-ine562a01011",
+      "stock": "Indian Bank",
+      "sector": "Banks",
+      "schemeCount": 3,
+      "normalizedWeight": 0.8966666666666666,
+      "score": 43.96666666666667,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.55,
+        "HDFC Mid Cap Fund": 2.92,
+        "HDFC Small Cap Fund": 1.91
+      }
+    },
+    {
+      "securityId": "ISIN:INE059A01026",
+      "slug": "cipla-ltd-ine059a01026",
+      "stock": "Cipla Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "schemeCount": 3,
+      "normalizedWeight": 0.8866666666666667,
+      "score": 43.86666666666667,
+      "weights": {
+        "HDFC Flexi Cap Fund": 2.47,
+        "HDFC Focused Fund": 2.4,
+        "HDFC Large and Mid Cap Fund": 0.45
+      }
+    },
+    {
+      "securityId": "ISIN:INE002A01018",
+      "slug": "reliance-industries-ltd-ine002a01018",
+      "stock": "Reliance Industries Ltd.",
+      "sector": "Petroleum Products",
+      "schemeCount": 3,
+      "normalizedWeight": 0.8716666666666667,
+      "score": 43.71666666666667,
+      "weights": {
+        "HDFC Flexi Cap Fund": 1.4,
+        "HDFC Large and Mid Cap Fund": 1.42,
+        "HDFC Multi Cap Fund": 2.41
+      }
+    },
+    {
+      "securityId": "ISIN:INE571A01038",
+      "slug": "ipca-laboratories-ltd-ine571a01038",
+      "stock": "Ipca Laboratories Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "schemeCount": 3,
+      "normalizedWeight": 0.8283333333333333,
+      "score": 43.28333333333333,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.95,
+        "HDFC Mid Cap Fund": 3.43,
+        "HDFC Multi Cap Fund": 0.59
+      }
+    },
+    {
+      "securityId": "ISIN:INE018A01030",
+      "slug": "larsen-and-toubro-ltd-ine018a01030",
+      "stock": "Larsen and Toubro Ltd.",
+      "sector": "Construction",
+      "schemeCount": 3,
+      "normalizedWeight": 0.8266666666666667,
+      "score": 43.266666666666666,
+      "weights": {
+        "HDFC Flexi Cap Fund": 3.08,
+        "HDFC Large and Mid Cap Fund": 0.96,
+        "HDFC Multi Cap Fund": 0.92
+      }
+    },
+    {
+      "securityId": "ISIN:INE787D01026",
+      "slug": "balkrishna-industries-ltd-ine787d01026",
+      "stock": "Balkrishna Industries Ltd.",
+      "sector": "Auto Components",
+      "schemeCount": 3,
+      "normalizedWeight": 0.8133333333333334,
+      "score": 43.13333333333333,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.83,
+        "HDFC Mid Cap Fund": 2.98,
+        "HDFC Multi Cap Fund": 1.07
+      }
+    },
+    {
+      "securityId": "ISIN:INE061F01013",
+      "slug": "fortis-healthcare-limited-ine061f01013",
+      "stock": "Fortis Healthcare Limited",
+      "sector": "Healthcare Services",
+      "schemeCount": 3,
+      "normalizedWeight": 0.77,
+      "score": 42.7,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 1.28,
+        "HDFC Mid Cap Fund": 2.4,
+        "HDFC Small Cap Fund": 0.94
+      }
+    },
+    {
+      "securityId": "ISIN:INE591G01025",
+      "slug": "coforge-limited-ine591g01025",
+      "stock": "Coforge Limited",
+      "sector": "IT - Software",
+      "schemeCount": 3,
+      "normalizedWeight": 0.7683333333333334,
+      "score": 42.68333333333334,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.85,
+        "HDFC Mid Cap Fund": 2.68,
+        "HDFC Multi Cap Fund": 1.08
+      }
+    },
+    {
+      "securityId": "ISIN:INE427F01016",
+      "slug": "chalet-hotels-ltd-ine427f01016",
+      "stock": "Chalet Hotels Ltd.",
+      "sector": "Leisure Services",
+      "schemeCount": 3,
+      "normalizedWeight": 0.7033333333333333,
+      "score": 42.03333333333333,
+      "weights": {
+        "HDFC Focused Fund": 1.76,
+        "HDFC Multi Cap Fund": 0.84,
+        "HDFC Small Cap Fund": 1.62
+      }
+    },
+    {
+      "securityId": "ISIN:INE0V6F01027",
+      "slug": "hyundai-motor-india-limited-ine0v6f01027",
+      "stock": "Hyundai Motor India Limited",
+      "sector": "Automobiles",
+      "schemeCount": 3,
+      "normalizedWeight": 0.6683333333333333,
+      "score": 41.68333333333333,
+      "weights": {
+        "HDFC Flexi Cap Fund": 1.68,
+        "HDFC Focused Fund": 1.95,
+        "HDFC Large and Mid Cap Fund": 0.38
+      }
+    },
+    {
+      "securityId": "ISIN:INE068V01023",
+      "slug": "gland-pharma-ltd-ine068v01023",
+      "stock": "Gland Pharma Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "schemeCount": 3,
+      "normalizedWeight": 0.6533333333333333,
+      "score": 41.53333333333333,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 1.42,
+        "HDFC Mid Cap Fund": 1.73,
+        "HDFC Multi Cap Fund": 0.77
+      }
+    },
+    {
+      "securityId": "ISIN:INE540L01014",
+      "slug": "alkem-laboratories-ltd-ine540l01014",
+      "stock": "Alkem Laboratories Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "schemeCount": 3,
+      "normalizedWeight": 0.6216666666666667,
+      "score": 41.21666666666667,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.82,
+        "HDFC Mid Cap Fund": 1.72,
+        "HDFC Multi Cap Fund": 1.19
+      }
+    },
+    {
+      "securityId": "ISIN:INE388Y01029",
+      "slug": "fsn-ecommerce-ventures-limited-nykaa-ine388y01029",
+      "stock": "Fsn Ecommerce Ventures Limited (Nykaa)",
+      "sector": "Retailing",
+      "schemeCount": 3,
+      "normalizedWeight": 0.5916666666666667,
+      "score": 40.916666666666664,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.72,
+        "HDFC Focused Fund": 2.23,
+        "HDFC Large and Mid Cap Fund": 0.6
+      }
+    },
+    {
+      "securityId": "ISIN:INE151A01013",
+      "slug": "tata-communications-limited-ine151a01013",
+      "stock": "Tata Communications Limited",
+      "sector": "Telecom - Services",
+      "schemeCount": 3,
+      "normalizedWeight": 0.5650000000000001,
+      "score": 40.65,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.43,
+        "HDFC Mid Cap Fund": 1.81,
+        "HDFC Multi Cap Fund": 1.15
+      }
+    },
+    {
+      "securityId": "ISIN:INE361B01024",
+      "slug": "divis-laboratories-ltd-ine361b01024",
+      "stock": "Divis Laboratories Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "schemeCount": 3,
+      "normalizedWeight": 0.5516666666666666,
+      "score": 40.516666666666666,
+      "weights": {
+        "HDFC Flexi Cap Fund": 1.62,
+        "HDFC Large and Mid Cap Fund": 0.79,
+        "HDFC Multi Cap Fund": 0.9
+      }
+    },
+    {
+      "securityId": "ISIN:INE891D01026",
+      "slug": "redington-ltd-ine891d01026",
+      "stock": "Redington Ltd.",
+      "sector": "Commercial Services & Supplies",
+      "schemeCount": 3,
+      "normalizedWeight": 0.5016666666666667,
+      "score": 40.016666666666666,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.56,
+        "HDFC Mid Cap Fund": 1.1,
+        "HDFC Small Cap Fund": 1.35
+      }
+    },
+    {
+      "securityId": "ISIN:INE027H01010",
+      "slug": "max-healthcare-institute-limited-ine027h01010",
+      "stock": "Max Healthcare Institute Limited",
+      "sector": "Healthcare Services",
+      "schemeCount": 3,
+      "normalizedWeight": 0.48333333333333334,
+      "score": 39.833333333333336,
+      "weights": {
+        "HDFC Flexi Cap Fund": 1.46,
+        "HDFC Large and Mid Cap Fund": 0.49,
+        "HDFC Multi Cap Fund": 0.95
+      }
+    },
+    {
+      "securityId": "ISIN:INE854D01024",
+      "slug": "united-spirits-limited-ine854d01024",
+      "stock": "United Spirits Limited",
+      "sector": "Beverages",
+      "schemeCount": 3,
+      "normalizedWeight": 0.4766666666666666,
+      "score": 39.766666666666666,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.72,
+        "HDFC Large and Mid Cap Fund": 0.24,
+        "HDFC Mid Cap Fund": 1.9
+      }
+    },
+    {
+      "securityId": "ISIN:INE765G01017",
+      "slug": "icici-lombard-general-insurance-co-ine765g01017",
+      "stock": "ICICI Lombard General Insurance Co",
+      "sector": "Insurance",
+      "schemeCount": 3,
+      "normalizedWeight": 0.47,
+      "score": 39.7,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.42,
+        "HDFC Mid Cap Fund": 0.95,
+        "HDFC Multi Cap Fund": 1.45
+      }
+    },
+    {
+      "securityId": "ISIN:INE326A01037",
+      "slug": "lupin-ltd-ine326a01037",
+      "stock": "Lupin Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "schemeCount": 3,
+      "normalizedWeight": 0.45333333333333337,
+      "score": 39.53333333333333,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.91,
+        "HDFC Large and Mid Cap Fund": 1.0,
+        "HDFC Multi Cap Fund": 0.81
+      }
+    },
+    {
+      "securityId": "ISIN:INE811K01011",
+      "slug": "prestige-estates-projects-ltd-ine811k01011",
+      "stock": "Prestige Estates Projects Ltd.",
+      "sector": "Realty",
+      "schemeCount": 3,
+      "normalizedWeight": 0.45166666666666666,
+      "score": 39.516666666666666,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.46,
+        "HDFC Large and Mid Cap Fund": 1.3,
+        "HDFC Multi Cap Fund": 0.95
+      }
+    },
+    {
+      "securityId": "ISIN:INE465A01025",
+      "slug": "bharat-forge-ltd-ine465a01025",
+      "stock": "Bharat Forge Ltd.",
+      "sector": "Auto Components",
+      "schemeCount": 3,
+      "normalizedWeight": 0.44166666666666665,
+      "score": 39.416666666666664,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.91,
+        "HDFC Mid Cap Fund": 1.22,
+        "HDFC Multi Cap Fund": 0.52
+      }
+    },
+    {
+      "securityId": "ISIN:INE372A01015",
+      "slug": "apar-industries-limited-ine372a01015",
+      "stock": "Apar Industries Limited",
+      "sector": "Electrical Equipment",
+      "schemeCount": 3,
+      "normalizedWeight": 0.435,
+      "score": 39.35,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.27,
+        "HDFC Multi Cap Fund": 0.42,
+        "HDFC Small Cap Fund": 1.92
+      }
+    },
+    {
+      "securityId": "ISIN:INE438A01022",
+      "slug": "apollo-tyres-ltd-ine438a01022",
+      "stock": "Apollo Tyres Ltd.",
+      "sector": "Auto Components",
+      "schemeCount": 3,
+      "normalizedWeight": 0.435,
+      "score": 39.35,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.4,
+        "HDFC Mid Cap Fund": 1.66,
+        "HDFC Multi Cap Fund": 0.55
+      }
+    },
+    {
+      "securityId": "ISIN:INE053A01029",
+      "slug": "indian-hotels-company-ltd-ine053a01029",
+      "stock": "Indian Hotels Company Ltd.",
+      "sector": "Leisure Services",
+      "schemeCount": 3,
+      "normalizedWeight": 0.43333333333333335,
+      "score": 39.333333333333336,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.85,
+        "HDFC Mid Cap Fund": 1.01,
+        "HDFC Multi Cap Fund": 0.74
+      }
+    },
+    {
+      "securityId": "ISIN:INE406M01024",
+      "slug": "eris-lifesciences-ltd-ine406m01024",
+      "stock": "Eris Lifesciences Ltd",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "schemeCount": 3,
+      "normalizedWeight": 0.43,
+      "score": 39.3,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.28,
+        "HDFC Multi Cap Fund": 0.41,
+        "HDFC Small Cap Fund": 1.89
+      }
+    },
+    {
+      "securityId": "ISIN:INE073K01018",
+      "slug": "sona-blw-precision-forgings-ine073k01018",
+      "stock": "Sona Blw Precision Forgings",
+      "sector": "Auto Components",
+      "schemeCount": 3,
+      "normalizedWeight": 0.4266666666666667,
+      "score": 39.266666666666666,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.48,
+        "HDFC Mid Cap Fund": 0.82,
+        "HDFC Multi Cap Fund": 1.26
+      }
+    },
+    {
+      "securityId": "ISIN:INE009A01021",
+      "slug": "infosys-limited-ine009a01021",
+      "stock": "Infosys Limited",
+      "sector": "IT - Software",
+      "schemeCount": 3,
+      "normalizedWeight": 0.38666666666666666,
+      "score": 38.86666666666667,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.46,
+        "HDFC Large and Mid Cap Fund": 1.04,
+        "HDFC Multi Cap Fund": 0.82
+      }
+    },
+    {
+      "securityId": "ISIN:INE263A01024",
+      "slug": "bharat-electronics-ltd-ine263a01024",
+      "stock": "Bharat Electronics Ltd.",
+      "sector": "Aerospace & Defense",
+      "schemeCount": 3,
+      "normalizedWeight": 0.3833333333333333,
+      "score": 38.833333333333336,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.62,
+        "HDFC Large and Mid Cap Fund": 0.68,
+        "HDFC Multi Cap Fund": 1.0
+      }
+    },
+    {
+      "securityId": "ISIN:INE148O01028",
+      "slug": "delhivery-limited-ine148o01028",
+      "stock": "Delhivery Limited",
+      "sector": "Transport Services",
+      "schemeCount": 3,
+      "normalizedWeight": 0.375,
+      "score": 38.75,
+      "weights": {
+        "HDFC Large and Mid Cap Fund": 0.33,
+        "HDFC Mid Cap Fund": 1.27,
+        "HDFC Multi Cap Fund": 0.65
+      }
+    },
+    {
+      "securityId": "ISIN:INE481G01011",
+      "slug": "ultratech-cement-limited-ine481g01011",
+      "stock": "UltraTech Cement Limited",
+      "sector": "Cement & Cement Products",
+      "schemeCount": 3,
+      "normalizedWeight": 0.3416666666666666,
+      "score": 38.416666666666664,
+      "weights": {
+        "HDFC Flexi Cap Fund": 0.87,
+        "HDFC Large and Mid Cap Fund": 0.28,
+        "HDFC Multi Cap Fund": 0.9
+      }
+    }
+  ],
+  "comparisonNote": "The preceding calendar month is unavailable. No monthly accumulation, reduction or exit signals are inferred. Legacy NAME identities are not joined to new ISIN identities."
 }

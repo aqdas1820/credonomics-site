@@ -1,0 +1,64 @@
+{
+  "securityId": "ISIN:INE682M01020",
+  "slug": "jupiter-life-line-hospitals-limited-ine682m01020",
+  "isin": "INE682M01020",
+  "stock": "Jupiter Life Line Hospitals Limited",
+  "sector": "Healthcare Services",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 2,
+  "peakNormalizedWeight": 0.135,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.55,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "weight": 0.26,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 2,
+      "totalWeight": 0.81,
+      "normalizedWeight": 0.135,
+      "avgHeldWeight": 0.405
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.55,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.26,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Multi Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Small Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

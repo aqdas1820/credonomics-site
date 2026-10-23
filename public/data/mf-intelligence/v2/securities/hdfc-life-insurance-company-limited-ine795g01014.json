@@ -1,0 +1,64 @@
+{
+  "securityId": "ISIN:INE795G01014",
+  "slug": "hdfc-life-insurance-company-limited-ine795g01014",
+  "isin": "INE795G01014",
+  "stock": "HDFC Life Insurance Company Limited",
+  "sector": "Insurance",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 2,
+  "peakNormalizedWeight": 0.14833333333333334,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.22,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.67,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 2,
+      "totalWeight": 0.89,
+      "normalizedWeight": 0.14833333333333334,
+      "avgHeldWeight": 0.445
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.22,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.67,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Multi Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE002S01010",
+  "slug": "mahanagar-gas-ltd-ine002s01010",
+  "isin": "INE002S01010",
+  "stock": "Mahanagar Gas Ltd.",
+  "sector": "Gas",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.14666666666666667,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.88,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.88,
+      "normalizedWeight": 0.14666666666666667,
+      "avgHeldWeight": 0.88
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.88,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Multi Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

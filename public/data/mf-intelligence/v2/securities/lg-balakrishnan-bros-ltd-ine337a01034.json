@@ -1,0 +1,64 @@
+{
+  "securityId": "ISIN:INE337A01034",
+  "slug": "lg-balakrishnan-bros-ltd-ine337a01034",
+  "isin": "INE337A01034",
+  "stock": "LG Balakrishnan & Bros Ltd.",
+  "sector": "Auto Components",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 2,
+  "peakNormalizedWeight": 0.205,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.05,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "weight": 1.18,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 2,
+      "totalWeight": 1.23,
+      "normalizedWeight": 0.205,
+      "avgHeldWeight": 0.615
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.05,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 1.18,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Small Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

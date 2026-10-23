@@ -1,0 +1,80 @@
+{
+  "securityId": "ISIN:INE093A01041",
+  "slug": "hexaware-technologies-ltd-ine093a01041",
+  "isin": "INE093A01041",
+  "stock": "Hexaware Technologies Ltd.",
+  "sector": "IT - Software",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 3,
+  "peakNormalizedWeight": 0.23,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "weight": 0.54,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.06,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "weight": 0.78,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 3,
+      "totalWeight": 1.3800000000000001,
+      "normalizedWeight": 0.23,
+      "avgHeldWeight": 0.46
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.54,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.06,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.78,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Flexi Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Mid Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

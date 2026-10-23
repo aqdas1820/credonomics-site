@@ -1,0 +1,64 @@
+{
+  "securityId": "ISIN:INE575P01011",
+  "slug": "star-health-and-allied-insurance-company-ltd-ine575p01011",
+  "isin": "INE575P01011",
+  "stock": "Star Health and Allied Insurance Company Ltd",
+  "sector": "Insurance",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 2,
+  "peakNormalizedWeight": 0.19833333333333336,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.11,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "weight": 1.08,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 2,
+      "totalWeight": 1.1900000000000002,
+      "normalizedWeight": 0.19833333333333336,
+      "avgHeldWeight": 0.5950000000000001
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.11,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 1.08,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Mid Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

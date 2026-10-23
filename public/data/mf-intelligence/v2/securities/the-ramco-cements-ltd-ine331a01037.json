@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE331A01037",
+  "slug": "the-ramco-cements-ltd-ine331a01037",
+  "isin": "INE331A01037",
+  "stock": "The Ramco Cements Ltd.",
+  "sector": "Cement & Cement Products",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.051666666666666666,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "weight": 0.31,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.31,
+      "normalizedWeight": 0.051666666666666666,
+      "avgHeldWeight": 0.31
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.31,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Flexi Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

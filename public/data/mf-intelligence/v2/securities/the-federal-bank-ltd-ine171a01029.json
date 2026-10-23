@@ -1,0 +1,80 @@
+{
+  "securityId": "ISIN:INE171A01029",
+  "slug": "the-federal-bank-ltd-ine171a01029",
+  "isin": "INE171A01029",
+  "stock": "The Federal Bank Ltd.",
+  "sector": "Banks",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 3,
+  "peakNormalizedWeight": 1.0266666666666666,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.57,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "weight": 3.98,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "weight": 1.61,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 3,
+      "totalWeight": 6.16,
+      "normalizedWeight": 1.0266666666666666,
+      "avgHeldWeight": 2.0533333333333332
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.57,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 3.98,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 1.61,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Mid Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Small Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

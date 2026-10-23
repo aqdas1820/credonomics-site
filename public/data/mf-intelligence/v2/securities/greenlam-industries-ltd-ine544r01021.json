@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE544R01021",
+  "slug": "greenlam-industries-ltd-ine544r01021",
+  "isin": "INE544R01021",
+  "stock": "Greenlam Industries Ltd.",
+  "sector": "Consumer Durables",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.021666666666666667,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "weight": 0.13,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.13,
+      "normalizedWeight": 0.021666666666666667,
+      "avgHeldWeight": 0.13
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.13,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Mid Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

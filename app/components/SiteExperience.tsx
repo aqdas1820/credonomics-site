@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import PageSectionNav from './PageSectionNav'
 
 const families = [
+  ['/updates', 'Research Updates', 'Issuer notices', 'Corrections', 'Sources'],
   ['/research', 'Research Desk', 'Sources', 'Frameworks', 'Perspective'],
   ['/reports', 'Research Publications', 'Sources', 'Analysis', 'Limitations'],
   ['/ipo', 'IPO Intelligence', 'Filings', 'Issue context', 'Research'],

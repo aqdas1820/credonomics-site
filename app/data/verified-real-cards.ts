@@ -13,6 +13,8 @@ export type RealCardTerms = {
   network?: string
   pointValueRupees?: number
   monthlyTiers?: Array<{ upto?: number; ratePercent: number }>
+  rankingEligible?: boolean
+  baseCashbackCapMultiplier?: number
   note: string
 }
 
@@ -128,9 +130,9 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     sourceLabel: 'Official Axis Bank product page',
     terms: {
       cashback: { ratePercent: 1, note: 'Base cashback on eligible other spends; accelerated partner benefits are modeled in their relevant categories.' },
-      utilities: { ratePercent: 10, note: '10% on eligible utility bill payments via Airtel Thanks; monthly cap is linked to base cashback earned, so displayed estimate can be an upper-bound.' },
-      dining: { ratePercent: 10, monthlyCapRupees: 200, note: '10% value back at Zomato; official ₹200 monthly cap per listed partner.' },
-      'co-branded': { ratePercent: 25, baseRatePercent: 1, note: '25% on eligible Airtel mobile/broadband/Wi-Fi/DTH via Airtel Thanks; cap is linked to base cashback earned.' },
+      utilities: { ratePercent: 10, baseCashbackCapMultiplier: 1, note: '10% on eligible utility bill payments via Airtel Thanks; statement-cycle cap equals the 1% base cashback earned in that cycle; zero base cashback means no utility cashback.' },
+      dining: { ratePercent: 10, monthlyCapRupees: 200, note: '10% partner-wallet value back at Zomato, capped at ₹200/month; ₹499 minimum order and coupon required. This is not statement cashback.' },
+      'co-branded': { ratePercent: 25, baseRatePercent: 1, baseCashbackCapMultiplier: 2, note: '25% on eligible Airtel mobile/broadband/Wi-Fi/DTH via Airtel Thanks; cap is twice the 1% base cashback earned in the same statement cycle.' },
       fuel: { ratePercent: 0, secondaryRatePercent: 1, secondaryMonthlyCapRupees: 500, network: 'Any', note: '1% fuel-surcharge waiver subject to transaction conditions; no cashback on fuel.' },
       'low-fee': { ratePercent: 1, note: '₹500 annual fee; base cashback modeled conservatively.' },
     },
@@ -147,8 +149,8 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     sourceLabel: 'Official Axis Bank product page',
     terms: {
       cashback: { ratePercent: 1.5, note: '1.5% cashback on eligible other spends; accelerated categories are modeled separately.' },
-      utilities: { ratePercent: 5, note: '5% cashback on eligible utility/DTH/mobile recharge via Google Pay; verify current category caps in issuer T&C.' },
-      dining: { ratePercent: 4, note: '4% cashback on eligible Swiggy/Zomato spends; verify current caps in issuer T&C.' },
+      utilities: { ratePercent: 5, monthlyCapRupees: 500, note: '5% cashback on eligible utility/DTH/mobile recharge via Google Pay; ₹500 combined cap across 5% and 4% categories per statement; Android Google Pay only.' },
+      dining: { ratePercent: 4, monthlyCapRupees: 500, note: '4% cashback on eligible Swiggy/Zomato spends; ₹500 combined cap across the 4% and 5% categories per statement.' },
       fuel: { ratePercent: 0, secondaryRatePercent: 1, secondaryMonthlyCapRupees: 500, network: 'Any', note: '1% fuel-surcharge waiver on eligible transactions; no cashback on fuel.' },
       'low-fee': { ratePercent: 1.5, note: '₹499 annual fee and 1.5% eligible base cashback.' },
     },
@@ -161,12 +163,14 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     feeTaxPercent: 18,
     feeWaiverAnnualSpendRupees: 200000,
     verifiedAt,
-    sourceUrl: 'https://www.hsbc.co.in/credit-cards/products/live-plus/',
+    sourceUrl: 'https://www.hsbc.bank.in/credit-cards/products/live-plus/',
     sourceLabel: 'Official HSBC India product page',
     terms: {
       cashback: { ratePercent: 1.5, note: '1.5% unlimited cashback on most other eligible spends.' },
-      grocery: { ratePercent: 10, monthlyCapRupees: 1000, note: '10% accelerated cashback across dining, food delivery and grocery combined, capped at ₹1,000/month.' },
-      dining: { ratePercent: 10, monthlyCapRupees: 1000, note: '10% accelerated cashback across dining, food delivery and grocery combined, capped at ₹1,000/month.' },
+      grocery: { ratePercent: 10, monthlyCapRupees: 1200, note: '10% accelerated cashback shared across dining, food delivery, grocery, eligible shopping and utilities, capped at ₹1,200/month.' },
+      dining: { ratePercent: 10, monthlyCapRupees: 1200, note: '10% accelerated cashback shared across dining, food delivery, grocery, eligible shopping and utilities, capped at ₹1,200/month.' },
+      utilities: { ratePercent: 10, monthlyCapRupees: 1200, note: '10% on eligible utility MCCs under the shared ₹1,200 monthly accelerated cap.' },
+      shopping: { ratePercent: 10, monthlyCapRupees: 1200, note: '10% on eligible shopping MCCs under the shared ₹1,200 monthly cap. Amazon, Flipkart and Myntra earn 1.5%, not 10%.' },
       'low-fee': { ratePercent: 1.5, note: '₹999 annual fee, waived above ₹2 lakh annual spend; 1.5% on most other eligible spend.' },
     },
   },
@@ -198,10 +202,10 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     sourceUrl: 'https://www.hdfc.bank.in/credit-cards/swiggy-hdfc-bank-credit-card',
     sourceLabel: 'Official HDFC Bank product page',
     terms: {
-      cashback: { ratePercent: 5, monthlyCapRupees: 1500, note: '5% cashback on eligible online categories, capped at ₹1,500/billing cycle.' },
-      shopping: { ratePercent: 5, monthlyCapRupees: 1500, note: '5% cashback on eligible online categories, capped at ₹1,500/billing cycle.' },
-      dining: { ratePercent: 10, monthlyCapRupees: 1500, note: '10% cashback across eligible Swiggy Food, Instamart, Dineout and Genie, capped at ₹1,500/billing cycle.' },
-      grocery: { ratePercent: 10, monthlyCapRupees: 1500, note: 'Modeled for eligible Swiggy Instamart spend under the combined Swiggy cashback cap.' },
+      cashback: { ratePercent: 5, monthlyCapRupees: 1500, note: '5% cashback on eligible online categories on transactions of at least ₹100; capped at ₹1,500/billing cycle.' },
+      shopping: { ratePercent: 5, monthlyCapRupees: 1500, note: '5% cashback on eligible online categories on transactions of at least ₹100; capped at ₹1,500/billing cycle.' },
+      dining: { ratePercent: 10, monthlyCapRupees: 1500, note: '10% cashback across eligible Swiggy Food, Instamart and Dineout, for transactions of at least ₹249; capped at ₹1,500/billing cycle.' },
+      grocery: { ratePercent: 10, monthlyCapRupees: 1500, note: 'Modeled for eligible Swiggy Instamart spend with ₹249 transaction minimum under the combined Swiggy cashback cap.' },
       'co-branded': { ratePercent: 10, baseRatePercent: 1, monthlyCapRupees: 1500, note: 'Swiggy co-brand accelerated cashback with 1% eligible other-category cashback.' },
       'low-fee': { ratePercent: 5, monthlyCapRupees: 1500, note: '₹500 annual fee; modeled on eligible online cashback.' },
     },
@@ -217,11 +221,11 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     sourceUrl: 'https://www.hdfc.bank.in/credit-cards/millennia-credit-card',
     sourceLabel: 'Official HDFC Bank product page',
     terms: {
-      cashback: { ratePercent: 5, monthlyCapRupees: 3000, note: '5% cashback on listed leading brands; model uses the current ₹3,000/month cashback redemption cap as a conservative benefit ceiling.' },
-      shopping: { ratePercent: 5, monthlyCapRupees: 3000, note: '5% cashback on listed leading online brands; current statement-cashback redemption cap is ₹3,000/month.' },
-      dining: { ratePercent: 5, monthlyCapRupees: 3000, note: 'Modeled for listed eligible brands such as Swiggy/Zomato under the 5% benefit.' },
+      cashback: { ratePercent: 5, monthlyCapRupees: 1000, note: '5% cashback on listed leading brands; earning cap is 1,000 CashPoints per calendar month, separate from the 3,000-point redemption ceiling.' },
+      shopping: { ratePercent: 5, monthlyCapRupees: 1000, note: '5% cashback on listed leading online brands; earning cap is 1,000 CashPoints/calendar month; redemption cap is a separate constraint.' },
+      dining: { ratePercent: 5, monthlyCapRupees: 1000, note: 'Modeled for listed eligible brands such as Swiggy/Zomato under the 5% benefit.' },
       fuel: { ratePercent: 0, secondaryRatePercent: 1, secondaryMonthlyCapRupees: 250, network: 'Any', note: '1% fuel surcharge waiver, subject to eligible transaction range and ₹250 statement-cycle cap.' },
-      'low-fee': { ratePercent: 5, monthlyCapRupees: 3000, note: '₹1,000 annual fee, waived at ₹1 lakh annual spend.' },
+      'low-fee': { ratePercent: 5, monthlyCapRupees: 1000, note: '₹1,000 annual fee, waived at ₹1 lakh annual spend.' },
     },
   },
   {
@@ -257,7 +261,7 @@ export const verifiedRealCards: VerifiedRealCard[] = [
       'co-branded': { ratePercent: 5, baseRatePercent: 1.5, note: '5% value back as NeuCoins at Tata Neu/partner Tata brands; 1.5% on eligible other/UPI spend.' },
       shopping: { ratePercent: 5, note: 'Modeled on eligible Tata Neu/partner Tata brand shopping.' },
       grocery: { ratePercent: 5, note: 'Modeled on eligible Tata ecosystem grocery spend.' },
-      upi: { ratePercent: 1.5, note: '1.5% value back on eligible UPI transactions on RuPay variant.' },
+      upi: { ratePercent: 1.5, monthlyCapRupees: 500, note: '1.5% value back on eligible UPI transactions on RuPay variant, capped at 500 NeuCoins/month.' },
       forex: { ratePercent: 1.5, forexMarkupPercent: 1.99, note: '1.99% foreign-currency markup; modeled reward offset uses the eligible 1.5% other-spend value-back rate.' },
       lounge: { loungeVisits: 12, note: '8 domestic + 4 international complimentary lounge accesses/year, subject to spend conditions.' },
       premium: { ratePercent: 5, loungeVisits: 12, forexMarkupPercent: 1.99, note: 'Premium value modeled on Tata ecosystem rewards, lounge access and low forex markup.' },
@@ -294,10 +298,10 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     sourceUrl: 'https://www.sbicard.com/en/personal/credit-cards/flipkart-sbi-card.html',
     sourceLabel: 'Official SBI Card product page',
     terms: {
-      cashback: { ratePercent: 5, note: '5% cashback on eligible Flipkart spend; official product also advertises 7.5% Myntra and 4% preferred-merchant cashback.' },
-      shopping: { ratePercent: 5, note: 'Modeled on eligible Flipkart spend.' },
-      'co-branded': { ratePercent: 5, baseRatePercent: 1, note: 'Flipkart co-brand accelerated cashback plus 1% eligible other-spend cashback.' },
-      'low-fee': { ratePercent: 5, note: '₹500 annual fee with annual-spend fee reversal.' },
+      cashback: { ratePercent: 5, annualCapRupees: 16000, note: '5% cashback on eligible Flipkart spend; official product also advertises 7.5% Myntra and 4% preferred-merchant cashback.' },
+      shopping: { ratePercent: 5, annualCapRupees: 16000, note: '5% on eligible Flipkart spend, capped at ₹4,000 per calendar quarter. Annualized model assumes equal monthly spending.' },
+      'co-branded': { ratePercent: 5, annualCapRupees: 16000, baseRatePercent: 1, note: 'Flipkart co-brand accelerated cashback plus 1% eligible other-spend cashback; Flipkart component capped at ₹4,000/calendar quarter.' },
+      'low-fee': { ratePercent: 5, annualCapRupees: 16000, note: '₹500 annual fee with annual-spend fee reversal and ₹4,000 quarterly Flipkart cashback cap.' },
     },
   },
   {
@@ -343,16 +347,16 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     feeTaxPercent: 18,
     feeWaiverAnnualSpendRupees: 150000,
     verifiedAt,
-    sourceUrl: 'https://www.idfcfirstbank.com/credit-card',
+    sourceUrl: 'https://www.idfcfirst.bank.in/credit-card/hpcl-power-fuel-credit-card',
     sourceLabel: 'Official IDFC FIRST Bank credit-card catalogue',
     terms: {
-      fuel: { ratePercent: 6.5, network: 'HPCL', note: 'Official IDFC FIRST material advertises up to 6.5% savings on HPCL fuel; modeled as headline total fuel value.' },
-      grocery: { ratePercent: 5, note: 'Official IDFC FIRST material advertises 5% savings on grocery.' },
-      utilities: { ratePercent: 5, note: 'Official IDFC FIRST material advertises 5% savings on utilities.' },
-      upi: { ratePercent: 1.5, note: 'Power+ is RuPay/UPI enabled; UPI value varies by transaction/category, so model uses a conservative 1.5% placeholder only where eligible.' },
+      fuel: { ratePercent: 5, monthlyCapRupees: 600, network: 'HPCL', note: 'Official IDFC FIRST material advertises up to 6.5% savings on HPCL fuel; the cash-value model includes only 5% reward points, capped at ₹600 per cycle. Conditional HP Pay Happy Coins are excluded.' },
+      grocery: { ratePercent: 5, monthlyCapRupees: 100, note: 'Official IDFC FIRST material advertises 5% savings on grocery.' },
+      utilities: { ratePercent: 5, monthlyCapRupees: 100, note: 'Official IDFC FIRST material advertises 5% savings on utilities.' },
+      upi: { ratePercent: 0.5, note: '3 reward points per ₹150 of eligible UPI retail spend at ₹0.25 per point = 0.5%; excluded categories do not earn this rate.' },
       lounge: { loungeVisits: 4, note: '1 complimentary domestic airport lounge visit per quarter, subject to prior-month spend condition.' },
-      'co-branded': { ratePercent: 6.5, note: 'HPCL co-brand headline fuel savings.' },
-      'low-fee': { ratePercent: 5, note: '₹499 annual fee; modeled using eligible grocery/utility value.' },
+      'co-branded': { ratePercent: 5, monthlyCapRupees: 600, note: 'HPCL card rewards only: 5% capped at ₹600 per cycle; app-specific Happy Coins excluded.' },
+      'low-fee': { ratePercent: 5, monthlyCapRupees: 100, note: '₹499 annual fee; modeled using eligible grocery/utility value.' },
     },
   },
   {
@@ -364,14 +368,14 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     feeWaiverAnnualSpendRupees: 50000,
     verifiedAt,
     sourceUrl: 'https://www.idfcfirstbank.com/credit-card',
-    sourceLabel: 'Official IDFC FIRST Bank credit-card catalogue',
+    sourceLabel: 'Official issuer catalogue; full caps require review',
     terms: {
-      fuel: { ratePercent: 5, network: 'HPCL', note: 'Official IDFC FIRST material advertises 5% savings on HPCL fuel.' },
-      grocery: { ratePercent: 2.5, note: 'Official IDFC FIRST material advertises 2.5% savings on grocery.' },
-      utilities: { ratePercent: 2.5, note: 'Official IDFC FIRST material advertises 2.5% savings on utilities.' },
-      'co-branded': { ratePercent: 5, note: 'HPCL co-brand headline fuel savings.' },
-      'low-fee': { ratePercent: 2.5, note: '₹199 fee and low annual fee-waiver threshold.' },
-      beginner: { ratePercent: 2.5, note: 'Low fee and low waiver threshold; eligibility still depends on issuer approval.' },
+      fuel: { rankingEligible: false, ratePercent: 5, network: 'HPCL', note: 'Official IDFC FIRST material advertises 5% savings on HPCL fuel.' },
+      grocery: { rankingEligible: false, ratePercent: 2.5, note: 'Official IDFC FIRST material advertises 2.5% savings on grocery.' },
+      utilities: { rankingEligible: false, ratePercent: 2.5, note: 'Official IDFC FIRST material advertises 2.5% savings on utilities.' },
+      'co-branded': { rankingEligible: false, ratePercent: 5, note: 'HPCL co-brand headline fuel savings.' },
+      'low-fee': { rankingEligible: false, ratePercent: 2.5, note: '₹199 fee and low annual fee-waiver threshold.' },
+      beginner: { rankingEligible: false, ratePercent: 2.5, note: 'Low fee and low waiver threshold; eligibility still depends on issuer approval.' },
     },
   },
   {
@@ -402,12 +406,12 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     sourceUrl: 'https://www.hdfc.bank.in/credit-cards/indianoil-hdfc-bank-credit-card',
     sourceLabel: 'Official HDFC Bank product page',
     terms: {
-      fuel: { ratePercent: 5, monthlyCapRupees: 144, secondaryRatePercent: 1, secondaryMonthlyCapRupees: 250, network: 'IndianOil', note: '5% Fuel Points at IOCL; recurring cap modeled at 150 Fuel Points/month × ₹0.96 redemption value after first six months, plus 1% surcharge waiver.' },
-      grocery: { ratePercent: 5, monthlyCapRupees: 96, note: '5% Fuel Points on grocery, capped at 100 Fuel Points/month; 1 FP modeled at ₹0.96.' },
-      utilities: { ratePercent: 5, monthlyCapRupees: 96, note: '5% Fuel Points on eligible bill payments, capped at 100 Fuel Points/month; 1 FP modeled at ₹0.96.' },
-      upi: { ratePercent: 0.64, note: '1 Fuel Point per ₹150 on other eligible purchases including UPI; 1 FP modeled at ₹0.96.' },
-      'co-branded': { ratePercent: 5, monthlyCapRupees: 144, note: 'IndianOil co-brand fuel-point value modeled using current issuer redemption value.' },
-      'low-fee': { ratePercent: 5, monthlyCapRupees: 96, note: '₹500 fee; low ₹50,000 fee-waiver threshold.' },
+      fuel: { ratePercent: 4.8, monthlyCapRupees: 144, secondaryRatePercent: 1, secondaryMonthlyCapRupees: 250, network: 'IndianOil', note: '5% of eligible spend earned as Fuel Points at IOCL, worth 4.8% at ₹0.96 per point; recurring cap modeled at 150 Fuel Points/month × ₹0.96 redemption value after first six months, plus 1% surcharge waiver.' },
+      grocery: { ratePercent: 4.8, monthlyCapRupees: 96, note: '5% Fuel Points on grocery, capped at 100 Fuel Points/month; 1 FP modeled at ₹0.96, giving a 4.8% rupee-value earning rate.' },
+      utilities: { ratePercent: 4.8, monthlyCapRupees: 96, note: '5% Fuel Points on eligible bill payments, capped at 100 Fuel Points/month; 1 FP modeled at ₹0.96, giving a 4.8% rupee-value earning rate.' },
+      upi: { ratePercent: 0.64, note: '1 Fuel Point per ₹150 on other eligible purchases including UPI; 1 FP modeled at ₹0.96, giving a 4.8% rupee-value earning rate.' },
+      'co-branded': { ratePercent: 4.8, monthlyCapRupees: 144, note: 'IndianOil co-brand fuel-point value modeled using current issuer redemption value.' },
+      'low-fee': { ratePercent: 4.8, monthlyCapRupees: 96, note: '₹500 fee; low ₹50,000 fee-waiver threshold.' },
     },
   },
   {
@@ -421,8 +425,8 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     sourceUrl: 'https://www.sbicard.com/en/personal/credit-cards/sbi-card-miles.html',
     sourceLabel: 'Official SBI Card product page',
     terms: {
-      travel: { ratePercent: 1, loungeVisits: 4, forexMarkupPercent: 3, note: '2 Travel Credits/₹200 on travel. Model values 1 Travel Credit at ₹1 for air-mile/hotel-point conversion; forex markup 3%.' },
-      forex: { ratePercent: 0.5, forexMarkupPercent: 3, note: 'Other-spend earning 1 Travel Credit/₹200; 1 TC = ₹1 for air-mile/hotel-point conversion. Forex markup 3%.' },
+      travel: { ratePercent: 0.5, loungeVisits: 4, forexMarkupPercent: 3, note: '2 Travel Credits/₹200 on travel. Model values 1 Travel Credit at ₹0.50 for travel-booking redemption; forex markup 3%.' },
+      forex: { ratePercent: 0.25, forexMarkupPercent: 3, note: 'Other-spend earning 1 Travel Credit/₹200; 1 TC = ₹0.50 for travel-booking redemption. Forex markup 3%.' },
       lounge: { loungeVisits: 4, note: 'Complimentary domestic lounge access is included in official travel privileges; usage conditions apply.' },
     },
   },
@@ -437,10 +441,10 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     sourceUrl: 'https://www.sbicard.com/en/personal/credit-cards/sbi-card-miles-prime.html',
     sourceLabel: 'Official SBI Card product page',
     terms: {
-      travel: { ratePercent: 2, loungeVisits: 12, forexMarkupPercent: 2.5, note: '4 Travel Credits/₹200 on travel. Model values 1 TC at ₹1 for air-mile/hotel-point conversion; 8 domestic + 4 international lounge visits/year.' },
-      forex: { ratePercent: 1, forexMarkupPercent: 2.5, note: '2 Travel Credits/₹200 on eligible other spend; 1 TC = ₹1 for air-mile/hotel-point conversion. Forex markup 2.5%.' },
+      travel: { ratePercent: 1, loungeVisits: 12, forexMarkupPercent: 2.5, note: '4 Travel Credits/₹200 on travel. Model values 1 TC at ₹0.50 for travel-booking redemption; 8 domestic + 4 international lounge visits/year.' },
+      forex: { ratePercent: 0.5, forexMarkupPercent: 2.5, note: '2 Travel Credits/₹200 on eligible other spend; 1 TC = ₹0.50 for travel-booking redemption. Forex markup 2.5%.' },
       lounge: { loungeVisits: 12, note: '8 domestic + 4 international complimentary lounge visits/year, subject to program conditions.' },
-      premium: { ratePercent: 2, loungeVisits: 12, forexMarkupPercent: 2.5, note: 'Premium travel model using travel-credit value and lounge entitlement.' },
+      premium: { ratePercent: 1, loungeVisits: 12, forexMarkupPercent: 2.5, note: 'Premium travel model using travel-credit value and lounge entitlement.' },
     },
   },
   {
@@ -453,10 +457,10 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     sourceUrl: 'https://www.axis.bank.in/cards/credit-card/indigo-axis-bank-credit-card',
     sourceLabel: 'Official Axis Bank product page',
     terms: {
-      travel: { ratePercent: 3, loungeVisits: 4, note: '3 IndiGo BluChips/₹100 on IndiGo channels. Model treats 1 BluChip as ₹1 only for ranking normalization; verify redemption value before relying on the estimate.' },
+      travel: { rankingEligible: false, ratePercent: 3, loungeVisits: 4, note: '3 IndiGo BluChips/₹100 on IndiGo channels. Model treats 1 BluChip as ₹1 only for ranking normalization; verify redemption value before relying on the estimate.' },
       grocery: { ratePercent: 2, note: '2 IndiGo BluChips/₹100 on eligible grocery. Model treats 1 BluChip as ₹1 for normalized comparison.' },
       dining: { ratePercent: 2, note: '2 IndiGo BluChips/₹100 on eligible dining. Model treats 1 BluChip as ₹1 for normalized comparison.' },
-      'co-branded': { ratePercent: 3, note: 'IndiGo co-brand travel earning modeled at 3 BluChips/₹100.' },
+      'co-branded': { rankingEligible: false, ratePercent: 3, note: 'IndiGo co-brand travel earning modeled at 3 BluChips/₹100.' },
       'low-fee': { ratePercent: 2, note: '₹799 annual fee; modeled on accelerated grocery/dining earning.' },
     },
   },
@@ -470,9 +474,9 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     sourceUrl: 'https://www.axis.bank.in/cards/credit-card/indigo-axis-bank-premium-credit-card',
     sourceLabel: 'Official Axis Bank product page',
     terms: {
-      travel: { ratePercent: 7, fixedAnnualValueRupees: 5000, note: 'Headline accelerated earn up to 7 IndiGo BluChips/₹100 on IndiGo channels/grocery/hotel categories. Model treats 1 BluChip as ₹1 and includes stated 5,000-BluChip annual benefit at face value.' },
-      premium: { ratePercent: 7, fixedAnnualValueRupees: 5000, note: 'Premium travel/co-brand model uses headline BluChip earning and annual renewal BluChip benefit.' },
-      'co-branded': { ratePercent: 7, note: 'IndiGo co-brand accelerated earn; normalized at ₹1 per BluChip for ranking only.' },
+      travel: { rankingEligible: false, ratePercent: 7, fixedAnnualValueRupees: 5000, note: 'Headline accelerated earn up to 7 IndiGo BluChips/₹100 on IndiGo channels/grocery/hotel categories. Model treats 1 BluChip as ₹1 and includes stated 5,000-BluChip annual benefit at face value.' },
+      premium: { rankingEligible: false, ratePercent: 7, fixedAnnualValueRupees: 5000, note: 'Premium travel/co-brand model uses headline BluChip earning and annual renewal BluChip benefit.' },
+      'co-branded': { rankingEligible: false, ratePercent: 7, note: 'IndiGo co-brand accelerated earn; rupee redemption value is not verified, so this category is excluded from rupee rankings.' },
     },
   },
 ]
@@ -480,5 +484,5 @@ export const verifiedRealCards: VerifiedRealCard[] = [
 export const REAL_CARD_DATA_DATE = verifiedAt
 
 export function realCardsForCategory(category: CardCategorySlug) {
-  return verifiedRealCards.filter((card) => Boolean(card.terms[category]))
+  return verifiedRealCards.filter((card) => Boolean(card.terms[category]) && card.terms[category]?.rankingEligible !== false)
 }

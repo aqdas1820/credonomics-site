@@ -1,0 +1,64 @@
+{
+  "securityId": "ISIN:INE028A01039",
+  "slug": "bank-of-baroda-ine028a01039",
+  "isin": "INE028A01039",
+  "stock": "Bank of Baroda",
+  "sector": "Banks",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 2,
+  "peakNormalizedWeight": 0.5083333333333333,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.4,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "weight": 2.65,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 2,
+      "totalWeight": 3.05,
+      "normalizedWeight": 0.5083333333333333,
+      "avgHeldWeight": 1.525
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.4,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 2.65,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Small Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

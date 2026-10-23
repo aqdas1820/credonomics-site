@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE600L01024",
+  "slug": "dr-lal-path-labs-ltd-ine600l01024",
+  "isin": "INE600L01024",
+  "stock": "Dr. Lal Path Labs Ltd",
+  "sector": "Healthcare Services",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.12666666666666668,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "weight": 0.76,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.76,
+      "normalizedWeight": 0.12666666666666668,
+      "avgHeldWeight": 0.76
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.76,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Flexi Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

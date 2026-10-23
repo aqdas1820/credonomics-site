@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE647A01010",
+  "slug": "srf-ltd-ine647a01010",
+  "isin": "INE647A01010",
+  "stock": "SRF Ltd.",
+  "sector": "Chemicals & Petrochemicals",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.09000000000000001,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "weight": 0.54,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.54,
+      "normalizedWeight": 0.09000000000000001,
+      "avgHeldWeight": 0.54
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.54,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

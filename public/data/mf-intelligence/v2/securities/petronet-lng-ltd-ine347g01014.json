@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE347G01014",
+  "slug": "petronet-lng-ltd-ine347g01014",
+  "isin": "INE347G01014",
+  "stock": "Petronet LNG Ltd.",
+  "sector": "Gas",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.06,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "weight": 0.36,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.36,
+      "normalizedWeight": 0.06,
+      "avgHeldWeight": 0.36
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.36,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Mid Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

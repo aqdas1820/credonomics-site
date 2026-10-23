@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE0BY001018",
+  "slug": "jubilant-ingrevia-limited-ine0by001018",
+  "isin": "INE0BY001018",
+  "stock": "Jubilant Ingrevia Limited",
+  "sector": "Chemicals & Petrochemicals",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.06166666666666667,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "weight": 0.37,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.37,
+      "normalizedWeight": 0.06166666666666667,
+      "avgHeldWeight": 0.37
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.37,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Multi Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

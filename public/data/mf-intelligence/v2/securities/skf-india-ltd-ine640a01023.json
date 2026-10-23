@@ -1,0 +1,64 @@
+{
+  "securityId": "ISIN:INE640A01023",
+  "slug": "skf-india-ltd-ine640a01023",
+  "isin": "INE640A01023",
+  "stock": "SKF India Ltd.",
+  "sector": "Auto Components",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 2,
+  "peakNormalizedWeight": 0.12666666666666668,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "weight": 0.35,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "weight": 0.41,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 2,
+      "totalWeight": 0.76,
+      "normalizedWeight": 0.12666666666666668,
+      "avgHeldWeight": 0.38
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.35,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.41,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Mid Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Small Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "securityId": "ISIN:INE07T201019",
+  "slug": "restaurant-brands-asia-limited-ine07t201019",
+  "isin": "INE07T201019",
+  "stock": "Restaurant Brands Asia Limited",
+  "sector": "Leisure Services",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 2,
+  "peakNormalizedWeight": 0.17500000000000002,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "weight": 0.28,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Focused Fund",
+      "weight": 0.77,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 2,
+      "totalWeight": 1.05,
+      "normalizedWeight": 0.17500000000000002,
+      "avgHeldWeight": 0.525
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.28,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Focused Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.77,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Flexi Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Focused Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

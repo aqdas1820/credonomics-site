@@ -188,6 +188,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 86
   },
   {
+    "id": "route:/updates/2026-10",
+    "title": "October 2026 Research Updates: Card Changes & Portfolio Disclosures",
+    "description": "Official issuer changes, corrected credit-card rankings and September portfolio disclosures reviewed by CredoNomics in October 2026, with effective dates and sources.",
+    "href": "/updates/2026-10",
+    "category": "Research",
+    "source": "Research Desk",
+    "updated": "",
+    "keywords": "updates 2026-10 October 2026 Research Updates: Card Changes & Portfolio Disclosures Research",
+    "priority": 86
+  },
+  {
     "id": "route:/ipo/current",
     "title": "Current IPOs",
     "description": "Browse open and closing-today IPOs with date-validated CredoNomics market intelligence.",
@@ -295,6 +306,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "CredoNomics",
     "updated": "",
     "keywords": "about About Company",
+    "priority": 60
+  },
+  {
+    "id": "route:/account",
+    "title": "Account",
+    "description": "Explore Account on CredoNomics Investment Solutions.",
+    "href": "/account",
+    "category": "Platform",
+    "source": "CredoNomics",
+    "updated": "",
+    "keywords": "account Account Platform",
     "priority": 60
   },
   {

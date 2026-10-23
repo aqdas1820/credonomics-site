@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE195J01029",
+  "slug": "pnc-infratech-ltd-ine195j01029",
+  "isin": "INE195J01029",
+  "stock": "PNC Infratech Ltd.",
+  "sector": "Construction",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.07166666666666667,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "weight": 0.43,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.43,
+      "normalizedWeight": 0.07166666666666667,
+      "avgHeldWeight": 0.43
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.43,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Small Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

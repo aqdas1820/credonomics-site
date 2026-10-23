@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE498B01024",
+  "slug": "shoppers-stop-ltd-ine498b01024",
+  "isin": "INE498B01024",
+  "stock": "Shoppers Stop Ltd.",
+  "sector": "Retailing",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.17,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "weight": 1.02,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 1.02,
+      "normalizedWeight": 0.17,
+      "avgHeldWeight": 1.02
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 1.02,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Small Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

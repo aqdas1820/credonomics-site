@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE0CZ201020",
+  "slug": "anthem-biosciences-limited-ine0cz201020",
+  "isin": "INE0CZ201020",
+  "stock": "Anthem Biosciences Limited",
+  "sector": "Pharmaceuticals & Biotechnology",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.09833333333333333,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "weight": 0.59,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.59,
+      "normalizedWeight": 0.09833333333333333,
+      "avgHeldWeight": 0.59
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.59,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Flexi Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

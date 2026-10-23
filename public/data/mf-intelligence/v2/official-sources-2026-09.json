@@ -1,0 +1,102 @@
+{
+  "month": "2026-09",
+  "checkedAt": "2026-10-23T14:44:54.369591Z",
+  "scope": "Indian equity positions with numeric published weights in six core HDFC schemes. Positions marked @ (less than 0.01%) remain in this source manifest and are excluded from quantitative analysis. Cash, debt, derivatives and non-equity instruments excluded.",
+  "reconciliationTolerancePercentagePoints": 0.1,
+  "sources": [
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "category": "Small Cap",
+      "sourceFile": "Monthly HDFC Small Cap Fund - 30 September 2026_0.xlsx",
+      "sourceUrl": "https://files.hdfcfund.com/s3fs-public/2026-10/Monthly%20HDFC%20Small%20Cap%20Fund%20-%2030%20September%202026_0.xlsx?VersionId=rgQhPf_3EhbkZGQPYfcojHhwgB4MoJbI",
+      "sha256": "8eced139ddf93c3537c3470ec1d3fd628c5e90404c5dfff5526b8b7ef25824e2",
+      "sheet": "first worksheet",
+      "equityRows": 85,
+      "sourceEquityPercent": 90.07000000000004,
+      "extractedEquityPercent": 90.07,
+      "unquantifiedPositions": []
+    },
+    {
+      "scheme": "HDFC Multi Cap Fund",
+      "category": "Multi Cap",
+      "sourceFile": "Monthly HDFC Multi Cap Fund - 30 September 2026_0.xlsx",
+      "sourceUrl": "https://files.hdfcfund.com/s3fs-public/2026-10/Monthly%20HDFC%20Multi%20Cap%20Fund%20-%2030%20September%202026_0.xlsx?VersionId=X2awJzZRIRNp1f.c.QuHrdtA1nrRBe92",
+      "sha256": "176710d338c6c0f2f159f50f8788c7958c4b2f1f77447edef0259960468c5a71",
+      "sheet": "first worksheet",
+      "equityRows": 120,
+      "sourceEquityPercent": 98.42000000000003,
+      "extractedEquityPercent": 98.42,
+      "unquantifiedPositions": []
+    },
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "category": "Mid Cap",
+      "sourceFile": "Monthly HDFC Mid Cap Fund - 30 September 2026_0.xlsx",
+      "sourceUrl": "https://files.hdfcfund.com/s3fs-public/2026-10/Monthly%20HDFC%20Mid%20Cap%20Fund%20-%2030%20September%202026_0.xlsx?VersionId=s4mzUxPPT0726Z8815Zvzky.E08IJk30",
+      "sha256": "22032fa4b8bbe4d26b55cc2c27f9e96deb881b9da5cd041a09fabf82937f2cb3",
+      "sheet": "first worksheet",
+      "equityRows": 79,
+      "sourceEquityPercent": 91.70999999999997,
+      "extractedEquityPercent": 91.71,
+      "unquantifiedPositions": []
+    },
+    {
+      "scheme": "HDFC Large and Mid Cap Fund",
+      "category": "Large & Mid Cap",
+      "sourceFile": "Monthly HDFC Large  Mid Cap Fund - 30 September 2026_0.xlsx",
+      "sourceUrl": "https://files.hdfcfund.com/s3fs-public/2026-10/Monthly%20HDFC%20Large%20%20Mid%20Cap%20Fund%20-%2030%20September%202026_0.xlsx?VersionId=zp_RQ99fyAUVKS94XZUVVR_z6Ro5rBqW",
+      "sha256": "7faa81af336c22973b9592dbd6bacdf2883b6dc7a1828866cb2a61c953bcdf96",
+      "sheet": "first worksheet",
+      "equityRows": 239,
+      "sourceEquityPercent": 99.3,
+      "extractedEquityPercent": 99.3,
+      "unquantifiedPositions": [
+        {
+          "isin": "INE100A01010",
+          "sourceSecurityName": "Atul Ltd.",
+          "sourceRow": 247,
+          "reportedWeight": "@",
+          "meaning": "Less than 0.01% to NAV; exact weight not published"
+        },
+        {
+          "isin": "INE0I7C01011",
+          "sourceSecurityName": "LATENT VIEW ANALYTICS LIMITED",
+          "sourceRow": 248,
+          "reportedWeight": "@",
+          "meaning": "Less than 0.01% to NAV; exact weight not published"
+        },
+        {
+          "isin": "INE586V01016",
+          "sourceSecurityName": "TCI Express Ltd.",
+          "sourceRow": 249,
+          "reportedWeight": "@",
+          "meaning": "Less than 0.01% to NAV; exact weight not published"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Focused Fund",
+      "category": "Focused",
+      "sourceFile": "Monthly HDFC Focused Fund - 30 September 2026_0.xlsx",
+      "sourceUrl": "https://files.hdfcfund.com/s3fs-public/2026-10/Monthly%20HDFC%20Focused%20Fund%20-%2030%20September%202026_0.xlsx?VersionId=7VM0yM_0x1.Sgjn.kPBd0GNTVJzokyH3",
+      "sha256": "c8f47683aa276b79d64b039fe025e0227e13f0b03a4dea0cf76ece69f8234564",
+      "sheet": "first worksheet",
+      "equityRows": 30,
+      "sourceEquityPercent": 97.08,
+      "extractedEquityPercent": 97.08,
+      "unquantifiedPositions": []
+    },
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "category": "Flexi Cap",
+      "sourceFile": "Monthly HDFC Flexi Cap Fund - 30 September 2026_0.xlsx",
+      "sourceUrl": "https://files.hdfcfund.com/s3fs-public/2026-10/Monthly%20HDFC%20Flexi%20Cap%20Fund%20-%2030%20September%202026_0.xlsx?VersionId=hZBquZwtxT0gkdhzSD680e07SLaMm4ny",
+      "sha256": "495a3d78dd97283b62fe3ee0a69edcbfa28178989426f41280ee0ce7ebbabd26",
+      "sheet": "first worksheet",
+      "equityRows": 81,
+      "sourceEquityPercent": 97.26,
+      "extractedEquityPercent": 97.26,
+      "unquantifiedPositions": []
+    }
+  ]
+}

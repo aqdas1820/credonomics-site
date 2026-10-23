@@ -1,0 +1,64 @@
+{
+  "securityId": "ISIN:INE491A01021",
+  "slug": "city-union-bank-ltd-ine491a01021",
+  "isin": "INE491A01021",
+  "stock": "City Union Bank Ltd.",
+  "sector": "Banks",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 2,
+  "peakNormalizedWeight": 0.36999999999999994,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "weight": 0.74,
+      "quality": "ISIN_VALIDATED"
+    },
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "weight": 1.48,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 2,
+      "totalWeight": 2.2199999999999998,
+      "normalizedWeight": 0.36999999999999994,
+      "avgHeldWeight": 1.1099999999999999
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.74,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    },
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 1.48,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Mid Cap Fund - 30 September 2026_0.xlsx",
+        "Monthly HDFC Small Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

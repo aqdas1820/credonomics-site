@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE884B01025",
+  "slug": "kirloskar-ferrous-industries-ltd-ine884b01025",
+  "isin": "INE884B01025",
+  "stock": "Kirloskar Ferrous Industries Ltd.",
+  "sector": "Ferrous Metals",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.15166666666666667,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "weight": 0.91,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.91,
+      "normalizedWeight": 0.15166666666666667,
+      "avgHeldWeight": 0.91
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.91,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Small Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

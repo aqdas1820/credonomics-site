@@ -3,182 +3,15 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Check, ExternalLink, Filter, Info, RotateCcw, Share2, ShieldCheck, Trophy } from 'lucide-react'
 import { cardCategoryMap, type CardCategorySlug } from '../../data/card-categories'
-import { REAL_CARD_DATA_DATE, type RealCardTerms, type VerifiedRealCard } from '../../data/verified-real-cards'
+import { REAL_CARD_DATA_DATE, type VerifiedRealCard } from '../../data/verified-real-cards'
 import styles from './real-card-ranking.module.css'
+import { analyseCard, defaultProfile, type Profile } from '../../data/real-card-ranking'
 
 const money = new Intl.NumberFormat('en-IN', {
   style: 'currency',
   currency: 'INR',
   maximumFractionDigits: 0,
 })
-
-type Profile = {
-  monthlySpend: number
-  annualRetailSpend: number
-  annualForeignSpend: number
-  loungeVisits: number
-  loungeValue: number
-  partnerSpendShare: number
-  preferredFuelNetwork: string
-}
-
-type RankedCard = {
-  card: VerifiedRealCard
-  terms: RealCardTerms
-  grossValue: number
-  feeCost: number
-  netValue: number
-  effectiveReturn: number
-  benefitCapLoss: number
-  secondaryValue: number
-  annualSpendBasis: number
-}
-
-const defaultProfile: Profile = {
-  monthlySpend: 10000,
-  annualRetailSpend: 240000,
-  annualForeignSpend: 100000,
-  loungeVisits: 6,
-  loungeValue: 700,
-  partnerSpendShare: 70,
-  preferredFuelNetwork: 'Any',
-}
-
-function tieredMonthlyValue(spend: number, terms: RealCardTerms) {
-  if (!terms.monthlyTiers?.length) {
-    return spend * (terms.ratePercent ?? 0) / 100
-  }
-
-  let remaining = spend
-  let previous = 0
-  let value = 0
-
-  for (const tier of terms.monthlyTiers) {
-    const ceiling = tier.upto
-    if (ceiling === undefined) {
-      value += remaining * tier.ratePercent / 100
-      remaining = 0
-      break
-    }
-
-    const width = Math.max(0, ceiling - previous)
-    const slice = Math.min(remaining, width)
-    value += slice * tier.ratePercent / 100
-    remaining -= slice
-    previous = ceiling
-    if (remaining <= 0) break
-  }
-
-  return value
-}
-
-function recurringAnnual(spendMonthly: number, terms: RealCardTerms) {
-  const theoreticalMonthly = tieredMonthlyValue(spendMonthly, terms)
-  const monthlyAfterCap =
-    terms.monthlyCapRupees !== undefined
-      ? Math.min(theoreticalMonthly, terms.monthlyCapRupees)
-      : theoreticalMonthly
-
-  const annualBeforeAnnualCap = monthlyAfterCap * 12
-  const actual =
-    terms.annualCapRupees !== undefined
-      ? Math.min(annualBeforeAnnualCap, terms.annualCapRupees)
-      : annualBeforeAnnualCap
-
-  return {
-    actual,
-    theoretical: theoreticalMonthly * 12,
-  }
-}
-
-function annualFeeCost(card: VerifiedRealCard, profile: Profile) {
-  const waived =
-    card.feeWaiverAnnualSpendRupees !== undefined &&
-    profile.annualRetailSpend >= card.feeWaiverAnnualSpendRupees
-
-  if (waived || card.annualFeeRupees === 0) return 0
-  return card.annualFeeRupees * (1 + card.feeTaxPercent / 100)
-}
-
-function analyseCard(card: VerifiedRealCard, category: CardCategorySlug, profile: Profile): RankedCard {
-  const terms = card.terms[category]!
-  let grossValue = 0
-  let theoreticalValue = 0
-  let secondaryValue = 0
-  let annualSpendBasis = profile.monthlySpend * 12
-
-  if (category === 'fuel') {
-    const primary = recurringAnnual(profile.monthlySpend, terms)
-    grossValue += primary.actual
-    theoreticalValue += primary.theoretical
-
-    const secondaryTheoretical = profile.monthlySpend * (terms.secondaryRatePercent ?? 0) / 100
-    const secondaryMonthly =
-      terms.secondaryMonthlyCapRupees !== undefined
-        ? Math.min(secondaryTheoretical, terms.secondaryMonthlyCapRupees)
-        : secondaryTheoretical
-
-    secondaryValue = secondaryMonthly * 12
-    grossValue += secondaryValue
-    theoreticalValue += secondaryTheoretical * 12
-  } else if (category === 'travel') {
-    const travel = recurringAnnual(profile.monthlySpend, terms)
-    const lounge = Math.min(profile.loungeVisits, terms.loungeVisits ?? 0) * profile.loungeValue
-    const forexCost = profile.annualForeignSpend * (terms.forexMarkupPercent ?? 0) / 100
-
-    grossValue = travel.actual + lounge + (terms.fixedAnnualValueRupees ?? 0) - forexCost
-    theoreticalValue = travel.theoretical + lounge + (terms.fixedAnnualValueRupees ?? 0)
-    annualSpendBasis = profile.monthlySpend * 12 + profile.annualForeignSpend
-  } else if (category === 'forex') {
-    const reward = profile.annualForeignSpend * (terms.ratePercent ?? 0) / 100
-    const forexCost = profile.annualForeignSpend * (terms.forexMarkupPercent ?? 0) / 100
-    grossValue = reward - forexCost
-    theoreticalValue = reward
-    annualSpendBasis = profile.annualForeignSpend
-  } else if (category === 'lounge') {
-    const visits = Math.min(profile.loungeVisits, terms.loungeVisits ?? 0)
-    grossValue = visits * profile.loungeValue
-    theoreticalValue = profile.loungeVisits * profile.loungeValue
-    annualSpendBasis = profile.annualRetailSpend
-  } else if (category === 'co-branded') {
-    const annualSpend = profile.monthlySpend * 12
-    const partnerShare = Math.min(100, Math.max(0, profile.partnerSpendShare)) / 100
-    const partnerSpend = annualSpend * partnerShare
-    const otherSpend = annualSpend - partnerSpend
-    const partnerReward = partnerSpend * (terms.ratePercent ?? 0) / 100
-    const otherReward = otherSpend * (terms.baseRatePercent ?? 0) / 100
-    grossValue = partnerReward + otherReward + (terms.fixedAnnualValueRupees ?? 0)
-    theoreticalValue = grossValue
-    annualSpendBasis = annualSpend
-  } else if (category === 'premium') {
-    const recurring = recurringAnnual(profile.monthlySpend, terms)
-    const lounge = Math.min(profile.loungeVisits, terms.loungeVisits ?? 0) * profile.loungeValue
-    const forexCost = profile.annualForeignSpend * (terms.forexMarkupPercent ?? 0) / 100
-    grossValue = recurring.actual + lounge + (terms.fixedAnnualValueRupees ?? 0) - forexCost
-    theoreticalValue = recurring.theoretical + lounge + (terms.fixedAnnualValueRupees ?? 0)
-    annualSpendBasis = profile.monthlySpend * 12 + profile.annualForeignSpend
-  } else {
-    const recurring = recurringAnnual(profile.monthlySpend, terms)
-    grossValue = recurring.actual + (terms.fixedAnnualValueRupees ?? 0)
-    theoreticalValue = recurring.theoretical + (terms.fixedAnnualValueRupees ?? 0)
-  }
-
-  const feeCost = annualFeeCost(card, profile)
-  const netValue = grossValue - feeCost
-  const effectiveReturn = annualSpendBasis > 0 ? (netValue / annualSpendBasis) * 100 : 0
-
-  return {
-    card,
-    terms,
-    grossValue,
-    feeCost,
-    netValue,
-    effectiveReturn,
-    benefitCapLoss: Math.max(0, theoreticalValue - grossValue),
-    secondaryValue,
-    annualSpendBasis,
-  }
-}
 
 function categorySpendLabel(category: CardCategorySlug) {
   const labels: Partial<Record<CardCategorySlug, string>> = {
@@ -216,12 +49,13 @@ export default function RealCardRankingClient({ categorySlug, cards }: { categor
   useEffect(() => {
     try {
       const params = new URLSearchParams(window.location.search)
-      const hasSharedProfile = ['spend','annual','foreign','lounge','loungeValue','partner','network'].some((key) => params.has(key))
+      const hasSharedProfile = ['base','spend','annual','foreign','lounge','loungeValue','partner','network'].some((key) => params.has(key))
 
       if (hasSharedProfile) {
         setProfile((current) => ({
           ...current,
           monthlySpend: Math.max(0, Number(params.get('spend') ?? current.monthlySpend) || 0),
+          monthlyBaseSpend: Math.max(0, Number(params.get('base') ?? current.monthlyBaseSpend) || 0),
           annualRetailSpend: Math.max(0, Number(params.get('annual') ?? current.annualRetailSpend) || 0),
           annualForeignSpend: Math.max(0, Number(params.get('foreign') ?? current.annualForeignSpend) || 0),
           loungeVisits: Math.max(0, Number(params.get('lounge') ?? current.loungeVisits) || 0),
@@ -249,6 +83,7 @@ export default function RealCardRankingClient({ categorySlug, cards }: { categor
   const shareRanking = async () => {
     try {
       const url = new URL(window.location.href)
+      url.searchParams.set('base', String(profile.monthlyBaseSpend))
       url.searchParams.set('spend', String(profile.monthlySpend))
       url.searchParams.set('annual', String(profile.annualRetailSpend))
       url.searchParams.set('foreign', String(profile.annualForeignSpend))
@@ -301,16 +136,17 @@ export default function RealCardRankingClient({ categorySlug, cards }: { categor
     <section className={styles.section}>
       <div className={styles.heading}>
         <div>
-          <span>LIVE VERIFIED RANKING</span>
+          <span>SOURCE-LINKED MODELED RANKING</span>
           <h2>{results.length} real Indian cards compared</h2>
           <p>
-            Current normalized product terms are sourced from official issuer pages and converted into
-            the same annual-value model. Change the profile and the ranking recalculates instantly.
+            Normalized product terms use official issuer sources with mixed verification dates.
+            October field corrections are recorded in the <a href="/updates/2026-10">research bulletin</a>.
+            Change the profile and the modeled ranking recalculates instantly.
           </p>
         </div>
         <div className={styles.verifiedStamp}>
           <ShieldCheck size={17}/>
-          <span><small>Database checked</small><b>{REAL_CARD_DATA_DATE}</b></span>
+          <span><small>Original dataset</small><b>{REAL_CARD_DATA_DATE}</b></span>
         </div>
       </div>
 
@@ -328,6 +164,12 @@ export default function RealCardRankingClient({ categorySlug, cards }: { categor
             <span>{categorySpendLabel(categorySlug)}</span>
             <div className={styles.moneyInput}><i>₹</i><input type="number" min="0" value={profile.monthlySpend} onChange={(e) => update('monthlySpend', Math.max(0, Number(e.target.value) || 0))}/></div>
           </label>
+
+          {cards.some(card => card.terms[categorySlug]?.baseCashbackCapMultiplier !== undefined) && categorySlug !== 'co-branded' && <label>
+            <span>Other eligible monthly spend (Airtel base cashback)</span>
+            <div className={styles.moneyInput}><i>₹</i><input type="number" min="0" value={profile.monthlyBaseSpend} onChange={e => update('monthlyBaseSpend', Math.max(0, Number(e.target.value) || 0))}/></div>
+            <small>Only qualifying 1% base spend in the same statement cycle unlocks the Airtel utility cap. Defaults to zero.</small>
+          </label>}
 
           <label>
             <span>Annual retail spend on the card</span>

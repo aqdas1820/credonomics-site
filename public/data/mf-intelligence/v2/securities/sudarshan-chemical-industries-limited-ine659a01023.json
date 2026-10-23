@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE659A01023",
+  "slug": "sudarshan-chemical-industries-limited-ine659a01023",
+  "isin": "INE659A01023",
+  "stock": "Sudarshan Chemical Industries Limited",
+  "sector": "Chemicals & Petrochemicals",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.285,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "weight": 1.71,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 1.71,
+      "normalizedWeight": 0.285,
+      "avgHeldWeight": 1.71
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 1.71,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Small Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

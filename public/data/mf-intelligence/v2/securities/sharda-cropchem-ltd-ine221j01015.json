@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE221J01015",
+  "slug": "sharda-cropchem-ltd-ine221j01015",
+  "isin": "INE221J01015",
+  "stock": "Sharda Cropchem Ltd.",
+  "sector": "Fertilizers & Agrochemicals",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.16166666666666665,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "weight": 0.97,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.97,
+      "normalizedWeight": 0.16166666666666665,
+      "avgHeldWeight": 0.97
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.97,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Small Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { calendarComparisonMonth, comparableSnapshots } from "../../../src/mf/comparison";
 import { useEffect, useMemo, useState } from "react";
 import { FinancialDataState } from "../../components/FinancialDataState";
 import { formatIsinCoverageDetail, formatTrustMetric } from "../../../src/mf/trust";
@@ -201,18 +202,6 @@ function delta(value: number) {
   return "0.00 pp";
 }
 
-function monthIndex(months: string[], month: string) {
-  return months.indexOf(month);
-}
-
-function compareMonth(months: string[], current: string, period: string) {
-  const idx = monthIndex(months, current);
-  if (idx < 0) return current;
-
-  const step = Number(period.replace("M", "")) || 1;
-  return months[Math.max(0, idx - step)] ?? current;
-}
-
 function downloadCsv(
   filename: string,
   rows: Record<string, string | number>[]
@@ -395,13 +384,13 @@ export default function MFPortfolioClient({
   const [drawerLoading, setDrawerLoading] = useState(false);
 
   const previousMonth = useMemo(
-    () => compareMonth(months, currentMonth, comparePeriod),
+    () => calendarComparisonMonth(currentMonth, comparePeriod),
     [months, currentMonth, comparePeriod]
   );
 
   useEffect(() => {
     async function loadMonth(month: string) {
-      if (!month || monthCache[month]) return;
+      if (!month || !months.includes(month) || monthCache[month]) return;
 
       try {
         const response = await fetch(`${DATA_ROOT}/by-month/${month}.json`, {
@@ -478,6 +467,8 @@ export default function MFPortfolioClient({
       setSelectedSector("All Sectors");
     }
   }, [sectors, selectedSector]);
+
+  const comparisonAvailable = comparableSnapshots(currentRows, previousRows, selectedScheme);
 
   const currentMap = useMemo(
     () => aggregate(currentRows, selectedScheme, selectedSector),
@@ -558,6 +549,7 @@ export default function MFPortfolioClient({
   }, [securities, search]);
 
   const movements = useMemo(() => {
+    if (!comparisonAvailable) return [];
     const ids = Array.from(
       new Set([...Array.from(currentMap.keys()), ...Array.from(previousMap.keys())])
     );
@@ -589,9 +581,10 @@ export default function MFPortfolioClient({
       })
       .filter((item) => item.status !== "Unchanged")
       .sort((a, b) => Math.abs(b.change) - Math.abs(a.change));
-  }, [currentMap, previousMap]);
+  }, [currentMap, previousMap, comparisonAvailable]);
 
   const sectorRotation = useMemo(() => {
+    if (!comparisonAvailable) return [];
     function sectorMap(rows: Holding[]) {
       const filtered = rows.filter((row) => {
         if (
@@ -638,7 +631,7 @@ export default function MFPortfolioClient({
         };
       })
       .sort((a, b) => b.current - a.current);
-  }, [currentRows, previousRows, selectedScheme]);
+  }, [currentRows, previousRows, selectedScheme, comparisonAvailable]);
 
   const matrixRows = useMemo(() => {
     if (selectedScheme !== "All Core Schemes") return [];
@@ -887,6 +880,8 @@ export default function MFPortfolioClient({
           </label>
         </section>
 
+        <aside className="mfPanel" aria-label="Portfolio source coverage"><p>Latest disclosure: 30 September 2026. Six core HDFC schemes, numeric Indian equity weights only. Positions reported as less than 0.01% remain in the source manifest. July and August snapshots are unavailable. Missing periods and unverified historical identities do not generate accumulation, reduction or exit signals. <a href="/data/mf-intelligence/v2/official-sources-2026-09.json">Source files and reconciliation</a></p></aside>
+
         <section className="mfStats">
           <article>
             <span>CLEAN SECURITIES</span>
@@ -905,13 +900,13 @@ export default function MFPortfolioClient({
           </article>
           <article>
             <span>INCREASED</span>
-            <strong>{stats.increased}</strong>
+            <strong>{comparisonAvailable ? stats.increased : "Unavailable"}</strong>
             <small>vs {humanMonth(previousMonth)}</small>
           </article>
           <article>
             <span>NEW / EXITS</span>
             <strong>
-              {stats.fresh} / {stats.exits}
+              {comparisonAvailable ? `${stats.fresh} / ${stats.exits}` : "Unavailable"}
             </strong>
             <small>stable security IDs</small>
           </article>
@@ -939,7 +934,7 @@ export default function MFPortfolioClient({
                       Sector: item.sector,
                       Schemes: item.schemeCount,
                       "Normalized Weight": item.normalizedWeight.toFixed(2),
-                      "Period Change": item.change.toFixed(2),
+                      "Period Change": comparisonAvailable ? item.change.toFixed(2) : "Unavailable",
                       "Consensus Score": item.score.toFixed(1),
                     }))
                   )
@@ -1001,7 +996,7 @@ export default function MFPortfolioClient({
                               : "change flat"
                           }
                         >
-                          {delta(item.change)}
+                          {comparisonAvailable ? delta(item.change) : "Unavailable"}
                         </span>
                       </td>
                       <td>
@@ -1039,14 +1034,14 @@ export default function MFPortfolioClient({
                     <em className={item.status.toLowerCase()}>
                       {item.status}
                     </em>
-                    <small>{delta(item.change)}</small>
+                    <small>{comparisonAvailable ? delta(item.change) : "Unavailable"}</small>
                   </div>
                 </button>
               ))}
 
               {!movements.length && (
                 <p className="mfEmpty">
-                  No material security-level changes for this comparison.
+                  {comparisonAvailable ? "No material security-level changes for this comparison." : "Comparison unavailable. Both calendar months need matching scheme coverage and verified security identities."}
                 </p>
               )}
             </div>
@@ -1143,7 +1138,7 @@ export default function MFPortfolioClient({
                       <i style={{ width: `${width}%` }} />
                     </div>
                     <small className={item.change >= 0 ? "upText" : "downText"}>
-                      {delta(item.change)} vs {humanMonth(previousMonth)}
+                      {comparisonAvailable ? delta(item.change) : "Unavailable"} vs {humanMonth(previousMonth)}
                     </small>
                   </div>
                 );
