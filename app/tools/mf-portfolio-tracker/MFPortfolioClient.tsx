@@ -678,6 +678,9 @@ export default function MFPortfolioClient({
 
   const activeSignals =
     signalGroups[signalTab as keyof typeof signalGroups] ?? [];
+  const latestSignalsAvailable = Boolean(
+    initialLatest.previousMonth && Object.keys(initialLatest.signals ?? {}).length
+  );
 
   const trust = initialIndex.trustMetadata;
   const isinDetail = formatIsinCoverageDetail(
@@ -786,7 +789,7 @@ export default function MFPortfolioClient({
                 aria-pressed={signalTab === label}
               >
                 {label}
-                <b>{initialLatest.signals ? values.length : "Unavailable"}</b>
+                <b>{latestSignalsAvailable ? values.length : "Unavailable"}</b>
               </button>
             ))}
           </div>
@@ -817,7 +820,7 @@ export default function MFPortfolioClient({
 
             {!activeSignals.length && (
               <div className="mfEmptySignal">
-                {initialLatest.signals
+                {latestSignalsAvailable
                   ? "No securities meet this strict signal definition in the latest clean snapshot."
                   : "Signals are unavailable because comparable monthly disclosures and verified historical identities are incomplete. Missing data is not evidence of no portfolio changes."}
               </div>
