@@ -19,15 +19,15 @@
 .visual{height:450px;width:100%;position:relative;--mx:0px;--my:0px;perspective:900px}
 .visualInner{position:absolute;inset:0;transform:translate3d(var(--mx),var(--my),0);transition:transform .26s ease-out}
 .orbitOuter,.orbitMiddle,.orbitInner{position:absolute;left:50%;top:47%;translate:-50% -50%;border-radius:50%;pointer-events:none}
-.orbitOuter{width:370px;height:370px;border:1px dashed rgba(152,234,207,.18);animation:rotate 57s linear infinite}
+.orbitOuter{width:370px;height:370px;border:1px dashed rgba(152,234,207,.18);animation:rotate 24s linear infinite}
 .orbitMiddle{width:296px;height:296px;border:1px solid rgba(136,237,202,.19)}
 .orbitInner{width:204px;height:204px;border:1px solid rgba(136,237,202,.17);background:radial-gradient(circle,rgba(64,220,168,.13),transparent 75%)}
-.orbitSpark{position:absolute;left:50%;top:calc(47% - 185px);height:8px;width:8px;border-radius:50%;background:#a3ffcf;box-shadow:0 0 18px #6feebe;transform-origin:0 185px;animation:orbit 28s linear infinite}
+.orbitSpark{position:absolute;left:50%;top:calc(47% - 185px);height:8px;width:8px;border-radius:50%;background:#a3ffcf;box-shadow:0 0 18px #6feebe;transform-origin:0 185px;animation:orbit 18s linear infinite}
 .core{position:absolute;left:50%;top:47%;translate:-50% -50%;width:152px;height:152px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:9px;border:1px solid rgba(140,253,215,.33);border-radius:50%;background:radial-gradient(circle at 40% 28%,#193c43,#081924 73%);box-shadow:0 0 0 16px rgba(102,239,183,.045),0 0 77px rgba(58,231,170,.22);animation:breathe 7s ease-in-out infinite}
 .core img{object-fit:contain;max-width:70px;max-height:70px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.15))}
 .core span{color:#e2fff0;font-size:8px;font-weight:900;letter-spacing:.17em}
 .glassCard{display:flex;align-items:flex-start;gap:11px;width:208px;position:absolute;z-index:3;border:1px solid rgba(177,231,216,.23);border-radius:14px;padding:13px;color:#f7fffc;background:rgba(13,30,41,.89);box-shadow:0 18px 42px rgba(0,0,0,.31);backdrop-filter:blur(12px);transition:border-color .3s ease,box-shadow .3s ease;animation:float 8s ease-in-out infinite}
-.glassCard:hover{border-color:rgba(115,251,196,.65);box-shadow:0 26px 48px rgba(0,0,0,.4);animation-play-state:paused}
+.glassCard:hover{border-color:rgba(115,251,196,.65);box-shadow:0 26px 48px rgba(0,0,0,.4)}
 .tileIcon{flex:0 0 29px;height:29px;display:grid;place-items:center;border-radius:9px;background:rgba(97,231,167,.11);color:#86f6bf}
 .tileCopy{min-width:0;display:flex;flex-direction:column;gap:5px}
 .tileCopy small{font-size:8px;font-weight:850;letter-spacing:.1em;color:#8bbcb0}
@@ -45,7 +45,7 @@
 @keyframes copyIn{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
 @keyframes float{0%,100%{translate:0 0}50%{translate:0 -9px}}
 @keyframes breathe{50%{box-shadow:0 0 0 21px rgba(102,239,183,.055),0 0 90px rgba(58,231,170,.3)}}
-@keyframes rotate{to{rotate:360deg}}
+@keyframes rotate{to{transform:rotate(360deg)}}
 @keyframes orbit{to{transform:rotate(360deg)}}
 @keyframes marquee{to{transform:translateX(-50%)}}
 @media(max-width:1100px){.stage{padding:34px 25px;grid-template-columns:minmax(0,1fr) minmax(350px,.95fr)}.copy h1{font-size:clamp(40px,4.7vw,56px)}.glassCard{width:195px}}
@@ -175,9 +175,6 @@
 }
 
 /* Keep the familiar orbit; compact controls and a static research ribbon on phones. */
-.motionToggle{position:absolute;z-index:5;right:0;top:0;min-height:44px;padding:8px 12px;border:1px solid #35566c;border-radius:9px;background:#0b1b2c;color:#c4d9e7;font:inherit;font-size:11px;cursor:pointer}
-.motionToggle:focus-visible,.stage a:focus-visible{outline:3px solid #6ce1f0;outline-offset:4px}
-.stage[data-motion-paused='true'] .orbitOuter,.stage[data-motion-paused='true'] .orbitSpark,.stage[data-motion-paused='true'] .core,.stage[data-motion-paused='true'] .glassCard{animation-play-state:paused}
 .ribbonTrack{width:100%}.ribbonSet{flex-wrap:wrap;gap:14px 24px;padding:0 12px}.ribbonSet span{font-size:9px;letter-spacing:.09em}
 @media(max-width:500px){
  .stage{padding:24px 16px 18px;gap:12px;min-height:0}
@@ -186,13 +183,19 @@
  .proof{margin-top:20px;gap:10px;font-size:9px}
  .primary,.secondary{min-height:44px;font-size:11px;flex:1 1 135px;padding:10px}
  .visual{height:325px;max-width:390px}
- .motionToggle{top:0;font-size:10px;min-height:44px}
  .researchCard{top:52px;left:0}.ipoCard{top:159px;right:0}.toolsCard{bottom:17px;left:0}
  .visualCaption{bottom:0;right:0;letter-spacing:.08em}
  .ribbonSet{gap:12px 18px;padding:0 4px}.ribbonSet span{font-size:8px}
 }
 @media(max-width:350px){.glassCard{width:145px}.tileIcon{display:none}.welcomeWordmark strong{letter-spacing:.1em}.orbitOuter{width:235px;height:235px}.orbitSpark{top:calc(47% - 117px);transform-origin:0 117px}}
-@media(prefers-reduced-motion:reduce){.motionToggle{display:none}}
 .stage .primary{color:#05242d;background:#6ce1f0;border-color:#6ce1f0}
 .stage .primary:hover{color:#05242d;background:#a2edf7}
 .stage .eyebrow{display:flex}
+
+/* Distinct markers make continuous movement legible on desktop and mobile. */
+.orbitOuter{border-top-color:rgba(108,225,240,.7);border-right-color:rgba(108,225,240,.35)}
+.orbitOuter::before,.orbitMiddle::after{content:'';position:absolute;left:50%;top:-4px;width:7px;height:7px;border-radius:50%;background:#6ce1f0;box-shadow:0 0 14px rgba(108,225,240,.7)}
+.stage .orbitMiddle{animation:rotate 36s linear infinite reverse;border-bottom-color:rgba(148,171,255,.5)}
+.orbitMiddle::after{background:#94abff;width:5px;height:5px;top:-3px}
+.stage a:focus-visible{outline:3px solid #6ce1f0;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){.stage .orbitMiddle{animation:none!important}}
