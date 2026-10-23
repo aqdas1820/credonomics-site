@@ -1,6 +1,7 @@
 import { ArrowUpRight, Search } from 'lucide-react'
 import { searchIndex } from '../data/search-index.generated'
 import styles from './homepage-discovery.module.css'
+import DiscoveryExplorer from './DiscoveryExplorer'
 
 export default function HomepageDiscovery() {
   const preferredCategories = [
@@ -12,12 +13,9 @@ export default function HomepageDiscovery() {
     'Tools',
   ]
 
-  const entries = preferredCategories
-    .map((category) =>
-      searchIndex.find((entry) => entry.category === category),
-    )
-    .filter(Boolean)
-    .slice(0, 4)
+  const entries = searchIndex
+    .filter(entry => preferredCategories.includes(entry.category))
+    .map(({ id, title, description, href, category, source, updated }) => ({ id, title, description, href, category, source, updated }))
 
   return (
     <section className={styles.section} aria-label="Explore CredoNomics intelligence">
@@ -44,18 +42,7 @@ export default function HomepageDiscovery() {
           </div>
         </div>
 
-        <div className={styles.grid}>
-          {entries.map((entry) => (
-            <a href={entry!.href} className={styles.card} key={entry!.id}>
-              <span>{entry!.category}</span>
-              <strong>{entry!.title}</strong>
-              <small>
-                {entry!.source}
-                {entry!.updated ? ` · ${entry!.updated}` : ''}
-              </small>
-            </a>
-          ))}
-        </div>
+        <DiscoveryExplorer entries={entries} />
       </div>
     </section>
   )
