@@ -53,6 +53,6 @@ export default function SiteExperience() {
   return <aside className="cn-context" aria-label={`${family[1]} framework`}>
     <span className="cn-context-name"><i aria-hidden="true" />{family[1]}</span>
     <span className="cn-context-flow" aria-label="Conceptual workflow">{family.slice(2).map((label, index) => <span key={label}>{index > 0 && <b aria-hidden="true">→</b>}{label}</span>)}</span>
-    <PageSectionNav />
+    <PageSectionNav key={pathname} />
   </aside>
 }
