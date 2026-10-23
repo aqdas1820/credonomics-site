@@ -85,7 +85,7 @@ function classify(route) {
   if (route === '/') return 'Platform'
   if (route === '/discover') return 'Discovery'
   if (route.startsWith('/reports')) return 'Reports'
-  if (route.startsWith('/research')) return 'Research'
+  if (route.startsWith('/research') || route.startsWith('/updates')) return 'Research'
   if (route.startsWith('/ipo')) return 'IPO'
   if (route === '/mutual-funds') return 'Mutual Funds'
   if (route.startsWith('/tools/mf-portfolio-tracker')) return 'Mutual Funds'

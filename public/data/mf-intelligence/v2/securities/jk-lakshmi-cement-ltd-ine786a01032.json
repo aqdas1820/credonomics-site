@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE786A01032",
+  "slug": "jk-lakshmi-cement-ltd-ine786a01032",
+  "isin": "INE786A01032",
+  "stock": "JK Lakshmi Cement Ltd",
+  "sector": "Cement & Cement Products",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.03833333333333334,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "weight": 0.23,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.23,
+      "normalizedWeight": 0.03833333333333334,
+      "avgHeldWeight": 0.23
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.23,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Flexi Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

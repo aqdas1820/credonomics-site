@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE364U01010",
+  "slug": "adani-green-energy-limited-ine364u01010",
+  "isin": "INE364U01010",
+  "stock": "Adani Green Energy Limited",
+  "sector": "Power",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.3933333333333333,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Focused Fund",
+      "weight": 2.36,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 2.36,
+      "normalizedWeight": 0.3933333333333333,
+      "avgHeldWeight": 2.36
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Focused Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 2.36,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Focused Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

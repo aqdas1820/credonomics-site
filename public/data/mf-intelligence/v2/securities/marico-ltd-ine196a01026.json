@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE196A01026",
+  "slug": "marico-ltd-ine196a01026",
+  "isin": "INE196A01026",
+  "stock": "Marico Ltd.",
+  "sector": "Agricultural Food & Other Products",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.395,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "weight": 2.37,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 2.37,
+      "normalizedWeight": 0.395,
+      "avgHeldWeight": 2.37
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Mid Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 2.37,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Mid Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,508 @@
+{
+  "edition": "2026-10",
+  "checkedAt": "2026-10-23",
+  "baselineCommit": "f2f41546350dee37378b9119d0b2fd6bffe864d0",
+  "scope": "Public data and presentation only. Authentication, contributions, banking, security policies and financial records were not modified.",
+  "routePatterns": [
+    {
+      "route": "/",
+      "source": "app/page.tsx",
+      "family": "Homepage / company / policy information"
+    },
+    {
+      "route": "/about",
+      "source": "app/about/page.tsx",
+      "family": "Homepage / company / policy information"
+    },
+    {
+      "route": "/account",
+      "source": "app/account/page.tsx",
+      "family": "Protected application boundary; unchanged"
+    },
+    {
+      "route": "/alerts",
+      "source": "app/alerts/page.tsx",
+      "family": "Protected application boundary; unchanged"
+    },
+    {
+      "route": "/cards",
+      "source": "app/cards/page.tsx",
+      "family": "Credit cards"
+    },
+    {
+      "route": "/cards/[slug]",
+      "source": "app/cards/[slug]/page.tsx",
+      "family": "Credit cards"
+    },
+    {
+      "route": "/cards/all",
+      "source": "app/cards/all/page.tsx",
+      "family": "Credit cards"
+    },
+    {
+      "route": "/cards/analyzer",
+      "source": "app/cards/analyzer/page.tsx",
+      "family": "Credit cards"
+    },
+    {
+      "route": "/cards/compare",
+      "source": "app/cards/compare/page.tsx",
+      "family": "Credit cards"
+    },
+    {
+      "route": "/cards/coverage",
+      "source": "app/cards/coverage/page.tsx",
+      "family": "Credit cards"
+    },
+    {
+      "route": "/cards/issuer/[slug]",
+      "source": "app/cards/issuer/[slug]/page.tsx",
+      "family": "Credit cards"
+    },
+    {
+      "route": "/contact",
+      "source": "app/contact/page.tsx",
+      "family": "Homepage / company / policy information"
+    },
+    {
+      "route": "/corrections",
+      "source": "app/corrections/page.tsx",
+      "family": "Homepage / company / policy information"
+    },
+    {
+      "route": "/disclosures",
+      "source": "app/disclosures/page.tsx",
+      "family": "Homepage / company / policy information"
+    },
+    {
+      "route": "/discover",
+      "source": "app/discover/page.tsx",
+      "family": "Discovery and search"
+    },
+    {
+      "route": "/ipo",
+      "source": "app/ipo/page.tsx",
+      "family": "IPO intelligence"
+    },
+    {
+      "route": "/ipo/[slug]",
+      "source": "app/ipo/[slug]/page.tsx",
+      "family": "IPO intelligence"
+    },
+    {
+      "route": "/ipo/analyzer",
+      "source": "app/ipo/analyzer/page.tsx",
+      "family": "IPO intelligence"
+    },
+    {
+      "route": "/ipo/calendar",
+      "source": "app/ipo/calendar/page.tsx",
+      "family": "IPO intelligence"
+    },
+    {
+      "route": "/ipo/company/[slug]",
+      "source": "app/ipo/company/[slug]/page.tsx",
+      "family": "IPO intelligence"
+    },
+    {
+      "route": "/ipo/current",
+      "source": "app/ipo/current/page.tsx",
+      "family": "IPO intelligence"
+    },
+    {
+      "route": "/ipo/documents",
+      "source": "app/ipo/documents/page.tsx",
+      "family": "IPO intelligence"
+    },
+    {
+      "route": "/ipo/mainboard",
+      "source": "app/ipo/mainboard/page.tsx",
+      "family": "IPO intelligence"
+    },
+    {
+      "route": "/ipo/methodology",
+      "source": "app/ipo/methodology/page.tsx",
+      "family": "IPO intelligence"
+    },
+    {
+      "route": "/ipo/sme",
+      "source": "app/ipo/sme/page.tsx",
+      "family": "IPO intelligence"
+    },
+    {
+      "route": "/ipo/subscription",
+      "source": "app/ipo/subscription/page.tsx",
+      "family": "IPO intelligence"
+    },
+    {
+      "route": "/ipo/upcoming",
+      "source": "app/ipo/upcoming/page.tsx",
+      "family": "IPO intelligence"
+    },
+    {
+      "route": "/markets",
+      "source": "app/markets/page.tsx",
+      "family": "Markets and instruments"
+    },
+    {
+      "route": "/methodology",
+      "source": "app/methodology/page.tsx",
+      "family": "Homepage / company / policy information"
+    },
+    {
+      "route": "/mutual-funds",
+      "source": "app/mutual-funds/page.tsx",
+      "family": "Mutual funds"
+    },
+    {
+      "route": "/official",
+      "source": "app/official/page.tsx",
+      "family": "Homepage / company / policy information"
+    },
+    {
+      "route": "/privacy",
+      "source": "app/privacy/page.tsx",
+      "family": "Homepage / company / policy information"
+    },
+    {
+      "route": "/reports",
+      "source": "app/reports/page.tsx",
+      "family": "Research and publications"
+    },
+    {
+      "route": "/reports/monthly-indian-equity-opportunity-report-august-2026",
+      "source": "app/reports/monthly-indian-equity-opportunity-report-august-2026/page.tsx",
+      "family": "Research and publications"
+    },
+    {
+      "route": "/research",
+      "source": "app/research/page.tsx",
+      "family": "Research and publications"
+    },
+    {
+      "route": "/research/articles/[slug]",
+      "source": "app/research/articles/[slug]/page.tsx",
+      "family": "Research and publications"
+    },
+    {
+      "route": "/research/card-scoring",
+      "source": "app/research/card-scoring/page.tsx",
+      "family": "Research and publications"
+    },
+    {
+      "route": "/research/credit-card-data-standard",
+      "source": "app/research/credit-card-data-standard/page.tsx",
+      "family": "Research and publications"
+    },
+    {
+      "route": "/search",
+      "source": "app/search/page.tsx",
+      "family": "Discovery and search"
+    },
+    {
+      "route": "/stocks/[exchange]/[symbol]",
+      "source": "app/stocks/[exchange]/[symbol]/page.tsx",
+      "family": "Markets and instruments"
+    },
+    {
+      "route": "/stocks/search",
+      "source": "app/stocks/search/page.tsx",
+      "family": "Markets and instruments"
+    },
+    {
+      "route": "/terms",
+      "source": "app/terms/page.tsx",
+      "family": "Homepage / company / policy information"
+    },
+    {
+      "route": "/tools",
+      "source": "app/tools/page.tsx",
+      "family": "Calculators and decision tools"
+    },
+    {
+      "route": "/tools/annual-fee-break-even",
+      "source": "app/tools/annual-fee-break-even/page.tsx",
+      "family": "Calculators and decision tools"
+    },
+    {
+      "route": "/tools/cashback-calculator",
+      "source": "app/tools/cashback-calculator/page.tsx",
+      "family": "Calculators and decision tools"
+    },
+    {
+      "route": "/tools/cashback-cap",
+      "source": "app/tools/cashback-cap/page.tsx",
+      "family": "Calculators and decision tools"
+    },
+    {
+      "route": "/tools/credit-card-finder",
+      "source": "app/tools/credit-card-finder/page.tsx",
+      "family": "Calculators and decision tools"
+    },
+    {
+      "route": "/tools/fuel-card-optimizer",
+      "source": "app/tools/fuel-card-optimizer/page.tsx",
+      "family": "Calculators and decision tools"
+    },
+    {
+      "route": "/tools/fuel-surcharge-waiver",
+      "source": "app/tools/fuel-surcharge-waiver/page.tsx",
+      "family": "Calculators and decision tools"
+    },
+    {
+      "route": "/tools/mf-portfolio-tracker",
+      "source": "app/tools/mf-portfolio-tracker/page.tsx",
+      "family": "Mutual funds"
+    },
+    {
+      "route": "/tools/reward-point-value",
+      "source": "app/tools/reward-point-value/page.tsx",
+      "family": "Calculators and decision tools"
+    },
+    {
+      "route": "/updates/2026-10",
+      "source": "app/updates/2026-10/page.tsx",
+      "family": "Research and publications"
+    },
+    {
+      "route": "/watchlist",
+      "source": "app/watchlist/page.tsx",
+      "family": "Protected application boundary; unchanged"
+    }
+  ],
+  "dynamicCoverage": {
+    "creditCardRecords": 24,
+    "cardCategoryModels": 16,
+    "ipoMarketRecords": 2,
+    "ipoDiscoveryRecords": 31,
+    "mutualFundSchemes": 6,
+    "equityInstrumentRecords": 14384
+  },
+  "cards": {
+    "originalFullRecordCheck": "2026-08-10",
+    "fieldReviewDate": "2026-10-23",
+    "reviewedFieldCardIds": [
+      "bpcl-sbi-octane",
+      "bpcl-sbi",
+      "indianoil-axis",
+      "first-power-plus",
+      "sbi-miles",
+      "tata-neu-infinity-sbi",
+      "indianoil-hdfc",
+      "millennia-hdfc",
+      "axis-ace",
+      "airtel-axis",
+      "hsbc-live-plus",
+      "flipkart-sbi",
+      "swiggy-hdfc",
+      "cashback-sbi"
+    ],
+    "companionCorrections": [
+      "sbi-miles-prime"
+    ],
+    "heldFromSomeRupeeRankings": [
+      "first-power",
+      "indigo-axis",
+      "indigo-axis-premium"
+    ],
+    "fullRecordReverificationNotClaimed": true,
+    "remainingFullRecordReviewIds": [
+      "axis-cashback",
+      "amazon-pay-icici",
+      "flipkart-axis",
+      "freecharge-plus-axis",
+      "tata-neu-infinity-hdfc",
+      "tata-neu-plus-sbi",
+      "first-power",
+      "sbi-miles-prime",
+      "indigo-axis",
+      "indigo-axis-premium"
+    ],
+    "catalogue": {
+      "generatedAt": "2026-10-23T15:41:37.775Z",
+      "sourceCount": 14,
+      "successfulSources": 12,
+      "failedSources": 2,
+      "recordCount": 251,
+      "failedIssuers": [
+        "HDFC Bank",
+        "American Express India"
+      ],
+      "note": "Automatically extracted from official issuer catalogue/product pages. Verify source before acting."
+    },
+    "source": "/updates/2026-10",
+    "note": "Issuer catalogue extraction is discovery evidence, not a validated financial ranking. Original per-card dates remain visible. Named field corrections do not certify every term."
+  },
+  "mutualFunds": {
+    "latestDisclosureMonth": "2026-09",
+    "lastImport": {
+      "month": "2026-09",
+      "holdings": 634,
+      "schemes": 6,
+      "isinCoveragePercent": 100,
+      "missingMonths": [
+        "2026-07",
+        "2026-08"
+      ]
+    },
+    "latestNumericEquityPositions": 634,
+    "historyQuality": "PARTIAL",
+    "legacySnapshots": [
+      {
+        "month": "2025-01",
+        "unchanged": true,
+        "sha256": "f6b8cfdd8c2408924bcbba95284f1afeac1001d600f61090516f87fa89261f48"
+      },
+      {
+        "month": "2025-02",
+        "unchanged": true,
+        "sha256": "976090a258184fc118f23fccc53c6b2e98b47272925e9938d95e414ddbc7d767"
+      },
+      {
+        "month": "2025-03",
+        "unchanged": true,
+        "sha256": "c0a06c78ec60343942ebbcb721e3639e485df32afa8151f712ef0d01cefbbc8d"
+      },
+      {
+        "month": "2025-04",
+        "unchanged": true,
+        "sha256": "49f078bd9eafd7b893ef373807de8a664c3831071651badb8e8eb950680d758a"
+      },
+      {
+        "month": "2025-05",
+        "unchanged": true,
+        "sha256": "603f23cc71f42947988b44608aea3282970382f0290c2911e72550a0c7c6fdee"
+      },
+      {
+        "month": "2025-06",
+        "unchanged": true,
+        "sha256": "f4481572ba4ac71da36cf8fadb3212fc5c4eab669a431b10248fa9744ef1fb5e"
+      },
+      {
+        "month": "2025-07",
+        "unchanged": true,
+        "sha256": "1288a636f3f7a7a20f74c3e8efa4c3cf7632808b75c830cb4d1488d9dcb1e1a8"
+      },
+      {
+        "month": "2025-08",
+        "unchanged": true,
+        "sha256": "e902d19359c636b7a42feee29fb754f5429592681be384ba029f57434ed6a1ca"
+      },
+      {
+        "month": "2025-09",
+        "unchanged": true,
+        "sha256": "9c5980eccba5e2b6539d11f6ec5c3c292cd891cd1c615bd3fef70f5a395ee07c"
+      },
+      {
+        "month": "2025-10",
+        "unchanged": true,
+        "sha256": "8dacc4cacbfc92758d7a0d1b325106e64f5af07d1cd8661cb3314d83af59082a"
+      },
+      {
+        "month": "2025-11",
+        "unchanged": true,
+        "sha256": "f12aad1791adcd856110d3438f2a406ca935afdc57a5fddd727cae05c29c5e35"
+      },
+      {
+        "month": "2025-12",
+        "unchanged": true,
+        "sha256": "c5a27608c15684431ffe096af8af9f37ebe81e3914aafa61281fd0d6223ba6a4"
+      },
+      {
+        "month": "2026-01",
+        "unchanged": true,
+        "sha256": "ba7ee4920835b25da1e25630fab0cb554e9d2c8fe4e020da4ebf25692cae2ecd"
+      },
+      {
+        "month": "2026-02",
+        "unchanged": true,
+        "sha256": "2bfaaa4dd1b0375f1f0bb0d386b916ab4ae5d5fc3976f784312174a14f69528c"
+      },
+      {
+        "month": "2026-03",
+        "unchanged": true,
+        "sha256": "d22a65507bb92d17705dcd5696e97787c0e4085322b4f5d4fccb27618ea968c8"
+      },
+      {
+        "month": "2026-04",
+        "unchanged": true,
+        "sha256": "5734b69183722c18471445eac69d83e86807e2ee4a193f9cb5772894ce5da4e2"
+      },
+      {
+        "month": "2026-05",
+        "unchanged": true,
+        "sha256": "b781d2638f7cd9ed4c87c5fc6bb745e541ff473500fea3ca07be8f0f67c61232"
+      },
+      {
+        "month": "2026-06",
+        "unchanged": true,
+        "sha256": "a6ceb6d0437d276c02dbc363dc17e373b6d4c4922afeac3a5c634159f05250ec"
+      }
+    ],
+    "sourceManifest": "/data/mf-intelligence/v2/official-sources-2026-09.json",
+    "limitation": "Six HDFC schemes only. Numeric Indian equity weights only; sub-0.01% positions are unquantified in the source manifest. July/August unavailable. No unverified NAME-to-ISIN joins or inferred month-on-month trades."
+  },
+  "instruments": {
+    "source": "Upstox BOD NSE/BSE JSON instrument masters",
+    "generatedAt": "2026-10-23T14:52:53.188Z",
+    "counts": {
+      "raw": 111446,
+      "valid": 14384,
+      "rejected": 97062,
+      "duplicates": 0,
+      "nse": 3161,
+      "bse": 11223,
+      "validIsin": 14384
+    },
+    "sources": [
+      {
+        "exchange": "NSE",
+        "url": "https://assets.upstox.com/market-quote/instruments/exchange/NSE.json.gz",
+        "downloadedAt": "2026-10-23T14:52:44.275Z",
+        "rawRows": 82615,
+        "sha256": "d419488454fa38803ef853da006236733398509770ea060d27a4fbd347ab98ed"
+      },
+      {
+        "exchange": "BSE",
+        "url": "https://assets.upstox.com/market-quote/instruments/exchange/BSE.json.gz",
+        "downloadedAt": "2026-10-23T14:52:53.087Z",
+        "rawRows": 28831,
+        "sha256": "56f3eab069aa913298abd567417a667868bc2e3d7886d813e2ef93de2781c53b"
+      }
+    ],
+    "limitation": "Instrument identity refresh is separate from live quote availability. Uses the existing validator; no new completeness or asset-class certification is claimed."
+  },
+  "ipo": {
+    "market": {
+      "generatedAt": "2026-10-23T15:41:39.147Z",
+      "recordCount": 2,
+      "nseCount": 2,
+      "bseCount": 0,
+      "activeCount": 2,
+      "upcomingCount": 0,
+      "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard unavailable"
+    },
+    "filings": {
+      "generatedAt": "2026-10-23T15:43:28.364Z",
+      "source": "SEBI Public Issues",
+      "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
+      "recordCount": 31,
+      "note": "Discovery layer only. Financial ranking requires separately normalized offer-document data."
+    },
+    "limitation": "Official exchange/filing refresh preserves source provenance. BSE/SME gaps remain explicit; filing records are not treated as confirmed issue calendars."
+  },
+  "researchAndReports": {
+    "priorPublication": "August 2026",
+    "preserved": true,
+    "addedPublication": "/updates/2026-10",
+    "note": "Historical publication and source dates retained; no new equity price targets or performance data invented."
+  },
+  "tools": {
+    "formulas": "Existing calculators retained. Card reward-model corrections are separately tested and documented.",
+    "assumptions": "User inputs; not automatically refreshed tax, fee or investment recommendations."
+  },
+  "informationalAndProtectedRoutes": {
+    "informational": "Identity, policy and regulatory wording retained.",
+    "protected": "Account, authentication, alerts, watchlist and payment integrations unchanged."
+  }
+}

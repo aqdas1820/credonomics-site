@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE371P01015",
+  "slug": "amber-enterprises-india-ltd-ine371p01015",
+  "isin": "INE371P01015",
+  "stock": "Amber Enterprises India Ltd.",
+  "sector": "Consumer Durables",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.21666666666666667,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Focused Fund",
+      "weight": 1.3,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 1.3,
+      "normalizedWeight": 0.21666666666666667,
+      "avgHeldWeight": 1.3
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Focused Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 1.3,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Focused Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

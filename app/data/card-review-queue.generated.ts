@@ -10,30 +10,14 @@ export type CardReviewQueueItem = {
 }
 
 export const cardReviewQueueMeta = {
-  "generatedAt": "2026-10-22T07:39:57.849Z",
+  "generatedAt": "2026-10-23T15:43:28.281Z",
   "itemCount": 250,
-  "newCardCandidates": 220,
-  "possibleFeeChanges": 7,
+  "newCardCandidates": 224,
+  "possibleFeeChanges": 3,
   "reviewDue": 23
 } as const
 
 export const cardReviewQueue: CardReviewQueueItem[] = [
-  {
-    "id": "34fdaead1cf8",
-    "type": "possible-fee-change",
-    "issuer": "Axis Bank",
-    "name": "Airtel Axis Bank Credit Card",
-    "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
-    "message": "Automated discovery detected fee ₹5,00,000 versus verified ₹500. Human review required."
-  },
-  {
-    "id": "a9d36ea97ef9",
-    "type": "possible-fee-change",
-    "issuer": "Axis Bank",
-    "name": "Axis Bank ACE Credit Card",
-    "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
-    "message": "Automated discovery detected fee ₹4,99,000 versus verified ₹499. Human review required."
-  },
   {
     "id": "686ba2013cdc",
     "type": "possible-fee-change",
@@ -43,28 +27,12 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Automated discovery detected fee ₹0 versus verified ₹350. Human review required."
   },
   {
-    "id": "6702218d0be5",
-    "type": "possible-fee-change",
-    "issuer": "Axis Bank",
-    "name": "INDIANOIL AXIS BANK Credit Card",
-    "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
-    "message": "Automated discovery detected fee ₹5,00,000 versus verified ₹500. Human review required."
-  },
-  {
     "id": "59eae2d6525f",
     "type": "possible-fee-change",
     "issuer": "Axis Bank",
     "name": "IndiGo Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "message": "Automated discovery detected fee ₹0 versus verified ₹799. Human review required."
-  },
-  {
-    "id": "9a142d5db2b7",
-    "type": "possible-fee-change",
-    "issuer": "Axis Bank",
-    "name": "IndiGo Axis Bank Premium Credit Card",
-    "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
-    "message": "Automated discovery detected fee ₹50,00,000 versus verified ₹5,000. Human review required."
   },
   {
     "id": "c9f7d437a174",
@@ -80,7 +48,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "Airtel Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card/airtel-axis-bank-credit-card",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "a34d74a1ab38",
@@ -88,7 +56,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "Axis Bank ACE Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card/axis-bank-ace-credit-card",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "95bf15b41fb6",
@@ -96,7 +64,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "Axis Bank Cashback Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card/cashback-credit-card",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "8e19dccda58d",
@@ -104,7 +72,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "Axis Bank Freecharge Plus Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card/axis-bank-freecharge-plus-credit-card",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "ef636d37f625",
@@ -112,7 +80,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "Flipkart Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card/flipkart-axisbank-credit-card",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "f6b94d0b4d0c",
@@ -120,7 +88,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "IndianOil Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card/indianoil-axis-bank-credit-card",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "4b880bc42a00",
@@ -128,7 +96,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "IndiGo Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card/indigo-axis-bank-credit-card",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "87187c96b340",
@@ -136,7 +104,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "IndiGo Axis Bank Premium Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card/indigo-axis-bank-premium-credit-card",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "c3a09682e781",
@@ -144,7 +112,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "HDFC Bank",
     "name": "HDFC Bank Millennia Credit Card",
     "sourceUrl": "https://www.hdfc.bank.in/credit-cards/millennia-credit-card",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "0b5127d595dd",
@@ -152,7 +120,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "HDFC Bank",
     "name": "IndianOil HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfc.bank.in/credit-cards/indianoil-hdfc-bank-credit-card",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "9e75b86fd0e8",
@@ -160,7 +128,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "HDFC Bank",
     "name": "Swiggy HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfc.bank.in/credit-cards/swiggy-hdfc-bank-credit-card",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "2c6885831af8",
@@ -168,7 +136,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "HDFC Bank",
     "name": "Tata Neu Infinity HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "344eaa9a18a8",
@@ -176,7 +144,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "HSBC India",
     "name": "HSBC Live+ Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/live-plus/",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "676c780658cd",
@@ -184,7 +152,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "ICICI Bank",
     "name": "Amazon Pay ICICI Bank Credit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/amazon-pay-credit-card/amazon-pay-faq",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "4b779b015011",
@@ -192,7 +160,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "IDFC FIRST Bank",
     "name": "FIRST Power+ Credit Card",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "4c9ae6a95feb",
@@ -200,7 +168,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "BPCL SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/credit-cards/bpcl-sbi-card.html",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "5258a50a5a16",
@@ -208,7 +176,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "BPCL SBI Card OCTANE",
     "sourceUrl": "https://www.sbicard.com/en/personal/credit-cards/bpcl-sbi-card-octane.html",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "1b619ab3d37a",
@@ -216,7 +184,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "CASHBACK SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/credit-cards/cashback-sbi-card.html",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "2291efddaaf4",
@@ -224,7 +192,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "Flipkart SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/credit-cards/flipkart-sbi-card.html",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "8211f45eb43d",
@@ -232,7 +200,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "SBI Card MILES",
     "sourceUrl": "https://www.sbicard.com/en/personal/credit-cards/sbi-card-miles.html",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "3f26730a7ed9",
@@ -240,7 +208,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "SBI Card MILES PRIME",
     "sourceUrl": "https://www.sbicard.com/en/personal/credit-cards/sbi-card-miles-prime.html",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "c87997f09e0f",
@@ -248,7 +216,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "Tata Neu Infinity SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/credit-cards/tata-neu-infinity-sbi-card.html",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "e1d061604b13",
@@ -256,7 +224,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "Tata Neu Plus SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/credit-cards/tata-neu-plus-sbi-card.html",
-    "message": "Verified record is 73 days old and is due for source review."
+    "message": "Verified record is 74 days old and is due for source review."
   },
   {
     "id": "dc1216894379",
@@ -851,6 +819,14 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
+    "id": "2d1dc98ec8d4",
+    "type": "new-card-candidate",
+    "issuer": "Federal Bank",
+    "name": "Additional details about Add-on Card ?",
+    "sourceUrl": "https://www.federal.bank.in/add-on-cards",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
     "id": "ddae892ac916",
     "type": "new-card-candidate",
     "issuer": "Federal Bank",
@@ -867,6 +843,14 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
+    "id": "222a7aa822c5",
+    "type": "new-card-candidate",
+    "issuer": "Federal Bank",
+    "name": "Credit Card Debt Settlement Process- How it Works",
+    "sourceUrl": "https://www.federal.bank.in/credit-card-debt-settlement-process-how-it-works",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
     "id": "bcaba0357615",
     "type": "new-card-candidate",
     "issuer": "Federal Bank",
@@ -875,11 +859,27 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
+    "id": "15b570d31e1d",
+    "type": "new-card-candidate",
+    "issuer": "Federal Bank",
+    "name": "Debit Cards Vs Credit Cards",
+    "sourceUrl": "https://www.federal.bank.in/difference-between-debit-cards-and-credit-cards",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
     "id": "29f29fff34a0",
     "type": "new-card-candidate",
     "issuer": "Federal Bank",
     "name": "Documents Required for Credit Card",
     "sourceUrl": "https://www.federal.bank.in/credit-cards",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "a5e4d19e0ab2",
+    "type": "new-card-candidate",
+    "issuer": "Federal Bank",
+    "name": "Everything you should know about Add-On Credit Cards",
+    "sourceUrl": "https://www.federal.bank.in/everything-you-should-know-about-add-on-credit-cards",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
@@ -899,6 +899,22 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
+    "id": "07c5ae0c3521",
+    "type": "new-card-candidate",
+    "issuer": "Federal Bank",
+    "name": "Lost your federal bank card? Here are the ways to block it.",
+    "sourceUrl": "https://www.federal.bank.in/ways-to-block-a-lost-federal-bank-card",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "7a4a67290ad0",
+    "type": "new-card-candidate",
+    "issuer": "Federal Bank",
+    "name": "Prevent your Credit Card from unauthorised use",
+    "sourceUrl": "https://www.federal.bank.in/prevent-your-credit-card-from-unauthorised-use",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
     "id": "efed675a2dd9",
     "type": "new-card-candidate",
     "issuer": "Federal Bank",
@@ -912,6 +928,30 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Federal Bank",
     "name": "Step-by-Step Process to Apply for Credit Card",
     "sourceUrl": "https://www.federal.bank.in/credit-card-activation",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "f0837eb064a9",
+    "type": "new-card-candidate",
+    "issuer": "Federal Bank",
+    "name": "Things to Know Before Applying for a Credit Card",
+    "sourceUrl": "https://www.federal.bank.in/credit-cards-mitc",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "eeb8652d258a",
+    "type": "new-card-candidate",
+    "issuer": "Federal Bank",
+    "name": "Understand the Components of your Credit Card",
+    "sourceUrl": "https://www.federal.bank.in/understand-the-components-of-your-credit-card",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "607a3c6bcdef",
+    "type": "new-card-candidate",
+    "issuer": "Federal Bank",
+    "name": "Unlocking the Secret of Credit Card EMI- How to Buy Now and Pay Later",
+    "sourceUrl": "https://www.federal.bank.in/unlocking-the-secret-of-credit-card-emi-how-to-buy-now-and-pay-later",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
@@ -1515,6 +1555,14 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
+    "id": "67ebff0c6328",
+    "type": "new-card-candidate",
+    "issuer": "IndusInd Bank",
+    "name": "Can I Use My Indusind Bank Credit Card For International Transactions?",
+    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
     "id": "1907e0fd95e6",
     "type": "new-card-candidate",
     "issuer": "IndusInd Bank",
@@ -1567,14 +1615,6 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "type": "new-card-candidate",
     "issuer": "IndusInd Bank",
     "name": "Credit Card Interest Rates",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "2a84889e1b78",
-    "type": "new-card-candidate",
-    "issuer": "IndusInd Bank",
-    "name": "Credit Card Safety and Usage Tips",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
@@ -1731,10 +1771,10 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
-    "id": "0da531a8892e",
+    "id": "ae7dac97b311",
     "type": "new-card-candidate",
     "issuer": "IndusInd Bank",
-    "name": "Is a credit card a good option for buying jewellery within a ₹50,000 budget?",
+    "name": "Key Terms Related to Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
@@ -1835,14 +1875,6 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
-    "id": "b42212c5252b",
-    "type": "new-card-candidate",
-    "issuer": "IndusInd Bank",
-    "name": "Steps to apply for a Credit Card Online",
-    "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
     "id": "2a7b9402c78d",
     "type": "new-card-candidate",
     "issuer": "IndusInd Bank",
@@ -1851,18 +1883,18 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
-    "id": "5d4d23ea95b6",
+    "id": "a156941d18be",
     "type": "new-card-candidate",
     "issuer": "IndusInd Bank",
-    "name": "Types of Credit Cards",
+    "name": "Track Credit card application Status Online",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
-    "id": "5db083011f41",
+    "id": "5d4d23ea95b6",
     "type": "new-card-candidate",
     "issuer": "IndusInd Bank",
-    "name": "Which IndusInd Bank credit cards offer unlimited complimentary lounge access?",
+    "name": "Types of Credit Cards",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
@@ -1984,38 +2016,6 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "SimplyCLICK SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "0e4909eca445",
-    "type": "new-card-candidate",
-    "issuer": "SBI Card",
-    "name": "SimplySAVE SBI Card",
-    "sourceUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "212c54f7627c",
-    "type": "new-card-candidate",
-    "issuer": "Standard Chartered India",
-    "name": "DigiSmart Credit Card",
-    "sourceUrl": "https://www.sc.com/in/credit-cards/",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "7023d535d53e",
-    "type": "new-card-candidate",
-    "issuer": "Standard Chartered India",
-    "name": "Discover endless benefits & privileges with our range of Credit Cards",
-    "sourceUrl": "https://www.sc.com/in/credit-cards/",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "d8444721020a",
-    "type": "new-card-candidate",
-    "issuer": "Standard Chartered India",
-    "name": "Manhattan Credit Card",
-    "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   }
 ]

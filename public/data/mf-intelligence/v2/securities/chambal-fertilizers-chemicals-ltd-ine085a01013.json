@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE085A01013",
+  "slug": "chambal-fertilizers-chemicals-ltd-ine085a01013",
+  "isin": "INE085A01013",
+  "stock": "Chambal Fertilizers & Chemicals Ltd.",
+  "sector": "Fertilizers & Agrochemicals",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.14333333333333334,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "weight": 0.86,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 0.86,
+      "normalizedWeight": 0.14333333333333334,
+      "avgHeldWeight": 0.86
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Small Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 0.86,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Small Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

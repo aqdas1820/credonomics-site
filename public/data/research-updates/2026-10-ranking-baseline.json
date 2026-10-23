@@ -1,0 +1,2895 @@
+{
+  "baselineCommit": "f2f41546350dee37378b9119d0b2fd6bffe864d0",
+  "label": "Published model before October audit; not a historical issuer league table",
+  "scenarios": [
+    {
+      "category": "cashback",
+      "monthlySpend": 10000,
+      "profile": {
+        "monthlySpend": 10000,
+        "annualRetailSpend": 240000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "cashback-sbi",
+          "name": "CASHBACK SBI Card",
+          "rank": 1,
+          "netValue": 6000
+        },
+        {
+          "id": "amazon-pay-icici",
+          "name": "Amazon Pay ICICI Bank Credit Card",
+          "rank": 2,
+          "netValue": 6000
+        },
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 3,
+          "netValue": 6000
+        },
+        {
+          "id": "millennia-hdfc",
+          "name": "HDFC Bank Millennia Credit Card",
+          "rank": 4,
+          "netValue": 6000
+        },
+        {
+          "id": "flipkart-axis",
+          "name": "Flipkart Axis Bank Credit Card",
+          "rank": 5,
+          "netValue": 5410
+        },
+        {
+          "id": "flipkart-sbi",
+          "name": "Flipkart SBI Card",
+          "rank": 6,
+          "netValue": 5410
+        },
+        {
+          "id": "axis-cashback",
+          "name": "Axis Bank Cashback Credit Card",
+          "rank": 7,
+          "netValue": 3020
+        },
+        {
+          "id": "axis-ace",
+          "name": "Axis Bank ACE Credit Card",
+          "rank": 8,
+          "netValue": 1800
+        },
+        {
+          "id": "hsbc-live-plus",
+          "name": "HSBC Live+ Credit Card",
+          "rank": 9,
+          "netValue": 1800
+        },
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 10,
+          "netValue": 1200
+        },
+        {
+          "id": "freecharge-plus-axis",
+          "name": "Axis Bank Freecharge Plus Credit Card",
+          "rank": 11,
+          "netValue": 1200
+        }
+      ]
+    },
+    {
+      "category": "shopping",
+      "monthlySpend": 10000,
+      "profile": {
+        "monthlySpend": 10000,
+        "annualRetailSpend": 240000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "cashback-sbi",
+          "name": "CASHBACK SBI Card",
+          "rank": 1,
+          "netValue": 6000
+        },
+        {
+          "id": "amazon-pay-icici",
+          "name": "Amazon Pay ICICI Bank Credit Card",
+          "rank": 2,
+          "netValue": 6000
+        },
+        {
+          "id": "freecharge-plus-axis",
+          "name": "Axis Bank Freecharge Plus Credit Card",
+          "rank": 3,
+          "netValue": 6000
+        },
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 4,
+          "netValue": 6000
+        },
+        {
+          "id": "millennia-hdfc",
+          "name": "HDFC Bank Millennia Credit Card",
+          "rank": 5,
+          "netValue": 6000
+        },
+        {
+          "id": "flipkart-axis",
+          "name": "Flipkart Axis Bank Credit Card",
+          "rank": 6,
+          "netValue": 5410
+        },
+        {
+          "id": "flipkart-sbi",
+          "name": "Flipkart SBI Card",
+          "rank": 7,
+          "netValue": 5410
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 8,
+          "netValue": 4231.18
+        },
+        {
+          "id": "axis-cashback",
+          "name": "Axis Bank Cashback Credit Card",
+          "rank": 9,
+          "netValue": 3020
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 10,
+          "netValue": 2400
+        },
+        {
+          "id": "indianoil-axis",
+          "name": "IndianOil Axis Bank Credit Card",
+          "rank": 11,
+          "netValue": 10
+        }
+      ]
+    },
+    {
+      "category": "grocery",
+      "monthlySpend": 10000,
+      "profile": {
+        "monthlySpend": 10000,
+        "annualRetailSpend": 240000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "hsbc-live-plus",
+          "name": "HSBC Live+ Credit Card",
+          "rank": 1,
+          "netValue": 12000
+        },
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 2,
+          "netValue": 12000
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 3,
+          "netValue": 6000
+        },
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 4,
+          "netValue": 4231.18
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 5,
+          "netValue": 4231.18
+        },
+        {
+          "id": "bpcl-sbi-octane",
+          "name": "BPCL SBI Card OCTANE",
+          "rank": 6,
+          "netValue": 3000
+        },
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 7,
+          "netValue": 3000
+        },
+        {
+          "id": "bpcl-sbi",
+          "name": "BPCL SBI Card",
+          "rank": 8,
+          "netValue": 1500
+        },
+        {
+          "id": "indigo-axis",
+          "name": "IndiGo Axis Bank Credit Card",
+          "rank": 9,
+          "netValue": 1457.18
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 10,
+          "netValue": 1152
+        }
+      ]
+    },
+    {
+      "category": "dining",
+      "monthlySpend": 10000,
+      "profile": {
+        "monthlySpend": 10000,
+        "annualRetailSpend": 240000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "hsbc-live-plus",
+          "name": "HSBC Live+ Credit Card",
+          "rank": 1,
+          "netValue": 12000
+        },
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 2,
+          "netValue": 12000
+        },
+        {
+          "id": "millennia-hdfc",
+          "name": "HDFC Bank Millennia Credit Card",
+          "rank": 3,
+          "netValue": 6000
+        },
+        {
+          "id": "axis-ace",
+          "name": "Axis Bank ACE Credit Card",
+          "rank": 4,
+          "netValue": 4800
+        },
+        {
+          "id": "bpcl-sbi-octane",
+          "name": "BPCL SBI Card OCTANE",
+          "rank": 5,
+          "netValue": 3000
+        },
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 6,
+          "netValue": 2400
+        },
+        {
+          "id": "bpcl-sbi",
+          "name": "BPCL SBI Card",
+          "rank": 7,
+          "netValue": 1500
+        },
+        {
+          "id": "indigo-axis",
+          "name": "IndiGo Axis Bank Credit Card",
+          "rank": 8,
+          "netValue": 1457.18
+        }
+      ]
+    },
+    {
+      "category": "utilities",
+      "monthlySpend": 10000,
+      "profile": {
+        "monthlySpend": 10000,
+        "annualRetailSpend": 240000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 1,
+          "netValue": 12000
+        },
+        {
+          "id": "axis-ace",
+          "name": "Axis Bank ACE Credit Card",
+          "rank": 2,
+          "netValue": 6000
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 3,
+          "netValue": 6000
+        },
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 4,
+          "netValue": 4231.18
+        },
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 5,
+          "netValue": 3000
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 6,
+          "netValue": 1152
+        },
+        {
+          "id": "axis-cashback",
+          "name": "Axis Bank Cashback Credit Card",
+          "rank": 7,
+          "netValue": -580
+        }
+      ]
+    },
+    {
+      "category": "co-branded",
+      "monthlySpend": 10000,
+      "profile": {
+        "monthlySpend": 10000,
+        "annualRetailSpend": 240000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 1,
+          "netValue": 21360
+        },
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 2,
+          "netValue": 8760
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 3,
+          "netValue": 5460
+        },
+        {
+          "id": "bpcl-sbi-octane",
+          "name": "BPCL SBI Card OCTANE",
+          "rank": 4,
+          "netValue": 5250
+        },
+        {
+          "id": "amazon-pay-icici",
+          "name": "Amazon Pay ICICI Bank Credit Card",
+          "rank": 5,
+          "netValue": 4560
+        },
+        {
+          "id": "freecharge-plus-axis",
+          "name": "Axis Bank Freecharge Plus Credit Card",
+          "rank": 6,
+          "netValue": 4560
+        },
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 7,
+          "netValue": 4200
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 8,
+          "netValue": 4200
+        },
+        {
+          "id": "flipkart-axis",
+          "name": "Flipkart Axis Bank Credit Card",
+          "rank": 9,
+          "netValue": 3970
+        },
+        {
+          "id": "flipkart-sbi",
+          "name": "Flipkart SBI Card",
+          "rank": 10,
+          "netValue": 3970
+        },
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 11,
+          "netValue": 2971.1800000000003
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 12,
+          "netValue": 2971.1800000000003
+        },
+        {
+          "id": "indianoil-axis",
+          "name": "IndianOil Axis Bank Credit Card",
+          "rank": 13,
+          "netValue": 2770
+        },
+        {
+          "id": "bpcl-sbi",
+          "name": "BPCL SBI Card",
+          "rank": 14,
+          "netValue": 2730
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 15,
+          "netValue": 2040
+        },
+        {
+          "id": "indigo-axis",
+          "name": "IndiGo Axis Bank Credit Card",
+          "rank": 16,
+          "netValue": 1577.18
+        },
+        {
+          "id": "indigo-axis-premium",
+          "name": "IndiGo Axis Bank Premium Credit Card",
+          "rank": 17,
+          "netValue": -20
+        }
+      ]
+    },
+    {
+      "category": "fuel",
+      "monthlySpend": 10000,
+      "profile": {
+        "monthlySpend": 10000,
+        "annualRetailSpend": 240000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "bpcl-sbi-octane",
+          "name": "BPCL SBI Card OCTANE",
+          "rank": 1,
+          "netValue": 8700
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 2,
+          "netValue": 7800
+        },
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 3,
+          "netValue": 6000
+        },
+        {
+          "id": "bpcl-sbi",
+          "name": "BPCL SBI Card",
+          "rank": 4,
+          "netValue": 5100
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 5,
+          "netValue": 2928
+        },
+        {
+          "id": "indianoil-axis",
+          "name": "IndianOil Axis Bank Credit Card",
+          "rank": 6,
+          "netValue": 2410
+        },
+        {
+          "id": "cashback-sbi",
+          "name": "CASHBACK SBI Card",
+          "rank": 7,
+          "netValue": 1200
+        },
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 8,
+          "netValue": 1200
+        },
+        {
+          "id": "axis-ace",
+          "name": "Axis Bank ACE Credit Card",
+          "rank": 9,
+          "netValue": 1200
+        },
+        {
+          "id": "millennia-hdfc",
+          "name": "HDFC Bank Millennia Credit Card",
+          "rank": 10,
+          "netValue": 1200
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 11,
+          "netValue": 1200
+        },
+        {
+          "id": "flipkart-axis",
+          "name": "Flipkart Axis Bank Credit Card",
+          "rank": 12,
+          "netValue": 610
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 13,
+          "netValue": -568.8199999999999
+        }
+      ]
+    },
+    {
+      "category": "travel",
+      "monthlySpend": 10000,
+      "profile": {
+        "monthlySpend": 10000,
+        "annualRetailSpend": 240000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "indigo-axis-premium",
+          "name": "IndiGo Axis Bank Premium Credit Card",
+          "rank": 1,
+          "netValue": 7500
+        },
+        {
+          "id": "indigo-axis",
+          "name": "IndiGo Axis Bank Credit Card",
+          "rank": 2,
+          "netValue": 5457.18
+        },
+        {
+          "id": "sbi-miles-prime",
+          "name": "SBI Card MILES PRIME",
+          "rank": 3,
+          "netValue": 561.1800000000003
+        },
+        {
+          "id": "sbi-miles",
+          "name": "SBI Card MILES",
+          "rank": 4,
+          "netValue": -768.8199999999999
+        }
+      ]
+    },
+    {
+      "category": "forex",
+      "monthlySpend": 10000,
+      "profile": {
+        "monthlySpend": 10000,
+        "annualRetailSpend": 240000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 1,
+          "netValue": -2258.8199999999997
+        },
+        {
+          "id": "sbi-miles",
+          "name": "SBI Card MILES",
+          "rank": 2,
+          "netValue": -4268.82
+        },
+        {
+          "id": "sbi-miles-prime",
+          "name": "SBI Card MILES PRIME",
+          "rank": 3,
+          "netValue": -5038.82
+        }
+      ]
+    },
+    {
+      "category": "upi",
+      "monthlySpend": 10000,
+      "profile": {
+        "monthlySpend": 10000,
+        "annualRetailSpend": 240000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 1,
+          "netValue": 1800
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 2,
+          "netValue": 1200
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 3,
+          "netValue": 768
+        },
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 4,
+          "netValue": 31.180000000000064
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 5,
+          "netValue": 31.180000000000064
+        }
+      ]
+    },
+    {
+      "category": "premium",
+      "monthlySpend": 10000,
+      "profile": {
+        "monthlySpend": 10000,
+        "annualRetailSpend": 240000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 1,
+          "netValue": 8431.18
+        },
+        {
+          "id": "indigo-axis-premium",
+          "name": "IndiGo Axis Bank Premium Credit Card",
+          "rank": 2,
+          "netValue": 7500
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 3,
+          "netValue": 6441.18
+        },
+        {
+          "id": "sbi-miles-prime",
+          "name": "SBI Card MILES PRIME",
+          "rank": 4,
+          "netValue": 561.1800000000003
+        }
+      ]
+    },
+    {
+      "category": "lifetime-free",
+      "monthlySpend": 10000,
+      "profile": {
+        "monthlySpend": 10000,
+        "annualRetailSpend": 240000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "amazon-pay-icici",
+          "name": "Amazon Pay ICICI Bank Credit Card",
+          "rank": 1,
+          "netValue": 1200
+        }
+      ]
+    },
+    {
+      "category": "low-fee",
+      "monthlySpend": 10000,
+      "profile": {
+        "monthlySpend": 10000,
+        "annualRetailSpend": 240000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "cashback-sbi",
+          "name": "CASHBACK SBI Card",
+          "rank": 1,
+          "netValue": 6000
+        },
+        {
+          "id": "amazon-pay-icici",
+          "name": "Amazon Pay ICICI Bank Credit Card",
+          "rank": 2,
+          "netValue": 6000
+        },
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 3,
+          "netValue": 6000
+        },
+        {
+          "id": "millennia-hdfc",
+          "name": "HDFC Bank Millennia Credit Card",
+          "rank": 4,
+          "netValue": 6000
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 5,
+          "netValue": 6000
+        },
+        {
+          "id": "flipkart-axis",
+          "name": "Flipkart Axis Bank Credit Card",
+          "rank": 6,
+          "netValue": 5410
+        },
+        {
+          "id": "flipkart-sbi",
+          "name": "Flipkart SBI Card",
+          "rank": 7,
+          "netValue": 5410
+        },
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 8,
+          "netValue": 3000
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 9,
+          "netValue": 2400
+        },
+        {
+          "id": "axis-ace",
+          "name": "Axis Bank ACE Credit Card",
+          "rank": 10,
+          "netValue": 1800
+        },
+        {
+          "id": "hsbc-live-plus",
+          "name": "HSBC Live+ Credit Card",
+          "rank": 11,
+          "netValue": 1800
+        },
+        {
+          "id": "bpcl-sbi",
+          "name": "BPCL SBI Card",
+          "rank": 12,
+          "netValue": 1500
+        },
+        {
+          "id": "indigo-axis",
+          "name": "IndiGo Axis Bank Credit Card",
+          "rank": 13,
+          "netValue": 1457.18
+        },
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 14,
+          "netValue": 1200
+        },
+        {
+          "id": "freecharge-plus-axis",
+          "name": "Axis Bank Freecharge Plus Credit Card",
+          "rank": 15,
+          "netValue": 1200
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 16,
+          "netValue": 1152
+        },
+        {
+          "id": "indianoil-axis",
+          "name": "IndianOil Axis Bank Credit Card",
+          "rank": 17,
+          "netValue": 610
+        }
+      ]
+    },
+    {
+      "category": "beginner",
+      "monthlySpend": 10000,
+      "profile": {
+        "monthlySpend": 10000,
+        "annualRetailSpend": 240000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 1,
+          "netValue": 3000
+        }
+      ]
+    },
+    {
+      "category": "lounge",
+      "monthlySpend": 10000,
+      "profile": {
+        "monthlySpend": 10000,
+        "annualRetailSpend": 240000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 1,
+          "netValue": 2800
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 2,
+          "netValue": 2800
+        },
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 3,
+          "netValue": 2431.1800000000003
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 4,
+          "netValue": 2431.1800000000003
+        },
+        {
+          "id": "sbi-miles",
+          "name": "SBI Card MILES",
+          "rank": 5,
+          "netValue": 1031.18
+        },
+        {
+          "id": "sbi-miles-prime",
+          "name": "SBI Card MILES PRIME",
+          "rank": 6,
+          "netValue": 661.1800000000003
+        }
+      ]
+    },
+    {
+      "category": "business",
+      "monthlySpend": 10000,
+      "profile": {
+        "monthlySpend": 10000,
+        "annualRetailSpend": 240000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": []
+    },
+    {
+      "category": "cashback",
+      "monthlySpend": 30000,
+      "profile": {
+        "monthlySpend": 30000,
+        "annualRetailSpend": 480000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "cashback-sbi",
+          "name": "CASHBACK SBI Card",
+          "rank": 1,
+          "netValue": 18000
+        },
+        {
+          "id": "amazon-pay-icici",
+          "name": "Amazon Pay ICICI Bank Credit Card",
+          "rank": 2,
+          "netValue": 18000
+        },
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 3,
+          "netValue": 18000
+        },
+        {
+          "id": "millennia-hdfc",
+          "name": "HDFC Bank Millennia Credit Card",
+          "rank": 4,
+          "netValue": 18000
+        },
+        {
+          "id": "flipkart-sbi",
+          "name": "Flipkart SBI Card",
+          "rank": 5,
+          "netValue": 18000
+        },
+        {
+          "id": "axis-cashback",
+          "name": "Axis Bank Cashback Credit Card",
+          "rank": 6,
+          "netValue": 16200
+        },
+        {
+          "id": "flipkart-axis",
+          "name": "Flipkart Axis Bank Credit Card",
+          "rank": 7,
+          "netValue": 16000
+        },
+        {
+          "id": "axis-ace",
+          "name": "Axis Bank ACE Credit Card",
+          "rank": 8,
+          "netValue": 5400
+        },
+        {
+          "id": "hsbc-live-plus",
+          "name": "HSBC Live+ Credit Card",
+          "rank": 9,
+          "netValue": 5400
+        },
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 10,
+          "netValue": 3600
+        },
+        {
+          "id": "freecharge-plus-axis",
+          "name": "Axis Bank Freecharge Plus Credit Card",
+          "rank": 11,
+          "netValue": 3600
+        }
+      ]
+    },
+    {
+      "category": "shopping",
+      "monthlySpend": 30000,
+      "profile": {
+        "monthlySpend": 30000,
+        "annualRetailSpend": 480000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "cashback-sbi",
+          "name": "CASHBACK SBI Card",
+          "rank": 1,
+          "netValue": 18000
+        },
+        {
+          "id": "amazon-pay-icici",
+          "name": "Amazon Pay ICICI Bank Credit Card",
+          "rank": 2,
+          "netValue": 18000
+        },
+        {
+          "id": "freecharge-plus-axis",
+          "name": "Axis Bank Freecharge Plus Credit Card",
+          "rank": 3,
+          "netValue": 18000
+        },
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 4,
+          "netValue": 18000
+        },
+        {
+          "id": "millennia-hdfc",
+          "name": "HDFC Bank Millennia Credit Card",
+          "rank": 5,
+          "netValue": 18000
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 6,
+          "netValue": 18000
+        },
+        {
+          "id": "flipkart-sbi",
+          "name": "Flipkart SBI Card",
+          "rank": 7,
+          "netValue": 18000
+        },
+        {
+          "id": "axis-cashback",
+          "name": "Axis Bank Cashback Credit Card",
+          "rank": 8,
+          "netValue": 16200
+        },
+        {
+          "id": "flipkart-axis",
+          "name": "Flipkart Axis Bank Credit Card",
+          "rank": 9,
+          "netValue": 16000
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 10,
+          "netValue": 7200
+        },
+        {
+          "id": "indianoil-axis",
+          "name": "IndianOil Axis Bank Credit Card",
+          "rank": 11,
+          "netValue": 600
+        }
+      ]
+    },
+    {
+      "category": "grocery",
+      "monthlySpend": 30000,
+      "profile": {
+        "monthlySpend": 30000,
+        "annualRetailSpend": 480000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 1,
+          "netValue": 18000
+        },
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 2,
+          "netValue": 18000
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 3,
+          "netValue": 18000
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 4,
+          "netValue": 18000
+        },
+        {
+          "id": "hsbc-live-plus",
+          "name": "HSBC Live+ Credit Card",
+          "rank": 5,
+          "netValue": 12000
+        },
+        {
+          "id": "bpcl-sbi-octane",
+          "name": "BPCL SBI Card OCTANE",
+          "rank": 6,
+          "netValue": 9000
+        },
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 7,
+          "netValue": 9000
+        },
+        {
+          "id": "indigo-axis",
+          "name": "IndiGo Axis Bank Credit Card",
+          "rank": 8,
+          "netValue": 6257.18
+        },
+        {
+          "id": "bpcl-sbi",
+          "name": "BPCL SBI Card",
+          "rank": 9,
+          "netValue": 4500
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 10,
+          "netValue": 1152
+        }
+      ]
+    },
+    {
+      "category": "dining",
+      "monthlySpend": 30000,
+      "profile": {
+        "monthlySpend": 30000,
+        "annualRetailSpend": 480000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 1,
+          "netValue": 18000
+        },
+        {
+          "id": "millennia-hdfc",
+          "name": "HDFC Bank Millennia Credit Card",
+          "rank": 2,
+          "netValue": 18000
+        },
+        {
+          "id": "axis-ace",
+          "name": "Axis Bank ACE Credit Card",
+          "rank": 3,
+          "netValue": 14400
+        },
+        {
+          "id": "hsbc-live-plus",
+          "name": "HSBC Live+ Credit Card",
+          "rank": 4,
+          "netValue": 12000
+        },
+        {
+          "id": "bpcl-sbi-octane",
+          "name": "BPCL SBI Card OCTANE",
+          "rank": 5,
+          "netValue": 9000
+        },
+        {
+          "id": "indigo-axis",
+          "name": "IndiGo Axis Bank Credit Card",
+          "rank": 6,
+          "netValue": 6257.18
+        },
+        {
+          "id": "bpcl-sbi",
+          "name": "BPCL SBI Card",
+          "rank": 7,
+          "netValue": 4500
+        },
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 8,
+          "netValue": 2400
+        }
+      ]
+    },
+    {
+      "category": "utilities",
+      "monthlySpend": 30000,
+      "profile": {
+        "monthlySpend": 30000,
+        "annualRetailSpend": 480000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 1,
+          "netValue": 36000
+        },
+        {
+          "id": "axis-ace",
+          "name": "Axis Bank ACE Credit Card",
+          "rank": 2,
+          "netValue": 18000
+        },
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 3,
+          "netValue": 18000
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 4,
+          "netValue": 18000
+        },
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 5,
+          "netValue": 9000
+        },
+        {
+          "id": "axis-cashback",
+          "name": "Axis Bank Cashback Credit Card",
+          "rank": 6,
+          "netValue": 1200
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 7,
+          "netValue": 1152
+        }
+      ]
+    },
+    {
+      "category": "co-branded",
+      "monthlySpend": 30000,
+      "profile": {
+        "monthlySpend": 30000,
+        "annualRetailSpend": 480000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 1,
+          "netValue": 64079.99999999999
+        },
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 2,
+          "netValue": 26279.999999999996
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 3,
+          "netValue": 16379.999999999998
+        },
+        {
+          "id": "bpcl-sbi-octane",
+          "name": "BPCL SBI Card OCTANE",
+          "rank": 4,
+          "netValue": 15749.999999999998
+        },
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 5,
+          "netValue": 14219.999999999998
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 6,
+          "netValue": 14219.999999999998
+        },
+        {
+          "id": "amazon-pay-icici",
+          "name": "Amazon Pay ICICI Bank Credit Card",
+          "rank": 7,
+          "netValue": 13679.999999999998
+        },
+        {
+          "id": "flipkart-axis",
+          "name": "Flipkart Axis Bank Credit Card",
+          "rank": 8,
+          "netValue": 13679.999999999998
+        },
+        {
+          "id": "freecharge-plus-axis",
+          "name": "Axis Bank Freecharge Plus Credit Card",
+          "rank": 9,
+          "netValue": 13679.999999999998
+        },
+        {
+          "id": "flipkart-sbi",
+          "name": "Flipkart SBI Card",
+          "rank": 10,
+          "netValue": 13679.999999999998
+        },
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 11,
+          "netValue": 12599.999999999998
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 12,
+          "netValue": 12599.999999999998
+        },
+        {
+          "id": "indigo-axis-premium",
+          "name": "IndiGo Axis Bank Premium Credit Card",
+          "rank": 13,
+          "netValue": 11739.999999999996
+        },
+        {
+          "id": "indianoil-axis",
+          "name": "IndianOil Axis Bank Credit Card",
+          "rank": 14,
+          "netValue": 10079.999999999998
+        },
+        {
+          "id": "bpcl-sbi",
+          "name": "BPCL SBI Card",
+          "rank": 15,
+          "netValue": 8189.999999999999
+        },
+        {
+          "id": "indigo-axis",
+          "name": "IndiGo Axis Bank Credit Card",
+          "rank": 16,
+          "netValue": 6617.179999999999
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 17,
+          "netValue": 6119.999999999999
+        }
+      ]
+    },
+    {
+      "category": "fuel",
+      "monthlySpend": 30000,
+      "profile": {
+        "monthlySpend": 30000,
+        "annualRetailSpend": 480000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 1,
+          "netValue": 23400
+        },
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 2,
+          "netValue": 18000
+        },
+        {
+          "id": "bpcl-sbi-octane",
+          "name": "BPCL SBI Card OCTANE",
+          "rank": 3,
+          "netValue": 8700
+        },
+        {
+          "id": "bpcl-sbi",
+          "name": "BPCL SBI Card",
+          "rank": 4,
+          "netValue": 5100
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 5,
+          "netValue": 4728
+        },
+        {
+          "id": "flipkart-axis",
+          "name": "Flipkart Axis Bank Credit Card",
+          "rank": 6,
+          "netValue": 3600
+        },
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 7,
+          "netValue": 3600
+        },
+        {
+          "id": "axis-ace",
+          "name": "Axis Bank ACE Credit Card",
+          "rank": 8,
+          "netValue": 3600
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 9,
+          "netValue": 3600
+        },
+        {
+          "id": "millennia-hdfc",
+          "name": "HDFC Bank Millennia Credit Card",
+          "rank": 10,
+          "netValue": 3000
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 11,
+          "netValue": 3000
+        },
+        {
+          "id": "indianoil-axis",
+          "name": "IndianOil Axis Bank Credit Card",
+          "rank": 12,
+          "netValue": 3000
+        },
+        {
+          "id": "cashback-sbi",
+          "name": "CASHBACK SBI Card",
+          "rank": 13,
+          "netValue": 1200
+        }
+      ]
+    },
+    {
+      "category": "travel",
+      "monthlySpend": 30000,
+      "profile": {
+        "monthlySpend": 30000,
+        "annualRetailSpend": 480000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "indigo-axis-premium",
+          "name": "IndiGo Axis Bank Premium Credit Card",
+          "rank": 1,
+          "netValue": 24300
+        },
+        {
+          "id": "indigo-axis",
+          "name": "IndiGo Axis Bank Credit Card",
+          "rank": 2,
+          "netValue": 12657.18
+        },
+        {
+          "id": "sbi-miles-prime",
+          "name": "SBI Card MILES PRIME",
+          "rank": 3,
+          "netValue": 5361.18
+        },
+        {
+          "id": "sbi-miles",
+          "name": "SBI Card MILES",
+          "rank": 4,
+          "netValue": 1631.18
+        }
+      ]
+    },
+    {
+      "category": "forex",
+      "monthlySpend": 30000,
+      "profile": {
+        "monthlySpend": 30000,
+        "annualRetailSpend": 480000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 1,
+          "netValue": -490
+        },
+        {
+          "id": "sbi-miles",
+          "name": "SBI Card MILES",
+          "rank": 2,
+          "netValue": -4268.82
+        },
+        {
+          "id": "sbi-miles-prime",
+          "name": "SBI Card MILES PRIME",
+          "rank": 3,
+          "netValue": -5038.82
+        }
+      ]
+    },
+    {
+      "category": "upi",
+      "monthlySpend": 30000,
+      "profile": {
+        "monthlySpend": 30000,
+        "annualRetailSpend": 480000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 1,
+          "netValue": 5400
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 2,
+          "netValue": 5400
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 3,
+          "netValue": 5400
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 4,
+          "netValue": 3600
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 5,
+          "netValue": 2304
+        }
+      ]
+    },
+    {
+      "category": "premium",
+      "monthlySpend": 30000,
+      "profile": {
+        "monthlySpend": 30000,
+        "annualRetailSpend": 480000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "indigo-axis-premium",
+          "name": "IndiGo Axis Bank Premium Credit Card",
+          "rank": 1,
+          "netValue": 24300
+        },
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 2,
+          "netValue": 22200
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 3,
+          "netValue": 20210
+        },
+        {
+          "id": "sbi-miles-prime",
+          "name": "SBI Card MILES PRIME",
+          "rank": 4,
+          "netValue": 5361.18
+        }
+      ]
+    },
+    {
+      "category": "lifetime-free",
+      "monthlySpend": 30000,
+      "profile": {
+        "monthlySpend": 30000,
+        "annualRetailSpend": 480000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "amazon-pay-icici",
+          "name": "Amazon Pay ICICI Bank Credit Card",
+          "rank": 1,
+          "netValue": 3600
+        }
+      ]
+    },
+    {
+      "category": "low-fee",
+      "monthlySpend": 30000,
+      "profile": {
+        "monthlySpend": 30000,
+        "annualRetailSpend": 480000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "cashback-sbi",
+          "name": "CASHBACK SBI Card",
+          "rank": 1,
+          "netValue": 18000
+        },
+        {
+          "id": "amazon-pay-icici",
+          "name": "Amazon Pay ICICI Bank Credit Card",
+          "rank": 2,
+          "netValue": 18000
+        },
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 3,
+          "netValue": 18000
+        },
+        {
+          "id": "millennia-hdfc",
+          "name": "HDFC Bank Millennia Credit Card",
+          "rank": 4,
+          "netValue": 18000
+        },
+        {
+          "id": "flipkart-sbi",
+          "name": "Flipkart SBI Card",
+          "rank": 5,
+          "netValue": 18000
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 6,
+          "netValue": 18000
+        },
+        {
+          "id": "flipkart-axis",
+          "name": "Flipkart Axis Bank Credit Card",
+          "rank": 7,
+          "netValue": 16000
+        },
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 8,
+          "netValue": 9000
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 9,
+          "netValue": 7200
+        },
+        {
+          "id": "indigo-axis",
+          "name": "IndiGo Axis Bank Credit Card",
+          "rank": 10,
+          "netValue": 6257.18
+        },
+        {
+          "id": "axis-ace",
+          "name": "Axis Bank ACE Credit Card",
+          "rank": 11,
+          "netValue": 5400
+        },
+        {
+          "id": "hsbc-live-plus",
+          "name": "HSBC Live+ Credit Card",
+          "rank": 12,
+          "netValue": 5400
+        },
+        {
+          "id": "bpcl-sbi",
+          "name": "BPCL SBI Card",
+          "rank": 13,
+          "netValue": 4500
+        },
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 14,
+          "netValue": 3600
+        },
+        {
+          "id": "freecharge-plus-axis",
+          "name": "Axis Bank Freecharge Plus Credit Card",
+          "rank": 15,
+          "netValue": 3600
+        },
+        {
+          "id": "indianoil-axis",
+          "name": "IndianOil Axis Bank Credit Card",
+          "rank": 16,
+          "netValue": 3600
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 17,
+          "netValue": 1152
+        }
+      ]
+    },
+    {
+      "category": "beginner",
+      "monthlySpend": 30000,
+      "profile": {
+        "monthlySpend": 30000,
+        "annualRetailSpend": 480000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 1,
+          "netValue": 9000
+        }
+      ]
+    },
+    {
+      "category": "lounge",
+      "monthlySpend": 30000,
+      "profile": {
+        "monthlySpend": 30000,
+        "annualRetailSpend": 480000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 1,
+          "netValue": 4200
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 2,
+          "netValue": 4200
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 3,
+          "netValue": 2800
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 4,
+          "netValue": 2800
+        },
+        {
+          "id": "sbi-miles",
+          "name": "SBI Card MILES",
+          "rank": 5,
+          "netValue": 1031.18
+        },
+        {
+          "id": "sbi-miles-prime",
+          "name": "SBI Card MILES PRIME",
+          "rank": 6,
+          "netValue": 661.1800000000003
+        }
+      ]
+    },
+    {
+      "category": "business",
+      "monthlySpend": 30000,
+      "profile": {
+        "monthlySpend": 30000,
+        "annualRetailSpend": 480000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": []
+    },
+    {
+      "category": "cashback",
+      "monthlySpend": 50000,
+      "profile": {
+        "monthlySpend": 50000,
+        "annualRetailSpend": 720000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "axis-cashback",
+          "name": "Axis Bank Cashback Credit Card",
+          "rank": 1,
+          "netValue": 30600
+        },
+        {
+          "id": "amazon-pay-icici",
+          "name": "Amazon Pay ICICI Bank Credit Card",
+          "rank": 2,
+          "netValue": 30000
+        },
+        {
+          "id": "millennia-hdfc",
+          "name": "HDFC Bank Millennia Credit Card",
+          "rank": 3,
+          "netValue": 30000
+        },
+        {
+          "id": "flipkart-sbi",
+          "name": "Flipkart SBI Card",
+          "rank": 4,
+          "netValue": 30000
+        },
+        {
+          "id": "cashback-sbi",
+          "name": "CASHBACK SBI Card",
+          "rank": 5,
+          "netValue": 24000
+        },
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 6,
+          "netValue": 18000
+        },
+        {
+          "id": "flipkart-axis",
+          "name": "Flipkart Axis Bank Credit Card",
+          "rank": 7,
+          "netValue": 16000
+        },
+        {
+          "id": "axis-ace",
+          "name": "Axis Bank ACE Credit Card",
+          "rank": 8,
+          "netValue": 9000
+        },
+        {
+          "id": "hsbc-live-plus",
+          "name": "HSBC Live+ Credit Card",
+          "rank": 9,
+          "netValue": 9000
+        },
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 10,
+          "netValue": 6000
+        },
+        {
+          "id": "freecharge-plus-axis",
+          "name": "Axis Bank Freecharge Plus Credit Card",
+          "rank": 11,
+          "netValue": 6000
+        }
+      ]
+    },
+    {
+      "category": "shopping",
+      "monthlySpend": 50000,
+      "profile": {
+        "monthlySpend": 50000,
+        "annualRetailSpend": 720000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "axis-cashback",
+          "name": "Axis Bank Cashback Credit Card",
+          "rank": 1,
+          "netValue": 30600
+        },
+        {
+          "id": "amazon-pay-icici",
+          "name": "Amazon Pay ICICI Bank Credit Card",
+          "rank": 2,
+          "netValue": 30000
+        },
+        {
+          "id": "freecharge-plus-axis",
+          "name": "Axis Bank Freecharge Plus Credit Card",
+          "rank": 3,
+          "netValue": 30000
+        },
+        {
+          "id": "millennia-hdfc",
+          "name": "HDFC Bank Millennia Credit Card",
+          "rank": 4,
+          "netValue": 30000
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 5,
+          "netValue": 30000
+        },
+        {
+          "id": "flipkart-sbi",
+          "name": "Flipkart SBI Card",
+          "rank": 6,
+          "netValue": 30000
+        },
+        {
+          "id": "cashback-sbi",
+          "name": "CASHBACK SBI Card",
+          "rank": 7,
+          "netValue": 24000
+        },
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 8,
+          "netValue": 18000
+        },
+        {
+          "id": "flipkart-axis",
+          "name": "Flipkart Axis Bank Credit Card",
+          "rank": 9,
+          "netValue": 16000
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 10,
+          "netValue": 12000
+        },
+        {
+          "id": "indianoil-axis",
+          "name": "IndianOil Axis Bank Credit Card",
+          "rank": 11,
+          "netValue": 600
+        }
+      ]
+    },
+    {
+      "category": "grocery",
+      "monthlySpend": 50000,
+      "profile": {
+        "monthlySpend": 50000,
+        "annualRetailSpend": 720000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 1,
+          "netValue": 30000
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 2,
+          "netValue": 30000
+        },
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 3,
+          "netValue": 24000
+        },
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 4,
+          "netValue": 18000
+        },
+        {
+          "id": "bpcl-sbi-octane",
+          "name": "BPCL SBI Card OCTANE",
+          "rank": 5,
+          "netValue": 15000
+        },
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 6,
+          "netValue": 15000
+        },
+        {
+          "id": "hsbc-live-plus",
+          "name": "HSBC Live+ Credit Card",
+          "rank": 7,
+          "netValue": 12000
+        },
+        {
+          "id": "indigo-axis",
+          "name": "IndiGo Axis Bank Credit Card",
+          "rank": 8,
+          "netValue": 11057.18
+        },
+        {
+          "id": "bpcl-sbi",
+          "name": "BPCL SBI Card",
+          "rank": 9,
+          "netValue": 7500
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 10,
+          "netValue": 1152
+        }
+      ]
+    },
+    {
+      "category": "dining",
+      "monthlySpend": 50000,
+      "profile": {
+        "monthlySpend": 50000,
+        "annualRetailSpend": 720000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "millennia-hdfc",
+          "name": "HDFC Bank Millennia Credit Card",
+          "rank": 1,
+          "netValue": 30000
+        },
+        {
+          "id": "axis-ace",
+          "name": "Axis Bank ACE Credit Card",
+          "rank": 2,
+          "netValue": 24000
+        },
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 3,
+          "netValue": 18000
+        },
+        {
+          "id": "bpcl-sbi-octane",
+          "name": "BPCL SBI Card OCTANE",
+          "rank": 4,
+          "netValue": 15000
+        },
+        {
+          "id": "hsbc-live-plus",
+          "name": "HSBC Live+ Credit Card",
+          "rank": 5,
+          "netValue": 12000
+        },
+        {
+          "id": "indigo-axis",
+          "name": "IndiGo Axis Bank Credit Card",
+          "rank": 6,
+          "netValue": 11057.18
+        },
+        {
+          "id": "bpcl-sbi",
+          "name": "BPCL SBI Card",
+          "rank": 7,
+          "netValue": 7500
+        },
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 8,
+          "netValue": 2400
+        }
+      ]
+    },
+    {
+      "category": "utilities",
+      "monthlySpend": 50000,
+      "profile": {
+        "monthlySpend": 50000,
+        "annualRetailSpend": 720000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 1,
+          "netValue": 60000
+        },
+        {
+          "id": "axis-ace",
+          "name": "Axis Bank ACE Credit Card",
+          "rank": 2,
+          "netValue": 30000
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 3,
+          "netValue": 30000
+        },
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 4,
+          "netValue": 24000
+        },
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 5,
+          "netValue": 15000
+        },
+        {
+          "id": "axis-cashback",
+          "name": "Axis Bank Cashback Credit Card",
+          "rank": 6,
+          "netValue": 1200
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 7,
+          "netValue": 1152
+        }
+      ]
+    },
+    {
+      "category": "co-branded",
+      "monthlySpend": 50000,
+      "profile": {
+        "monthlySpend": 50000,
+        "annualRetailSpend": 720000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 1,
+          "netValue": 106800
+        },
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 2,
+          "netValue": 43800
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 3,
+          "netValue": 27300
+        },
+        {
+          "id": "bpcl-sbi-octane",
+          "name": "BPCL SBI Card OCTANE",
+          "rank": 4,
+          "netValue": 26250
+        },
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 5,
+          "netValue": 23700
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 6,
+          "netValue": 23700
+        },
+        {
+          "id": "indigo-axis-premium",
+          "name": "IndiGo Axis Bank Premium Credit Card",
+          "rank": 7,
+          "netValue": 23500
+        },
+        {
+          "id": "amazon-pay-icici",
+          "name": "Amazon Pay ICICI Bank Credit Card",
+          "rank": 8,
+          "netValue": 22800
+        },
+        {
+          "id": "flipkart-axis",
+          "name": "Flipkart Axis Bank Credit Card",
+          "rank": 9,
+          "netValue": 22800
+        },
+        {
+          "id": "freecharge-plus-axis",
+          "name": "Axis Bank Freecharge Plus Credit Card",
+          "rank": 10,
+          "netValue": 22800
+        },
+        {
+          "id": "flipkart-sbi",
+          "name": "Flipkart SBI Card",
+          "rank": 11,
+          "netValue": 22800
+        },
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 12,
+          "netValue": 21000
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 13,
+          "netValue": 21000
+        },
+        {
+          "id": "indianoil-axis",
+          "name": "IndianOil Axis Bank Credit Card",
+          "rank": 14,
+          "netValue": 16800
+        },
+        {
+          "id": "bpcl-sbi",
+          "name": "BPCL SBI Card",
+          "rank": 15,
+          "netValue": 13650
+        },
+        {
+          "id": "indigo-axis",
+          "name": "IndiGo Axis Bank Credit Card",
+          "rank": 16,
+          "netValue": 11657.18
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 17,
+          "netValue": 10200
+        }
+      ]
+    },
+    {
+      "category": "fuel",
+      "monthlySpend": 50000,
+      "profile": {
+        "monthlySpend": 50000,
+        "annualRetailSpend": 720000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 1,
+          "netValue": 39000
+        },
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 2,
+          "netValue": 30000
+        },
+        {
+          "id": "bpcl-sbi-octane",
+          "name": "BPCL SBI Card OCTANE",
+          "rank": 3,
+          "netValue": 8700
+        },
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 4,
+          "netValue": 6000
+        },
+        {
+          "id": "axis-ace",
+          "name": "Axis Bank ACE Credit Card",
+          "rank": 5,
+          "netValue": 6000
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 6,
+          "netValue": 6000
+        },
+        {
+          "id": "bpcl-sbi",
+          "name": "BPCL SBI Card",
+          "rank": 7,
+          "netValue": 5100
+        },
+        {
+          "id": "flipkart-axis",
+          "name": "Flipkart Axis Bank Credit Card",
+          "rank": 8,
+          "netValue": 4800
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 9,
+          "netValue": 4728
+        },
+        {
+          "id": "millennia-hdfc",
+          "name": "HDFC Bank Millennia Credit Card",
+          "rank": 10,
+          "netValue": 3000
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 11,
+          "netValue": 3000
+        },
+        {
+          "id": "indianoil-axis",
+          "name": "IndianOil Axis Bank Credit Card",
+          "rank": 12,
+          "netValue": 3000
+        },
+        {
+          "id": "cashback-sbi",
+          "name": "CASHBACK SBI Card",
+          "rank": 13,
+          "netValue": 1200
+        }
+      ]
+    },
+    {
+      "category": "travel",
+      "monthlySpend": 50000,
+      "profile": {
+        "monthlySpend": 50000,
+        "annualRetailSpend": 720000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "indigo-axis-premium",
+          "name": "IndiGo Axis Bank Premium Credit Card",
+          "rank": 1,
+          "netValue": 41100
+        },
+        {
+          "id": "indigo-axis",
+          "name": "IndiGo Axis Bank Credit Card",
+          "rank": 2,
+          "netValue": 19857.18
+        },
+        {
+          "id": "sbi-miles-prime",
+          "name": "SBI Card MILES PRIME",
+          "rank": 3,
+          "netValue": 10161.18
+        },
+        {
+          "id": "sbi-miles",
+          "name": "SBI Card MILES",
+          "rank": 4,
+          "netValue": 5800
+        }
+      ]
+    },
+    {
+      "category": "forex",
+      "monthlySpend": 50000,
+      "profile": {
+        "monthlySpend": 50000,
+        "annualRetailSpend": 720000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 1,
+          "netValue": -490
+        },
+        {
+          "id": "sbi-miles",
+          "name": "SBI Card MILES",
+          "rank": 2,
+          "netValue": -2500
+        },
+        {
+          "id": "sbi-miles-prime",
+          "name": "SBI Card MILES PRIME",
+          "rank": 3,
+          "netValue": -5038.82
+        }
+      ]
+    },
+    {
+      "category": "upi",
+      "monthlySpend": 50000,
+      "profile": {
+        "monthlySpend": 50000,
+        "annualRetailSpend": 720000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 1,
+          "netValue": 9000
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 2,
+          "netValue": 9000
+        },
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 3,
+          "netValue": 6000
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 4,
+          "netValue": 6000
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 5,
+          "netValue": 3840
+        }
+      ]
+    },
+    {
+      "category": "premium",
+      "monthlySpend": 50000,
+      "profile": {
+        "monthlySpend": 50000,
+        "annualRetailSpend": 720000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "indigo-axis-premium",
+          "name": "IndiGo Axis Bank Premium Credit Card",
+          "rank": 1,
+          "netValue": 41100
+        },
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 2,
+          "netValue": 34200
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 3,
+          "netValue": 32210
+        },
+        {
+          "id": "sbi-miles-prime",
+          "name": "SBI Card MILES PRIME",
+          "rank": 4,
+          "netValue": 10161.18
+        }
+      ]
+    },
+    {
+      "category": "lifetime-free",
+      "monthlySpend": 50000,
+      "profile": {
+        "monthlySpend": 50000,
+        "annualRetailSpend": 720000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "amazon-pay-icici",
+          "name": "Amazon Pay ICICI Bank Credit Card",
+          "rank": 1,
+          "netValue": 6000
+        }
+      ]
+    },
+    {
+      "category": "low-fee",
+      "monthlySpend": 50000,
+      "profile": {
+        "monthlySpend": 50000,
+        "annualRetailSpend": 720000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "amazon-pay-icici",
+          "name": "Amazon Pay ICICI Bank Credit Card",
+          "rank": 1,
+          "netValue": 30000
+        },
+        {
+          "id": "millennia-hdfc",
+          "name": "HDFC Bank Millennia Credit Card",
+          "rank": 2,
+          "netValue": 30000
+        },
+        {
+          "id": "flipkart-sbi",
+          "name": "Flipkart SBI Card",
+          "rank": 3,
+          "netValue": 30000
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 4,
+          "netValue": 30000
+        },
+        {
+          "id": "cashback-sbi",
+          "name": "CASHBACK SBI Card",
+          "rank": 5,
+          "netValue": 24000
+        },
+        {
+          "id": "swiggy-hdfc",
+          "name": "Swiggy HDFC Bank Credit Card",
+          "rank": 6,
+          "netValue": 18000
+        },
+        {
+          "id": "flipkart-axis",
+          "name": "Flipkart Axis Bank Credit Card",
+          "rank": 7,
+          "netValue": 16000
+        },
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 8,
+          "netValue": 15000
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 9,
+          "netValue": 12000
+        },
+        {
+          "id": "indigo-axis",
+          "name": "IndiGo Axis Bank Credit Card",
+          "rank": 10,
+          "netValue": 11057.18
+        },
+        {
+          "id": "axis-ace",
+          "name": "Axis Bank ACE Credit Card",
+          "rank": 11,
+          "netValue": 9000
+        },
+        {
+          "id": "hsbc-live-plus",
+          "name": "HSBC Live+ Credit Card",
+          "rank": 12,
+          "netValue": 9000
+        },
+        {
+          "id": "bpcl-sbi",
+          "name": "BPCL SBI Card",
+          "rank": 13,
+          "netValue": 7500
+        },
+        {
+          "id": "airtel-axis",
+          "name": "Airtel Axis Bank Credit Card",
+          "rank": 14,
+          "netValue": 6000
+        },
+        {
+          "id": "freecharge-plus-axis",
+          "name": "Axis Bank Freecharge Plus Credit Card",
+          "rank": 15,
+          "netValue": 6000
+        },
+        {
+          "id": "indianoil-axis",
+          "name": "IndianOil Axis Bank Credit Card",
+          "rank": 16,
+          "netValue": 6000
+        },
+        {
+          "id": "indianoil-hdfc",
+          "name": "IndianOil HDFC Bank Credit Card",
+          "rank": 17,
+          "netValue": 1152
+        }
+      ]
+    },
+    {
+      "category": "beginner",
+      "monthlySpend": 50000,
+      "profile": {
+        "monthlySpend": 50000,
+        "annualRetailSpend": 720000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "first-power",
+          "name": "FIRST Power Credit Card",
+          "rank": 1,
+          "netValue": 15000
+        }
+      ]
+    },
+    {
+      "category": "lounge",
+      "monthlySpend": 50000,
+      "profile": {
+        "monthlySpend": 50000,
+        "annualRetailSpend": 720000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": [
+        {
+          "id": "tata-neu-infinity-hdfc",
+          "name": "Tata Neu Infinity HDFC Bank Credit Card",
+          "rank": 1,
+          "netValue": 4200
+        },
+        {
+          "id": "tata-neu-infinity-sbi",
+          "name": "Tata Neu Infinity SBI Card",
+          "rank": 2,
+          "netValue": 4200
+        },
+        {
+          "id": "tata-neu-plus-sbi",
+          "name": "Tata Neu Plus SBI Card",
+          "rank": 3,
+          "netValue": 2800
+        },
+        {
+          "id": "first-power-plus",
+          "name": "FIRST Power+ Credit Card",
+          "rank": 4,
+          "netValue": 2800
+        },
+        {
+          "id": "sbi-miles",
+          "name": "SBI Card MILES",
+          "rank": 5,
+          "netValue": 2800
+        },
+        {
+          "id": "sbi-miles-prime",
+          "name": "SBI Card MILES PRIME",
+          "rank": 6,
+          "netValue": 661.1800000000003
+        }
+      ]
+    },
+    {
+      "category": "business",
+      "monthlySpend": 50000,
+      "profile": {
+        "monthlySpend": 50000,
+        "annualRetailSpend": 720000,
+        "annualForeignSpend": 100000,
+        "loungeVisits": 6,
+        "loungeValue": 700,
+        "partnerSpendShare": 70,
+        "preferredFuelNetwork": "Any",
+        "monthlyBaseSpend": 10000
+      },
+      "ranking": []
+    }
+  ]
+}

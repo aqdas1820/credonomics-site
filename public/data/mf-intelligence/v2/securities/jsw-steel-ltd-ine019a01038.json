@@ -1,0 +1,48 @@
+{
+  "securityId": "ISIN:INE019A01038",
+  "slug": "jsw-steel-ltd-ine019a01038",
+  "isin": "INE019A01038",
+  "stock": "JSW Steel Ltd.",
+  "sector": "Ferrous Metals",
+  "firstTracked": "2026-09",
+  "latestTracked": "2026-09",
+  "monthsTracked": 1,
+  "maxSchemeCount": 1,
+  "peakNormalizedWeight": 0.24166666666666667,
+  "latestSchemeWeights": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "weight": 1.45,
+      "quality": "ISIN_VALIDATED"
+    }
+  ],
+  "monthlyHistory": [
+    {
+      "month": "2026-09",
+      "schemeCount": 1,
+      "totalWeight": 1.45,
+      "normalizedWeight": 0.24166666666666667,
+      "avgHeldWeight": 1.45
+    }
+  ],
+  "schemeHistory": [
+    {
+      "scheme": "HDFC Flexi Cap Fund",
+      "history": [
+        {
+          "month": "2026-09",
+          "weight": 1.45,
+          "quality": "ISIN_VALIDATED"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "month": "2026-09",
+      "pdfs": [
+        "Monthly HDFC Flexi Cap Fund - 30 September 2026_0.xlsx"
+      ]
+    }
+  ]
+}

@@ -1599,6 +1599,2902 @@
       "stock": "Zensar Technologies Ltd.",
       "sector": "Software",
       "latestTracked": "2026-06"
+    },
+    {
+      "securityId": "ISIN:INE090A01021",
+      "slug": "icici-bank-ltd-ine090a01021",
+      "isin": "INE090A01021",
+      "stock": "ICICI Bank Ltd.",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE238A01034",
+      "slug": "axis-bank-ltd-ine238a01034",
+      "isin": "INE238A01034",
+      "stock": "Axis Bank Ltd.",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE040A01034",
+      "slug": "hdfc-bank-ltd-ine040a01034",
+      "isin": "INE040A01034",
+      "stock": "HDFC Bank Ltd.",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE062A01020",
+      "slug": "state-bank-of-india-ine062a01020",
+      "isin": "INE062A01020",
+      "stock": "State Bank of India",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE758T01015",
+      "slug": "eternal-limited-ine758t01015",
+      "isin": "INE758T01015",
+      "stock": "Eternal Limited",
+      "sector": "Retailing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE237A01036",
+      "slug": "kotak-mahindra-bank-limited-ine237a01036",
+      "isin": "INE237A01036",
+      "stock": "Kotak Mahindra Bank Limited",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE123W01016",
+      "slug": "sbi-life-insurance-company-ltd-ine123w01016",
+      "isin": "INE123W01016",
+      "stock": "SBI Life Insurance Company Ltd.",
+      "sector": "Insurance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE018A01030",
+      "slug": "larsen-and-toubro-ltd-ine018a01030",
+      "isin": "INE018A01030",
+      "stock": "Larsen and Toubro Ltd.",
+      "sector": "Construction",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE646L01027",
+      "slug": "interglobe-aviation-ltd-ine646l01027",
+      "isin": "INE646L01027",
+      "stock": "InterGlobe Aviation Ltd.",
+      "sector": "Transport Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE397D01024",
+      "slug": "bharti-airtel-ltd-ine397d01024",
+      "isin": "INE397D01024",
+      "stock": "Bharti Airtel Ltd.",
+      "sector": "Telecom - Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE585B01010",
+      "slug": "maruti-suzuki-india-limited-ine585b01010",
+      "isin": "INE585B01010",
+      "stock": "Maruti Suzuki India Limited",
+      "sector": "Automobiles",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE059A01026",
+      "slug": "cipla-ltd-ine059a01026",
+      "isin": "INE059A01026",
+      "stock": "Cipla Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE860A01027",
+      "slug": "hcl-technologies-ltd-ine860a01027",
+      "isin": "INE860A01027",
+      "stock": "HCL Technologies Ltd.",
+      "sector": "IT - Software",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE066A01021",
+      "slug": "eicher-motors-ltd-ine066a01021",
+      "isin": "INE066A01021",
+      "stock": "Eicher Motors Ltd.",
+      "sector": "Automobiles",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE752E01010",
+      "slug": "power-grid-corporation-of-india-ltd-ine752e01010",
+      "isin": "INE752E01010",
+      "stock": "Power Grid Corporation of India Ltd.",
+      "sector": "Power",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0NDH25011",
+      "slug": "nexus-select-trust-reit-ine0ndh25011",
+      "isin": "INE0NDH25011",
+      "stock": "Nexus Select Trust REIT",
+      "sector": "Realty",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0V6F01027",
+      "slug": "hyundai-motor-india-limited-ine0v6f01027",
+      "isin": "INE0V6F01027",
+      "stock": "Hyundai Motor India Limited",
+      "sector": "Automobiles",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE361B01024",
+      "slug": "divis-laboratories-ltd-ine361b01024",
+      "isin": "INE361B01024",
+      "stock": "Divis Laboratories Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE027H01010",
+      "slug": "max-healthcare-institute-limited-ine027h01010",
+      "isin": "INE027H01010",
+      "stock": "Max Healthcare Institute Limited",
+      "sector": "Healthcare Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE019A01038",
+      "slug": "jsw-steel-ltd-ine019a01038",
+      "isin": "INE019A01038",
+      "stock": "JSW Steel Ltd.",
+      "sector": "Ferrous Metals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE002A01018",
+      "slug": "reliance-industries-ltd-ine002a01018",
+      "isin": "INE002A01018",
+      "stock": "Reliance Industries Ltd.",
+      "sector": "Petroleum Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0DK501011",
+      "slug": "piramal-pharma-limited-ine0dk501011",
+      "isin": "INE0DK501011",
+      "stock": "Piramal Pharma Limited",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE262H01021",
+      "slug": "persistent-systems-limited-ine262h01021",
+      "isin": "INE262H01021",
+      "stock": "Persistent Systems Limited",
+      "sector": "IT - Software",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE323A01026",
+      "slug": "bosch-limited-ine323a01026",
+      "isin": "INE323A01026",
+      "stock": "Bosch Limited",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE417T01026",
+      "slug": "pb-fintech-limited-ine417t01026",
+      "isin": "INE417T01026",
+      "stock": "PB Fintech Limited",
+      "sector": "Financial Technology (Fintech)",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE494B01023",
+      "slug": "tvs-motor-company-ltd-ine494b01023",
+      "isin": "INE494B01023",
+      "stock": "TVS Motor Company Ltd.",
+      "sector": "Automobiles",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE665L01035",
+      "slug": "varroc-engineering-limited-ine665l01035",
+      "isin": "INE665L01035",
+      "stock": "Varroc Engineering Limited",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE326A01037",
+      "slug": "lupin-ltd-ine326a01037",
+      "isin": "INE326A01037",
+      "stock": "Lupin Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE081A01020",
+      "slug": "tata-steel-ltd-ine081a01020",
+      "isin": "INE081A01020",
+      "stock": "Tata Steel Ltd.",
+      "sector": "Ferrous Metals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE481G01011",
+      "slug": "ultratech-cement-limited-ine481g01011",
+      "isin": "INE481G01011",
+      "stock": "UltraTech Cement Limited",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE956O01016",
+      "slug": "lenskart-solutions-limited-ine956o01016",
+      "isin": "INE956O01016",
+      "stock": "LENSKART SOLUTIONS LIMITED",
+      "sector": "Retailing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE437A01024",
+      "slug": "apollo-hospitals-enterprise-ltd-ine437a01024",
+      "isin": "INE437A01024",
+      "stock": "Apollo Hospitals Enterprise Ltd.",
+      "sector": "Healthcare Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE914M01019",
+      "slug": "aster-dm-quality-care-limited-ine914m01019",
+      "isin": "INE914M01019",
+      "stock": "Aster DM Quality Care Limited",
+      "sector": "Healthcare Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE600L01024",
+      "slug": "dr-lal-path-labs-ltd-ine600l01024",
+      "isin": "INE600L01024",
+      "stock": "Dr. Lal Path Labs Ltd",
+      "sector": "Healthcare Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE388Y01029",
+      "slug": "fsn-ecommerce-ventures-limited-nykaa-ine388y01029",
+      "isin": "INE388Y01029",
+      "stock": "Fsn Ecommerce Ventures Limited (Nykaa)",
+      "sector": "Retailing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE854D01024",
+      "slug": "united-spirits-limited-ine854d01024",
+      "isin": "INE854D01024",
+      "stock": "United Spirits Limited",
+      "sector": "Beverages",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE216A01030",
+      "slug": "britannia-industries-ltd-ine216a01030",
+      "isin": "INE216A01030",
+      "stock": "Britannia Industries Ltd.",
+      "sector": "Food Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE118H01025",
+      "slug": "bombay-stock-exchange-limited-bse-ine118h01025",
+      "isin": "INE118H01025",
+      "stock": "Bombay Stock Exchange Limited (BSE)",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE622W01025",
+      "slug": "acme-solar-holdings-limited-ine622w01025",
+      "isin": "INE622W01025",
+      "stock": "ACME Solar Holdings Limited",
+      "sector": "Power",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE263A01024",
+      "slug": "bharat-electronics-ltd-ine263a01024",
+      "isin": "INE263A01024",
+      "stock": "Bharat Electronics Ltd.",
+      "sector": "Aerospace & Defense",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE880J01026",
+      "slug": "jsw-infrastructure-limited-ine880j01026",
+      "isin": "INE880J01026",
+      "stock": "JSW Infrastructure Limited",
+      "sector": "Transport Infrastructure",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0CZ201020",
+      "slug": "anthem-biosciences-limited-ine0cz201020",
+      "isin": "INE0CZ201020",
+      "stock": "Anthem Biosciences Limited",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE041025011",
+      "slug": "embassy-office-parks-reit-ine041025011",
+      "isin": "INE041025011",
+      "stock": "Embassy Office Parks REIT",
+      "sector": "Realty",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE220B01022",
+      "slug": "kalpataru-projects-international-ltd-ine220b01022",
+      "isin": "INE220B01022",
+      "stock": "Kalpataru Projects International Ltd",
+      "sector": "Construction",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE794A01010",
+      "slug": "neuland-laboratories-limited-ine794a01010",
+      "isin": "INE794A01010",
+      "stock": "Neuland Laboratories Limited",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE118D01016",
+      "slug": "nuvoco-vistas-corporation-ltd-ine118d01016",
+      "isin": "INE118D01016",
+      "stock": "Nuvoco Vistas Corporation Ltd.",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE423A01024",
+      "slug": "adani-enterprises-limtied-ine423a01024",
+      "isin": "INE423A01024",
+      "stock": "ADANI ENTERPRISES LIMTIED",
+      "sector": "Metals & Minerals Trading",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE00LO01017",
+      "slug": "craftsman-automation-ltd-ine00lo01017",
+      "isin": "INE00LO01017",
+      "stock": "Craftsman Automation Ltd",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE093A01041",
+      "slug": "hexaware-technologies-ltd-ine093a01041",
+      "isin": "INE093A01041",
+      "stock": "Hexaware Technologies Ltd.",
+      "sector": "IT - Software",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE01EA01019",
+      "slug": "vishal-mega-mart-limited-ine01ea01019",
+      "isin": "INE01EA01019",
+      "stock": "Vishal Mega Mart Limited",
+      "sector": "Retailing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE346A01027",
+      "slug": "icici-prudential-asset-management-company-limited-ine346a01027",
+      "isin": "INE346A01027",
+      "stock": "ICICI PRUDENTIAL ASSET MANAGEMENT COMPANY LIMITED",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE917I01010",
+      "slug": "bajaj-auto-limited-ine917i01010",
+      "isin": "INE917I01010",
+      "stock": "Bajaj Auto Limited",
+      "sector": "Automobiles",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE176B01034",
+      "slug": "havells-india-ltd-ine176b01034",
+      "isin": "INE176B01034",
+      "stock": "Havells India Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE009A01021",
+      "slug": "infosys-limited-ine009a01021",
+      "isin": "INE009A01021",
+      "stock": "Infosys Limited",
+      "sector": "IT - Software",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE298J01013",
+      "slug": "nippon-life-india-asset-management-limited-ine298j01013",
+      "isin": "INE298J01013",
+      "stock": "Nippon Life India Asset Management Limited",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE811K01011",
+      "slug": "prestige-estates-projects-ltd-ine811k01011",
+      "isin": "INE811K01011",
+      "stock": "Prestige Estates Projects Ltd.",
+      "sector": "Realty",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE02ZQ01018",
+      "slug": "corona-remedies-limited-ine02zq01018",
+      "isin": "INE02ZQ01018",
+      "stock": "CORONA REMEDIES LIMITED",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE208A01029",
+      "slug": "ashok-leyland-ltd-ine208a01029",
+      "isin": "INE208A01029",
+      "stock": "Ashok Leyland  Ltd",
+      "sector": "Agricultural, Commercial & Construction Vehicles",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE806T01020",
+      "slug": "sapphire-foods-india-limited-ine806t01020",
+      "isin": "INE806T01020",
+      "stock": "SAPPHIRE FOODS INDIA LIMITED",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE640G01020",
+      "slug": "sbi-funds-management-limited-ine640g01020",
+      "isin": "INE640G01020",
+      "stock": "SBI Funds Management Limited",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE536H01010",
+      "slug": "cie-automotive-india-ltd-ine536h01010",
+      "isin": "INE536H01010",
+      "stock": "CIE Automotive India Ltd",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE935N01020",
+      "slug": "dixon-technologies-india-ltd-ine935n01020",
+      "isin": "INE935N01020",
+      "stock": "Dixon Technologies (India) Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE112L01020",
+      "slug": "metropolis-healthcare-ltd-ine112l01020",
+      "isin": "INE112L01020",
+      "stock": "Metropolis Healthcare Ltd.",
+      "sector": "Healthcare Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE331A01037",
+      "slug": "the-ramco-cements-ltd-ine331a01037",
+      "isin": "INE331A01037",
+      "stock": "The Ramco Cements Ltd.",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE042A01014",
+      "slug": "escorts-kubota-limited-ine042a01014",
+      "isin": "INE042A01014",
+      "stock": "ESCORTS KUBOTA LIMITED",
+      "sector": "Agricultural, Commercial & Construction Vehicles",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE299U01018",
+      "slug": "crompton-greaves-consumer-elec-ltd-ine299u01018",
+      "isin": "INE299U01018",
+      "stock": "Crompton Greaves Consumer Elec. Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0J1Y01017",
+      "slug": "life-insurance-corporation-of-india-ine0j1y01017",
+      "isin": "INE0J1Y01017",
+      "stock": "Life Insurance Corporation of India",
+      "sector": "Insurance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE869T01028",
+      "slug": "molbio-diagnostics-limited-ine869t01028",
+      "isin": "INE869T01028",
+      "stock": "Molbio Diagnostics Limited",
+      "sector": "Healthcare Equipment & Supplies",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE07T201019",
+      "slug": "restaurant-brands-asia-limited-ine07t201019",
+      "isin": "INE07T201019",
+      "stock": "Restaurant Brands Asia Limited",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE372A01015",
+      "slug": "apar-industries-limited-ine372a01015",
+      "isin": "INE372A01015",
+      "stock": "Apar Industries Limited",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE213A01029",
+      "slug": "oil-natural-gas-corporation-ltd-ine213a01029",
+      "isin": "INE213A01029",
+      "stock": "Oil & Natural Gas Corporation Ltd.",
+      "sector": "Oil",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0LEZ01016",
+      "slug": "ather-energy-limited-ine0lez01016",
+      "isin": "INE0LEZ01016",
+      "stock": "Ather Energy Limited",
+      "sector": "Automobiles",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE376G01013",
+      "slug": "biocon-ltd-ine376g01013",
+      "isin": "INE376G01013",
+      "stock": "Biocon Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE00H001014",
+      "slug": "swiggy-limited-ine00h001014",
+      "isin": "INE00H001014",
+      "stock": "Swiggy Limited",
+      "sector": "Retailing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE117A01022",
+      "slug": "abb-india-ltd-ine117a01022",
+      "isin": "INE117A01022",
+      "stock": "ABB India Ltd.",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE989C01038",
+      "slug": "diamond-power-infrastructure-limited-ine989c01038",
+      "isin": "INE989C01038",
+      "stock": "Diamond Power Infrastructure Limited",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE094A01015",
+      "slug": "hindustan-petroleum-corp-ltd-ine094a01015",
+      "isin": "INE094A01015",
+      "stock": "Hindustan Petroleum Corp. Ltd.",
+      "sector": "Petroleum Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE786A01032",
+      "slug": "jk-lakshmi-cement-ltd-ine786a01032",
+      "isin": "INE786A01032",
+      "stock": "JK Lakshmi Cement Ltd",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE506V01022",
+      "slug": "rubicon-research-limited-ine506v01022",
+      "isin": "INE506V01022",
+      "stock": "Rubicon Research Limited",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE356A01018",
+      "slug": "mphasis-limited-ine356a01018",
+      "isin": "INE356A01018",
+      "stock": "MphasiS Limited.",
+      "sector": "IT - Software",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE19RI01016",
+      "slug": "tenneco-clean-air-india-limited-ine19ri01016",
+      "isin": "INE19RI01016",
+      "stock": "TENNECO CLEAN AIR INDIA LIMITED",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE044A01036",
+      "slug": "sun-pharmaceutical-industries-ltd-ine044a01036",
+      "isin": "INE044A01036",
+      "stock": "Sun Pharmaceutical Industries Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE364U01010",
+      "slug": "adani-green-energy-limited-ine364u01010",
+      "isin": "INE364U01010",
+      "stock": "Adani Green Energy Limited",
+      "sector": "Power",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE036D01028",
+      "slug": "karur-vysya-bank-ltd-ine036d01028",
+      "isin": "INE036D01028",
+      "stock": "Karur Vysya Bank Ltd.",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE427F01016",
+      "slug": "chalet-hotels-ltd-ine427f01016",
+      "isin": "INE427F01016",
+      "stock": "Chalet Hotels Ltd.",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE371P01015",
+      "slug": "amber-enterprises-india-ltd-ine371p01015",
+      "isin": "INE371P01015",
+      "stock": "Amber Enterprises India Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE067A01029",
+      "slug": "cg-power-and-industrial-solutions-ltd-ine067a01029",
+      "isin": "INE067A01029",
+      "stock": "CG Power and Industrial Solutions Ltd.",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE068V01023",
+      "slug": "gland-pharma-ltd-ine068v01023",
+      "isin": "INE068V01023",
+      "stock": "Gland Pharma Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE061F01013",
+      "slug": "fortis-healthcare-limited-ine061f01013",
+      "isin": "INE061F01013",
+      "stock": "Fortis Healthcare Limited",
+      "sector": "Healthcare Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE406A01037",
+      "slug": "aurobindo-pharma-ltd-ine406a01037",
+      "isin": "INE406A01037",
+      "stock": "Aurobindo Pharma Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE180A01020",
+      "slug": "max-financial-services-ltd-ine180a01020",
+      "isin": "INE180A01020",
+      "stock": "Max Financial Services Ltd.",
+      "sector": "Insurance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE095A01012",
+      "slug": "indusind-bank-ltd-ine095a01012",
+      "isin": "INE095A01012",
+      "stock": "Indusind Bank Ltd.",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE031B01049",
+      "slug": "ajanta-pharma-limited-ine031b01049",
+      "isin": "INE031B01049",
+      "stock": "Ajanta Pharma Limited",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE774D01024",
+      "slug": "mahindra-mahindra-financial-services-ltd-ine774d01024",
+      "isin": "INE774D01024",
+      "stock": "Mahindra & Mahindra Financial Services Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE721A01047",
+      "slug": "shriram-finance-ltd-ine721a01047",
+      "isin": "INE721A01047",
+      "stock": "Shriram Finance Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE571A01038",
+      "slug": "ipca-laboratories-ltd-ine571a01038",
+      "isin": "INE571A01038",
+      "stock": "Ipca Laboratories Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE465A01025",
+      "slug": "bharat-forge-ltd-ine465a01025",
+      "isin": "INE465A01025",
+      "stock": "Bharat Forge Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE296A01032",
+      "slug": "bajaj-finance-ltd-ine296a01032",
+      "isin": "INE296A01032",
+      "stock": "Bajaj Finance Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE935A01035",
+      "slug": "glenmark-pharmaceuticals-ltd-ine935a01035",
+      "isin": "INE935A01035",
+      "stock": "Glenmark Pharmaceuticals Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE591G01025",
+      "slug": "coforge-limited-ine591g01025",
+      "isin": "INE591G01025",
+      "stock": "Coforge Limited",
+      "sector": "IT - Software",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE053A01029",
+      "slug": "indian-hotels-company-ltd-ine053a01029",
+      "isin": "INE053A01029",
+      "stock": "Indian Hotels Company Ltd.",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE115A01026",
+      "slug": "lic-housing-finance-ltd-ine115a01026",
+      "isin": "INE115A01026",
+      "stock": "LIC Housing Finance Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE787D01026",
+      "slug": "balkrishna-industries-ltd-ine787d01026",
+      "isin": "INE787D01026",
+      "stock": "Balkrishna Industries Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE540L01014",
+      "slug": "alkem-laboratories-ltd-ine540l01014",
+      "isin": "INE540L01014",
+      "stock": "Alkem Laboratories Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE038A01020",
+      "slug": "hindalco-industries-ltd-ine038a01020",
+      "isin": "INE038A01020",
+      "stock": "Hindalco Industries Ltd.",
+      "sector": "Non - Ferrous Metals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE733E01010",
+      "slug": "ntpc-limited-ine733e01010",
+      "isin": "INE733E01010",
+      "stock": "NTPC Limited",
+      "sector": "Power",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE343H01029",
+      "slug": "solar-industries-india-ltd-ine343h01029",
+      "isin": "INE343H01029",
+      "stock": "Solar Industries India Ltd.",
+      "sector": "Chemicals & Petrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE749A01030",
+      "slug": "jindal-steel-limited-ine749a01030",
+      "isin": "INE749A01030",
+      "stock": "Jindal Steel Limited.",
+      "sector": "Ferrous Metals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0LCL01028",
+      "slug": "avalon-technologies-limited-ine0lcl01028",
+      "isin": "INE0LCL01028",
+      "stock": "Avalon Technologies Limited",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE918Z01012",
+      "slug": "kaynes-technology-india-limited-ine918z01012",
+      "isin": "INE918Z01012",
+      "stock": "KAYNES TECHNOLOGY INDIA LIMITED",
+      "sector": "Industrial Manufacturing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE931S01010",
+      "slug": "adani-energy-solutions-limited-ine931s01010",
+      "isin": "INE931S01010",
+      "stock": "Adani Energy Solutions  Limited",
+      "sector": "Power",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE949L01017",
+      "slug": "au-small-finance-bank-ltd-ine949l01017",
+      "isin": "INE949L01017",
+      "stock": "Au Small Finance Bank Ltd.",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE498L01015",
+      "slug": "l-t-finance-ltd-ine498l01015",
+      "isin": "INE498L01015",
+      "stock": "L&T Finance Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE079A01024",
+      "slug": "ambuja-cements-ltd-ine079a01024",
+      "isin": "INE079A01024",
+      "stock": "Ambuja Cements Ltd.",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE066F01020",
+      "slug": "hindustan-aeronautics-limited-ine066f01020",
+      "isin": "INE066F01020",
+      "stock": "Hindustan Aeronautics Limited",
+      "sector": "Aerospace & Defense",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE338I01027",
+      "slug": "motilal-oswal-financial-services-ltd-ine338i01027",
+      "isin": "INE338I01027",
+      "stock": "Motilal Oswal Financial Services Ltd.",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE092T01019",
+      "slug": "idfc-first-bank-limited-ine092t01019",
+      "isin": "INE092T01019",
+      "stock": "IDFC First Bank Limited",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE467B01029",
+      "slug": "tata-consultancy-services-ltd-ine467b01029",
+      "isin": "INE467B01029",
+      "stock": "Tata Consultancy Services Ltd.",
+      "sector": "IT - Software",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE545U01014",
+      "slug": "bandhan-bank-ltd-ine545u01014",
+      "isin": "INE545U01014",
+      "stock": "Bandhan Bank Ltd.",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE171A01029",
+      "slug": "the-federal-bank-ltd-ine171a01029",
+      "isin": "INE171A01029",
+      "stock": "The Federal Bank Ltd.",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE685A01028",
+      "slug": "torrent-pharmaceuticals-ltd-ine685a01028",
+      "isin": "INE685A01028",
+      "stock": "Torrent Pharmaceuticals Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE891D01026",
+      "slug": "redington-ltd-ine891d01026",
+      "isin": "INE891D01026",
+      "stock": "Redington Ltd.",
+      "sector": "Commercial Services & Supplies",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE562A01011",
+      "slug": "indian-bank-ine562a01011",
+      "isin": "INE562A01011",
+      "stock": "Indian Bank",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE114A01011",
+      "slug": "steel-authority-of-india-ltd-ine114a01011",
+      "isin": "INE114A01011",
+      "stock": "Steel Authority Of India Ltd.",
+      "sector": "Ferrous Metals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE647A01010",
+      "slug": "srf-ltd-ine647a01010",
+      "isin": "INE647A01010",
+      "stock": "SRF Ltd.",
+      "sector": "Chemicals & Petrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE089C01029",
+      "slug": "sterlite-technologies-limited-ine089c01029",
+      "isin": "INE089C01029",
+      "stock": "STERLITE TECHNOLOGIES LIMITED",
+      "sector": "Telecom -  Equipment & Accessories",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE674K01013",
+      "slug": "aditya-birla-capital-ltd-ine674k01013",
+      "isin": "INE674K01013",
+      "stock": "Aditya Birla Capital ltd.",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE849A01020",
+      "slug": "trent-ltd-ine849a01020",
+      "isin": "INE849A01020",
+      "stock": "Trent Ltd.",
+      "sector": "Retailing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE030A01027",
+      "slug": "hindustan-unilever-ltd-ine030a01027",
+      "isin": "INE030A01027",
+      "stock": "Hindustan Unilever Ltd.",
+      "sector": "Diversified FMCG",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE572E01012",
+      "slug": "pnb-housing-finance-ltd-ine572e01012",
+      "isin": "INE572E01012",
+      "stock": "PNB Housing Finance Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE088F01024",
+      "slug": "paradeep-phosphates-limited-ine088f01024",
+      "isin": "INE088F01024",
+      "stock": "Paradeep Phosphates Limited",
+      "sector": "Fertilizers & Agrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE073K01018",
+      "slug": "sona-blw-precision-forgings-ine073k01018",
+      "isin": "INE073K01018",
+      "stock": "Sona Blw Precision Forgings",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE128S01021",
+      "slug": "five-star-business-finance-limited-ine128s01021",
+      "isin": "INE128S01021",
+      "stock": "Five-Star Business Finance Limited",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE472A01039",
+      "slug": "blue-star-ltd-ine472a01039",
+      "isin": "INE472A01039",
+      "stock": "Blue Star Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE158A01026",
+      "slug": "hero-motocorp-ltd-ine158a01026",
+      "isin": "INE158A01026",
+      "stock": "Hero MotoCorp Ltd.",
+      "sector": "Automobiles",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE203G01027",
+      "slug": "indraprastha-gas-ltd-ine203g01027",
+      "isin": "INE203G01027",
+      "stock": "Indraprastha Gas Ltd.",
+      "sector": "Gas",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE325A01013",
+      "slug": "timken-india-ltd-ine325a01013",
+      "isin": "INE325A01013",
+      "stock": "Timken India Ltd.",
+      "sector": "Industrial Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE226A01021",
+      "slug": "voltas-ltd-ine226a01021",
+      "isin": "INE226A01021",
+      "stock": "Voltas Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE151A01013",
+      "slug": "tata-communications-limited-ine151a01013",
+      "isin": "INE151A01013",
+      "stock": "Tata Communications Limited",
+      "sector": "Telecom - Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE669C01036",
+      "slug": "tech-mahindra-ltd-ine669c01036",
+      "isin": "INE669C01036",
+      "stock": "Tech Mahindra Ltd.",
+      "sector": "IT - Software",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE765G01017",
+      "slug": "icici-lombard-general-insurance-co-ine765g01017",
+      "isin": "INE765G01017",
+      "stock": "ICICI Lombard General Insurance Co",
+      "sector": "Insurance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE192A01025",
+      "slug": "tata-consumer-products-limited-ine192a01025",
+      "isin": "INE192A01025",
+      "stock": "Tata Consumer Products Limited",
+      "sector": "Agricultural Food & Other Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE438A01022",
+      "slug": "apollo-tyres-ltd-ine438a01022",
+      "isin": "INE438A01022",
+      "stock": "Apollo Tyres Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE028A01039",
+      "slug": "bank-of-baroda-ine028a01039",
+      "isin": "INE028A01039",
+      "stock": "Bank of Baroda",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE121A01024",
+      "slug": "cholamandalam-investment-finance-co-ltd-ine121a01024",
+      "isin": "INE121A01024",
+      "stock": "Cholamandalam Investment & Finance Co. Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE048G01026",
+      "slug": "navin-fluorine-international-ltd-ine048g01026",
+      "isin": "INE048G01026",
+      "stock": "Navin Fluorine International Ltd.",
+      "sector": "Chemicals & Petrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE134E01011",
+      "slug": "power-finance-corporation-ltd-ine134e01011",
+      "isin": "INE134E01011",
+      "stock": "Power Finance Corporation Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE917M01012",
+      "slug": "dilip-buildcon-ltd-ine917m01012",
+      "isin": "INE917M01012",
+      "stock": "Dilip Buildcon Ltd.",
+      "sector": "Construction",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE029A01011",
+      "slug": "bharat-petroleum-corporation-ltd-ine029a01011",
+      "isin": "INE029A01011",
+      "stock": "Bharat Petroleum Corporation Ltd.",
+      "sector": "Petroleum Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE1TAE01010",
+      "slug": "tata-motors-limited-ine1tae01010",
+      "isin": "INE1TAE01010",
+      "stock": "Tata Motors Limited",
+      "sector": "Agricultural, Commercial & Construction Vehicles",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE913H01037",
+      "slug": "endurance-technologies-ltd-ine913h01037",
+      "isin": "INE913H01037",
+      "stock": "Endurance Technologies Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE101A01026",
+      "slug": "mahindra-mahindra-ltd-ine101a01026",
+      "isin": "INE101A01026",
+      "stock": "Mahindra & Mahindra Ltd.",
+      "sector": "Automobiles",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE169A01031",
+      "slug": "coromandel-international-limited-ine169a01031",
+      "isin": "INE169A01031",
+      "stock": "Coromandel International Limited",
+      "sector": "Fertilizers & Agrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE881D01027",
+      "slug": "oracle-financial-ser-software-ltd-ine881d01027",
+      "isin": "INE881D01027",
+      "stock": "Oracle Financial Ser Software Ltd.",
+      "sector": "IT - Software",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE154A01025",
+      "slug": "itc-limited-ine154a01025",
+      "isin": "INE154A01025",
+      "stock": "ITC LIMITED",
+      "sector": "Diversified FMCG",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE211B01039",
+      "slug": "the-phoenix-mills-limited-ine211b01039",
+      "isin": "INE211B01039",
+      "stock": "The Phoenix Mills Limited",
+      "sector": "Realty",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE148O01028",
+      "slug": "delhivery-limited-ine148o01028",
+      "isin": "INE148O01028",
+      "stock": "Delhivery Limited",
+      "sector": "Transport Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE741K01010",
+      "slug": "creditaccess-grameen-limited-ine741k01010",
+      "isin": "INE741K01010",
+      "stock": "Creditaccess Grameen Limited",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE016A01026",
+      "slug": "dabur-india-ltd-ine016a01026",
+      "isin": "INE016A01026",
+      "stock": "Dabur India Ltd.",
+      "sector": "Personal Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE260B01028",
+      "slug": "godfrey-phillips-india-ltd-ine260b01028",
+      "isin": "INE260B01028",
+      "stock": "Godfrey Phillips India Ltd.",
+      "sector": "Cigarettes & Tobacco Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE093I01010",
+      "slug": "oberoi-realty-ltd-ine093i01010",
+      "isin": "INE093I01010",
+      "stock": "Oberoi Realty Ltd.",
+      "sector": "Realty",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE040H01021",
+      "slug": "suzlon-energy-ltd-ine040h01021",
+      "isin": "INE040H01021",
+      "stock": "Suzlon Energy Ltd",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE406M01024",
+      "slug": "eris-lifesciences-ltd-ine406m01024",
+      "isin": "INE406M01024",
+      "stock": "Eris Lifesciences Ltd",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE129A01019",
+      "slug": "gail-india-ltd-ine129a01019",
+      "isin": "INE129A01019",
+      "stock": "GAIL (India) Ltd.",
+      "sector": "Gas",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE192R01011",
+      "slug": "avenue-supermarts-ltd-ine192r01011",
+      "isin": "INE192R01011",
+      "stock": "Avenue Supermarts Ltd.",
+      "sector": "Retailing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE274J01014",
+      "slug": "oil-india-limited-ine274j01014",
+      "isin": "INE274J01014",
+      "stock": "Oil India Limited",
+      "sector": "Oil",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE120A01034",
+      "slug": "carborundum-universal-ltd-ine120a01034",
+      "isin": "INE120A01034",
+      "stock": "Carborundum Universal Ltd.",
+      "sector": "Industrial Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE09N301011",
+      "slug": "gujarat-fluorochemicals-limited-ine09n301011",
+      "isin": "INE09N301011",
+      "stock": "GUJARAT FLUOROCHEMICALS LIMITED",
+      "sector": "Chemicals & Petrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE848E01016",
+      "slug": "nhpc-ltd-ine848e01016",
+      "isin": "INE848E01016",
+      "stock": "NHPC Ltd.",
+      "sector": "Power",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE155A01022",
+      "slug": "tata-motors-passenger-vehicles-limited-ine155a01022",
+      "isin": "INE155A01022",
+      "stock": "Tata Motors Passenger Vehicles Limited",
+      "sector": "Automobiles",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE628A01036",
+      "slug": "upl-ltd-ine628a01036",
+      "isin": "INE628A01036",
+      "stock": "UPL Ltd.",
+      "sector": "Fertilizers & Agrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE021A01026",
+      "slug": "asian-paints-limited-ine021a01026",
+      "isin": "INE021A01026",
+      "stock": "Asian Paints Limited",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE669E01016",
+      "slug": "vodafone-idea-limited-ine669e01016",
+      "isin": "INE669E01016",
+      "stock": "VODAFONE IDEA LIMITED",
+      "sector": "Telecom - Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE049B01025",
+      "slug": "wockhardt-ltd-ine049b01025",
+      "isin": "INE049B01025",
+      "stock": "Wockhardt Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE212H01026",
+      "slug": "aia-engineering-ltd-ine212h01026",
+      "isin": "INE212H01026",
+      "stock": "AIA Engineering Ltd.",
+      "sector": "Industrial Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE570L01029",
+      "slug": "sai-life-sciences-limited-ine570l01029",
+      "isin": "INE570L01029",
+      "stock": "Sai Life Sciences Limited",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE089A01031",
+      "slug": "dr-reddys-laboratories-ltd-ine089a01031",
+      "isin": "INE089A01031",
+      "stock": "Dr Reddys Laboratories Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE795G01014",
+      "slug": "hdfc-life-insurance-company-limited-ine795g01014",
+      "isin": "INE795G01014",
+      "stock": "HDFC Life Insurance Company Limited",
+      "sector": "Insurance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE548C01032",
+      "slug": "emami-ltd-ine548c01032",
+      "isin": "INE548C01032",
+      "stock": "Emami Ltd.",
+      "sector": "Personal Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE03QK01018",
+      "slug": "cohance-lifesciences-limited-ine03qk01018",
+      "isin": "INE03QK01018",
+      "stock": "Cohance Lifesciences Limited",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE872J01023",
+      "slug": "devyani-international-ltd-ine872j01023",
+      "isin": "INE872J01023",
+      "stock": "Devyani International Ltd",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE663F01032",
+      "slug": "info-edge-india-limited-ine663f01032",
+      "isin": "INE663F01032",
+      "stock": "INFO EDGE (INDIA) LIMITED",
+      "sector": "Retailing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE797F01020",
+      "slug": "jubilant-foodworks-limited-ine797f01020",
+      "isin": "INE797F01020",
+      "stock": "Jubilant Foodworks Limited",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE692A01016",
+      "slug": "union-bank-of-india-ine692a01016",
+      "isin": "INE692A01016",
+      "stock": "Union Bank of India",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE018E01016",
+      "slug": "sbi-cards-and-payment-services-limited-ine018e01016",
+      "isin": "INE018E01016",
+      "stock": "SBI CARDS AND PAYMENT SERVICES LIMITED",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE775A01035",
+      "slug": "samvardhana-motherson-international-ltd-ine775a01035",
+      "isin": "INE775A01035",
+      "stock": "Samvardhana Motherson International Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE195A01028",
+      "slug": "supreme-industries-ltd-ine195a01028",
+      "isin": "INE195A01028",
+      "stock": "Supreme Industries Ltd.",
+      "sector": "Industrial Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE092A01019",
+      "slug": "tata-chemicals-ltd-ine092a01019",
+      "isin": "INE092A01019",
+      "stock": "Tata Chemicals Ltd.",
+      "sector": "Chemicals & Petrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE257A01026",
+      "slug": "bharat-heavy-electricals-ltd-ine257a01026",
+      "isin": "INE257A01026",
+      "stock": "Bharat Heavy Electricals Ltd.",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE726G01019",
+      "slug": "icici-prudential-life-insurance-company-ltd-ine726g01019",
+      "isin": "INE726G01019",
+      "stock": "ICICI Prudential Life Insurance Company Ltd.",
+      "sector": "Insurance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE214T01019",
+      "slug": "ltm-limited-ine214t01019",
+      "isin": "INE214T01019",
+      "stock": "LTM Limited",
+      "sector": "IT - Software",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE589A01014",
+      "slug": "nlc-india-ltd-ine589a01014",
+      "isin": "INE589A01014",
+      "stock": "NLC India Ltd.",
+      "sector": "Power",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE012A01025",
+      "slug": "acc-ltd-ine012a01025",
+      "isin": "INE012A01025",
+      "stock": "ACC Ltd.",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE769A01020",
+      "slug": "aarti-industries-ltd-ine769a01020",
+      "isin": "INE769A01020",
+      "stock": "Aarti Industries Ltd.",
+      "sector": "Chemicals & Petrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE084A01016",
+      "slug": "bank-of-india-ine084a01016",
+      "isin": "INE084A01016",
+      "stock": "Bank of India",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE121E01018",
+      "slug": "jsw-energy-ltd-ine121e01018",
+      "isin": "INE121E01018",
+      "stock": "JSW Energy Ltd.",
+      "sector": "Power",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE094J01016",
+      "slug": "uti-asset-management-company-ltd-ine094j01016",
+      "isin": "INE094J01016",
+      "stock": "UTI Asset Management Company Ltd",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE716A01013",
+      "slug": "whirlpool-of-india-ltd-ine716a01013",
+      "isin": "INE716A01013",
+      "stock": "Whirlpool of India Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE233B01017",
+      "slug": "blue-dart-express-ltd-ine233b01017",
+      "isin": "INE233B01017",
+      "stock": "Blue Dart Express Ltd.",
+      "sector": "Transport Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE302A01020",
+      "slug": "exide-industries-ltd-ine302a01020",
+      "isin": "INE302A01020",
+      "stock": "Exide Industries Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE603J01030",
+      "slug": "pi-industries-ltd-ine603j01030",
+      "isin": "INE603J01030",
+      "stock": "PI Industries Ltd.",
+      "sector": "Fertilizers & Agrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE761H01022",
+      "slug": "page-industries-ltd-ine761h01022",
+      "isin": "INE761H01022",
+      "stock": "Page Industries Ltd",
+      "sector": "Textiles & Apparels",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE615H01020",
+      "slug": "titagarh-wagons-limited-ine615h01020",
+      "isin": "INE615H01020",
+      "stock": "Titagarh Wagons Limited",
+      "sector": "Industrial Manufacturing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE530B01024",
+      "slug": "iifl-finance-limited-ine530b01024",
+      "isin": "INE530B01024",
+      "stock": "IIFL Finance Limited",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE456Z01021",
+      "slug": "medi-assist-healthcare-services-limited-ine456z01021",
+      "isin": "INE456Z01021",
+      "stock": "Medi Assist Healthcare Services Limited",
+      "sector": "Insurance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE149A01033",
+      "slug": "cholamandalam-financial-holdings-ltd-ine149a01033",
+      "isin": "INE149A01033",
+      "stock": "Cholamandalam Financial Holdings Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0KL801015",
+      "slug": "dcx-systems-limited-ine0kl801015",
+      "isin": "INE0KL801015",
+      "stock": "DCX Systems Limited",
+      "sector": "Aerospace & Defense",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE217B01036",
+      "slug": "kajaria-ceramics-ltd-ine217b01036",
+      "isin": "INE217B01036",
+      "stock": "Kajaria Ceramics Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE921L01032",
+      "slug": "powerica-limited-ine921l01032",
+      "isin": "INE921L01032",
+      "stock": "POWERICA LIMITED",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE020B01018",
+      "slug": "rec-limited-ine020b01018",
+      "isin": "INE020B01018",
+      "stock": "REC Limited.",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE974X01010",
+      "slug": "tube-investments-of-india-ltd-ine974x01010",
+      "isin": "INE974X01010",
+      "stock": "Tube Investments of India Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE256A01028",
+      "slug": "zee-entertainment-enterprises-ltd-ine256a01028",
+      "isin": "INE256A01028",
+      "stock": "Zee Entertainment Enterprises Ltd.",
+      "sector": "Entertainment",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE010B01027",
+      "slug": "zydus-lifesciences-limited-ine010b01027",
+      "isin": "INE010B01027",
+      "stock": "Zydus Lifesciences Limited",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE466L01038",
+      "slug": "360-one-wam-limited-ine466l01038",
+      "isin": "INE466L01038",
+      "stock": "360 ONE WAM LIMITED",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE484J01027",
+      "slug": "godrej-properties-ltd-ine484j01027",
+      "isin": "INE484J01027",
+      "stock": "Godrej Properties Ltd.",
+      "sector": "Realty",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE982J01020",
+      "slug": "one-97-communications-limited-ine982j01020",
+      "isin": "INE982J01020",
+      "stock": "One 97 Communications Limited",
+      "sector": "Financial Technology (Fintech)",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE476A01022",
+      "slug": "canara-bank-ine476a01022",
+      "isin": "INE476A01022",
+      "stock": "Canara Bank",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE596I01020",
+      "slug": "computer-age-management-services-ine596i01020",
+      "isin": "INE596I01020",
+      "stock": "Computer Age Management Services",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE670K01029",
+      "slug": "lodha-developers-limited-ine670k01029",
+      "isin": "INE670K01029",
+      "stock": "Lodha Developers Limited",
+      "sector": "Realty",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE191H01014",
+      "slug": "pvr-limited-ine191h01014",
+      "isin": "INE191H01014",
+      "stock": "PVR LIMITED",
+      "sector": "Entertainment",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE575P01011",
+      "slug": "star-health-and-allied-insurance-company-ltd-ine575p01011",
+      "isin": "INE575P01011",
+      "stock": "Star Health and Allied Insurance Company Ltd",
+      "sector": "Insurance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE200A01026",
+      "slug": "ge-vernova-t-d-india-limited-ine200a01026",
+      "isin": "INE200A01026",
+      "stock": "GE Vernova T&D India Limited",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE111A01025",
+      "slug": "container-corporation-of-india-ltd-ine111a01025",
+      "isin": "INE111A01025",
+      "stock": "Container Corporation of India Ltd.",
+      "sector": "Transport Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE288B01029",
+      "slug": "deepak-nitrite-limited-ine288b01029",
+      "isin": "INE288B01029",
+      "stock": "Deepak Nitrite Limited",
+      "sector": "Chemicals & Petrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE010V01017",
+      "slug": "l-t-technology-services-ltd-ine010v01017",
+      "isin": "INE010V01017",
+      "stock": "L&T Technology Services Ltd.",
+      "sector": "IT - Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0PK601023",
+      "slug": "occl-limited-ine0pk601023",
+      "isin": "INE0PK601023",
+      "stock": "OCCL Limited",
+      "sector": "Chemicals & Petrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE176A01028",
+      "slug": "bata-india-ltd-ine176a01028",
+      "isin": "INE176A01028",
+      "stock": "Bata India Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE844O01030",
+      "slug": "gujarat-energy-limited-ine844o01030",
+      "isin": "INE844O01030",
+      "stock": "Gujarat Energy Limited",
+      "sector": "Gas",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE377N01017",
+      "slug": "waaree-energies-limited-ine377n01017",
+      "isin": "INE377N01017",
+      "stock": "Waaree Energies Limited",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE128X01021",
+      "slug": "archean-chemical-industries-limited-ine128x01021",
+      "isin": "INE128X01021",
+      "stock": "Archean Chemical Industries Limited",
+      "sector": "Chemicals & Petrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE02RE01045",
+      "slug": "brainbees-solutions-limited-firstcry-ine02re01045",
+      "isin": "INE02RE01045",
+      "stock": "Brainbees Solutions Limited (FirstCry)",
+      "sector": "Retailing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE823G01014",
+      "slug": "jk-cement-limited-ine823g01014",
+      "isin": "INE823G01014",
+      "stock": "JK Cement Limited",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE389H01022",
+      "slug": "kec-international-ltd-ine389h01022",
+      "isin": "INE389H01022",
+      "stock": "KEC International Ltd.",
+      "sector": "Construction",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE424H01027",
+      "slug": "sun-tv-network-limited-ine424h01027",
+      "isin": "INE424H01027",
+      "stock": "Sun TV Network Limited",
+      "sector": "Entertainment",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE387A01021",
+      "slug": "sundram-fasteners-ltd-ine387a01021",
+      "isin": "INE387A01021",
+      "stock": "Sundram Fasteners Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE398R01022",
+      "slug": "syngene-international-limited-ine398r01022",
+      "isin": "INE398R01022",
+      "stock": "Syngene International Limited",
+      "sector": "Healthcare Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE686F01025",
+      "slug": "united-breweries-ltd-ine686f01025",
+      "isin": "INE686F01025",
+      "stock": "United Breweries Ltd.",
+      "sector": "Beverages",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE738I01010",
+      "slug": "eclerx-services-limited-ine738i01010",
+      "isin": "INE738I01010",
+      "stock": "eClerx Services Limited",
+      "sector": "Commercial Services & Supplies",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE034A01011",
+      "slug": "arvind-limited-ine034a01011",
+      "isin": "INE034A01011",
+      "stock": "Arvind Limited",
+      "sector": "Textiles & Apparels",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE377Y01014",
+      "slug": "bajaj-housing-finance-ltd-ine377y01014",
+      "isin": "INE377Y01014",
+      "stock": "Bajaj Housing Finance Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE791I01019",
+      "slug": "brigade-enterprises-limited-ine791i01019",
+      "isin": "INE791I01019",
+      "stock": "Brigade Enterprises Limited.",
+      "sector": "Realty",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE878B01027",
+      "slug": "kei-industries-ltd-ine878b01027",
+      "isin": "INE878B01027",
+      "stock": "KEI Industries Ltd.",
+      "sector": "Industrial Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE1VXE01018",
+      "slug": "stl-networks-limited-ine1vxe01018",
+      "isin": "INE1VXE01018",
+      "stock": "STL NETWORKS LIMITED",
+      "sector": "Telecom - Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0LOJ01019",
+      "slug": "ikio-technologies-limited-ine0loj01019",
+      "isin": "INE0LOJ01019",
+      "stock": "IKIO Technologies Limited",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE337A01034",
+      "slug": "lg-balakrishnan-bros-ltd-ine337a01034",
+      "isin": "INE337A01034",
+      "stock": "LG Balakrishnan & Bros Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE095N01031",
+      "slug": "nbcc-india-limited-ine095n01031",
+      "isin": "INE095N01031",
+      "stock": "NBCC (India) Limited",
+      "sector": "Construction",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE418L01047",
+      "slug": "nazara-technologies-limited-ine418l01047",
+      "isin": "INE418L01047",
+      "stock": "Nazara Technologies Limited",
+      "sector": "Entertainment",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE00M201021",
+      "slug": "sterling-and-wilson-renewable-energy-ltd-ine00m201021",
+      "isin": "INE00M201021",
+      "stock": "Sterling and Wilson Renewable Energy Ltd.",
+      "sector": "Construction",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0HOQ01053",
+      "slug": "billionbrains-garage-ventures-limited-groww-ine0hoq01053",
+      "isin": "INE0HOQ01053",
+      "stock": "Billionbrains Garage Ventures Limited (Groww)",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0FS801015",
+      "slug": "motherson-sumi-wiring-india-limited-ine0fs801015",
+      "isin": "INE0FS801015",
+      "stock": "Motherson Sumi Wiring India Limited",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE142Q01026",
+      "slug": "sula-vineyards-limited-ine142q01026",
+      "isin": "INE142Q01026",
+      "stock": "SULA VINEYARDS LIMITED",
+      "sector": "Beverages",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE736A01011",
+      "slug": "central-depository-services-india-ltd-ine736a01011",
+      "isin": "INE736A01011",
+      "stock": "Central Depository Services (India) Ltd.",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE139R01012",
+      "slug": "fusion-finance-limited-ine139r01012",
+      "isin": "INE139R01012",
+      "stock": "Fusion Finance Limited",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE280A01028",
+      "slug": "titan-company-ltd-ine280a01028",
+      "isin": "INE280A01028",
+      "stock": "Titan Company Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0LRU01027",
+      "slug": "aarti-pharmalabs-limited-ine0lru01027",
+      "isin": "INE0LRU01027",
+      "stock": "Aarti Pharmalabs Limited",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE124G01033",
+      "slug": "delta-corp-ltd-ine124g01033",
+      "isin": "INE124G01033",
+      "stock": "Delta Corp Ltd.",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE1TUG01013",
+      "slug": "gspl-transmission-limited-ine1tug01013",
+      "isin": "INE1TUG01013",
+      "stock": "GSPL Transmission Limited",
+      "sector": "Gas",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE379A01028",
+      "slug": "itc-hotels-limited-ine379a01028",
+      "isin": "INE379A01028",
+      "stock": "ITC Hotels Limited",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE335Y01020",
+      "slug": "indian-railway-catering-and-tourism-corp-ltd-ine335y01020",
+      "isin": "INE335Y01020",
+      "stock": "Indian Railway Catering And Tourism Corp Ltd",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE09VQ01012",
+      "slug": "indigo-paints-limited-ine09vq01012",
+      "isin": "INE09VQ01012",
+      "stock": "Indigo Paints Limited",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE185Q01025",
+      "slug": "lumino-industries-limited-ine185q01025",
+      "isin": "INE185Q01025",
+      "stock": "Lumino Industries Limited",
+      "sector": "Industrial Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE321D01016",
+      "slug": "ag-ventures-limited-ine321d01016",
+      "isin": "INE321D01016",
+      "stock": "AG Ventures  Limited",
+      "sector": "Chemicals & Petrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0LMW01024",
+      "slug": "cello-world-limited-ine0lmw01024",
+      "isin": "INE0LMW01024",
+      "stock": "Cello World Limited",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE488A01050",
+      "slug": "chemplast-sanmar-limited-ine488a01050",
+      "isin": "INE488A01050",
+      "stock": "Chemplast Sanmar Limited",
+      "sector": "Chemicals & Petrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE227W01023",
+      "slug": "clean-science-technology-ltd-ine227w01023",
+      "isin": "INE227W01023",
+      "stock": "Clean Science & Technology Ltd",
+      "sector": "Chemicals & Petrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE102D01028",
+      "slug": "godrej-consumer-products-ltd-ine102d01028",
+      "isin": "INE102D01028",
+      "stock": "Godrej Consumer Products Ltd.",
+      "sector": "Personal Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE2KCE01013",
+      "slug": "kwality-wall-s-india-limited-ine2kce01013",
+      "isin": "INE2KCE01013",
+      "stock": "Kwality Wall’s (India) Limited",
+      "sector": "Food Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE196A01026",
+      "slug": "marico-ltd-ine196a01026",
+      "isin": "INE196A01026",
+      "stock": "Marico Ltd.",
+      "sector": "Agricultural Food & Other Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE298A01020",
+      "slug": "cummins-india-ltd-ine298a01020",
+      "isin": "INE298A01020",
+      "stock": "Cummins India Ltd.",
+      "sector": "Industrial Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE491A01021",
+      "slug": "city-union-bank-ltd-ine491a01021",
+      "isin": "INE491A01021",
+      "stock": "City Union Bank Ltd.",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE2J8701016",
+      "slug": "skf-india-industrial-limited-ine2j8701016",
+      "isin": "INE2J8701016",
+      "stock": "SKF India (Industrial) Limited",
+      "sector": "Industrial Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE347G01014",
+      "slug": "petronet-lng-ltd-ine347g01014",
+      "isin": "INE347G01014",
+      "stock": "Petronet LNG Ltd.",
+      "sector": "Gas",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE640A01023",
+      "slug": "skf-india-ltd-ine640a01023",
+      "isin": "INE640A01023",
+      "stock": "SKF India Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE825A01020",
+      "slug": "vardhman-textiles-ltd-ine825a01020",
+      "isin": "INE825A01020",
+      "stock": "Vardhman Textiles Ltd.",
+      "sector": "Textiles & Apparels",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE386A01023",
+      "slug": "vesuvius-india-ltd-ine386a01023",
+      "isin": "INE386A01023",
+      "stock": "Vesuvius India Ltd.",
+      "sector": "Industrial Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE225D01027",
+      "slug": "symphony-ltd-ine225d01027",
+      "isin": "INE225D01027",
+      "stock": "Symphony Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE343G01021",
+      "slug": "bharti-hexacom-limited-ine343g01021",
+      "isin": "INE343G01021",
+      "stock": "Bharti Hexacom Limited",
+      "sector": "Telecom - Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE259A01022",
+      "slug": "colgate-palmolive-i-ltd-ine259a01022",
+      "isin": "INE259A01022",
+      "stock": "Colgate-Palmolive ( I ) Ltd.",
+      "sector": "Personal Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE324D01010",
+      "slug": "lg-electronics-india-limited-ine324d01010",
+      "isin": "INE324D01010",
+      "stock": "LG Electronics India Limited",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE461C01038",
+      "slug": "greenply-industries-ltd-ine461c01038",
+      "isin": "INE461C01038",
+      "stock": "Greenply Industries Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE060A01024",
+      "slug": "navneet-education-ltd-ine060a01024",
+      "isin": "INE060A01024",
+      "stock": "Navneet Education Ltd.",
+      "sector": "Household Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE544R01021",
+      "slug": "greenlam-industries-ltd-ine544r01021",
+      "isin": "INE544R01021",
+      "stock": "Greenlam Industries Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE435G01025",
+      "slug": "dhanuka-agritech-ltd-ine435g01025",
+      "isin": "INE435G01025",
+      "stock": "Dhanuka Agritech Ltd.",
+      "sector": "Fertilizers & Agrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE199G01027",
+      "slug": "jagran-prakashan-ltd-ine199g01027",
+      "isin": "INE199G01027",
+      "stock": "Jagran Prakashan Ltd.",
+      "sector": "Media",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE08ZM01014",
+      "slug": "greenpanel-industries-limited-ine08zm01014",
+      "isin": "INE08ZM01014",
+      "stock": "Greenpanel Industries Limited",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE634I01029",
+      "slug": "knr-construction-limited-ine634i01029",
+      "isin": "INE634I01029",
+      "stock": "KNR Construction limited.",
+      "sector": "Construction",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE976I01016",
+      "slug": "tata-capital-ltd-ine976i01016",
+      "isin": "INE976I01016",
+      "stock": "Tata Capital Ltd.",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE133A01011",
+      "slug": "jsw-dulux-limited-ine133a01011",
+      "isin": "INE133A01011",
+      "stock": "JSW Dulux Limited",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE002S01010",
+      "slug": "mahanagar-gas-ltd-ine002s01010",
+      "isin": "INE002S01010",
+      "stock": "Mahanagar Gas Ltd.",
+      "sector": "Gas",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE883F01010",
+      "slug": "aadhar-housing-finance-limited-ine883f01010",
+      "isin": "INE883F01010",
+      "stock": "Aadhar Housing Finance Limited",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0HV901016",
+      "slug": "le-travenues-technology-limited-ine0hv901016",
+      "isin": "INE0HV901016",
+      "stock": "Le Travenues Technology Limited",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE474Q01031",
+      "slug": "global-health-limited-ine474q01031",
+      "isin": "INE474Q01031",
+      "stock": "Global Health Limited",
+      "sector": "Healthcare Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE00F201020",
+      "slug": "prudent-corporate-advisory-services-limited-ine00f201020",
+      "isin": "INE00F201020",
+      "stock": "Prudent Corporate Advisory Services Limited",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE321T01012",
+      "slug": "doms-industries-limited-ine321t01012",
+      "isin": "INE321T01012",
+      "stock": "DOMS Industries Limited",
+      "sector": "Household Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE524A01029",
+      "slug": "gabriel-india-ltd-ine524a01029",
+      "isin": "INE524A01029",
+      "stock": "Gabriel India Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE074A01025",
+      "slug": "praj-industries-limited-ine074a01025",
+      "isin": "INE074A01025",
+      "stock": "Praj Industries Limited",
+      "sector": "Industrial Manufacturing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE320B01020",
+      "slug": "centum-electronics-ltd-ine320b01020",
+      "isin": "INE320B01020",
+      "stock": "Centum Electronics Ltd.",
+      "sector": "Aerospace & Defense",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE671A01010",
+      "slug": "honeywell-automation-india-limited-ine671a01010",
+      "isin": "INE671A01010",
+      "stock": "Honeywell Automation India Limited",
+      "sector": "Industrial Manufacturing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE682M01020",
+      "slug": "jupiter-life-line-hospitals-limited-ine682m01020",
+      "isin": "INE682M01020",
+      "stock": "Jupiter Life Line Hospitals Limited",
+      "sector": "Healthcare Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE01TY01017",
+      "slug": "canara-hsbc-life-insurance-company-limited-ine01ty01017",
+      "isin": "INE01TY01017",
+      "stock": "CANARA HSBC LIFE INSURANCE COMPANY LIMITED",
+      "sector": "Insurance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE745G01043",
+      "slug": "multi-commodity-exchange-of-india-l-ine745g01043",
+      "isin": "INE745G01043",
+      "stock": "Multi Commodity Exchange of India L",
+      "sector": "Capital Markets",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE230A01023",
+      "slug": "eih-ltd-ine230a01023",
+      "isin": "INE230A01023",
+      "stock": "EIH Ltd.",
+      "sector": "Leisure Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE1CDF01017",
+      "slug": "vedanta-aluminium-metal-limited-ine1cdf01017",
+      "isin": "INE1CDF01017",
+      "stock": "Vedanta Aluminium Metal Limited",
+      "sector": "Non - Ferrous Metals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE340A01012",
+      "slug": "birla-corporation-ltd-ine340a01012",
+      "isin": "INE340A01012",
+      "stock": "Birla Corporation Ltd.",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE573A01042",
+      "slug": "jk-tyre-industries-limited-ine573a01042",
+      "isin": "INE573A01042",
+      "stock": "JK Tyre & Industries Limited",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE317I01021",
+      "slug": "metro-brands-limited-ine317i01021",
+      "isin": "INE317I01021",
+      "stock": "METRO BRANDS LIMITED",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0BY001018",
+      "slug": "jubilant-ingrevia-limited-ine0by001018",
+      "isin": "INE0BY001018",
+      "stock": "Jubilant Ingrevia Limited",
+      "sector": "Chemicals & Petrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE258A01024",
+      "slug": "beml-limited-ine258a01024",
+      "isin": "INE258A01024",
+      "stock": "BEML Limited",
+      "sector": "Agricultural, Commercial & Construction Vehicles",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0FOO01011",
+      "slug": "shiprocket-limited-ine0foo01011",
+      "isin": "INE0FOO01011",
+      "stock": "Shiprocket Limited",
+      "sector": "Transport Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE520A01027",
+      "slug": "zensar-technologies-ltd-ine520a01027",
+      "isin": "INE520A01027",
+      "stock": "Zensar Technologies Ltd.",
+      "sector": "IT - Software",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE545A01024",
+      "slug": "heg-advanced-materials-limited-ine545a01024",
+      "isin": "INE545A01024",
+      "stock": "HEG Advanced Materials Limited",
+      "sector": "Industrial Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE635Q01029",
+      "slug": "gulf-oil-lubricants-india-ltd-ine635q01029",
+      "isin": "INE635Q01029",
+      "stock": "Gulf Oil Lubricants India Ltd.",
+      "sector": "Petroleum Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE084101034",
+      "slug": "indo-mim-limited-ine084101034",
+      "isin": "INE084101034",
+      "stock": "INDO-MIM Limited",
+      "sector": "Industrial Manufacturing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE739E01017",
+      "slug": "cera-sanitaryware-ltd-ine739e01017",
+      "isin": "INE739E01017",
+      "stock": "Cera Sanitaryware Ltd",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE269A01021",
+      "slug": "sonata-software-ltd-ine269a01021",
+      "isin": "INE269A01021",
+      "stock": "Sonata Software Ltd.",
+      "sector": "IT - Software",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE229C01021",
+      "slug": "sagar-cements-ltd-ine229c01021",
+      "isin": "INE229C01021",
+      "stock": "Sagar Cements Ltd.",
+      "sector": "Cement & Cement Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE684F01012",
+      "slug": "firstsource-solutions-ltd-ine684f01012",
+      "isin": "INE684F01012",
+      "stock": "Firstsource Solutions Ltd.",
+      "sector": "Commercial Services & Supplies",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE967H01025",
+      "slug": "krishna-institute-of-medical-sciences-limited-ine967h01025",
+      "isin": "INE967H01025",
+      "stock": "Krishna Institute Of Medical Sciences Limited",
+      "sector": "Healthcare Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE940H01022",
+      "slug": "pearl-global-industries-limited-ine940h01022",
+      "isin": "INE940H01022",
+      "stock": "PEARL GLOBAL INDUSTRIES LIMITED",
+      "sector": "Textiles & Apparels",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE481N01025",
+      "slug": "home-first-finance-company-india-ltd-ine481n01025",
+      "isin": "INE481N01025",
+      "stock": "Home First Finance Company India Ltd",
+      "sector": "Finance",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE017A01032",
+      "slug": "great-eastern-shipping-company-ltd-ine017a01032",
+      "isin": "INE017A01032",
+      "stock": "Great Eastern Shipping Company Ltd.",
+      "sector": "Transport Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE659A01023",
+      "slug": "sudarshan-chemical-industries-limited-ine659a01023",
+      "isin": "INE659A01023",
+      "stock": "Sudarshan Chemical Industries Limited",
+      "sector": "Chemicals & Petrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE043W01024",
+      "slug": "vijaya-diagnostic-centre-limited-ine043w01024",
+      "isin": "INE043W01024",
+      "stock": "Vijaya Diagnostic Centre Limited",
+      "sector": "Healthcare Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE399C01030",
+      "slug": "suprajit-engineering-ltd-ine399c01030",
+      "isin": "INE399C01030",
+      "stock": "Suprajit Engineering Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE211R01019",
+      "slug": "power-mech-projects-ltd-ine211r01019",
+      "isin": "INE211R01019",
+      "stock": "Power Mech Projects Ltd.",
+      "sector": "Construction",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE679V01027",
+      "slug": "aditya-vision-limited-ine679v01027",
+      "isin": "INE679V01027",
+      "stock": "Aditya Vision Limited",
+      "sector": "Retailing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE021O01019",
+      "slug": "dodla-dairy-limited-ine021o01019",
+      "isin": "INE021O01019",
+      "stock": "Dodla Dairy Limited",
+      "sector": "Food Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE011K01018",
+      "slug": "tega-industries-limited-ine011k01018",
+      "isin": "INE011K01018",
+      "stock": "TEGA INDUSTRIES LIMITED",
+      "sector": "Industrial Manufacturing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE063P01018",
+      "slug": "equitas-small-finance-bank-ltd-ine063p01018",
+      "isin": "INE063P01018",
+      "stock": "Equitas Small Finance Bank Ltd",
+      "sector": "Banks",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE349A01021",
+      "slug": "nrb-bearing-ltd-ine349a01021",
+      "isin": "INE349A01021",
+      "stock": "NRB Bearing Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE737H01014",
+      "slug": "fiem-industries-limited-ine737h01014",
+      "isin": "INE737H01014",
+      "stock": "FIEM INDUSTRIES LIMITED",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE540H01012",
+      "slug": "voltamp-transformers-ltd-ine540h01012",
+      "isin": "INE540H01012",
+      "stock": "Voltamp Transformers Ltd.",
+      "sector": "Electrical Equipment",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE498B01024",
+      "slug": "shoppers-stop-ltd-ine498b01024",
+      "isin": "INE498B01024",
+      "stock": "Shoppers Stop Ltd.",
+      "sector": "Retailing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE688A01022",
+      "slug": "transport-corporation-of-india-ltd-ine688a01022",
+      "isin": "INE688A01022",
+      "stock": "Transport Corporation of India Ltd.",
+      "sector": "Transport Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE366I01010",
+      "slug": "vrl-logistics-ltd-ine366i01010",
+      "isin": "INE366I01010",
+      "stock": "VRL Logistics Ltd.",
+      "sector": "Transport Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE221J01015",
+      "slug": "sharda-cropchem-ltd-ine221j01015",
+      "isin": "INE221J01015",
+      "stock": "Sharda Cropchem Ltd.",
+      "sector": "Fertilizers & Agrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE884B01025",
+      "slug": "kirloskar-ferrous-industries-ltd-ine884b01025",
+      "isin": "INE884B01025",
+      "stock": "Kirloskar Ferrous Industries Ltd.",
+      "sector": "Ferrous Metals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE085A01013",
+      "slug": "chambal-fertilizers-chemicals-ltd-ine085a01013",
+      "isin": "INE085A01013",
+      "stock": "Chambal Fertilizers & Chemicals Ltd.",
+      "sector": "Fertilizers & Agrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE162B01018",
+      "slug": "lumax-industries-ltd-ine162b01018",
+      "isin": "INE162B01018",
+      "stock": "Lumax Industries Ltd",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE541A01023",
+      "slug": "gmm-pfaudler-limited-ine541a01023",
+      "isin": "INE541A01023",
+      "stock": "GMM Pfaudler Limited",
+      "sector": "Industrial Manufacturing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE351A01035",
+      "slug": "unichem-laboratories-ltd-ine351a01035",
+      "isin": "INE351A01035",
+      "stock": "Unichem Laboratories Ltd.",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0LXT01019",
+      "slug": "redtape-limited-ine0lxt01019",
+      "isin": "INE0LXT01019",
+      "stock": "Redtape Limited",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE933K01021",
+      "slug": "bajaj-consumer-care-ltd-ine933k01021",
+      "isin": "INE933K01021",
+      "stock": "Bajaj Consumer Care Ltd.",
+      "sector": "Personal Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE759A01021",
+      "slug": "mastek-ltd-ine759a01021",
+      "isin": "INE759A01021",
+      "stock": "Mastek Ltd.",
+      "sector": "IT - Software",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE294Z01018",
+      "slug": "the-anup-engineering-limited-ine294z01018",
+      "isin": "INE294Z01018",
+      "stock": "The Anup Engineering Limited",
+      "sector": "Industrial Manufacturing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE228A01035",
+      "slug": "usha-martin-ltd-ine228a01035",
+      "isin": "INE228A01035",
+      "stock": "Usha Martin Ltd",
+      "sector": "Industrial Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE0E7301029",
+      "slug": "wakefit-innovations-limited-ine0e7301029",
+      "isin": "INE0E7301029",
+      "stock": "Wakefit Innovations Limited",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE825V01034",
+      "slug": "vedant-fashions-ltd-ine825v01034",
+      "isin": "INE825V01034",
+      "stock": "Vedant Fashions Ltd",
+      "sector": "Retailing",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE934S01014",
+      "slug": "gna-axles-ltd-ine934s01014",
+      "isin": "INE934S01014",
+      "stock": "GNA Axles Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE570A01022",
+      "slug": "ion-exchange-india-limited-ine570a01022",
+      "isin": "INE570A01022",
+      "stock": "ION EXCHANGE (INDIA) LIMITED",
+      "sector": "Other Utilities",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE193E01025",
+      "slug": "bajaj-electricals-ltd-ine193e01025",
+      "isin": "INE193E01025",
+      "stock": "Bajaj Electricals Ltd.",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE079J01017",
+      "slug": "gateway-distriparks-limited-ine079j01017",
+      "isin": "INE079J01017",
+      "stock": "Gateway Distriparks Limited",
+      "sector": "Transport Services",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE195J01029",
+      "slug": "pnc-infratech-ltd-ine195j01029",
+      "isin": "INE195J01029",
+      "stock": "PNC Infratech Ltd.",
+      "sector": "Construction",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE108V01019",
+      "slug": "awfis-space-solutions-limited-ine108v01019",
+      "isin": "INE108V01019",
+      "stock": "AWFIS SPACE SOLUTIONS LIMITED",
+      "sector": "Commercial Services & Supplies",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE070I01018",
+      "slug": "insecticides-india-ltd-ine070i01018",
+      "isin": "INE070I01018",
+      "stock": "Insecticides (India) Ltd.",
+      "sector": "Fertilizers & Agrochemicals",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE517F01014",
+      "slug": "gujarat-pipavav-port-ltd-ine517f01014",
+      "isin": "INE517F01014",
+      "stock": "Gujarat Pipavav Port Ltd.",
+      "sector": "Transport Infrastructure",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE059D01020",
+      "slug": "la-opala-rg-limited-ine059d01020",
+      "isin": "INE059D01020",
+      "stock": "La Opala RG Limited",
+      "sector": "Consumer Durables",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE133Y01011",
+      "slug": "ifgl-refractories-limited-erst-ifgl-exports-limited-ine133y01011",
+      "isin": "INE133Y01011",
+      "stock": "Ifgl Refractories Limited (Erst Ifgl Exports Limited)",
+      "sector": "Industrial Products",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE201P01022",
+      "slug": "g-r-infraprojects-limited-ine201p01022",
+      "isin": "INE201P01022",
+      "stock": "G R Infraprojects Limited",
+      "sector": "Construction",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE533A01012",
+      "slug": "goodyear-india-ltd-ine533a01012",
+      "isin": "INE533A01012",
+      "stock": "Goodyear India Ltd.",
+      "sector": "Auto Components",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE950I01011",
+      "slug": "d-b-corp-limited-ine950i01011",
+      "isin": "INE950I01011",
+      "stock": "D B Corp Limited",
+      "sector": "Media",
+      "latestTracked": "2026-09"
+    },
+    {
+      "securityId": "ISIN:INE586V01016",
+      "slug": "tci-express-ltd-ine586v01016",
+      "isin": "INE586V01016",
+      "stock": "TCI Express Ltd.",
+      "sector": "Transport Services",
+      "latestTracked": "2026-09"
     }
   ]
 }

@@ -1,3 +1,4 @@
+import { researchUpdates, researchEdition } from './research-updates'
 import type { CardCategorySlug } from './card-categories'
 import { cardCategoryMap } from './card-categories'
 import { issuerForName } from './issuer-registry'
@@ -68,6 +69,12 @@ export function relatedCards(card: VerifiedRealCard, limit = 6) {
 
 export function historyForCard(card: VerifiedRealCard): CardHistoryEntry[] {
   return [
+    ...researchUpdates.filter(update => update.cardId === card.id || (card.id === 'sbi-miles-prime' && update.id === 'sbi-miles-redemption')).map(update => ({
+      date: researchEdition.checkedAt,
+      type: 'term-change' as const,
+      title: `${update.kind}: ${update.title}`,
+      description: `${update.after} ${update.effectiveDate ? `Issuer effective date: ${update.effectiveDate}.` : 'Issuer effective date not established; date above is the review date.'} Scope: this named benefit/model field only.`,
+    })),
     {
       date: card.verifiedAt,
       type: 'verified',

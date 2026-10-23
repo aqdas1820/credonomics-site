@@ -5,6 +5,7 @@ export { autoCardCatalogMeta }
 
 export function getAutoTopCards(category: CardCategorySlug, limit = 15): AutoCardCatalogRecord[] {
   return autoCardCatalog
+    .filter((card) => !(/idfc/i.test(card.issuer) && /vistara/i.test(card.name)))
     .filter((card) => (card.categoryScores?.[category] ?? 0) > 0)
     .sort((a, b) => {
       const scoreDiff = (b.categoryScores?.[category] ?? 0) - (a.categoryScores?.[category] ?? 0)
@@ -18,5 +19,6 @@ export function getAutoTopCards(category: CardCategorySlug, limit = 15): AutoCar
 }
 
 export function categoryRecordCount(category: CardCategorySlug) {
-  return autoCardCatalog.filter((card) => (card.categoryScores?.[category] ?? 0) > 0).length
+  return autoCardCatalog.filter((card) => !(/idfc/i.test(card.issuer) && /vistara/i.test(card.name)))
+    .filter((card) => (card.categoryScores?.[category] ?? 0) > 0).length
 }

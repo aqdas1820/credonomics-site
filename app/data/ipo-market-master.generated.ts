@@ -4,13 +4,13 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-10-23T14:12:29.373Z",
+  "generatedAt": "2026-10-23T15:41:39.147Z",
   "recordCount": 2,
   "nseCount": 2,
   "bseCount": 0,
   "activeCount": 2,
   "upcomingCount": 0,
-  "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard 0"
+  "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard unavailable"
 } as const
 
 export const ipoMarketMaster: IpoMarketRecord[] = [
@@ -31,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 12.453480969238196,
-      "updatedAt": "2026-10-23T14:12:29.373Z",
+      "total": 12.453487105141344,
+      "updatedAt": "2026-10-23T15:41:39.147Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JPL&type=Active"
     },
     "sharesOffered": 197525934,
-    "sharesBid": 2459885460,
+    "sharesBid": 2459886672,
     "estimatedIssueValueCr": 22103.15,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JPL&type=Active",
-    "fetchedAt": "2026-10-23T14:12:29.373Z"
+    "fetchedAt": "2026-10-23T15:41:39.147Z"
   },
   {
     "slug": "paras-healthcare-ltd-8045ae9",
@@ -60,16 +60,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 1.9150700249790393,
-      "updatedAt": "2026-10-23T14:12:29.373Z",
+      "total": 1.9150717629104095,
+      "updatedAt": "2026-10-23T15:41:39.147Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PARASHLTH&type=Active"
     },
     "sharesOffered": 12083331,
-    "sharesBid": 23140425,
+    "sharesBid": 23140446,
     "estimatedIssueValueCr": 837.37,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PARASHLTH&type=Active",
-    "fetchedAt": "2026-10-23T14:12:29.373Z"
+    "fetchedAt": "2026-10-23T15:41:39.147Z"
   }
 ]

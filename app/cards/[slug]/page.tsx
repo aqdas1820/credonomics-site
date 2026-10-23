@@ -157,6 +157,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       </section>
 
       <section className={`${styles.wrap} ${styles.pageBody} ${local.shell}`}>
+        <p>October field reviews and model corrections: <a href="/updates/2026-10">read the dated source ledger</a>. The original full-record verification date below is retained.</p>
         <div className={local.cardDetailStats}>
           <article><small>Annual fee</small><strong>₹{card.annualFeeRupees.toLocaleString('en-IN')}</strong><p>Before applicable fee tax.</p></article>
           <article><small>Fee waiver</small><strong>{card.feeWaiverAnnualSpendRupees ? `₹${card.feeWaiverAnnualSpendRupees.toLocaleString('en-IN')}` : 'Not normalized'}</strong><p>Annual spend threshold where available.</p></article>
@@ -185,10 +186,10 @@ export default function Page({ params }: { params: { slug: string } }) {
                 <div><b>{entry.title}</b><p>{entry.description}</p></div>
               </article>
             ))}
-            <article className={local.historyEmpty}>
+            {history.length === 1 && <article className={local.historyEmpty}>
               <span>Next</span>
               <div><b>No later verified term change recorded yet.</b><p>When CredoNomics confirms a material issuer change, the old and new terms can be recorded here.</p></div>
-            </article>
+            </article>}
           </div>
         </section>
 

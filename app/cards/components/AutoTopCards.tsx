@@ -2,6 +2,7 @@ import { AlertTriangle, CalendarClock, ExternalLink, RefreshCw, ShieldCheck, Spa
 import { cardCategoryMap, type CardCategorySlug } from '../../data/card-categories'
 import { autoCardCatalogMeta, getAutoTopCards } from '../../data/auto-card-utils'
 import styles from './auto-top-cards.module.css'
+import { verifiedRealCards } from '../../data/verified-real-cards'
 
 const money = new Intl.NumberFormat('en-IN', {
   style: 'currency',
@@ -59,11 +60,11 @@ export default function AutoTopCards({ categorySlug }: { categorySlug: CardCateg
     <section className={styles.section} aria-label={`Top ${category.shortTitle} cards research ranking`}>
       <div className={styles.head}>
         <div>
-          <span className={styles.kicker}><Sparkles size={14}/> Auto Research Rank</span>
-          <h2>Top {Math.min(cards.length || 15, 15)} {category.shortTitle} cards from official-source research</h2>
+          <span className={styles.kicker}><Sparkles size={14}/> Issuer catalogue discovery</span>
+          <h2>{cards.length} {category.shortTitle} catalogue matches</h2>
           <p>
             CredoNomics scans supported issuer catalogue/product pages, extracts category signals and
-            ranks the strongest matches for this category. The source link stays visible on every row.
+            sorts catalogue relevance for this category. This is unverified extraction, not the annual-value ranking above. The source link stays visible on every row.
           </p>
         </div>
         <div className={styles.refresh}>
@@ -85,11 +86,12 @@ export default function AutoTopCards({ categorySlug }: { categorySlug: CardCateg
           {cards.map((card, index) => {
             const rate = relevantRate(categorySlug, card)
             const rankScore = Math.round(card.categoryScores?.[categorySlug] ?? 0)
+            const normalized = verifiedRealCards.find(record => record.issuer.toLowerCase() === card.issuer.toLowerCase() && record.name.toLowerCase() === card.name.toLowerCase())
 
             return (
               <article className={`${styles.card} ${index < 3 ? styles.topThree : ''}`} key={card.id}>
                 <div className={styles.rank}>
-                  <small>Rank</small>
+                  <small>Match</small>
                   <b>#{index + 1}</b>
                 </div>
 
@@ -98,12 +100,12 @@ export default function AutoTopCards({ categorySlug }: { categorySlug: CardCateg
                   <h3>{card.name}</h3>
                   <div className={styles.badges}>
                     <span data-confidence={card.confidence}>{confidenceText(card.confidence)}</span>
-                    <span>Research score {rankScore}</span>
+                    <span>Catalogue relevance {rankScore}</span>
                   </div>
                 </div>
 
                 <div className={styles.quickMetrics}>
-                  <div><span>Annual fee</span><b>{fmtMoney(card.annualFee ?? card.renewalFee)}</b></div>
+                  <div><span>Normalized annual fee</span><b>{normalized ? fmtMoney(normalized.annualFeeRupees) : "Not verified"}</b></div>
                   <div>
                     <span>{rate?.label || 'Detected rate'}</span>
                     <b>
@@ -112,7 +114,7 @@ export default function AutoTopCards({ categorySlug }: { categorySlug: CardCateg
                         : fmtPct(rate?.value)}
                     </b>
                   </div>
-                  <div><span>Fee waiver</span><b>{fmtMoney(card.feeWaiverSpend)}</b></div>
+                  <div><span>Normalized fee waiver</span><b>{normalized ? fmtMoney(normalized.feeWaiverAnnualSpendRupees) : "Not verified"}</b></div>
                 </div>
 
                 <details className={styles.details}>
