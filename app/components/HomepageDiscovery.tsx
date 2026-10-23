@@ -18,7 +18,7 @@ export default function HomepageDiscovery() {
     .map(({ id, title, description, href, category, source, updated }) => ({ id, title, description, href, category, source, updated }))
 
   return (
-    <section className={styles.section} aria-label="Explore CredoNomics intelligence">
+    <section id="intelligence-discovery" className={styles.section} aria-label="Explore CredoNomics intelligence">
       <div className={styles.inner}>
         <div className={styles.intro}>
           <span>

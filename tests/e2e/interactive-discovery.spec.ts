@@ -6,12 +6,13 @@ test('discovery filters, searches and resets using real indexed pages', async ({
   await discovery.getByRole('button', { name: 'Tools', exact: true }).click()
   await expect(discovery.getByRole('button', { name: 'Tools', exact: true })).toHaveAttribute('aria-pressed', 'true')
   await expect(discovery.getByRole('link', { name: /Decision Utilities/ })).toHaveCount(0)
-  await expect(discovery.getByRole('link', { name: /Financial Tools/ }).first()).toBeVisible()
+  await expect(discovery.getByRole('link', { name: /Financial Research & Decision Tools/ }).first()).toBeVisible()
   await discovery.getByRole('searchbox', { name: 'Search intelligence discovery' }).fill('zzzz-not-a-page')
   await expect(discovery.getByRole('status')).toContainText('No matches')
   await discovery.getByRole('button', { name: 'Reset filters' }).click()
   await expect(discovery.getByRole('button', { name: 'All', exact: true })).toHaveAttribute('aria-pressed', 'true')
   await expect(discovery.getByRole('searchbox')).toHaveValue('')
+  await expect(discovery.getByRole('searchbox')).toBeFocused()
 })
 
 test('page sections support keyboard dismissal and anchor navigation', async ({ page }) => {

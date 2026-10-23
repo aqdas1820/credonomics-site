@@ -183,3 +183,7 @@
 .srOnly{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:600px){.filters{gap:6px}.filters button{padding:8px 10px}.explorer .card{min-height:150px}.explorer .grid{min-height:0}.searchField input{font-size:16px}}
 @media(prefers-reduced-motion:reduce){.explorer .card,.filters button{transition:none}.explorer .card:hover{transform:none}}
+
+.searchField input::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}
+
+.section{scroll-margin-top:88px}

@@ -6,3 +6,5 @@
 @keyframes open{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
 @media(max-width:760px){.slot{margin-left:auto;width:148px}.panel{right:0}}
 @media(prefers-reduced-motion:reduce){.panel{animation:none}}
+
+.details .panel a{color:var(--cn-text,var(--ink))}

@@ -37,7 +37,7 @@ export default function DiscoveryExplorer({ entries }: { entries: Entry[] }) {
         <small>{entry.source}{entry.updated ? ` · ${entry.updated}` : ''}</small>
       </Link>)}
     </div>}
-    {matches.length === 0 && <div className={styles.empty}><Search size={24} aria-hidden="true" /><strong>Start with a wider search.</strong><p>Clear your filters to explore reports, tools and research.</p><button type="button" onClick={() => { setQuery(''); setCategory('All') }}>Reset filters</button></div>}
+    {matches.length === 0 && <div className={styles.empty}><Search size={24} aria-hidden="true" /><strong>Start with a wider search.</strong><p>Clear your filters to explore reports, tools and research.</p><button type="button" onClick={() => { setQuery(''); setCategory('All'); requestAnimationFrame(() => document.getElementById(id)?.focus()) }}>Reset filters</button></div>}
     {matches.length > visible.length && (needle || category !== 'All') && <Link className={styles.more} href={`/search?q=${encodeURIComponent(query || category)}`}>Continue in full search <ArrowUpRight size={14} /></Link>}
   </div>
 }

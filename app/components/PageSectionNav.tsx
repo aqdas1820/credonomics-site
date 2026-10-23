@@ -19,7 +19,7 @@ export default function PageSectionNav() {
     if (!root) return
     let frame = 0
     const collect = () => {
-      const headings = Array.from(root.querySelectorAll<HTMLHeadingElement>('h2')).filter(node => !node.closest('aside,dialog,[role="dialog"],header,footer') && node.textContent?.trim())
+      const headings = Array.from(root.querySelectorAll<HTMLHeadingElement>('h2')).filter(node => !node.closest('aside,dialog,[role="dialog"],header,footer,[hidden],[aria-hidden="true"]') && node.textContent?.trim())
       const next = headings.slice(0, 16).map((node, index) => {
         node.classList.add(styles.heading)
         if (!node.id) {
