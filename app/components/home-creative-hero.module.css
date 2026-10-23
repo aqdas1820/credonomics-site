@@ -193,3 +193,6 @@
 }
 @media(max-width:350px){.glassCard{width:145px}.tileIcon{display:none}.welcomeWordmark strong{letter-spacing:.1em}.orbitOuter{width:235px;height:235px}.orbitSpark{top:calc(47% - 117px);transform-origin:0 117px}}
 @media(prefers-reduced-motion:reduce){.motionToggle{display:none}}
+.stage .primary{color:#05242d;background:#6ce1f0;border-color:#6ce1f0}
+.stage .primary:hover{color:#05242d;background:#a2edf7}
+.stage .eyebrow{display:flex}
