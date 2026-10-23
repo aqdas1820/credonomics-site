@@ -783,9 +783,10 @@ export default function MFPortfolioClient({
                 key={label}
                 onClick={() => setSignalTab(label)}
                 className={signalTab === label ? "active" : ""}
+                aria-pressed={signalTab === label}
               >
                 {label}
-                <b>{values.length}</b>
+                <b>{initialLatest.signals ? values.length : "Unavailable"}</b>
               </button>
             ))}
           </div>
@@ -816,8 +817,9 @@ export default function MFPortfolioClient({
 
             {!activeSignals.length && (
               <div className="mfEmptySignal">
-                No securities meet this strict signal definition in the latest
-                clean snapshot.
+                {initialLatest.signals
+                  ? "No securities meet this strict signal definition in the latest clean snapshot."
+                  : "Signals are unavailable because comparable monthly disclosures and verified historical identities are incomplete. Missing data is not evidence of no portfolio changes."}
               </div>
             )}
           </div>
@@ -1149,6 +1151,8 @@ export default function MFPortfolioClient({
           <article className="mfPanel method">
             <span className="mfSectionLabel">TRANSPARENT METHODOLOGY</span>
             <h2>Signals you can audit.</h2>
+
+            <p>The displayed consensus table uses the existing snapshot fallback when historical signals are unavailable: 70% scheme breadth plus 30% normalized portfolio weight (weight divided by 3%, capped at 1). A single-scheme view uses portfolio weight divided by 8%, capped at 100. These snapshot scores do not imply accumulation. The historical trend model below requires comparable disclosures.</p>
 
             <div className="methodRow">
               <strong>50%</strong>
