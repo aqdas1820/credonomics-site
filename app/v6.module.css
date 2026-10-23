@@ -35,3 +35,6 @@
 .field input{border-radius:10px;background:color-mix(in srgb,var(--v6soft) 70%,var(--v6surface))}
 .resultBig{font-size:43px;color:#70e1d6}
 .explainPanel{padding:24px}
+
+/* Calculator presentation shares tokens; calculation code is unchanged. */
+.shell{--v6ink:var(--cn-text)!important;--v6muted:var(--cn-muted)!important;--v6line:var(--cn-border)!important;--v6surface:var(--cn-surface)!important;--v6soft:var(--cn-surface-raised)!important;--v6blue:var(--cn-blue)!important;--v6teal:var(--cn-cyan)!important}

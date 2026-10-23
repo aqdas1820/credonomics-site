@@ -11,7 +11,6 @@ import HomeIntelligenceRail from './components/HomeIntelligenceRail'
 import SupportCredonomics from './components/SupportCredonomics'
 import HomeCreativeHero from './components/HomeCreativeHero'
 import HomeMotionObserver from './components/HomeMotionObserver'
-import HomeCursorAura from './components/HomeCursorAura'
 import motionStyles from './components/homepage-motion.module.css'
 
 const quickActions = [
@@ -90,7 +89,6 @@ export default function HomePage() {
       <div className={styles.ambientOne} />
       <div className={styles.ambientTwo} />
       <HomeMotionObserver />
-      <HomeCursorAura />
       <section className={styles.appHome}>
         <HomeCreativeHero />
         <div className={styles.marketStatus} data-cm-reveal aria-label="Market data status">
@@ -116,10 +114,10 @@ export default function HomePage() {
               Independent Market Intelligence
             </div>
 
-            <h1>
+            <h2>
               Research beyond{' '}
               <em>market noise.</em>
-            </h1>
+            </h2>
 
             <p className={styles.heroText}>
               CredoNomics Investment Solutions combines valuation frameworks,

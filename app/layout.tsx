@@ -1,6 +1,7 @@
 import { mergeRootMetadata } from './seo/site'
 import SiteStructuredData from './components/SiteStructuredData'
 import './globals.css'
+import './midnight.css'
 import type { Metadata, Viewport } from 'next'
 import {
   organizationId,

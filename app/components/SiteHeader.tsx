@@ -1,9 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { BarChart3, Bell, Eye, Home, Menu, Wrench, X } from 'lucide-react'
+import { BarChart3, Bell, Eye, Home, Menu, UserRound, Wrench, X } from 'lucide-react'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styles from '../core-v4.module.css'
 import ThemeModeToggle from './ThemeModeToggle'
 import SiteSearch from './SiteSearch'
@@ -15,6 +15,7 @@ const primaryNav = [
   { href: '/tools/mf-portfolio-tracker', label: 'Mutual Funds' },
   { href: '/cards', label: 'Cards' },
   { href: '/tools', label: 'Tools' },
+  { href: '/discover', label: 'Discover' },
 ]
 
 const mobileNav = [
@@ -28,6 +29,22 @@ const mobileNav = [
 export default function SiteHeader() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+  const menuButton = useRef<HTMLButtonElement>(null)
+  const header = useRef<HTMLElement>(null)
+
+  useEffect(() => { setOpen(false) }, [pathname])
+  useEffect(() => {
+    if (!open) return
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') { setOpen(false); menuButton.current?.focus() }
+    }
+    const onPointer = (event: PointerEvent) => {
+      if (!header.current?.contains(event.target as Node)) setOpen(false)
+    }
+    window.addEventListener('keydown', onKey)
+    window.addEventListener('pointerdown', onPointer)
+    return () => { window.removeEventListener('keydown', onKey); window.removeEventListener('pointerdown', onPointer) }
+  }, [open])
 
   const isActive = (href: string) => {
     if (href === '/tools/mf-portfolio-tracker') {
@@ -51,7 +68,7 @@ export default function SiteHeader() {
         Skip to content
       </a>
 
-      <header className={styles.globalHeader}>
+      <header ref={header} className={styles.globalHeader}>
         <div className={styles.globalHeaderInner}>
           <Link
             href="/"
@@ -70,6 +87,7 @@ export default function SiteHeader() {
           </Link>
 
           <nav
+            id="cn-primary-navigation"
             className={`${styles.globalNav} ${
               open ? styles.globalNavOpen : ''
             }`}
@@ -88,10 +106,13 @@ export default function SiteHeader() {
                 {item.label}
               </Link>
             ))}
+            <Link href="/account" className={styles.mobileUtility} onClick={() => setOpen(false)}>Account</Link>
+            <Link href="/alerts" className={styles.mobileUtility} onClick={() => setOpen(false)}>Alerts</Link>
           </nav>
 
           <div className={styles.globalHeaderActions}>
-            <Link href="/alerts" aria-label="Alerts"><Bell size={18}/></Link>
+            <Link href="/alerts" className={styles.utilityAction} aria-label="Alerts"><Bell size={18}/></Link>
+            <Link href="/account" className={styles.utilityAction} aria-label="Account"><UserRound size={18}/></Link>
             <SiteSearch />
             <ThemeModeToggle compact />
 
@@ -100,10 +121,12 @@ export default function SiteHeader() {
             </Link>
 
             <button
+              ref={menuButton}
               type="button"
               className={styles.globalMenuButton}
               aria-label="Toggle navigation"
               aria-expanded={open}
+              aria-controls="cn-primary-navigation"
               onClick={() => setOpen((value) => !value)}
             >
               {open ? <X size={19} /> : <Menu size={19} />}

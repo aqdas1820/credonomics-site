@@ -4563,3 +4563,28 @@
   .mobileDockActive{color:var(--teal)!important}
 }
 /* === CREDONOMICS_APP_SHELL_2026_END === */
+
+/* Midnight shell: retain route geometry, share accessible surfaces. */
+.siteShell .globalResearchCta{color:var(--cn-on-accent)!important;background:var(--cn-cyan);border-color:var(--cn-cyan)}
+.siteShell .globalNavActive:after{background:var(--cn-cyan)}
+.siteShell .pageHero h1{font-size:clamp(34px,4.6vw,56px);line-height:1.1;max-width:1000px}
+.siteShell .pageHeroLead{font-size:17px;line-height:1.75;max-width:76ch}
+.siteShell .globalHeader{backdrop-filter:blur(12px)}
+.siteShell .globalHeaderActions>a{display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:40px}
+.siteShell .researchDomainCard,.siteShell .toolCard,.siteShell .articleCard{border-radius:14px;box-shadow:var(--cn-shadow);transition:transform 220ms var(--cn-ease-out),border-color 180ms ease-out}
+@media(hover:hover) and (pointer:fine){.siteShell .researchDomainCard:hover,.siteShell .toolCard:hover,.siteShell .articleCard:hover{transform:translateY(-2px);border-color:var(--cn-cyan)}}
+@media(max-width:1100px){.siteShell .globalNav a{font-size:12px;padding-inline:8px}.siteShell .globalHeaderInner{gap:12px}.siteShell .globalResearchCta{display:none}}
+@media(max-width:880px){.siteShell .globalHeaderActions>a{min-width:32px}.siteShell .globalNavOpen{max-height:calc(100dvh - 150px);overflow-y:auto}.siteShell .globalNav a{min-height:44px;font-size:14px}.siteShell .globalNavOpen{animation:cn-menu-in 200ms var(--cn-ease-out)}}
+@keyframes cn-menu-in{from{transform:translateY(-8px)}to{transform:none}}
+.siteShell .mobileUtility{display:none}
+@media(max-width:1100px){
+  .siteShell .globalHeaderInner{position:relative;grid-template-columns:auto 1fr auto}
+  .siteShell .globalNav{display:none;position:absolute;z-index:170;top:calc(100% + 8px);left:0;right:0;padding:8px;flex-direction:column;align-items:stretch;gap:3px;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:var(--cn-shadow);max-height:calc(100dvh - 150px);overflow-y:auto}
+  .siteShell .globalNavOpen{display:flex}
+  .siteShell .globalNav a{min-height:44px;padding:0 13px;font-size:14px}
+  .siteShell .globalNavActive:after{display:none}
+  .siteShell .globalMenuButton{display:grid}
+  .siteShell .globalHeaderActions{grid-column:3}
+  .siteShell .mobileUtility{display:flex}
+}
+@media(max-width:600px){.siteShell .globalHeaderActions .utilityAction{display:none}}

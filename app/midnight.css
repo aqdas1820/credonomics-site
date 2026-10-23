@@ -1,0 +1,72 @@
+/* Midnight Intelligence — shared presentation tokens, no financial semantics. */
+:root {
+  --cn-bg:#080f1e; --cn-surface:#111d30; --cn-surface-raised:#18283e;
+  --cn-border:#2a3b55; --cn-text:#f2f7ff; --cn-muted:#a6b7cd;
+  --cn-cyan:#35d0ea; --cn-blue:#6685ff; --cn-success:#3bd2ae;
+  --cn-warning:#f2bf67; --cn-danger:#f18b93; --cn-on-accent:#080f1e;
+  --cn-ease-out:cubic-bezier(.22,1,.36,1); --cn-fast:180ms; --cn-reveal:420ms;
+  --cn-shadow:0 14px 40px #00000018;
+}
+:root[data-theme='light'] {
+  --cn-bg:#f8fafd; --cn-surface:#ffffff; --cn-surface-raised:#edf3fa;
+  --cn-border:#dae4f1; --cn-text:#142338; --cn-muted:#496077;
+  --cn-cyan:#076b82; --cn-blue:#3452c4; --cn-success:#08745c;
+  --cn-warning:#835300; --cn-danger:#b22f42; --cn-on-accent:#ffffff;
+  --cn-shadow:0 14px 40px #1423380c;
+}
+:root, :root[data-theme] body .cn-experience {
+  --bg:var(--cn-bg); --surface:var(--cn-surface); --surface2:var(--cn-surface-raised);
+  --surface-2:var(--cn-surface-raised); --elevated:var(--cn-surface-raised);
+  --ink:var(--cn-text); --text:var(--cn-text); --muted:var(--cn-muted);
+  --line:var(--cn-border); --teal:var(--cn-cyan); --teal-2:var(--cn-cyan);
+  --cyan:var(--cn-cyan); --blue:var(--cn-blue); --blue-2:var(--cn-blue);
+  --positive:var(--cn-success); --negative:var(--cn-danger); --warning:var(--cn-warning);
+  --focus:var(--cn-cyan); --shadow-sm:var(--cn-shadow);
+}
+:root[data-theme] body .cn-experience {background:var(--cn-bg);color:var(--cn-text)}
+.cn-experience {font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.55}
+.cn-experience :where(button,input,select,textarea){font:inherit}
+.cn-experience :where(button,summary){cursor:pointer}
+.cn-experience :where(a,button,input,select,textarea,summary,[tabindex]):focus-visible {
+  outline:3px solid var(--cn-cyan); outline-offset:4px; scroll-margin:100px 0;
+}
+.cn-experience :where(input,select,textarea){accent-color:var(--cn-cyan)}
+.cn-experience :where(button,a,input,select,textarea,summary){transition:color var(--cn-fast) ease-out,background-color var(--cn-fast) ease-out,border-color var(--cn-fast) ease-out,box-shadow var(--cn-fast) ease-out}
+.cn-experience :where(button):active:not(:disabled){transform:scale(.99)}
+.cn-experience :where(button,input,select,textarea):disabled{cursor:not-allowed}
+.cn-experience :where(h1,h2,h3){text-wrap:balance}
+.cn-experience :where(h1){line-height:1.08;letter-spacing:-.045em}
+.cn-experience :where(p,li){text-wrap:pretty}
+.cn-experience :where(article p){line-height:1.75}
+.cn-experience :where(th,td,output){font-variant-numeric:tabular-nums}
+.cn-experience :where(th){text-align:start}
+.cn-experience :where(tbody tr){transition:background-color 160ms ease-out}
+.cn-experience :where(tbody tr):focus-within{background:var(--cn-surface-raised)}
+.cn-experience :where([role='alert']){border-inline-start:3px solid var(--cn-danger);padding-inline-start:12px}
+.cn-experience :where([aria-busy='true']){cursor:progress}
+.cn-experience :where([role='tab'],[aria-pressed='true'],[aria-selected='true']){scroll-margin:90px}
+.cn-context{width:min(1240px,calc(100% - 48px));margin:0 auto;min-height:80px;display:flex;align-items:center;gap:26px;border-bottom:1px solid var(--cn-border);color:var(--cn-muted)}
+.cn-context-name{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:750;color:var(--cn-text)}
+.cn-context-name i{width:6px;height:6px;border-radius:50%;background:var(--cn-cyan)}
+.cn-context-flow{display:flex;gap:16px;margin-inline-start:auto;font-size:11px}.cn-context-flow span{display:flex;gap:16px}.cn-context-flow b{font-weight:400;color:var(--cn-cyan)}
+.cn-context svg{fill:var(--cn-surface);stroke:var(--cn-cyan);stroke-width:1;opacity:.65;animation:cn-context-in 650ms ease-out}
+.cn-context svg path{fill:none;stroke-dasharray:200;animation:cn-context-line 750ms ease-out}
+.cn-entered{animation:cn-section-in var(--cn-reveal) var(--cn-ease-out)}
+@keyframes cn-context-in{from{transform:translateX(-6px)}to{transform:none}}
+@keyframes cn-context-line{from{stroke-dashoffset:200}to{stroke-dashoffset:0}}
+@keyframes cn-section-in{from{transform:translateY(12px)}to{transform:none}}
+@media(hover:hover) and (pointer:fine){
+  .cn-experience :where(tbody tr):hover{background:color-mix(in srgb,var(--cn-surface-raised) 65%,transparent)}
+  .cn-experience :where(a):hover{ text-decoration-thickness:1px; text-underline-offset:4px }
+}
+@media(max-width:760px){
+  .cn-context{width:calc(100% - 32px);min-height:76px;flex-wrap:wrap;gap:8px;padding:16px 0}
+  .cn-context-name{width:100%;font-size:10px}.cn-context-flow{margin:0;gap:12px;font-size:10px}.cn-context-flow span{gap:12px}.cn-context svg{display:none}
+  .cn-experience :where(input,select,textarea){font-size:16px}
+  .cn-experience :where(button,summary){min-height:44px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto!important}
+  .cn-experience *, .cn-experience *::before, .cn-experience *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+.cn-experience :where(input:not([type='checkbox']):not([type='radio']),select,textarea){border-color:color-mix(in srgb,var(--cn-muted) 75%,var(--cn-surface))}

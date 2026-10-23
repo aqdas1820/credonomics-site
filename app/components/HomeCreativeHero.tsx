@@ -1,81 +1,57 @@
-'use client'
-
 import Link from 'next/link'
-import { ArrowRight, ArrowUpRight, BarChart3, Compass, Layers3, ShieldCheck, Sparkles } from 'lucide-react'
-import type { PointerEvent } from 'react'
+import { ArrowRight, ArrowUpRight, Compass, Layers3, ShieldCheck } from 'lucide-react'
 import styles from './home-creative-hero.module.css'
 
-const areas=['EQUITY RESEARCH','IPO INTELLIGENCE','MUTUAL FUNDS','CARD ECONOMICS','FINANCIAL TOOLS']
-
-function moveScene(event:PointerEvent<HTMLDivElement>){
-  if(event.pointerType==='touch'||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return
-  const el=event.currentTarget,r=el.getBoundingClientRect()
-  el.style.setProperty('--mx',(((event.clientX-r.left)/r.width-.5)*18).toFixed(1)+'px')
-  el.style.setProperty('--my',(((event.clientY-r.top)/r.height-.5)*15).toFixed(1)+'px')
-}
-function resetScene(event:PointerEvent<HTMLDivElement>){
-  event.currentTarget.style.setProperty('--mx','0px')
-  event.currentTarget.style.setProperty('--my','0px')
-}
-export default function HomeCreativeHero(){
+export default function HomeCreativeHero() {
   return <>
     <section className={styles.stage} data-cm-hero aria-labelledby="cm-home-title">
-      <div className={styles.grid} aria-hidden="true"/>
-      <div className={styles.welcomeLight} aria-hidden="true"/>
+      <div className={styles.grid} aria-hidden="true" />
       <div className={styles.copy}>
         <div className={styles.welcomeIdentity} data-cm-welcome>
-          <span className={styles.welcomeLogo} aria-hidden="true">
-            <img src="/credonomics-mark.png" width="38" height="38" alt=""/>
-            <span className={styles.welcomeLogoHalo}/>
-          </span>
-          <span className={styles.welcomeWordmark}>
-            <strong>CREDONOMICS</strong>
-            <small>RESEARCH · TOOLS · PERSPECTIVE</small>
-          </span>
-          <span className={styles.welcomeIdentityLine} aria-hidden="true"/>
+          <span className={styles.welcomeLogo} aria-hidden="true"><img src="/credonomics-mark.png" width="38" height="38" alt="" /></span>
+          <span className={styles.welcomeWordmark}><strong>CREDONOMICS</strong><small>RESEARCH · TOOLS · PERSPECTIVE</small></span>
         </div>
-        <div className={styles.eyebrow}><i/>INDEPENDENT FINANCIAL INTELLIGENCE · INDIA FIRST</div>
+        <div className={styles.eyebrow}>INDEPENDENT FINANCIAL INTELLIGENCE · INDIA FIRST</div>
         <h1 id="cm-home-title">Financial intelligence,<br/><span>without the noise.</span></h1>
         <p>Research that connects the dots. Practical tools that explain the math. A clearer way to study markets, financial products and risk.</p>
         <div className={styles.actions}>
-          <Link className={styles.primary} href="/research">Explore research <ArrowUpRight size={17}/></Link>
-          <Link className={styles.secondary} href="/tools">Open financial tools <ArrowRight size={17}/></Link>
+          <Link className={styles.primary} href="/research">Explore research <ArrowUpRight size={17} aria-hidden="true" /></Link>
+          <Link className={styles.secondary} href="/tools">Open financial tools <ArrowRight size={17} aria-hidden="true" /></Link>
         </div>
         <div className={styles.proof} aria-label="Research principles">
-          <span><ShieldCheck size={15}/>Source-linked</span>
-          <span><Compass size={15}/>Context first</span>
-          <span><Layers3 size={15}/>Methodology visible</span>
+          <span><ShieldCheck size={15} aria-hidden="true"/>Source-linked</span>
+          <span><Compass size={15} aria-hidden="true"/>Context first</span>
+          <span><Layers3 size={15} aria-hidden="true"/>Methodology visible</span>
         </div>
       </div>
-      <div className={styles.visual} onPointerMove={moveScene} onPointerLeave={resetScene}>
-        <div className={styles.visualInner}>
-          <div className={styles.orbitOuter} aria-hidden="true"/>
-          <div className={styles.orbitMiddle} aria-hidden="true"/>
-          <div className={styles.orbitInner} aria-hidden="true"/>
-          <div className={styles.orbitSpark} aria-hidden="true"/>
-          <div className={styles.core} aria-hidden="true"><img src="/credonomics-mark.png" width="70" height="70" alt=""/><span>CREDONOMICS</span></div>
-          <Link href="/research" className={`${styles.glassCard} ${styles.researchCard}`}>
-            <span className={styles.tileIcon}><Sparkles size={16}/></span>
-            <span className={styles.tileCopy}><small>01 / RESEARCH</small><strong>Understand the why.</strong><em>Explore frameworks ↗</em></span>
-          </Link>
-          <Link href="/ipo" className={`${styles.glassCard} ${styles.ipoCard}`}>
-            <span className={styles.tileIcon}><BarChart3 size={16}/></span>
-            <span className={styles.tileCopy}><small>02 / INTELLIGENCE</small><strong>Study the context.</strong><em>Explore IPOs ↗</em></span>
-          </Link>
-          <Link href="/tools" className={`${styles.glassCard} ${styles.toolsCard}`}>
-            <span className={styles.tileIcon}><Layers3 size={16}/></span>
-            <span className={styles.tileCopy}><small>03 / TOOLS</small><strong>Make the math clear.</strong><em>Use free tools ↗</em></span>
-          </Link>
-          <span className={styles.visualCaption}>ANALYSE · VERIFY · UNDERSTAND</span>
+      <div className={styles.visual}>
+        <div className={styles.networkLabel}><span>RESEARCH ARCHITECTURE</span><small>01 — INFORMATION INTO CONTEXT</small></div>
+        <svg className={styles.network} viewBox="0 0 480 360" aria-hidden="true">
+          <defs><linearGradient id="cn-network-gradient"><stop stopColor="#35d0ea"/><stop offset="1" stopColor="#6685ff"/></linearGradient></defs>
+          <g className={styles.connectors} fill="none" stroke="url(#cn-network-gradient)">
+            <path d="M62 80H160L240 180L340 80H422M62 280H160L240 180L340 280H422M240 30V330M30 180H450"/>
+            <circle cx="240" cy="180" r="66"/><circle cx="240" cy="180" r="112" className={styles.outerRing}/>
+          </g>
+          <g className={styles.nodes} fill="#111d30" stroke="#35d0ea">
+            {[[62,80],[422,80],[62,280],[422,280],[240,30],[240,330],[30,180],[450,180]].map(([x,y])=><circle key={`${x}-${y}`} cx={x} cy={y} r="5"/>)}
+          </g>
+          <g fill="#a6b7cd" fontSize="10" fontFamily="system-ui" textAnchor="middle">
+            <text x="62" y="62">SOURCES</text><text x="422" y="62">FRAMEWORKS</text>
+            <text x="62" y="305">DISCLOSURES</text><text x="422" y="305">PERSPECTIVE</text>
+          </g>
+          <image href="/credonomics-mark.png" x="216" y="143" width="48" height="48"/>
+          <text x="240" y="211" fill="#f2f7ff" fontSize="10" letterSpacing="2" textAnchor="middle">INSIGHT</text>
+        </svg>
+        <div className={styles.networkLinks}>
+          <Link href="/research"><small>01 / RESEARCH</small><strong>Understand the why.</strong><ArrowUpRight size={16} aria-hidden="true"/></Link>
+          <Link href="/ipo"><small>02 / INTELLIGENCE</small><strong>Study the context.</strong><ArrowUpRight size={16} aria-hidden="true"/></Link>
+          <Link href="/tools"><small>03 / TOOLS</small><strong>Make the math clear.</strong><ArrowUpRight size={16} aria-hidden="true"/></Link>
         </div>
+        <p className={styles.visualCaption}>Conceptual research network · not a market feed</p>
       </div>
     </section>
-    <div className={styles.ribbon} aria-label="CredoNomics research areas">
-      <div className={styles.ribbonTrack} aria-hidden="true">
-        {[0,1].map(copy=><div className={styles.ribbonSet} key={copy}>
-          {areas.map(area=><span key={area}><i/>{area}</span>)}
-        </div>)}
-      </div>
-    </div>
+    <nav className={styles.ribbon} aria-label="CredoNomics research areas">
+      <Link href="/research">Equity research</Link><Link href="/ipo">IPO intelligence</Link><Link href="/mutual-funds">Mutual funds</Link><Link href="/cards">Card economics</Link><Link href="/tools">Financial tools</Link>
+    </nav>
   </>
 }

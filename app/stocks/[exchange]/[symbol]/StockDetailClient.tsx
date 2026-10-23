@@ -63,7 +63,7 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
   const points = useMemo(() => history?.data?.filter(point => point.close !== null) ?? [], [history]);
   const isIntraday = ["1m", "5m", "15m", "1h", "1D"].includes(range);
 
-  return <main className={styles.page}>
+  return <div className={styles.page}>
 
     {/* HEADER */}
     <header className={styles.brokerHeader}>
@@ -223,5 +223,5 @@ export default function StockDetailClient({ stock }: { stock: IndianEquityIdenti
       </aside>
     </div>
     {financials?.data ? <FinancialIntelligence data={financials.data} /> : financials ? <section className={styles.financialEmpty}>Financial data unavailable for this company.</section> : <section className={styles.financialEmpty}>Loading financial statements…</section>}
-  </main>;
+  </div>;
 }
