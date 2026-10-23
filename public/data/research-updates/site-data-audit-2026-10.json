@@ -282,6 +282,9 @@
     "originalFullRecordCheck": "2026-08-10",
     "fieldReviewDate": "2026-10-23",
     "reviewedFieldCardIds": [
+      "bpcl-sbi-octane",
+      "bpcl-sbi",
+      "indianoil-axis",
       "first-power-plus",
       "sbi-miles",
       "tata-neu-infinity-sbi",
@@ -310,10 +313,7 @@
       "freecharge-plus-axis",
       "tata-neu-infinity-hdfc",
       "tata-neu-plus-sbi",
-      "bpcl-sbi-octane",
-      "bpcl-sbi",
       "first-power",
-      "indianoil-axis",
       "sbi-miles-prime",
       "indigo-axis",
       "indigo-axis-premium"

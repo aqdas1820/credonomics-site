@@ -316,9 +316,9 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     sourceLabel: 'Official SBI Card product page',
     terms: {
       fuel: { ratePercent: 6.25, monthlyCapRupees: 625, secondaryRatePercent: 1, secondaryMonthlyCapRupees: 100, network: 'BPCL', note: '25 RP/₹100 at BPCL with 4 RP = ₹1 gives 6.25% reward value; plus 1% surcharge waiver. Reward cap modeled from 2,500 RP/billing cycle.' },
-      grocery: { ratePercent: 2.5, note: '10 RP/₹100 on eligible grocery; 4 RP = ₹1, equivalent to 2.5% before the combined reward cap.' },
-      dining: { ratePercent: 2.5, note: '10 RP/₹100 on eligible dining; 4 RP = ₹1, equivalent to 2.5% before the combined reward cap.' },
-      'co-branded': { ratePercent: 6.25, note: 'BPCL co-brand modeled on fuel reward value before surcharge waiver.' },
+      grocery: { ratePercent: 2.5, monthlyCapRupees: 1875, note: '10 RP/₹100, valued at ₹0.25 per point; 7,500 RP shared monthly cap across grocery, dining, department stores and movies. Other-category cap use and any post-cap base accrual are excluded.' },
+      dining: { ratePercent: 2.5, monthlyCapRupees: 1875, note: '10 RP/₹100, valued at ₹0.25 per point; 7,500 RP shared monthly cap across grocery, dining, department stores and movies. Other-category cap use and any post-cap base accrual are excluded.' },
+      'co-branded': { ratePercent: 6.25, monthlyCapRupees: 625, baseRatePercent: 0.25, note: 'BPCL fuel reward value capped at 2,500 RP/cycle (₹625); surcharge waiver excluded here. Other eligible non-fuel retail earns 1 RP/₹100.' },
     },
   },
   {
@@ -333,10 +333,10 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     sourceLabel: 'Official SBI Card product page',
     terms: {
       fuel: { ratePercent: 3.25, monthlyCapRupees: 325, secondaryRatePercent: 1, secondaryMonthlyCapRupees: 100, network: 'BPCL', note: '13 RP/₹100 at BPCL with 4 RP = ₹1 gives 3.25% reward value; plus 1% surcharge waiver.' },
-      grocery: { ratePercent: 1.25, note: '5 RP/₹100 on eligible grocery; 4 RP = ₹1.' },
-      dining: { ratePercent: 1.25, note: '5 RP/₹100 on eligible dining; 4 RP = ₹1.' },
-      'co-branded': { ratePercent: 3.25, note: 'BPCL co-brand modeled on reward value before surcharge waiver.' },
-      'low-fee': { ratePercent: 1.25, note: '₹499 annual fee; category model uses eligible accelerated grocery/dining value.' },
+      grocery: { ratePercent: 1.25, monthlyTiers: [{ upto: 100000, ratePercent: 1.25 }, { ratePercent: 0.25 }], note: 'Shared accelerated limit 5,000 RP/month across grocery, dining, department stores and movies; then 1 RP/₹100. This view assumes no shared-cap use elsewhere; 4 RP = ₹1 fuel value.' },
+      dining: { ratePercent: 1.25, monthlyTiers: [{ upto: 100000, ratePercent: 1.25 }, { ratePercent: 0.25 }], note: 'Shared accelerated limit 5,000 RP/month across grocery, dining, department stores and movies; then 1 RP/₹100. This view assumes no shared-cap use elsewhere; 4 RP = ₹1 fuel value.' },
+      'co-branded': { ratePercent: 3.25, monthlyCapRupees: 325, baseRatePercent: 0.25, note: 'BPCL fuel reward value capped at 1,300 RP/cycle (₹325); surcharge waiver excluded here. Other eligible non-fuel retail earns 1 RP/₹100.' },
+      'low-fee': { ratePercent: 1.25, monthlyTiers: [{ upto: 100000, ratePercent: 1.25 }, { ratePercent: 0.25 }], note: 'Eligible grocery/dining shares a 5,000 RP monthly accelerated cap, then 1 RP/₹100. No other-category cap use assumed.' },
     },
   },
   {
@@ -391,8 +391,8 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     terms: {
       fuel: { ratePercent: 4, monthlyCapRupees: 200, secondaryRatePercent: 1, secondaryMonthlyCapRupees: 50, network: 'IndianOil', note: '4% value back on eligible IOCL fuel with ₹5,000 eligible-spend/month ceiling; plus 1% fuel-surcharge waiver capped at ₹50/statement cycle.' },
       shopping: { ratePercent: 1, monthlyCapRupees: 50, note: '1% value back on eligible online shopping up to ₹5,000 eligible spend/month.' },
-      'co-branded': { ratePercent: 4, note: 'IndianOil co-brand modeled on eligible fuel value back.' },
-      'low-fee': { ratePercent: 1, note: '₹500 annual fee; shopping reward modeled conservatively.' },
+      'co-branded': { ratePercent: 4, monthlyCapRupees: 200, note: 'Eligible IOCL fuel value back capped at ₹5,000 eligible spend/month (₹200 reward). Only eligible transaction amounts count; surcharge waiver excluded here.' },
+      'low-fee': { ratePercent: 1, monthlyCapRupees: 50, note: 'Eligible online shopping rewards have a ₹5,000 eligible monthly spend ceiling (₹50 reward); per-transaction eligibility applies.' },
     },
   },
   {

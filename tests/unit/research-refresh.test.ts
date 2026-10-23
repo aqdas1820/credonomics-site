@@ -31,6 +31,13 @@ describe('official card term corrections', () => {
     expect(analyseCard(card('tata-neu-infinity-sbi'), 'upi', { ...defaultProfile, monthlySpend: 50000 }).grossValue).toBe(6000)
     expect(analyseCard(card('sbi-miles'), 'travel', { ...defaultProfile, loungeVisits: 0, annualForeignSpend: 0 }).grossValue).toBe(600)
   })
+  it('carries verified fuel limits into co-brand views and preserves standard BPCL post-cap base earning', () => {
+    const profile = { ...defaultProfile, monthlySpend: 50000, annualRetailSpend: 600000 };
+    expect(analyseCard(card('bpcl-sbi-octane'), 'co-branded', profile).grossValue).toBe(7950);
+    expect(analyseCard(card('bpcl-sbi'), 'co-branded', profile).grossValue).toBe(4350);
+    expect(analyseCard(card('indianoil-axis'), 'co-branded', profile).grossValue).toBe(2400);
+    expect(analyseCard(card('bpcl-sbi'), 'grocery', { ...profile, monthlySpend: 150000 }).grossValue).toBe(16500);
+  })
   it('holds incomplete rupee valuations out of normalized rankings', () => {
     expect(realCardsForCategory('travel').some(row => row.id.startsWith('indigo-axis'))).toBe(false)
     expect(realCardsForCategory('fuel').some(row => row.id === 'first-power')).toBe(false)

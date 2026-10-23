@@ -8,6 +8,19 @@ export type ResearchUpdate = {
 }
 
 export const researchUpdates: ResearchUpdate[] = [
+  { id: 'bpcl-octane-category-caps', cardId: 'bpcl-sbi-octane', title: 'BPCL OCTANE: co-brand and shared caps applied', kind: 'Model correction', effectiveDate: null,
+    before: 'The dedicated fuel view was capped, but co-brand and grocery/dining views omitted their limits.',
+    after: 'Co-brand BPCL fuel rewards stop at 2,500 RP per cycle (₹625 fuel value). Grocery/dining share a 7,500 RP monthly accelerated ceiling (₹1,875); the view assumes no cap use in other eligible categories. Eligible other non-fuel retail earns 0.25%.',
+    impact: 'High-spend co-brand and grocery/dining values fall. Surcharge waiver is separate; any post-cap grocery/dining base accrual is excluded conservatively.', source: 'https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf', sourceLabel: 'SBI BPCL OCTANE booklet, points and redemption clauses' },
+  { id: 'bpcl-standard-category-caps', cardId: 'bpcl-sbi', title: 'BPCL SBI: partner cap and post-cap earning normalized', kind: 'Model correction', effectiveDate: null,
+    before: 'The co-brand view omitted its fuel ceiling and eligible non-fuel base rewards; grocery/dining had no normalized shared limit.',
+    after: 'BPCL fuel rewards stop at 1,300 RP per cycle (₹325 fuel value). Grocery/dining acceleration shares 5,000 RP monthly, then eligible spends earn 1 RP per ₹100. Four points give ₹1 fuel value.',
+    impact: 'The model applies the fuel cap and a grocery/dining tier after ₹1 lakh eligible monthly spend, assuming no shared-cap use elsewhere. This is a model correction; the standard-card shared cap dates to September 2020.', source: 'https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/travel/bpcl-tnc.pdf', sourceLabel: 'SBI BPCL reward terms' },
+  { id: 'indianoil-axis-category-caps', cardId: 'indianoil-axis', title: 'IndianOil Axis: caps carried into every category view', kind: 'Model correction', effectiveDate: null,
+    before: 'Dedicated fuel/shopping views had caps, but co-brand and low-fee views omitted the same limits.',
+    after: 'Eligible IOCL fuel reward spending is limited to ₹5,000/month (₹200 value). Eligible online shopping has a separate ₹5,000 monthly ceiling (₹50 value). Transaction amount conditions still apply.',
+    impact: 'High-spend co-brand/low-fee values decrease. No new issuer-effective date is inferred from this calculator correction.', source: 'https://www.axis.bank.in/cards/credit-card/indianoil-axis-bank-credit-card', sourceLabel: 'Axis IndianOil benefit and eligibility terms' },
+
   { id: 'power-plus-normalization', cardId: 'first-power-plus', title: 'FIRST Power+: caps and UPI value corrected', kind: 'Model correction', effectiveDate: null,
     before: 'The model used uncapped headline savings and a 1.5% UPI placeholder.',
     after: 'Card fuel rewards are 5%, capped at ₹600 per cycle. Grocery/utility 5% rewards have a ₹100 combined ceiling. Eligible UPI retail earns 0.5%. Conditional HP Pay Happy Coins are excluded from the card-only model.',

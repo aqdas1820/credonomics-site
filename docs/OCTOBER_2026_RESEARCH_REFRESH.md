@@ -8,7 +8,7 @@ The source baseline is `f2f41546350dee37378b9119d0b2fd6bffe864d0`, preserved rem
 
 - A homepage October bulletin and `/updates/2026-10` distinguish issuer-effective changes, model corrections, current terms checks and future changes. Each item links to its primary issuer source and retains unknown effective dates as unknown.
 - Card ranking comparisons use the same explicit scenario before and after the audit. The prior published model is preserved as JSON, identified by its baseline SHA. These are model-audit comparisons, not historical market rankings or personalized recommendations.
-- Eleven card records have named fields reviewed, with the SBI MILES correction also applied to MILES PRIME. Original full-record verification dates remain visible. The remaining fields/cards are not blanket certified as current.
+- Fourteen card records have named fields reviewed, with the SBI MILES correction also applied to MILES PRIME. Original full-record verification dates remain visible. The remaining fields/cards are not blanket certified as current.
 - Corrections cover Millennia's earning/redemption distinction, ACE's combined cap, Airtel's base-cashback dependency, HSBC's current shared cap/categories, Flipkart SBI's quarterly ceiling, Swiggy minimum transactions, FIRST Power+ caps and UPI units, Tata Neu Infinity SBI's UPI cap, SBI MILES redemption units, and IndianOil HDFC point conversion.
 - FIRST Power and IndiGo categories whose required caps/rupee valuations are incomplete are held from rupee rankings. Their research records remain available. Club Vistara IDFC FIRST is excluded from catalogue recommendations after its issuer-confirmed programme closure.
 - Catalogue discovery is labeled as unverified extraction/relevance, separate from modeled annual-value rankings. The fee parser no longer treats the K in “Know More” as a thousand multiplier. Fresh source failures retain earlier issuer records rather than certifying them anew.
@@ -16,6 +16,8 @@ The source baseline is `f2f41546350dee37378b9119d0b2fd6bffe864d0`, preserved rem
 - All 18 historical monthly portfolio files remain byte-for-byte unchanged. The new import does not infer missing July/August positions or merge legacy NAME identities into ISIN identities. Calendar comparisons and cohort/identity checks prevent missing data from becoming fabricated accumulation or exit signals, including CSV output.
 - Public Upstox instrument masters were refreshed through the existing fetch/validate/publish pipeline: 14,384 accepted identity records, 97,062 rejected input rows, zero duplicate published identities. This is independent of live quotes and retains the existing validator's scope.
 - NSE IPO records and SEBI filing discovery were refreshed through existing public-data scripts. Source limitations such as unavailable BSE/SME responses remain visible.
+
+- Final category audit also applies BPCL OCTANE/BPCL SBI partner and shared caps and carries IndianOil Axis limits into co-brand/low-fee views. BPCL standard post-cap eligible base earning is modeled as a tier. OCTANE post-cap grocery base earning is conservatively excluded.
 
 ## Coverage and preserved boundaries
 
@@ -25,7 +27,7 @@ The source baseline is `f2f41546350dee37378b9119d0b2fd6bffe864d0`, preserved rem
 
 ## Verification
 
-- 136 unit tests across 21 files passed; TypeScript and the production build passed before hosted preview verification.
+- 137 unit tests across 21 files passed; TypeScript and the production build passed before hosted preview verification.
 - New financial tests independently assert earning caps, conditional cashback, partner/base separation, point conversion, ranking exclusions, calendar-period selection, missing identities/cohorts and six portfolio reconciliations.
 - Instrument staging validation passed. The existing mixed historical MF dataset remains PARTIAL. Validating new September data does not certify pre-existing historical extraction artifacts.
 - Local Playwright browser execution remains unavailable because Chromium is not installed. Browser specifications are not represented as an automated pass.
