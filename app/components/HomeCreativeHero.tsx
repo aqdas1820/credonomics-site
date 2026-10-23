@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { ArrowRight, ArrowUpRight, BarChart3, Compass, Layers3, ShieldCheck, Sparkles } from 'lucide-react'
-import { useState, type PointerEvent } from 'react'
+import type { PointerEvent } from 'react'
 import styles from './home-creative-hero.module.css'
 
 const areas=['EQUITY RESEARCH','IPO INTELLIGENCE','MUTUAL FUNDS','CARD ECONOMICS','FINANCIAL TOOLS']
@@ -18,9 +18,8 @@ function resetScene(event:PointerEvent<HTMLDivElement>){
   event.currentTarget.style.setProperty('--my','0px')
 }
 export default function HomeCreativeHero(){
-  const [paused, setPaused] = useState(false)
   return <>
-    <section className={styles.stage} data-cm-hero data-motion-paused={paused} aria-labelledby="cm-home-title">
+    <section className={styles.stage} data-cm-hero aria-labelledby="cm-home-title">
       <div className={styles.grid} aria-hidden="true"/>
       <div className={styles.welcomeLight} aria-hidden="true"/>
       <div className={styles.copy}>
@@ -49,7 +48,6 @@ export default function HomeCreativeHero(){
         </div>
       </div>
       <div className={styles.visual} onPointerMove={moveScene} onPointerLeave={resetScene}>
-        <button type="button" className={styles.motionToggle} aria-pressed={paused} onClick={() => setPaused(value => !value)}>{paused ? 'Resume animation' : 'Pause animation'}</button>
         <div className={styles.visualInner}>
           <div className={styles.orbitOuter} aria-hidden="true"/>
           <div className={styles.orbitMiddle} aria-hidden="true"/>

@@ -8,10 +8,18 @@ for (const width of [320, 375, 430]) {
     await expect(header.getByRole('link', { name: /Research Desk/ })).toBeHidden()
     await expect(header.getByRole('button', { name: 'Toggle navigation' })).toBeVisible()
     expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(1)
-    const pause = page.getByRole('button', { name: 'Pause animation' })
-    await pause.click()
-    await expect(page.locator('[data-cm-hero]')).toHaveAttribute('data-motion-paused', 'true')
-    await page.getByRole('button', { name: 'Resume animation' }).click()
-    await expect(page.locator('[data-cm-hero]')).toHaveAttribute('data-motion-paused', 'false')
+    await expect(page.getByRole('button', { name: /Pause animation|Resume animation/ })).toHaveCount(0)
+    const orbit = page.locator('[data-cm-hero] [class*="orbitOuter"]')
+    const initial = await orbit.evaluate(node => getComputedStyle(node).transform)
+    await expect.poll(() => orbit.evaluate(node => getComputedStyle(node).transform)).not.toBe(initial)
   })
 }
+
+test('desktop orbit continues beyond its entrance without a pause control', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.goto('/')
+  await expect(page.getByRole('button', { name: /Pause animation|Resume animation/ })).toHaveCount(0)
+  const orbit = page.locator('[data-cm-hero] [class*="orbitOuter"]')
+  const first = await orbit.evaluate(node => getComputedStyle(node).transform)
+  await expect.poll(() => orbit.evaluate(node => getComputedStyle(node).transform)).not.toBe(first)
+})
