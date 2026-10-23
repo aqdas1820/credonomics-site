@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import { ArrowUpRight, Search, X } from 'lucide-react'
-import { useId, useState } from 'react'
+import { useId } from 'react'
+import { useDiscoveryFilters } from './useDiscoveryFilters'
 import type { SearchEntry } from '../data/search-index.generated'
 import styles from './homepage-discovery.module.css'
 
@@ -10,8 +11,7 @@ type Entry = Pick<SearchEntry, 'id' | 'title' | 'description' | 'href' | 'catego
 const categories = ['All', 'Reports', 'Research', 'IPO', 'Mutual Funds', 'Cards', 'Tools']
 
 export default function DiscoveryExplorer({ entries }: { entries: Entry[] }) {
-  const [category, setCategory] = useState('All')
-  const [query, setQuery] = useState('')
+  const { category, query, updateFilters } = useDiscoveryFilters('discovery_')
   const id = useId()
   const needle = query.trim().toLowerCase()
   const matches = entries.filter(entry => (category === 'All' || entry.category === category) && (!needle || `${entry.title} ${entry.description} ${entry.category}`.toLowerCase().includes(needle)))
@@ -20,13 +20,13 @@ export default function DiscoveryExplorer({ entries }: { entries: Entry[] }) {
     : matches.slice(0, 6)
   return <div className={styles.explorer}>
     <div className={styles.filters} role="group" aria-label="Filter intelligence by category">
-      {categories.map(name => <button type="button" key={name} aria-pressed={category === name} onClick={() => setCategory(name)}>{name}</button>)}
+      {categories.map(name => <button type="button" key={name} aria-pressed={category === name} onClick={() => updateFilters(query, name)}>{name}</button>)}
     </div>
     <div className={styles.searchField}>
       <Search size={17} aria-hidden="true" />
       <label className={styles.srOnly} htmlFor={id}>Search intelligence discovery</label>
-      <input id={id} type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Try valuation, IPO or calculator…" aria-describedby={`${id}-status`} />
-      {query && <button type="button" aria-label="Clear discovery search" onClick={() => { setQuery(''); document.getElementById(id)?.focus() }}><X size={16} /></button>}
+      <input id={id} type="search" value={query} onChange={event => updateFilters(event.target.value, category)} placeholder="Try valuation, IPO or calculator…" aria-describedby={`${id}-status`} />
+      {query && <button type="button" aria-label="Clear discovery search" onClick={() => { updateFilters('', category); document.getElementById(id)?.focus() }}><X size={16} /></button>}
     </div>
     <p className={styles.resultStatus} id={`${id}-status`} role="status">{matches.length === 0 ? 'No matches. Try another term or category.' : `Showing ${visible.length} of ${matches.length} matching pages`}</p>
     {visible.length > 0 && <div className={styles.grid}>
@@ -37,7 +37,7 @@ export default function DiscoveryExplorer({ entries }: { entries: Entry[] }) {
         <small>{entry.source}{entry.updated ? ` · ${entry.updated}` : ''}</small>
       </Link>)}
     </div>}
-    {matches.length === 0 && <div className={styles.empty}><Search size={24} aria-hidden="true" /><strong>Start with a wider search.</strong><p>Clear your filters to explore reports, tools and research.</p><button type="button" onClick={() => { setQuery(''); setCategory('All'); requestAnimationFrame(() => document.getElementById(id)?.focus()) }}>Reset filters</button></div>}
-    {matches.length > visible.length && (needle || category !== 'All') && <Link className={styles.more} href={`/search?q=${encodeURIComponent(query || category)}`}>Continue in full search <ArrowUpRight size={14} /></Link>}
+    {matches.length === 0 && <div className={styles.empty}><Search size={24} aria-hidden="true" /><strong>Start with a wider search.</strong><p>Clear your filters to explore reports, tools and research.</p><button type="button" onClick={() => { updateFilters('', 'All'); requestAnimationFrame(() => document.getElementById(id)?.focus()) }}>Reset filters</button></div>}
+    {matches.length > visible.length && (needle || category !== 'All') && <Link className={styles.more} href={`/search?${new URLSearchParams({ ...(query ? { q: query } : {}), ...(category !== 'All' ? { category } : {}) }).toString()}`}>Continue in full search <ArrowUpRight size={14} /></Link>}
   </div>
 }

@@ -108,3 +108,12 @@
 @keyframes cnSupportAmount{from{opacity:.3;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:640px){.dialog{width:min(100vw - 18px,488px);max-height:92dvh;border-radius:19px}.card{padding:17px 16px 15px}.visualBadge{width:64px;height:64px;margin:8px auto 12px}.card h2{font-size:clamp(26px,7vw,32px)}.intro{font-size:12px}.choiceHeading{margin-top:17px}.amount{min-height:104px;padding:15px 4px 10px}.amount strong{font-size:23px}.amount small{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.visualBadge,.badgeSpark,.selected .amountCheck,.selectionSummary strong{animation:none!important}.amount,.emailCta{transition:none!important}.amount:hover,.amount.selected,.emailCta:hover{transform:none}}
+
+/* Mobile support stays in document flow so it cannot obscure research or controls. */
+@media(max-width:640px){
+  .launcher,.mobileHint{position:relative;inset:auto;z-index:auto;width:max-content;max-width:calc(100% - 32px);margin:24px auto;min-height:48px}
+  .launcher{display:flex;padding:7px 14px 7px 7px;font-size:12px}
+  .mobileHint{width:calc(100% - 32px)}
+  .hintAction,.hintClose{min-height:44px}
+  .hintClose{min-width:44px}
+}

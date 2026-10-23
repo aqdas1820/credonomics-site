@@ -1,7 +1,8 @@
 'use client'
 
 import { ArrowUpRight, Search, SlidersHorizontal } from 'lucide-react'
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
+import { useDiscoveryFilters } from '../components/useDiscoveryFilters'
 import { searchIndex } from '../data/search-index.generated'
 import {
   discoveryCategories,
@@ -14,8 +15,7 @@ export default function SearchWorkspace({
 }: {
   initialQuery: string
 }) {
-  const [query, setQuery] = useState(initialQuery)
-  const [category, setCategory] = useState('All')
+  const { query, category, updateFilters } = useDiscoveryFilters('', initialQuery)
 
   const results = useMemo(() => {
     const ranked = searchEntries(searchIndex, query, 60)
@@ -26,7 +26,7 @@ export default function SearchWorkspace({
   }, [category, query])
 
   return (
-    <main className={styles.page}>
+    <div className={styles.page}>
       <section className={styles.hero}>
         <span className={styles.eyebrow}>
           <Search size={15} />
@@ -43,11 +43,13 @@ export default function SearchWorkspace({
         </p>
 
         <label className={styles.searchBox}>
-          <Search size={20} />
+          <Search size={20} aria-hidden="true" />
           <input
             autoFocus
+            type="search"
+            aria-label="Search CredoNomics intelligence"
             value={query}
-            onChange={(event) => setQuery(event.target.value)}
+            onChange={(event) => updateFilters(event.target.value, category)}
             placeholder="Company, IPO, mutual fund, report, card or tool..."
           />
         </label>
@@ -65,14 +67,15 @@ export default function SearchWorkspace({
               key={item}
               type="button"
               className={category === item ? styles.activeFilter : ''}
-              onClick={() => setCategory(item)}
+              aria-pressed={category === item}
+              onClick={() => updateFilters(query, item)}
             >
               {item}
             </button>
           ))}
         </div>
 
-        <div className={styles.resultSummary}>
+        <div className={styles.resultSummary} role="status" aria-live="polite">
           <strong>{results.length}</strong>
           <span>
             {query.trim()
@@ -128,6 +131,6 @@ export default function SearchWorkspace({
           }),
         }}
       />
-    </main>
+    </div>
   )
 }
