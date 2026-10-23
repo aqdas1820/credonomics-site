@@ -1,5 +1,40 @@
 import { expect, test } from '@playwright/test'
 
+test('discovery survives reload and carries category into full search', async ({ page }) => {
+  await page.goto('/?campaign=qa#intelligence-discovery')
+  const discovery = page.getByRole('region', { name: 'Explore CredoNomics intelligence' })
+  await discovery.getByRole('button', { name: 'Tools', exact: true }).click()
+  await discovery.getByRole('searchbox').fill('cashback')
+  await expect(page).toHaveURL(/discovery_q=cashback/)
+  await page.reload()
+  await expect(discovery.getByRole('searchbox')).toHaveValue('cashback')
+  await expect(discovery.getByRole('button', { name: 'Tools', exact: true })).toHaveAttribute('aria-pressed', 'true')
+  await expect(page).toHaveURL(/campaign=qa/)
+  await discovery.getByRole('button', { name: 'Clear discovery search' }).click()
+  await discovery.getByRole('link', { name: /Continue in full search/ }).click()
+  await expect(page).toHaveURL(/category=Tools/)
+  await expect(page.getByRole('button', { name: 'Tools', exact: true })).toHaveAttribute('aria-pressed', 'true')
+  const search = page.getByRole('searchbox', { name: 'Search CredoNomics intelligence' })
+  await search.fill('cashback')
+  await page.reload()
+  await expect(search).toHaveValue('cashback')
+  await expect(page.getByRole('button', { name: 'Tools', exact: true })).toHaveAttribute('aria-pressed', 'true')
+  await page.goBack()
+  await expect(discovery.getByRole('button', { name: 'Tools', exact: true })).toHaveAttribute('aria-pressed', 'true')
+})
+
+test('mobile support occupies document space and opens its existing dialog', async ({ page, isMobile }) => {
+  test.skip(!isMobile, 'Mobile layout regression')
+  await page.goto('/')
+  const support = page.getByRole('button', { name: 'Support CredoNomics', exact: true })
+  await expect(support).toHaveCSS('position', 'relative')
+  await expect(support).toHaveCSS('min-height', '48px')
+  await support.click()
+  await expect(page.getByRole('dialog')).toBeVisible()
+  await page.getByRole('button', { name: 'Close support popup' }).click()
+  await expect(page.getByRole('dialog')).not.toBeVisible()
+})
+
 test('discovery filters, searches and resets using real indexed pages', async ({ page }) => {
   await page.goto('/')
   const discovery = page.getByRole('region', { name: 'Explore CredoNomics intelligence' })

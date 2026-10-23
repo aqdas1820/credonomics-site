@@ -4,6 +4,9 @@
   padding:68px 0 105px;
 }
 
+.filterRow button{min-height:44px;cursor:pointer}
+.filterRow button:focus-visible,.resultCard:focus-visible{outline:3px solid #6ce1f0;outline-offset:4px}
+
 .hero{
   max-width:950px;
 }
