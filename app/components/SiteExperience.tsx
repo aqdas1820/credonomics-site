@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import PageSectionNav from './PageSectionNav'
 
 const families = [
   ['/research', 'Research Desk', 'Sources', 'Frameworks', 'Perspective'],
@@ -21,7 +22,7 @@ const families = [
 export default function SiteExperience() {
   const pathname = usePathname()
   const calm = /^\/(account|auth|alerts|watchlist)(\/|$)/.test(pathname)
-  const family = families.find(([prefix]) => pathname === prefix || pathname.startsWith(`${prefix}/`))
+  const family = families.find(([prefix]) => pathname === prefix || pathname.startsWith(`${prefix}/`)) ?? ['', 'CredoNomics Guide', 'Overview', 'Context', 'Resources']
   useEffect(() => {
     const root = document.getElementById('main-content')
     if (!root || calm) return
@@ -52,6 +53,6 @@ export default function SiteExperience() {
   return <aside className="cn-context" aria-label={`${family[1]} framework`}>
     <span className="cn-context-name"><i aria-hidden="true" />{family[1]}</span>
     <span className="cn-context-flow" aria-label="Conceptual workflow">{family.slice(2).map((label, index) => <span key={label}>{index > 0 && <b aria-hidden="true">→</b>}{label}</span>)}</span>
-    <svg viewBox="0 0 120 34" width="120" height="34" aria-hidden="true"><path d="M5 17H35L60 5L85 17H115M35 17L60 29L85 17" /><circle cx="5" cy="17" r="3"/><circle cx="60" cy="5" r="3"/><circle cx="60" cy="29" r="3"/><circle cx="115" cy="17" r="3"/></svg>
+    <PageSectionNav key={pathname} />
   </aside>
 }

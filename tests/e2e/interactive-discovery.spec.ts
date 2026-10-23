@@ -1,0 +1,32 @@
+import { expect, test } from '@playwright/test'
+
+test('discovery filters, searches and resets using real indexed pages', async ({ page }) => {
+  await page.goto('/')
+  const discovery = page.getByRole('region', { name: 'Explore CredoNomics intelligence' })
+  await discovery.getByRole('button', { name: 'Tools', exact: true }).click()
+  await expect(discovery.getByRole('button', { name: 'Tools', exact: true })).toHaveAttribute('aria-pressed', 'true')
+  await expect(discovery.getByRole('link', { name: /Decision Utilities/ })).toHaveCount(0)
+  await expect(discovery.getByRole('link', { name: /Financial Research & Decision Tools/ }).first()).toBeVisible()
+  await discovery.getByRole('searchbox', { name: 'Search intelligence discovery' }).fill('zzzz-not-a-page')
+  await expect(discovery.getByRole('status')).toContainText('No matches')
+  await discovery.getByRole('button', { name: 'Reset filters' }).click()
+  await expect(discovery.getByRole('button', { name: 'All', exact: true })).toHaveAttribute('aria-pressed', 'true')
+  await expect(discovery.getByRole('searchbox')).toHaveValue('')
+  await expect(discovery.getByRole('searchbox')).toBeFocused()
+})
+
+test('page sections support keyboard dismissal and anchor navigation', async ({ page }) => {
+  await page.goto('/tools')
+  const summary = page.locator('summary').filter({ hasText: 'On this page' })
+  await summary.click()
+  const nav = page.getByRole('navigation', { name: 'On this page' })
+  await expect(nav).toBeVisible()
+  await page.keyboard.press('Escape')
+  await expect(nav).not.toBeVisible()
+  await expect(summary).toBeFocused()
+  await summary.click()
+  const target = await nav.getByRole('link').first().getAttribute('href')
+  await nav.getByRole('link').first().click()
+  await expect(nav).not.toBeVisible()
+  await expect(page.locator(target!)).toBeFocused()
+})

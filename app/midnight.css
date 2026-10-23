@@ -70,3 +70,6 @@
   .cn-experience *, .cn-experience *::before, .cn-experience *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
 .cn-experience :where(input:not([type='checkbox']):not([type='radio']),select,textarea){border-color:color-mix(in srgb,var(--cn-muted) 75%,var(--cn-surface))}
+
+/* Keep the section guide compact on small screens. */
+@media(max-width:760px){.cn-context .cn-context-name{width:auto;flex:1;min-width:0;letter-spacing:.06em;font-size:9px}.cn-context .cn-context-flow{display:none}}
