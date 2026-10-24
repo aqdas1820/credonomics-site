@@ -2,6 +2,7 @@ import { mergeHomeMetadata } from './seo/site'
 import LatestReportBanner from './components/LatestReportBanner'
 import HomepageDiscovery from './components/HomepageDiscovery'
 import MonthlyResearchBrief from './components/MonthlyResearchBrief'
+import ResearchWatchBrief from './components/ResearchWatchBrief'
 import Link from "next/link";
 import SiteFrame from "./components/SiteFrame";
 import { publicIpos } from "./data/ipo-public";
@@ -107,6 +108,7 @@ export default function HomePage() {
       </section>
       <LatestReportBanner />
       <HomepageDiscovery />
+      <ResearchWatchBrief />
       <MonthlyResearchBrief />
       <section className={styles.hero} data-cm-reveal>
         <div className={styles.heroGrid}>

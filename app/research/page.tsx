@@ -9,6 +9,7 @@ import {
 } from 'lucide-react'
 import ResearchProvenance from '../components/ResearchProvenance'
 import SiteFrame from '../components/SiteFrame'
+import ResearchWatchBrief from '../components/ResearchWatchBrief'
 import { RESEARCH_REVIEW_DATE, researchArticles } from '../data/research-articles'
 import styles from '../core-v4.module.css'
 
@@ -91,6 +92,7 @@ export default function ResearchPage() {
         </p>
       </section>
 
+      <ResearchWatchBrief/>
       <section className={`${styles.wrap} ${styles.pageBody}`}>
         <ResearchProvenance
           updated={`Framework reviewed ${RESEARCH_REVIEW_DATE}`}

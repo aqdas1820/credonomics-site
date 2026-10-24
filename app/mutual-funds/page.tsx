@@ -8,6 +8,7 @@ import {
   ShieldCheck,
 } from 'lucide-react'
 import SiteFrame from '../components/SiteFrame'
+import ResearchWatchBrief from '../components/ResearchWatchBrief'
 import styles from './mutual-funds.module.css'
 
 export const metadata: Metadata = {
@@ -137,6 +138,7 @@ export default function MutualFundsPage() {
           </aside>
         </section>
 
+        <ResearchWatchBrief category="Mutual funds"/>
         <section className={styles.capabilitySection}>
           <div className={styles.sectionHead}>
             <div>
