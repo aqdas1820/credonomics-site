@@ -46,7 +46,7 @@ test('keyboard shortcut opens search, empty results are distinct, and Tab stays 
 test('reduced motion and theme change preserve usable navigation', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' })
   await page.goto('/tools')
-  const style = await page.locator('.cn-context button, .cn-context summary, .cn-context svg').first().evaluate(node => getComputedStyle(node).animationName)
+  const style = await page.locator('#main-content summary').filter({ hasText: 'On this page' }).evaluate(node => getComputedStyle(node).animationName)
   expect(style).toBe('none')
   await expect(page.locator('#main-content')).toBeVisible()
 })
