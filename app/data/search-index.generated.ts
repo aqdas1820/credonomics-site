@@ -101,13 +101,13 @@ export const searchIndex: readonly SearchEntry[] = [
   },
   {
     "id": "watch:amex-november-2026-fees-and-service-dates",
-    "title": "Amex November changes: fee waiver, late fees and application dates",
-    "description": "Check the 27 October application pause and the benefit changes effective from 15 November.",
+    "title": "Amex November changes: milestones, reward balances, fees and dates",
+    "description": "From 15 November, posting dates determine milestones and Membership Rewards balances stay separate by card. Check fee and application dates too.",
     "href": "/research/watch/amex-november-2026-fees-and-service-dates",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-10-24",
-    "keywords": "Amex November changes: fee waiver, late fees and application dates amex-november-2026-fees-and-service-dates Research",
+    "updated": "2026-10-25",
+    "keywords": "Amex November changes: milestones, reward balances, fees and dates amex-november-2026-fees-and-service-dates Research",
     "priority": 92
   },
   {

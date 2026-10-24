@@ -3,6 +3,7 @@ export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Mutual funds' | 'Markets'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
   sourceLocation: string; audience: string; facts: string[]; actions: string[]; limits: string
+  publishedAt?: string; updateNote?: string
   announcementDate?: string; statusLabel?: 'Clarification checked'
   additionalSources?: { url: string; label: string }[]
   cardIds?: string[]
@@ -47,14 +48,14 @@ export const researchWatch: WatchItem[] = [
   },
   {
     slug: 'amex-november-2026-fees-and-service-dates',
-    title: 'Amex November changes: fee waiver, late fees and application dates',
-    summary: 'Check the 27 October application pause and the benefit changes effective from 15 November.',
-    category: 'Credit cards', checkedAt: '2026-10-24', eventDate: '2026-11-15', dateLabel: 'Benefit changes effective',
-    source: 'https://www.americanexpress.com/en-in/support/digital/consumer-experience-updates/', sourceLabel: 'American Express India: Consumer Experience Updates', sourceLocation: 'Annual Fee Waiver; Supplementary Cards; Changes to Late Payment Fee',
+    title: 'Amex November changes: milestones, reward balances, fees and dates',
+    summary: 'From 15 November, posting dates determine milestones and Membership Rewards balances stay separate by card. Check fee and application dates too.',
+    category: 'Credit cards', checkedAt: '2026-10-25', publishedAt: '2026-10-24', updateNote: '25 October: added milestone posting-date rules and separate reward balances; original publication retained.', eventDate: '2026-11-15', dateLabel: 'Benefit changes effective',
+    source: 'https://www.americanexpress.com/en-in/support/digital/consumer-experience-updates/', sourceLabel: 'American Express India: Consumer Experience Updates', sourceLocation: 'Monthly Spend Milestone benefit; Your Membership Rewards points, with greater flexibility; Annual Fee Waiver; Supplementary Cards; Changes to Late Payment Fee',
     audience: 'Existing Amex India cardholders and people planning supplementary-card applications.',
-    facts: ['From 15 November 2026, Membership Rewards Credit Card (MRCC) loses the 50% annual-fee waiver tied to ₹90,000 membership-year spending.', 'Revised credit-card late fees use Total Amount Due, with slabs of ₹500–₹1,250. Amex specifies statements generated after 15 November; this revision excludes charge cards.', 'New supplementary-card applications pause from 27 October; Amex asks applicants to apply before that date and complete by 3 November.'],
-    actions: ['Review the official product-specific notice before relying on a fee waiver.', 'If already planning a supplementary card, check the application dates. Keep payments on schedule during the upgrade.'],
-    limits: 'Product conditions differ. The notice does not establish removal of every Amex fee-waiver benefit. Check Amex for temporary service disruptions and the applicable MITC.',
+    facts: ['From 15 November 2026, eligible milestone spend uses the posting date instead of the purchase date. A 30 November purchase posted in December counts towards December. Regular reward earning and already-earned milestone benefits remain unchanged.', 'For holders of multiple Basic Amex cards, Membership Rewards balances will be tracked separately by card. Transfers between cards permanently end on 15 November; do not assume balances can be combined for redemption.', 'From 15 November 2026, Membership Rewards Credit Card (MRCC) loses the 50% annual-fee waiver tied to ₹90,000 membership-year spending.', 'Revised credit-card late fees use Total Amount Due, with slabs of ₹500–₹1,250. Amex specifies statements generated after 15 November; this revision excludes charge cards.', 'New supplementary-card applications pause from 27 October; Amex asks applicants to apply before that date and complete by 3 November.'],
+    actions: ['Allow time for milestone transactions to post before month-end and check posted activity; a purchase made before the deadline does not guarantee posting in that month.', 'Check each Basic card’s separate reward balance and applicable redemption rules before planning a combined-points redemption.', 'Review the official product-specific notice before relying on a fee waiver.', 'If already planning a supplementary card, check the application dates. Keep payments on schedule during the upgrade.'],
+    limits: 'Product conditions differ. The issuer page does not state an announcement date. Its monthly-milestone FAQ leaves 14 November transition treatment unclear; ask Amex about that boundary rather than assuming eligibility. Monthly milestone rules do not turn membership-year benefits into monthly benefits. The notice does not establish removal of every Amex fee-waiver benefit. Check Amex for temporary service disruptions and the applicable MITC.',
   },
   {
     slug: 'hdfc-fund-covered-call-exit-window-november-2026',
