@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowLeft, CreditCard, Info, RotateCcw, Sparkles, Trophy, WalletCards, CheckCircle2 } from 'lucide-react'
+import { CreditCard, Info, RotateCcw, Sparkles, Trophy, WalletCards, CheckCircle2 } from 'lucide-react'
 import { useMemo, useState } from 'react'
 
 const inr = new Intl.NumberFormat('en-IN', { style:'currency', currency:'INR', maximumFractionDigits:0 })
@@ -33,8 +33,8 @@ export default function CreditCardFinder(){
     const effective=annualSpend>0?net/annualSpend*100:0
     return {...c,gross,fee,net,effective,feeWaived}
   }).sort((a,b)=>b.net-a.net),[cards,monthlySpend])
-  return <main className="toolPage">
-    <header className="calcNav wrap"><a className="brand" href="/"><img src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CredoNomics</strong><small>Investment Solutions</small></span></a><a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a></header>
+  return <div className="toolPage">
+    <nav className="wrap" aria-label="Calculator breadcrumb" style={{paddingTop:24}}><a href="/tools">← All tools</a></nav>
     <section className="calcHero wrap"><div><div className="eyebrow"><Sparkles size={14}/> Live comparison tool</div><h1>Credit Card <span>Finder</span></h1><p>Compare up to three cards using your own reward rates, caps, fee waiver and spending pattern. No hidden product assumptions.</p></div><div className="calcHeroBadge"><CreditCard size={24}/><div><small>Comparison engine</small><b>Net annual value</b></div></div></section>
     <section className="finderShell wrap">
       <div className="calcPanel">
@@ -53,6 +53,6 @@ export default function CreditCardFinder(){
       <aside className="rankingPanel"><span className="overline light">Ranking</span><h2>Best net value</h2>{rows.map((r,i)=><div className={i===0?'rankRow winner':'rankRow'} key={r.name}><span className="rankNum">{i===0?<Trophy size={17}/>:i+1}</span><div><b>{r.name||`Card ${i+1}`}</b><small>{r.feeWaived?'Annual fee waived':`Fee incl. GST ${inr.format(r.fee)}`}</small></div><div className="rankValue"><strong>{inr.format(r.net)}</strong><small>{r.effective.toFixed(2)}% effective</small></div></div>)}</aside>
     </section>
     <section className="toolExplain wrap"><div><span className="overline">What the ranking means</span><h2>Compare the value you keep, not the headline reward rate.</h2></div><div className="calcSteps"><p><b>01</b> Your spend is split between base-rate and bonus-rate transactions.</p><p><b>02</b> The monthly reward cap is applied before annualising the rewards.</p><p><b>03</b> The annual fee plus GST is deducted unless your spend crosses the waiver threshold.</p><p><b>04</b> Cards are ranked by net annual value, then shown with the effective return on your total spend.</p></div></section>
-    <footer className="calcFooter wrap"><p><CheckCircle2 size={14}/> Use current issuer terms. Reward rules and exclusions can change.</p><a href="/">CredoNomics home →</a></footer>
-  </main>
+    <aside className="calcFooter wrap" aria-label="Calculator notes"><p><CheckCircle2 size={14}/> Use current issuer terms. Reward rules and exclusions can change.</p><a href="/">CredoNomics home →</a></aside>
+  </div>
 }

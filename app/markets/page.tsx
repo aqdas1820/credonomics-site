@@ -21,7 +21,7 @@ const popular = [
 export default function MarketsPage() {
   return (
     <SiteFrame>
-      <main className={styles.page}>
+      <div className={styles.page}>
         <section className={styles.hero}>
           <div>
             <span className={styles.eyebrow}><BarChart3 size={15} /> Markets</span>
@@ -49,7 +49,7 @@ export default function MarketsPage() {
           <div className={styles.sectionHead}><div><span>Explore stocks</span><h2>Popular security routes</h2></div><Link href="/search">Search all <ArrowRight size={15} /></Link></div>
           <div className={styles.rows}>{popular.map(([symbol,name,href]) => <Link href={href} key={symbol}><div><strong>{name}</strong><span>{symbol} · NSE</span></div><ArrowRight size={17} /></Link>)}</div>
         </section>
-      </main>
+      </div>
     </SiteFrame>
   )
 }

@@ -88,7 +88,7 @@ export default function MutualFundsPage() {
 
   return (
     <SiteFrame>
-      <main className={styles.page}>
+      <div className={styles.page}>
         <section className={styles.hero}>
           <div className={styles.heroCopy}>
             <span className={styles.eyebrow}>
@@ -233,7 +233,7 @@ export default function MutualFundsPage() {
             __html: JSON.stringify(breadcrumbs),
           }}
         />
-      </main>
+      </div>
     </SiteFrame>
   )
 }

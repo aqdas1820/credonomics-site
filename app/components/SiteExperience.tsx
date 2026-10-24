@@ -3,27 +3,15 @@
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import PageSectionNav from './PageSectionNav'
-
-const families = [
-  ['/updates', 'Research Updates', 'Issuer notices', 'Corrections', 'Sources'],
-  ['/research', 'Research Desk', 'Sources', 'Frameworks', 'Perspective'],
-  ['/reports', 'Research Publications', 'Sources', 'Analysis', 'Limitations'],
-  ['/ipo', 'IPO Intelligence', 'Filings', 'Issue context', 'Research'],
-  ['/mutual-funds', 'Mutual Fund Intelligence', 'Disclosures', 'Holdings', 'Context'],
-  ['/tools/mf-portfolio-tracker', 'Portfolio Intelligence', 'Disclosures', 'Holdings', 'Context'],
-  ['/cards', 'Card Intelligence', 'Issuer terms', 'Fees & caps', 'Economics'],
-  ['/tools', 'Financial Tools', 'Your inputs', 'Calculation', 'Explanation'],
-  ['/discover', 'Intelligence Discovery', 'Explore', 'Find context', 'Read sources'],
-  ['/search', 'Intelligence Search', 'Explore', 'Find context', 'Read sources'],
-  ['/stocks', 'Equity Intelligence', 'Sources', 'Fundamentals', 'Risk'],
-  ['/markets', 'Market Intelligence', 'Sources', 'Market context', 'Perspective'],
-]
+import { sectionForPath, activeSectionLink } from '../data/site-navigation'
+import styles from './site-navigation.module.css'
 
 /** Presentation only; never requests data or changes financial/account state. */
 export default function SiteExperience() {
   const pathname = usePathname()
   const calm = /^\/(account|auth|alerts|watchlist)(\/|$)/.test(pathname)
-  const family = families.find(([prefix]) => pathname === prefix || pathname.startsWith(`${prefix}/`)) ?? ['', 'CredoNomics Guide', 'Overview', 'Context', 'Resources']
+  const section = sectionForPath(pathname)
+  const active = section ? activeSectionLink(pathname, section) : undefined
   useEffect(() => {
     const root = document.getElementById('main-content')
     if (!root || calm) return
@@ -50,10 +38,14 @@ export default function SiteExperience() {
     reduced.addEventListener('change', stop)
     return () => { observer.disconnect(); mutation.disconnect(); reduced.removeEventListener('change', stop) }
   }, [pathname, calm])
-  if (pathname === '/' || calm || !family) return null
-  return <aside className="cn-context" aria-label={`${family[1]} framework`}>
-    <span className="cn-context-name"><i aria-hidden="true" />{family[1]}</span>
-    <span className="cn-context-flow" aria-label="Conceptual workflow">{family.slice(2).map((label, index) => <span key={label}>{index > 0 && <b aria-hidden="true">→</b>}{label}</span>)}</span>
-    <PageSectionNav key={pathname} />
-  </aside>
+  if (pathname === '/' || !section) return null
+  // IPO pages already have a dedicated stage/filter navigation bar.
+  if (section.id === 'ipo') return <aside className="cn-context" aria-label="IPO research navigation"><a className={styles.sectionName} href="/ipo">IPO Intelligence</a><PageSectionNav key={pathname}/></aside>
+  return <div className={styles.sectionBar}>
+    <a className={styles.sectionName} href={section.href}>{section.label}</a>
+    <nav className={styles.sectionNav} aria-label={`${section.label} section navigation`}>
+      {section.links.map(link => <a href={link.href} key={link.href} aria-current={active === link.href ? 'page' : undefined}>{link.label}</a>)}
+    </nav>
+    {!calm && <PageSectionNav key={pathname}/>}
+  </div>
 }

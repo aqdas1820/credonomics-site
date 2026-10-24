@@ -24,13 +24,13 @@ export const searchIndex: readonly SearchEntry[] = [
   },
   {
     "id": "route:/discover",
-    "title": "Intelligence Discovery",
-    "description": "Discover CredoNomics research reports, IPO intelligence, mutual-fund portfolio research, card intelligence and financial tools.",
+    "title": "Explore CredoNomics — Platform Directory",
+    "description": "Find every CredoNomics workspace: markets, research, IPOs, mutual funds, credit cards, calculators, watchlists and platform information.",
     "href": "/discover",
     "category": "Discovery",
     "source": "CredoNomics",
     "updated": "",
-    "keywords": "discover Intelligence Discovery Discovery",
+    "keywords": "discover Explore CredoNomics — Platform Directory Discovery",
     "priority": 99
   },
   {
@@ -113,7 +113,7 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "route:/tools",
     "title": "Financial Research & Decision Tools",
-    "description": "CredoNomics tools for mutual-fund portfolio intelligence, IPO analysis, credit-card economics and practical financial calculations.",
+    "description": "Choose a research workspace, compare source-linked cards or model a financial rule with a focused CredoNomics calculator.",
     "href": "/tools",
     "category": "Tools",
     "source": "CredoNomics tools",

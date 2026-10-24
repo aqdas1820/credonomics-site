@@ -5,6 +5,7 @@ import { quickCalculators } from './data/quick-calculators'
 import { issuerRegistry } from './data/issuer-registry'
 import { verifiedRealCards } from './data/verified-real-cards'
 import { publicIpos } from './data/ipo-public'
+import { siteSections } from './data/site-navigation'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://www.credonomics.in'
@@ -110,6 +111,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   }
 
+  // Keep all curated public destinations discoverable; personal workspaces remain noindex.
+  for (const section of siteSections.filter(section => section.id !== 'workspace')) {
+    for (const link of section.links) {
+      if (!entries.some(entry => entry.url === `${base}${link.href}`)) entries.push({ url: `${base}${link.href}`, priority: 0.7 })
+    }
+  }
+  entries.push({ url: `${base}/discover`, priority: 0.85 })
   const unique = new Map(entries.map((entry) => [entry.url, entry]))
   return [...unique.values()]
 }
