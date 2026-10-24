@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { ArrowRight, Building2, ExternalLink, Layers3, ShieldCheck } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
+import ResearchWatchBrief from '../../components/ResearchWatchBrief'
 import CategoryComparator from '../components/CategoryComparator'
 import RealCardRanking from '../components/RealCardRanking'
 import {
@@ -157,6 +158,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       </section>
 
       <section className={`${styles.wrap} ${styles.pageBody} ${local.shell}`}>
+        <ResearchWatchBrief cardId={card.id}/>
         <p>October field reviews and model corrections: <a href="/updates/2026-10">read the dated source ledger</a>. The original full-record verification date below is retained.</p>
         <div className={local.cardDetailStats}>
           <article><small>Annual fee</small><strong>₹{card.annualFeeRupees.toLocaleString('en-IN')}</strong><p>Before applicable fee tax.</p></article>

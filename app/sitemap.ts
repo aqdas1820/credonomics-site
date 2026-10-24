@@ -6,6 +6,7 @@ import { issuerRegistry } from './data/issuer-registry'
 import { verifiedRealCards } from './data/verified-real-cards'
 import { publicIpos } from './data/ipo-public'
 import { siteSections } from './data/site-navigation'
+import { researchWatch } from './data/research-watch'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://www.credonomics.in'
@@ -118,6 +119,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
   entries.push({ url: `${base}/discover`, priority: 0.85 })
+  for (const item of researchWatch) entries.push({ url: `${base}/research/watch/${item.slug}`, lastModified: new Date(`${item.checkedAt}T00:00:00+05:30`), priority: 0.8 })
   const unique = new Map(entries.map((entry) => [entry.url, entry]))
   return [...unique.values()]
 }

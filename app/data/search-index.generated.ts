@@ -100,6 +100,61 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 93
   },
   {
+    "id": "watch:amex-november-2026-fees-and-service-dates",
+    "title": "Amex November changes: fee waiver, late fees and application dates",
+    "description": "Check the 27 October application pause and the benefit changes effective from 15 November.",
+    "href": "/research/watch/amex-november-2026-fees-and-service-dates",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-24",
+    "keywords": "Amex November changes: fee waiver, late fees and application dates amex-november-2026-fees-and-service-dates Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:idfc-indigo-international-rewards-october-2026",
+    "title": "IndiGo IDFC FIRST: international reward rule changes on 26 October",
+    "description": "The issuer specifies 1 BluChip per ₹100 on international purchases from 26 October 2026.",
+    "href": "/research/watch/idfc-indigo-international-rewards-october-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-24",
+    "keywords": "IndiGo IDFC FIRST: international reward rule changes on 26 October idfc-indigo-international-rewards-october-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:sbm-zet-late-fee-october-2026",
+    "title": "SBM ZET: late-payment fee becomes balance-linked",
+    "description": "From 23 October 2026, the published fee is 5% of outstanding, with a ₹50 minimum and ₹1,000 maximum, before applicable GST.",
+    "href": "/research/watch/sbm-zet-late-fee-october-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-24",
+    "keywords": "SBM ZET: late-payment fee becomes balance-linked sbm-zet-late-fee-october-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:tata-neu-hdfc-manual-neucoins-claims-november-2026",
+    "title": "Tata Neu HDFC: claim NeuCoins manually from 25 November",
+    "description": "A new claim step replaces automatic transfer for statements from 25 November 2026; unclaimed rewards can expire.",
+    "href": "/research/watch/tata-neu-hdfc-manual-neucoins-claims-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-24",
+    "keywords": "Tata Neu HDFC: claim NeuCoins manually from 25 November tata-neu-hdfc-manual-neucoins-claims-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:hdfc-fund-covered-call-exit-window-november-2026",
+    "title": "Two HDFC schemes: optional exit window closes at 3 pm on 6 November",
+    "description": "Balanced Advantage and Children’s Fund add a covered-call strategy from 9 November; eligible holders have a limited optional exit window.",
+    "href": "/research/watch/hdfc-fund-covered-call-exit-window-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-24",
+    "keywords": "Two HDFC schemes: optional exit window closes at 3 pm on 6 November hdfc-fund-covered-call-exit-window-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "route:/cards",
     "title": "Compare Indian Credit Cards",
     "description": "Compare real Indian credit cards by cashback, fuel, travel, shopping, UPI, utilities, dining, forex and other categories using transparent annual-value calculations.",
@@ -196,6 +251,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "Research Desk",
     "updated": "",
     "keywords": "updates 2026-10 October 2026 Research Updates: Card Changes & Portfolio Disclosures Research",
+    "priority": 86
+  },
+  {
+    "id": "route:/research/watch",
+    "title": "Research Watch: Verified Changes & Action Dates",
+    "description": "Selected source-checked card and mutual-fund notices from CredoNomics Research Watch, published 24 October 2026 with scope and action dates.",
+    "href": "/research/watch",
+    "category": "Research",
+    "source": "Research Desk",
+    "updated": "",
+    "keywords": "research watch Research Watch: Verified Changes & Action Dates Research",
     "priority": 86
   },
   {

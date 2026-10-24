@@ -224,6 +224,10 @@ function addEnriched(relative, config) {
   }
 }
 
+addEnriched('app/data/research-watch.ts', {
+  prefix: 'watch', titleKey: 'title', updatedKey: 'checkedAt', baseHref: '/research/watch', category: 'Research', source: 'Official issuer / fund notice', priority: 92, fallbackDescription: title => `Research Watch: ${title}.`,
+})
+
 addEnriched('app/data/research-articles.ts', {
   prefix: 'article',
   titleKey: 'title',

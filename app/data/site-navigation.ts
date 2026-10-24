@@ -9,6 +9,7 @@ export const siteSections: SiteSection[] = [
   ] },
   { id: 'research', label: 'Research', href: '/research', description: 'Publications, frameworks and research updates.', prefixes: ['/research', '/reports', '/updates', '/methodology'], links: [
     { href: '/research', label: 'Research desk', description: 'Explore the research disciplines and frameworks.' },
+    { href: '/research/watch', label: 'Research Watch', description: 'Read verified consumer changes and action dates.' },
     { href: '/reports', label: 'Research reports', description: 'Read published reports and their source context.' },
     { href: '/updates/2026-10', label: 'October research bulletin', description: 'See the dated October 2026 research updates.' },
     { href: '/methodology', label: 'Methodology', description: 'Understand sources, assumptions and limitations.' },
