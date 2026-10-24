@@ -6,6 +6,7 @@ import { issuerRegistry } from '../data/issuer-registry'
 import { verifiedRealCards, realCardsForCategory } from '../data/verified-real-cards'
 import styles from '../core-v4.module.css'
 import local from './cards.module.css'
+import CardDiscovery from './components/CardDiscovery'
 
 export const metadata = {
   title: 'Compare Indian Credit Cards',
@@ -57,6 +58,7 @@ export default function CardsPage() {
       </section>
 
       <section className={`${styles.wrap} ${styles.pageBody} ${local.shell}`}>
+        <CardDiscovery/>
         <div className={local.statGrid}>
           <article><Database size={19}/><small>Normalized real cards</small><strong>{verifiedRealCards.length}</strong><p>Official-source records currently powering live rankings.</p></article>
           <article><BarChart3 size={19}/><small>Issuer research universe</small><strong>{issuerRegistry.length}</strong><p>Issuer targets tracked by the coverage and verification workflow.</p></article>

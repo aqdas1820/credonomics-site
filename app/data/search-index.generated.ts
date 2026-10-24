@@ -496,6 +496,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 60
   },
   {
+    "id": "route:/cards/wallet",
+    "title": "My Card Wallet — Compare the Cards You Hold",
+    "description": "Save your card names on this device and compare their estimated category value using source-linked issuer terms. No card numbers or signup needed.",
+    "href": "/cards/wallet",
+    "category": "Cards",
+    "source": "Issuer terms",
+    "updated": "",
+    "keywords": "cards wallet My Card Wallet — Compare the Cards You Hold Cards",
+    "priority": 60
+  },
+  {
     "id": "route:/official",
     "title": "Official CredoNomics Website & Channels",
     "description": "Verify the official CredoNomics website, email, Instagram account and contact information.",
