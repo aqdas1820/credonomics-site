@@ -1,30 +1,6 @@
 import Link from 'next/link'
 import styles from './site-footer.module.css'
-
-const investmentLinks = [
-  { label: 'Research Desk', href: '/research' },
-  { label: 'IPO Intelligence', href: '/ipo' },
-  { label: 'Mutual Fund Intelligence', href: '/mutual-funds' },
-  { label: 'Financial Tools', href: '/tools' },
-  { label: 'Watchlist', href: '/watchlist' },
-  { label: 'Alerts', href: '/alerts' },
-]
-
-const cardLinks = [
-  { label: 'Credit Card Intelligence', href: '/cards' },
-  { label: 'Card Directory', href: '/cards/all' },
-  { label: 'Head-to-Head', href: '/cards/compare' },
-  { label: 'Methodology', href: '/methodology' },
-]
-
-const companyLinks = [
-  { label: 'About', href: '/about' },
-  { label: 'Official Identity', href: '/official' },
-  { label: 'Contact', href: '/contact' },
-  { label: 'Disclosures', href: '/disclosures' },
-  { label: 'Privacy', href: '/privacy' },
-  { label: 'Terms', href: '/terms' },
-]
+import { siteSections } from '../data/site-navigation'
 
 export default function SiteFooter() {
   return (
@@ -36,8 +12,8 @@ export default function SiteFooter() {
             <h2>Research the context before making the decision.</h2>
           </div>
 
-          <Link className={styles.ctaButton} href="/research">
-            Research Desk
+          <Link className={styles.ctaButton} href="/discover">
+            Explore the platform
             <span aria-hidden="true">↗</span>
           </Link>
         </section>
@@ -66,44 +42,14 @@ export default function SiteFooter() {
             </a>
           </div>
 
-          <nav className={styles.linkColumn} aria-label="Investment intelligence">
-            <span className={styles.columnTitle}>Investment Intelligence</span>
-            {investmentLinks.map((item) => (
-              <Link href={item.href} key={item.label}>
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-
-          <nav className={styles.linkColumn} aria-label="Financial products">
-            <span className={styles.columnTitle}>Financial Products</span>
-            {cardLinks.map((item) => (
-              <Link href={item.href} key={item.label}>
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-
-          <nav className={styles.linkColumn} aria-label="Company">
-            <span className={styles.columnTitle}>Company</span>
-            {companyLinks.map((item) => (
-              <Link href={item.href} key={item.label}>
-                {item.label}
-              </Link>
-            ))}
-
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
-          </nav>
+          {siteSections.map(section => <nav className={styles.linkColumn} aria-label={`${section.label} footer links`} key={section.id}>
+            <Link className={styles.columnTitle} href={section.href}>{section.label}</Link>
+            {section.links.slice(0, section.id === 'company' ? 7 : 4).map(link => <Link href={link.href} key={link.href}>{link.label}</Link>)}
+          </nav>)}
         </section>
 
         <section className={styles.footnoteRow}>
-          <p>© 2026 CredoNomics Investment Solutions</p>
+          <p>© 2026 CredoNomics Investment Solutions · <Link href="/discover">Platform directory</Link></p>
           <p>
             Not a SEBI-registered Investment Adviser or Research Analyst ·
             General educational and informational content only

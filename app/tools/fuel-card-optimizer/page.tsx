@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowLeft, BadgeIndianRupee, ExternalLink, Fuel, Gauge, Info, RotateCcw, Sparkles, Trophy } from 'lucide-react'
+import { BadgeIndianRupee, ExternalLink, Fuel, Gauge, Info, RotateCcw, Sparkles, Trophy } from 'lucide-react'
 import { useMemo, useState } from 'react'
 
 const inr = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 })
@@ -114,8 +114,8 @@ export default function FuelOptimizer() {
   const best = ranked[0]
   const reset = () => { setMonthlyFuel(10000); setAnnualRetailSpend(120000); setPreferred('Any'); setUseApp(true); setShowAll(true) }
 
-  return <main className="toolPage">
-    <header className="calcNav wrap"><a className="brand" href="/"><img src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CredoNomics</strong><small>Investment Solutions</small></span></a><a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a></header>
+  return <div className="toolPage">
+    <nav className="wrap" aria-label="Calculator breadcrumb" style={{paddingTop:24}}><a href="/tools">← All tools</a></nav>
 
     <section className="calcHero wrap fuelCompareHero"><div><div className="eyebrow"><Sparkles size={14}/> Indian fuel-card comparison engine</div><h1>Fuel Card <span>Comparator</span></h1><p>Enter your fuel spend once. CredoNomics ranks major IndianOil, BPCL and HPCL credit cards by estimated annual net savings after reward caps, surcharge waivers and annual fees.</p></div>{best && <div className="calcHeroBadge"><Trophy size={24}/><div><small>Current #1 match</small><b>{best.name}</b></div></div>}</section>
 
@@ -147,6 +147,6 @@ export default function FuelOptimizer() {
     </section>
 
     <section className="calcInsights wrap"><article><span><Gauge size={18}/></span><small>Compared networks</small><b>IOCL · BPCL · HPCL</b><p>Major co-branded fuel cards from the three large public-sector fuel networks.</p></article><article><span><BadgeIndianRupee size={18}/></span><small>Ranking method</small><b>Rewards + waiver − fee</b><p>Annual fee GST is deducted unless your entered annual spend meets the issuer waiver threshold.</p></article><article><span><Fuel size={18}/></span><small>Data policy</small><b>Issuer-first</b><p>Card terms are sourced from official issuer pages and should be re-verified when banks revise benefits.</p></article></section>
-    <footer className="calcFooter wrap"><p><Info size={13}/> This comparison is an informational calculator, not a recommendation to apply for credit. Eligibility and benefits are governed by the issuer.</p><a href="/">CredoNomics home →</a></footer>
-  </main>
+    <aside className="calcFooter wrap" aria-label="Calculator notes"><p><Info size={13}/> This comparison is an informational calculator, not a recommendation to apply for credit. Eligibility and benefits are governed by the issuer.</p><a href="/">CredoNomics home →</a></aside>
+  </div>
 }

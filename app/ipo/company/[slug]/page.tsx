@@ -136,7 +136,7 @@ export default function IPOCompanyPage({
 
   return (
     <SiteFrame>
-      <main className={styles.page}>
+      <div className={styles.page}>
         <nav className={styles.breadcrumb}>
           <a href="/ipo">IPO Intelligence</a>
           <span>/</span>
@@ -344,7 +344,7 @@ export default function IPOCompanyPage({
             does not constitute an IPO recommendation.
           </p>
         </section>
-      </main>
+      </div>
     </SiteFrame>
   )
 }

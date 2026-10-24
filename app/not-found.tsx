@@ -4,7 +4,7 @@ import SiteFrame from './components/SiteFrame'
 export default function NotFound() {
   return (
     <SiteFrame>
-      <main className="cn-system-page">
+      <div className="cn-system-page">
         <div className="cn-system-card">
           <span className="cn-system-code">404</span>
           <p className="cn-system-eyebrow">Page not found</p>
@@ -22,7 +22,7 @@ export default function NotFound() {
             </Link>
           </div>
         </div>
-      </main>
+      </div>
     </SiteFrame>
   )
 }

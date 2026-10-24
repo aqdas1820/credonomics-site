@@ -5,18 +5,11 @@ import { BarChart3, Bell, Eye, Home, Menu, UserRound, Wrench, X } from 'lucide-r
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import styles from '../core-v4.module.css'
+import navStyles from './site-navigation.module.css'
+import { primarySections, sectionForPath } from '../data/site-navigation'
+import { ChevronDown } from 'lucide-react'
 import ThemeModeToggle from './ThemeModeToggle'
 import SiteSearch from './SiteSearch'
-
-const primaryNav = [
-  { href: '/markets', label: 'Markets' },
-  { href: '/research', label: 'Research' },
-  { href: '/ipo', label: 'IPOs' },
-  { href: '/tools/mf-portfolio-tracker', label: 'Mutual Funds' },
-  { href: '/cards', label: 'Cards' },
-  { href: '/tools', label: 'Tools' },
-  { href: '/discover', label: 'Discover' },
-]
 
 const mobileNav = [
   { href: '/', label: 'Home', icon: Home },
@@ -29,38 +22,30 @@ const mobileNav = [
 export default function SiteHeader() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+  const [expanded, setExpanded] = useState<string | null>(null)
+  const sectionButtons = useRef<Record<string, HTMLButtonElement | null>>({})
   const menuButton = useRef<HTMLButtonElement>(null)
   const header = useRef<HTMLElement>(null)
 
-  useEffect(() => { setOpen(false) }, [pathname])
+  useEffect(() => { setOpen(false); setExpanded(null) }, [pathname])
   useEffect(() => {
-    if (!open) return
+    if (!open && !expanded) return
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') { setOpen(false); menuButton.current?.focus() }
+      if (event.key === 'Escape') {
+        if (expanded) { sectionButtons.current[expanded]?.focus(); setExpanded(null) }
+        else { setOpen(false); menuButton.current?.focus() }
+      }
     }
     const onPointer = (event: PointerEvent) => {
-      if (!header.current?.contains(event.target as Node)) setOpen(false)
+      if (!header.current?.contains(event.target as Node)) { setOpen(false); setExpanded(null) }
     }
     window.addEventListener('keydown', onKey)
     window.addEventListener('pointerdown', onPointer)
     return () => { window.removeEventListener('keydown', onKey); window.removeEventListener('pointerdown', onPointer) }
-  }, [open])
+  }, [open, expanded])
 
-  const isActive = (href: string) => {
-    if (href === '/tools/mf-portfolio-tracker') {
-      return pathname.startsWith('/tools/mf-portfolio-tracker')
-    }
-
-    if (href === '/tools') {
-      return (
-        pathname === '/tools' ||
-        (pathname.startsWith('/tools/') &&
-          !pathname.startsWith('/tools/mf-portfolio-tracker'))
-      )
-    }
-
-    return pathname === href || pathname.startsWith(`${href}/`)
-  }
+  const currentSection = sectionForPath(pathname)
+  const isActive = (href: string) => href === '/' ? pathname === '/' : href === '/markets' ? currentSection?.id === 'markets' : pathname === href || pathname.startsWith(`${href}/`)
 
   return (
     <>
@@ -88,26 +73,22 @@ export default function SiteHeader() {
 
           <nav
             id="cn-primary-navigation"
-            className={`${styles.globalNav} ${
-              open ? styles.globalNavOpen : ''
-            }`}
+            className={`${navStyles.navigation} ${open ? navStyles.open : ''}`}
             aria-label="Primary navigation"
           >
-            {primaryNav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={
-                  isActive(item.href) ? styles.globalNavActive : undefined
-                }
-                aria-current={isActive(item.href) ? 'page' : undefined}
-                onClick={() => setOpen(false)}
-              >
-                {item.label}
-              </Link>
+            {primarySections.map(section => (
+              <div className={navStyles.group} key={section.id}>
+                <div className={navStyles.groupHeading}>
+                  <Link href={section.href} className={currentSection?.id === section.id ? navStyles.active : undefined} aria-current={pathname === section.href ? 'page' : undefined} onClick={() => { setOpen(false); setExpanded(null) }}>{section.label}</Link>
+                  <button ref={node => { sectionButtons.current[section.id] = node }} type="button" aria-label={`Explore ${section.label}`} aria-expanded={expanded === section.id} aria-controls={`nav-${section.id}`} onClick={() => setExpanded(value => value === section.id ? null : section.id)}><ChevronDown size={13} aria-hidden="true"/></button>
+                </div>
+                <div id={`nav-${section.id}`} className={navStyles.dropdown} hidden={expanded !== section.id}>
+                  <p>{section.description}</p>
+                  {section.links.map(link => <Link href={link.href} key={link.href} onClick={() => { setOpen(false); setExpanded(null) }}><b>{link.label}</b><small>{link.description}</small></Link>)}
+                </div>
+              </div>
             ))}
-            <Link href="/account" className={styles.mobileUtility} onClick={() => setOpen(false)}>Account</Link>
-            <Link href="/alerts" className={styles.mobileUtility} onClick={() => setOpen(false)}>Alerts</Link>
+            <div className={navStyles.mobileExtras}><Link href="/discover" onClick={() => setOpen(false)}>Explore all sections</Link><Link href="/watchlist" onClick={() => setOpen(false)}>My Workspace</Link><Link href="/about" onClick={() => setOpen(false)}>About & Trust</Link></div>
           </nav>
 
           <div className={styles.globalHeaderActions}>
@@ -116,8 +97,8 @@ export default function SiteHeader() {
             <SiteSearch />
             <ThemeModeToggle compact />
 
-            <Link href="/research" className={styles.globalResearchCta}>
-              Research Desk <span>→</span>
+            <Link href="/discover" className={styles.globalResearchCta}>
+              Explore <span>→</span>
             </Link>
 
             <button
@@ -127,7 +108,7 @@ export default function SiteHeader() {
               aria-label="Toggle navigation"
               aria-expanded={open}
               aria-controls="cn-primary-navigation"
-              onClick={() => setOpen((value) => !value)}
+              onClick={() => { setOpen(value => !value); setExpanded(null) }}
             >
               {open ? <X size={19} /> : <Menu size={19} />}
             </button>

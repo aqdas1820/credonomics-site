@@ -406,3 +406,6 @@
 .linkColumn a{min-height:32px;display:flex;align-items:center;transition:color 180ms ease-out}
 .linkColumn a:hover{color:#35d0ea}
 @media(max-width:880px){.footerShell{padding-bottom:72px}}
+
+/* One shared information architecture across every footer destination. */
+.footerGrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:30px}.brandColumn{grid-column:1/-1;max-width:700px}.brandDescription{max-width:650px}.linkColumn .columnTitle{color:#f4f8fb;font-size:13px;font-weight:800;margin-bottom:8px}.linkColumn a{font-size:12px;line-height:1.6;min-height:36px}.linkColumn a:focus-visible,.footnoteRow a:focus-visible{outline:2px solid #35d0ea;outline-offset:3px}.footnoteRow a{color:#35d0ea}@media(max-width:900px){.footerGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}}@media(max-width:400px){.footerGrid{grid-template-columns:1fr}.brandColumn{grid-column:auto}}

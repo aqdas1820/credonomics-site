@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowLeft, Calculator, Info, RotateCcw, ShieldCheck, Sparkles, TrendingUp } from 'lucide-react'
+import { Calculator, Info, RotateCcw, ShieldCheck, Sparkles, TrendingUp } from 'lucide-react'
 import { useMemo, useState } from 'react'
 
 type NumSetter = (n: number) => void
@@ -59,11 +59,8 @@ export default function CashbackCalculatorPage() {
   const reset = () => { setSpend(defaults.spend); setRate(defaults.rate); setCap(defaults.cap); setExcluded(defaults.excluded); setFee(defaults.fee); setWaiver(defaults.waiver); setGst(defaults.gst) }
 
   return (
-    <main className="calcPage">
-      <header className="calcNav wrap">
-        <a className="brand" href="/"><img src="/credonomics-mark.png" alt="" className="brandMark"/><span className="brandWords"><strong>CredoNomics</strong><small>Investment Solutions</small></span></a>
-        <a className="backLink" href="/#tools"><ArrowLeft size={16}/> Back to tools</a>
-      </header>
+    <div className="calcPage">
+      <nav className="wrap" aria-label="Calculator breadcrumb" style={{paddingTop:24}}><a href="/tools">← All tools</a></nav>
 
       <section className="calcHero wrap">
         <div>
@@ -114,7 +111,7 @@ export default function CashbackCalculatorPage() {
         <div className="calcSteps"><p><b>01</b> We remove the percentage of spend that earns no rewards.</p><p><b>02</b> We calculate cashback on eligible spend and apply the monthly cap.</p><p><b>03</b> We subtract the annual fee plus GST and divide the net value by your total annual spend.</p></div>
       </section>
 
-      <footer className="calcFooter wrap"><p>CredoNomics calculators are informational tools. Verify current card terms before making a financial decision.</p><a href="/">CredoNomics home →</a></footer>
-    </main>
+      <aside className="calcFooter wrap" aria-label="Calculator notes"><p>CredoNomics calculators are informational tools. Verify current card terms before making a financial decision.</p><a href="/">CredoNomics home →</a></aside>
+    </div>
   )
 }
