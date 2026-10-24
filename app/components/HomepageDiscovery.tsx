@@ -39,6 +39,7 @@ export default function HomepageDiscovery() {
             <a className={styles.secondary} href="/discover">
               Discovery hub
             </a>
+            <a className={styles.secondary} href="/cards/wallet">My card wallet</a>
           </div>
         </div>
 

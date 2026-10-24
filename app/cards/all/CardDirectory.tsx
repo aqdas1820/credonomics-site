@@ -20,6 +20,8 @@ export default function CardDirectory({
   const [query, setQuery] = useState('')
   const [issuer, setIssuer] = useState('All')
   const [category, setCategory] = useState('All')
+  const [feeLimit, setFeeLimit] = useState('All')
+  const [sort, setSort] = useState('name')
 
   const categories = useMemo(() => {
     const values = new Map<string, string>()
@@ -37,9 +39,10 @@ export default function CardDirectory({
         card.categories.some((item) => item.label.toLowerCase().includes(q))
       const issuerOk = issuer === 'All' || card.issuer === issuer
       const categoryOk = category === 'All' || card.categories.some((item) => item.slug === category)
-      return queryOk && issuerOk && categoryOk
-    })
-  }, [cards, query, issuer, category])
+      const feeOk = feeLimit === 'All' || card.annualFeeRupees <= Number(feeLimit)
+      return queryOk && issuerOk && categoryOk && feeOk
+    }).sort((a, b) => sort === 'fee' ? a.annualFeeRupees - b.annualFeeRupees || a.name.localeCompare(b.name) : sort === 'verified' ? b.verifiedAt.localeCompare(a.verifiedAt) || a.name.localeCompare(b.name) : a.name.localeCompare(b.name))
+  }, [cards, query, issuer, category, feeLimit, sort])
 
   return (
     <div className={styles.directory}>
@@ -61,10 +64,16 @@ export default function CardDirectory({
           <option value="All">All categories</option>
           {categories.map(([slug, label]) => <option value={slug} key={slug}>{label}</option>)}
         </select>
+        <select value={feeLimit} onChange={event => setFeeLimit(event.target.value)} aria-label="Maximum annual fee">
+          <option value="All">Any annual fee</option><option value="0">₹0 annual fee</option><option value="500">Up to ₹500/year</option><option value="1000">Up to ₹1,000/year</option><option value="1500">Up to ₹1,500/year</option>
+        </select>
+        <select value={sort} onChange={event => setSort(event.target.value)} aria-label="Sort cards">
+          <option value="name">Card name A–Z</option><option value="fee">Lowest annual fee</option><option value="verified">Latest verification date</option>
+        </select>
       </div>
 
-      <div className={styles.summary}>
-        <b>{filtered.length}</b> of {cards.length} normalized cards shown
+      <div className={styles.summary} role="status">
+        <b>{filtered.length}</b> of {cards.length} normalized cards shown · Fees before GST or waivers · <a href="/cards/wallet">Build your card wallet →</a>
       </div>
 
       <div className={styles.grid}>
@@ -85,7 +94,7 @@ export default function CardDirectory({
       </div>
 
       {filtered.length === 0 && (
-        <div className={styles.empty}>No normalized card matches the selected filters.</div>
+        <div className={styles.empty}>No normalized card matches the selected filters. <button type="button" onClick={() => { setQuery(''); setIssuer('All'); setCategory('All'); setFeeLimit('All'); setSort('name') }}>Reset filters</button></div>
       )}
     </div>
   )
