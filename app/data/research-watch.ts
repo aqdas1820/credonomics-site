@@ -1,13 +1,39 @@
-export const WATCH_CHECKED_AT = '2026-10-24'
+export const WATCH_CHECKED_AT = '2026-10-25'
 export type WatchItem = {
-  slug: string; title: string; summary: string; category: 'Credit cards' | 'Mutual funds'
+  slug: string; title: string; summary: string; category: 'Credit cards' | 'Mutual funds' | 'Markets'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
   sourceLocation: string; audience: string; facts: string[]; actions: string[]; limits: string
+  announcementDate?: string; statusLabel?: 'Clarification checked'
+  additionalSources?: { url: string; label: string }[]
   cardIds?: string[]
 }
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'sebi-early-pay-in-margin-waiver-february-2027',
+    title: 'SEBI early pay-in: additional cash-market margin relief from February 2027',
+    summary: 'Accepted securities early pay-in can support eligible subsequent cash-segment positions; broker margin checks still apply.',
+    category: 'Markets', checkedAt: '2026-10-25', announcementDate: '2026-10-22', eventDate: '2027-02-22', dateLabel: 'Framework effective',
+    source: 'https://www.sebi.gov.in/sebi_data/attachdocs/oct-2026/1792668596460.pdf', sourceLabel: 'SEBI circular HO/(320)2026-MRD-POD2/I/24141/2026', sourceLocation: '22 October 2026; paragraphs 2–5 and 7, pages 1–2',
+    additionalSources: [{ url: 'https://www.sebi.gov.in/legal/circulars/oct-2026/margin-waiver-on-subsequent-buy-sell-transactions-post-early-pay-in-epi-in-cash-segment_105364.html', label: 'SEBI circular landing page and issue date' }],
+    audience: 'Equity investors placing subsequent cash-segment trades on the same trade date after selling securities and completing accepted Early Pay-In (EPI).',
+    facts: ['Existing guidelines already recognise EPI-related margin benefits. The new framework requires real-time clearing-corporation margin relief to trading/clearing members for eligible subsequent client buy/sell positions after accepted EPI and a net sell obligation.', 'Available EPI value is the lower of the value of EPI completed and securities sold. For example, EPI of ₹60,000 against securities sold for ₹50,000 gives ₹50,000 available EPI value; this is not a promise of ₹50,000 additional buying power.', 'Squaring off the original sale removes the EPI value and can create a margin shortfall. The circular makes a separate exception to that removal condition for trade-for-trade securities, which settle gross.', 'The circular takes effect four months after its 22 October 2026 issue date: 22 February 2027. No commencement hour is specified.'],
+    actions: ['Near implementation, ask your broker how accepted EPI and available margin appear in its trading system.', 'Before reversing the original sale or adding a position, check available margin. Broker risk management must allow these actions only when requisite client margins are available.'],
+    limits: 'Upcoming at the check date. This is a clearing-corporation framework for eligible transactions, not universal margin-free trading, a withdrawal rule or a guaranteed broker credit limit. Broker implementation and risk controls matter. No trading or portfolio recommendation is made.',
+  },
+  {
+    slug: 'idfc-international-rewards-revised-september-notice',
+    title: 'IDFC FIRST international rewards: read the revised September notice',
+    summary: 'A later bank communication says applicable international reward points continue alongside zero forex markup; the earlier blanket stop notice is incomplete on its own.',
+    category: 'Credit cards', checkedAt: '2026-10-25', announcementDate: '2026-09-13', eventDate: '2026-09-13', dateLabel: 'Revised communication dated', statusLabel: 'Clarification checked',
+    source: 'https://www.idfcfirst.bank.in/content/dam/idfcfirstbank/pdf/credit-card/Credit-Card-Communication-13-Sep-26.pdf', sourceLabel: 'IDFC FIRST Bank: revised 13 September 2026 communication', sourceLocation: 'One-page revised notice; refers to the earlier 9 September announcement',
+    additionalSources: [{ url: 'https://www.idfcfirst.bank.in/content/dam/idfcfirstbank/pdf/credit-card/Credit-Card-Communication1-Sep-26.pdf', label: 'Earlier September communication, retained for comparison' }, { url: 'https://www.idfcfirst.bank.in/credit-card/select', label: 'Current FIRST Select product page: international reward points and exclusions' }],
+    audience: 'IDFC FIRST cardholders comparing international purchases after seeing claims that most cards stop earning international rewards on 26 October.',
+    facts: ['The earlier notice introduced zero forex markup from 9 September and said international reward points would stop on 26 October for cards outside its listed exceptions.', 'The revised 13 September communication refers to that earlier announcement and says international reward points will continue as applicable to the respective cards, alongside zero forex markup.', 'At this check, the official FIRST Select page also advertises 10X points on international purchases, subject to its exclusions and reward terms. This is a product example, not a common rate for all variants.'],
+    actions: ['Read the revised notice together with the current terms for your exact card before changing which card you use abroad.', 'Check eligible merchant categories, reward caps, redemption value and applicable charges. Ask the issuer to reconcile any different card-specific communication you received.'],
+    limits: 'This publishes the verified communication history, not a new 25 October benefit or a universal reward rate. Separate product-specific rate revisions, including the IndiGo notice already covered by Research Watch, still require their own terms; this clarification does not establish their cancellation. Rankings are unchanged.',
+  },
   {
     slug: 'idfc-indigo-international-rewards-october-2026',
     title: 'IndiGo IDFC FIRST: international reward rule changes on 26 October',
@@ -66,6 +92,7 @@ export const researchWatch: WatchItem[] = [
   },
 ]
 
-export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' {
+export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' {
+  if (item.statusLabel) return item.statusLabel
   return item.eventDate > item.checkedAt ? 'Upcoming at check' : 'Effective at check'
 }
