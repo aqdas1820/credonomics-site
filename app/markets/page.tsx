@@ -5,6 +5,7 @@ import SiteFrame from '../components/SiteFrame'
 import styles from './markets.module.css'
 import MarketOverview from './MarketOverview'
 import MarketPulse from './MarketPulse'
+import ResearchWatchBrief from '../components/ResearchWatchBrief'
 
 export const metadata: Metadata = {
   title: 'Indian Markets & Stock Search',
@@ -50,6 +51,7 @@ export default function MarketsPage() {
           <div className={styles.rows}>{popular.map(([symbol,name,href]) => <Link href={href} key={symbol}><div><strong>{name}</strong><span>{symbol} · NSE</span></div><ArrowRight size={17} /></Link>)}</div>
         </section>
       </div>
+      <ResearchWatchBrief category="Markets"/>
     </SiteFrame>
   )
 }

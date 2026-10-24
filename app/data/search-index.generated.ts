@@ -111,6 +111,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:idfc-international-rewards-revised-september-notice",
+    "title": "IDFC FIRST international rewards: read the revised September notice",
+    "description": "A later bank communication says applicable international reward points continue alongside zero forex markup; the earlier blanket stop notice is incomplete on its own.",
+    "href": "/research/watch/idfc-international-rewards-revised-september-notice",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-25",
+    "keywords": "IDFC FIRST international rewards: read the revised September notice idfc-international-rewards-revised-september-notice Research",
+    "priority": 92
+  },
+  {
     "id": "watch:idfc-indigo-international-rewards-october-2026",
     "title": "IndiGo IDFC FIRST: international reward rule changes on 26 October",
     "description": "The issuer specifies 1 BluChip per ₹100 on international purchases from 26 October 2026.",
@@ -130,6 +141,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "Official issuer / fund notice",
     "updated": "2026-10-24",
     "keywords": "SBM ZET: late-payment fee becomes balance-linked sbm-zet-late-fee-october-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:sebi-early-pay-in-margin-waiver-february-2027",
+    "title": "SEBI early pay-in: additional cash-market margin relief from February 2027",
+    "description": "Accepted securities early pay-in can support eligible subsequent cash-segment positions; broker margin checks still apply.",
+    "href": "/research/watch/sebi-early-pay-in-margin-waiver-february-2027",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-25",
+    "keywords": "SEBI early pay-in: additional cash-market margin relief from February 2027 sebi-early-pay-in-margin-waiver-february-2027 Research",
     "priority": 92
   },
   {
@@ -256,7 +278,7 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "route:/research/watch",
     "title": "Research Watch: Verified Changes & Action Dates",
-    "description": "Selected source-checked card and mutual-fund notices from CredoNomics Research Watch, published 24 October 2026 with scope and action dates.",
+    "description": "Selected source-checked card, market and mutual-fund notices from CredoNomics Research Watch, with the latest publication on 25 October 2026 with scope and action dates.",
     "href": "/research/watch",
     "category": "Research",
     "source": "Research Desk",
