@@ -155,6 +155,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:sebi-whatsapp-stock-tips-verification-checklist",
+    "title": "SEBI WhatsApp stock-tip warning: verify the intermediary and trading app",
+    "description": "A 22 October advisory flags unknown invitation-only tip groups, planted profit claims and replacement-group invitations. Use official verification links before trusting a recommendation.",
+    "href": "/research/watch/sebi-whatsapp-stock-tips-verification-checklist",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-25",
+    "keywords": "SEBI WhatsApp stock-tip warning: verify the intermediary and trading app sebi-whatsapp-stock-tips-verification-checklist Research",
+    "priority": 92
+  },
+  {
     "id": "watch:swiggy-hdfc-migration-autopay-checklist",
     "title": "Swiggy HDFC migration: re-register autopay and check your replacement",
     "description": "The legacy card is being phased out. Your migration notice sets the timeline; mandates and card controls need setting up again.",
