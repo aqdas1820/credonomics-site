@@ -155,6 +155,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:swiggy-hdfc-migration-autopay-checklist",
+    "title": "Swiggy HDFC migration: re-register autopay and check your replacement",
+    "description": "The legacy card is being phased out. Your migration notice sets the timeline; mandates and card controls need setting up again.",
+    "href": "/research/watch/swiggy-hdfc-migration-autopay-checklist",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-25",
+    "keywords": "Swiggy HDFC migration: re-register autopay and check your replacement swiggy-hdfc-migration-autopay-checklist Research",
+    "priority": 92
+  },
+  {
     "id": "watch:tata-neu-hdfc-manual-neucoins-claims-november-2026",
     "title": "Tata Neu HDFC: claim NeuCoins manually from 25 November",
     "description": "A new claim step replaces automatic transfer for statements from 25 November 2026; unclaimed rewards can expire.",

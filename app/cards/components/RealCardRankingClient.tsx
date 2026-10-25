@@ -5,6 +5,7 @@ import { Check, ExternalLink, Filter, Info, RotateCcw, Share2, ShieldCheck, Trop
 import { cardCategoryMap, type CardCategorySlug } from '../../data/card-categories'
 import { REAL_CARD_DATA_DATE, type VerifiedRealCard } from '../../data/verified-real-cards'
 import styles from './real-card-ranking.module.css'
+import CardLifecycleNotice from './CardLifecycleNotice'
 import { analyseCard, defaultProfile, type Profile } from '../../data/real-card-ranking'
 
 const money = new Intl.NumberFormat('en-IN', {
@@ -252,6 +253,7 @@ export default function RealCardRankingClient({ categorySlug, cards }: { categor
                     <div className={styles.netValue}><b>{money.format(result.netValue)}</b><small>NET / YEAR</small></div>
                   </div>
 
+                  <CardLifecycleNotice notice={result.card.holderNotice}/>
                   <div className={styles.metrics}>
                     <div><span>Effective return</span><b>{result.effectiveReturn.toFixed(2)}%</b></div>
                     <div><span>Gross modeled value</span><b>{money.format(result.grossValue)}</b></div>

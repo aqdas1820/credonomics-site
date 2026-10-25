@@ -4,13 +4,26 @@ export type WatchItem = {
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
   sourceLocation: string; audience: string; facts: string[]; actions: string[]; limits: string
   publishedAt?: string; updateNote?: string
-  announcementDate?: string; statusLabel?: 'Clarification checked'
+  announcementDate?: string; statusLabel?: 'Clarification checked' | 'Phased migration'
   additionalSources?: { url: string; label: string }[]
   cardIds?: string[]
 }
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'swiggy-hdfc-migration-autopay-checklist',
+    title: 'Swiggy HDFC migration: re-register autopay and check your replacement',
+    summary: 'The legacy card is being phased out. Your migration notice sets the timeline; mandates and card controls need setting up again.',
+    category: 'Credit cards', checkedAt: '2026-10-25', eventDate: '2026-09-30', dateLabel: 'Migration FAQ published', statusLabel: 'Phased migration',
+    source: 'https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-hdfc-bank-credit-card/pdf/faq-swiggy-card-upgrade-final.pdf', sourceLabel: 'HDFC Bank: Swiggy card upgrade FAQ', sourceLocation: 'Published 30 September 2026; questions 17–26, pages 4–7',
+    cardIds: ['swiggy-hdfc'],
+    additionalSources: [{ url: 'https://www.hdfc.bank.in/credit-cards/swiggy-ornge-hdfc-bank-credit-card', label: 'Swiggy Ornge: official product and terms' }, { url: 'https://www.hdfc.bank.in/credit-cards/swiggy-blck-hdfc-bank-credit-card', label: 'Swiggy BLCK: official product and terms' }],
+    audience: 'Existing legacy Swiggy HDFC cardholders.',
+    facts: ['Migration is phased. Communications continue through March 2027, with remaining holders contacted later; this is not a universal closure deadline.', 'Holders who do not choose within their notice timeline migrate to Ornge, with at least 30 days’ advance notice.', 'The old card stops at the earliest of a first transaction on the new card, 60 days after new-card issuance, or old-card expiry. Issuance, not activation, is the upgrade date.'],
+    actions: ['Read your bank notice and compare the replacement’s fees, caps and exclusions.', 'Re-register autopay, e-mandates and standing instructions using new card details. Set transaction limits and usage controls again.', 'Raise old-card cashback queries within one month of new-card issuance.'],
+    limits: 'No common migration date or automatic mandate transfer. Legacy estimates apply only while old terms remain applicable, not to Ornge or BLCK. This guide does not recommend a replacement or normalize its rewards.',
+  },
   {
     slug: 'sebi-early-pay-in-margin-waiver-february-2027',
     title: 'SEBI early pay-in: additional cash-market margin relief from February 2027',
@@ -93,7 +106,7 @@ export const researchWatch: WatchItem[] = [
   },
 ]
 
-export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' {
+export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' | 'Phased migration' {
   if (item.statusLabel) return item.statusLabel
   return item.eventDate > item.checkedAt ? 'Upcoming at check' : 'Effective at check'
 }

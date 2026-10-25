@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { ArrowRight, Building2, ExternalLink, Layers3, ShieldCheck } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
 import ResearchWatchBrief from '../../components/ResearchWatchBrief'
+import CardLifecycleNotice from '../components/CardLifecycleNotice'
 import CategoryComparator from '../components/CategoryComparator'
 import RealCardRanking from '../components/RealCardRanking'
 import {
@@ -158,6 +159,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       </section>
 
       <section className={`${styles.wrap} ${styles.pageBody} ${local.shell}`}>
+        <CardLifecycleNotice notice={card.holderNotice}/>
         <ResearchWatchBrief cardId={card.id}/>
         <p>October field reviews and model corrections: <a href="/updates/2026-10">read the dated source ledger</a>. The original full-record verification date below is retained.</p>
         <div className={local.cardDetailStats}>
@@ -167,7 +169,7 @@ export default function Page({ params }: { params: { slug: string } }) {
         </div>
 
         <section className={local.cardDetailSection}>
-          <div className={local.registryHead}><div><span>Category coverage</span><h2>Where this card enters CredoNomics rankings.</h2></div></div>
+          <div className={local.registryHead}><div><span>Category coverage</span><h2>{card.holderNotice ? 'Legacy terms for existing holders.' : 'Where this card enters CredoNomics rankings.'}</h2></div></div>
           <div className={local.cardCategoryLinks}>
             {categories.map((category) => (
               <a href={`/cards/${category}`} key={category}>

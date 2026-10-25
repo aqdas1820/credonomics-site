@@ -28,6 +28,7 @@ export type VerifiedRealCard = {
   verifiedAt: string
   sourceUrl: string
   sourceLabel: string
+  holderNotice?: { label: string; detail: string; checkedAt: string; href: string }
   terms: Partial<Record<CardCategorySlug, RealCardTerms>>
 }
 
@@ -193,6 +194,7 @@ export const verifiedRealCards: VerifiedRealCard[] = [
   },
   {
     id: 'swiggy-hdfc',
+    holderNotice: { label: 'Legacy card · phased migration', detail: 'Existing-holder estimate only while legacy terms apply. Not a recommendation for a new application; Ornge and BLCK have different terms.', checkedAt: '2026-10-25', href: '/research/watch/swiggy-hdfc-migration-autopay-checklist' },
     issuer: 'HDFC Bank',
     name: 'Swiggy HDFC Bank Credit Card',
     annualFeeRupees: 500,
