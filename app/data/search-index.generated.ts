@@ -111,6 +111,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:axis-myzone-district-movie-spend-november-2026",
+    "title": "Axis MyZone movies: check ₹25,000 eligible spend before using District",
+    "description": "From 1 November, the MyZone District buy-one-get-one offer needs eligible settled spend in the preceding three calendar months, subject to a new-card exemption.",
+    "href": "/research/watch/axis-myzone-district-movie-spend-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-26",
+    "keywords": "Axis MyZone movies: check ₹25,000 eligible spend before using District axis-myzone-district-movie-spend-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:idfc-international-rewards-revised-september-notice",
     "title": "IDFC FIRST international rewards: read the revised September notice",
     "description": "A later bank communication says applicable international reward points continue alongside zero forex markup; the earlier blanket stop notice is incomplete on its own.",
@@ -130,6 +141,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "Official issuer / fund notice",
     "updated": "2026-10-24",
     "keywords": "IndiGo IDFC FIRST: international reward rule changes on 26 October idfc-indigo-international-rewards-october-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:pnb-credit-card-redemption-utility-fees-november-2026",
+    "title": "PNB November fees: reward redemption and high utility payments",
+    "description": "From 1 November 2026, the notice adds ₹99 per reward-redemption request and a threshold-based utility fee, before GST.",
+    "href": "/research/watch/pnb-credit-card-redemption-utility-fees-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-26",
+    "keywords": "PNB November fees: reward redemption and high utility payments pnb-credit-card-redemption-utility-fees-november-2026 Research",
     "priority": 92
   },
   {
@@ -300,7 +322,7 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "route:/research/watch",
     "title": "Research Watch: Verified Changes & Action Dates",
-    "description": "Selected source-checked card, market and mutual-fund notices from CredoNomics Research Watch, with the latest publication on 25 October 2026 with scope and action dates.",
+    "description": "Selected source-checked card, market and mutual-fund notices from CredoNomics Research Watch, with the latest publication on 26 October 2026, with scope and action dates.",
     "href": "/research/watch",
     "category": "Research",
     "source": "Research Desk",
