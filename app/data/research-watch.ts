@@ -4,13 +4,25 @@ export type WatchItem = {
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
   sourceLocation: string; audience: string; facts: string[]; actions: string[]; limits: string
   publishedAt?: string; updateNote?: string
-  announcementDate?: string; statusLabel?: 'Clarification checked' | 'Phased migration'
+  announcementDate?: string; statusLabel?: 'Clarification checked' | 'Phased migration' | 'Investor advisory'
   additionalSources?: { url: string; label: string }[]
   cardIds?: string[]
 }
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'sebi-whatsapp-stock-tips-verification-checklist',
+    title: 'SEBI WhatsApp stock-tip warning: verify the intermediary and trading app',
+    summary: 'A 22 October advisory flags unknown invitation-only tip groups, planted profit claims and replacement-group invitations. Use official verification links before trusting a recommendation.',
+    category: 'Markets', checkedAt: '2026-10-25', announcementDate: '2026-10-22', eventDate: '2026-10-22', dateLabel: 'Investor advisory issued', statusLabel: 'Investor advisory',
+    source: 'https://www.sebi.gov.in/sebi_data/attachdocs/oct-2026/1792675550417.pdf', sourceLabel: 'SEBI Press Release 65/2026', sourceLocation: '22 October 2026; warning on page 1 and investor precautions on page 2',
+    additionalSources: [{ url: 'https://www.sebi.gov.in/media-and-notifications/press-releases/oct-2026/caution-to-investors-against-stock-tips-offered-through-invitation-only-whatsapp-groups_105389.html', label: 'SEBI press-release page and publication date' }, { url: 'https://www.sebi.gov.in/intermediaries.html', label: 'SEBI: verify intermediary registration' }, { url: 'https://investor.sebi.gov.in/Investor-support.html', label: 'SEBI Investor Support: authorised trading-app and broker social-handle directories' }],
+    audience: 'Investors receiving stock tips through private messaging groups.',
+    facts: ['SEBI warns about unregistered operators posing as experts in invitation-only WhatsApp groups, sometimes using overseas numbers and free-education claims.', 'Profit testimonials and praise may be planted. Invitations to a replacement group after an earlier group is banned are another red flag.'],
+    actions: ['Avoid unknown tip groups; do not act on their calls or follow replacement-group invitations.', 'Do not fund group-promoted apps or share holdings and trading-account details with their operators.', 'Independently open SEBI’s registration directory and its authorised-app links below. Match the entity and app using official records rather than a group message.'],
+    limits: 'This is an investor advisory, not a new trading restriction or a finding against every WhatsApp group. Registration checks do not guarantee returns or authenticate a person impersonating a registered firm. No refund entitlement is inferred.',
+  },
   {
     slug: 'swiggy-hdfc-migration-autopay-checklist',
     title: 'Swiggy HDFC migration: re-register autopay and check your replacement',
@@ -106,7 +118,7 @@ export const researchWatch: WatchItem[] = [
   },
 ]
 
-export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' | 'Phased migration' {
+export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' | 'Phased migration' | 'Investor advisory' {
   if (item.statusLabel) return item.statusLabel
   return item.eventDate > item.checkedAt ? 'Upcoming at check' : 'Effective at check'
 }
