@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-10-25'
+export const WATCH_CHECKED_AT = '2026-10-26'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Mutual funds' | 'Markets'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,29 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'pnb-credit-card-redemption-utility-fees-november-2026',
+    title: 'PNB November fees: reward redemption and high utility payments',
+    summary: 'From 1 November 2026, the notice adds ₹99 per reward-redemption request and a threshold-based utility fee, before GST.',
+    category: 'Credit cards', checkedAt: '2026-10-26', eventDate: '2026-11-01', dateLabel: 'Revised charges effective',
+    source: 'https://creditcard.pnb.bank.in/Documents/revised-charges.pdf', sourceLabel: 'PNB: revised credit-card service charges', sourceLocation: 'Effective-date heading on page 1; sections 5–6 on PDF page 6',
+    additionalSources: [{ url: 'https://creditcard.pnb.bank.in/', label: 'PNB credit-card portal: dated revised-charge announcement' }],
+    audience: 'PNB Visa/RuPay credit-card holders redeeming rewards or paying large utility bills.',
+    facts: ['Reward-redemption requests change from nil fee to ₹99 each from 1 November 2026, excluding applicable GST.', 'Utility fees change from nil to 1% of total utility payments if billing-cycle utility payments exceed ₹50,000, with a ₹2,000 maximum per transaction. Applicable GST is extra. The notice says total payments, not only the amount above the threshold.'],
+    actions: ['Review your reward balance, redemption minimums and expiry before deciding whether an already-planned redemption should be completed before 1 November.', 'Compare utility fees and rewards using your billing-cycle total. Splitting one bill into smaller payments does not remove the cycle threshold.'],
+    limits: 'The announcement date is not specified in the PDF. These are incoming fees, not a reward-rate change. Other revised charges have product-specific and FD-backed-card treatment; this guide does not generalise their late-fee slabs or invent how earlier utility transactions will be adjusted.',
+  },
+  {
+    slug: 'axis-myzone-district-movie-spend-november-2026',
+    title: 'Axis MyZone movies: check ₹25,000 eligible spend before using District',
+    summary: 'From 1 November, the MyZone District buy-one-get-one offer needs eligible settled spend in the preceding three calendar months, subject to a new-card exemption.',
+    category: 'Credit cards', checkedAt: '2026-10-26', eventDate: '2026-11-01', dateLabel: 'Movie eligibility rule effective',
+    source: 'https://campaign.axis.bank.in/generic/terms-and-conditions-myzone.pdf', sourceLabel: 'Axis Bank: MYZONE card-specific revision notice', sourceLocation: 'Effective 01-11-2026 section across PDF pages 1–2',
+    audience: 'Axis Bank MyZone cardholders relying on the District movie offer.',
+    facts: ['The incoming rule requires ₹25,000 eligible spend in the previous three calendar months. Only settled transactions count; settlement may take up to five working days.', 'New issuance is exempt for the issue month plus the next three calendar months. Upgrading an existing card is not new issuance; an additional card alongside an existing relationship is treated as new issuance. Spends are considered at account level.', 'Fees, interest, refunds, reversals and other bank dues do not qualify. EMI purchases count through billed monthly instalments, not their full purchase value.'],
+    actions: ['Check billed eligible transactions in Axis Mobile or Internet Banking before relying on the movie benefit.', 'Keep settlement time in mind near month-end. Compare the discount with any extra spending needed; do not buy unnecessarily to meet the threshold.'],
+    limits: 'Announcement date and a dated earlier issuer version were not established. This guide describes the verified incoming rule without asserting an earlier no-spend entitlement. Ticket counts, discount caps and booking conditions still follow the exact card’s current terms.',
+  },
   {
     slug: 'sebi-whatsapp-stock-tips-verification-checklist',
     title: 'SEBI WhatsApp stock-tip warning: verify the intermediary and trading app',
