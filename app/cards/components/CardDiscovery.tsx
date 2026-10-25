@@ -2,7 +2,7 @@ import { verifiedRealCards } from '../../data/verified-real-cards'
 import styles from './card-discovery.module.css'
 
 const pairs = [
-  { label: 'Online shopping', category: 'shopping', ids: ['cashback-sbi', 'swiggy-hdfc'] },
+  { label: 'Online shopping', category: 'shopping', ids: ['cashback-sbi', 'millennia-hdfc'] },
   { label: 'Everyday utilities', category: 'utilities', ids: ['airtel-axis', 'axis-ace'] },
   { label: 'Fuel rewards', category: 'fuel', ids: ['bpcl-sbi', 'bpcl-sbi-octane'] },
   { label: 'Amazon or Flipkart?', category: 'shopping', ids: ['amazon-pay-icici', 'flipkart-axis'] },

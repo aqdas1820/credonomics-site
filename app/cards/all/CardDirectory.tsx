@@ -81,6 +81,7 @@ export default function CardDirectory({
           <a href={`/cards/${card.id}`} className={styles.card} key={card.id}>
             <small>{card.issuer}</small>
             <h2>{card.name}</h2>
+            {card.holderNotice && <p><b>{card.holderNotice.label}</b> · Existing holders: check migration before relying on these terms.</p>}
             <div className={styles.categories}>
               {card.categories.slice(0, 5).map((item) => <span key={item.slug}>{item.label}</span>)}
             </div>
