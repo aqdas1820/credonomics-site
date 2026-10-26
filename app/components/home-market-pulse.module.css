@@ -1,0 +1,121 @@
+.pulsePanel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 16px;
+  padding: 24px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    var(--surface),
+    color-mix(in srgb, var(--teal) 7%, var(--surface))
+  );
+}
+
+.copy {
+  min-width: 0;
+}
+
+.sectionEyebrow {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.pulsePanel h2 {
+  margin: 8px 0 4px;
+  color: var(--ink);
+  font-size: 25px;
+}
+
+.pulsePanel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.summary {
+  margin-top: 8px;
+  color: var(--ink);
+}
+
+.breadth {
+  margin-top: 10px;
+}
+
+.trends {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trends li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+}
+
+.trends li span {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.trends li strong {
+  color: var(--ink);
+}
+
+.trends li em {
+  font-style: normal;
+  font-weight: 800;
+}
+
+.positive {
+  color: #087f61;
+}
+
+.negative {
+  color: #c84b56;
+}
+
+.neutral {
+  color: var(--muted);
+}
+
+.note {
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.links {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.links a {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .pulsePanel {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .links {
+    align-items: flex-start;
+  }
+}

@@ -13,6 +13,7 @@ import HomeIntelligenceRail from './components/HomeIntelligenceRail'
 import SupportCredonomics from './components/SupportCredonomics'
 import HomeCreativeHero from './components/HomeCreativeHero'
 import HomeMarketStatus from './components/HomeMarketStatus'
+import HomeMarketPulse from './components/HomeMarketPulse'
 import HomeMotionObserver from './components/HomeMotionObserver'
 import motionStyles from './components/homepage-motion.module.css'
 
@@ -95,10 +96,7 @@ export default function HomePage() {
       <section className={styles.appHome}>
         <HomeCreativeHero />
         <HomeMarketStatus />
-        <div className={styles.pulsePanel} data-cm-reveal>
-          <div><span className={styles.sectionEyebrow}>MARKET PULSE</span><h2>Intelligence data pending</h2><p>A composite score is intentionally withheld until verified inputs and methodology are connected.</p></div>
-          <Link href="/methodology">How data is handled</Link>
-        </div>
+        <HomeMarketPulse />
         <nav className={styles.quickActions} aria-label="Quick actions" data-cm-reveal>
           {quickActions.map(([label, href]) => <Link href={href} key={href}><span>{label}</span><b>→</b></Link>)}
         </nav>
