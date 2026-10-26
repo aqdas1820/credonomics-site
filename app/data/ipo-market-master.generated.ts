@@ -4,13 +4,13 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-10-26T08:48:08.008Z",
+  "generatedAt": "2026-10-26T16:05:06.190Z",
   "recordCount": 1,
   "nseCount": 1,
   "bseCount": 0,
   "activeCount": 1,
   "upcomingCount": 0,
-  "sourceStatus": "NSE API 1 · BSE SME unavailable · BSE mainboard unavailable"
+  "sourceStatus": "NSE API 1 · BSE SME unavailable · BSE mainboard 0"
 } as const
 
 export const ipoMarketMaster: IpoMarketRecord[] = [
@@ -31,16 +31,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.06043945261642015,
-      "updatedAt": "2026-10-26T08:48:08.008Z",
+      "total": 0.09536323297766433,
+      "updatedAt": "2026-10-26T16:05:06.190Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=EDELALTS&type=Active"
     },
     "sharesOffered": 5299684,
-    "sharesBid": 320310,
+    "sharesBid": 505395,
     "estimatedIssueValueCr": 882.4,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=EDELALTS&type=Active",
-    "fetchedAt": "2026-10-26T08:48:08.008Z"
+    "fetchedAt": "2026-10-26T16:05:06.190Z"
   }
 ]
