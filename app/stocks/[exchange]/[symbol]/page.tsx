@@ -4,12 +4,13 @@ import { findInstrument } from '../../../../src/services/market-data/instrument-
 import SiteFrame from '../../../components/SiteFrame'
 import StockDetailClient from './StockDetailClient'
 
-type Props = { params: { exchange: string; symbol: string } }
+type Props = { params: Promise<{ exchange: string; symbol: string }> }
 
 export const dynamic = 'force-dynamic'
 
-export function generateMetadata({ params }: Props): Metadata {
-  const stock = findInstrument(params.exchange, decodeURIComponent(params.symbol))
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { exchange, symbol } = await params
+  const stock = findInstrument(exchange, decodeURIComponent(symbol))
   if (!stock) return { title: 'Stock unavailable' }
   return {
     title: `${stock.companyName} (${stock.symbol})`,
@@ -18,8 +19,9 @@ export function generateMetadata({ params }: Props): Metadata {
   }
 }
 
-export default function StockPage({ params }: Props) {
-  const stock = findInstrument(params.exchange, decodeURIComponent(params.symbol))
+export default async function StockPage({ params }: Props) {
+  const { exchange, symbol } = await params
+  const stock = findInstrument(exchange, decodeURIComponent(symbol))
   if (!stock) notFound()
   return <SiteFrame><StockDetailClient stock={stock} /></SiteFrame>
 }

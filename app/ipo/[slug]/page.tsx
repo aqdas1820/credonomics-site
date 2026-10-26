@@ -10,8 +10,9 @@ import { formatIpoDate, formatSubscription } from '../lib/format'
 
 export const dynamic = 'force-dynamic'
 export function generateStaticParams() { return publicIpos.map((ipo) => ({ slug: ipo.slug })) }
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const ipo = getPublicIpo(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const ipo = getPublicIpo(slug)
   return ipo ? { title: `${ipo.companyName} IPO — Details, Dates, Subscription & Research`, description: `Source-backed IPO market and research page for ${ipo.companyName}.`, alternates: { canonical: `/ipo/${ipo.slug}` } } : {}
 }
 
@@ -30,8 +31,9 @@ function sourceLabel(type: string, label: string) {
   return label
 }
 
-export default function IpoDetailPage({ params }: { params: { slug: string } }) {
-  const ipo = getPublicIpo(params.slug)
+export default async function IpoDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const ipo = getPublicIpo(slug)
   if (!ipo) notFound()
   const issue = ipo.issue
   const normalized = ipo.researchState === 'normalized'

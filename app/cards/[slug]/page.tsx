@@ -26,9 +26,10 @@ export function generateStaticParams() {
   ]
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  if (isCardCategorySlug(params.slug)) {
-    const category = cardCategoryMap[params.slug]
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  if (isCardCategorySlug(slug)) {
+    const category = cardCategoryMap[slug]
     return {
       title: category.seoTitle,
       description: category.seoDescription,
@@ -36,7 +37,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
     }
   }
 
-  const card = getRealCard(params.slug)
+  const card = getRealCard(slug)
   if (!card) return {}
 
   return {
@@ -52,9 +53,10 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   }
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
-  if (isCardCategorySlug(params.slug)) {
-    const category = cardCategoryMap[params.slug]
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  if (isCardCategorySlug(slug)) {
+    const category = cardCategoryMap[slug]
     const cards = verifiedRealCards.filter((card) => Boolean(card.terms[category.slug]))
 
     const schema = {
@@ -111,7 +113,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     )
   }
 
-  const card = getRealCard(params.slug)
+  const card = getRealCard(slug)
   if (!card) notFound()
 
   const categories = categoriesForCard(card)

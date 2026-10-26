@@ -9,8 +9,9 @@ export function generateStaticParams() {
   return researchArticles.map((article) => ({ slug: article.slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const article = getResearchArticle(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const article = getResearchArticle(slug)
   if (!article) return {}
 
   return {
@@ -28,8 +29,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   }
 }
 
-export default function ResearchArticlePage({ params }: { params: { slug: string } }) {
-  const article = getResearchArticle(params.slug)
+export default async function ResearchArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const article = getResearchArticle(slug)
   if (!article) notFound()
 
   const schema = {

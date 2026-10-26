@@ -12,8 +12,9 @@ export function generateStaticParams() {
   return issuerRegistry.map((issuer) => ({ slug: issuer.slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const issuer = issuerBySlug(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const issuer = issuerBySlug(slug)
   if (!issuer) return {}
   return {
     title: `${issuer.name} Credit Card Coverage`,
@@ -22,8 +23,9 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   }
 }
 
-export default function IssuerPage({ params }: { params: { slug: string } }) {
-  const issuer = issuerBySlug(params.slug)
+export default async function IssuerPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const issuer = issuerBySlug(slug)
   if (!issuer) notFound()
 
   const cards = verifiedRealCards.filter((card) => issuerMatchesName(issuer, card.issuer))

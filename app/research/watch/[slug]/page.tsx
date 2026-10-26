@@ -5,12 +5,14 @@ import { researchWatch, watchStatus } from '../../../data/research-watch'
 import styles from '../../../core-v4.module.css'
 import local from '../../../components/research-watch.module.css'
 export function generateStaticParams() { return researchWatch.map(item => ({ slug: item.slug })) }
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const item = researchWatch.find(row => row.slug === params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const item = researchWatch.find(row => row.slug === slug)
   return item ? { title: item.title, description: item.summary, alternates: { canonical: `/research/watch/${item.slug}` } } : {}
 }
-export default function WatchArticle({ params }: { params: { slug: string } }) {
-  const item = researchWatch.find(row => row.slug === params.slug)
+export default async function WatchArticle({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const item = researchWatch.find(row => row.slug === slug)
   if (!item) notFound()
   const schema = { '@context': 'https://schema.org', '@type': 'Article', headline: item.title, datePublished: `${item.publishedAt ?? item.checkedAt}T00:00:00+05:30`, dateModified: `${item.checkedAt}T00:00:00+05:30`, author: { '@type': 'Organization', name: 'CredoNomics Research Desk' }, citation: item.source, mainEntityOfPage: `https://www.credonomics.in/research/watch/${item.slug}` }
   return <SiteFrame>
