@@ -23,11 +23,11 @@ export default function HomeMarketPulse() {
       );
   }, []);
 
-  // Loading: same panel structure as the loaded state (summary, breadth,
-  // flows, three gainers, three sectors, note, and both links), with static
-  // aria-hidden bars in place of values, so the panel does not jump in size
-  // when the verified pulse data arrives. The bars are placeholders, never
-  // fake values.
+  // Loading: same panel structure as the loaded state (breadth, flows,
+  // three gainers, three losers, three sectors, note, and both links), with
+  // static aria-hidden bars in place of values, so the panel does not jump
+  // in size when the verified pulse data arrives. The bars are placeholders,
+  // never fake values.
   if (!result) {
     return (
       <div className={styles.pulsePanel} data-cm-reveal aria-busy="true">
@@ -35,11 +35,18 @@ export default function HomeMarketPulse() {
           <span className={styles.sectionEyebrow}>MARKET PULSE</span>
           <h2>Loading market pulse…</h2>
           <div aria-hidden="true">
-            <span className={`${styles.skeleton} ${styles.skeletonSummary}`} />
-            <span className={`${styles.skeleton} ${styles.skeletonSummaryShort}`} />
             <span className={`${styles.skeleton} ${styles.skeletonLine}`} />
             <span className={`${styles.skeleton} ${styles.skeletonLineShort}`} />
             <p className={styles.subhead}>Top gainers</p>
+            <ul className={styles.trends}>
+              {[0, 1, 2].map((row) => (
+                <li key={row}>
+                  <span className={`${styles.skeleton} ${styles.skeletonName}`} />
+                  <strong className={`${styles.skeleton} ${styles.skeletonValue}`} />
+                </li>
+              ))}
+            </ul>
+            <p className={styles.subhead}>Top losers</p>
             <ul className={styles.trends}>
               {[0, 1, 2].map((row) => (
                 <li key={row}>
@@ -93,6 +100,7 @@ export default function HomeMarketPulse() {
   // above already shows NIFTY 50, SENSEX, BANK NIFTY and INDIA VIX. This panel
   // shows only pulse data that Market Status does not show.
   const gainers = pulse.movers.gainers.slice(0, 3);
+  const losers = pulse.movers.losers.slice(0, 3);
   const topSectors = [...pulse.sectors]
     .filter((sector) => sector.changePercent !== null)
     .sort((a, b) => (b.changePercent ?? 0) - (a.changePercent ?? 0))
@@ -103,9 +111,9 @@ export default function HomeMarketPulse() {
       <div className={styles.copy}>
         <span className={styles.sectionEyebrow}>MARKET PULSE</span>
         <h2>Market pulse</h2>
-        {pulse.summary.length ? (
-          <p className={styles.summary}>{pulse.summary.join(" ")}</p>
-        ) : null}
+        {/* No summary sentence here: the API summary repeats the NIFTY 50 /
+            INDIA VIX values that Market Status already shows above. Breadth,
+            flows, movers and sectors below are the pulse-only data. */}
         {pulse.breadth ? (
           <p className={styles.breadth}>
             Tracked breadth: {pulse.breadth.advances} advances ·{" "}
@@ -128,6 +136,32 @@ export default function HomeMarketPulse() {
             <p className={styles.subhead}>Top gainers</p>
             <ul className={styles.trends}>
               {gainers.map((row) => (
+                <li key={row.instrumentKey}>
+                  <span>
+                    {row.name} · {row.symbol}
+                  </span>
+                  <strong>{formatIndianNumber(row.price, "N/A")}</strong>
+                  <em
+                    className={
+                      row.changePercent === null
+                        ? styles.neutral
+                        : row.changePercent >= 0
+                          ? styles.positive
+                          : styles.negative
+                    }
+                  >
+                    {formatPercent(row.changePercent, "N/A")}
+                  </em>
+                </li>
+              ))}
+            </ul>
+          </>
+        ) : null}
+        {losers.length ? (
+          <>
+            <p className={styles.subhead}>Top losers</p>
+            <ul className={styles.trends}>
+              {losers.map((row) => (
                 <li key={row.instrumentKey}>
                   <span>
                     {row.name} · {row.symbol}
