@@ -61,7 +61,7 @@ export const researchUpdates: ResearchUpdate[] = [
     source: 'https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-for-cashback-for-airtel-axis-bank-credit-card.pdf', sourceLabel: 'Airtel Axis cashback/value-back terms' },
   { id: 'hsbc-live-plus-refresh', cardId: 'hsbc-live-plus', title: 'HSBC Live+: current benefit expansion recorded', kind: 'Terms refresh', effectiveDate: null,
     before: 'The stored record limited accelerated cashback to ₹1,000 across dining and grocery.',
-    after: 'The current service guide specifies 10% across dining, food delivery, grocery, eligible shopping and utilities, with a shared ₹1,200 monthly cap. Amazon, Flipkart and Myntra remain at 1.5%.',
+    after: 'The current service guide specifies 10% across dining, food delivery, grocery, eligible shopping and utilities, with a shared ₹1,200 monthly cap. Amazon and Flipkart remain at 1.5%. Clarification checked 27 October: eligible Myntra purchases receive a temporary 10% under the shared ₹1,200 billing-cycle cap through 31 October 2026; standard Myntra 1.5% resumes afterwards.',
     impact: 'Utility and eligible shopping comparisons now include Live+. This was checked in October; the issuer effective date was not established.',
     source: 'https://www.hsbc.bank.in/content/dam/hsbc/in/documents/credit-cards/live-plus-credit-card-services-guide.pdf', sourceLabel: 'HSBC Live+ service guide, pages 21 and 45' },
   { id: 'flipkart-sbi-quarter-cap', cardId: 'flipkart-sbi', title: 'Flipkart SBI: quarterly limit normalized', kind: 'Model correction', effectiveDate: null,

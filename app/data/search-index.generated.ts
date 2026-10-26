@@ -122,6 +122,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:eternal-sbi-early-access-closed-october-2026",
+    "title": "Eternal SBI Card: early access is closed; check your invitation separately",
+    "description": "The current Eternal page says early access is closed. This does not establish the status of an existing invitation or a future application window.",
+    "href": "/research/watch/eternal-sbi-early-access-closed-october-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-27",
+    "keywords": "Eternal SBI Card: early access is closed; check your invitation separately eternal-sbi-early-access-closed-october-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:axis-complimentary-membership-renewal-consent-november-2026",
     "title": "Four Axis cards: check consent before complimentary membership renewal",
     "description": "From 15 November 2026, applicable memberships renew only with explicit consent. Individual renewal dates and card eligibility still matter.",
@@ -130,6 +141,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "Official issuer / fund notice",
     "updated": "2026-10-26",
     "keywords": "Four Axis cards: check consent before complimentary membership renewal axis-complimentary-membership-renewal-consent-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:hsbc-live-plus-myntra-offer-october-2026",
+    "title": "HSBC Live+ Myntra: temporary 10% cashback ends on 31 October",
+    "description": "The Myntra promotion shares the ₹1,200 billing-cycle cap with other accelerated categories. Standard 1.5% resumes after the offer period.",
+    "href": "/research/watch/hsbc-live-plus-myntra-offer-october-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-27",
+    "keywords": "HSBC Live+ Myntra: temporary 10% cashback ends on 31 October hsbc-live-plus-myntra-offer-october-2026 Research",
     "priority": 92
   },
   {
@@ -355,7 +377,7 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "route:/research/watch",
     "title": "Research Watch: Verified Changes & Action Dates",
-    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch. Latest publication: 26 October 2026, with scope and action dates.",
+    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch. Latest publication: 27 October 2026, with scope and action dates.",
     "href": "/research/watch",
     "category": "Research",
     "source": "Research Desk",
