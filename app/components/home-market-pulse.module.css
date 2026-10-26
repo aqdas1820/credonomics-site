@@ -85,6 +85,53 @@
   font-weight: 800;
 }
 
+/* Static loading placeholders: no animation, and never a fake value. */
+.skeleton {
+  display: block;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--muted) 22%, transparent);
+}
+
+.skeletonSummary {
+  width: 100%;
+  height: 13px;
+  margin-top: 8px;
+}
+
+.skeletonSummaryShort {
+  width: 70%;
+  height: 13px;
+  margin-top: 6px;
+}
+
+.skeletonLine {
+  width: 62%;
+  height: 13px;
+  margin-top: 10px;
+}
+
+.skeletonLineShort {
+  width: 48%;
+  height: 13px;
+  margin-top: 6px;
+}
+
+.skeletonName {
+  width: 72px;
+  height: 11px;
+}
+
+.skeletonValue {
+  width: 72px;
+  height: 14px;
+}
+
+.skeletonNote {
+  width: 80%;
+  height: 12px;
+  margin-top: 12px;
+}
+
 .positive {
   color: #087f61;
 }

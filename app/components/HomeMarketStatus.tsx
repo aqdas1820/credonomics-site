@@ -37,15 +37,30 @@ export default function HomeMarketStatus() {
   }, []);
 
   // Loading: keep the bar visible, but do not claim the feed is unavailable
-  // before the provider has actually been asked.
+  // before the provider has actually been asked. The skeleton uses the same
+  // grid and four index slots as the loaded state, so the bar does not jump
+  // in height or width when the verified values arrive. The bars are
+  // aria-hidden placeholders, never fake values.
   if (!result) {
     return (
-      <div className={styles.marketStatus} data-cm-reveal aria-label="Market data status">
+      <div
+        className={styles.marketStatus}
+        data-cm-reveal
+        aria-label="Market data status"
+        aria-busy="true"
+      >
         <div>
           <span>Market status</span>
           <strong>Loading index data…</strong>
         </div>
-        <p>Fetching the same verified index feed used on the Markets page.</p>
+        <div className={styles.indices} aria-hidden="true">
+          {["NIFTY 50", "SENSEX", "BANK NIFTY", "INDIA VIX"].map((name) => (
+            <span key={name} className={styles.index}>
+              <span className={`${styles.skeleton} ${styles.skeletonName}`} />
+              <strong className={`${styles.skeleton} ${styles.skeletonValue}`} />
+            </span>
+          ))}
+        </div>
         <Link href="/markets">
           Open Markets <span>→</span>
         </Link>

@@ -72,6 +72,24 @@
   font-weight: 800;
 }
 
+/* Static loading placeholders: no animation, and never a fake value. */
+.skeleton {
+  display: block;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--muted) 22%, transparent);
+}
+
+.skeletonName {
+  width: 72px;
+  height: 11px;
+}
+
+.skeletonValue {
+  width: 96px;
+  height: 14px;
+  margin-top: 2px;
+}
+
 .positive {
   color: #087f61;
 }

@@ -23,15 +23,47 @@ export default function HomeMarketPulse() {
       );
   }, []);
 
+  // Loading: same panel structure as the loaded state (summary, breadth,
+  // flows, three gainers, three sectors, note, and both links), with static
+  // aria-hidden bars in place of values, so the panel does not jump in size
+  // when the verified pulse data arrives. The bars are placeholders, never
+  // fake values.
   if (!result) {
     return (
-      <div className={styles.pulsePanel} data-cm-reveal>
-        <div>
+      <div className={styles.pulsePanel} data-cm-reveal aria-busy="true">
+        <div className={styles.copy}>
           <span className={styles.sectionEyebrow}>MARKET PULSE</span>
           <h2>Loading market pulse…</h2>
-          <p>Fetching the same verified pulse feed used on the Markets page.</p>
+          <div aria-hidden="true">
+            <span className={`${styles.skeleton} ${styles.skeletonSummary}`} />
+            <span className={`${styles.skeleton} ${styles.skeletonSummaryShort}`} />
+            <span className={`${styles.skeleton} ${styles.skeletonLine}`} />
+            <span className={`${styles.skeleton} ${styles.skeletonLineShort}`} />
+            <p className={styles.subhead}>Top gainers</p>
+            <ul className={styles.trends}>
+              {[0, 1, 2].map((row) => (
+                <li key={row}>
+                  <span className={`${styles.skeleton} ${styles.skeletonName}`} />
+                  <strong className={`${styles.skeleton} ${styles.skeletonValue}`} />
+                </li>
+              ))}
+            </ul>
+            <p className={styles.subhead}>Top sectors</p>
+            <ul className={styles.trends}>
+              {[0, 1, 2].map((row) => (
+                <li key={row}>
+                  <span className={`${styles.skeleton} ${styles.skeletonName}`} />
+                  <strong className={`${styles.skeleton} ${styles.skeletonValue}`} />
+                </li>
+              ))}
+            </ul>
+            <span className={`${styles.skeleton} ${styles.skeletonNote}`} />
+          </div>
         </div>
-        <Link href="/markets">Open Markets</Link>
+        <div className={styles.links}>
+          <Link href="/markets">Open Markets</Link>
+          <Link href="/methodology">How data is handled</Link>
+        </div>
       </div>
     );
   }
