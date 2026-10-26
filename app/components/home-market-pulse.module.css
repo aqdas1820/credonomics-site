@@ -46,6 +46,14 @@
   margin-top: 10px;
 }
 
+.subhead {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 .trends {
   display: flex;
   flex-wrap: wrap;
