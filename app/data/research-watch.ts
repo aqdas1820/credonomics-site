@@ -1,16 +1,40 @@
-export const WATCH_CHECKED_AT = '2026-10-26'
+export const WATCH_CHECKED_AT = '2026-10-27'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
   sourceLocation: string; audience: string; facts: string[]; actions: string[]; limits: string
   publishedAt?: string; updateNote?: string
-  announcementDate?: string; statusLabel?: 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions'
+  announcementDate?: string; statusLabel?: 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer'
   additionalSources?: { url: string; label: string }[]
   cardIds?: string[]
 }
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'eternal-sbi-early-access-closed-october-2026',
+    title: 'Eternal SBI Card: early access is closed; check your invitation separately',
+    summary: 'The current Eternal page says early access is closed. This does not establish the status of an existing invitation or a future application window.',
+    category: 'Credit cards', checkedAt: '2026-10-27', eventDate: '2026-10-27', dateLabel: 'Availability checked', statusLabel: 'Availability checked',
+    source: 'https://www.eternal.com/credit-card/', sourceLabel: 'Eternal: current card availability and FAQs', sourceLocation: 'Early access closed banner; invitation, savings, fees and exclusions FAQs',
+    additionalSources: [{ url: 'https://www.sbicard.com/en/personal/credit-cards/eternal-sbi-card.html', label: 'SBI Card: official Eternal product and linked terms' }],
+    audience: 'People following Eternal SBI Card launch instructions or comparing the advertised monthly savings.',
+    facts: ['Eternal currently displays “Early access closed”. Its FAQs describe batch invitations and make approval subject to SBI Card eligibility and underwriting; early-access registration never guarantees approval.', 'The advertised ₹3,500 monthly ceiling combines up to ₹2,000 instant discounts across Eternal brands, ₹1,000 partner cashback and ₹500 other-spend cashback. It is not ₹3,500 of guaranteed cashback.', 'The page lists ₹499 plus GST joining and renewal fees, with renewal waiver on annual spends over ₹2 lakh. Exclusions include EMI, gift cards, wallets, fuel and specified bill payments; check the full terms.'],
+    actions: ['Do not assume older early-access registration instructions are still open. If already invited or applying, verify your own status through the official app or issuer.', 'Compare eligible spending against each separate cap and the ownership fee; do not treat the maximum as an expected saving.'],
+    limits: '27 October is the check date, not a verified closure date. No reopening date or universal application status was established. The closure banner does not mean every pending invitation or application is cancelled. This is an availability and comparison guide, not a full reward model; no ranking entry is added.',
+  },
+  {
+    slug: 'hsbc-live-plus-myntra-offer-october-2026',
+    title: 'HSBC Live+ Myntra: temporary 10% cashback ends on 31 October',
+    summary: 'The Myntra promotion shares the ₹1,200 billing-cycle cap with other accelerated categories. Standard 1.5% resumes after the offer period.',
+    category: 'Credit cards', checkedAt: '2026-10-27', eventDate: '2026-10-31', dateLabel: 'Offer ends · inclusive', statusLabel: 'Limited-time offer', cardIds: ['hsbc-live-plus'],
+    source: 'https://www.hsbc.bank.in/content/dam/hsbc/in/documents/offers/myntra-launch-offer-liveplus-tncs.pdf', sourceLabel: 'HSBC: Myntra launch-offer terms', sourceLocation: 'PDF page 2 (printed page 1), clauses 2–9',
+    additionalSources: [{ url: 'https://www.hsbc.bank.in/credit-cards/products/live-plus/', label: 'HSBC Live+: current product page and Myntra offer link' }],
+    audience: 'HSBC Live+ holders planning an eligible Myntra website or app purchase before month-end.',
+    facts: ['The offer runs from 31 July through 31 October 2026, inclusive, for eligible Myntra shopping paid with HSBC Live+.', 'Myntra earns 10% during the offer, sharing a ₹1,200 per-billing-cycle ceiling with dining, food delivery, grocery, utility and other eligible shopping cashback. This is not a separate ₹1,200 Myntra allowance.', 'Eligible transactions must complete within the offer period. Cashback is due within 45 days of the statement date. Add-on holders have no separate offer eligibility; cancelled, reversed, disputed or refunded purchases do not qualify.', 'After the offer period, the PDF specifies 1.5% unlimited Myntra cashback under the applicable terms.'],
+    actions: ['Before an already-planned purchase, check remaining shared cap and transaction completion. Avoid extra purchases just to use an offer.', 'Retain the eligible transaction and statement record; compare the credit against the stated timeline.'],
+    limits: 'Announcement date was not established. This corrects an omitted temporary exception to our standard Myntra note; it does not turn every shopping purchase into 10% cashback. HSBC may amend or withdraw the offer with applicable intimation. Permanent ranking formulas and annualized values are unchanged.',
+  },
   {
     slug: 'axis-complimentary-membership-renewal-consent-november-2026',
     title: 'Four Axis cards: check consent before complimentary membership renewal',
@@ -176,7 +200,7 @@ export const researchWatch: WatchItem[] = [
   },
 ]
 
-export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' {
+export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer' {
   if (item.statusLabel) return item.statusLabel
   return item.eventDate > item.checkedAt ? 'Upcoming at check' : 'Effective at check'
 }
