@@ -1,6 +1,6 @@
 export const WATCH_CHECKED_AT = '2026-10-26'
 export type WatchItem = {
-  slug: string; title: string; summary: string; category: 'Credit cards' | 'Mutual funds' | 'Markets'
+  slug: string; title: string; summary: string; category: 'Credit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
   sourceLocation: string; audience: string; facts: string[]; actions: string[]; limits: string
   publishedAt?: string; updateNote?: string
@@ -11,6 +11,17 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'indian-bank-special-fd-rates-october-2026',
+    title: 'Indian Bank special FDs: compare the revised 555-day and 777-day rates',
+    summary: 'Rates rose by 0.15 percentage points from 23 October. Check your depositor category and the cost of closing an existing deposit.',
+    category: 'Bank deposits', checkedAt: '2026-10-26', eventDate: '2026-10-23', dateLabel: 'Revised rates effective',
+    source: 'https://indianbank.bank.in/en/deposit-rates', sourceLabel: 'Indian Bank: current deposit-rate schedule', sourceLocation: 'Domestic retail table; IND GROW and IND Prosper category tables; Important notes and Foreclosure charges',
+    audience: 'Resident customers comparing eligible Indian Bank special deposits from ₹1,000 to below ₹3 crore.',
+    facts: ['IND GROW (555 days): general rate 6.65% → 6.80% p.a.; current senior rate 7.30%, super-senior rate 7.55%.', 'IND Prosper (777 days): general rate 6.60% → 6.75% p.a.; current senior rate 7.25%, super-senior rate 7.50%. Super seniors are aged 80 or above.', 'Revised rates apply to fresh deposits and renewals of maturing deposits. Existing deposits do not automatically reset. Both schemes offer callable FD/MMD options.'],
+    actions: ['Match the tenure to when you need the money and confirm category eligibility and the booking rate.', 'Before breaking an existing FD, ask for the actual closure proceeds. Premature closure can reprice interest to the period actually held and may incur a penalty; compare the net outcome.'],
+    limits: 'Announcement date was not established; effective date is 23 October, checked 26 October. The maximum quoted rate requires super-senior eligibility. NRE applicability is outside this guide. The bank may extend or withdraw the schemes; this is not a best-FD ranking.',
+  },
   {
     slug: 'pnb-credit-card-redemption-utility-fees-november-2026',
     title: 'PNB November fees: reward redemption and high utility payments',

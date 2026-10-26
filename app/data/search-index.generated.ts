@@ -133,6 +133,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:indian-bank-special-fd-rates-october-2026",
+    "title": "Indian Bank special FDs: compare the revised 555-day and 777-day rates",
+    "description": "Rates rose by 0.15 percentage points from 23 October. Check your depositor category and the cost of closing an existing deposit.",
+    "href": "/research/watch/indian-bank-special-fd-rates-october-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-26",
+    "keywords": "Indian Bank special FDs: compare the revised 555-day and 777-day rates indian-bank-special-fd-rates-october-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:idfc-indigo-international-rewards-october-2026",
     "title": "IndiGo IDFC FIRST: international reward rule changes on 26 October",
     "description": "The issuer specifies 1 BluChip per ₹100 on international purchases from 26 October 2026.",
@@ -322,7 +333,7 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "route:/research/watch",
     "title": "Research Watch: Verified Changes & Action Dates",
-    "description": "Selected source-checked card, market and mutual-fund notices from CredoNomics Research Watch, with the latest publication on 26 October 2026, with scope and action dates.",
+    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch. Latest publication: 26 October 2026, with scope and action dates.",
     "href": "/research/watch",
     "category": "Research",
     "source": "Research Desk",
