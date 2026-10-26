@@ -221,6 +221,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:gold-fof-subscription-restrictions-hdfc-baroda-october-2026",
+    "title": "Three gold FoFs: fresh investment restrictions do not stop existing SIPs",
+    "description": "HDFC and Baroda BNP Paribas notices distinguish fresh subscriptions from existing systematic transactions and redemptions. Check your exact scheme.",
+    "href": "/research/watch/gold-fof-subscription-restrictions-hdfc-baroda-october-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-26",
+    "keywords": "Three gold FoFs: fresh investment restrictions do not stop existing SIPs gold-fof-subscription-restrictions-hdfc-baroda-october-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:hdfc-fund-covered-call-exit-window-november-2026",
     "title": "Two HDFC schemes: optional exit window closes at 3 pm on 6 November",
     "description": "Balanced Advantage and Children’s Fund add a covered-call strategy from 9 November; eligible holders have a limited optional exit window.",
