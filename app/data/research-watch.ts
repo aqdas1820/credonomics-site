@@ -4,13 +4,25 @@ export type WatchItem = {
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
   sourceLocation: string; audience: string; facts: string[]; actions: string[]; limits: string
   publishedAt?: string; updateNote?: string
-  announcementDate?: string; statusLabel?: 'Clarification checked' | 'Phased migration' | 'Investor advisory'
+  announcementDate?: string; statusLabel?: 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions'
   additionalSources?: { url: string; label: string }[]
   cardIds?: string[]
 }
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'gold-fof-subscription-restrictions-hdfc-baroda-october-2026',
+    title: 'Three gold FoFs: fresh investment restrictions do not stop existing SIPs',
+    summary: 'HDFC and Baroda BNP Paribas notices distinguish fresh subscriptions from existing systematic transactions and redemptions. Check your exact scheme.',
+    category: 'Mutual funds', checkedAt: '2026-10-26', announcementDate: '2026-10-15', eventDate: '2026-10-15', dateLabel: 'Restrictions effective · AMC-specific cutoff below', statusLabel: 'Subscription restrictions',
+    source: 'https://files.hdfcfund.com/s3fs-public/2026-10/1374-%20Addendum-%20Temporary%20restrictions%20on%20subscriptions%20in%20select%20schemes_1.pdf', sourceLabel: 'HDFC Mutual Fund: subscription-restriction addendum', sourceLocation: 'One-page addendum dated 15 October 2026; restrictions and existing-transaction exception',
+    additionalSources: [{ url: 'https://www.barodabnpparibasmf.in/assets/download_documents/Addendum_no_95_2026-Suspension_of_Transactions-Gold_ETF_FoF_20568.pdf', label: 'Baroda BNP Paribas: Addendum 95/2026, transactions, systematic plans and exits' }, { url: 'https://www.hdfcfund.com/statutory-disclosure/form-disclosures/addenda-notices', label: 'HDFC: current addenda and notices' }, { url: 'https://www.barodabnpparibasmf.in/downloads/notice-cum-addenda', label: 'Baroda BNP Paribas: current notices' }],
+    audience: 'Investors in HDFC Gold ETF Fund of Fund, HDFC Gold Silver Passive FOF or Baroda BNP Paribas Gold ETF Fund of Fund.',
+    facts: ['HDFC restricts fresh subscriptions, switch-ins and fresh systematic registrations received after the 3 pm cutoff on 15 October 2026, until further notice. Existing systematic transactions registered/received prior to its effective date continue; redemptions are unrestricted by this addendum.', 'Baroda BNP Paribas suspends lump-sum/additional purchases, switch-ins and new SIP/STP registrations from close of business on 15 October, until further notice. Existing SIPs, STPs and SWPs continue under their terms, subject to funds and regulatory requirements; redemptions and switch-outs remain available under SID/KIM rules.'],
+    actions: ['Match your scheme name and transaction type before submitting a fresh purchase or new systematic registration. Ask the AMC or platform about processing if an order is pending.', 'Do not cancel an existing SIP or redeem solely because fresh subscriptions are restricted. Check existing-plan status and the latest AMC notice before taking action.'],
+    limits: 'Both notices are dated 15 October; this guide was checked/published on 26 October. No reopening date was established. This covers only the three named FoFs, not all gold funds or the underlying ETFs. It does not infer a rejection-refund process, guaranteed returns or a recommendation to buy or sell.',
+  },
   {
     slug: 'indian-bank-special-fd-rates-october-2026',
     title: 'Indian Bank special FDs: compare the revised 555-day and 777-day rates',
@@ -152,7 +164,7 @@ export const researchWatch: WatchItem[] = [
   },
 ]
 
-export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' | 'Phased migration' | 'Investor advisory' {
+export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' {
   if (item.statusLabel) return item.statusLabel
   return item.eventDate > item.checkedAt ? 'Upcoming at check' : 'Effective at check'
 }
