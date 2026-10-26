@@ -12,6 +12,7 @@ import styles from "./home-investment.module.css";
 import HomeIntelligenceRail from './components/HomeIntelligenceRail'
 import SupportCredonomics from './components/SupportCredonomics'
 import HomeCreativeHero from './components/HomeCreativeHero'
+import HomeMarketStatus from './components/HomeMarketStatus'
 import HomeMotionObserver from './components/HomeMotionObserver'
 import motionStyles from './components/homepage-motion.module.css'
 
@@ -93,11 +94,7 @@ export default function HomePage() {
       <HomeMotionObserver />
       <section className={styles.appHome}>
         <HomeCreativeHero />
-        <div className={styles.marketStatus} data-cm-reveal aria-label="Market data status">
-          <div><span>Market status</span><strong>Live index feed unavailable</strong></div>
-          <p>Verified market values will appear here when the connected provider is available.</p>
-          <Link href="/markets">Open Markets <span>→</span></Link>
-        </div>
+        <HomeMarketStatus />
         <div className={styles.pulsePanel} data-cm-reveal>
           <div><span className={styles.sectionEyebrow}>MARKET PULSE</span><h2>Intelligence data pending</h2><p>A composite score is intentionally withheld until verified inputs and methodology are connected.</p></div>
           <Link href="/methodology">How data is handled</Link>
