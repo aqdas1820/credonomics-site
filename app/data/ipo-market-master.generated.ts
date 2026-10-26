@@ -4,72 +4,43 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-10-23T15:41:39.147Z",
-  "recordCount": 2,
-  "nseCount": 2,
+  "generatedAt": "2026-10-26T08:48:08.008Z",
+  "recordCount": 1,
+  "nseCount": 1,
   "bseCount": 0,
-  "activeCount": 2,
+  "activeCount": 1,
   "upcomingCount": 0,
-  "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard unavailable"
+  "sourceStatus": "NSE API 1 · BSE SME unavailable · BSE mainboard unavailable"
 } as const
 
 export const ipoMarketMaster: IpoMarketRecord[] = [
   {
-    "slug": "jio-platforms-ltd-eaf4897",
-    "companyName": "Jio Platforms Limited",
-    "symbol": "JPL",
+    "slug": "eaaa-india-alternatives-ltd-18a343e",
+    "companyName": "EAAA India Alternatives Limited",
+    "symbol": "EDELALTS",
     "marketSegment": "mainboard",
     "status": "open",
     "securityType": "EQ",
     "issue": {
-      "priceBandLow": 1065,
-      "priceBandHigh": 1119,
-      "openDate": "2026-10-21",
-      "closeDate": "2026-10-23",
+      "priceBandLow": 1585,
+      "priceBandHigh": 1665,
+      "openDate": "2026-10-26",
+      "closeDate": "2026-10-28",
       "exchange": [
         "NSE"
       ]
     },
     "subscription": {
-      "total": 12.453487105141344,
-      "updatedAt": "2026-10-23T15:41:39.147Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JPL&type=Active"
+      "total": 0.06043945261642015,
+      "updatedAt": "2026-10-26T08:48:08.008Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=EDELALTS&type=Active"
     },
-    "sharesOffered": 197525934,
-    "sharesBid": 2459886672,
-    "estimatedIssueValueCr": 22103.15,
+    "sharesOffered": 5299684,
+    "sharesBid": 320310,
+    "estimatedIssueValueCr": 882.4,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=JPL&type=Active",
-    "fetchedAt": "2026-10-23T15:41:39.147Z"
-  },
-  {
-    "slug": "paras-healthcare-ltd-8045ae9",
-    "companyName": "Paras Healthcare Limited",
-    "symbol": "PARASHLTH",
-    "marketSegment": "mainboard",
-    "status": "open",
-    "securityType": "EQ",
-    "issue": {
-      "priceBandLow": 660,
-      "priceBandHigh": 693,
-      "openDate": "2026-10-21",
-      "closeDate": "2026-10-23",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 1.9150717629104095,
-      "updatedAt": "2026-10-23T15:41:39.147Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PARASHLTH&type=Active"
-    },
-    "sharesOffered": 12083331,
-    "sharesBid": 23140446,
-    "estimatedIssueValueCr": 837.37,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=PARASHLTH&type=Active",
-    "fetchedAt": "2026-10-23T15:41:39.147Z"
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=EDELALTS&type=Active",
+    "fetchedAt": "2026-10-26T08:48:08.008Z"
   }
 ]
