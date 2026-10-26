@@ -12,6 +12,18 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'axis-complimentary-membership-renewal-consent-november-2026',
+    title: 'Four Axis cards: check consent before complimentary membership renewal',
+    summary: 'From 15 November 2026, applicable memberships renew only with explicit consent. Individual renewal dates and card eligibility still matter.',
+    category: 'Credit cards', checkedAt: '2026-10-26', eventDate: '2026-11-15', dateLabel: 'Consent-based renewal rule effective',
+    source: 'https://campaign.axis.bank.in/generic/opt-in-termsandconditions-24June.pdf', sourceLabel: 'Axis Bank: Terms and Conditions of the Opt-In Journey', sourceLocation: 'One-page effective-date heading, membership/card table and renewal communications section',
+    additionalSources: [{ url: 'https://campaign.axis.bank.in/generic/terms-and-conditions-select.pdf', label: 'SELECT: 15 November rule on PDF page 2' }, { url: 'https://campaign.axis.bank.in/generic/terms-and-conditions-magnus.pdf', label: 'MAGNUS: 15 November rule on PDF page 1' }, { url: 'https://campaign.axis.bank.in/generic/terms-and-conditions-magnus-burgundy.pdf', label: 'MAGNUS for BURGUNDY: 15 November rule on PDF page 1' }, { url: 'https://campaign.axis.bank.in/generic/terms-and-conditions-reserve.pdf', label: 'RESERVE: 15 November rule on PDF page 1' }],
+    audience: 'Axis SELECT, MAGNUS, MAGNUS for BURGUNDY and RESERVE cardholders using eligible complimentary memberships.',
+    facts: ['The four card-specific notices require explicit cardholder consent for applicable complimentary membership renewals from 15 November 2026. Axis will share renewal details and consent options closer to each membership’s renewal date.', 'For these four reviewed variants, the linked opt-in table lists Priority Pass on all four; RESERVE also has Accor+ Explorer, Club ITC and Club Marriott Asia Pacific in scope. Listing a membership does not waive its separate card eligibility conditions.'],
+    actions: ['Check each membership’s actual expiry/renewal date and watch registered bank communications for the consent instructions.', 'Keep your registered mobile number and email address updated with Axis. Use official bank channels to confirm the process if renewal is near and instructions have not arrived.'],
+    limits: 'Upcoming at this check. The PDFs do not establish an announcement date; a filename is not that date. This is not a common 15 November expiry or an automatic loss of every card benefit. Detailed consent steps are to follow near renewal; no app path or universal consent deadline is inferred. This guide covers four reviewed variants; the opt-in table also names other cards. Current rankings are unchanged.',
+  },
+  {
     slug: 'gold-fof-subscription-restrictions-hdfc-baroda-october-2026',
     title: 'Three gold FoFs: fresh investment restrictions do not stop existing SIPs',
     summary: 'HDFC and Baroda BNP Paribas notices distinguish fresh subscriptions from existing systematic transactions and redemptions. Check your exact scheme.',

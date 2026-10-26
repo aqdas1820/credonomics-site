@@ -1,5 +1,6 @@
 import { ArrowRight, BarChart3, Database, Gauge, GitCompareArrows, Layers3, ShieldCheck } from 'lucide-react'
 import SiteFrame from '../components/SiteFrame'
+import ResearchWatchBrief from '../components/ResearchWatchBrief'
 import { cardCategories, type CardCategorySlug } from '../data/card-categories'
 import { autoCardCatalogMeta } from '../data/auto-card-utils'
 import { issuerRegistry } from '../data/issuer-registry'
@@ -57,6 +58,7 @@ export default function CardsPage() {
         </div>
       </section>
 
+      <ResearchWatchBrief category="Credit cards"/>
       <section className={`${styles.wrap} ${styles.pageBody} ${local.shell}`}>
         <CardDiscovery/>
         <div className={local.statGrid}>

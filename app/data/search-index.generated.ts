@@ -122,6 +122,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:axis-complimentary-membership-renewal-consent-november-2026",
+    "title": "Four Axis cards: check consent before complimentary membership renewal",
+    "description": "From 15 November 2026, applicable memberships renew only with explicit consent. Individual renewal dates and card eligibility still matter.",
+    "href": "/research/watch/axis-complimentary-membership-renewal-consent-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-26",
+    "keywords": "Four Axis cards: check consent before complimentary membership renewal axis-complimentary-membership-renewal-consent-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:idfc-international-rewards-revised-september-notice",
     "title": "IDFC FIRST international rewards: read the revised September notice",
     "description": "A later bank communication says applicable international reward points continue alongside zero forex markup; the earlier blanket stop notice is incomplete on its own.",
