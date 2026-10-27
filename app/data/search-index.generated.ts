@@ -199,6 +199,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:makemytrip-icici-mycash-rules-november-2026",
+    "title": "MakeMyTrip ICICI: international rewards change on 10 November; check myCash dates",
+    "description": "International spends outside MakeMyTrip stop earning rewards on 10 November. A new 24-month myCash validity is also listed, but exact cutover wording differs between official sources.",
+    "href": "/research/watch/makemytrip-icici-mycash-rules-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-27",
+    "keywords": "MakeMyTrip ICICI: international rewards change on 10 November; check myCash dates makemytrip-icici-mycash-rules-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:pnb-credit-card-redemption-utility-fees-november-2026",
     "title": "PNB November fees: reward redemption and high utility payments",
     "description": "From 1 November 2026, the notice adds ₹99 per reward-redemption request and a threshold-based utility fee, before GST.",

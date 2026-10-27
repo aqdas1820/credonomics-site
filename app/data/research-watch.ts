@@ -12,6 +12,18 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'makemytrip-icici-mycash-rules-november-2026',
+    title: 'MakeMyTrip ICICI: international rewards change on 10 November; check myCash dates',
+    summary: 'International spends outside MakeMyTrip stop earning rewards on 10 November. A new 24-month myCash validity is also listed, but exact cutover wording differs between official sources.',
+    category: 'Credit cards', checkedAt: '2026-10-27', eventDate: '2026-11-10', dateLabel: 'Reward rules effective',
+    source: 'https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/makemytrip-icici-credit-card-terms-and-conditions.pdf', sourceLabel: 'ICICI Bank: MakeMyTrip card terms', sourceLocation: 'Section 6; reward table on PDF page 5 and validity on page 7',
+    additionalSources: [{ url: 'https://promos.makemytrip.com/mmt-icici-rupay-card-terms.html', label: 'MakeMyTrip: current card terms and transition wording' }],
+    audience: 'Holders of the current MakeMyTrip ICICI Bank Credit Card programme offering Mastercard and RuPay variants.',
+    facts: ['From 10 November 2026, international spends outside MakeMyTrip earn no rewards under the current programme’s reward table. This is not a stop on all MakeMyTrip booking rewards.', 'Both official sources introduce 24-month validity for new-programme myCash. ICICI’s PDF says effective 10 November; MakeMyTrip says rewards earned till 10 November retain lifetime validity and those earned after it get two years from credit. Treatment of rewards earned on 10 November remains unconfirmed.', 'The PDF separately states that myCash from the old MakeMyTrip ICICI Signature and Platinum programmes expires within 12 months of credit. Do not apply the new programme’s transition rule to those cards.'],
+    actions: ['Check your exact card programme and the category of an overseas purchase before counting on myCash.', 'Track newly earned myCash and its displayed expiry separately from older balances. Ask the issuer or MakeMyTrip to reconcile any unclear earning-date boundary.', 'Before closing a card, check remaining myCash and applicable terms: the PDF says card-earned myCash remains available while the card is active.'],
+    limits: 'Upcoming at this check. Announcement date was not established. The exact 10 November myCash-validity boundary and pending-transaction treatment remain HOLD; do not assume eligibility from a purchase date alone. General marketing still says never-expiring rewards; use the dated terms and confirm your own balance with the issuer. Do not infer cash refunds or bank-account withdrawal rights. This guide covers the verified reward and validity rules only; it does not publish a forex-fee claim or alter current rankings.',
+  },
+  {
     slug: 'axis-vistara-spending-discontinuation-december-2026',
     title: 'Axis Vistara cards: current spending cutoff is after 15 December 2026',
     summary: 'The Vistara, Signature and Infinite pages carry the same upcoming spending-discontinuation notice. Confirm your own transition instructions.',
