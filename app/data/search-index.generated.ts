@@ -221,6 +221,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:sbi-card-transport-fuel-fees-december-2026",
+    "title": "SBI Card December fees: transport is per transaction; fuel is per billing cycle",
+    "description": "From 1 December 2026, the announced 1% fees use different thresholds: transport transactions above ₹30,000 and total cycle fuel spends above ₹50,000.",
+    "href": "/research/watch/sbi-card-transport-fuel-fees-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-28",
+    "keywords": "SBI Card December fees: transport is per transaction; fuel is per billing cycle sbi-card-transport-fuel-fees-december-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:sbm-zet-late-fee-october-2026",
     "title": "SBM ZET: late-payment fee becomes balance-linked",
     "description": "From 23 October 2026, the published fee is 5% of outstanding, with a ₹50 minimum and ₹1,000 maximum, before applicable GST.",
@@ -421,7 +432,7 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "route:/research/watch",
     "title": "Research Watch: Verified Changes & Action Dates",
-    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch. Latest publication: 27 October 2026, with scope and action dates.",
+    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch. Latest publication: 28 October 2026, with scope and action dates.",
     "href": "/research/watch",
     "category": "Research",
     "source": "Research Desk",
