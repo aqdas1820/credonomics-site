@@ -12,6 +12,18 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'axis-vistara-spending-discontinuation-december-2026',
+    title: 'Axis Vistara cards: current spending cutoff is after 15 December 2026',
+    summary: 'The Vistara, Signature and Infinite pages carry the same upcoming spending-discontinuation notice. Confirm your own transition instructions.',
+    category: 'Credit cards', checkedAt: '2026-10-27', eventDate: '2026-12-15', dateLabel: 'Spending discontinued after this date',
+    source: 'https://www.axis.bank.in/cards/credit-card/axis-bank-vistara-credit-card', sourceLabel: 'Axis Bank: Vistara card current notice', sourceLocation: 'Product heading and spending-discontinuation banner',
+    additionalSources: [{ url: 'https://www.axis.bank.in/cards/credit-card/axis-bank-vistara-signature-credit-card', label: 'Axis Bank: Vistara Signature current notice' }, { url: 'https://www.axis.bank.in/cards/credit-card/axis-bank-vistara-infinite-credit-card', label: 'Axis Bank: Vistara Infinite current notice' }],
+    audience: 'Existing Axis Bank Vistara, Vistara Signature and Vistara Infinite cardholders.',
+    facts: ['All three current official product pages say the Axis Bank Vistara Credit Card will be discontinued for spends post 15 December 2026, following Vistara’s merger with Air India.', 'The bank directs holders to apply for another Axis card. The banner does not promise an automatic replacement, a particular replacement product or its approval.'],
+    actions: ['Read the latest bank communication for your exact card. Before relying on the old card beyond the stated date, ask Axis to confirm your transition instructions.', 'Review recurring payments linked to the card and arrange an alternative payment method before spending stops.', 'Keep statements and reward/voucher records. Ask Axis separately how your outstanding balance, EMI, pending rewards and vouchers will be handled; continue following your statement payment instructions.'],
+    limits: 'Upcoming at the check date. The issuer wording is “post 15 December 2026”; no cutoff hour or transaction-posting treatment is specified. Announcement/revision date was not established, so this is a 27 October verification snapshot, not a newly announced extension. The banner does not establish voucher expiry, points cancellation, fee refunds, debt cancellation or a common account-closure date. This guide covers these three Axis variants, not IDFC FIRST or other Vistara cards. Current ranking inputs remain unchanged.',
+  },
+  {
     slug: 'suri-friends-union-bank-directions-january-2027',
     title: 'Suri Friends’ Union Bank: existing directions extended to 22 January 2027',
     summary: 'RBI extends the existing directions for three months. Customers should not assume restrictions ended on 22 October.',
