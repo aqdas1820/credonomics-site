@@ -12,6 +12,17 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'sgb-2020-21-series-i-redemption-price-october-2026',
+    title: 'SGB 2020-21 Series I: ₹14,159 per unit for 28 October premature redemption',
+    summary: 'RBI’s announced price applies to this tranche’s 28 October 2026 premature redemption. It is not an open invitation to redeem every SGB.',
+    category: 'Markets', checkedAt: '2026-10-27', announcementDate: '2026-10-27', eventDate: '2026-10-28', dateLabel: 'Premature redemption due date',
+    source: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63872', sourceLabel: 'RBI: Press Release 2026-2027/1394', sourceLocation: '27 October 2026; tranche identification and price in paragraphs 1–2',
+    audience: 'Holders of SGB 2020-21 Series I, issued on 28 April 2020, checking a premature-redemption instruction for the 28 October 2026 due date.',
+    facts: ['RBI sets ₹14,159 per SGB unit for premature redemption of this tranche due on 28 October 2026.', 'The price uses the simple average of IBJA’s closing prices for 999-purity gold on 23, 26 and 27 October 2026. It is not an exchange-traded quote for every SGB series.'],
+    actions: ['Match the series and issue date against your holding and the redemption instruction acknowledged by your servicing institution.', 'For a redemption already being processed, compare the stated per-unit price with your confirmation and contact the servicing institution about discrepancies.'],
+    limits: 'Announced and checked on 27 October; due date is 28 October. This price notice does not establish that a fresh request can still be submitted, your individual eligibility, processing status or credit time. It does not announce final maturity of all SGBs, change other series’ prices or recommend redeeming. No tax, refund or separate interest-payment conclusion is inferred.',
+  },
+  {
     slug: 'makemytrip-icici-mycash-rules-november-2026',
     title: 'MakeMyTrip ICICI: international rewards change on 10 November; check myCash dates',
     summary: 'International spends outside MakeMyTrip stop earning rewards on 10 November. A new 24-month myCash validity is also listed, but exact cutover wording differs between official sources.',

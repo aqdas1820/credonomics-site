@@ -254,6 +254,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:sgb-2020-21-series-i-redemption-price-october-2026",
+    "title": "SGB 2020-21 Series I: ₹14,159 per unit for 28 October premature redemption",
+    "description": "RBI’s announced price applies to this tranche’s 28 October 2026 premature redemption. It is not an open invitation to redeem every SGB.",
+    "href": "/research/watch/sgb-2020-21-series-i-redemption-price-october-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-27",
+    "keywords": "SGB 2020-21 Series I: ₹14,159 per unit for 28 October premature redemption sgb-2020-21-series-i-redemption-price-october-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:suri-friends-union-bank-directions-january-2027",
     "title": "Suri Friends’ Union Bank: existing directions extended to 22 January 2027",
     "description": "RBI extends the existing directions for three months. Customers should not assume restrictions ended on 22 October.",
