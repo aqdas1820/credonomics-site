@@ -232,6 +232,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:suri-friends-union-bank-directions-january-2027",
+    "title": "Suri Friends’ Union Bank: existing directions extended to 22 January 2027",
+    "description": "RBI extends the existing directions for three months. Customers should not assume restrictions ended on 22 October.",
+    "href": "/research/watch/suri-friends-union-bank-directions-january-2027",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-27",
+    "keywords": "Suri Friends’ Union Bank: existing directions extended to 22 January 2027 suri-friends-union-bank-directions-january-2027 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:swiggy-hdfc-migration-autopay-checklist",
     "title": "Swiggy HDFC migration: re-register autopay and check your replacement",
     "description": "The legacy card is being phased out. Your migration notice sets the timeline; mandates and card controls need setting up again.",

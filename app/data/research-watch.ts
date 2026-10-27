@@ -4,13 +4,25 @@ export type WatchItem = {
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
   sourceLocation: string; audience: string; facts: string[]; actions: string[]; limits: string
   publishedAt?: string; updateNote?: string
-  announcementDate?: string; statusLabel?: 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer'
+  announcementDate?: string; statusLabel?: 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer' | 'Directions extended'
   additionalSources?: { url: string; label: string }[]
   cardIds?: string[]
 }
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'suri-friends-union-bank-directions-january-2027',
+    title: 'Suri Friends’ Union Bank: existing directions extended to 22 January 2027',
+    summary: 'RBI extends the existing directions for three months. Customers should not assume restrictions ended on 22 October.',
+    category: 'Bank deposits', checkedAt: '2026-10-27', announcementDate: '2026-10-22', eventDate: '2027-01-22', dateLabel: 'Extended period ends · close of business', statusLabel: 'Directions extended',
+    source: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63845', sourceLabel: 'RBI: Press Release 2026-2027/1367', sourceLocation: '22 October 2026; paragraphs 1–4',
+    additionalSources: [{ url: 'https://dicgc.org.in/banks-under-aid', label: 'DICGC: Banks Under AID, list dated 14 October 2026' }],
+    audience: 'Customers and depositors of The Suri Friends’ Union Co-operative Bank Ltd., Suri, West Bengal.',
+    facts: ['RBI extends the existing directions from close of business on 22 October 2026 to close of business on 22 January 2027, subject to review.', 'Other terms and conditions remain unchanged. RBI says the extension does not itself imply satisfaction with the bank’s financial position.'],
+    actions: ['Before planning a withdrawal or another account transaction, ask the bank to confirm the current conditions for your transaction.', 'Check later RBI notices before relying on the January end date; the extension remains subject to review.'],
+    limits: 'This is an extension of existing directions, not a new withdrawal cap. Announcement and extension start: 22 October; checked/published: 27 October. The underlying transaction limits have not been reconciled here. DICGC’s older AID listing confirms identification only; it establishes no new insurance-payment deadline or claim entitlement. No refund, payout process or assurance of unrestricted access on 23 January is inferred.',
+  },
   {
     slug: 'eternal-sbi-early-access-closed-october-2026',
     title: 'Eternal SBI Card: early access is closed; check your invitation separately',
@@ -200,7 +212,7 @@ export const researchWatch: WatchItem[] = [
   },
 ]
 
-export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer' {
+export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer' | 'Directions extended' {
   if (item.statusLabel) return item.statusLabel
   return item.eventDate > item.checkedAt ? 'Upcoming at check' : 'Effective at check'
 }
