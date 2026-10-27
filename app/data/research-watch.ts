@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-10-27'
+export const WATCH_CHECKED_AT = '2026-10-28'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,19 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'sbi-card-transport-fuel-fees-december-2026',
+    title: 'SBI Card December fees: transport is per transaction; fuel is per billing cycle',
+    summary: 'From 1 December 2026, the announced 1% fees use different thresholds: transport transactions above ₹30,000 and total cycle fuel spends above ₹50,000.',
+    category: 'Credit cards', checkedAt: '2026-10-28', announcementDate: '2026-10-27', eventDate: '2026-12-01', dateLabel: 'Announced fees effective',
+    source: 'https://www.sbicard.com/en/customer-notices.page', sourceLabel: 'SBI Card: notices for cardholders', sourceLocation: 'First two notices; website notice date 27 October 2026',
+    additionalSources: [{ url: 'https://www.sbicard.com/en/most-important-terms-and-conditions.page', label: 'SBI Card: current MITC, taxes and separate fuel surcharge terms' }],
+    cardIds: ['cashback-sbi', 'tata-neu-infinity-sbi', 'tata-neu-plus-sbi', 'flipkart-sbi', 'bpcl-sbi-octane', 'bpcl-sbi', 'sbi-miles', 'sbi-miles-prime'],
+    audience: 'SBI Card holders checking the announced high-value transport and fuel fee rules against their own card terms.',
+    facts: ['Transportation: every individual transaction exceeding ₹30,000 under MCCs 4111, 4784 or 4131 attracts 1% of that transaction’s amount from 1 December. This is not a ₹30,000 cumulative monthly threshold.', 'Fuel: if transactions under MCCs 5172, 5541, 5542 and 5983 together exceed ₹50,000 in a billing cycle, the notice charges 1% on total fuel spends, not just the amount above ₹50,000.', 'The current MITC separately describes acquiring-bank fuel surcharge and product-specific surcharge waivers. Do not assume an existing surcharge waiver offsets this newly announced fuel-spend fee.'],
+    actions: ['Before December, check your exact card’s fee schedule and bank communication; ask SBI Card about any product-specific treatment.', 'Track transport transaction amounts and fuel totals using your statement cycle. Do not substitute calendar-month totals for billing-cycle fuel spending.', 'Confirm merchant classification, applicable tax and fee posting with the issuer before relying on a cost estimate.'],
+    limits: 'Upcoming at the 28 October check. The two notices do not specify product exemptions, fee caps, reversals, first-cycle transition treatment or a tax-inclusive amount; those details remain unconfirmed. The MITC has a general applicable-tax clause, but no specific tax illustration for these incoming fees was established. No universal 0%-to-1% comparison, reward-rate cut or ranking change is introduced.',
+  },
   {
     slug: 'sgb-2020-21-series-i-redemption-price-october-2026',
     title: 'SGB 2020-21 Series I: ₹14,159 per unit for 28 October premature redemption',
