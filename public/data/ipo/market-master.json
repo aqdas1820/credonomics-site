@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generatedAt": "2026-10-26T16:05:06.190Z",
-    "recordCount": 1,
-    "nseCount": 1,
+    "generatedAt": "2026-10-27T08:54:16.148Z",
+    "recordCount": 3,
+    "nseCount": 3,
     "bseCount": 0,
-    "activeCount": 1,
+    "activeCount": 3,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 1 · BSE SME unavailable · BSE mainboard 0"
+    "sourceStatus": "NSE API 3 · BSE SME unavailable · BSE mainboard 0"
   },
   "records": [
     {
@@ -26,17 +26,75 @@
         ]
       },
       "subscription": {
-        "total": 0.09536323297766433,
-        "updatedAt": "2026-10-26T16:05:06.190Z",
+        "total": 0.11622579761359357,
+        "updatedAt": "2026-10-27T08:54:16.148Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=EDELALTS&type=Active"
       },
       "sharesOffered": 5299684,
-      "sharesBid": 505395,
+      "sharesBid": 615960,
       "estimatedIssueValueCr": 882.4,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=EDELALTS&type=Active",
-      "fetchedAt": "2026-10-26T16:05:06.190Z"
+      "fetchedAt": "2026-10-27T08:54:16.148Z"
+    },
+    {
+      "slug": "bls-polymers-ltd-7e4010d",
+      "companyName": "BLS Polymers Limited",
+      "symbol": "BLSPOLY",
+      "marketSegment": "mainboard",
+      "status": "open",
+      "securityType": "EQ",
+      "issue": {
+        "priceBandLow": 142,
+        "priceBandHigh": 150,
+        "openDate": "2026-10-27",
+        "closeDate": "2026-10-29",
+        "exchange": [
+          "NSE"
+        ]
+      },
+      "subscription": {
+        "total": 3.493966386554622,
+        "updatedAt": "2026-10-27T08:54:16.148Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BLSPOLY&type=Active"
+      },
+      "sharesOffered": 11900000,
+      "sharesBid": 41578200,
+      "estimatedIssueValueCr": 178.5,
+      "marketSource": "NSE",
+      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BLSPOLY&type=Active",
+      "fetchedAt": "2026-10-27T08:54:16.148Z"
+    },
+    {
+      "slug": "sfc-environmental-technologies-ltd-652bf61",
+      "companyName": "SFC Environmental Technologies Limited",
+      "symbol": "SFCTECH",
+      "marketSegment": "mainboard",
+      "status": "open",
+      "securityType": "EQ",
+      "issue": {
+        "priceBandLow": 313,
+        "priceBandHigh": 330,
+        "openDate": "2026-10-27",
+        "closeDate": "2026-10-29",
+        "exchange": [
+          "NSE"
+        ]
+      },
+      "subscription": {
+        "total": 0.04261729590591468,
+        "updatedAt": "2026-10-27T08:54:16.148Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SFCTECH&type=Active"
+      },
+      "sharesOffered": 14159744,
+      "sharesBid": 603450,
+      "estimatedIssueValueCr": 467.27,
+      "marketSource": "NSE",
+      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SFCTECH&type=Active",
+      "fetchedAt": "2026-10-27T08:54:16.148Z"
     }
   ]
 }
