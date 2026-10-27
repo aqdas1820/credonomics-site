@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-10-27T08:54:16.148Z",
+  "generatedAt": "2026-10-27T15:18:51.560Z",
   "recordCount": 3,
   "nseCount": 3,
   "bseCount": 0,
@@ -31,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.11622579761359357,
-      "updatedAt": "2026-10-27T08:54:16.148Z",
+      "total": 0.18424098493419608,
+      "updatedAt": "2026-10-27T15:18:51.560Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=EDELALTS&type=Active"
     },
     "sharesOffered": 5299684,
-    "sharesBid": 615960,
+    "sharesBid": 976419,
     "estimatedIssueValueCr": 882.4,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=EDELALTS&type=Active",
-    "fetchedAt": "2026-10-27T08:54:16.148Z"
+    "fetchedAt": "2026-10-27T15:18:51.560Z"
   },
   {
     "slug": "bls-polymers-ltd-7e4010d",
@@ -60,17 +60,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 3.493966386554622,
-      "updatedAt": "2026-10-27T08:54:16.148Z",
+      "total": 5.021756302521008,
+      "updatedAt": "2026-10-27T15:18:51.560Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BLSPOLY&type=Active"
     },
     "sharesOffered": 11900000,
-    "sharesBid": 41578200,
+    "sharesBid": 59758900,
     "estimatedIssueValueCr": 178.5,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BLSPOLY&type=Active",
-    "fetchedAt": "2026-10-27T08:54:16.148Z"
+    "fetchedAt": "2026-10-27T15:18:51.560Z"
   },
   {
     "slug": "sfc-environmental-technologies-ltd-652bf61",
@@ -89,16 +89,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.04261729590591468,
-      "updatedAt": "2026-10-27T08:54:16.148Z",
+      "total": 0.05948306692550374,
+      "updatedAt": "2026-10-27T15:18:51.560Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SFCTECH&type=Active"
     },
     "sharesOffered": 14159744,
-    "sharesBid": 603450,
+    "sharesBid": 842265,
     "estimatedIssueValueCr": 467.27,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SFCTECH&type=Active",
-    "fetchedAt": "2026-10-27T08:54:16.148Z"
+    "fetchedAt": "2026-10-27T15:18:51.560Z"
   }
 ]
