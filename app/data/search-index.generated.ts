@@ -122,6 +122,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:axis-vistara-spending-discontinuation-december-2026",
+    "title": "Axis Vistara cards: current spending cutoff is after 15 December 2026",
+    "description": "The Vistara, Signature and Infinite pages carry the same upcoming spending-discontinuation notice. Confirm your own transition instructions.",
+    "href": "/research/watch/axis-vistara-spending-discontinuation-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-27",
+    "keywords": "Axis Vistara cards: current spending cutoff is after 15 December 2026 axis-vistara-spending-discontinuation-december-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:eternal-sbi-early-access-closed-october-2026",
     "title": "Eternal SBI Card: early access is closed; check your invitation separately",
     "description": "The current Eternal page says early access is closed. This does not establish the status of an existing invitation or a future application window.",
