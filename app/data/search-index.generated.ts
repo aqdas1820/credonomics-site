@@ -265,6 +265,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:standard-chartered-federal-migration-consent-checklist-2026",
+    "title": "SC to Federal: check replacement-card consent separately from balance transfer",
+    "description": "Received a Standard Chartered migration-consent notice? Your choice about a replacement card does not cancel an outstanding balance.",
+    "href": "/research/watch/standard-chartered-federal-migration-consent-checklist-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-29",
+    "keywords": "SC to Federal: check replacement-card consent separately from balance transfer standard-chartered-federal-migration-consent-checklist-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:sebi-early-pay-in-margin-waiver-february-2027",
     "title": "SEBI early pay-in: additional cash-market margin relief from February 2027",
     "description": "Accepted securities early pay-in can support eligible subsequent cash-segment positions; broker margin checks still apply.",
@@ -454,7 +465,7 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "route:/research/watch",
     "title": "Research Watch: Verified Changes & Action Dates",
-    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch. Latest publication: 28 October 2026, with scope and action dates.",
+    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch. Latest publication: 29 October 2026, with scope and action dates.",
     "href": "/research/watch",
     "category": "Research",
     "source": "Research Desk",
