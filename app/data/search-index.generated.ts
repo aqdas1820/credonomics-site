@@ -199,6 +199,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:indusind-debit-card-festive-rewards-november-2026",
+    "title": "IndusInd debit cards: check festive voucher eligibility before 15 November",
+    "description": "Shop Plus rewards require eligible spending plus both POS and online transactions. They are vouchers, not cashback.",
+    "href": "/research/watch/indusind-debit-card-festive-rewards-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-28",
+    "keywords": "IndusInd debit cards: check festive voucher eligibility before 15 November indusind-debit-card-festive-rewards-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:makemytrip-icici-mycash-rules-november-2026",
     "title": "MakeMyTrip ICICI: international rewards change on 10 November; check myCash dates",
     "description": "International spends outside MakeMyTrip stop earning rewards on 10 November. A new 24-month myCash validity is also listed, but exact cutover wording differs between official sources.",
