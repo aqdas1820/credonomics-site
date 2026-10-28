@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-10-28'
+export const WATCH_CHECKED_AT = '2026-10-29'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,18 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'standard-chartered-federal-migration-consent-checklist-2026',
+    title: 'SC to Federal: check replacement-card consent separately from balance transfer',
+    summary: 'Received a Standard Chartered migration-consent notice? Your choice about a replacement card does not cancel an outstanding balance.',
+    category: 'Credit cards', checkedAt: '2026-10-29', eventDate: '2026-10-29', dateLabel: 'Migration FAQs checked · individual dates vary', statusLabel: 'Phased migration',
+    source: 'https://www.sc.bank.in/migration-accept-emailfaq/', sourceLabel: 'Standard Chartered: migration-consent FAQ', sourceLocation: 'Questions 4–9: consent, payment, no response and decline scenarios',
+    additionalSources: [{ url: 'https://www.federal.bank.in/credit-cards-welcome-info', label: 'Federal Bank: migration welcome page and general FAQs' }],
+    audience: 'Standard Chartered credit-card holders who have received an individual migration-consent SMS or email concerning Federal Bank.',
+    facts: ['SC’s FAQ separates replacement-card consent from account transfer: declining a new Federal card does not stop transfer of the existing account and outstanding balance.', 'Without consent and without further usage in the specified consent period, the FAQ says no replacement card is issued; the balance still transfers and must be repaid. Paying the outstanding is not treated as consent.', 'Continued card usage after the date in your communication can count as consent. An explicit decline has a separate exception: the FAQ says later usage does not override that rejection.', 'Federal’s general welcome page says no action is required for now and promises further communications. It does not resolve your individual consent cutoff or override a specific SC notice.'],
+    actions: ['Find your own bank communication and its date before deciding or using the card further. Ask the banks to reconcile conflicting instructions for your account.', 'Keep statements and consent acknowledgements. Continue following verified payment instructions; confirm the servicing bank and payment route through official channels when migration occurs.'],
+    limits: '29 October is the verification/publication date, not a common migration or consent deadline. Announcement date and each holder’s cutoff were not established. SC says declining ends associated SC benefits upon migration; do not extrapolate Federal’s general reward-preservation claim to a declined replacement. Universal replacement eligibility, delivery date, reward conversion and refunds remain unverified. No legal conclusion, debt waiver or ranking change is inferred.',
+  },
   {
     slug: 'lokapavani-sonpeth-rbi-directions-january-2027',
     title: 'Lokapavani and Sonpeth banks: existing RBI directions extended to 30 January',

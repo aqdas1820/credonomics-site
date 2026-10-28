@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 }
 
 export default function OctoberUpdates() {
-  return <SiteFrame><header style={{width:'min(1240px,calc(100% - 48px))',margin:'40px auto 0'}}><p>CredoNomics Research Desk</p><h1>October 2026 research bulletin</h1><p>Baseline checked 23 October 2026; Research Watch publications checked 24–28 October 2026; each guide retains its own verification date.</p></header><ResearchWatchBrief/><MonthlyResearchBrief /></SiteFrame>
+  return <SiteFrame><header style={{width:'min(1240px,calc(100% - 48px))',margin:'40px auto 0'}}><p>CredoNomics Research Desk</p><h1>October 2026 research bulletin</h1><p>Baseline checked 23 October 2026; Research Watch publications checked 24–29 October 2026; each guide retains its own verification date.</p></header><ResearchWatchBrief/><MonthlyResearchBrief /></SiteFrame>
 }
