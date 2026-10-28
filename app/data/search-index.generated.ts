@@ -101,13 +101,13 @@ export const searchIndex: readonly SearchEntry[] = [
   },
   {
     "id": "watch:amex-november-2026-fees-and-service-dates",
-    "title": "Amex November changes: milestones, reward balances, fees and dates",
-    "description": "From 15 November, posting dates determine milestones and Membership Rewards balances stay separate by card. Check fee and application dates too.",
+    "title": "Amex November: prepare for service windows, milestones and fees",
+    "description": "Review settings before 11 November. Account displays and some statements face delays; 15 November benefit changes have separate rules.",
     "href": "/research/watch/amex-november-2026-fees-and-service-dates",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-10-25",
-    "keywords": "Amex November changes: milestones, reward balances, fees and dates amex-november-2026-fees-and-service-dates Research",
+    "updated": "2026-10-28",
+    "keywords": "Amex November: prepare for service windows, milestones and fees amex-november-2026-fees-and-service-dates Research",
     "priority": 92
   },
   {
