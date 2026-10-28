@@ -12,6 +12,18 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'lokapavani-sonpeth-rbi-directions-january-2027',
+    title: 'Lokapavani and Sonpeth banks: existing RBI directions extended to 30 January',
+    summary: 'Both 28 October notices extend existing directions beyond 30 October. They do not announce unrestricted account access or a new insurance-claim window.',
+    category: 'Bank deposits', checkedAt: '2026-10-28', announcementDate: '2026-10-28', eventDate: '2027-01-30', dateLabel: 'Extended period ends · close of business', statusLabel: 'Directions extended',
+    source: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63878', sourceLabel: 'RBI: Lokapavani extension, Press Release 2026-2027/1400', sourceLocation: '28 October 2026; paragraphs 2–4',
+    additionalSources: [{ url: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63875', label: 'RBI: Sonpeth extension, Press Release 2026-2027/1397' }, { url: 'https://www.dicgc.org.in/sites/default/files/2025-07/6b-press-release-english-and-hindi-lokapavani-mahila-sahakari-bank-niyamitha-mandya_0.pdf', label: 'DICGC: historical Lokapavani notice dated 31 July 2025, English page 2' }],
+    audience: 'Depositors and customers of Lokapavani Mahila Sahakari Bank Niyamitha, Mandya, Karnataka, and Sonpeth Nagari Sahakari Bank Maryadit, Sonpeth, Dist. Parbhani.',
+    facts: ['RBI extends each bank’s existing directions for three months from close of business on 30 October 2026 to close of business on 30 January 2027, subject to review.', 'Other terms and conditions remain unchanged. RBI says an extension does not itself imply satisfaction with the bank’s financial position.', 'For Lokapavani only, the linked DICGC notice is dated 31 July 2025. Its claim/willingness date is 13 September 2025 and its scheduled payment date is 28 October 2025. Those are historical dates, not new 2026 deadlines or evidence that every claim was paid.'],
+    actions: ['Before planning an account transaction after 30 October, ask your bank to confirm the current conditions applicable to it.', 'Check later RBI notices before relying on the January end date. For an existing insurance claim, verify your individual status with your bank or DICGC.'],
+    limits: 'The extension is announced and checked on 28 October; its new three-month period begins at close of business on 30 October. Underlying withdrawal limits and account-specific eligibility have not been reconciled here. No fresh claim window, payout entitlement, refund process or unrestricted access on 31 January is established. The historical DICGC document concerns Lokapavani only; do not apply its dates to Sonpeth.',
+  },
+  {
     slug: 'indusind-debit-card-festive-rewards-november-2026',
     title: 'IndusInd debit cards: check festive voucher eligibility before 15 November',
     summary: 'Shop Plus rewards require eligible spending plus both POS and online transactions. They are vouchers, not cashback.',
