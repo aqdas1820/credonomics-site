@@ -58,7 +58,7 @@ export default function CardsPage() {
         </div>
       </section>
 
-      <ResearchWatchBrief category="Credit cards"/>
+      <ResearchWatchBrief category={['Credit cards', 'Debit cards']}/>
       <section className={`${styles.wrap} ${styles.pageBody} ${local.shell}`}>
         <CardDiscovery/>
         <div className={local.statGrid}>

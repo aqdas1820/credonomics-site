@@ -1,6 +1,6 @@
 export const WATCH_CHECKED_AT = '2026-10-28'
 export type WatchItem = {
-  slug: string; title: string; summary: string; category: 'Credit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits'
+  slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
   sourceLocation: string; audience: string; facts: string[]; actions: string[]; limits: string
   publishedAt?: string; updateNote?: string
@@ -11,6 +11,17 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'indusind-debit-card-festive-rewards-november-2026',
+    title: 'IndusInd debit cards: check festive voucher eligibility before 15 November',
+    summary: 'Shop Plus rewards require eligible spending plus both POS and online transactions. They are vouchers, not cashback.',
+    category: 'Debit cards', checkedAt: '2026-10-28', eventDate: '2026-11-15', dateLabel: 'Offer period ends', statusLabel: 'Limited-time offer',
+    source: 'https://www.indusind.bank.in/in/en/personal/offer-tnc/festive-offers-tnc.html', sourceLabel: 'IndusInd Bank: festive debit-card terms', sourceLocation: 'Offer B, shared eligibility, exclusions and Shop Plus validity clauses',
+    audience: 'Holders of active IndusInd RuPay, Visa or Mastercard debit cards.',
+    facts: ['Offer B runs 15 October–15 November 2026: eligible cumulative spends of ₹25,000–below ₹50,000 receive ₹500; ₹50,000–below ₹1 lakh receive ₹1,500; ₹1 lakh or more receives ₹4,000 in Shop Plus points, capped at 4,000 per qualified card.', 'At least two POS and two online transactions of ₹2,000 or more each are required. Purchases must be made and settled within the offer period.', 'ATM, reversed/refunded purchases, fuel, wallets, insurance, loan/credit-card payments, taxes, government services and listed quasi-cash, utility/OTT MCCs are excluded. Consult the full MCC table.', 'Posting is due by 31 December; account and card must remain active. The separate top-spender contest is not an assured reward.'],
+    actions: ['Check already-planned purchases against both transaction counts and eligible cumulative spend; do not spend extra solely for a voucher.', 'Keep transaction and settlement records. After posting, confirm your displayed expiry with the bank before redeeming.'],
+    limits: 'Checked 28 October; announcement date unestablished. Terms say both three months from posting and 31 March 2027: exact expiry remains HOLD. Do not assume every early credit lasts until March. Brand redemption terms apply; this guide covers Offer B, not the separate contactless offer. No credit-card ranking change.',
+  },
   {
     slug: 'sbi-card-transport-fuel-fees-december-2026',
     title: 'SBI Card December fees: transport is per transaction; fuel is per billing cycle',
