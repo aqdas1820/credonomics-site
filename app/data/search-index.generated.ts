@@ -210,6 +210,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:lokapavani-sonpeth-rbi-directions-january-2027",
+    "title": "Lokapavani and Sonpeth banks: existing RBI directions extended to 30 January",
+    "description": "Both 28 October notices extend existing directions beyond 30 October. They do not announce unrestricted account access or a new insurance-claim window.",
+    "href": "/research/watch/lokapavani-sonpeth-rbi-directions-january-2027",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-28",
+    "keywords": "Lokapavani and Sonpeth banks: existing RBI directions extended to 30 January lokapavani-sonpeth-rbi-directions-january-2027 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:makemytrip-icici-mycash-rules-november-2026",
     "title": "MakeMyTrip ICICI: international rewards change on 10 November; check myCash dates",
     "description": "International spends outside MakeMyTrip stop earning rewards on 10 November. A new 24-month myCash validity is also listed, but exact cutover wording differs between official sources.",
