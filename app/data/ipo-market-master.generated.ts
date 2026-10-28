@@ -4,13 +4,13 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-10-27T15:18:51.560Z",
-  "recordCount": 3,
-  "nseCount": 3,
+  "generatedAt": "2026-10-28T09:34:26.829Z",
+  "recordCount": 4,
+  "nseCount": 4,
   "bseCount": 0,
-  "activeCount": 3,
+  "activeCount": 4,
   "upcomingCount": 0,
-  "sourceStatus": "NSE API 3 · BSE SME unavailable · BSE mainboard 0"
+  "sourceStatus": "NSE API 4 · BSE SME unavailable · BSE mainboard 0"
 } as const
 
 export const ipoMarketMaster: IpoMarketRecord[] = [
@@ -31,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.18424098493419608,
-      "updatedAt": "2026-10-27T15:18:51.560Z",
+      "total": 2.1767407264282173,
+      "updatedAt": "2026-10-28T09:34:26.829Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=EDELALTS&type=Active"
     },
     "sharesOffered": 5299684,
-    "sharesBid": 976419,
+    "sharesBid": 11536038,
     "estimatedIssueValueCr": 882.4,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=EDELALTS&type=Active",
-    "fetchedAt": "2026-10-27T15:18:51.560Z"
+    "fetchedAt": "2026-10-28T09:34:26.829Z"
   },
   {
     "slug": "bls-polymers-ltd-7e4010d",
@@ -60,17 +60,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 5.021756302521008,
-      "updatedAt": "2026-10-27T15:18:51.560Z",
+      "total": 16.051764705882352,
+      "updatedAt": "2026-10-28T09:34:26.829Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BLSPOLY&type=Active"
     },
     "sharesOffered": 11900000,
-    "sharesBid": 59758900,
+    "sharesBid": 191016000,
     "estimatedIssueValueCr": 178.5,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BLSPOLY&type=Active",
-    "fetchedAt": "2026-10-27T15:18:51.560Z"
+    "fetchedAt": "2026-10-28T09:34:26.829Z"
   },
   {
     "slug": "sfc-environmental-technologies-ltd-652bf61",
@@ -89,16 +89,45 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.05948306692550374,
-      "updatedAt": "2026-10-27T15:18:51.560Z",
+      "total": 0.12313252273487431,
+      "updatedAt": "2026-10-28T09:34:26.829Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SFCTECH&type=Active"
     },
     "sharesOffered": 14159744,
-    "sharesBid": 842265,
+    "sharesBid": 1743525,
     "estimatedIssueValueCr": 467.27,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=SFCTECH&type=Active",
-    "fetchedAt": "2026-10-27T15:18:51.560Z"
+    "fetchedAt": "2026-10-28T09:34:26.829Z"
+  },
+  {
+    "slug": "m-k-sons-fine-jewels-ltd-ab442dc",
+    "companyName": "M. K. Sons Fine Jewels Limited",
+    "symbol": "MKSONS",
+    "marketSegment": "mainboard",
+    "status": "open",
+    "securityType": "EQ",
+    "issue": {
+      "priceBandLow": 153,
+      "priceBandHigh": 162,
+      "openDate": "2026-10-28",
+      "closeDate": "2026-10-30",
+      "exchange": [
+        "NSE"
+      ]
+    },
+    "subscription": {
+      "total": 0.34763529411764704,
+      "updatedAt": "2026-10-28T09:34:26.829Z",
+      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MKSONS&type=Active"
+    },
+    "sharesOffered": 11900000,
+    "sharesBid": 4136860,
+    "estimatedIssueValueCr": 192.78,
+    "marketSource": "NSE",
+    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MKSONS&type=Active",
+    "fetchedAt": "2026-10-28T09:34:26.829Z"
   }
 ]
