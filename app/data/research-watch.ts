@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-10-29'
+export const WATCH_CHECKED_AT = '2026-10-30'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,28 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'sgb-2019-20-series-vi-redemption-price-october-2026',
+    title: 'SGB 2019-20 Series VI: ₹14,213 per unit for 30 October premature redemption',
+    summary: 'RBI’s price applies to the named tranche’s 30 October redemption, separately from the earlier Series I update.',
+    category: 'Markets', checkedAt: '2026-10-30', announcementDate: '2026-10-29', eventDate: '2026-10-30', dateLabel: 'Premature redemption due date',
+    source: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63884', sourceLabel: 'RBI: Press Release 2026-2027/1406', sourceLocation: '29 October 2026; tranche, due date and price paragraphs',
+    audience: 'Holders of SGB 2019-20 Series VI, issued on 30 October 2019, checking an existing premature-redemption instruction.',
+    facts: ['RBI announces ₹14,213 per unit for this tranche’s premature redemption due on 30 October 2026.', 'The price uses IBJA’s 999-purity gold closing prices on 27, 28 and 29 October. It is not a market quote for every SGB series.'],
+    actions: ['Match the series and issue date against your holding and acknowledged instruction.', 'For a redemption already being processed, compare the per-unit price with your confirmation; ask your servicing institution about discrepancies.'],
+    limits: 'Announced 29 October; checked 30 October, the due date. This price notice does not establish that a fresh request can still be submitted, individual eligibility, payment time, tax treatment or a refund process. It does not announce final maturity of all SGBs or recommend redemption.',
+  },
+  {
+    slug: 'irinjalakuda-town-bank-rbi-directions-january-2027',
+    title: 'Irinjalakuda Town bank: existing RBI directions extended to 30 January',
+    summary: 'Customers should check continuing account conditions before assuming restrictions end on 30 October.',
+    category: 'Bank deposits', checkedAt: '2026-10-30', announcementDate: '2026-10-29', eventDate: '2027-01-30', dateLabel: 'Extended period ends · close of business', statusLabel: 'Directions extended',
+    source: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63881', sourceLabel: 'RBI: Press Release 2026-2027/1404', sourceLocation: '29 October 2026; extension and unchanged-conditions paragraphs',
+    audience: 'Depositors and customers of The Irinjalakuda Town Co-operative Bank Ltd., Kerala.',
+    facts: ['RBI extends the existing directions for three months from close of business on 30 October 2026 to close of business on 30 January 2027, subject to review.', 'Other conditions remain unchanged. RBI says the extension does not itself imply satisfaction with the bank’s financial position.'],
+    actions: ['Before planning an account transaction, ask the bank to confirm the conditions applicable to it.', 'Check later RBI notices before relying on the January end date.'],
+    limits: 'Announced 29 October and checked 30 October; the new period starts at close of business on 30 October. Underlying withdrawal limits and account-specific eligibility are not reconciled here. No new insurance-claim window, payout entitlement, refund process or unrestricted access on 31 January is established.',
+  },
   {
     slug: 'edelweiss-overseas-paused-sips-healthcare-reopening-2026',
     title: 'Edelweiss: six funds’ paused SIPs close; Healthcare reopening is separate',

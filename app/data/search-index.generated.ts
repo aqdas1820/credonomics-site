@@ -221,6 +221,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:irinjalakuda-town-bank-rbi-directions-january-2027",
+    "title": "Irinjalakuda Town bank: existing RBI directions extended to 30 January",
+    "description": "Customers should check continuing account conditions before assuming restrictions end on 30 October.",
+    "href": "/research/watch/irinjalakuda-town-bank-rbi-directions-january-2027",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-30",
+    "keywords": "Irinjalakuda Town bank: existing RBI directions extended to 30 January irinjalakuda-town-bank-rbi-directions-january-2027 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:lokapavani-sonpeth-rbi-directions-january-2027",
     "title": "Lokapavani and Sonpeth banks: existing RBI directions extended to 30 January",
     "description": "Both 28 October notices extend existing directions beyond 30 October. They do not announce unrestricted account access or a new insurance-claim window.",
@@ -306,6 +317,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "Official issuer / fund notice",
     "updated": "2026-10-25",
     "keywords": "SEBI WhatsApp stock-tip warning: verify the intermediary and trading app sebi-whatsapp-stock-tips-verification-checklist Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:sgb-2019-20-series-vi-redemption-price-october-2026",
+    "title": "SGB 2019-20 Series VI: ₹14,213 per unit for 30 October premature redemption",
+    "description": "RBI’s price applies to the named tranche’s 30 October redemption, separately from the earlier Series I update.",
+    "href": "/research/watch/sgb-2019-20-series-vi-redemption-price-october-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-30",
+    "keywords": "SGB 2019-20 Series VI: ₹14,213 per unit for 30 October premature redemption sgb-2019-20-series-vi-redemption-price-october-2026 Research",
     "priority": 92
   },
   {
@@ -476,7 +498,7 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "route:/research/watch",
     "title": "Research Watch: Verified Changes & Action Dates",
-    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch. Latest publication: 29 October 2026, with scope and action dates.",
+    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch. Latest publication: 30 October 2026, with scope and action dates.",
     "href": "/research/watch",
     "category": "Research",
     "source": "Research Desk",
