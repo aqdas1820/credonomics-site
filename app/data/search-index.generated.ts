@@ -133,6 +133,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:edelweiss-overseas-paused-sips-healthcare-reopening-2026",
+    "title": "Edelweiss: six funds’ paused SIPs close; Healthcare reopening is separate",
+    "description": "Check your systematic registration: the six-fund closure does not apply to the Healthcare fund’s planned November reactivation.",
+    "href": "/research/watch/edelweiss-overseas-paused-sips-healthcare-reopening-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-29",
+    "keywords": "Edelweiss: six funds’ paused SIPs close; Healthcare reopening is separate edelweiss-overseas-paused-sips-healthcare-reopening-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:eternal-sbi-early-access-closed-october-2026",
     "title": "Eternal SBI Card: early access is closed; check your invitation separately",
     "description": "The current Eternal page says early access is closed. This does not establish the status of an existing invitation or a future application window.",
