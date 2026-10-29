@@ -112,13 +112,13 @@ export const searchIndex: readonly SearchEntry[] = [
   },
   {
     "id": "watch:axis-myzone-district-movie-spend-november-2026",
-    "title": "Axis MyZone movies: check ₹25,000 eligible spend before using District",
-    "description": "From 1 November, the MyZone District buy-one-get-one offer needs eligible settled spend in the preceding three calendar months, subject to a new-card exemption.",
+    "title": "Axis movie offers: check the November spend rule for four cards",
+    "description": "MYZONE, SELECT and PRIVILEGE District offers and NEO’s BookMyShow discount have a ₹25,000 eligible-spend condition from 1 November.",
     "href": "/research/watch/axis-myzone-district-movie-spend-november-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-10-26",
-    "keywords": "Axis MyZone movies: check ₹25,000 eligible spend before using District axis-myzone-district-movie-spend-november-2026 Research",
+    "updated": "2026-10-30",
+    "keywords": "Axis movie offers: check the November spend rule for four cards axis-myzone-district-movie-spend-november-2026 Research",
     "priority": 92
   },
   {

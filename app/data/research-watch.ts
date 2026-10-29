@@ -12,6 +12,18 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'axis-myzone-district-movie-spend-november-2026',
+    title: 'Axis movie offers: check the November spend rule for four cards',
+    summary: 'MYZONE, SELECT and PRIVILEGE District offers and NEO’s BookMyShow discount have a ₹25,000 eligible-spend condition from 1 November.',
+    category: 'Credit cards', checkedAt: '2026-10-30', publishedAt: '2026-10-26', updateNote: '30 October: expanded the original MyZone guide to SELECT, PRIVILEGE and NEO using each card’s notice; added November’s settlement-period example. Original URL and publication date preserved.', eventDate: '2026-11-01', dateLabel: 'Movie eligibility rule effective',
+    source: 'https://campaign.axis.bank.in/generic/terms-and-conditions-myzone.pdf', sourceLabel: 'Axis Bank: MYZONE card-specific revision notice', sourceLocation: 'November section, pages 1–2; supporting card-specific notices below',
+    additionalSources: [{ url: 'https://campaign.axis.bank.in/generic/terms-and-conditions-neo.pdf', label: 'NEO: BookMyShow rule and exclusions, pages 1–2' }, { url: 'https://campaign.axis.bank.in/generic/terms-and-conditions-select.pdf', label: 'SELECT: November District rule, page 2' }, { url: 'https://campaign.axis.bank.in/generic/terms-and-conditions-privilege.pdf', label: 'PRIVILEGE: November District rule, pages 1–2' }],
+    audience: 'Axis Bank MYZONE, NEO, SELECT and PRIVILEGE cardholders planning to use their movie offers.',
+    facts: ['From 1 November 2026, MYZONE, SELECT and PRIVILEGE require ₹25,000 eligible spend in the preceding three calendar months for District buy-one-get-one. NEO applies the same threshold to its 10% BookMyShow instant discount, capped at ₹100.', 'Only settled transactions count; settlement may take up to five working days. For November eligibility, the preceding calendar months are August–October, not a rolling 90-day period.', 'New issuance is exempt for the issue month plus the next three calendar months. Upgrades do not qualify as new issuance; an additional card alongside an existing relationship does. Spends are considered at account level.', 'Fees, interest, refunds, reversals and other bank dues do not qualify. EMI purchases count through billed monthly instalments, not their full purchase value.'],
+    actions: ['Check billed eligible transactions in Axis Mobile or Internet Banking and confirm the offer for your exact card.', 'Allow for settlement near month-end. Do not make unnecessary purchases solely to meet the threshold.'],
+    limits: 'Upcoming at the 30 October check. Announcement date and a dated earlier issuer version were not established; no earlier no-spend entitlement is asserted. Ticket counts, availability, booking conditions and remaining limits follow each card’s prevailing terms. No blanket Axis devaluation or ranking change is inferred.',
+  },
+  {
     slug: 'sgb-2019-20-series-vi-redemption-price-october-2026',
     title: 'SGB 2019-20 Series VI: ₹14,213 per unit for 30 October premature redemption',
     summary: 'RBI’s price applies to the named tranche’s 30 October redemption, separately from the earlier Series I update.',
@@ -211,17 +223,7 @@ export const researchWatch: WatchItem[] = [
     actions: ['Review your reward balance, redemption minimums and expiry before deciding whether an already-planned redemption should be completed before 1 November.', 'Compare utility fees and rewards using your billing-cycle total. Splitting one bill into smaller payments does not remove the cycle threshold.'],
     limits: 'The announcement date is not specified in the PDF. These are incoming fees, not a reward-rate change. Other revised charges have product-specific and FD-backed-card treatment; this guide does not generalise their late-fee slabs or invent how earlier utility transactions will be adjusted.',
   },
-  {
-    slug: 'axis-myzone-district-movie-spend-november-2026',
-    title: 'Axis MyZone movies: check ₹25,000 eligible spend before using District',
-    summary: 'From 1 November, the MyZone District buy-one-get-one offer needs eligible settled spend in the preceding three calendar months, subject to a new-card exemption.',
-    category: 'Credit cards', checkedAt: '2026-10-26', eventDate: '2026-11-01', dateLabel: 'Movie eligibility rule effective',
-    source: 'https://campaign.axis.bank.in/generic/terms-and-conditions-myzone.pdf', sourceLabel: 'Axis Bank: MYZONE card-specific revision notice', sourceLocation: 'Effective 01-11-2026 section across PDF pages 1–2',
-    audience: 'Axis Bank MyZone cardholders relying on the District movie offer.',
-    facts: ['The incoming rule requires ₹25,000 eligible spend in the previous three calendar months. Only settled transactions count; settlement may take up to five working days.', 'New issuance is exempt for the issue month plus the next three calendar months. Upgrading an existing card is not new issuance; an additional card alongside an existing relationship is treated as new issuance. Spends are considered at account level.', 'Fees, interest, refunds, reversals and other bank dues do not qualify. EMI purchases count through billed monthly instalments, not their full purchase value.'],
-    actions: ['Check billed eligible transactions in Axis Mobile or Internet Banking before relying on the movie benefit.', 'Keep settlement time in mind near month-end. Compare the discount with any extra spending needed; do not buy unnecessarily to meet the threshold.'],
-    limits: 'Announcement date and a dated earlier issuer version were not established. This guide describes the verified incoming rule without asserting an earlier no-spend entitlement. Ticket counts, discount caps and booking conditions still follow the exact card’s current terms.',
-  },
+
   {
     slug: 'sebi-whatsapp-stock-tips-verification-checklist',
     title: 'SEBI WhatsApp stock-tip warning: verify the intermediary and trading app',
