@@ -12,6 +12,18 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'edelweiss-overseas-paused-sips-healthcare-reopening-2026',
+    title: 'Edelweiss: six funds’ paused SIPs close; Healthcare reopening is separate',
+    summary: 'Check your systematic registration: the six-fund closure does not apply to the Healthcare fund’s planned November reactivation.',
+    category: 'Mutual funds', checkedAt: '2026-10-29', announcementDate: '2026-10-21', eventDate: '2026-11-20', dateLabel: 'Healthcare paused SIP/STP reactivation scheduled', statusLabel: 'Subscription restrictions',
+    source: 'https://www.edelweissmf.com/Files/MF/Downloads/NoticeCumAddendum/NoticeCumAddendum/Reopening_of_subscriptions_in_designed_scheme_21102026164232.pdf', sourceLabel: 'Edelweiss Mutual Fund: 21 October 2026 addendum', sourceLocation: 'Page 1: reopening, paused registrations and six-scheme list',
+    additionalSources: [{ url: 'https://www.edelweissmf.com/Files/MF/Downloads/NoticeCumAddendum/NoticeCumAddendum/Restriction_on_existing_subscriptions_in_the_Designated_Schemes_of_Edelweiss_Mutual_Fund_06082026174642.pdf', label: '6 August notice: existing SIP/STP suspension from close of business 11 August' }, { url: 'https://www.edelweissmf.com/downloads/notice-cum-addendum', label: 'AMC current notice index' }],
+    audience: 'Investors with paused SIP/STP registrations in the six named Edelweiss overseas schemes or the Healthcare index fund.',
+    facts: ['The 21 October notice permanently closes the previously paused SIPs/STPs in Edelweiss ASEAN Equity Off-shore Fund, Greater China Equity Off-shore Fund, US Technology Equity Fund of Fund, Emerging Markets Opportunities Equity Offshore Fund, Europe Dynamic Equity Offshore Fund and US Value Equity Off-shore Fund. These paused instructions will not restart.', 'Separately, fresh lump-sum, SIP and STP subscriptions in Edelweiss MSCI India Domestic & World Healthcare 45 Index Fund reopen from 26 October 2026.', 'Healthcare’s previously paused SIPs/STPs are scheduled for reactivation on 20 November 2026, subject to applicable overseas investment limits. This remains upcoming at the check date.'],
+    actions: ['Match the exact scheme and registration in your AMC/RTA account. Ask whether an instruction is closed, paused or active before relying on the next instalment.', 'Check processing status before creating another instruction to avoid unintended duplicate investments.'],
+    limits: '21 October is the notice date; no separate six-fund closure implementation time is stated. Closure concerns paused registrations, not cancellation of existing units. Do not infer reopening of the other six funds, guaranteed debits, redemption restrictions or an investment recommendation.',
+  },
+  {
     slug: 'standard-chartered-federal-migration-consent-checklist-2026',
     title: 'SC to Federal: check replacement-card consent separately from balance transfer',
     summary: 'Received a Standard Chartered migration-consent notice? Your choice about a replacement card does not cancel an outstanding balance.',
