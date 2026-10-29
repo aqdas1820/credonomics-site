@@ -2,7 +2,7 @@
 import type { IpoDiscoveryRecord } from './ipo-types'
 
 export const ipoDiscoveryMeta = {
-  "generatedAt": "2026-10-28T09:34:39.188Z",
+  "generatedAt": "2026-10-29T09:51:56.426Z",
   "source": "SEBI Public Issues",
   "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
   "recordCount": 33,
@@ -19,7 +19,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/oravel-stays-limited-addendum-to-drhp_105418.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-10-26T08:48:39.461Z",
-    "lastSeen": "2026-10-28T09:34:39.188Z"
+    "lastSeen": "2026-10-29T09:51:56.426Z"
   },
   {
     "id": "integris-medtech-limited-addendum-0b85b4",
@@ -30,7 +30,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/integris-medtech-limited-addendum-to-drhp_105416.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-10-26T08:48:39.461Z",
-    "lastSeen": "2026-10-28T09:34:39.188Z"
+    "lastSeen": "2026-10-29T09:51:56.426Z"
   },
   {
     "id": "tablespace-technologies-limited-addendum-8ef8cf",
@@ -41,7 +41,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/tablespace-technologies-limited-addendum-to-drhp_105343.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-10-21T08:29:32.713Z",
-    "lastSeen": "2026-10-28T09:34:39.188Z"
+    "lastSeen": "2026-10-29T09:51:56.426Z"
   },
   {
     "id": "oswal-cables-limited-addendum-225fbb",
@@ -52,7 +52,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/oswal-cables-limited-addendum-to-drhp_105234.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-10-14T08:38:02.070Z",
-    "lastSeen": "2026-10-28T09:34:39.188Z"
+    "lastSeen": "2026-10-29T09:51:56.426Z"
   },
   {
     "id": "matangi-rubber-limited-addendum-57ae39",
@@ -63,7 +63,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/matangi-rubber-limited-addendum-to-the-drhp_105143.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-10-12T10:41:09.860Z",
-    "lastSeen": "2026-10-28T09:34:39.188Z"
+    "lastSeen": "2026-10-29T09:51:56.426Z"
   },
   {
     "id": "arohan-financial-services-limited-addendum-5cfcca",
