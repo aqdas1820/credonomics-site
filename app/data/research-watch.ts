@@ -12,6 +12,17 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'sgb-2021-22-series-vii-redemption-price-november-2026',
+    title: 'SGB 2021-22 Series VII: ₹14,167 per unit for 2 November premature redemption',
+    summary: 'RBI’s 30 October price announcement applies to this specific tranche’s upcoming 2 November redemption.',
+    category: 'Markets', checkedAt: '2026-10-30', announcementDate: '2026-10-30', eventDate: '2026-11-02', dateLabel: 'Premature redemption due date',
+    source: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63897', sourceLabel: 'RBI: Press Release 2026-2027/1419', sourceLocation: '30 October 2026; tranche identification, due date and price paragraphs',
+    audience: 'Holders of SGB 2021-22 Series VII, issued on 2 November 2021, checking an existing premature-redemption instruction.',
+    facts: ['RBI sets ₹14,167 per unit for this tranche’s premature redemption due on 2 November 2026.', 'The price uses the average of IBJA’s 999-purity gold closing prices on 28, 29 and 30 October. It is not a market quote for every SGB series.'],
+    actions: ['Match your holding’s series and issue date with the redemption instruction acknowledged by your servicing institution.', 'For a redemption already being processed, compare the per-unit price with your confirmation and ask the servicing institution about discrepancies.'],
+    limits: 'Announced and checked 30 October; redemption remains upcoming on 2 November. The price notice does not establish that a fresh request can still be submitted, individual eligibility, payment timing, tax treatment or a refund process. It does not change other tranches’ prices, announce universal final maturity or recommend redemption.',
+  },
+  {
     slug: 'pnb-atm-crm-charges-november-2026',
     title: 'PNB November ATM/CRM charges: distinguish withdrawals from cardless deposits',
     summary: 'Check the own-ATM free limit, account exemptions and cardless CRM deposit timing before 1 November.',
