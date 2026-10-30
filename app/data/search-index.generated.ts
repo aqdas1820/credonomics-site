@@ -254,6 +254,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:pnb-atm-crm-charges-november-2026",
+    "title": "PNB November ATM/CRM charges: distinguish withdrawals from cardless deposits",
+    "description": "Check the own-ATM free limit, account exemptions and cardless CRM deposit timing before 1 November.",
+    "href": "/research/watch/pnb-atm-crm-charges-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-30",
+    "keywords": "PNB November ATM/CRM charges: distinguish withdrawals from cardless deposits pnb-atm-crm-charges-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:pnb-credit-card-redemption-utility-fees-november-2026",
     "title": "PNB November fees: reward redemption and high utility payments",
     "description": "From 1 November 2026, the notice adds ₹99 per reward-redemption request and a threshold-based utility fee, before GST.",
