@@ -12,6 +12,17 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'pnb-atm-crm-charges-november-2026',
+    title: 'PNB November ATM/CRM charges: distinguish withdrawals from cardless deposits',
+    summary: 'Check the own-ATM free limit, account exemptions and cardless CRM deposit timing before 1 November.',
+    category: 'Debit cards', checkedAt: '2026-10-30', announcementDate: '2026-09-25', eventDate: '2026-11-01', dateLabel: 'Revised schedule effective',
+    source: 'https://www.pnb.bank.in/Public-Notices.aspx', sourceLabel: 'PNB: official public-notice download', sourceLocation: '25 September 2026 listing, “Revision in ATM/CRM service charges w.e.f. 01.11.2026”; NoticeDoc2026-09-25_114354903.pdf; sections A–F on pages 1–2',
+    audience: 'PNB debit-card holders using PNB ATMs/CRMs and customers making cardless CRM deposits into PNB savings accounts.',
+    facts: ['From 1 November, section A lists five successful financial transactions per month free at PNB ATMs/CRMs for savings/current accounts, followed by ₹20 per transaction plus applicable taxes. Non-financial transactions at PNB ATMs remain free for PNB customers.', 'Section A exempts staff/ex-staff, cards issued in Basic Saving Accounts, and defence personnel and pensioners from those charges. Do not carry these exemptions into every other section.', 'Section E lists cardless cash deposits into PNB savings accounts at PNB CRMs as nil during 10 am–4 pm business hours and ₹25 plus GST per transaction outside business hours. The notice’s outside-hours wording includes holidays and lists 4:01 pm–9:59 am.', 'Other-bank ATM fees, insufficient-funds failed withdrawals, Cash @PNB cardless withdrawals and interoperable deposits with a debit card are separately marked unchanged. They are not all free.'],
+    actions: ['Open the linked notice index and select the exact ATM/CRM revision title. Check your account category, transaction method and applicable free allowance.', 'Before a cardless CRM deposit, confirm the displayed charge and business-hours treatment, especially on holidays. Keep the receipt if the posted charge differs.'],
+    limits: '25 September is the index publication date; checked 30 October; effective 1 November. Earlier charges are not fully compared, so no blanket fee increase is claimed. Daytime holiday treatment and account-specific concessions need bank confirmation. This is separate from the PNB credit-card fee notice; no refund entitlement or ranking change is inferred.',
+  },
+  {
     slug: 'axis-myzone-district-movie-spend-november-2026',
     title: 'Axis movie offers: check the November spend rule for four cards',
     summary: 'MYZONE, SELECT and PRIVILEGE District offers and NEO’s BookMyShow discount have a ₹25,000 eligible-spend condition from 1 November.',
