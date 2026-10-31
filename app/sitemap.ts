@@ -45,8 +45,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/official`, lastModified: updated, priority: 0.76 },
     { url: `${base}/disclosures`, lastModified: updated, priority: 0.68 },
     { url: `${base}/corrections`, lastModified: updated, priority: 0.68 },
-    { url: `${base}/privacy`, lastModified: updated, priority: 0.55 },
-    { url: `${base}/terms`, lastModified: updated, priority: 0.55 },
+    { url: `${base}/terms`, lastModified: new Date('2026-11-01T00:00:00+05:30'), priority: 0.55 },
+    { url: `${base}/privacy`, lastModified: new Date('2026-11-01T00:00:00+05:30'), priority: 0.55 },
+    { url: `${base}/refund-and-cancellation-policy`, lastModified: new Date('2026-10-31T00:00:00+05:30'), priority: 0.55 },
+    { url: `${base}/shipping-and-delivery-policy`, lastModified: new Date('2026-11-01T00:00:00+05:30'), priority: 0.55 },
+    { url: `${base}/grievance-redressal`, lastModified: new Date('2026-11-01T00:00:00+05:30'), priority: 0.55 },
     { url: `${base}/contact`, lastModified: updated, priority: 0.68 },
   ]
 

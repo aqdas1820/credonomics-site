@@ -58,7 +58,7 @@ export const siteSections: SiteSection[] = [
     { href: '/alerts', label: 'Alerts', description: 'Review and manage your alert rules.' },
     { href: '/account', label: 'Account', description: 'Manage sign-in and account access.' },
   ] },
-  { id: 'company', label: 'About & Trust', href: '/about', description: 'Who we are, how we work and how to reach us.', prefixes: ['/about', '/official', '/contact', '/disclosures', '/corrections', '/privacy', '/terms', '/refund-and-cancellation-policy'], links: [
+  { id: 'company', label: 'About & Trust', href: '/about', description: 'Who we are, how we work and how to reach us.', prefixes: ['/about', '/official', '/contact', '/disclosures', '/corrections', '/privacy', '/terms', '/refund-and-cancellation-policy', '/shipping-and-delivery-policy', '/grievance-redressal'], links: [
     { href: '/about', label: 'About CredoNomics', description: 'Learn about the platform and its purpose.' },
     { href: '/official', label: 'Official identity', description: 'Check the official website and channels.' },
     { href: '/contact', label: 'Contact', description: 'Find the published contact options.' },
@@ -67,6 +67,8 @@ export const siteSections: SiteSection[] = [
     { href: '/privacy', label: 'Privacy', description: 'Understand data handling and privacy.' },
     { href: '/terms', label: 'Terms', description: 'Read the conditions for using the platform.' },
     { href: '/refund-and-cancellation-policy', label: 'Refund & cancellation', description: 'Read refund eligibility, payment issue handling and cancellation conditions.' },
+    { href: '/shipping-and-delivery-policy', label: 'Shipping & delivery', description: 'Understand digital content access and the no-physical-shipping policy.' },
+    { href: '/grievance-redressal', label: 'Customer grievances', description: 'Find payment and customer complaint support and escalation details.' },
   ] },
 ]
 

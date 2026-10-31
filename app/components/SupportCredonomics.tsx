@@ -267,6 +267,9 @@ export default function SupportCredonomics() {
           <p className={styles.disclaimer}>
             Not an investment · No returns, tax deduction or preferential research access promised.
           </p>
+          <p className={styles.disclaimer}>
+            Before making any payment, review our <a href="/terms">Terms</a>, <a href="/refund-and-cancellation-policy">Refund &amp; Cancellation Policy</a> and <a href="/shipping-and-delivery-policy">Digital Delivery Policy</a>.
+          </p>
         </div>
       </dialog>
     </>
