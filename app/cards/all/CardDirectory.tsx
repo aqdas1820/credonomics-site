@@ -1,7 +1,7 @@
 'use client'
 
-import { useMemo, useState } from 'react'
-import { ArrowRight, ArrowUpRight, Check, ChevronDown, CircleCheck, CreditCard, ExternalLink, GitCompareArrows, Search, ShieldCheck, SlidersHorizontal, X } from 'lucide-react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { ArrowRight, Check, ChevronDown, CircleCheck, ExternalLink, GitCompareArrows, Search, ShieldCheck, SlidersHorizontal, X } from 'lucide-react'
 import type { CardCategorySlug } from '../../data/card-categories'
 import type { VerifiedRealCard, RealCardTerms } from '../../data/verified-real-cards'
 import { buildDirectoryCompareLink } from '../../data/card-directory-compare'
@@ -31,6 +31,8 @@ function rateLabel(terms: RealCardTerms | undefined) {
 
 export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard[]; issuers: string[] }) {
   const [issuerMenu, setIssuerMenu] = useState(false)
+  const menuRoot = useRef<HTMLDivElement>(null)
+  const issuerButton = useRef<HTMLButtonElement>(null)
   const [query, setQuery] = useState('')
   const [issuer, setIssuer] = useState('All')
   const [category, setCategory] = useState<CardCategorySlug | 'All'>('All')
@@ -49,6 +51,25 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
     : sort === 'verified' ? b.verifiedAt.localeCompare(a.verifiedAt) || a.name.localeCompare(b.name)
     : a.name.localeCompare(b.name)), [cards, query, issuer, category, maxFee, sort])
 
+  useEffect(() => {
+    if (!issuerMenu) return
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIssuerMenu(false)
+        issuerButton.current?.focus()
+      }
+    }
+    const onPointer = (event: PointerEvent) => {
+      if (menuRoot.current && !menuRoot.current.contains(event.target as Node)) setIssuerMenu(false)
+    }
+    document.addEventListener('keydown', onKey)
+    document.addEventListener('pointerdown', onPointer)
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.removeEventListener('pointerdown', onPointer)
+    }
+  }, [issuerMenu])
+
   const selectedCards = cards.filter(card => selectedIds.includes(card.id))
   const compareLink = buildDirectoryCompareLink(selectedCards, category)
   const activeFilters = issuer !== 'All' || category !== 'All' || maxFee !== 'All' || query !== '' || sort !== 'name'
@@ -65,11 +86,11 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
   }
 
   return <section className={styles.directory} aria-label="Credit card reviews">
-    <nav className={styles.subnav} aria-label="Browse card catalogue">
-      <a href="/cards">Best Cards</a>
-      <div className={styles.menuRoot}>
-        <button type="button" aria-expanded={issuerMenu} aria-controls="card-issuer-menu" onClick={() => setIssuerMenu(!issuerMenu)}>
-          Card Issuers <ChevronDown size={15} aria-hidden="true"/>
+    <div className={styles.subnav} aria-label="Filter credit cards by bank">
+      <span className={styles.navHint}>BROWSE BY ISSUER</span>
+      <div className={styles.menuRoot} ref={menuRoot}>
+        <button type="button" ref={issuerButton} aria-expanded={issuerMenu} aria-controls="card-issuer-menu" onClick={() => setIssuerMenu(!issuerMenu)}>
+          {issuer === 'All' ? 'All issuers' : issuer} <ChevronDown size={17} aria-hidden="true"/>
         </button>
         {issuerMenu && <div className={styles.megaMenu} id="card-issuer-menu">
           <div className={styles.megaHeading}><strong>BROWSE CARDS BY ISSUER</strong><button type="button" onClick={() => setIssuerMenu(false)} aria-label="Close issuer menu"><X size={16}/></button></div>
@@ -83,9 +104,8 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
           </div>
         </div>}
       </div>
-      <a href="/cards/compare">Compare Cards</a>
-      <a href="/cards/wallet">My Card Wallet</a>
-    </nav>
+      <span className={styles.navHintSecondary}>Select a bank to narrow the review list.</span>
+    </div>
 
     <div className={styles.directoryHead}>
       <div><span className={styles.kicker}>CARD REVIEWS & COMPARISONS</span><h2>{issuer === 'All' ? 'Explore verified credit cards' : issuer + ' credit cards'}</h2><p>Transparent research with card fees, modeled rewards, and verified issuer references.</p></div>
@@ -93,7 +113,7 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
     </div>
 
     <div className={styles.filterShell}>
-      <label className={styles.search}><Search size={18} aria-hidden="true"/><input aria-label="Search card or bank" type="search" value={query} onChange={e => setQuery(e.target.value)} placeholder="Find a card or bank..."/></label>
+      <div className={styles.search}><Search size={20} aria-hidden="true"/><input aria-label="Search card or bank" type="search" value={query} onChange={e => setQuery(e.target.value)} placeholder="Find a card or bank..."/>{query && <button type="button" onClick={() => setQuery('')} aria-label="Clear card search"><X size={18}/></button>}</div>
       <div className={styles.quickFilters} aria-label="Filter by benefit">{quickCategories.map(item =>
         <button key={item.slug} type="button" aria-pressed={category === item.slug} className={category === item.slug ? styles.activePill : ''} onClick={() => setCategory(item.slug)}>{item.label}</button>
       )}</div>
@@ -109,7 +129,13 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
       {filtered.map(card => {
         const chosenCategory = category === 'All' ? card.categories[0] : card.categories.find(item => item.slug === category)
         const terms = chosenCategory ? card.terms[chosenCategory.slug] : undefined
-        const extra = Object.entries(card.terms).filter(([slug, value]) => slug !== chosenCategory?.slug && value?.note).slice(0, 4)
+        const extra = Object.entries(card.terms).filter(([slug, value]) => slug !== chosenCategory?.slug && value?.note).slice(0, 5)
+        const additional = extra.slice(2)
+        const summary = terms?.monthlyCapRupees
+          ? 'Modeled reward cap: ' + money(terms.monthlyCapRupees) + ' per statement period. Check exclusions.'
+          : card.feeWaiverAnnualSpendRupees
+            ? 'Fee waiver may apply after ' + money(card.feeWaiverAnnualSpendRupees) + ' eligible annual spend, subject to issuer rules.'
+            : 'Eligibility, reward caps and exclusions depend on the issuer’s current terms.'
         const selected = selectedIds.includes(card.id)
         return <article className={styles.reviewCard} key={card.id}>
           <div className={styles.reviewTop}>
@@ -132,14 +158,15 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
             {typeof terms?.loungeVisits === 'number' && terms.loungeVisits > 0 && <div><span>Lounge entitlement in model</span><strong>{terms.loungeVisits} visits <small>· Check access rules</small></strong></div>}
             {typeof terms?.monthlyCapRupees === 'number' && <div><span>Modeled monthly reward cap</span><strong>{money(terms.monthlyCapRupees)}</strong></div>}
           </div>}
-          <div className={styles.highlight}><CircleCheck size={17} aria-hidden="true"/><p><b>Key benefit:</b> {terms?.note || 'Source-linked benefit terms are available in the full CredoNomics review.'}</p></div>
+          <div className={styles.highlight}><CircleCheck size={19} aria-hidden="true"/><p><b>Important condition:</b> {summary}</p></div>
 
           {extra.length > 0 && <div className={styles.highlights}>{extra.slice(0, 2).map(([slug,value]) => <div key={slug}><Check size={15} aria-hidden="true"/><span><b>{card.categories.find(item => item.slug === slug)?.label || slug}:</b> {value?.note}</span></div>)}</div>}
-          <details className={styles.expander}><summary>More benefits and conditions <ChevronDown size={16}/></summary>
-            <ul>{extra.map(([slug, value]) => <li key={slug}><b>{card.categories.find(item => item.slug === slug)?.label || slug}: </b>{value?.note}</li>)}</ul>
+          {(additional.length > 0 || Boolean(card.holderNotice) || Boolean(terms?.note && terms.note.length > 180)) && <details className={styles.expander}><summary>More benefits and conditions <ChevronDown size={17}/></summary>
+            {terms?.note && terms.note.length > 180 && <p><b>Full selected benefit:</b> {terms.note}</p>}
+            {additional.length > 0 && <ul>{additional.map(([slug, value]) => <li key={slug}><b>{card.categories.find(item => item.slug === slug)?.label || slug}: </b>{value?.note}</li>)}</ul>}
             {card.holderNotice && <p><b>Existing-holder notice:</b> {card.holderNotice.detail}</p>}
-            <p>All figures come from existing CredoNomics normalized terms; verify the issuer&apos;s latest Most Important Terms and Conditions before relying on them.</p>
-          </details>
+            <p>Verify the issuer&apos;s latest Most Important Terms and Conditions before relying on any model.</p>
+          </details>}
           <div className={styles.actions}>
             <a className={styles.readReview} href={'/cards/' + card.id}>Read full research</a>
             <a className={styles.issuerCta} href={card.sourceUrl} target="_blank" rel="noopener noreferrer">Official issuer terms <ExternalLink size={15} aria-hidden="true"/></a>
