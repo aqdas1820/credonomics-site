@@ -113,7 +113,7 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
     </div>
 
     <div className={styles.filterShell}>
-      <label className={styles.search}><Search size={20} aria-hidden="true"/><input aria-label="Search card or bank" type="search" value={query} onChange={e => setQuery(e.target.value)} placeholder="Find a card or bank..."/>{query && <button type="button" onClick={() => setQuery('')} aria-label="Clear card search"><X size={18}/></button>}</label>
+      <div className={styles.search}><Search size={20} aria-hidden="true"/><input aria-label="Search card or bank" type="search" value={query} onChange={e => setQuery(e.target.value)} placeholder="Find a card or bank..."/>{query && <button type="button" onClick={() => setQuery('')} aria-label="Clear card search"><X size={18}/></button>}</div>
       <div className={styles.quickFilters} aria-label="Filter by benefit">{quickCategories.map(item =>
         <button key={item.slug} type="button" aria-pressed={category === item.slug} className={category === item.slug ? styles.activePill : ''} onClick={() => setCategory(item.slug)}>{item.label}</button>
       )}</div>
