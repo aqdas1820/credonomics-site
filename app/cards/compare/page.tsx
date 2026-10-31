@@ -1,8 +1,8 @@
 import { GitCompareArrows } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
 import RealCardRanking from '../components/RealCardRanking'
-import CardArtwork from '../components/CardArtwork'
 import UniversalCompare from './UniversalCompare'
+import RealCardSelector from './RealCardSelector'
 import { cardCategories, cardCategoryMap, isCardCategorySlug, type CardCategorySlug } from '../../data/card-categories'
 import { realCardsForCategory } from '../../data/verified-real-cards'
 import styles from '../../core-v4.module.css'
@@ -24,12 +24,14 @@ export default async function Page({
 }: {
   searchParams?: Promise<Record<string, string | string[] | undefined>>
 }) {
-  const searchParams = await searchParamsPromise;
+  const searchParams = await searchParamsPromise
   const categoryParam = typeof searchParams?.category === 'string' ? searchParams.category : 'cashback'
   const category: CardCategorySlug = isCardCategorySlug(categoryParam) ? categoryParam : 'cashback'
   const candidates = realCardsForCategory(category)
-  const requested = arrayValue(searchParams?.cards).flatMap((value) => value.split(',')).filter(Boolean)
-  const selected = (requested.length ? requested : candidates.slice(0, 3).map((card) => card.id)).slice(0, 3)
+  const candidateIds = new Set(candidates.map(card => card.id))
+  const requested = arrayValue(searchParams?.cards).flatMap(value => value.split(',')).filter(Boolean)
+  const validRequested = requested.filter(id => candidateIds.has(id))
+  const selected = (validRequested.length ? validRequested : candidates.slice(0, 3).map(card => card.id)).slice(0, 3)
   const config = cardCategoryMap[category]
 
   return (
@@ -45,28 +47,14 @@ export default async function Page({
       </section>
 
       <section className={`${styles.wrap} ${styles.pageBody}`}>
-        <form className={local.realSelector} method="get">
-          <div>
-            <label htmlFor="category">Category</label>
-            <select id="category" name="category" defaultValue={category}>
-              {cardCategories.map((item) => <option value={item.slug} key={item.slug}>{item.title}</option>)}
-            </select>
-          </div>
-
-          <div className={local.cardChecks}>
-            <span>Select up to three cards currently normalized for {config.shortTitle}</span>
-            {candidates.length > 0 ? candidates.map((card) => (
-              <label key={card.id}>
-                <input type="checkbox" name="cards" value={card.id} defaultChecked={selected.includes(card.id)}/>
-                <CardArtwork cardId={card.id} name={card.name} issuer={card.issuer} size="mini"/>
-                <span><b>{card.name}</b><small>{card.issuer}</small></span>
-              </label>
-            )) : <p>No normalized real cards are available for this category yet.</p>}
-          </div>
-
-          <button type="submit">Compare selected cards</button>
-          <small>Tip: the resulting URL contains the selected cards and can be copied or shared.</small>
-        </form>
+        <RealCardSelector
+          key={`${category}:${selected.join(',')}`}
+          category={category}
+          categoryTitle={config.shortTitle}
+          categories={cardCategories.map(item => ({ slug: item.slug, title: item.title }))}
+          candidates={candidates.map(card => ({ id: card.id, name: card.name, issuer: card.issuer }))}
+          initialSelected={selected}
+        />
 
         {selected.length > 0 && <RealCardRanking categorySlug={category} cardIds={selected}/>}
 
