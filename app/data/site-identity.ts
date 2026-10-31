@@ -6,7 +6,7 @@ export const siteIdentity = {
   description:
     'India-focused financial research platform covering equities, IPO intelligence, mutual-fund portfolio analytics, credit-card economics and transparent decision tools.',
   email: 'hello@credonomics.in',
-  registeredBusinessEmail: 'credonomicsinvest@gmail.com',
+  registeredBusinessEmail: 'support@credonomics.in',
   phoneDisplay: '02562 455327',
   phoneInternational: '+91-2562-455327',
   instagram: 'https://www.instagram.com/credonomics.in/',
