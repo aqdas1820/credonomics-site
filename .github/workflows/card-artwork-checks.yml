@@ -25,3 +25,4 @@ jobs:
       - run: npm ci
       - run: npm run typecheck
       - run: npm test -- tests/unit/card-artwork.test.ts
+      - run: node scripts/cards/verify-card-artwork-urls.mjs
