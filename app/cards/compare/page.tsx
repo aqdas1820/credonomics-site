@@ -1,6 +1,7 @@
 import { GitCompareArrows } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
 import RealCardRanking from '../components/RealCardRanking'
+import CardArtwork from '../components/CardArtwork'
 import UniversalCompare from './UniversalCompare'
 import { cardCategories, cardCategoryMap, isCardCategorySlug, type CardCategorySlug } from '../../data/card-categories'
 import { realCardsForCategory } from '../../data/verified-real-cards'
@@ -57,6 +58,7 @@ export default async function Page({
             {candidates.length > 0 ? candidates.map((card) => (
               <label key={card.id}>
                 <input type="checkbox" name="cards" value={card.id} defaultChecked={selected.includes(card.id)}/>
+                <CardArtwork cardId={card.id} name={card.name} issuer={card.issuer} size="mini"/>
                 <span><b>{card.name}</b><small>{card.issuer}</small></span>
               </label>
             )) : <p>No normalized real cards are available for this category yet.</p>}
