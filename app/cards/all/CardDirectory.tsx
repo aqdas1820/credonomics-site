@@ -138,7 +138,7 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
           <details className={styles.expander}><summary>More benefits and conditions <ChevronDown size={16}/></summary>
             <ul>{extra.map(([slug, value]) => <li key={slug}><b>{card.categories.find(item => item.slug === slug)?.label || slug}: </b>{value?.note}</li>)}</ul>
             {card.holderNotice && <p><b>Existing-holder notice:</b> {card.holderNotice.detail}</p>}
-            <p>All figures come from existing CredoNomics normalized terms; verify the issuer's latest Most Important Terms and Conditions before relying on them.</p>
+            <p>All figures come from existing CredoNomics normalized terms; verify the issuer&apos;s latest Most Important Terms and Conditions before relying on them.</p>
           </details>
           <div className={styles.actions}>
             <a className={styles.readReview} href={'/cards/' + card.id}>Read full research</a>
