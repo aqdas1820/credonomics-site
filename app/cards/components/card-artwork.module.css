@@ -1,66 +1,14 @@
-.shell{
-  --card-glow:#2e8aaa;
-  position:relative;
-  display:block;
-  flex:none;
-  width:min(100%,286px);
-  aspect-ratio:1.586;
-  overflow:hidden;
-  border-radius:14px;
-  isolation:isolate;
-  background:#f0f3f6;
-  border:1px solid rgba(130,157,182,.38);
-  box-shadow:0 12px 26px rgba(5,15,35,.13),inset 0 1px 0 rgba(255,255,255,.45);
-}
-.productImage{
-  position:absolute;
-  display:block;
-  width:100%;
-  height:100%;
-  inset:0;
-  object-fit:contain;
-  object-position:center;
-  background:#f2f4f7;
-}
-.fallback{
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  gap:10px;
-  position:absolute;
-  overflow:hidden;
-  inset:0;
-  padding:12%;
-  color:#eaf5fc;
-  background:linear-gradient(135deg,#162942 3%,#203c60 50%,#145c69 108%);
-}
-.lightArc{
-  position:absolute;
-  width:73%;
-  height:165%;
-  right:-32%;
-  top:-34%;
-  border:2px solid rgba(133,209,234,.28);
-  transform:rotate(28deg);
-  border-radius:50%;
-  box-shadow:0 0 0 35px rgba(45,136,180,.07),0 0 0 73px rgba(58,167,189,.045);
-}
-.issuer{font-size:clamp(8px,1vw,12px);font-weight:750;letter-spacing:.04em;line-height:1.2;max-width:96%;position:relative;z-index:1}
-.cardName{max-width:92%;font-size:clamp(10px,1.25vw,15px);font-weight:700;letter-spacing:-.02em;line-height:1.2;position:relative;z-index:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:auto}
-.preview{position:relative;z-index:1;align-self:start;font-size:8px;letter-spacing:.14em;font-weight:750;color:#bed1e0}
-.hero{width:min(100%,410px);border-radius:20px}
-.hero .issuer{font-size:14px}
-.hero .cardName{font-size:22px}
-.hero .preview{font-size:10px}
+.shell{display:block;position:relative;flex:none;isolation:isolate;width:min(100%,286px);aspect-ratio:1.586;overflow:hidden;border-radius:13px;border:1px solid color-mix(in srgb,var(--cn-border) 66%,#becbd4);background:var(--cn-surface);box-shadow:0 12px 26px rgba(7,17,30,.13)}
+.productImage{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:contain;object-position:center;background:#edf1f5}
+.fallback{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;gap:9px;padding:11%;background:linear-gradient(135deg,#1c3049 0%,#263e57 56%,#174b5b 120%);color:#ecf7fc;text-align:left}
+.fallback:after{content:'';position:absolute;width:52%;height:155%;right:-17%;top:-29%;border-left:1px solid rgba(169,207,222,.13);transform:rotate(28deg);pointer-events:none}
+.mark{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;width:37px;height:37px;border:1px solid rgba(210,234,242,.28);border-radius:10px;background:rgba(212,244,252,.07);color:#cce8ee}
+.fallbackText{position:relative;z-index:1;display:grid;gap:5px;margin-top:auto;min-width:0}
+.issuer{font-size:clamp(8px,.85vw,11px);line-height:1.2;font-weight:800;letter-spacing:.08em;text-transform:uppercase;opacity:.82;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cardName{font-size:clamp(10px,1.25vw,14px);font-weight:720;line-height:1.2;letter-spacing:-.01em;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.preview{position:relative;z-index:1;font-size:7px;font-weight:750;letter-spacing:.11em;color:#bfdae3}
+.hero{width:min(100%,410px);border-radius:19px}.hero .mark{width:47px;height:47px}.hero .issuer{font-size:13px}.hero .cardName{font-size:20px}.hero .preview{font-size:10px}
 .standard{max-width:260px}
-.small{width:112px;border-radius:10px}
-.small .fallback{padding:12%}
-.small .issuer{font-size:7px}
-.small .cardName{font-size:9px}
-.small .preview{font-size:5px}
-.mini{width:67px;border-radius:7px}
-.mini .fallback{padding:9%}
-.mini .issuer{font-size:5px}
-.mini .cardName{font-size:6px}
-.mini .preview{display:none}
+.small{width:112px;border-radius:9px}.small .fallback{padding:10%}.small .mark{width:20px;height:20px;border-radius:5px}.small .mark svg{width:15px;height:15px}.small .issuer{font-size:6px}.small .cardName{font-size:8px}.small .preview{display:none}
+.mini{width:67px;border-radius:6px}.mini .fallback{padding:8%}.mini .mark{width:14px;height:14px;border-radius:3px}.mini .mark svg{width:10px;height:10px}.mini .issuer{font-size:4px}.mini .cardName{font-size:5px}.mini .preview{display:none}
 @media(max-width:650px){.hero{width:min(100%,360px)}.small{width:94px}.mini{width:58px}}
