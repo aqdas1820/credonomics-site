@@ -30,7 +30,7 @@ export async function middleware(request: NextRequest) {
   // Extra best-effort per-instance shield for quota-backed market APIs.
   // Provider caches and a shared WAF/rate limiter remain important.
   const expensiveGet = request.method === 'GET' &&
-    (pathname.startsWith('/api/stocks/') || pathname.startsWith('/api/markets/'))
+    (pathname.startsWith('/api/stocks/') || pathname.startsWith('/api/markets/') || pathname === '/api/public-data')
   const expensivePost = request.method === 'POST' &&
     (pathname === '/api/watchlist/quotes' || pathname === '/api/alerts/evaluate')
   if ((expensiveGet || expensivePost) &&
