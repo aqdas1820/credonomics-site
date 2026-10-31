@@ -259,3 +259,18 @@
 }
 
 /* === CREDONOMICS_V17_5_DENSE_MODULE_MOBILE_END === */
+
+
+/* Card identity now includes visual product art. Preserve ranking readability on mobile. */
+.cardHead{grid-template-columns:46px 112px minmax(0,1fr) auto}
+.cardHead>:nth-child(2){max-width:112px}
+@media(max-width:750px){
+ .cardHead{grid-template-columns:40px 94px minmax(0,1fr);gap:10px}
+ .cardHead .identity{grid-column:3}
+ .cardHead .netValue{grid-column:3;text-align:left}
+ .cardHead .netValue b{font-size:20px}
+}
+@media(max-width:410px){
+ .cardHead{grid-template-columns:38px 94px minmax(0,1fr);gap:8px}
+ .cardHead .identity h4{font-size:15px}
+}
