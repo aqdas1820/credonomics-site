@@ -24,10 +24,12 @@ describe('credit card product artwork', () => {
     const cards = ['flipkart-sbi','flipkart-axis','tata-neu-infinity-hdfc','indianoil-axis']
     cards.forEach(id => expect(getCardArtwork(id)).toBeDefined())
     expect(getCardArtwork('indianoil-hdfc')).toBeUndefined()
+    expect(getCardArtwork('indigo-axis')?.url).not.toBe(getCardArtwork('indigo-axis-premium')?.url)
+    expect(getCardArtwork('hsbc-live-plus')?.credit).toContain('HSBC')
   })
 
   it('does not claim an official photo when a variant has no matching asset', () => {
-    for (const id of ['amazon-pay-icici','freecharge-plus-axis','bpcl-sbi','first-power','sbi-miles','indianoil-hdfc', 'axis-cashback', 'airtel-axis', 'hsbc-live-plus', 'tata-neu-infinity-sbi', 'tata-neu-plus-sbi', 'indigo-axis', 'indigo-axis-premium']) {
+    for (const id of ['amazon-pay-icici','freecharge-plus-axis','bpcl-sbi','first-power','sbi-miles','indianoil-hdfc', 'axis-cashback', 'airtel-axis', 'tata-neu-infinity-sbi', 'tata-neu-plus-sbi']) {
       expect(cardIds).toContain(id)
       expect(getCardArtwork(id)).toBeUndefined()
     }
