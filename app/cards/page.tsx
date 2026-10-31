@@ -8,6 +8,7 @@ import { verifiedRealCards, realCardsForCategory } from '../data/verified-real-c
 import styles from '../core-v4.module.css'
 import local from './cards.module.css'
 import CardDiscovery from './components/CardDiscovery'
+import CardArtwork from './components/CardArtwork'
 
 export const metadata = {
   title: 'Compare Indian Credit Cards',
@@ -15,6 +16,8 @@ export const metadata = {
     'Compare real Indian credit cards by cashback, fuel, travel, shopping, UPI, utilities, dining, forex and other categories using transparent annual-value calculations.',
   alternates: { canonical: '/cards' },
 }
+
+const featuredCardIds = ['cashback-sbi', 'axis-ace', 'hsbc-live-plus', 'millennia-hdfc', 'flipkart-sbi', 'indigo-axis']
 
 const primarySlugs: CardCategorySlug[] = [
   'cashback',
@@ -66,6 +69,22 @@ export default function CardsPage() {
           <article><BarChart3 size={19}/><small>Issuer research universe</small><strong>{issuerRegistry.length}</strong><p>Issuer targets tracked by the coverage and verification workflow.</p></article>
           <article><Gauge size={19}/><small>Category engines</small><strong>{cardCategories.length}</strong><p>Different formulas for different card use-cases.</p></article>
         </div>
+
+        <section className={local.gallery} aria-labelledby="featured-cards-gallery">
+          <div className={local.registryHead}>
+            <div><span>Real credit cards · visual directory</span><h2 id="featured-cards-gallery">See the cards before comparing the numbers.</h2></div>
+            <a href="/cards/all">View all {verifiedRealCards.length} cards <ArrowRight size={15}/></a>
+          </div>
+          <div className={local.galleryGrid}>
+            {featuredCardIds.map((id) => verifiedRealCards.find((card) => card.id === id)).filter((card) => card !== undefined).map((card) => (
+              <a key={card.id} href={'/cards/' + card.id}>
+                <CardArtwork cardId={card.id} name={card.name} issuer={card.issuer}/>
+                <small>{card.issuer}</small><h3>{card.name}</h3><b>View card research →</b>
+              </a>
+            ))}
+          </div>
+          <p className={local.galleryNote}>Card artwork is indicative; variants and design can change. Each financial comparison uses separately verified issuer terms. <a href="/cards/all">Browse all cards and artwork status.</a></p>
+        </section>
 
         <section className={local.categorySection}>
           <div className={local.registryHead}>
