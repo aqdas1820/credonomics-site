@@ -16,13 +16,16 @@
 .realSelector select{height:43px;padding:0 11px;border:1px solid #dce6ee;border-radius:9px;background:#f4f8fb;color:#0a2035;font:inherit;font-size:11px}
 :global(html[data-theme='dark']) .realSelector select{border-color:#20394f;background:#10273b;color:#edf7ff}
 .cardChecks{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}.cardChecks>span{grid-column:1/-1}.cardChecks label{min-height:62px;padding:10px;display:flex;align-items:flex-start;gap:8px;border:1px solid #dce6ee;border-radius:10px;background:#f4f8fb;text-transform:none;letter-spacing:0;cursor:pointer}.cardChecks input{margin-top:2px}.cardChecks label>span{display:grid}.cardChecks b{color:#0a2035;font-size:10px}.cardChecks small{margin-top:2px;color:#617488;font-size:8px}
+.cardChecks label[data-selected='true']{border-color:#35a7c6;box-shadow:0 0 0 1px rgba(53,167,198,.18);background:#f0fbfd}
+.cardChecks label[data-disabled='true']{opacity:.52;cursor:not-allowed}
 :global(html[data-theme='dark']) .cardChecks label{border-color:#20394f;background:#10273b}:global(html[data-theme='dark']) .cardChecks b{color:#edf7ff}
-.realSelector>button{margin-top:14px;min-height:40px;padding:0 14px;border:0;border-radius:9px;background:#1b66ed;color:#fff;font-size:10px;font-weight:850;cursor:pointer}.realSelector>small{display:block;margin-top:8px;color:#617488;font-size:8px}
-@media(max-width:760px){.cardChecks{grid-template-columns:1fr}}
-
+:global(html[data-theme='dark']) .cardChecks label[data-selected='true']{border-color:#35d0ea;background:#0d2938}
+.selectorFooter{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:14px}.selectorFooter button{min-height:43px;padding:0 14px;border:0;border-radius:9px;background:#081827;color:#fff;font-size:10px;font-weight:850;cursor:pointer}.selectorFooter button:disabled{opacity:.45;cursor:not-allowed}.selectorFooter span{font-size:10px;font-weight:750;color:#617488}
+:global(html[data-theme='dark']) .selectorFooter button{background:#f4f7fa;color:#081827}
+.realSelector>small{display:block;margin-top:8px;color:#617488;font-size:8px;line-height:1.55}
+.realSelector select:focus-visible,.cardChecks input:focus-visible,.selectorFooter button:focus-visible{outline:2px solid #35a7c6;outline-offset:2px}
+@media(max-width:760px){.cardChecks{grid-template-columns:1fr}.selectorFooter{align-items:stretch}.selectorFooter button{width:100%}.selectorFooter span{width:100%}}
 
 /* CredoNomics V13 compare selector */
 .realSelector{padding:22px;border-radius:18px;box-shadow:0 8px 26px rgba(8,24,39,.03)}
 .cardChecks label{min-height:68px;padding:11px;border-radius:11px}
-.realSelector>button{min-height:43px;border-radius:9px;background:#081827}
-:global(html[data-theme='dark']) .realSelector>button{background:#f4f7fa;color:#081827}
