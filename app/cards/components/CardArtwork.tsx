@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { CreditCard } from 'lucide-react'
 import { getCardArtwork } from '../../data/card-artwork'
 import styles from './card-artwork.module.css'
 
@@ -15,26 +14,25 @@ type Props = {
 }
 
 /**
- * Show exact-card curated artwork. When the remote file is blocked or fails,
- * keep a clearly labelled illustration rather than a wrong product image.
+ * Artwork and illustrative fallback must NEVER be painted together.
+ * A photo may contain transparent pixels, so the old overlapping card
+ * illustration caused duplicated names, faux chips and visual noise.
  */
 export default function CardArtwork({
   cardId, name, issuer, size = 'standard', priority = false, className = '',
 }: Props) {
-  const [failed, setFailed] = useState(false)
   const source = getCardArtwork(cardId)
-  const showPhoto = Boolean(source && !failed)
+  const [failed, setFailed] = useState(false)
+  const photo = Boolean(source && !failed)
 
   return (
-    <span className={[styles.shell, styles[size], className].filter(Boolean).join(' ')}
-      role="img" aria-label={showPhoto ? name + ' product artwork' : name + ', illustrative card placeholder'}>
-      <span className={styles.card} aria-hidden="true">
-        <span className={styles.issuer}>{issuer}</span>
-        <span className={styles.chip}/>
-        <span className={styles.cardName}>{name}</span>
-        <span className={styles.demo}><CreditCard size={11}/> Card image not yet verified</span>
-      </span>
-      {showPhoto && source && (
+    <span
+      className={[styles.shell, styles[size], className].filter(Boolean).join(' ')}
+      role="img"
+      data-artwork-state={photo ? 'product' : 'illustration'}
+      aria-label={photo ? name + ' card artwork' : name + ' — illustrative preview, not an issuer photograph'}
+    >
+      {photo && source ? (
         <img
           className={styles.productImage}
           src={source.url}
@@ -44,6 +42,13 @@ export default function CardArtwork({
           referrerPolicy="no-referrer"
           onError={() => setFailed(true)}
         />
+      ) : (
+        <span className={styles.fallback} aria-hidden="true">
+          <span className={styles.lightArc}/>
+          <span className={styles.issuer}>{issuer}</span>
+          <span className={styles.cardName}>{name}</span>
+          <span className={styles.preview}>ILLUSTRATIVE PREVIEW</span>
+        </span>
       )}
     </span>
   )
