@@ -1,0 +1,29 @@
+name: Public finance data checks
+on:
+  pull_request:
+    paths:
+      - 'app/api/public-data/**'
+      - 'app/tools/live-data/**'
+      - 'tests/unit/public-data.test.ts'
+      - 'middleware.ts'
+      - 'app/tools/page.tsx'
+  push:
+    branches:
+      - feat/public-data-finance-tools-20261101
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test -- tests/unit/public-data.test.ts
