@@ -166,6 +166,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:hsbc-arbitrage-exit-load-october-2026",
+    "title": "HSBC Arbitrage: shorter exit-load period has a systematic-investment exception",
+    "description": "For eligible new investments from 27 October, the 0.25% exit-load period falls from one month to 15 days. Earlier systematic enrolments retain their original load rules.",
+    "href": "/research/watch/hsbc-arbitrage-exit-load-october-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-10-31",
+    "keywords": "HSBC Arbitrage: shorter exit-load period has a systematic-investment exception hsbc-arbitrage-exit-load-october-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:hsbc-live-plus-myntra-offer-october-2026",
     "title": "HSBC Live+ Myntra: temporary 10% cashback ends on 31 October",
     "description": "The Myntra promotion shares the ₹1,200 billing-cycle cap with other accelerated categories. Standard 1.5% resumes after the offer period.",
@@ -520,7 +531,7 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "route:/research/watch",
     "title": "Research Watch: Verified Changes & Action Dates",
-    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch. Latest publication: 30 October 2026, with scope and action dates.",
+    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch. Latest publication: 31 October 2026, with scope and action dates.",
     "href": "/research/watch",
     "category": "Research",
     "source": "Research Desk",

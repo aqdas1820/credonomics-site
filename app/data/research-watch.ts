@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-10-30'
+export const WATCH_CHECKED_AT = '2026-10-31'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,18 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'hsbc-arbitrage-exit-load-october-2026',
+    title: 'HSBC Arbitrage: shorter exit-load period has a systematic-investment exception',
+    summary: 'For eligible new investments from 27 October, the 0.25% exit-load period falls from one month to 15 days. Earlier systematic enrolments retain their original load rules.',
+    category: 'Mutual funds', checkedAt: '2026-10-31', announcementDate: '2026-10-26', eventDate: '2026-10-27', dateLabel: 'Revised exit load effective · prospective scope below',
+    source: 'https://www.assetmanagement.hsbc.co.in/assets/documents/mutual-funds/en/ae626d60-d286-4ef3-a0fb-6db75813b7a9/notice-cum-addendum-change-in-exit-load%20in-hsbc-arbitrage-fund.pdf', sourceLabel: 'HSBC Mutual Fund: change in HSBC Arbitrage Fund exit load', sourceLocation: 'Notice dated 26 October 2026; page 1 comparison table and prospective/systematic-transaction paragraph; page 2 date',
+    additionalSources: [{ url: 'https://www.assetmanagement.hsbc.co.in/en/mutual-funds/investor-resources', label: 'HSBC investor resources: notice listed on 26 October 2026' }],
+    audience: 'HSBC Arbitrage Fund investors checking redemption or switch-out costs, particularly those with systematic transactions enrolled before 27 October 2026.',
+    facts: ['The notice changes the exit-load period, not the 0.25% rate. Previously, redemption or switch-out on or before one month from allotment attracted 0.25%; after one month it was nil. The revised schedule charges 0.25% on or before 15 days from allotment and nil after 15 days.', 'The change applies prospectively to investments made on or after 27 October 2026. It does not retrospectively replace the load terms for earlier investments.', 'Systematic transactions enrolled before the effective date retain the load structure prevalent at enrolment. The notice expressly says the revision has no impact on them; a later instalment date alone does not establish the new 15-day rule.', 'Withdrawals under SWP may also attract exit load like other redemptions. The notice retains no-load exceptions for switches between plans/options within this scheme, units allotted through IDCW reinvestment and the segregated portfolio. Other SID/KIM terms remain unchanged.'],
+    actions: ['Check the investment allotment date and, for systematic transactions, the enrolment date and applicable original load terms before placing a redemption or switch-out.', 'Ask HSBC Mutual Fund or its registrar to confirm the applicable load for each unit lot and systematic registration. Do not assume every instalment after 27 October qualifies for the new schedule.', 'Use the official SID/KIM and your transaction records when estimating proceeds; exit-load treatment alone does not establish tax treatment or make a redemption suitable.'],
+    limits: 'Effective at the 31 October check; announced 26 October and effective 27 October are separate dates. This concerns HSBC Arbitrage Fund only. Nil exit load is not a tax exemption, guaranteed return or recommendation to redeem. No refund entitlement, retrospective repricing or change to other HSBC schemes is inferred. Rankings are unchanged.',
+  },
   {
     slug: 'sgb-2021-22-series-vii-redemption-price-november-2026',
     title: 'SGB 2021-22 Series VII: ₹14,167 per unit for 2 November premature redemption',
