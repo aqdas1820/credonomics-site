@@ -3,6 +3,8 @@ import { ArrowRight, Building2, ExternalLink, Layers3, ShieldCheck } from 'lucid
 import SiteFrame from '../../components/SiteFrame'
 import ResearchWatchBrief from '../../components/ResearchWatchBrief'
 import CardLifecycleNotice from '../components/CardLifecycleNotice'
+import CardArtwork from '../components/CardArtwork'
+import { getCardArtwork } from '../../data/card-artwork'
 import CategoryComparator from '../components/CategoryComparator'
 import RealCardRanking from '../components/RealCardRanking'
 import {
@@ -154,6 +156,13 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <p className={styles.pageHeroLead}>
           Source-backed card research showing the terms currently used by CredoNomics category rankings.
         </p>
+        <div className={local.cardHeroArt}>
+          <CardArtwork cardId={card.id} name={card.name} issuer={card.issuer} size="hero" priority/>
+          <div><b>{getCardArtwork(card.id) ? 'Product card artwork' : 'Illustrative card placeholder'}</b>
+            <p>Card designs and networks can vary by version. Financial terms are separately verified from official issuers.</p>
+            {getCardArtwork(card.id) && <a href={getCardArtwork(card.id)!.creditUrl} target="_blank" rel="noreferrer">Artwork credit: {getCardArtwork(card.id)!.credit} ↗</a>}
+          </div>
+        </div>
         <div className={local.cardDetailActions}>
           {issuerSlug && <a className={styles.secondaryButton} href={`/cards/issuer/${issuerSlug}`}><Building2 size={14}/> {card.issuer} coverage</a>}
           <a className={styles.primaryButton} href={compareHref}>Compare this card <ArrowRight size={15}/></a>
@@ -213,6 +222,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             <div className={local.relatedGrid}>
               {related.map((candidate) => (
                 <a href={`/cards/${candidate.id}`} key={candidate.id}>
+                  <CardArtwork cardId={candidate.id} name={candidate.name} issuer={candidate.issuer} size="small"/>
                   <small>{candidate.issuer}</small><h3>{candidate.name}</h3>
                   <span>{categoriesForCard(candidate).slice(0, 3).map(categoryLabel).join(' · ')}</span>
                 </a>
