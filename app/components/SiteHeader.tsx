@@ -26,8 +26,18 @@ export default function SiteHeader() {
   const sectionButtons = useRef<Record<string, HTMLButtonElement | null>>({})
   const menuButton = useRef<HTMLButtonElement>(null)
   const header = useRef<HTMLElement>(null)
+  const primaryNavigation = useRef<HTMLElement>(null)
 
   useEffect(() => { setOpen(false); setExpanded(null) }, [pathname])
+
+  useEffect(() => {
+    if (!open) return
+    const frame = window.requestAnimationFrame(() => {
+      primaryNavigation.current?.querySelector<HTMLElement>('a, button')?.focus()
+    })
+    return () => window.cancelAnimationFrame(frame)
+  }, [open])
+
   useEffect(() => {
     if (!open && !expanded) return
     const onKey = (event: KeyboardEvent) => {
@@ -39,9 +49,17 @@ export default function SiteHeader() {
     const onPointer = (event: PointerEvent) => {
       if (!header.current?.contains(event.target as Node)) { setOpen(false); setExpanded(null) }
     }
+    const onFocus = (event: FocusEvent) => {
+      if (!header.current?.contains(event.target as Node)) { setOpen(false); setExpanded(null) }
+    }
     window.addEventListener('keydown', onKey)
     window.addEventListener('pointerdown', onPointer)
-    return () => { window.removeEventListener('keydown', onKey); window.removeEventListener('pointerdown', onPointer) }
+    window.addEventListener('focusin', onFocus)
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      window.removeEventListener('pointerdown', onPointer)
+      window.removeEventListener('focusin', onFocus)
+    }
   }, [open, expanded])
 
   const currentSection = sectionForPath(pathname)
@@ -72,6 +90,7 @@ export default function SiteHeader() {
           </Link>
 
           <nav
+            ref={primaryNavigation}
             id="cn-primary-navigation"
             className={`${navStyles.navigation} ${open ? navStyles.open : ''}`}
             aria-label="Primary navigation"
@@ -80,7 +99,15 @@ export default function SiteHeader() {
               <div className={navStyles.group} key={section.id}>
                 <div className={navStyles.groupHeading}>
                   <Link href={section.href} className={currentSection?.id === section.id ? navStyles.active : undefined} aria-current={pathname === section.href ? 'page' : undefined} onClick={() => { setOpen(false); setExpanded(null) }}>{section.label}</Link>
-                  <button ref={node => { sectionButtons.current[section.id] = node }} type="button" aria-label={`Explore ${section.label}`} aria-expanded={expanded === section.id} aria-controls={`nav-${section.id}`} onClick={() => setExpanded(value => value === section.id ? null : section.id)}><ChevronDown size={13} aria-hidden="true"/></button>
+                  <button
+                    ref={node => { sectionButtons.current[section.id] = node }}
+                    type="button"
+                    aria-label={`${expanded === section.id ? 'Close' : 'Open'} ${section.label} menu`}
+                    aria-haspopup="true"
+                    aria-expanded={expanded === section.id}
+                    aria-controls={`nav-${section.id}`}
+                    onClick={() => setExpanded(value => value === section.id ? null : section.id)}
+                  ><ChevronDown size={13} aria-hidden="true"/></button>
                 </div>
                 <div id={`nav-${section.id}`} className={navStyles.dropdown} hidden={expanded !== section.id}>
                   <p>{section.description}</p>
@@ -105,7 +132,7 @@ export default function SiteHeader() {
               ref={menuButton}
               type="button"
               className={styles.globalMenuButton}
-              aria-label="Toggle navigation"
+              aria-label={open ? 'Close navigation' : 'Open navigation'}
               aria-expanded={open}
               aria-controls="cn-primary-navigation"
               onClick={() => { setOpen(value => !value); setExpanded(null) }}
