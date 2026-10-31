@@ -39,14 +39,14 @@ export const cardArtworkSources: Partial<Record<string, CardArtworkSource>> = {
     creditUrl: 'https://www.hsbc.bank.in/credit-cards/products/live-plus/',
   },
   'millennia-hdfc': {
-    url: 'https://www.pickmycard.in/cards/hdfc-millennia.webp',
-    credit: 'PickMyCard product artwork',
-    creditUrl: 'https://www.pickmycard.in/',
+    url: 'https://www.rewardmatrix.in/cards/hdfc-millennia.png',
+    credit: 'RewardMatrix product artwork',
+    creditUrl: 'https://www.rewardmatrix.in/credit-cards/reviews/hdfc-millennia',
   },
   'tata-neu-infinity-hdfc': {
-    url: 'https://finoted.com/wp-content/uploads/2025/04/Tata-Neu-Infinity-HDFC-Bank-Credit-Card-1024x650.png.webp',
-    credit: 'Finoted card illustration',
-    creditUrl: 'https://finoted.com/credit-cards/tata-neu-infinity-credit-card/',
+    url: 'https://www.rewardmatrix.in/cards/tata-neu-infinity-hdfc.png',
+    credit: 'RewardMatrix product artwork',
+    creditUrl: 'https://www.rewardmatrix.in/credit-cards/reviews/tata-neu-infinity-hdfc',
   },
   'tata-neu-infinity-sbi': {
     url: 'https://cdn.sanity.io/images/p4af87yj/old-production/de62d8822ee79d92bb7bbf4ec79f4270ac2bb1d6-2304x2314.jpg?auto=format&fit=clip&q=75&w=1000',
@@ -79,11 +79,6 @@ export const cardArtworkSources: Partial<Record<string, CardArtworkSource>> = {
     url: 'https://s3.eu-west-1.amazonaws.com/latest.images.pinkerala.com/news/full/2022/06/axis-bank-and-indian-oil-launch-co-branded-rupay-contactless-credit-card-1.jpg',
     credit: 'IndianOil Axis Bank product artwork',
     creditUrl: 'https://www.axis.bank.in/cards/credit-card/indianoil-axis-bank-credit-card',
-  },
-  'indianoil-hdfc': {
-    url: 'https://images.financialexpressdigital.com/2024/05/HDFC-Bank-IndianOil-Card.jpg?quality=100',
-    credit: 'Financial Express product artwork',
-    creditUrl: 'https://www.financialexpress.com/money/best-fuel-credit-card-earn-up-to-50-litres-of-free-fuel-annually-with-this-hdfc-card-know-other-benefits-3473717/',
   },
   'sbi-miles-prime': {
     url: 'https://mag-misc.s3.ap-south-1.amazonaws.com/images/hero-sbi-miles-prime-credit-card-review.png',
