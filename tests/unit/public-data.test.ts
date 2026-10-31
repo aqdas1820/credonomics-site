@@ -4,7 +4,7 @@ import { GET } from '../../app/api/public-data/route'
 
 const request = (query: string) => new NextRequest('https://www.credonomics.in/api/public-data?' + query)
 const mock = (body: unknown, status = 200) => {
-  const fetchMock = vi.fn(async () => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json' } }))
+  const fetchMock = vi.fn(async (_url: string, _init?: unknown) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json' } }))
   vi.stubGlobal('fetch', fetchMock)
   return fetchMock
 }
