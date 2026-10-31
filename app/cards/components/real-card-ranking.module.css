@@ -274,3 +274,30 @@
  .cardHead{grid-template-columns:38px 94px minmax(0,1fr);gap:8px}
  .cardHead .identity h4{font-size:15px}
 }
+
+
+/* CredoNomics 2026 readability pass: minimum readable supporting text. */
+.heading>div:first-child>span{font-size:11px}
+.heading p{font-size:14px;line-height:1.7}
+.verifiedStamp small,.rankHeader span{font-size:11px}
+.verifiedStamp b,.rankHeader b{font-size:12px}
+.profileTop span,.profileSaved{font-size:11px}
+.profileTop button{font-size:12px}
+.profile>label>span{font-size:12px}
+.profile>label>small,.profileNote p{font-size:11px}
+.rankHeader small{font-size:11px}
+.identity h4{font-size:19px}
+.identity small{font-size:12px}
+.network{font-size:10px}
+.netValue small{font-size:10px}
+.metrics span{font-size:11px}
+.metrics b{font-size:13px}
+.chips span{font-size:11px}
+.note,.disclaimer p{font-size:12px}
+.source>span,.sourceLinks a{font-size:11px}
+@media(max-width:650px){
+  .identity h4{font-size:17px}
+  .metrics span{font-size:10px}
+  .metrics b{font-size:12px}
+  .sourceLinks a{font-size:12px}
+}

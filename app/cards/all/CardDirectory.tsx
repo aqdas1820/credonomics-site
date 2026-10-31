@@ -1,23 +1,17 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import { Search } from 'lucide-react'
+import { ArrowUpRight, GitCompareArrows, RotateCcw, Search, ShieldCheck, SlidersHorizontal } from 'lucide-react'
 import type { CardCategorySlug } from '../../data/card-categories'
 import type { VerifiedRealCard } from '../../data/verified-real-cards'
-import styles from './card-directory.module.css'
 import CardArtwork from '../components/CardArtwork'
+import styles from './card-directory.module.css'
 
 type DirectoryCard = VerifiedRealCard & {
   categories: Array<{ slug: CardCategorySlug; label: string }>
 }
 
-export default function CardDirectory({
-  cards,
-  issuers,
-}: {
-  cards: DirectoryCard[]
-  issuers: string[]
-}) {
+export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard[]; issuers: string[] }) {
   const [query, setQuery] = useState('')
   const [issuer, setIssuer] = useState('All')
   const [category, setCategory] = useState('All')
@@ -26,79 +20,118 @@ export default function CardDirectory({
 
   const categories = useMemo(() => {
     const values = new Map<string, string>()
-    cards.forEach((card) => card.categories.forEach((item) => values.set(item.slug, item.label)))
+    cards.forEach(card => card.categories.forEach(item => values.set(item.slug, item.label)))
     return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1]))
   }, [cards])
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
-    return cards.filter((card) => {
-      const queryOk =
-        !q ||
-        card.name.toLowerCase().includes(q) ||
-        card.issuer.toLowerCase().includes(q) ||
-        card.categories.some((item) => item.label.toLowerCase().includes(q))
-      const issuerOk = issuer === 'All' || card.issuer === issuer
-      const categoryOk = category === 'All' || card.categories.some((item) => item.slug === category)
-      const feeOk = feeLimit === 'All' || card.annualFeeRupees <= Number(feeLimit)
-      return queryOk && issuerOk && categoryOk && feeOk
-    }).sort((a, b) => sort === 'fee' ? a.annualFeeRupees - b.annualFeeRupees || a.name.localeCompare(b.name) : sort === 'verified' ? b.verifiedAt.localeCompare(a.verifiedAt) || a.name.localeCompare(b.name) : a.name.localeCompare(b.name))
+    return cards.filter(card => {
+      const searchable = [card.name, card.issuer, ...card.categories.map(item => item.label)].join(' ').toLowerCase()
+      return (!q || searchable.includes(q))
+        && (issuer === 'All' || card.issuer === issuer)
+        && (category === 'All' || card.categories.some(item => item.slug === category))
+        && (feeLimit === 'All' || card.annualFeeRupees <= Number(feeLimit))
+    }).sort((a, b) =>
+      sort === 'fee'
+        ? a.annualFeeRupees - b.annualFeeRupees || a.name.localeCompare(b.name)
+        : sort === 'verified'
+          ? b.verifiedAt.localeCompare(a.verifiedAt) || a.name.localeCompare(b.name)
+          : a.name.localeCompare(b.name)
+    )
   }, [cards, query, issuer, category, feeLimit, sort])
 
+  const reset = () => { setQuery(''); setIssuer('All'); setCategory('All'); setFeeLimit('All'); setSort('name') }
+  const activeFilters = query !== '' || issuer !== 'All' || category !== 'All' || feeLimit !== 'All' || sort !== 'name'
+
   return (
-    <div className={styles.directory}>
+    <section className={styles.directory} aria-label="Verified credit card catalogue">
+      <div className={styles.intro}>
+        <div>
+          <span className={styles.eyebrow}>CREDONOMICS / VERIFIED CARD LIBRARY</span>
+          <h2>Find a card worth comparing.</h2>
+          <p>Clean product visuals, source-backed terms and fee details.</p>
+        </div>
+        <a className={styles.compareLink} href="/cards/compare"><GitCompareArrows size={17} aria-hidden="true"/> Compare cards</a>
+      </div>
+
       <div className={styles.controls}>
         <label className={styles.search}>
-          <Search size={16}/>
+          <Search size={19} aria-hidden="true"/>
           <input
             value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search card or issuer…"
+            onChange={event => setQuery(event.target.value)}
+            placeholder="Search by card, bank or benefit"
             aria-label="Search credit cards"
+            type="search"
           />
         </label>
-        <select value={issuer} onChange={(event) => setIssuer(event.target.value)} aria-label="Filter by issuer">
-          <option>All</option>
-          {issuers.map((value) => <option key={value}>{value}</option>)}
-        </select>
-        <select value={category} onChange={(event) => setCategory(event.target.value)} aria-label="Filter by category">
-          <option value="All">All categories</option>
-          {categories.map(([slug, label]) => <option value={slug} key={slug}>{label}</option>)}
-        </select>
-        <select value={feeLimit} onChange={event => setFeeLimit(event.target.value)} aria-label="Maximum annual fee">
-          <option value="All">Any annual fee</option><option value="0">₹0 annual fee</option><option value="500">Up to ₹500/year</option><option value="1000">Up to ₹1,000/year</option><option value="1500">Up to ₹1,500/year</option>
-        </select>
-        <select value={sort} onChange={event => setSort(event.target.value)} aria-label="Sort cards">
-          <option value="name">Card name A–Z</option><option value="fee">Lowest annual fee</option><option value="verified">Latest verification date</option>
-        </select>
+        <div className={styles.filterGroup}>
+          <label><span>Bank / issuer</span>
+            <select value={issuer} onChange={event => setIssuer(event.target.value)}>
+              <option value="All">All banks</option>
+              {issuers.map(value => <option key={value} value={value}>{value}</option>)}
+            </select>
+          </label>
+          <label><span>Benefit</span>
+            <select value={category} onChange={event => setCategory(event.target.value)}>
+              <option value="All">All categories</option>
+              {categories.map(([slug, label]) => <option value={slug} key={slug}>{label}</option>)}
+            </select>
+          </label>
+          <label><span>Annual fee</span>
+            <select value={feeLimit} onChange={event => setFeeLimit(event.target.value)}>
+              <option value="All">Any fee</option>
+              <option value="0">Lifetime free</option>
+              <option value="500">Up to ₹500</option>
+              <option value="1000">Up to ₹1,000</option>
+              <option value="1500">Up to ₹1,500</option>
+            </select>
+          </label>
+          <label><span>Sort by</span>
+            <select value={sort} onChange={event => setSort(event.target.value)}>
+              <option value="name">Card name A–Z</option>
+              <option value="fee">Lowest annual fee</option>
+              <option value="verified">Recently verified</option>
+            </select>
+          </label>
+        </div>
       </div>
 
       <div className={styles.summary} role="status">
-        <b>{filtered.length}</b> of {cards.length} normalized cards shown · Fees before GST or waivers · <a href="/cards/wallet">Build your card wallet →</a>
+        <div className={styles.count}><SlidersHorizontal size={16} aria-hidden="true"/><b>{filtered.length}</b> of {cards.length} cards <span>· Fees before GST or waiver</span></div>
+        {activeFilters && <button className={styles.reset} type="button" onClick={reset}><RotateCcw size={14}/> Reset filters</button>}
       </div>
 
       <div className={styles.grid}>
-        {filtered.map((card) => (
-          <a href={`/cards/${card.id}`} className={styles.card} key={card.id}>
-            <small>{card.issuer}</small>
-            <div className={styles.artwork}><CardArtwork cardId={card.id} name={card.name} issuer={card.issuer}/></div>
-            <h2>{card.name}</h2>
-            {card.holderNotice && <p><b>{card.holderNotice.label}</b> · Existing holders: check migration before relying on these terms.</p>}
-            <div className={styles.categories}>
-              {card.categories.slice(0, 5).map((item) => <span key={item.slug}>{item.label}</span>)}
+        {filtered.map(card => (
+          <a href={'/cards/' + card.id} className={styles.card} key={card.id}>
+            <div className={styles.visual}>
+              <CardArtwork cardId={card.id} name={card.name} issuer={card.issuer}/>
             </div>
-            <div className={styles.meta}>
-              <span>Annual fee <b>₹{card.annualFeeRupees.toLocaleString('en-IN')}</b></span>
-              <span>Verified <b>{card.verifiedAt}</b></span>
+            <div className={styles.content}>
+              <span className={styles.issuer}>{card.issuer}</span>
+              <h3>{card.name}</h3>
+              <div className={styles.categories}>
+                {card.categories.slice(0, 3).map(item => <span key={item.slug}>{item.label}</span>)}
+              </div>
+              {card.holderNotice && <p className={styles.notice}>{card.holderNotice.label} · Check current terms</p>}
+              <div className={styles.metrics}>
+                <span><small>Annual fee</small><b>{card.annualFeeRupees === 0 ? 'Lifetime free' : '₹' + card.annualFeeRupees.toLocaleString('en-IN')}</b></span>
+                <span><small>Terms checked</small><b>{card.verifiedAt}</b></span>
+              </div>
+              <span className={styles.cta}>Explore card <ArrowUpRight size={16} aria-hidden="true"/></span>
             </div>
-            <strong>View full research →</strong>
           </a>
         ))}
       </div>
 
-      {filtered.length === 0 && (
-        <div className={styles.empty}>No normalized card matches the selected filters. <button type="button" onClick={() => { setQuery(''); setIssuer('All'); setCategory('All'); setFeeLimit('All'); setSort('name') }}>Reset filters</button></div>
-      )}
-    </div>
+      {filtered.length === 0 && <div className={styles.empty}>
+        <h3>No cards match those filters</h3>
+        <p>Try a different bank, category or fee range.</p>
+        <button type="button" onClick={reset}>Clear filters</button>
+      </div>}
+      <p className={styles.policy}><ShieldCheck size={15}/> Illustrative previews are labelled when an exact product image is unavailable. Card visuals are for identification; issuer documents govern actual terms. <a href="/methodology">Our research method</a>.</p>
+    </section>
   )
 }
