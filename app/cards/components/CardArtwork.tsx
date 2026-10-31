@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { CreditCard } from 'lucide-react'
 import { getCardArtwork } from '../../data/card-artwork'
 import styles from './card-artwork.module.css'
 
@@ -13,43 +14,26 @@ type Props = {
   className?: string
 }
 
-/**
- * Artwork and illustrative fallback must NEVER be painted together.
- * A photo may contain transparent pixels, so the old overlapping card
- * illustration caused duplicated names, faux chips and visual noise.
- */
-export default function CardArtwork({
-  cardId, name, issuer, size = 'standard', priority = false, className = '',
-}: Props) {
+/** Product artwork and the illustrative fallback are mutually exclusive. */
+export default function CardArtwork({ cardId, name, issuer, size = 'standard', priority = false, className = '' }: Props) {
   const source = getCardArtwork(cardId)
   const [failed, setFailed] = useState(false)
-  const photo = Boolean(source && !failed)
+  const hasPhoto = Boolean(source && !failed)
 
-  return (
-    <span
-      className={[styles.shell, styles[size], className].filter(Boolean).join(' ')}
-      role="img"
-      data-artwork-state={photo ? 'product' : 'illustration'}
-      aria-label={photo ? name + ' card artwork' : name + ' — illustrative preview, not an issuer photograph'}
-    >
-      {photo && source ? (
-        <img
-          className={styles.productImage}
-          src={source.url}
-          alt=""
-          loading={priority ? 'eager' : 'lazy'}
-          decoding="async"
-          referrerPolicy="no-referrer"
-          onError={() => setFailed(true)}
-        />
-      ) : (
-        <span className={styles.fallback} aria-hidden="true">
-          <span className={styles.lightArc}/>
-          <span className={styles.issuer}>{issuer}</span>
-          <span className={styles.cardName}>{name}</span>
-          <span className={styles.preview}>ILLUSTRATIVE PREVIEW</span>
-        </span>
-      )}
-    </span>
-  )
+  return <span className={[styles.shell, styles[size], className].filter(Boolean).join(' ')}
+    role="img" data-artwork-state={hasPhoto ? 'product' : 'illustration'}
+    aria-label={hasPhoto ? name + ' product artwork' : name + ', illustrative placeholder (not an official card photo)'}>
+    {hasPhoto && source ? (
+      <img src={source.url} className={styles.productImage} alt="" decoding="async"
+        loading={priority ? 'eager' : 'lazy'} referrerPolicy="no-referrer"
+        onError={() => setFailed(true)}/>
+    ) : (
+      <span className={styles.fallback} aria-hidden="true">
+        <span className={styles.mark}><CreditCard size={27} strokeWidth={1.45}/></span>
+        <span className={styles.fallbackText}><span className={styles.issuer}>{issuer}</span>
+          <span className={styles.cardName}>{name}</span></span>
+        <span className={styles.preview}>ARTWORK UNAVAILABLE</span>
+      </span>
+    )}
+  </span>
 }
