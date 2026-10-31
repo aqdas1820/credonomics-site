@@ -16,3 +16,18 @@
 .identityCard{padding:25px;border-radius:20px;box-shadow:0 10px 30px rgba(8,24,39,.035)}
 .channelGrid a{min-height:155px;padding:20px;border-radius:18px}
 .disambiguation{padding:19px;border-radius:18px}
+
+
+/* Cashfree website identity review: readable registered business facts. */
+.registeredBusiness{margin-top:16px;padding:clamp(18px,3vw,28px);border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+.registeredBusinessHeader{display:flex;align-items:flex-start;gap:12px}
+.registeredBusinessHeader svg{flex:0 0 auto;color:var(--teal)}
+.registeredBusinessHeader h2{margin:0;font-size:clamp(19px,2.4vw,25px);line-height:1.25}
+.registeredBusinessHeader p{margin:7px 0 0;color:var(--muted);font-size:14px;line-height:1.65}
+.registeredBusinessGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:22px 0 0}
+.registeredBusinessGrid>div{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--soft);min-width:0}
+.registeredBusinessGrid dt{font-size:12px;color:var(--muted);font-weight:700}
+.registeredBusinessGrid dd{margin:6px 0 0;font-size:15px;font-weight:750;overflow-wrap:anywhere;line-height:1.5}
+.registeredBusiness a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+.registeredBusinessNote{margin:18px 0 0;font-size:13px;color:var(--muted);line-height:1.7}
+@media(max-width:640px){.registeredBusinessGrid{grid-template-columns:1fr}.registeredBusiness{padding:18px}}

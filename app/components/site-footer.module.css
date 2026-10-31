@@ -409,3 +409,10 @@
 
 /* One shared information architecture across every footer destination. */
 .footerGrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:30px}.brandColumn{grid-column:1/-1;max-width:700px}.brandDescription{max-width:650px}.linkColumn .columnTitle{color:#f4f8fb;font-size:13px;font-weight:800;margin-bottom:8px}.linkColumn a{font-size:12px;line-height:1.6;min-height:36px}.linkColumn a:focus-visible,.footnoteRow a:focus-visible{outline:2px solid #35d0ea;outline-offset:3px}.footnoteRow a{color:#35d0ea}@media(max-width:900px){.footerGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}}@media(max-width:400px){.footerGrid{grid-template-columns:1fr}.brandColumn{grid-column:auto}}
+
+
+/* Business KYC identity is accessible from every public page. */
+.legalDetails{display:flex;flex-wrap:wrap;align-items:center;gap:10px 25px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.08);color:#a9b8c7;font-size:12px;line-height:1.7}
+.legalDetails strong{color:#f2f7ff;font-weight:750}
+.legalDetails a{color:#35d0ea!important;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.legalDetails a:focus-visible{outline:2px solid #35d0ea;outline-offset:3px}

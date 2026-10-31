@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styles from './site-footer.module.css'
 import { siteSections } from '../data/site-navigation'
+import { siteIdentity } from '../data/site-identity'
 
 export default function SiteFooter() {
   return (
@@ -46,6 +47,13 @@ export default function SiteFooter() {
             <Link className={styles.columnTitle} href={section.href}>{section.label}</Link>
             {section.links.slice(0, section.id === 'company' ? 8 : 4).map(link => <Link href={link.href} key={link.href}>{link.label}</Link>)}
           </nav>)}
+        </section>
+
+        <section className={styles.legalDetails} aria-label="Registered business identity">
+          <span><strong>Registered business name:</strong> {siteIdentity.alternateName}</span>
+          <span><strong>Business type:</strong> Sole proprietorship</span>
+          <span><strong>Registered email:</strong> <a href={`mailto:${siteIdentity.registeredBusinessEmail}`}>{siteIdentity.registeredBusinessEmail}</a></span>
+          <Link href="/official">Business identity &amp; contact details</Link>
         </section>
 
         <section className={styles.footnoteRow}>

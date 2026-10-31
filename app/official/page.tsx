@@ -7,7 +7,7 @@ import local from './official.module.css'
 export const metadata = {
   title: 'Official CredoNomics Website & Channels',
   description:
-    'Verify the official CredoNomics website, email, Instagram account and contact information.',
+    'Verify the registered business name, sole proprietorship details, contact emails and official CredoNomics channels.',
   alternates: { canonical: '/official' },
 }
 
@@ -42,6 +42,25 @@ export default function OfficialPage() {
             <p>India-focused credit-card intelligence and financial decision tools.</p>
           </div>
         </div>
+
+        <section className={local.registeredBusiness} aria-labelledby="legal-business-identity-title">
+          <div className={local.registeredBusinessHeader}>
+            <ShieldCheck size={22} aria-hidden="true" />
+            <div>
+              <h2 id="legal-business-identity-title">Registered business &amp; legal identity</h2>
+              <p>Business information for customers, payment-provider verification and official correspondence.</p>
+            </div>
+          </div>
+          <dl className={local.registeredBusinessGrid}>
+            <div><dt>Registered business / trade name</dt><dd>{siteIdentity.alternateName}</dd></div>
+            <div><dt>Legal constitution</dt><dd>Sole proprietorship</dd></div>
+            <div><dt>Business location</dt><dd>Dhule, Maharashtra, India</dd></div>
+            <div><dt>Registered business contact email</dt><dd><a href={`mailto:${siteIdentity.registeredBusinessEmail}`}>{siteIdentity.registeredBusinessEmail}</a></dd></div>
+            <div><dt>Customer and payment support</dt><dd><a href="mailto:support@credonomics.in">support@credonomics.in</a></dd></div>
+            <div><dt>Principal website activity</dt><dd>Financial education, informational research, comparison tools and digital publishing</dd></div>
+          </dl>
+          <p className={local.registeredBusinessNote}>CredoNomics Investment Solutions is a sole-proprietor business name, not a claim of private limited company incorporation or SEBI registration. For the scope of our services and regulatory disclosures, see <a href="/disclosures">Disclosures</a>.</p>
+        </section>
 
         <div className={local.channelGrid}>
           <a href={siteIdentity.canonicalUrl}>

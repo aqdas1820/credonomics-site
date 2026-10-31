@@ -1,4 +1,5 @@
-import { Instagram, Mail, Phone } from 'lucide-react'
+import { Instagram, Mail, Phone, ShieldCheck } from 'lucide-react'
+import { siteIdentity } from '../data/site-identity'
 import SiteFrame from '../components/SiteFrame'
 import styles from '../core-v4.module.css'
 
@@ -31,6 +32,16 @@ export default function ContactPage() {
             <span className={styles.iconTile}><Phone size={21}/></span>
             <small>Phone</small><h2>02562 455327</h2><p>General CredoNomics contact number.</p><strong>Call →</strong>
           </a>
+        </div>
+
+        <div className={styles.notice}>
+          <ShieldCheck size={22} aria-hidden="true" />
+          <div>
+            <h2>Registered business &amp; contact details</h2>
+            <p><strong>Registered business name:</strong> {siteIdentity.alternateName} · <strong>Business type:</strong> Sole proprietorship · Dhule, Maharashtra, India.</p>
+            <p><strong>Registered business email:</strong> <a href={`mailto:${siteIdentity.registeredBusinessEmail}`}>{siteIdentity.registeredBusinessEmail}</a></p>
+            <p>For customer support and payment issues, please write to <a href="mailto:support@credonomics.in">support@credonomics.in</a>. <a href="/official">See our official business identity</a>.</p>
+          </div>
         </div>
       </section>
     </SiteFrame>
