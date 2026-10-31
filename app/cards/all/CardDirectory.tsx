@@ -39,6 +39,8 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
     return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1]))
   }, [cards])
 
+  const artworkCount = useMemo(() => cards.filter(card => Boolean(getCardArtwork(card.id))).length, [cards])
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
     return cards.filter(card => {
@@ -78,7 +80,7 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
   }
 
   return (
-    <section className={styles.directory} aria-label="Verified credit card catalogue">
+    <section className={[styles.directory, selectedIds.length ? styles.hasCompareTray : ''].filter(Boolean).join(' ')} aria-label="Verified credit card catalogue">
       <header className={styles.intro}>
         <div>
           <span className={styles.eyebrow}>CREDONOMICS · THE CARD LIBRARY</span>
@@ -127,15 +129,19 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
           </label>
         </div>
         <div className={styles.filterFooter}>
-          <label className={styles.imageToggle}>
-            <input type="checkbox" checked={imagesOnly} onChange={event => setImagesOnly(event.target.checked)}/>
-            Show only cards with product artwork
-          </label>
+          {artworkCount > 0 ? (
+            <label className={styles.imageToggle}>
+              <input type="checkbox" checked={imagesOnly} onChange={event => setImagesOnly(event.target.checked)}/>
+              Show only cards with source-and-rights-cleared artwork
+            </label>
+          ) : (
+            <span className={styles.artworkNote}>Product art appears only after exact-source and reuse-rights clearance.</span>
+          )}
           {hasFilters && <button type="button" className={styles.reset} onClick={reset}><RotateCcw size={14}/> Reset filters</button>}
         </div>
       </div>
 
-      <div className={styles.resultBar} role="status">
+      <div className={styles.resultBar} role="status" aria-live="polite">
         <span><SlidersHorizontal size={16} aria-hidden="true"/><b>{filtered.length}</b> of {cards.length} cards</span>
         <span className={styles.resultHint}>Select 2–3 cards to compare · Card fees before GST</span>
       </div>
@@ -145,13 +151,14 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
           const selected = selectedIds.includes(card.id)
           const primary = category === 'All' ? card.categories[0] : card.categories.find(item => item.slug === category)
           const note = primary ? card.terms[primary.slug]?.note : undefined
+          const hasPublishedArtwork = Boolean(getCardArtwork(card.id))
           return (
             <article key={card.id} className={styles.card} data-selected={selected ? 'true' : 'false'}>
               <div className={styles.mediaArea}>
                 <a href={'/cards/' + card.id} className={styles.imageLink} aria-label={'Explore ' + card.name}>
                   <CardArtwork cardId={card.id} name={card.name} issuer={card.issuer}/>
                 </a>
-                <span className={styles.visualStatus}>{getCardArtwork(card.id) ? 'PRODUCT ARTWORK' : 'ILLUSTRATIVE PREVIEW'}</span>
+                <span className={styles.visualStatus}>{hasPublishedArtwork ? 'SOURCE-CLEARED PRODUCT ART' : 'ARTWORK UNAVAILABLE'}</span>
               </div>
 
               <div className={styles.cardBody}>
@@ -183,10 +190,10 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
         <h3>No matching cards</h3><p>Try a different bank, fee range or category.</p><button type="button" onClick={reset}>Clear filters</button>
       </div>}
 
-      <p className={styles.disclaimer}><ShieldCheck size={17}/> Only exact, individually curated card artwork is shown as product imagery. Illustrations are explicitly labelled. Benefit estimates, fees and card availability should be rechecked against the linked issuer terms. <a href="/methodology">Research methodology</a>.</p>
+      <p className={styles.disclaimer}><ShieldCheck size={17}/> Product imagery is shown only after exact-source and reuse-rights clearance. Otherwise CredoNomics uses a clearly labelled neutral illustration. Benefit estimates, fees and card availability should be rechecked against the linked issuer terms. <a href="/methodology">Research methodology</a>.</p>
 
       {selectedIds.length > 0 && (
-        <aside className={styles.compareTray} aria-label="Selected cards to compare">
+        <aside className={styles.compareTray} aria-label="Selected cards to compare" aria-live="polite">
           <div className={styles.trayHeader}>
             <div><strong>{selectedIds.length} of 3 selected</strong><span>Compare source-linked card terms</span></div>
             <button type="button" onClick={() => { setSelectedIds([]); setSelectionError('') }} aria-label="Clear compared cards"><X size={18}/></button>
