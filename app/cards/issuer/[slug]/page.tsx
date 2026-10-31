@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { ArrowRight, Building2, Database, ShieldCheck } from 'lucide-react'
 import SiteFrame from '../../../components/SiteFrame'
+import CardArtwork from '../../components/CardArtwork'
 import { categoriesForCard } from '../../../data/card-intelligence'
 import { cardCategoryMap } from '../../../data/card-categories'
 import { issuerBySlug, issuerMatchesName, issuerRegistry } from '../../../data/issuer-registry'
@@ -57,6 +58,7 @@ export default async function IssuerPage({ params }: { params: Promise<{ slug: s
             <div className={local.issuerCardList}>
               {cards.map((card) => (
                 <a href={`/cards/${card.id}`} key={card.id}>
+                  <CardArtwork cardId={card.id} name={card.name} issuer={card.issuer} size="small"/>
                   <small>{card.issuer}</small>
                   <h3>{card.name}</h3>
                   <div>
