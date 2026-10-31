@@ -166,7 +166,7 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
             {additional.length > 0 && <ul>{additional.map(([slug, value]) => <li key={slug}><b>{card.categories.find(item => item.slug === slug)?.label || slug}: </b>{value?.note}</li>)}</ul>}
             {card.holderNotice && <p><b>Existing-holder notice:</b> {card.holderNotice.detail}</p>}
             <p>Verify the issuer&apos;s latest Most Important Terms and Conditions before relying on any model.</p>
-          </details>
+          </details>}
           <div className={styles.actions}>
             <a className={styles.readReview} href={'/cards/' + card.id}>Read full research</a>
             <a className={styles.issuerCta} href={card.sourceUrl} target="_blank" rel="noopener noreferrer">Official issuer terms <ExternalLink size={15} aria-hidden="true"/></a>
