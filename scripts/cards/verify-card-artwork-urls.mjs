@@ -21,3 +21,14 @@ async function inspect(url) {
 for (let i = 0; i < urls.length; i += 4) results.push(...await Promise.all(urls.slice(i, i + 4).map(inspect)))
 for (const r of results) console.log([r.ok ? 'OK' : 'REVIEW', r.host, r.status, r.type || r.error || ''].join(' | '))
 console.log('Reachable image links:', results.filter(r => r.ok).length, '/', results.length)
+
+// Candidate replacements: audit only, not published until both status and content-type pass.
+const candidates = [
+  'https://www.rewardmatrix.in/cards/hdfc-millennia.png',
+  'https://www.rewardmatrix.in/cards/tata-neu-infinity-hdfc.png',
+  'https://www.rewardmatrix.in/cards/indianoil-hdfc.png',
+]
+for (const candidate of candidates) {
+  const result = await inspect(candidate)
+  console.log('CANDIDATE | ' + new URL(candidate).pathname + ' | ' + (result.ok ? 'OK' : 'REVIEW') + ' | ' + result.status + ' | ' + (result.type || result.error || ''))
+}
