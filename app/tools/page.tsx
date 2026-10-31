@@ -1,4 +1,4 @@
-import { ArrowUpRight, Calculator, CreditCard, Database, Landmark } from 'lucide-react'
+import { ArrowLeftRight, ArrowUpRight, Calculator, Coins, CreditCard, Database, Landmark, Search } from 'lucide-react'
 import SiteFrame from '../components/SiteFrame'
 import { publicTools } from '../data/tool-registry'
 import { quickCalculators } from '../data/quick-calculators'
@@ -14,6 +14,12 @@ const groups = [
   { id: 'research-workspaces', title: 'Research workspaces', description: 'Open the full research application when you need holdings or issue-level analysis.', items: [
     { href: '/tools/mf-portfolio-tracker', title: 'Mutual Fund Portfolio Intelligence', description: 'Inspect scheme holdings and compare disclosed portfolio periods.', kind: 'Disclosed portfolio data', icon: Database },
     { href: '/ipo/analyzer', title: 'IPO Analyzer', description: 'Study issue economics, financial quality and valuation inputs.', kind: 'Issue research', icon: Landmark },
+  ] },
+  { id: 'live-data', title: 'Free public-data lookups', description: 'Read-only data from named providers. Check source date, freshness and limitations before acting.', items: [
+    { href: '/tools/live-data#mf-nav', title: 'Mutual Fund NAV Lookup', description: 'Search Indian schemes and retrieve the latest published NAV.', kind: 'MFapi.in · Published NAV', icon: Database },
+    { href: '/tools/live-data#bank-ifsc', title: 'Bank IFSC Lookup', description: 'Check bank and branch information for an Indian IFSC code.', kind: 'Razorpay · Branch data', icon: Search },
+    { href: '/tools/live-data#currency-converter', title: 'Currency Converter', description: 'Convert amounts using dated daily FX reference rates.', kind: 'Frankfurter · Reference rates', icon: ArrowLeftRight },
+    { href: '/tools/live-data#metals', title: 'Gold & Silver Value Calculator', description: 'Estimate INR metal value from delayed indicative international spot data.', kind: 'goldprice.dev · Delayed', icon: Coins },
   ] },
   { id: 'card-decisions', title: 'Compare real cards', description: 'These workspaces use the normalized issuer dataset. Open the card research to check merchant conditions and verification dates.', items: [
     { href: '/cards/compare', title: 'Card comparison', description: 'Compare up to three normalized cards with the same spending profile.', kind: 'Source-linked card terms', icon: CreditCard },
