@@ -1,15 +1,13 @@
-import { CreditCard, Database } from 'lucide-react'
+import { ChevronRight, ShieldCheck } from 'lucide-react'
 import SiteFrame from '../../components/SiteFrame'
 import { categoriesForCard, categoryLabel } from '../../data/card-intelligence'
 import { verifiedRealCards } from '../../data/verified-real-cards'
-import styles from '../../core-v4.module.css'
-import local from '../cards.module.css'
 import CardDirectory from './CardDirectory'
+import styles from './review-page.module.css'
 
 export const metadata = {
-  title: 'All Verified Credit Cards',
-  description:
-    'Browse all real Indian credit cards currently normalized in the CredoNomics verified comparison database.',
+  title: 'Compare Credit Cards in India | CredoNomics Card Reviews',
+  description: 'Browse source-linked Indian credit card research with clear annual fees, reward terms, lounge access and direct issuer source links.',
   alternates: { canonical: '/cards/all' },
 }
 
@@ -17,51 +15,40 @@ export default function AllCardsPage() {
   const cards = verifiedRealCards
     .slice()
     .sort((a, b) => a.issuer.localeCompare(b.issuer) || a.name.localeCompare(b.name))
-    .map((card) => ({
+    .map(card => ({
       ...card,
-      categories: categoriesForCard(card).map((slug) => ({ slug, label: categoryLabel(slug) })),
+      categories: categoriesForCard(card).map(slug => ({ slug, label: categoryLabel(slug) })),
     }))
-
-  const issuers = [...new Set(cards.map((card) => card.issuer))].sort()
+  const issuers = [...new Set(cards.map(card => card.issuer))].sort()
 
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'CredoNomics Verified Credit Card Directory',
+    name: 'CredoNomics Source-Linked Credit Card Review Directory',
     numberOfItems: cards.length,
     itemListElement: cards.map((card, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       name: card.name,
-      url: `https://www.credonomics.in/cards/${card.id}`,
+      url: 'https://www.credonomics.in/cards/' + card.id,
     })),
   }
 
-  return (
-    <SiteFrame>
-      <section className={`${styles.wrap} ${styles.pageHero}`}>
-        <div className={styles.breadcrumbs}><a href="/">Home</a><span>/</span><a href="/cards">Cards</a><span>/</span><span>All cards</span></div>
-        <span className={styles.pageKicker}><CreditCard size={14}/> Verified card directory</span>
-        <h1>Browse every normalized <span>credit card.</span></h1>
-        <p className={styles.pageHeroLead}>
-          This directory contains the real-card records currently ready for CredoNomics rankings.
-          It grows only as official-source terms are normalized and reviewed.
-        </p>
-      </section>
-
-      <section className={`${styles.wrap} ${styles.pageBody} ${local.shell}`}>
-        <div className={local.statGrid}>
-          <article><Database size={19}/><small>Normalized cards</small><strong>{cards.length}</strong><p>Current source-linked records.</p></article>
-          <article><CreditCard size={19}/><small>Issuers represented</small><strong>{issuers.length}</strong><p>Issuers with at least one normalized card.</p></article>
-          <article><Database size={19}/><small>Directory policy</small><strong>Verified</strong><p>Automated discovery records do not enter this directory directly.</p></article>
-        </div>
-
-        <div style={{ marginTop: 18 }}>
-          <CardDirectory cards={cards} issuers={issuers}/>
-        </div>
-
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      </section>
-    </SiteFrame>
-  )
+  return <SiteFrame>
+    <main className={styles.page}>
+      <div className={styles.wrap}>
+        <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+          <a href="/">Home</a><ChevronRight size={13}/><a href="/cards">Credit Cards</a><ChevronRight size={13}/><span>All Reviews</span>
+        </nav>
+        <header className={styles.heading}>
+          <p className={styles.eyebrow}>THE CREDONOMICS CARD GUIDE</p>
+          <h1>Compare Indian Credit Cards</h1>
+          <p>Independent, source-linked card research. Examine actual fees, conditions and rewards before choosing what suits your spending.</p>
+          <div className={styles.standards}><span><ShieldCheck size={15}/> Verified issuer sources</span><span>{cards.length} normalized products</span><span>{issuers.length} banks &amp; issuers</span></div>
+        </header>
+        <CardDirectory cards={cards} issuers={issuers}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
+      </div>
+    </main>
+  </SiteFrame>
 }
