@@ -1,0 +1,27 @@
+name: Credit card artwork verification
+on:
+  pull_request:
+    paths:
+      - 'app/cards/**'
+      - 'app/data/card-artwork.ts'
+      - 'tests/unit/card-artwork.test.ts'
+  push:
+    branches:
+      - feat/card-product-images-20261101
+permissions:
+  contents: read
+jobs:
+  artwork:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test -- tests/unit/card-artwork.test.ts
