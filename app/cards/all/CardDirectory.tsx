@@ -64,15 +64,17 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
   }
 
   function toggleCard(id: string) {
+    if (selectedIds.includes(id)) {
+      setSelectedIds(selectedIds.filter(value => value !== id))
+      setSelectionError('')
+      return
+    }
+    if (selectedIds.length >= 3) {
+      setSelectionError('Select a maximum of three cards. Remove one to add another.')
+      return
+    }
+    setSelectedIds([...selectedIds, id])
     setSelectionError('')
-    setSelectedIds(current => {
-      if (current.includes(id)) return current.filter(value => value !== id)
-      if (current.length === 3) {
-        setSelectionError('Select a maximum of three cards. Remove one to add another.')
-        return current
-      }
-      return [...current, id]
-    })
   }
 
   return (
