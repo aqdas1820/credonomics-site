@@ -233,3 +233,18 @@
 @media(max-width:850px){.galleryGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:590px){.galleryGrid{grid-template-columns:1fr}.cardHeroArt{align-items:flex-start;flex-direction:column}.cardHeroArt>div{min-width:0}.galleryGrid>a{padding:18px}}
 @media(prefers-reduced-motion:reduce){.galleryGrid>a{transition:none}.galleryGrid>a:hover{transform:none}}
+
+
+/* Credit-card editorial V2: visual consistency with the new card directory. */
+.gallery{margin:52px 0 36px}
+.galleryGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.galleryGrid>a{display:grid;grid-template-columns:44% minmax(0,1fr);grid-template-rows:auto auto 1fr;gap:0 18px;align-items:center;min-height:230px;padding:20px;border:1px solid var(--cn-border);background:var(--cn-surface);border-radius:20px;text-align:left;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.galleryGrid>a:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--cn-cyan) 48%,var(--cn-border));box-shadow:0 18px 45px rgba(4,19,38,.09)}
+.galleryGrid>a>span:first-child{grid-column:1;grid-row:1/4;max-width:100%;width:100%;margin:0}
+.galleryGrid>a>small{grid-column:2;grid-row:1;align-self:end;font-size:10px;color:var(--cn-cyan);font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.galleryGrid>a h3{grid-column:2;grid-row:2;align-self:start;font-size:clamp(18px,1.7vw,24px);line-height:1.2;letter-spacing:-.025em;margin:8px 0 13px;text-align:left;color:var(--cn-text)}
+.galleryGrid>a b{grid-column:2;grid-row:3;align-self:end;margin:0;padding:13px 0 0;font-size:12px;font-weight:800;color:var(--cn-blue)}
+.galleryNote{font-size:12px;line-height:1.7;margin-top:18px;color:var(--cn-muted)}
+@media(max-width:1040px){.galleryGrid{grid-template-columns:1fr}.galleryGrid>a{grid-template-columns:39% 1fr}}
+@media(max-width:590px){.galleryGrid>a{grid-template-columns:1fr;grid-template-rows:auto auto auto auto;gap:0;min-height:0;padding:20px}.galleryGrid>a>span:first-child{grid-column:1;grid-row:1;margin:0 auto 18px;max-width:250px}.galleryGrid>a>small{grid-column:1;grid-row:2}.galleryGrid>a h3{grid-column:1;grid-row:3;font-size:20px}.galleryGrid>a b{grid-column:1;grid-row:4}}
+@media(prefers-reduced-motion:reduce){.galleryGrid>a{transition:none}.galleryGrid>a:hover{transform:none}}
