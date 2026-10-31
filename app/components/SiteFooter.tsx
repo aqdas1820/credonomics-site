@@ -44,7 +44,7 @@ export default function SiteFooter() {
 
           {siteSections.map(section => <nav className={styles.linkColumn} aria-label={`${section.label} footer links`} key={section.id}>
             <Link className={styles.columnTitle} href={section.href}>{section.label}</Link>
-            {section.links.slice(0, section.id === 'company' ? 7 : 4).map(link => <Link href={link.href} key={link.href}>{link.label}</Link>)}
+            {section.links.slice(0, section.id === 'company' ? 8 : 4).map(link => <Link href={link.href} key={link.href}>{link.label}</Link>)}
           </nav>)}
         </section>
 
