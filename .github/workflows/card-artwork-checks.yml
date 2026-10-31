@@ -4,10 +4,13 @@ on:
     paths:
       - 'app/cards/**'
       - 'app/data/card-artwork.ts'
+      - 'app/data/card-directory-compare.ts'
+      - 'tests/unit/card-directory-compare.test.ts'
       - 'tests/unit/card-artwork.test.ts'
   push:
     branches:
       - feat/card-product-images-20261101
+      - feat/credit-cards-editorial-v2-20261101
 permissions:
   contents: read
 jobs:
@@ -24,5 +27,5 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run typecheck
-      - run: npm test -- tests/unit/card-artwork.test.ts
+      - run: npm test -- tests/unit/card-artwork.test.ts tests/unit/card-directory-compare.test.ts
       - run: node scripts/cards/verify-card-artwork-urls.mjs

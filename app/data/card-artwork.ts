@@ -10,6 +10,21 @@
  */
 export type CardArtworkSource = { url: string; credit: string; creditUrl: string; variant?: 'family' }
 export const cardArtworkSources: Partial<Record<string, CardArtworkSource>> = {
+  'hsbc-live-plus': {
+    url: 'https://www.hsbc.co.in/content/dam/hsbc/in/images/16-9/21398-live-plus-visa-infinite-2000X1125.jpg',
+    credit: 'HSBC India official card product visual',
+    creditUrl: 'https://www.hsbc.co.in/credit-cards/products/live-plus/',
+  },
+  'indigo-axis': {
+    url: 'https://www.goindigo.in/content/dam/s6web/in/en/assets/partner/axis-credit-card/Axis-CVP-MWeb-Base.jpg',
+    credit: 'IndiGo official Axis Bank base-card visual',
+    creditUrl: 'https://www.goindigo.in/loyalty/partners/axis-credit-card.html',
+  },
+  'indigo-axis-premium': {
+    url: 'https://www.goindigo.in/content/dam/s6web/in/en/assets/partner/axis-credit-card/Axis-CVP-MWeb-Premium.jpg',
+    credit: 'IndiGo official Axis Bank premium-card visual',
+    creditUrl: 'https://www.goindigo.in/loyalty/partners/axis-credit-card.html',
+  },
   'cashback-sbi': {
     url: 'https://www.refpo.com/logos/sbi-cashback-credit-card.webp',
     credit: 'Refpo product artwork',
