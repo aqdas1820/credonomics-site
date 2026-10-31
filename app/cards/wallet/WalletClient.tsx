@@ -5,6 +5,7 @@ import { cardCategories, type CardCategorySlug } from '../../data/card-categorie
 import { CARD_WALLET_KEY, parseWallet } from '../../data/card-wallet'
 import type { VerifiedRealCard } from '../../data/verified-real-cards'
 import RealCardRankingClient from '../components/RealCardRankingClient'
+import CardArtwork from '../components/CardArtwork'
 import styles from '../components/card-discovery.module.css'
 
 export default function WalletClient({ cards }: { cards: VerifiedRealCard[] }) {
@@ -44,6 +45,7 @@ export default function WalletClient({ cards }: { cards: VerifiedRealCard[] }) {
       <div className={styles.choices} aria-busy={!loaded}>
         {matches.map(card => <label key={card.id} className={styles.choice}>
           <input type="checkbox" checked={ids.includes(card.id)} disabled={!loaded} onChange={() => save(ids.includes(card.id) ? ids.filter(id => id !== card.id) : [...ids, card.id])}/>
+          <CardArtwork cardId={card.id} name={card.name} issuer={card.issuer} size="mini"/>
           <span><b>{card.name}</b><small>{card.issuer} · ₹{card.annualFeeRupees.toLocaleString('en-IN')}/year before tax or waiver</small></span>
         </label>)}
       </div>

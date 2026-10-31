@@ -5,6 +5,7 @@ import { Search } from 'lucide-react'
 import type { CardCategorySlug } from '../../data/card-categories'
 import type { VerifiedRealCard } from '../../data/verified-real-cards'
 import styles from './card-directory.module.css'
+import CardArtwork from '../components/CardArtwork'
 
 type DirectoryCard = VerifiedRealCard & {
   categories: Array<{ slug: CardCategorySlug; label: string }>
@@ -80,6 +81,7 @@ export default function CardDirectory({
         {filtered.map((card) => (
           <a href={`/cards/${card.id}`} className={styles.card} key={card.id}>
             <small>{card.issuer}</small>
+            <div className={styles.artwork}><CardArtwork cardId={card.id} name={card.name} issuer={card.issuer}/></div>
             <h2>{card.name}</h2>
             {card.holderNotice && <p><b>{card.holderNotice.label}</b> · Existing holders: check migration before relying on these terms.</p>}
             <div className={styles.categories}>

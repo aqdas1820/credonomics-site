@@ -21,3 +21,11 @@
 .card h2{font-size:18px}
 
 .summary a{color:var(--blue);font-weight:700}.controls input:focus-visible,.controls select:focus-visible,.empty button:focus-visible{outline:2px solid var(--teal);outline-offset:3px}.empty button{padding:10px 14px;min-height:44px;border:1px solid var(--line);border-radius:9px;color:var(--ink);background:var(--surface);cursor:pointer}
+
+
+/* Product visuals: real card art where reviewed, explicit illustrated fallback otherwise. */
+.artwork{display:flex;align-items:center;justify-content:center;margin:12px 0 17px;min-height:130px}
+.artwork>span{max-width:245px}
+.grid .card{min-height:394px}
+.grid .card h2{margin-top:2px}
+@media(max-width:560px){.grid .card{min-height:385px}.artwork{min-height:150px}}

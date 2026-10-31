@@ -6,6 +6,7 @@ import { cardCategoryMap, type CardCategorySlug } from '../../data/card-categori
 import { REAL_CARD_DATA_DATE, type VerifiedRealCard } from '../../data/verified-real-cards'
 import styles from './real-card-ranking.module.css'
 import CardLifecycleNotice from './CardLifecycleNotice'
+import CardArtwork from './CardArtwork'
 import { analyseCard, defaultProfile, type Profile } from '../../data/real-card-ranking'
 
 const money = new Intl.NumberFormat('en-IN', {
@@ -245,6 +246,7 @@ export default function RealCardRankingClient({ categorySlug, cards }: { categor
                 <article className={`${styles.rankCard} ${index === 0 ? styles.winner : ''}`} key={result.card.id}>
                   <div className={styles.cardHead}>
                     <div className={styles.rankNo}>{index === 0 ? <Trophy size={16}/> : `#${index + 1}`}</div>
+                    <CardArtwork cardId={result.card.id} name={result.card.name} issuer={result.card.issuer} size="small"/>
                     <div className={styles.identity}>
                       {result.terms.network && <span className={styles.network}>{result.terms.network}</span>}
                       <h4><a href={`/cards/${result.card.id}`}>{result.card.name}</a></h4>
