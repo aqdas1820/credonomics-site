@@ -4,7 +4,9 @@
  * Remote product artwork is controlled by third parties. If missing, blocked, changed,
  * or insufficiently attributable, CardArtwork renders a labelled neutral illustration.
  *
- * Only isolated, product-specific artwork belongs in the public gallery.\n * Editorial banners, multi-product collages and unclear variants are excluded.\n * Image review: 2026-11-01. Recheck provider rights and URLs periodically.
+ * Only isolated, product-specific artwork belongs in the public gallery.
+ * Editorial banners, multi-product collages and unclear variants are excluded.
+ * Image review: 2026-11-01. Recheck provider rights and URLs periodically.
  */
 export type CardArtworkSource = { url: string; credit: string; creditUrl: string; variant?: 'family' }
 export const cardArtworkSources: Partial<Record<string, CardArtworkSource>> = {
