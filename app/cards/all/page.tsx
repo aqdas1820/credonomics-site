@@ -35,7 +35,7 @@ export default function AllCardsPage() {
   }
 
   return <SiteFrame>
-    <main className={styles.page}>
+    <div className={styles.page}>
       <div className={styles.wrap}>
         <nav className={styles.breadcrumb} aria-label="Breadcrumb">
           <a href="/">Home</a><ChevronRight size={13}/><a href="/cards">Credit Cards</a><ChevronRight size={13}/><span>All Reviews</span>
@@ -49,6 +49,6 @@ export default function AllCardsPage() {
         <CardDirectory cards={cards} issuers={issuers}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
       </div>
-    </main>
+    </div>
   </SiteFrame>
 }
