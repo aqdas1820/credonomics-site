@@ -28,6 +28,7 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
+      - run: npm run lint
       - run: npm run typecheck
       - run: npm test -- tests/unit/card-artwork.test.ts tests/unit/card-directory-compare.test.ts
       - run: node scripts/cards/verify-card-artwork-urls.mjs
