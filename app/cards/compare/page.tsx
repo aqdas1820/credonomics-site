@@ -4,9 +4,9 @@ import RealCardRanking from '../components/RealCardRanking'
 import UniversalCompare from './UniversalCompare'
 import RealCardSelector from './RealCardSelector'
 import { cardCategories, cardCategoryMap, isCardCategorySlug, type CardCategorySlug } from '../../data/card-categories'
+import { sanitizeRequestedCompareIds } from '../../data/card-directory-compare'
 import { realCardsForCategory } from '../../data/verified-real-cards'
 import styles from '../../core-v4.module.css'
-import local from './compare.module.css'
 
 export const metadata = {
   title: 'Compare Real Credit Cards Side by Side',
@@ -28,10 +28,9 @@ export default async function Page({
   const categoryParam = typeof searchParams?.category === 'string' ? searchParams.category : 'cashback'
   const category: CardCategorySlug = isCardCategorySlug(categoryParam) ? categoryParam : 'cashback'
   const candidates = realCardsForCategory(category)
-  const candidateIds = new Set(candidates.map(card => card.id))
   const requested = arrayValue(searchParams?.cards).flatMap(value => value.split(',')).filter(Boolean)
-  const validRequested = requested.filter(id => candidateIds.has(id))
-  const selected = (validRequested.length ? validRequested : candidates.slice(0, 3).map(card => card.id)).slice(0, 3)
+  const validRequested = sanitizeRequestedCompareIds(requested, candidates.map(card => card.id))
+  const selected = validRequested.length ? validRequested : candidates.slice(0, 3).map(card => card.id)
   const config = cardCategoryMap[category]
 
   return (
