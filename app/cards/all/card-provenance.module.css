@@ -1,0 +1,4 @@
+.accessibleDirectory :where(a,button,select,input):focus-visible{outline:2px solid #1674c9;outline-offset:2px}
+.artworkThumb{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.artworkStatus{width:auto!important;max-width:100%;border-radius:0!important;box-shadow:none!important;font-size:8px;line-height:1.35;letter-spacing:.08em;font-weight:820;color:#718095;text-transform:uppercase}
+@media(prefers-reduced-motion:reduce){.accessibleDirectory *{scroll-behavior:auto!important}}

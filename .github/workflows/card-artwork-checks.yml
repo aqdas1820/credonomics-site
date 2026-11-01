@@ -8,17 +8,20 @@ on:
       - 'tests/unit/card-directory-compare.test.ts'
       - 'tests/unit/card-review-ui.test.ts'
       - 'tests/unit/card-artwork.test.ts'
+      - 'scripts/cards/verify-card-artwork-urls.mjs'
+      - '.github/workflows/card-artwork-checks.yml'
   push:
     branches:
       - feat/card-product-images-20261101
       - feat/credit-cards-editorial-v2-20261101
       - fix/card-review-typography-ui-audit-20261101
+      - release/cards-v2-20261102
 permissions:
   contents: read
 jobs:
   artwork:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
@@ -28,6 +31,8 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
+      - run: npm run lint
       - run: npm run typecheck
       - run: npm test -- tests/unit/card-artwork.test.ts tests/unit/card-directory-compare.test.ts tests/unit/card-review-ui.test.ts
       - run: node scripts/cards/verify-card-artwork-urls.mjs
+      - run: npm run build
