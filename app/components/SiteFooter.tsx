@@ -52,7 +52,7 @@ export default function SiteFooter() {
         <section className={styles.legalDetails} aria-label="Registered business identity">
           <span><strong>Registered business name:</strong> {siteIdentity.alternateName}</span>
           <span><strong>Business type:</strong> Sole proprietorship</span>
-          <span><strong>Registered email:</strong> <a href={`mailto:${siteIdentity.registeredBusinessEmail}`}>{siteIdentity.registeredBusinessEmail}</a></span>
+          <span><strong>Business support email:</strong> <a href={`mailto:${siteIdentity.registeredBusinessEmail}`}>{siteIdentity.registeredBusinessEmail}</a></span>
           <Link href="/official">Business identity &amp; contact details</Link>
         </section>
 
