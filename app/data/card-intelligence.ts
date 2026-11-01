@@ -79,8 +79,9 @@ export function historyForCard(card: VerifiedRealCard): CardHistoryEntry[] {
       date: card.verifiedAt,
       type: 'verified',
       title: 'CredoNomics verification record',
-      description:
-        'The normalized terms used by the live category rankings were checked against the linked official issuer source.',
+      description: card.catalogueOnly
+        ? 'The issuer product name, standard annual fee and stated benefits were checked against the linked official source. This is a catalogue-only listing: reward-value calculations, exclusions and caps are not fully normalized and the card is excluded from automated rankings.'
+        : 'The normalized terms used by the live category rankings were checked against the linked official issuer source.',
     },
   ]
 }
