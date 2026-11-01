@@ -39,8 +39,8 @@ export default function ContactPage() {
           <div>
             <h2>Registered business &amp; contact details</h2>
             <p><strong>Registered business name:</strong> {siteIdentity.alternateName} · <strong>Business type:</strong> Sole proprietorship · Dhule, Maharashtra, India.</p>
-            <p><strong>Official business contact:</strong> <a href={`mailto:${siteIdentity.registeredBusinessEmail}`}>{siteIdentity.registeredBusinessEmail}</a></p>
-            <p>Legal ownership and KYC documents are provided privately to regulated payment and verification partners and are not published as personal contact data on this website.</p>
+            <p><strong>Business support email:</strong> <a href={`mailto:${siteIdentity.registeredBusinessEmail}`}>{siteIdentity.registeredBusinessEmail}</a></p>
+            <p>Legal ownership and KYC documents are provided privately to regulated payment and verification partners. Sensitive personal KYC identifiers are not used as public customer-support contact data.</p>
             <p>For customer support and payment issues, please write to <a href="mailto:support@credonomics.in">support@credonomics.in</a>. <a href="/official">See our official business identity</a>.</p>
           </div>
         </div>
