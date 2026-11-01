@@ -4,6 +4,9 @@ on:
     paths:
       - 'app/cards/**'
       - 'app/data/card-artwork.ts'
+      - 'app/data/verified-real-cards.ts'
+      - 'app/data/verified-card-expansion.ts'
+      - 'tests/unit/issuer-card-expansion.test.ts'
       - 'app/data/card-directory-compare.ts'
       - 'tests/unit/card-directory-compare.test.ts'
       - 'tests/unit/card-review-ui.test.ts'
@@ -16,6 +19,7 @@ on:
       - feat/credit-cards-editorial-v2-20261101
       - fix/card-review-typography-ui-audit-20261101
       - release/cards-v2-20261102
+      - feat/indian-issuer-card-expansion-20261102
 permissions:
   contents: read
 jobs:
@@ -33,6 +37,6 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run typecheck
-      - run: npm test -- tests/unit/card-artwork.test.ts tests/unit/card-directory-compare.test.ts tests/unit/card-review-ui.test.ts
+      - run: npm test -- tests/unit/card-artwork.test.ts tests/unit/card-directory-compare.test.ts tests/unit/card-review-ui.test.ts tests/unit/issuer-card-expansion.test.ts
       - run: node scripts/cards/verify-card-artwork-urls.mjs
       - run: npm run build

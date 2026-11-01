@@ -1,4 +1,5 @@
 import type { CardCategorySlug } from './card-categories'
+import { additionalVerifiedCards } from './verified-card-expansion'
 
 export type RealCardTerms = {
   ratePercent?: number
@@ -19,6 +20,8 @@ export type RealCardTerms = {
 }
 
 export type VerifiedRealCard = {
+  /** Source-backed listing only; complete reward-value normalization pending. */
+  catalogueOnly?: boolean
   id: string
   issuer: string
   name: string
@@ -482,6 +485,7 @@ export const verifiedRealCards: VerifiedRealCard[] = [
       'co-branded': { rankingEligible: false, ratePercent: 7, note: 'IndiGo co-brand accelerated earn; rupee redemption value is not verified, so this category is excluded from rupee rankings.' },
     },
   },
+  ...additionalVerifiedCards,
 ]
 
 export const REAL_CARD_DATA_DATE = verifiedAt

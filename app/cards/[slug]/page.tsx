@@ -59,7 +59,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const { slug } = await params
   if (isCardCategorySlug(slug)) {
     const category = cardCategoryMap[slug]
-    const cards = verifiedRealCards.filter((card) => Boolean(card.terms[category.slug]))
+    const cards = verifiedRealCards.filter((card) => Boolean(card.terms[category.slug]) && card.terms[category.slug]?.rankingEligible !== false)
 
     const schema = {
       '@context': 'https://schema.org',
@@ -123,8 +123,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const issuerSlug = issuerSlugForCard(card)
   const related = relatedCards(card)
   const history = historyForCard(card)
-  const compareIds = [card.id, ...related.slice(0, 2).map((item) => item.id)]
-  const compareHref = primary
+  const compareIds = [card.id, ...related.filter((item) => !item.catalogueOnly).slice(0, 2).map((item) => item.id)]
+  const compareHref = !card.catalogueOnly && primary
     ? `/cards/compare?category=${primary}&${compareIds.map((id) => `cards=${encodeURIComponent(id)}`).join('&')}`
     : '/cards/compare'
 
@@ -154,7 +154,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <span className={styles.pageKicker}>{card.issuer}</span>
         <h1>{card.name}</h1>
         <p className={styles.pageHeroLead}>
-          Source-backed card research showing the terms currently used by CredoNomics category rankings.
+          {card.catalogueOnly ? 'Issuer-source-backed catalogue listing. Complete reward valuation and ranking eligibility are pending independent verification.' : 'Source-backed card research showing the terms currently used by CredoNomics category rankings.'}
         </p>
         <div className={local.cardHeroArt}>
           <CardArtwork cardId={card.id} name={card.name} issuer={card.issuer} size="hero" priority/>
@@ -165,14 +165,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </div>
         <div className={local.cardDetailActions}>
           {issuerSlug && <a className={styles.secondaryButton} href={`/cards/issuer/${issuerSlug}`}><Building2 size={14}/> {card.issuer} coverage</a>}
-          <a className={styles.primaryButton} href={compareHref}>Compare this card <ArrowRight size={15}/></a>
+          {card.catalogueOnly ? <a className={styles.primaryButton} href="/cards/all">Explore verified directory <ArrowRight size={15}/></a> : <a className={styles.primaryButton} href={compareHref}>Compare this card <ArrowRight size={15}/></a>}
         </div>
       </section>
 
       <section className={`${styles.wrap} ${styles.pageBody} ${local.shell}`}>
         <CardLifecycleNotice notice={card.holderNotice}/>
         <ResearchWatchBrief cardId={card.id}/>
-        <p>October field reviews and model corrections: <a href="/updates/2026-10">read the dated source ledger</a>. The original full-record verification date below is retained.</p>
+        {card.catalogueOnly ? <p>Catalogue-only verification: standard issuer fees and published features checked on {card.verifiedAt}. Reward rates, redemption restrictions and caps have not yet been fully modeled. This card is excluded from automated value rankings.</p> : <p>October field reviews and model corrections: <a href="/updates/2026-10">read the dated source ledger</a>. The original full-record verification date below is retained.</p>}
         <div className={local.cardDetailStats}>
           <article><small>Annual fee</small><strong>₹{card.annualFeeRupees.toLocaleString('en-IN')}</strong><p>Before applicable fee tax.</p></article>
           <article><small>Fee waiver</small><strong>{card.feeWaiverAnnualSpendRupees ? `₹${card.feeWaiverAnnualSpendRupees.toLocaleString('en-IN')}` : 'Not normalized'}</strong><p>Annual spend threshold where available.</p></article>
@@ -180,13 +180,13 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </div>
 
         <section className={local.cardDetailSection}>
-          <div className={local.registryHead}><div><span>Category coverage</span><h2>{card.holderNotice ? 'Legacy terms for existing holders.' : 'Where this card enters CredoNomics rankings.'}</h2></div></div>
+          <div className={local.registryHead}><div><span>Category coverage</span><h2>{card.catalogueOnly ? 'Official issuer benefits; ranking pending.' : card.holderNotice ? 'Legacy terms for existing holders.' : 'Where this card enters CredoNomics rankings.'}</h2></div></div>
           <div className={local.cardCategoryLinks}>
             {categories.map((category) => (
               <a href={`/cards/${category}`} key={category}>
                 <span>{categoryLabel(category)}</span>
                 <small>{card.terms[category]?.note}</small>
-                <b>Open ranking <ArrowRight size={12}/></b>
+                <b>{card.catalogueOnly ? 'Browse this category' : 'Open ranking'} <ArrowRight size={12}/></b>
               </a>
             ))}
           </div>
