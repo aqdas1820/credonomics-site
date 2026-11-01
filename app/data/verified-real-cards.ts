@@ -1,5 +1,6 @@
 import type { CardCategorySlug } from './card-categories'
 import { additionalVerifiedCards } from './verified-card-expansion'
+import { secondWaveCards } from './verified-card-expansion-wave2'
 
 export type RealCardTerms = {
   ratePercent?: number
@@ -22,6 +23,8 @@ export type RealCardTerms = {
 export type VerifiedRealCard = {
   /** Source-backed listing only; complete reward-value normalization pending. */
   catalogueOnly?: boolean
+  /** Standard annual renewal fee nuances, including joining and conditional LTF offers. */
+  feeNote?: string
   id: string
   issuer: string
   name: string
@@ -486,6 +489,7 @@ export const verifiedRealCards: VerifiedRealCard[] = [
     },
   },
   ...additionalVerifiedCards,
+  ...secondWaveCards,
 ]
 
 export const REAL_CARD_DATA_DATE = verifiedAt

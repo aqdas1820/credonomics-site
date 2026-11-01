@@ -134,11 +134,11 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
         const terms = chosenCategory ? card.terms[chosenCategory.slug] : undefined
         const extra = Object.entries(card.terms).filter(([slug, value]) => slug !== chosenCategory?.slug && value?.note).slice(0, 5)
         const additional = extra.slice(2)
-        const summary = terms?.monthlyCapRupees
+        const summary = card.feeNote || (terms?.monthlyCapRupees
           ? 'Modeled reward cap: ' + money(terms.monthlyCapRupees) + ' per statement period. Check exclusions.'
           : card.feeWaiverAnnualSpendRupees
             ? 'Fee waiver may apply after ' + money(card.feeWaiverAnnualSpendRupees) + ' eligible annual spend, subject to issuer rules.'
-            : 'Eligibility, reward caps and exclusions depend on the issuer’s current terms.'
+            : 'Eligibility, reward caps and exclusions depend on the issuer’s current terms.')
         const selected = selectedIds.includes(card.id)
         const hasPublishedArtwork = Boolean(getCardArtwork(card.id))
         return <article className={styles.reviewCard} key={card.id}>
@@ -153,7 +153,7 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
           </div>
 
           <div className={styles.metrics}>
-            <div><small>Annual fee</small><strong>{card.annualFeeRupees === 0 ? 'Lifetime free' : money(card.annualFeeRupees) + ' + GST'}</strong></div>
+            <div><small>{card.feeNote ? 'Standard annual renewal' : 'Annual fee'}</small><strong>{card.annualFeeRupees === 0 ? (card.feeNote ? '₹0 renewal' : 'Lifetime free') : money(card.annualFeeRupees) + ' + GST'}</strong>{card.feeNote && <span>See joining and promotional conditions below</span>}</div>
             <div><small>Fee waiver spend</small><strong>{card.feeWaiverAnnualSpendRupees ? money(card.feeWaiverAnnualSpendRupees) : 'Not normalized'}</strong><span>{card.feeWaiverAnnualSpendRupees ? 'Annual spend threshold' : 'Confirm issuer terms'}</span></div>
             <div><small>{card.catalogueOnly ? 'Reward-value model' : chosenCategory ? chosenCategory.label + ' (modeled)' : 'Rewards'}</small><strong className={styles.reward}>{card.catalogueOnly ? 'Pending review' : rateLabel(terms)}</strong><span>{card.catalogueOnly ? 'No financial rank until rewards are fully verified' : 'Eligibility, caps and exclusions apply'}</span></div>
           </div>

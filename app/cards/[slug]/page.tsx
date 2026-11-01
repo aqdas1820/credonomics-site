@@ -174,7 +174,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <ResearchWatchBrief cardId={card.id}/>
         {card.catalogueOnly ? <p>Catalogue-only verification: standard issuer fees and published features checked on {card.verifiedAt}. Reward rates, redemption restrictions and caps have not yet been fully modeled. This card is excluded from automated value rankings.</p> : <p>October field reviews and model corrections: <a href="/updates/2026-10">read the dated source ledger</a>. The original full-record verification date below is retained.</p>}
         <div className={local.cardDetailStats}>
-          <article><small>Annual fee</small><strong>₹{card.annualFeeRupees.toLocaleString('en-IN')}</strong><p>Before applicable fee tax.</p></article>
+          <article><small>{card.feeNote ? 'Standard annual renewal fee' : 'Annual fee'}</small><strong>₹{card.annualFeeRupees.toLocaleString('en-IN')}</strong><p>{card.feeNote || 'Before applicable fee tax.'}</p></article>
           <article><small>Fee waiver</small><strong>{card.feeWaiverAnnualSpendRupees ? `₹${card.feeWaiverAnnualSpendRupees.toLocaleString('en-IN')}` : 'Not normalized'}</strong><p>Annual spend threshold where available.</p></article>
           <article><small>Last verified</small><strong>{card.verifiedAt}</strong><p>Terms should be rechecked after issuer updates.</p></article>
         </div>
