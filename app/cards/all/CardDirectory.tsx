@@ -153,7 +153,7 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
           </div>
 
           <div className={styles.metrics}>
-            <div><small>{card.feeNote ? 'Standard annual renewal' : 'Annual fee'}</small><strong>{card.annualFeeRupees === 0 ? 'Lifetime free' : money(card.annualFeeRupees) + ' + GST'}</strong>{card.feeNote && <span>See joining and promotional conditions below</span>}</div>
+            <div><small>{card.feeNote ? 'Standard annual renewal' : 'Annual fee'}</small><strong>{card.annualFeeRupees === 0 ? (card.feeNote ? '₹0 renewal' : 'Lifetime free') : money(card.annualFeeRupees) + ' + GST'}</strong>{card.feeNote && <span>See joining and promotional conditions below</span>}</div>
             <div><small>Fee waiver spend</small><strong>{card.feeWaiverAnnualSpendRupees ? money(card.feeWaiverAnnualSpendRupees) : 'Not normalized'}</strong><span>{card.feeWaiverAnnualSpendRupees ? 'Annual spend threshold' : 'Confirm issuer terms'}</span></div>
             <div><small>{card.catalogueOnly ? 'Reward-value model' : chosenCategory ? chosenCategory.label + ' (modeled)' : 'Rewards'}</small><strong className={styles.reward}>{card.catalogueOnly ? 'Pending review' : rateLabel(terms)}</strong><span>{card.catalogueOnly ? 'No financial rank until rewards are fully verified' : 'Eligibility, caps and exclusions apply'}</span></div>
           </div>
