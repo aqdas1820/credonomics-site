@@ -22,3 +22,26 @@ export function buildDirectoryCompareLink(
   const params = new URLSearchParams({ category, cards: cards.map(card => card.id).join(',') })
   return '/cards/compare?' + params.toString()
 }
+
+/**
+ * Accept only distinct IDs that are actually eligible for the selected category.
+ * This protects shareable /cards/compare URLs from stale, malformed or cross-category IDs.
+ */
+export function sanitizeRequestedCompareIds(
+  requestedIds: string[],
+  candidateIds: string[],
+  maxCards = 3,
+): string[] {
+  const allowed = new Set(candidateIds)
+  const seen = new Set<string>()
+  const valid: string[] = []
+
+  for (const id of requestedIds) {
+    if (!allowed.has(id) || seen.has(id)) continue
+    seen.add(id)
+    valid.push(id)
+    if (valid.length >= maxCards) break
+  }
+
+  return valid
+}

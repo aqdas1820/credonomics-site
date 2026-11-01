@@ -4,9 +4,11 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { ArrowRight, Check, ChevronDown, CircleCheck, ExternalLink, GitCompareArrows, Search, ShieldCheck, SlidersHorizontal, X } from 'lucide-react'
 import type { CardCategorySlug } from '../../data/card-categories'
 import type { VerifiedRealCard, RealCardTerms } from '../../data/verified-real-cards'
+import { getCardArtwork } from '../../data/card-artwork'
 import { buildDirectoryCompareLink } from '../../data/card-directory-compare'
 import CardArtwork from '../components/CardArtwork'
 import styles from './card-directory.module.css'
+import provenanceStyles from './card-provenance.module.css'
 
 type DirectoryCard = VerifiedRealCard & {
   categories: Array<{ slug: CardCategorySlug; label: string }>
@@ -85,7 +87,7 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
     setSelectedIds([...selectedIds, id]); setCompareError('')
   }
 
-  return <section className={styles.directory} aria-label="Credit card reviews">
+  return <section className={`${styles.directory} ${provenanceStyles.accessibleDirectory}`} aria-label="Credit card reviews">
     <div className={styles.subnav} aria-label="Filter credit cards by bank">
       <span className={styles.navHint}>BROWSE BY ISSUER</span>
       <div className={styles.menuRoot} ref={menuRoot}>
@@ -137,9 +139,10 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
             ? 'Fee waiver may apply after ' + money(card.feeWaiverAnnualSpendRupees) + ' eligible annual spend, subject to issuer rules.'
             : 'Eligibility, reward caps and exclusions depend on the issuer’s current terms.'
         const selected = selectedIds.includes(card.id)
+        const hasPublishedArtwork = Boolean(getCardArtwork(card.id))
         return <article className={styles.reviewCard} key={card.id}>
           <div className={styles.reviewTop}>
-            <div className={styles.thumb}><CardArtwork cardId={card.id} name={card.name} issuer={card.issuer}/></div>
+            <div className={`${styles.thumb} ${provenanceStyles.artworkThumb}`}><CardArtwork cardId={card.id} name={card.name} issuer={card.issuer}/><span className={provenanceStyles.artworkStatus}>{hasPublishedArtwork ? 'SOURCE-CLEARED PRODUCT ART' : 'ARTWORK UNAVAILABLE'}</span></div>
             <div className={styles.reviewIntro}>
               <div className={styles.titleRow}><h3><a href={'/cards/' + card.id}>{card.name}</a></h3></div>
               <div className={styles.byline}><span className={styles.bankName}>{card.issuer}</span><span className={styles.dot}>·</span><span><ShieldCheck size={13}/> Issuer source linked</span><span className={styles.checked}>Terms checked {card.verifiedAt}</span></div>
@@ -177,9 +180,9 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
       {!filtered.length && <div className={styles.empty}><h3>No matching cards found</h3><p>Try another issuer or clear the filters.</p><button type="button" onClick={reset}>Clear filters</button></div>}
     </div>
 
-    <p className={styles.disclaimer}><ShieldCheck size={17} aria-hidden="true"/> Card images are labelled as product artwork or illustrative previews. This is information, not application advice. Rewards are modeled from stored terms, and issuers may change products or eligibility rules. <a href="/methodology">Research methodology</a></p>
+    <p className={styles.disclaimer}><ShieldCheck size={17} aria-hidden="true"/> Product imagery appears only after exact-product source and reuse-rights clearance; otherwise CredoNomics shows a clearly labelled neutral illustration. This is information, not application advice. Rewards are modeled from stored terms, and issuers may change products or eligibility rules. <a href="/methodology">Research methodology</a></p>
 
-    {selectedCards.length > 0 && <aside className={styles.compareTray} aria-label="Selected cards to compare">
+    {selectedCards.length > 0 && <aside className={styles.compareTray} aria-label="Selected cards to compare" aria-live="polite">
       <div className={styles.trayTop}><strong>{selectedCards.length} of 3 selected</strong><button type="button" aria-label="Clear selection" onClick={() => {setSelectedIds([]);setCompareError('')}}><X size={17}/></button></div>
       <div className={styles.selectedItems}>{selectedCards.map(card => <button type="button" key={card.id} onClick={() => toggle(card.id)} title={'Remove ' + card.name}>{card.name}<X size={12}/></button>)}</div>
       {compareError && <p role="alert">{compareError}</p>}
