@@ -72,7 +72,7 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
     }
   }, [issuerMenu])
 
-  const selectedCards = cards.filter(card => selectedIds.includes(card.id))
+  const selectedCards = cards.filter(card => !card.catalogueOnly && selectedIds.includes(card.id))
   const compareLink = buildDirectoryCompareLink(selectedCards, category)
   const activeFilters = issuer !== 'All' || category !== 'All' || maxFee !== 'All' || query !== '' || sort !== 'name'
 
@@ -82,6 +82,7 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
   }
   function reset() { setIssuer('All'); setCategory('All'); setQuery(''); setMaxFee('All'); setSort('name') }
   function toggle(id: string) {
+    if (cards.find(card => card.id === id)?.catalogueOnly) return
     if (selectedIds.includes(id)) { setSelectedIds(selectedIds.filter(x => x !== id)); setCompareError(''); return }
     if (selectedIds.length >= 3) { setCompareError('Select a maximum of three cards.'); return }
     setSelectedIds([...selectedIds, id]); setCompareError('')
@@ -145,8 +146,8 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
             <div className={`${styles.thumb} ${provenanceStyles.artworkThumb}`}><CardArtwork cardId={card.id} name={card.name} issuer={card.issuer}/><span className={provenanceStyles.artworkStatus}>{hasPublishedArtwork ? 'SOURCE-CLEARED PRODUCT ART' : 'ARTWORK UNAVAILABLE'}</span></div>
             <div className={styles.reviewIntro}>
               <div className={styles.titleRow}><h3><a href={'/cards/' + card.id}>{card.name}</a></h3></div>
-              <div className={styles.byline}><span className={styles.bankName}>{card.issuer}</span><span className={styles.dot}>·</span><span><ShieldCheck size={13}/> Issuer source linked</span><span className={styles.checked}>Terms checked {card.verifiedAt}</span></div>
-              <div className={styles.tags}>{card.categories.slice(0,3).map(item => <span key={item.slug}>{item.label}</span>)}</div>
+              <div className={styles.byline}><span className={styles.bankName}>{card.issuer}</span><span className={styles.dot}>·</span><span><ShieldCheck size={13}/> Issuer source linked</span><span className={styles.checked}>{card.catalogueOnly ? 'Issuer listing checked ' : 'Terms checked '}{card.verifiedAt}</span></div>
+              <div className={styles.tags}>{card.catalogueOnly && <span>Issuer-verified catalogue · Ranking pending</span>}{card.categories.slice(0,3).map(item => <span key={item.slug}>{item.label}</span>)}</div>
               <p className={styles.description}>{terms?.note || 'See the card research for its source-linked reward rules, fees and relevant spending categories.'}</p>
             </div>
           </div>
@@ -154,7 +155,7 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
           <div className={styles.metrics}>
             <div><small>Annual fee</small><strong>{card.annualFeeRupees === 0 ? 'Lifetime free' : money(card.annualFeeRupees) + ' + GST'}</strong></div>
             <div><small>Fee waiver spend</small><strong>{card.feeWaiverAnnualSpendRupees ? money(card.feeWaiverAnnualSpendRupees) : 'Not normalized'}</strong><span>{card.feeWaiverAnnualSpendRupees ? 'Annual spend threshold' : 'Confirm issuer terms'}</span></div>
-            <div><small>{chosenCategory ? chosenCategory.label + ' (modeled)' : 'Rewards'}</small><strong className={styles.reward}>{rateLabel(terms)}</strong><span>Eligibility, caps and exclusions apply</span></div>
+            <div><small>{card.catalogueOnly ? 'Reward-value model' : chosenCategory ? chosenCategory.label + ' (modeled)' : 'Rewards'}</small><strong className={styles.reward}>{card.catalogueOnly ? 'Pending review' : rateLabel(terms)}</strong><span>{card.catalogueOnly ? 'No financial rank until rewards are fully verified' : 'Eligibility, caps and exclusions apply'}</span></div>
           </div>
 
           {(typeof terms?.loungeVisits === 'number' && terms.loungeVisits > 0 || typeof terms?.monthlyCapRupees === 'number') && <div className={styles.detailRows}>
@@ -173,7 +174,7 @@ export default function CardDirectory({ cards, issuers }: { cards: DirectoryCard
           <div className={styles.actions}>
             <a className={styles.readReview} href={'/cards/' + card.id}>Read full research</a>
             <a className={styles.issuerCta} href={card.sourceUrl} target="_blank" rel="noopener noreferrer">Official issuer terms <ExternalLink size={15} aria-hidden="true"/></a>
-            <button className={selected ? styles.addedCompare : styles.addCompare} type="button" aria-pressed={selected} onClick={() => toggle(card.id)}><GitCompareArrows size={14}/>{selected ? 'Selected' : 'Compare'}</button>
+            {card.catalogueOnly ? <span className={styles.compareDisabled}>Ranking pending</span> : <button className={selected ? styles.addedCompare : styles.addCompare} type="button" aria-pressed={selected} onClick={() => toggle(card.id)}><GitCompareArrows size={14}/>{selected ? 'Selected' : 'Compare'}</button>}
           </div>
         </article>
       })}
