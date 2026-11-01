@@ -6,6 +6,8 @@ on:
       - 'app/data/card-artwork.ts'
       - 'app/data/verified-real-cards.ts'
       - 'app/data/verified-card-expansion.ts'
+      - 'app/data/verified-card-expansion-wave2.ts'
+      - 'tests/unit/issuer-card-expansion-wave2.test.ts'
       - 'tests/unit/issuer-card-expansion.test.ts'
       - 'app/data/card-directory-compare.ts'
       - 'tests/unit/card-directory-compare.test.ts'
@@ -20,6 +22,7 @@ on:
       - fix/card-review-typography-ui-audit-20261101
       - release/cards-v2-20261102
       - feat/indian-issuer-card-expansion-20261102
+      - feat/indian-card-expansion-wave2-20261102
 permissions:
   contents: read
 jobs:
@@ -37,6 +40,6 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run typecheck
-      - run: npm test -- tests/unit/card-artwork.test.ts tests/unit/card-directory-compare.test.ts tests/unit/card-review-ui.test.ts tests/unit/issuer-card-expansion.test.ts
+      - run: npm test -- tests/unit/card-artwork.test.ts tests/unit/card-directory-compare.test.ts tests/unit/card-review-ui.test.ts tests/unit/issuer-card-expansion.test.ts tests/unit/issuer-card-expansion-wave2.test.ts
       - run: node scripts/cards/verify-card-artwork-urls.mjs
       - run: npm run build
