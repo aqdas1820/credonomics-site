@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { additionalVerifiedCards } from '../../app/data/verified-card-expansion'
+import { secondWaveCards } from '../../app/data/verified-card-expansion-wave2'
 import { verifiedRealCards, realCardsForCategory } from '../../app/data/verified-real-cards'
 import { issuerForName } from '../../app/data/issuer-registry'
 import { cardCategoryMap, type CardCategorySlug } from '../../app/data/card-categories'
@@ -7,7 +8,7 @@ import { cardCategoryMap, type CardCategorySlug } from '../../app/data/card-cate
 describe('Nov 2026 issuer-backed card catalogue expansion', () => {
   it('adds at least 30 unique source-backed products to existing catalogue', () => {
     expect(additionalVerifiedCards.length).toBeGreaterThanOrEqual(30)
-    expect(verifiedRealCards.length).toBe(24 + additionalVerifiedCards.length)
+    expect(verifiedRealCards.length).toBe(24 + additionalVerifiedCards.length + secondWaveCards.length)
     const ids = verifiedRealCards.map(card => card.id)
     expect(new Set(ids).size).toBe(ids.length)
   })
