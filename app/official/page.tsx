@@ -55,11 +55,12 @@ export default function OfficialPage() {
             <div><dt>Registered business / trade name</dt><dd>{siteIdentity.alternateName}</dd></div>
             <div><dt>Legal constitution</dt><dd>Sole proprietorship</dd></div>
             <div><dt>Business location</dt><dd>Dhule, Maharashtra, India</dd></div>
+            <div><dt>Registered KYC email</dt><dd><a href="mailto:credonomicsinvest@gmail.com">credonomicsinvest@gmail.com</a></dd></div>
             <div><dt>Business support email</dt><dd><a href={`mailto:${siteIdentity.registeredBusinessEmail}`}>{siteIdentity.registeredBusinessEmail}</a></dd></div>
             <div><dt>Customer and payment support</dt><dd><a href="mailto:support@credonomics.in">support@credonomics.in</a></dd></div>
             <div><dt>Principal website activity</dt><dd>Financial education, informational research, comparison tools and digital publishing</dd></div>
           </dl>
-          <p className={local.registeredBusinessNote}>CredoNomics Investment Solutions is a sole-proprietor business name, not a claim of private limited company incorporation or SEBI registration. Legal ownership and KYC documents are provided privately to regulated payment and verification partners. Public pages display business-facing identity and support information; sensitive KYC identifiers remain within secure verification channels. For the scope of our services and regulatory disclosures, see <a href="/disclosures">Disclosures</a>.</p>
+          <p className={local.registeredBusinessNote}>CredoNomics Investment Solutions is a sole-proprietor business name, not a claim of private limited company incorporation or SEBI registration. The registered KYC email above is published specifically to support regulated merchant and ownership verification. Other legal ownership and KYC documents are provided privately to regulated payment and verification partners. For the scope of our services and regulatory disclosures, see <a href="/disclosures">Disclosures</a>.</p>
         </section>
 
         <div className={local.channelGrid}>
