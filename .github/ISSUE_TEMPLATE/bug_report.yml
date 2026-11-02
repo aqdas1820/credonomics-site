@@ -1,0 +1,57 @@
+name: Bug report
+description: Report a reproducible problem in the CredoNomics web platform
+title: "[Bug]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve CredoNomics. Do not include passwords, API keys, session cookies, customer data, bank/payment information, or private documents. For security vulnerabilities, use SECURITY.md instead of a public issue.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the problem clearly and concisely.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Use synthetic or non-sensitive data.
+      placeholder: |
+        1. Go to ...
+        2. Select ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page or feature
+      placeholder: e.g. /tools/mf-portfolio-tracker
+  - type: input
+    id: environment
+    attributes:
+      label: Browser / operating system
+      placeholder: e.g. Chrome 156 on Windows 11
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Non-sensitive evidence
+      description: Add sanitized logs, screenshots, or other context if useful.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed secrets, personal data, financial account details, and private documents from this report.
+          required: true
+        - label: This is not a security vulnerability report.
+          required: true
