@@ -102,11 +102,11 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "watch:amex-november-2026-fees-and-service-dates",
     "title": "Amex November: prepare for service windows, milestones and fees",
-    "description": "Review settings before 11 November. Account displays and some statements face delays; 15 November benefit changes have separate rules.",
+    "description": "Review settings and eligible benefit enrolments before 11 November. New EMI processing and post-purchase conversion have different disruption windows.",
     "href": "/research/watch/amex-november-2026-fees-and-service-dates",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-10-28",
+    "updated": "2026-11-04",
     "keywords": "Amex November: prepare for service windows, milestones and fees amex-november-2026-fees-and-service-dates Research",
     "priority": 92
   },
@@ -320,6 +320,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:sebi-digital-accessibility-extension-january-2027",
+    "title": "SEBI accessibility extension: three compliance steps due by 31 January 2027",
+    "description": "The 30 October circular extends auditor appointment, digital-platform accessibility audit and remediation; other provisions remain unchanged.",
+    "href": "/research/watch/sebi-digital-accessibility-extension-january-2027",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-04",
+    "keywords": "SEBI accessibility extension: three compliance steps due by 31 January 2027 sebi-digital-accessibility-extension-january-2027 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:sebi-early-pay-in-margin-waiver-february-2027",
     "title": "SEBI early pay-in: additional cash-market margin relief from February 2027",
     "description": "Accepted securities early pay-in can support eligible subsequent cash-segment positions; broker margin checks still apply.",
@@ -518,6 +529,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 86
   },
   {
+    "id": "route:/updates/2026-11",
+    "title": "November 2026 Research Updates: Consumer Action Dates",
+    "description": "November publications and updated consumer-finance guides, with official sources, verification dates and limits.",
+    "href": "/updates/2026-11",
+    "category": "Research",
+    "source": "Research Desk",
+    "updated": "",
+    "keywords": "updates 2026-11 November 2026 Research Updates: Consumer Action Dates Research",
+    "priority": 86
+  },
+  {
     "id": "route:/updates/2026-10",
     "title": "October 2026 Research Updates: Card Changes & Portfolio Disclosures",
     "description": "Official issuer changes, corrected credit-card rankings and September portfolio disclosures reviewed by CredoNomics in October 2026, with effective dates and sources.",
@@ -531,7 +553,7 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "route:/research/watch",
     "title": "Research Watch: Verified Changes & Action Dates",
-    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch. Latest publication: 31 October 2026, with scope and action dates.",
+    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch. Latest publication: 4 November 2026, with scope and action dates.",
     "href": "/research/watch",
     "category": "Research",
     "source": "Research Desk",
@@ -661,17 +683,6 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 60
   },
   {
-    "id": "route:/cards/all",
-    "title": "All Verified Credit Cards",
-    "description": "Browse all real Indian credit cards currently normalized in the CredoNomics verified comparison database.",
-    "href": "/cards/all",
-    "category": "Cards",
-    "source": "Issuer terms",
-    "updated": "",
-    "keywords": "cards all All Verified Credit Cards Cards",
-    "priority": 60
-  },
-  {
     "id": "route:/tools/cashback-calculator",
     "title": "Cashback Calculator",
     "description": "Explore Cashback Calculator on CredoNomics Investment Solutions.",
@@ -691,6 +702,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "CredoNomics tools",
     "updated": "",
     "keywords": "tools cashback-cap Cashback Cap Calculator Tools",
+    "priority": 60
+  },
+  {
+    "id": "route:/cards/all",
+    "title": "Compare Credit Cards in India | CredoNomics Card Reviews",
+    "description": "Browse source-linked Indian credit card research with clear annual fees, reward terms, lounge access and direct issuer source links.",
+    "href": "/cards/all",
+    "category": "Cards",
+    "source": "Issuer terms",
+    "updated": "",
+    "keywords": "cards all Compare Credit Cards in India | CredoNomics Card Reviews Cards",
     "priority": 60
   },
   {
@@ -771,6 +793,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 60
   },
   {
+    "id": "route:/grievance-redressal",
+    "title": "Customer Support & Grievance Redressal",
+    "description": "How to report CredoNomics website, payment, privacy and consumer complaints and request escalation.",
+    "href": "/grievance-redressal",
+    "category": "Platform",
+    "source": "CredoNomics",
+    "updated": "",
+    "keywords": "grievance-redressal Customer Support & Grievance Redressal Platform",
+    "priority": 60
+  },
+  {
     "id": "route:/disclosures",
     "title": "Disclosures",
     "description": "Regulatory status, calculator limitations and financial-information disclosures for CredoNomics.",
@@ -779,6 +812,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "CredoNomics",
     "updated": "",
     "keywords": "disclosures Disclosures Platform",
+    "priority": 60
+  },
+  {
+    "id": "route:/tools/live-data",
+    "title": "Free Indian Finance Data Tools | NAV, IFSC, Forex, Gold & Silver",
+    "description": "Look up Indian mutual fund NAVs and bank IFSC codes, convert reference currencies, and view delayed indicative gold and silver spot prices with sources and dates.",
+    "href": "/tools/live-data",
+    "category": "Tools",
+    "source": "CredoNomics tools",
+    "updated": "",
+    "keywords": "tools live-data Free Indian Finance Data Tools | NAV, IFSC, Forex, Gold & Silver Tools",
     "priority": 60
   },
   {
@@ -850,7 +894,7 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "route:/official",
     "title": "Official CredoNomics Website & Channels",
-    "description": "Verify the official CredoNomics website, email, Instagram account and contact information.",
+    "description": "Verify the registered business name, sole proprietorship details, contact emails and official CredoNomics channels.",
     "href": "/official",
     "category": "Company",
     "source": "CredoNomics",
@@ -871,13 +915,24 @@ export const searchIndex: readonly SearchEntry[] = [
   },
   {
     "id": "route:/privacy",
-    "title": "Privacy",
-    "description": "CredoNomics privacy information and safe-use guidance.",
+    "title": "Privacy Policy",
+    "description": "How CredoNomics Investment Solutions handles website, account, contact and payment-related information.",
     "href": "/privacy",
     "category": "Platform",
     "source": "CredoNomics",
     "updated": "",
-    "keywords": "privacy Privacy Platform",
+    "keywords": "privacy Privacy Policy Platform",
+    "priority": 60
+  },
+  {
+    "id": "route:/refund-and-cancellation-policy",
+    "title": "Refund & Cancellation Policy",
+    "description": "CredoNomics Investment Solutions refund, cancellation and payment dispute policy for voluntary contributions and any future paid services.",
+    "href": "/refund-and-cancellation-policy",
+    "category": "Platform",
+    "source": "CredoNomics",
+    "updated": "",
+    "keywords": "refund-and-cancellation-policy Refund & Cancellation Policy Platform",
     "priority": 60
   },
   {
@@ -892,9 +947,20 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 60
   },
   {
+    "id": "route:/shipping-and-delivery-policy",
+    "title": "Shipping & Delivery Policy",
+    "description": "CredoNomics Investment Solutions digital content availability, shipping exclusions and any future paid digital service delivery.",
+    "href": "/shipping-and-delivery-policy",
+    "category": "Platform",
+    "source": "CredoNomics",
+    "updated": "",
+    "keywords": "shipping-and-delivery-policy Shipping & Delivery Policy Platform",
+    "priority": 60
+  },
+  {
     "id": "route:/terms",
     "title": "Terms of Use",
-    "description": "Terms of use for CredoNomics financial research and calculators.",
+    "description": "Terms for free educational resources, voluntary support, payment issues and use of CredoNomics Investment Solutions.",
     "href": "/terms",
     "category": "Platform",
     "source": "CredoNomics",
