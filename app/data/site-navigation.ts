@@ -11,6 +11,7 @@ export const siteSections: SiteSection[] = [
     { href: '/research', label: 'Research desk', description: 'Explore the research disciplines and frameworks.' },
     { href: '/research/watch', label: 'Research Watch', description: 'Read verified consumer changes and action dates.' },
     { href: '/reports', label: 'Research reports', description: 'Read published reports and their source context.' },
+    { href: '/updates/2026-11', label: 'November research bulletin', description: 'See November 2026 publications and updated guides.' },
     { href: '/updates/2026-10', label: 'October research bulletin', description: 'See the dated October 2026 research updates.' },
     { href: '/methodology', label: 'Methodology', description: 'Understand sources, assumptions and limitations.' },
     { href: '/research/card-scoring', label: 'Card scoring framework', description: 'Inspect the credit-card evaluation approach.' },
