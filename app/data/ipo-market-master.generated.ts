@@ -4,68 +4,16 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-11-03T10:45:25.568Z",
-  "recordCount": 4,
-  "nseCount": 4,
+  "generatedAt": "2026-11-04T10:48:29.845Z",
+  "recordCount": 1,
+  "nseCount": 1,
   "bseCount": 0,
-  "activeCount": 3,
+  "activeCount": 1,
   "upcomingCount": 0,
-  "sourceStatus": "NSE API 4 · BSE SME unavailable · BSE mainboard 0"
+  "sourceStatus": "NSE API 1 · BSE SME unavailable · BSE mainboard 0"
 } as const
 
 export const ipoMarketMaster: IpoMarketRecord[] = [
-  {
-    "slug": "hgs-india-ltd-a324a37",
-    "companyName": "HGS (India) Limited",
-    "symbol": "HGSINDIALT",
-    "marketSegment": "sme",
-    "status": "open",
-    "securityType": "SME",
-    "issue": {
-      "openDate": "2026-10-30",
-      "closeDate": "2026-11-03",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 229.25,
-      "updatedAt": "2026-11-03T10:45:25.568Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=HGSINDIALT&type=Active"
-    },
-    "sharesOffered": 2066400,
-    "sharesBid": 473712000,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=HGSINDIALT&type=Active",
-    "fetchedAt": "2026-11-03T10:45:25.568Z"
-  },
-  {
-    "slug": "maxwell-engineering-solutions-ltd-a9fc32b",
-    "companyName": "Maxwell Engineering Solutions Limited",
-    "symbol": "MAXENGS",
-    "marketSegment": "sme",
-    "status": "open",
-    "securityType": "SME",
-    "issue": {
-      "openDate": "2026-10-30",
-      "closeDate": "2026-11-03",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 487.77,
-      "updatedAt": "2026-11-03T10:45:25.568Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=MAXENGS&type=Active"
-    },
-    "sharesOffered": 2624000,
-    "sharesBid": 1279898400,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=MAXENGS&type=Active",
-    "fetchedAt": "2026-11-03T10:45:25.568Z"
-  },
   {
     "slug": "vedant-poly-fabs-ltd-ba0db5c",
     "companyName": "Vedant Poly Fabs Limited",
@@ -81,44 +29,15 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.8,
-      "updatedAt": "2026-11-03T10:45:25.568Z",
+      "total": 1.84,
+      "updatedAt": "2026-11-04T10:48:29.845Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=VPFL&type=Active"
     },
     "sharesOffered": 6030000,
-    "sharesBid": 4808400,
+    "sharesBid": 11082000,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=VPFL&type=Active",
-    "fetchedAt": "2026-11-03T10:45:25.568Z"
-  },
-  {
-    "slug": "bombay-coated-and-special-steels-ltd-cc1e6f7",
-    "companyName": "Bombay Coated and Special Steels Limited",
-    "symbol": "BCSSL",
-    "marketSegment": "mainboard",
-    "status": "closed",
-    "securityType": "EQ",
-    "issue": {
-      "priceBandLow": 78,
-      "priceBandHigh": 82,
-      "openDate": "2026-10-29",
-      "closeDate": "2026-11-02",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 32.733611395189214,
-      "updatedAt": "2026-11-03T10:45:25.568Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BCSSL&type=Active"
-    },
-    "sharesOffered": 16533012,
-    "sharesBid": 541185190,
-    "estimatedIssueValueCr": 135.57,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=BCSSL&type=Active",
-    "fetchedAt": "2026-11-03T10:45:25.568Z"
+    "fetchedAt": "2026-11-04T10:48:29.845Z"
   }
 ]
