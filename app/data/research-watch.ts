@@ -12,6 +12,21 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'navi-fund-minimum-redemption-switch-out-november-2026',
+    title: 'Navi Mutual Fund revises minimum redemption and switch-out for 11 schemes',
+    summary: 'For investments made from 6 November 2026, the minimum is the lowest of ₹100, one unit or the account balance.',
+    category: 'Mutual funds', checkedAt: '2026-11-05', announcementDate: '2026-11-05', eventDate: '2026-11-06', dateLabel: 'Effective for new investments',
+    source: 'https://public-assets.prod.navi-tech.in/navi-website-assests/documents/November_05_2026_Change_in_minimum_redemption_amount_20261105123719.pdf', sourceLabel: 'Navi AMC: Notice cum Addendum No. 15 of 2026–27', sourceLocation: '5 November 2026, pages 1–2',
+    audience: 'Investors making new investments from 6 November 2026 in the 11 Navi Mutual Fund schemes listed below.',
+    facts: [
+      'For both redemption and switch-out, the revised minimum is ₹100, one unit or the account balance, whichever is lower, with ₹1 increments thereafter. The previous redemption minimum was the lowest of ₹10, 10 units or the account balance per option.',
+      'Seven schemes listed on page 1: Navi Nifty 50 Index Fund, Navi Nifty Next 50 Index Fund, Navi Nifty Bank Index Fund, Navi Nifty Midcap 150 Index Fund, Navi Nifty India Manufacturing Index Fund, Navi ELSS Tax Saver Nifty 50 Index Fund and Navi BSE Sensex Index Fund.',
+      'Four schemes listed on page 2: Navi Nifty IT Index Fund, Navi Nifty 500 Multicap 50:25:25 Index Fund, Navi Total Stock Market US Specific Equity Passive FoF and Navi Nasdaq100 US Specific Equity Passive FoF.',
+    ],
+    actions: ['Before placing a small redemption or switch-out request, check the scheme, investment date and minimum shown for the request. Ask Navi AMC or your platform how it handles a request against a holding with purchases on both sides of 6 November.'],
+    limits: 'Upcoming when checked on 5 November. The addendum applies to prospective investments from 6 November and keeps other scheme terms unchanged, including any applicable lock-in. It gives no processing rule for requests against a mix of older and newer units.',
+  },
+  {
     slug: 'pusad-urban-cooperative-bank-rbi-directions-february-2027',
     title: 'Pusad Urban Co-operative Bank: RBI extends directions to 7 February',
     summary: 'The extension runs from close of business on 7 November 2026 to close of business on 7 February 2027, subject to review.',

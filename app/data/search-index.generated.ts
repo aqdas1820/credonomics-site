@@ -276,6 +276,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:navi-fund-minimum-redemption-switch-out-november-2026",
+    "title": "Navi Mutual Fund revises minimum redemption and switch-out for 11 schemes",
+    "description": "For investments made from 6 November 2026, the minimum is the lowest of ₹100, one unit or the account balance.",
+    "href": "/research/watch/navi-fund-minimum-redemption-switch-out-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-05",
+    "keywords": "Navi Mutual Fund revises minimum redemption and switch-out for 11 schemes navi-fund-minimum-redemption-switch-out-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:pnb-atm-crm-charges-november-2026",
     "title": "PNB November ATM/CRM charges: distinguish withdrawals from cardless deposits",
     "description": "Check the own-ATM free limit, account exemptions and cardless CRM deposit timing before 1 November.",
