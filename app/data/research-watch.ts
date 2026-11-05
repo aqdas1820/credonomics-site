@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-04'
+export const WATCH_CHECKED_AT = '2026-11-05'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,17 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'dehradun-urban-cooperative-bank-rbi-directions-february-2027',
+    title: 'Dehradun Urban Co-operative Bank: RBI extends directions to 10 February',
+    summary: 'The extension runs from close of business on 10 November 2026 to close of business on 10 February 2027, subject to review.',
+    category: 'Bank deposits', checkedAt: '2026-11-05', announcementDate: '2026-11-05', eventDate: '2027-02-10', dateLabel: 'Extended period ends · close of business', statusLabel: 'Directions extended',
+    source: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63922', sourceLabel: 'RBI: Urban Co-operative Bank Limited, Dehradun directions extension', sourceLocation: '5 November 2026 release, paragraphs 1–4',
+    audience: 'Depositors and account holders of Urban Co-operative Bank Limited, Dehradun.',
+    facts: ['RBI announced the extension on 5 November. The three-month extension begins at close of business on 10 November 2026 and runs to close of business on 10 February 2027, subject to review.', 'The RBI release carries forward the other terms of the existing directive. RBI expressly cautions against treating the extension as an indication of satisfaction with the bank’s financial position.'],
+    actions: ['Before planning a withdrawal or relying on the account for a payment, check the bank’s current written instructions and any later RBI notice.', 'Ask the bank to confirm which existing conditions apply to your account and retain the response for reference.'],
+    limits: 'The extension was upcoming when checked on 5 November. This release establishes the extended period and continuation of existing terms. Account-specific limits and any deposit insurance claim or payout require separate confirmation.',
+  },
   {
     slug: 'amex-november-2026-fees-and-service-dates',
     title: 'Amex November: prepare for service windows, milestones and fees',
