@@ -106,7 +106,7 @@ export const searchIndex: readonly SearchEntry[] = [
     "href": "/research/watch/amex-november-2026-fees-and-service-dates",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-11-04",
+    "updated": "2026-11-06",
     "keywords": "Amex November: prepare for service windows, milestones and fees amex-november-2026-fees-and-service-dates Research",
     "priority": 92
   },
