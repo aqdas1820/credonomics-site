@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generatedAt": "2026-11-04T10:48:29.845Z",
+    "generatedAt": "2026-11-05T10:46:28.240Z",
     "recordCount": 1,
     "nseCount": 1,
     "bseCount": 0,
     "activeCount": 1,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 1 · BSE SME unavailable · BSE mainboard 0"
+    "sourceStatus": "NSE API 0 · BSE SME unavailable · BSE mainboard 0 · preserved previous"
   },
   "records": [
     {
