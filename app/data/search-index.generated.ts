@@ -298,6 +298,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:pusad-urban-cooperative-bank-rbi-directions-february-2027",
+    "title": "Pusad Urban Co-operative Bank: RBI extends directions to 7 February",
+    "description": "The extension runs from close of business on 7 November 2026 to close of business on 7 February 2027, subject to review.",
+    "href": "/research/watch/pusad-urban-cooperative-bank-rbi-directions-february-2027",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-05",
+    "keywords": "Pusad Urban Co-operative Bank: RBI extends directions to 7 February pusad-urban-cooperative-bank-rbi-directions-february-2027 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:sbi-card-transport-fuel-fees-december-2026",
     "title": "SBI Card December fees: transport is per transaction; fuel is per billing cycle",
     "description": "From 1 December 2026, the announced 1% fees use different thresholds: transport transactions above ₹30,000 and total cycle fuel spends above ₹50,000.",
