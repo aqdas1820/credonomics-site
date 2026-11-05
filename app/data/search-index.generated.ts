@@ -133,6 +133,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:dehradun-urban-cooperative-bank-rbi-directions-february-2027",
+    "title": "Dehradun Urban Co-operative Bank: RBI extends directions to 10 February",
+    "description": "The extension runs from close of business on 10 November 2026 to close of business on 10 February 2027, subject to review.",
+    "href": "/research/watch/dehradun-urban-cooperative-bank-rbi-directions-february-2027",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-05",
+    "keywords": "Dehradun Urban Co-operative Bank: RBI extends directions to 10 February dehradun-urban-cooperative-bank-rbi-directions-february-2027 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:edelweiss-overseas-paused-sips-healthcare-reopening-2026",
     "title": "Edelweiss: six funds’ paused SIPs close; Healthcare reopening is separate",
     "description": "Check your systematic registration: the six-fund closure does not apply to the Healthcare fund’s planned November reactivation.",
@@ -553,7 +564,7 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "route:/research/watch",
     "title": "Research Watch: Verified Changes & Action Dates",
-    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch. Latest publication: 4 November 2026, with scope and action dates.",
+    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch. Latest publication: 5 November 2026, with scope and action dates.",
     "href": "/research/watch",
     "category": "Research",
     "source": "Research Desk",
