@@ -12,6 +12,17 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'pusad-urban-cooperative-bank-rbi-directions-february-2027',
+    title: 'Pusad Urban Co-operative Bank: RBI extends directions to 7 February',
+    summary: 'The extension runs from close of business on 7 November 2026 to close of business on 7 February 2027, subject to review.',
+    category: 'Bank deposits', checkedAt: '2026-11-05', announcementDate: '2026-11-05', eventDate: '2027-02-07', dateLabel: 'Extended period ends · close of business', statusLabel: 'Directions extended',
+    source: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63924', sourceLabel: 'RBI: The Pusad Urban Co-operative Bank Ltd. directions extension', sourceLocation: '5 November 2026, press release 2026-2027/1446, paragraphs 1–4',
+    audience: 'Depositors and account holders of The Pusad Urban Co-operative Bank Ltd., Pusad, Yavatmal district, Maharashtra.',
+    facts: ['RBI announced the extension on 5 November. It runs from close of business on 7 November 2026 through close of business on 7 February 2027, subject to review.', 'The other terms of the existing directive continue. RBI cautions against reading the extension as an indication of satisfaction with the bank’s financial position.'],
+    actions: ['Check the bank’s current written instructions before planning a withdrawal or relying on the account for a payment.', 'Ask the bank which conditions apply to your account and check for later RBI notices before relying on the stated end date.'],
+    limits: 'The extension was upcoming when checked on 5 November. Account-specific withdrawal conditions and any deposit insurance eligibility or payout dates require separate confirmation.',
+  },
+  {
     slug: 'dehradun-urban-cooperative-bank-rbi-directions-february-2027',
     title: 'Dehradun Urban Co-operative Bank: RBI extends directions to 10 February',
     summary: 'The extension runs from close of business on 10 November 2026 to close of business on 10 February 2027, subject to review.',
