@@ -489,7 +489,7 @@ export const additionalVerifiedCards: VerifiedRealCard[] = [
     "terms": {
       "lifetime-free": {
         "rankingEligible": false,
-        "note": "Issuer-verified catalogue only — Lifetime-free card; up to 10X reward points on threshold-based eligible spend. International transactions stopped earning reward points effective 26 Oct 2026; a paid UPI add-on is separate. Not included in automated net-value rankings until complete reward and cap normalization."
+        "note": "Issuer-verified catalogue only — Lifetime-free card; up to 10X reward points on threshold-based eligible spend. IDFC FIRST Bank's revised 13 Sep 2026 notice confirms applicable reward points continue on international transactions alongside zero forex markup; card-specific conditions apply; a paid UPI add-on is separate. Not included in automated net-value rankings until complete reward and cap normalization."
       }
     }
   },
@@ -544,11 +544,11 @@ export const additionalVerifiedCards: VerifiedRealCard[] = [
     "terms": {
       "travel": {
         "rankingEligible": false,
-        "note": "Issuer-verified catalogue only — Lifetime-free and zero forex markup; up to one domestic plus one international lounge visit per quarter on applicable spend conditions. No reward points on international spends from 26 Oct 2026. Not included in automated net-value rankings until complete reward and cap normalization."
+        "note": "Issuer-verified catalogue only — Lifetime-free and zero forex markup; up to one domestic plus one international lounge visit per quarter on applicable spend conditions. IDFC FIRST Bank's revised 13 Sep 2026 notice confirms applicable international reward points continue alongside zero forex markup; card-specific conditions apply. Not included in automated net-value rankings until complete reward and cap normalization."
       },
       "lifetime-free": {
         "rankingEligible": false,
-        "note": "No recurring annual membership fee per official issuer product page; condition-specific promotions/optional add-ons can differ. Lifetime-free and zero forex markup; up to one domestic plus one international lounge visit per quarter on applicable spend conditions. No reward points on international spends from 26 Oct 2026."
+        "note": "No recurring annual membership fee per official issuer product page; condition-specific promotions/optional add-ons can differ. Lifetime-free and zero forex markup; up to one domestic plus one international lounge visit per quarter on applicable spend conditions. IDFC FIRST Bank's revised 13 Sep 2026 notice confirms applicable international reward points continue alongside zero forex markup; card-specific conditions apply."
       }
     }
   },
