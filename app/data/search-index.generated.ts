@@ -441,6 +441,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:sgb-december-2026-premature-redemption-request-windows",
+    "title": "Sovereign Gold Bonds: November request windows for three December redemptions",
+    "description": "RBI lists request windows opening on 6, 7 and 9 November for three specific SGB tranches.",
+    "href": "/research/watch/sgb-december-2026-premature-redemption-request-windows",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-06",
+    "keywords": "Sovereign Gold Bonds: November request windows for three December redemptions sgb-december-2026-premature-redemption-request-windows Research",
+    "priority": 92
+  },
+  {
     "id": "watch:suri-friends-union-bank-directions-january-2027",
     "title": "Suri Friends’ Union Bank: existing directions extended to 22 January 2027",
     "description": "RBI extends the existing directions for three months. Customers should not assume restrictions ended on 22 October.",
