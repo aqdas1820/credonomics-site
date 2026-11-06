@@ -144,6 +144,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:digital-life-certificate-campaign-november-2026",
+    "title": "Digital Life Certificate Campaign 5: find pension submission help in November",
+    "description": "The 1–30 November campaign offers help with Jeevan Pramaan through camps and participating pension agencies.",
+    "href": "/research/watch/digital-life-certificate-campaign-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-06",
+    "keywords": "Digital Life Certificate Campaign 5: find pension submission help in November digital-life-certificate-campaign-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:edelweiss-overseas-paused-sips-healthcare-reopening-2026",
     "title": "Edelweiss: six funds’ paused SIPs close; Healthcare reopening is separate",
     "description": "Check your systematic registration: the six-fund closure does not apply to the Healthcare fund’s planned November reactivation.",

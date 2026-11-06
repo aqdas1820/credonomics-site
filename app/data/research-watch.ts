@@ -1,16 +1,38 @@
 export const WATCH_CHECKED_AT = '2026-11-06'
 export type WatchItem = {
-  slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits'
+  slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
   sourceLocation: string; audience: string; facts: string[]; actions: string[]; limits: string
   publishedAt?: string; updateNote?: string
-  announcementDate?: string; statusLabel?: 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer' | 'Directions extended'
+  announcementDate?: string; statusLabel?: 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer' | 'Directions extended' | 'Campaign underway'
   additionalSources?: { url: string; label: string }[]
   cardIds?: string[]
 }
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'digital-life-certificate-campaign-november-2026',
+    title: 'Digital Life Certificate Campaign 5: find pension submission help in November',
+    summary: 'The 1–30 November campaign offers help with Jeevan Pramaan through camps and participating pension agencies.',
+    category: 'Pensions', checkedAt: '2026-11-06', announcementDate: '2026-10-30', eventDate: '2026-11-30', dateLabel: 'Campaign ends', statusLabel: 'Campaign underway',
+    source: 'https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2330361&lang=1&reg=3', sourceLabel: 'PIB: Nationwide Digital Life Certificate Campaign 5', sourceLocation: '30 October 2026 public announcement, release 2330361',
+    additionalSources: [
+      { url: 'https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2331689&lang=1&reg=3', label: 'PIB: SBI camps and branch assistance, 2 November' },
+      { url: 'https://jeevanpramaan.gov.in/v1.0/misc/faq', label: 'Jeevan Pramaan: eligibility, submission and certificate status' },
+      { url: 'https://jeevanpramaan.gov.in/v1.0/locatecentre/locate', label: 'Official Jeevan Pramaan centre locator' },
+    ],
+    audience: 'Pensioners and family members helping them submit a life certificate, especially people who need in-person assistance.',
+    facts: [
+      'The nationwide campaign runs from 1 to 30 November 2026. DoPPW announced camps across 2,000 cities and districts. Its 2 November update says SBI is running special camps across 115 cities and providing branch assistance.',
+      'Eligible pensioners can use face authentication on a compatible smartphone or get help at a Jeevan Pramaan centre. The certificate is shared digitally with the pension disbursing agency and has a unique Pramaan ID.',
+    ],
+    actions: [
+      'Confirm your certificate due date and accepted submission methods with your pension disbursing agency. If you want in-person help, use the official centre locator or ask your branch to confirm its local camp date and what to bring.',
+      'Keep your Pramaan ID after generation. Check certificate status and ask the disbursing agency to confirm acceptance if there is any doubt. If you cannot use Jeevan Pramaan, ask the agency which alternative it accepts.',
+    ],
+    limits: '30 November is the campaign end date. Your certificate validity and submission deadline depend on the pension authority. Jeevan Pramaan eligibility depends on the authority being onboarded and the official FAQ conditions. Confirm local camp, doorstep availability and any applicable service charge with the provider.',
+  },
   {
     slug: 'navi-fund-minimum-redemption-switch-out-november-2026',
     title: 'Navi Mutual Fund revises minimum redemption and switch-out for 11 schemes',
@@ -414,7 +436,7 @@ export const researchWatch: WatchItem[] = [
   },
 ]
 
-export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer' | 'Directions extended' {
+export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer' | 'Directions extended' | 'Campaign underway' {
   if (item.statusLabel) return item.statusLabel
   return item.eventDate > item.checkedAt ? 'Upcoming at check' : 'Effective at check'
 }
