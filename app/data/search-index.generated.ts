@@ -188,6 +188,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:hdfc-balanced-advantage-value-online-daily-sip-november-2026",
+    "title": "HDFC Balanced Advantage and Value: online daily SIP minimum drops to ₹20",
+    "description": "From 2 November, the two schemes require at least 30 online daily SIP instalments instead of six.",
+    "href": "/research/watch/hdfc-balanced-advantage-value-online-daily-sip-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-06",
+    "keywords": "HDFC Balanced Advantage and Value: online daily SIP minimum drops to ₹20 hdfc-balanced-advantage-value-online-daily-sip-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:hsbc-arbitrage-exit-load-october-2026",
     "title": "HSBC Arbitrage: shorter exit-load period has a systematic-investment exception",
     "description": "For eligible new investments from 27 October, the 0.25% exit-load period falls from one month to 15 days. Earlier systematic enrolments retain their original load rules.",
