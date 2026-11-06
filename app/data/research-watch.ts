@@ -12,6 +12,17 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'sgb-december-2026-premature-redemption-request-windows',
+    title: 'Sovereign Gold Bonds: November request windows for three December redemptions',
+    summary: 'RBI lists request windows opening on 6, 7 and 9 November for three specific SGB tranches.',
+    category: 'Markets', checkedAt: '2026-11-06', announcementDate: '2026-08-21', eventDate: '2026-11-27', dateLabel: 'First listed request window closes', statusLabel: 'Availability checked',
+    source: 'https://rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63416', sourceLabel: 'RBI: SGB premature redemption calendar for October 2026 to March 2027', sourceLocation: '21 August 2026, release 2026-2027/938, table rows 1, 25 and 30',
+    audience: 'Holders of SGB 2021–22 Series VIII, 2021–22 Series III or 2019–20 Series I who are considering premature redemption in December 2026.',
+    facts: ['2021–22 Series VIII (issued 7 December 2021): requests from 6 through 27 November 2026, with premature redemption scheduled for 7 December 2026.', '2021–22 Series III (issued 8 June 2021): requests from 7 through 30 November 2026, with premature redemption scheduled for 8 December 2026.', '2019–20 Series I (issued 11 June 2019): requests from 9 November through 1 December 2026, with premature redemption scheduled for 11 December 2026.'],
+    actions: ['Match the series and issue date to your holding. Ask the channel through which you hold the bonds for its submission process, applicable cutoff and acknowledgement.', 'Check RBI for revisions and the applicable redemption price announcement before relying on an amount.'],
+    limits: 'At the 6 November check, the Series VIII window was scheduled to open that day. The other two windows were upcoming. RBI says unscheduled holidays can change the dates. The calendar does not specify a submission hour or a redemption price for these dates.',
+  },
+  {
     slug: 'hdfc-balanced-advantage-value-online-daily-sip-november-2026',
     title: 'HDFC Balanced Advantage and Value: online daily SIP minimum drops to ₹20',
     summary: 'From 2 November, the two schemes require at least 30 online daily SIP instalments instead of six.',
