@@ -12,6 +12,17 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'hdfc-balanced-advantage-value-online-daily-sip-november-2026',
+    title: 'HDFC Balanced Advantage and Value: online daily SIP minimum drops to ₹20',
+    summary: 'From 2 November, the two schemes require at least 30 online daily SIP instalments instead of six.',
+    category: 'Mutual funds', checkedAt: '2026-11-06', announcementDate: '2026-10-30', eventDate: '2026-11-02', dateLabel: 'Online daily SIP change effective',
+    source: 'https://files.hdfcfund.com/s3fs-public/2026-10/1376%20-%20Addendum%20-%20Change%20in%20minimum%20application%20amount%20for%20SIP%20in%20Select%20Schemes.pdf?VersionId=sBTduv1w_8aGn00QHLvo0cgfJNfRxq1h', sourceLabel: 'HDFC Mutual Fund: Addendum 1376', sourceLocation: '30 October 2026, page 1, existing and revised provisions table',
+    audience: 'Investors setting up an online daily SIP in HDFC Balanced Advantage Fund or HDFC Value Fund.',
+    facts: ['From 2 November 2026, the minimum per daily instalment falls from ₹100 to ₹20, with ₹1 increments. The minimum number of instalments rises from six to 30.', 'At the stated minimums, the scheduled total is ₹600 under either set of terms. Other SIP terms remain unchanged.'],
+    actions: ['Before registering, select the exact scheme and daily frequency, then confirm the minimum instalment count and debit schedule shown in the online form.', 'If you already have a daily SIP, check its registration details with your platform or the fund before assuming its amount or schedule has changed.'],
+    limits: 'The addendum covers online daily SIPs in these two schemes. Physical transactions and other frequencies are outside its scope. It does not specify automatic changes to existing instructions. The separate HDFC covered-call and optional-exit notice has different terms and applies to a different pair of schemes.',
+  },
+  {
     slug: 'digital-life-certificate-campaign-november-2026',
     title: 'Digital Life Certificate Campaign 5: find pension submission help in November',
     summary: 'The 1–30 November campaign offers help with Jeevan Pramaan through camps and participating pension agencies.',
