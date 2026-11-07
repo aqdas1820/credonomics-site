@@ -452,6 +452,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:sri-guru-raghavendra-bank-rbi-directions-may-2027",
+    "title": "Sri Guru Raghavendra Bank: RBI extends directions to 10 May 2027",
+    "description": "The six-month extension starts at close of business on 10 November 2026 and remains subject to review.",
+    "href": "/research/watch/sri-guru-raghavendra-bank-rbi-directions-may-2027",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-07",
+    "keywords": "Sri Guru Raghavendra Bank: RBI extends directions to 10 May 2027 sri-guru-raghavendra-bank-rbi-directions-may-2027 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:suri-friends-union-bank-directions-january-2027",
     "title": "Suri Friends’ Union Bank: existing directions extended to 22 January 2027",
     "description": "RBI extends the existing directions for three months. Customers should not assume restrictions ended on 22 October.",
@@ -497,13 +508,13 @@ export const searchIndex: readonly SearchEntry[] = [
   },
   {
     "id": "watch:hdfc-fund-covered-call-exit-window-november-2026",
-    "title": "Two HDFC schemes: optional exit window closes at 3 pm on 6 November",
-    "description": "Balanced Advantage and Children’s Fund add a covered-call strategy from 9 November; eligible holders have a limited optional exit window.",
+    "title": "Two HDFC schemes: optional exit window closed on 6 November",
+    "description": "The special exit window ended at 3 pm IST on 6 November. The covered-call change is scheduled for 9 November.",
     "href": "/research/watch/hdfc-fund-covered-call-exit-window-november-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-10-24",
-    "keywords": "Two HDFC schemes: optional exit window closes at 3 pm on 6 November hdfc-fund-covered-call-exit-window-november-2026 Research",
+    "updated": "2026-11-07",
+    "keywords": "Two HDFC schemes: optional exit window closed on 6 November hdfc-fund-covered-call-exit-window-november-2026 Research",
     "priority": 92
   },
   {

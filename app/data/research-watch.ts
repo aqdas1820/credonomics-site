@@ -1,16 +1,27 @@
-export const WATCH_CHECKED_AT = '2026-11-06'
+export const WATCH_CHECKED_AT = '2026-11-07'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
   sourceLocation: string; audience: string; facts: string[]; actions: string[]; limits: string
   publishedAt?: string; updateNote?: string
-  announcementDate?: string; statusLabel?: 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer' | 'Directions extended' | 'Campaign underway'
+  announcementDate?: string; statusLabel?: 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer' | 'Directions extended' | 'Campaign underway' | 'Deadline passed'
   additionalSources?: { url: string; label: string }[]
   cardIds?: string[]
 }
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'sri-guru-raghavendra-bank-rbi-directions-may-2027',
+    title: 'Sri Guru Raghavendra Bank: RBI extends directions to 10 May 2027',
+    summary: 'The six-month extension starts at close of business on 10 November 2026 and remains subject to review.',
+    category: 'Bank deposits', checkedAt: '2026-11-07', announcementDate: '2026-11-06', eventDate: '2027-05-10', dateLabel: 'Extended period ends · close of business', statusLabel: 'Directions extended',
+    source: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63938', sourceLabel: 'RBI: Sri Guru Raghavendra Sahakara Bank Niyamitha directions extension', sourceLocation: '6 November 2026, release 2026-2027/1460, paragraphs 1–4',
+    audience: 'Depositors and account holders of Sri Guru Raghavendra Sahakara Bank Niyamitha, Bengaluru.',
+    facts: ['RBI extends the existing directions from close of business on 10 November 2026 to close of business on 10 May 2027, subject to review.', 'Other terms of the directive continue. RBI cautions against treating the extension as an indication of satisfaction with the bank’s financial position.'],
+    actions: ['Check the bank’s current written instructions before planning a withdrawal or using the account for a payment.', 'Ask which conditions apply to your account and check for later RBI notices before relying on the stated end date.'],
+    limits: 'The extension was upcoming when checked on 7 November. Account-specific withdrawal limits, deposit insurance eligibility and any payout process or date require separate verification.',
+  },
   {
     slug: 'sgb-december-2026-premature-redemption-request-windows',
     title: 'Sovereign Gold Bonds: November request windows for three December redemptions',
@@ -424,13 +435,13 @@ export const researchWatch: WatchItem[] = [
   },
   {
     slug: 'hdfc-fund-covered-call-exit-window-november-2026',
-    title: 'Two HDFC schemes: optional exit window closes at 3 pm on 6 November',
-    summary: 'Balanced Advantage and Children’s Fund add a covered-call strategy from 9 November; eligible holders have a limited optional exit window.',
-    category: 'Mutual funds', checkedAt: '2026-10-24', eventDate: '2026-11-06', dateLabel: 'Optional exit deadline · 3:00 pm IST',
+    title: 'Two HDFC schemes: optional exit window closed on 6 November',
+    summary: 'The special exit window ended at 3 pm IST on 6 November. The covered-call change is scheduled for 9 November.',
+    category: 'Mutual funds', checkedAt: '2026-11-07', publishedAt: '2026-10-24', updateNote: '7 November: marked the special exit window as closed. Original publication retained.', statusLabel: 'Deadline passed', eventDate: '2026-11-06', dateLabel: 'Optional exit deadline · 3:00 pm IST',
     source: 'https://files.hdfcfund.com/s3fs-public/2026-10/1370%20-%20Notice%20cum%20Addendum%20-%20Change%20in%20Fundamental%20attributes%20of%20Schemes%20-%20w.e.f.%20-%20November%2009,%202026.pdf', sourceLabel: 'HDFC Mutual Fund: Notice 1370', sourceLocation: 'Pages 1–3; Exit Option on page 3',
     audience: 'Eligible existing unitholders of HDFC Balanced Advantage Fund and HDFC Children’s Fund.',
-    facts: ['The two schemes introduce a covered-call strategy from 9 November 2026 as a fundamental-attribute change.', 'For eligible holders whose valid applications reached the fund by 3 pm on 1 October, the optional exit-load-free window runs from 8 October until 3 pm on 6 November. Applicable NAV and cut-off rules still apply.'],
-    actions: ['Read the notice against your exact scheme and holding eligibility before deciding.', 'If you choose the optional exit, check the official submission process, lock-in and encumbrance conditions in advance.'],
+    facts: ['The two schemes introduce a covered-call strategy from 9 November 2026 as a fundamental-attribute change.', 'For eligible holders whose valid applications reached the fund by 3 pm on 1 October, the optional exit-load-free window ran from 8 October until 3 pm on 6 November 2026. Applicable NAV and cut-off rules still apply.'],
+    actions: ['The special exit window has closed. For a current redemption decision, check normal exit loads, lock-in and other applicable conditions with the fund.', 'Read the notice against your exact scheme and holding eligibility before deciding.', 'Continuing holders should review the covered-call change scheduled for 9 November.'],
     limits: 'This is not a recommendation to redeem. Children’s Fund lock-in, pledged/frozen units and tax consequences can still restrict or affect an exit. Continuing holders need not exit. This is not an all-HDFC-funds redemption restriction.',
   },
   {
@@ -458,7 +469,7 @@ export const researchWatch: WatchItem[] = [
   },
 ]
 
-export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer' | 'Directions extended' | 'Campaign underway' {
+export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer' | 'Directions extended' | 'Campaign underway' | 'Deadline passed' {
   if (item.statusLabel) return item.statusLabel
   return item.eventDate > item.checkedAt ? 'Upcoming at check' : 'Effective at check'
 }
