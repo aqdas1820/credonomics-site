@@ -12,6 +12,25 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'hdfc-base-expense-ratio-selected-plans-november-2026',
+    title: 'HDFC Mutual Fund: selected plan expense ratios change on 16 November',
+    summary: 'The notices cover Base Expense Ratios: ten Regular Plans fall; four Direct Plans rise and two fall. Check your exact scheme and plan.',
+    category: 'Mutual funds', checkedAt: '2026-11-07', announcementDate: '2026-11-06', eventDate: '2026-11-16', dateLabel: 'Proposed BER changes effective',
+    source: 'https://files.hdfcfund.com/s3fs-public/2026-11/Consolidated%20Notice%20for%20Expense%20change%2006-11-2026%20RP%20WEF%2016-11-2026.pdf?VersionId=PYeb5blXkxXtnOB2XjDe2x7HPp0ozMKa', sourceLabel: 'HDFC Mutual Fund: consolidated Regular Plan BER notice', sourceLocation: '6 November 2026, page 1, existing/proposed BER table',
+    additionalSources: [
+      { url: 'https://files.hdfcfund.com/s3fs-public/2026-11/Consolidated%20Notice%20for%20Expense%20change%2006-11-2026%20DP%20WEF%2016-11-2026.pdf?VersionId=3myPqgcpkTvfPnqxhhts8u_x8c0xZVPn', label: 'HDFC Mutual Fund: consolidated Direct Plan BER notice, 6 November' },
+      { url: 'https://www.hdfcfund.com/statutory-disclosure/total-expense-ratio-of-mutual-fund-schemes/notices', label: 'HDFC Mutual Fund: current expense-ratio notices' },
+    ],
+    audience: 'Investors holding or considering the specific HDFC Mutual Fund schemes and plans listed below.',
+    facts: [
+      'Regular Plans, existing → proposed BER (%): HDFC Arbitrage Fund 0.80 → 0.76; HDFC BSE REITS and Commercial Real Estate Index Fund 0.85 → 0.80; HDFC Gilt Fund 0.70 → 0.65; HDFC Gold Silver Passive FOF 0.48 → 0.42; HDFC Medium Term Fund 1.11 → 1.08.',
+      'Other listed Regular Plans, existing → proposed BER (%): HDFC Money Market Fund 0.35 → 0.32; HDFC Nifty Auto Index Fund 0.75 → 0.70; HDFC Nifty India Consumption Index Fund 0.69 → 0.66; HDFC Nifty India Digital Index Fund 0.71 → 0.68; HDFC Nifty500 Multicap 50:25:25 Index Fund 0.64 → 0.61.',
+      'Direct Plans, existing → proposed BER (%): HDFC Banking & Financial Services Fund 0.73 → 0.76; HDFC Credit Risk Fund 0.86 → 0.89; HDFC Equity Savings Fund 0.82 → 0.85; HDFC Gold Silver Passive FOF 0.18 → 0.12; HDFC Large Cap Fund 0.83 → 0.82; HDFC Pharma and Healthcare Fund 0.70 → 0.76.',
+    ],
+    actions: ['Match both the scheme name and Direct/Regular Plan on your holding statement to the relevant notice. Check the latest disclosure again on or after 16 November before comparing ongoing costs.', 'If your platform shows a different expense figure, ask which components and disclosure date it uses. Consider any applicable exit load and tax before deciding to switch; these notices alone are not a reason to transact.'],
+    limits: 'Upcoming when checked on 7 November. These are the proposed Base Expense Ratios (BER), not a verified all-in Total Expense Ratio (TER). The two notices cover only the named schemes and plans; they do not establish a blanket HDFC fee reduction or a change for other plans. Current rankings and fund calculations are unchanged.',
+  },
+  {
     slug: 'sri-guru-raghavendra-bank-rbi-directions-may-2027',
     title: 'Sri Guru Raghavendra Bank: RBI extends directions to 10 May 2027',
     summary: 'The six-month extension starts at close of business on 10 November 2026 and remains subject to review.',

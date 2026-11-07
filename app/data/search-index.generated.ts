@@ -199,6 +199,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:hdfc-base-expense-ratio-selected-plans-november-2026",
+    "title": "HDFC Mutual Fund: selected plan expense ratios change on 16 November",
+    "description": "The notices cover Base Expense Ratios: ten Regular Plans fall; four Direct Plans rise and two fall. Check your exact scheme and plan.",
+    "href": "/research/watch/hdfc-base-expense-ratio-selected-plans-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-07",
+    "keywords": "HDFC Mutual Fund: selected plan expense ratios change on 16 November hdfc-base-expense-ratio-selected-plans-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:hsbc-arbitrage-exit-load-october-2026",
     "title": "HSBC Arbitrage: shorter exit-load period has a systematic-investment exception",
     "description": "For eligible new investments from 27 October, the 0.25% exit-load period falls from one month to 15 days. Earlier systematic enrolments retain their original load rules.",
