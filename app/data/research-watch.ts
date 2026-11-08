@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-08'
+export const WATCH_CHECKED_AT = '2026-11-09'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,18 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'hdfc-four-schemes-riskometer-october-2026-portfolio',
+    title: 'Four HDFC schemes: check the revised risk-o-meter before investing',
+    summary: 'Two schemes move to Very High risk; two move lower. These labels assess the portfolio as at 31 October 2026.',
+    category: 'Mutual funds', checkedAt: '2026-11-09', announcementDate: '2026-11-06', eventDate: '2026-10-31', dateLabel: 'Portfolio assessment date', statusLabel: 'Clarification checked',
+    source: 'https://files.hdfcfund.com/s3fs-public/2026-11/1377%20-%20Addendum%20-%20Change%20in%20riskometer%20of%20Schemes%20-%20as%20at%20October%2031%2C%202026.pdf?VersionId=RhrAiirkOqyESHtnSGnIMMyzS90YOUmf', sourceLabel: 'HDFC Mutual Fund: Risk-o-meter Addendum 1377', sourceLocation: 'Pages 1–2, existing/revised gauges and page 2 assessment/date paragraphs',
+    additionalSources: [{ url: 'https://www.hdfcfund.com/statutory-disclosure/form-disclosures/addenda-notices', label: 'HDFC Mutual Fund: current addenda and notices' }],
+    audience: 'Investors holding or considering any of the four named HDFC Mutual Fund schemes.',
+    facts: ['HDFC Dynamic Term Fund: Moderately High → Moderate.', 'HDFC Multi-Asset Active FOF: High → Very High.', 'HDFC NIFTY SDL Plus G-Sec Jun 2027 40:60 Index Fund: Low to Moderate → Low.', 'HDFC Nifty LargeMidcap250 Plus 8-13 yr G-Sec 70:30 Index Fund: High → Very High.', 'The assessment uses each scheme’s portfolio as at 31 October. Benchmark risk-o-meters, other product-label details and other scheme terms remain unchanged.'],
+    actions: ['Match your exact scheme, then read its latest portfolio and SID/KIM alongside the revised label before deciding whether it fits your time horizon and ability to bear losses.', 'If considering a switch, check applicable tax and exit-load consequences first. A risk-label revision alone is not a recommendation to transact.'],
+    limits: 'Notice dated 6 November; checked 9 November. The portfolio assessment date is not a separate investment deadline. No separate commencement date or hour is specified. A lower label does not guarantee capital protection or returns. This notice concerns four schemes, not all HDFC funds. Ranking formulas remain unchanged.',
+  },
   {
     slug: 'hdfc-base-expense-ratio-selected-plans-november-2026',
     title: 'HDFC Mutual Fund: selected plan expense ratios change on 16 November',

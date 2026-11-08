@@ -188,6 +188,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:hdfc-four-schemes-riskometer-october-2026-portfolio",
+    "title": "Four HDFC schemes: check the revised risk-o-meter before investing",
+    "description": "Two schemes move to Very High risk; two move lower. These labels assess the portfolio as at 31 October 2026.",
+    "href": "/research/watch/hdfc-four-schemes-riskometer-october-2026-portfolio",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-09",
+    "keywords": "Four HDFC schemes: check the revised risk-o-meter before investing hdfc-four-schemes-riskometer-october-2026-portfolio Research",
+    "priority": 92
+  },
+  {
     "id": "watch:hdfc-balanced-advantage-value-online-daily-sip-november-2026",
     "title": "HDFC Balanced Advantage and Value: online daily SIP minimum drops to ₹20",
     "description": "From 2 November, the two schemes require at least 30 online daily SIP instalments instead of six.",
