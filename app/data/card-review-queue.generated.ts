@@ -10,9 +10,9 @@ export type CardReviewQueueItem = {
 }
 
 export const cardReviewQueueMeta = {
-  "generatedAt": "2026-11-05T09:34:16.653Z",
-  "itemCount": 250,
-  "newCardCandidates": 225,
+  "generatedAt": "2026-11-09T09:53:25.619Z",
+  "itemCount": 244,
+  "newCardCandidates": 219,
   "possibleFeeChanges": 2,
   "reviewDue": 23
 } as const
@@ -40,7 +40,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "Airtel Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card/airtel-axis-bank-credit-card",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "a34d74a1ab38",
@@ -48,7 +48,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "Axis Bank ACE Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card/axis-bank-ace-credit-card",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "95bf15b41fb6",
@@ -56,7 +56,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "Axis Bank Cashback Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card/cashback-credit-card",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "8e19dccda58d",
@@ -64,7 +64,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "Axis Bank Freecharge Plus Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card/axis-bank-freecharge-plus-credit-card",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "ef636d37f625",
@@ -72,7 +72,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "Flipkart Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card/flipkart-axisbank-credit-card",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "f6b94d0b4d0c",
@@ -80,7 +80,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "IndianOil Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card/indianoil-axis-bank-credit-card",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "4b880bc42a00",
@@ -88,7 +88,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "IndiGo Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card/indigo-axis-bank-credit-card",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "87187c96b340",
@@ -96,7 +96,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "IndiGo Axis Bank Premium Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card/indigo-axis-bank-premium-credit-card",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "c3a09682e781",
@@ -104,7 +104,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "HDFC Bank",
     "name": "HDFC Bank Millennia Credit Card",
     "sourceUrl": "https://www.hdfc.bank.in/credit-cards/millennia-credit-card",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "0b5127d595dd",
@@ -112,7 +112,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "HDFC Bank",
     "name": "IndianOil HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfc.bank.in/credit-cards/indianoil-hdfc-bank-credit-card",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "9e75b86fd0e8",
@@ -120,7 +120,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "HDFC Bank",
     "name": "Swiggy HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfc.bank.in/credit-cards/swiggy-hdfc-bank-credit-card",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "2c6885831af8",
@@ -128,7 +128,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "HDFC Bank",
     "name": "Tata Neu Infinity HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "344eaa9a18a8",
@@ -136,7 +136,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "HSBC India",
     "name": "HSBC Live+ Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/live-plus/",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "676c780658cd",
@@ -144,7 +144,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "ICICI Bank",
     "name": "Amazon Pay ICICI Bank Credit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/amazon-pay-credit-card/amazon-pay-faq",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "4b779b015011",
@@ -152,7 +152,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "IDFC FIRST Bank",
     "name": "FIRST Power+ Credit Card",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "4c9ae6a95feb",
@@ -160,7 +160,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "BPCL SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/credit-cards/bpcl-sbi-card.html",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "5258a50a5a16",
@@ -168,7 +168,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "BPCL SBI Card OCTANE",
     "sourceUrl": "https://www.sbicard.com/en/personal/credit-cards/bpcl-sbi-card-octane.html",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "1b619ab3d37a",
@@ -176,7 +176,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "CASHBACK SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/credit-cards/cashback-sbi-card.html",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "2291efddaaf4",
@@ -184,7 +184,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "Flipkart SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/credit-cards/flipkart-sbi-card.html",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "8211f45eb43d",
@@ -192,7 +192,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "SBI Card MILES",
     "sourceUrl": "https://www.sbicard.com/en/personal/credit-cards/sbi-card-miles.html",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "3f26730a7ed9",
@@ -200,7 +200,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "SBI Card MILES PRIME",
     "sourceUrl": "https://www.sbicard.com/en/personal/credit-cards/sbi-card-miles-prime.html",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "c87997f09e0f",
@@ -208,7 +208,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "Tata Neu Infinity SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/credit-cards/tata-neu-infinity-sbi-card.html",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "e1d061604b13",
@@ -216,7 +216,7 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "SBI Card",
     "name": "Tata Neu Plus SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/credit-cards/tata-neu-plus-sbi-card.html",
-    "message": "Verified record is 87 days old and is due for source review."
+    "message": "Verified record is 91 days old and is due for source review."
   },
   {
     "id": "dc1216894379",
@@ -816,86 +816,6 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Axis Bank",
     "name": "SpiceJet Axis Bank Voyage Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "2d1dc98ec8d4",
-    "type": "new-card-candidate",
-    "issuer": "Federal Bank",
-    "name": "Additional details about Add-on Card ?",
-    "sourceUrl": "https://www.federal.bank.in/add-on-cards",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "ddae892ac916",
-    "type": "new-card-candidate",
-    "issuer": "Federal Bank",
-    "name": "Can I cancel my credit card at any time?",
-    "sourceUrl": "https://www.federal.bank.in/credit-cards",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "fd4b7026f4eb",
-    "type": "new-card-candidate",
-    "issuer": "Federal Bank",
-    "name": "Credit Card Application",
-    "sourceUrl": "https://www.federal.bank.in/credit-cards",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "bcaba0357615",
-    "type": "new-card-candidate",
-    "issuer": "Federal Bank",
-    "name": "Credit Card Features & Benefits",
-    "sourceUrl": "https://www.federal.bank.in/credit-cards",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "15b570d31e1d",
-    "type": "new-card-candidate",
-    "issuer": "Federal Bank",
-    "name": "Debit Cards Vs Credit Cards",
-    "sourceUrl": "https://www.federal.bank.in/difference-between-debit-cards-and-credit-cards",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "29f29fff34a0",
-    "type": "new-card-candidate",
-    "issuer": "Federal Bank",
-    "name": "Documents Required for Credit Card",
-    "sourceUrl": "https://www.federal.bank.in/credit-cards",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "a377313fa1c4",
-    "type": "new-card-candidate",
-    "issuer": "Federal Bank",
-    "name": "Federal Bank Credit Card Charges, Fees & Interest Rates",
-    "sourceUrl": "https://www.federal.bank.in/how-to-use-credit-cards-wisely",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "0c026fdb02ee",
-    "type": "new-card-candidate",
-    "issuer": "Federal Bank",
-    "name": "Federal Bank Credit Card EMI",
-    "sourceUrl": "https://www.federal.bank.in/credit-card-emi",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "efed675a2dd9",
-    "type": "new-card-candidate",
-    "issuer": "Federal Bank",
-    "name": "Secured Credit Cards",
-    "sourceUrl": "https://www.federal.bank.in/credit-cards",
-    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
-  },
-  {
-    "id": "e38662f71875",
-    "type": "new-card-candidate",
-    "issuer": "Federal Bank",
-    "name": "Step-by-Step Process to Apply for Credit Card",
-    "sourceUrl": "https://www.federal.bank.in/credit-card-activation",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   },
   {
@@ -2016,6 +1936,38 @@ export const cardReviewQueue: CardReviewQueueItem[] = [
     "issuer": "Standard Chartered India",
     "name": "Smart Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "edced92c132f",
+    "type": "new-card-candidate",
+    "issuer": "Standard Chartered India",
+    "name": "Standard Chartered EaseMyTrip Credit Card",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "697106014edc",
+    "type": "new-card-candidate",
+    "issuer": "Standard Chartered India",
+    "name": "Super Value Titanium Credit Card",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "a36c60fa6998",
+    "type": "new-card-candidate",
+    "issuer": "Standard Chartered India",
+    "name": "Ultimate Credit Card",
+    "sourceUrl": "https://www.sc.com/in/credit-cards/",
+    "message": "Official-source discovery record is not yet normalized in the verified ranking database."
+  },
+  {
+    "id": "eeab019ebe24",
+    "type": "new-card-candidate",
+    "issuer": "YES BANK",
+    "name": "EMI Credit Card",
+    "sourceUrl": "https://www.yes.bank.in/personal-banking/yes-individual/cards/credit-cards",
     "message": "Official-source discovery record is not yet normalized in the verified ranking database."
   }
 ]

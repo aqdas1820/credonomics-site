@@ -35,11 +35,11 @@ export type AutoCardCatalogRecord = {
 }
 
 export const autoCardCatalogMeta = {
-  "generatedAt": "2026-11-05T09:33:42.870Z",
+  "generatedAt": "2026-11-09T09:52:57.276Z",
   "sourceCount": 14,
   "successfulSources": 12,
   "failedSources": 2,
-  "recordCount": 245,
+  "recordCount": 235,
   "failedIssuers": [
     "YES BANK",
     "American Express India"
@@ -54,7 +54,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AXIS BANK PRIVILEGE Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -95,7 +95,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Neo Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -145,7 +145,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank My Zone Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -189,7 +189,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndiGo Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 799,
     "joiningFee": 799,
@@ -229,7 +229,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "FLIPKART AXIS BANK Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 500,
     "joiningFee": 500,
@@ -273,7 +273,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank REWARDS Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 1000,
     "joiningFee": 1000,
@@ -314,7 +314,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HORIZON Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 3000,
     "joiningFee": 3000,
@@ -357,7 +357,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndiGo Axis Bank Premium Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 5000,
     "joiningFee": 5000,
@@ -398,7 +398,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "INDIANOIL AXIS BANK Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 500,
     "joiningFee": 500,
@@ -451,7 +451,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Select Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 3000,
     "joiningFee": 3000,
@@ -489,7 +489,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Scapia Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 0,
     "joiningFee": 0,
@@ -547,7 +547,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AXIS BANK MAGNUS Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 12500,
     "joiningFee": 12500,
@@ -590,7 +590,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank ACE Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 499,
     "joiningFee": 499,
@@ -661,7 +661,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Google Pay Flex Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -712,7 +712,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Reserve Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 50000,
     "joiningFee": 50000,
@@ -751,7 +751,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank MY Zone Easy Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -802,7 +802,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Airtel Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 500,
     "joiningFee": 500,
@@ -857,7 +857,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Cashback Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 1000,
     "joiningFee": 1000,
@@ -919,7 +919,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndianOil Easy Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -971,7 +971,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Privilege Easy Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 1500,
     "joiningFee": 1500,
@@ -1010,7 +1010,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Atlas Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 5000,
     "joiningFee": 5000,
@@ -1050,7 +1050,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank AURA Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "annualFee": 749,
     "joiningFee": 749,
@@ -1088,7 +1088,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndianOil Axis Bank Premium Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 1000,
     "joiningFee": 1000,
@@ -1142,7 +1142,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Pride Platinum Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 250,
     "joiningFee": 0,
@@ -1183,7 +1183,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Pride Signature Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 500,
     "joiningFee": 0,
@@ -1230,7 +1230,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Flipkart Axis Bank Super Elite Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 500,
     "joiningFee": 500,
@@ -1285,7 +1285,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "SpiceJet Axis Bank Voyage Black Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 2000,
     "joiningFee": 2000,
@@ -1323,7 +1323,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Samsung Axis Bank Infinite Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 5000,
     "joiningFee": 5000,
@@ -1371,7 +1371,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Fibe Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 0,
     "joiningFee": 0,
@@ -1425,7 +1425,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Shoppers Stop Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 500,
     "joiningFee": 500,
@@ -1466,7 +1466,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "SpiceJet Axis Bank Voyage Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 750,
     "joiningFee": 750,
@@ -1508,7 +1508,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Samsung Axis Bank Signature Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 500,
     "joiningFee": 500,
@@ -1557,7 +1557,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Miles and More Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 3500,
     "joiningFee": 3500,
@@ -1601,7 +1601,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Freecharge Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 250,
     "joiningFee": 250,
@@ -1641,7 +1641,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Freecharge Plus Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 0,
     "joiningFee": 350,
@@ -1700,7 +1700,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "LIC Axis Bank Signature Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 0,
     "joiningFee": 0,
@@ -1754,7 +1754,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "LIC Axis Bank Platinum Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -1807,7 +1807,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AXIS BANK VISTARA SIGNATURE Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 3000,
     "joiningFee": 3000,
@@ -1846,7 +1846,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AXIS BANK VISTARA Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 1500,
     "joiningFee": 1500,
@@ -1884,7 +1884,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Kwik Axis Bank Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 0,
     "joiningFee": 0,
@@ -1936,7 +1936,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Axis Bank Vistara Infinite Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 10000,
     "joiningFee": 10000,
@@ -1976,7 +1976,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AXIS BANK SUPERMONEY RuPay Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 500,
     "joiningFee": 0,
@@ -2019,7 +2019,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit card application made easy",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2051,7 +2051,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Choose your Credit Card",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2083,7 +2083,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "1. What is Credit Card?",
     "sourceUrl": "https://www.axis.bank.in/cards/credit-card",
     "catalogueUrl": "https://www.axis.bank.in/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "shopping"
@@ -2115,7 +2115,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "CASHBACK SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
     "catalogueUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "maxCashbackRate": 5,
     "shoppingRate": 5,
@@ -2163,7 +2163,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Flipkart SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
     "catalogueUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 350000,
     "renewalFee": 350000,
@@ -2218,7 +2218,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndiGo SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
     "catalogueUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "travelRate": 3,
     "categories": [
@@ -2264,7 +2264,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "SimplyCLICK SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
     "catalogueUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 499,
     "renewalFee": 499,
@@ -2305,7 +2305,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Tata Neu Infinity SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
     "catalogueUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "upiRate": 1.5,
     "loungeVisits": 8,
@@ -2356,7 +2356,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "SBI Card Miles Elite",
     "sourceUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
     "catalogueUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "travel"
@@ -2394,7 +2394,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "SBI Card PRIME",
     "sourceUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
     "catalogueUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -2432,7 +2432,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Tata Neu Plus SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
     "catalogueUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "upiRate": 2,
     "loungeVisits": 4,
@@ -2482,7 +2482,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "PhonePe SBI Card SELECT BLACK",
     "sourceUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
     "catalogueUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "annualFee": 1499,
     "renewalFee": 1499,
@@ -2520,7 +2520,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "PhonePe SBI Card PURPLE",
     "sourceUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
     "catalogueUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2555,7 +2555,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "SimplySAVE SBI Card",
     "sourceUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
     "catalogueUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 100000,
     "renewalFee": 100000,
@@ -2605,7 +2605,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndiGo SBI Card ELITE",
     "sourceUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
     "catalogueUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "feeWaiverSpend": 1,
     "fuelRate": 7,
@@ -2660,7 +2660,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "SBI Card MILES PRIME",
     "sourceUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
     "catalogueUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "travel"
@@ -2698,7 +2698,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "SBI Card MILES",
     "sourceUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
     "catalogueUrl": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "travel"
@@ -2735,7 +2735,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Business Credit Cards",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -2767,7 +2767,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Types of Credit Cards",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "fuel",
@@ -2803,7 +2803,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndianOil Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2835,7 +2835,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Tata Neu Plus Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2869,7 +2869,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "PhonePe HDFC Bank Ultimo Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2901,7 +2901,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "PhonePe HDFC Bank Uno Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2933,7 +2933,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Marriott Bonvoy HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2965,7 +2965,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Tata Neu Infinity HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -2999,7 +2999,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Shoppers Stop Black HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -3033,7 +3033,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Shoppers Stop HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -3067,7 +3067,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Swiggy Ornge HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -3101,7 +3101,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Swiggy BLCK HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -3135,7 +3135,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HDFC Bank UPI RuPay Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "upi"
@@ -3169,7 +3169,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Swiggy HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -3203,7 +3203,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Platinum Plus Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "fuel"
@@ -3237,7 +3237,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Visa Signature Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "loungeVisits": 1,
     "categories": [
@@ -3272,7 +3272,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Diners ClubMiles Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "travel"
@@ -3306,7 +3306,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "InterMiles HDFC Bank Diners Club Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "travel"
@@ -3341,7 +3341,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "InterMiles HDFC Bank Signature Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "travel"
@@ -3376,7 +3376,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "InterMiles HDFC Bank Platinum Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "travel"
@@ -3411,7 +3411,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Pine Labs HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -3445,7 +3445,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Regalia Activ HDFC Bank Credit Card",
     "sourceUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
     "catalogueUrl": "https://www.hdfcbank.com/personal/pay/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -3479,7 +3479,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Get the best Credit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/sapphiro-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 3500,
     "joiningFee": 6500,
@@ -3561,7 +3561,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "1838 Reserve Credit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/1838-reserve-icici-credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 175000,
     "joiningFee": 175000,
@@ -3639,7 +3639,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Find the ideal Credit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/compare-cards",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "shopping",
@@ -3684,7 +3684,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Pre-Approved Credit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/pre-approved-credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -3734,7 +3734,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Personal Loan Credit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/personal-loan-on-credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "shopping",
@@ -3792,7 +3792,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Rewards",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/credit-card-services/rewards",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "shopping",
@@ -3837,7 +3837,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Experience Program",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/experience",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxRewardRate": 25,
     "travelRate": 6,
@@ -3933,7 +3933,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Benefits of ICICI Bank Credit Cards",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "shopping",
@@ -3969,7 +3969,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Types of Credit Cards in India",
     "sourceUrl": "https://www.icicibank.com/personal-banking/blogs/card/credit-card/type-of-credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "loungeVisits": 99,
     "loungeUnlimited": true,
@@ -4021,7 +4021,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card fees and interest rates",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "low-fee",
@@ -4070,7 +4070,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Tips for secure Credit Card usage",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "beginner",
@@ -4103,7 +4103,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Can I use my ICICI Bank Credit Card for international transactions?",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "forex"
@@ -4135,7 +4135,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Can I get a Loan on an ICICI Bank Credit Card?",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card/personal-loan-on-credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "shopping",
@@ -4193,7 +4193,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Business Advantage Blue Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -4225,7 +4225,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Business Ascent Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -4257,7 +4257,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Business Advantage Black Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -4289,7 +4289,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Business Essential Credit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -4321,7 +4321,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Sapphiro Business Debit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -4353,7 +4353,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Coral Business Debit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -4385,7 +4385,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Business Titanium Debit Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -4417,7 +4417,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Purchase Card",
     "sourceUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
     "catalogueUrl": "https://www.icicibank.com/personal-banking/cards/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -4449,7 +4449,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "All IDFC FIRST Bank Credit Cards now come with Zero Forex Markup",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "forex"
@@ -4483,7 +4483,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "A Credit Card for Everyone",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -4520,7 +4520,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Explore our range of credit cards",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "premium",
@@ -4554,7 +4554,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Quantum+ Credit Card",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card/quantum-plus-credit-card?utm_source=website&utm_medium=PDPQuantum+&utm_campaign=Knowmore",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxCashbackRate": 6.5,
     "maxRewardRate": 1,
@@ -4656,7 +4656,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndiGo IDFC Dual Cards",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card/indigo-credit-card?utm_source=website&utm_medium=PDPIndigoIDFCFIRST&utm_campaign=Knowmore",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 4999,
     "joiningFee": 4999,
@@ -4761,7 +4761,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Micro Enterprise Credit Card",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card/micro-enterprise-credit-card",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 1000,
     "joiningFee": 0,
@@ -4843,8 +4843,8 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
         "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
       },
       {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+        "value": 7.25,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.25% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
       },
       {
         "value": 7.25,
@@ -4866,7 +4866,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Get 100% guaranteed approval with an FD backed credit card",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card/quantum-plus-credit-card?utm_source=website&utm_medium=PDPQuantum+&utm_campaign=Knowmore",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxCashbackRate": 6.5,
     "maxRewardRate": 1,
@@ -4968,7 +4968,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Add-On Credit Card",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card/add-on-credit-card?utm_source=website&utm_medium=PDPAddonCC&utm_campaign=ApplyNow",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 199,
     "renewalFee": 199,
@@ -5069,7 +5069,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "All our credit cards are UPI-ready",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card/rupay-credit-card/steps-to-activate?utm_source=website&utm_medium=PDPAOCCUPIR&utm_campaign=ActivateUPI",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxCashbackRate": 1,
     "maxRewardRate": 1,
@@ -5167,7 +5167,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Apply for a credit card online",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "beginner",
@@ -5200,7 +5200,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit card fees and charges",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card/mitc?utm_source=website&utm_medium=PDPCCFC&utm_campaign=CheckNow",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxCashbackRate": 1,
     "maxRewardRate": 1,
@@ -5298,7 +5298,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Learn about Credit Card in Detail",
     "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/first-select-vs-first-wealth-credit-card-comparison",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "feeWaiverSpend": 20000,
     "maxCashbackRate": 25,
@@ -5378,8 +5378,8 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
         "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
       },
       {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+        "value": 7.25,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.25% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
       },
       {
         "value": 7.25,
@@ -5401,7 +5401,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "FIRST Select vs. FIRST Wealth - Which credit card suits your financial planning?",
     "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/first-select-vs-first-wealth-credit-card-comparison",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "feeWaiverSpend": 20000,
     "maxCashbackRate": 25,
@@ -5481,8 +5481,8 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
         "context": "e Free Hello Cashback Cashback UPI-ready FD- Backed​ FIRST EARN Virtual FD-Backed 1% Cashback FIRST SWYP EMI OfferMax ₹499 Discover Hello Cashback Credit Card Cashback for everyone, for eve"
       },
       {
-        "value": 7.1,
-        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.10% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
+        "value": 7.25,
+        "context": "s & Calculators View All FCNR Interest Rates Discover Catch it before its gone Earn up to 7.25% p.a. on Fixed Deposit Book Now Money Transfer View All Send Money to India - Wire Transfer RemitFIRST2India"
       },
       {
         "value": 7.25,
@@ -5504,7 +5504,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Metal credit cards: Redefining luxury for sophisticated minimalists",
     "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/luxury-lifestyle-why-metal-credit-card-are-worth-the-hype",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 8,
     "joiningFee": 5999,
@@ -5608,7 +5608,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Compare Credit Card Fees & Benefits",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -5642,7 +5642,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Things to keep in mind when applying for a credit card online",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "low-fee",
@@ -5677,7 +5677,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Are there any EMI conversion charges on my IDFC FIRST Bank Credit Card",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -5709,7 +5709,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Can I apply for an add-on card?",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card/add-on-credit-card",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 199,
     "renewalFee": 199,
@@ -5810,7 +5810,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Can I pay my Credit Card bill online via NEFT?",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "shopping"
@@ -5842,7 +5842,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Can I use my Credit Card for international transactions?",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card/wow",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 0,
     "joiningFee": 750,
@@ -5946,7 +5946,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Can I withdraw cash using my Credit Card?",
     "sourceUrl": "https://www.idfcfirstbank.com/finfirst-blogs/credit-card/key-factors-for-credit-card-cash-withdrawal",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -5978,7 +5978,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "I already have an IDFC FIRST Bank Credit Card. Can I apply for another one?",
     "sourceUrl": "https://www.idfcfirstbank.com/credit-card",
     "catalogueUrl": "https://www.idfcfirstbank.com/credit-card",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -6010,7 +6010,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Benefits for Platinum Maxima Plus Credit Card",
     "sourceUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards/platinum-maxima-plus-credit-card",
     "catalogueUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxCashbackRate": 2.8,
     "maxRewardRate": 2.8,
@@ -6070,7 +6070,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Benefits for Icon Credit Card",
     "sourceUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards/icon-credit-card",
     "catalogueUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxCashbackRate": 6,
     "maxRewardRate": 6,
@@ -6136,7 +6136,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Benefits for Cookies Credit Card",
     "sourceUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards/cookies-credit-card",
     "catalogueUrl": "https://www.rblbank.com/personal-banking/cards/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "feeWaiverSpend": 5000,
     "maxCashbackRate": 10,
@@ -6215,7 +6215,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Get your Lifetime Free Kotak League Credit Card",
     "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
     "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "lifetime-free"
@@ -6247,7 +6247,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Types of Credit Cards in India Offered by Kotak Mahindra Bank",
     "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards/get-movie-credit-cards.html",
     "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 750,
     "joiningFee": 0,
@@ -6357,7 +6357,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Key features and benefits of Kotak bank Credit Card",
     "sourceUrl": "https://www.kotak.com/en/stories-in-focus/cards/credit-cards/what-is-a-credit-card-what-are-the-credit-card-benefits.html",
     "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -6407,7 +6407,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Interest Rates & Charges",
     "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards/credit-card-services/credit-card-payments.html",
     "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "travel",
@@ -6455,7 +6455,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Things to Know Before Applying for a Credit Card",
     "sourceUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards/credit-card-services/credit-card-payments.html",
     "catalogueUrl": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "travel",
@@ -6503,7 +6503,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Presenting AU Credit Cards, A World of Limitless Possibilities.",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -6535,7 +6535,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Zenith+ Credit Card",
     "sourceUrl": "https://www.au.bank.in/premium-banking/credit-cards/zenith-plus-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "fuelRate": 1,
     "surchargeWaiverRate": 1,
@@ -6615,7 +6615,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Ananta Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/ananta-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 2000,
     "joiningFee": 2000,
@@ -6719,7 +6719,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Laksya Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/laksya-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 1000,
     "joiningFee": 1000,
@@ -6825,7 +6825,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Tejas Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/tejas-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 500,
     "joiningFee": 500,
@@ -6931,7 +6931,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Prathama Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/prathama-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 100,
     "joiningFee": 100,
@@ -7014,7 +7014,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "LIT Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/lit-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxCashbackRate": 5,
     "fuelRate": 1,
@@ -7097,7 +7097,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "CA Metal Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/ca-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxCashbackRate": 25,
     "maxRewardRate": 25,
@@ -7176,7 +7176,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AU CS Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/au-cs-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxCashbackRate": 25,
     "maxRewardRate": 25,
@@ -7274,7 +7274,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Vetta Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/vetta-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "feeWaiverSpend": 90,
     "maxCashbackRate": 1,
@@ -7363,7 +7363,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Spont Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/au-spont-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 299,
     "renewalFee": 299,
@@ -7443,7 +7443,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "NOMO Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/nomo-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "joiningFee": 199,
     "fuelRate": 1,
@@ -7521,7 +7521,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Traverse Credit Card for NRIs",
     "sourceUrl": "https://www.au.bank.in/premium-banking/credit-cards/traverse-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 6,
     "renewalFee": 6,
@@ -7597,7 +7597,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "CheQ AU Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/cheq-au-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "maxRewardRate": 12,
     "diningRate": 12,
@@ -7645,7 +7645,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Paytm AU Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/paytm-au-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxRewardRate": 5,
     "travelRate": 5,
@@ -7695,7 +7695,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Altura Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards/altura-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -7731,7 +7731,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Corporate Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/commercial-credit-cards/corporate-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -7770,7 +7770,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Business Cashback Credit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/commercial-credit-cards/business-cashback-credit-card",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxCashbackRate": 1,
     "loungeVisits": 1,
@@ -7815,7 +7815,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Go through the Credit Card MITC or Key Fact Statement for details of applicable fees and charges.",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -7847,7 +7847,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Is there any Annual fees applicable on my Credit Card?",
     "sourceUrl": "https://www.au.bank.in/credit-cards/mitc(with-schedule-of-charges).pdf",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "low-fee",
@@ -7883,7 +7883,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Is there any charge applicable for doing International transaction on Credit Card?",
     "sourceUrl": "https://www.au.bank.in/credit-cards/mitc(with-schedule-of-charges).pdf",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "forex",
@@ -7918,7 +7918,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Do I get Cashback or Reward Points for transactions done on my Add-on card?",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "cashback"
@@ -7953,7 +7953,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "I have not received my monthly Credit Card statement, what can I do?",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -7985,7 +7985,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Is there any exception to the kind of FDs that can be used to apply for an FD based Credit Card?",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "beginner"
@@ -8017,7 +8017,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "AU Royale Business Debit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -8049,7 +8049,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Visa Business Gold Debit Card",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -8081,7 +8081,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Cards",
     "sourceUrl": "https://www.au.bank.in/personal-banking/credit-cards",
     "catalogueUrl": "https://www.au.bank.in/personal-banking/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "business"
@@ -8113,7 +8113,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Types of Credit Cards",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -8159,7 +8159,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndusInd Platinum RuPay Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-rupay-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxRewardRate": 2,
     "fuelRate": 1.8,
@@ -8258,7 +8258,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "EazyDiner IndusInd Bank Platinum Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/eazydiner-platinum-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 500,
     "joiningFee": 500,
@@ -8359,7 +8359,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Legend Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/legend-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "feeWaiverSpend": 2,
     "maxRewardRate": 2,
@@ -8462,7 +8462,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "EazyDiner Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/eazydiner-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 2999,
     "joiningFee": 2999,
@@ -8563,7 +8563,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Platinum Aura Edge Visa/ Master Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-aura-edge-visa-and-mastercard-credit-card-easy-credit.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "maxRewardRate": 2,
     "fuelRate": 1.8,
@@ -8660,7 +8660,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Platinum Visa Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-visa-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "maxRewardRate": 2,
     "fuelRate": 1.8,
@@ -8756,7 +8756,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Pinnacle Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/pinnacle-world-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxRewardRate": 2,
     "fuelRate": 1,
@@ -8854,7 +8854,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndusInd Bank Avios Visa Infinite Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/avios-visa-infinite-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxRewardRate": 2,
     "fuelRate": 1,
@@ -8955,7 +8955,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Nexxt Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/nexxt-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "maxRewardRate": 12,
     "fuelRate": 1,
@@ -9051,7 +9051,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Samman Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/samman-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "feeWaiverSpend": 20000,
     "maxCashbackRate": 1,
@@ -9149,7 +9149,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndusInd Bank Tiger Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/tiger-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxRewardRate": 2,
     "fuelRate": 1,
@@ -9248,7 +9248,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "IndusInd Bank Jio-bp Mobility+ Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/jio-bp-mobility-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "joiningFee": 499,
     "maxRewardRate": 2,
@@ -9346,7 +9346,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "CRED IndusInd Bank RuPay Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/CRED-IndusInd-Bank-ruPay-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "maxRewardRate": 5,
     "shoppingRate": 5,
@@ -9417,7 +9417,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Poonawalla Fincorp IndusInd Bank eLITE RuPay Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/poonawalla-platinum-rupay-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "fuelRate": 1,
     "surchargeWaiverRate": 1,
@@ -9463,7 +9463,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Indus Solitaire Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/solitaire-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "loungeVisits": 16,
     "categories": [
@@ -9504,7 +9504,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "ePay Amex Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/epay-amex-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "maxCashbackRate": 5,
     "categories": [
@@ -9547,7 +9547,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Club Vistara Explorer Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/club-vistara-indusInd-bank-explorer-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "maxRewardRate": 1.8,
     "travelRate": 1.8,
@@ -9596,7 +9596,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Indulge Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/indulge-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "premium"
@@ -9630,7 +9630,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Pioneer Heritage Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/pioneer-heritage-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "fuel",
@@ -9667,7 +9667,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Pioneer Legacy Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/pioneer-legacy-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "feeWaiverSpend": 2,
     "categories": [
@@ -9706,7 +9706,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Crest Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/crest-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "fuel",
@@ -9743,7 +9743,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Celesta Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/celesta-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "forex"
@@ -9780,7 +9780,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Platinum Aura Edge Credit Card Exclusively for Government Sector Employees - (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-aura-edge-credit-card-for-government-employees.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "maxCashbackRate": 1,
     "fuelRate": 1,
@@ -9837,7 +9837,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "InterMiles Odyssey Amex Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-odyssey-amex-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "travel"
@@ -9875,7 +9875,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "InterMiles Odyssey Visa Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-odyssey-visa-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "travel"
@@ -9913,7 +9913,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "InterMiles Voyage Amex Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-voyage-amex-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "fuel",
@@ -9951,7 +9951,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Intermiles Voyage Visa Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/intermiles-voyage-visa-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "fuel",
@@ -9989,7 +9989,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Signature Visa Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/signature-visa-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "fuel",
@@ -10025,7 +10025,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Iconia Amex Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/iconia-amex-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -10066,7 +10066,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Iconia Visa Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/iconia-visa-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "fuel",
@@ -10103,7 +10103,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Platinum Aura Credit Card (Discontinued)",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card/platinum-aura-visa-and-mastercard-credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "fuel"
@@ -10140,7 +10140,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Features and Benefits",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -10184,7 +10184,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Documents needed for online credit card application",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -10216,7 +10216,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Documents Required for Credit Card Application",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "shopping",
@@ -10254,7 +10254,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Interest Rates",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "diningRate": 47.4,
     "upiRate": 47.4,
@@ -10332,7 +10332,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Fees and Charges",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 100000,
     "joiningFee": 100000,
@@ -10411,7 +10411,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Things to Know Before Applying for an Instant Credit Card Online",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "shopping"
@@ -10445,7 +10445,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit Card Sourcing Partners",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "premium"
@@ -10477,7 +10477,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Track Credit card application Status Online",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -10509,7 +10509,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Key Terms Related to Credit Card",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -10541,7 +10541,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Can I apply for an add-on card?",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -10573,7 +10573,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Can students below 21 apply for a credit card?",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -10605,7 +10605,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Can I Use My Indusind Bank Credit Card For International Transactions?",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "forex",
@@ -10640,7 +10640,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Can I use a credit card for UPI?",
     "sourceUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
     "catalogueUrl": "https://www.indusind.com/in/en/personal/cards/credit-card.html",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "upi",
@@ -10678,7 +10678,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit cards features",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/google-pay/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "cashback",
@@ -10727,7 +10727,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Find the right card for you",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/compare/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "cashback",
@@ -10777,7 +10777,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HSBC Taj Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/taj/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 110000,
     "joiningFee": 110000,
@@ -10876,34 +10876,97 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HSBC TravelOne Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/travelone/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
-    "confidence": "low",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
+    "confidence": "high",
+    "annualFee": 4999,
+    "joiningFee": 4999,
+    "renewalFee": 4999,
+    "shoppingRate": 15,
+    "diningRate": 11,
+    "travelRate": 50,
+    "loungeVisits": 4,
     "categories": [
-      "travel"
+      "cashback",
+      "fuel",
+      "travel",
+      "shopping",
+      "dining",
+      "utilities",
+      "upi",
+      "forex",
+      "lounge",
+      "premium",
+      "business",
+      "beginner",
+      "co-branded"
     ],
     "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 12,
-      "shopping": 0,
+      "cashback": 12,
+      "fuel": 8,
+      "travel": 468,
+      "shopping": 153,
       "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
+      "dining": 135,
+      "utilities": 8,
+      "upi": 16,
+      "forex": 16,
+      "lounge": 36,
+      "premium": 68,
+      "business": 35,
       "lifetime-free": 0,
-      "beginner": 0,
+      "beginner": 35,
       "low-fee": 0,
-      "co-branded": 0
+      "co-branded": 72
     },
     "detectedBenefits": [
-      "HSBC TravelOne Credit Card",
-      "Instant reward redemption with an extensive selection of airline and hotel partners."
+      "HSBC TravelOne Credit Card | Travel Credit Card - HSBC IN",
+      "Foreign Exchange Rates",
+      "TravelOne Credit Card",
+      "Wealth Shopping Cart",
+      "Dining and Entertainment"
     ],
-    "detectedPercentages": []
+    "detectedPercentages": [
+      {
+        "value": 15,
+        "context": "ints to Air Miles 1 to 1 in the app Find out how to redeem instantly Travel in style Save 15% on domestic and international holiday Bookings at Yatra, EaseMyTrip, PayTM Travel and ClearTrip Save up to 20"
+      },
+      {
+        "value": 20,
+        "context": "nternational holiday Bookings at Yatra, EaseMyTrip, PayTM Travel and ClearTrip Save up to 20% at select duty free stores in India Save when booking your getaway at StayVista Enjoy Mastercard World Platfo"
+      },
+      {
+        "value": 15,
+        "context": "unts, hands-free shopping, sale events and reserved parking. Register [@bicester-village] 15% off flights and hotel bookings with Yatra Save on international and domestic flights and hotels when you book"
+      },
+      {
+        "value": 15,
+        "context": "ou book through the Yatra app or website. Use promo code: HSBCTRAVEL1. T&Cs apply (PDF) . 15% off international and domestic flights with EaseMyTrip Save on international and domestic flights and hotels"
+      },
+      {
+        "value": 15,
+        "context": "book through the EaseMyTrip app or website. Use promo code: EMTHSBCT1. T&Cs apply (PDF) . 15% off international and domestic flights with Paytm Save on international and domestic flights when you book th"
+      },
+      {
+        "value": 15,
+        "context": "you book through the Paytm app or website. Use promo code: HSBCTRAVEL. T&Cs apply (PDF) . 15% off international and domestic flights with Cleartrip Save on international and domestic flights when you boo"
+      },
+      {
+        "value": 10,
+        "context": "h the ClearTrip app or website. Use promo code: CTHSBCTRAVELONE. T&Cs apply (PDF) . Up to 10% off on dining with EazyDiner Get unparalleled dining offers with 10% off your bill (up to INR1,000) with Eazy"
+      },
+      {
+        "value": 10,
+        "context": "apply (PDF) . Up to 10% off on dining with EazyDiner Get unparalleled dining offers with 10% off your bill (up to INR1,000) with EazyDiner. T&Cs apply (PDF) . 11% off hotel bookings with StayVista Stay"
+      },
+      {
+        "value": 11,
+        "context": "dining offers with 10% off your bill (up to INR1,000) with EazyDiner. T&Cs apply (PDF) . 11% off hotel bookings with StayVista Stay for less when you make a hotel booking through the StayVista website ("
+      },
+      {
+        "value": 10,
+        "context": "Cs apply (PDF) . Savings on movies and events with the District app by Zomato Enjoy up to 10% off events with promo code HSBCTOEVENTS, and dining with promo code HSBCTODINING. Plus, buy 1 movie ticket an"
+      }
+    ]
   },
   {
     "id": "366fa47d1f8465",
@@ -10911,7 +10974,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HSBC Live+ Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/live-plus/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 999,
     "joiningFee": 999,
@@ -11018,7 +11081,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HSBC Premier Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/premier/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 20000,
     "joiningFee": 12000,
@@ -11111,7 +11174,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HSBC Visa Platinum Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/visa-platinum/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 0,
     "joiningFee": 0,
@@ -11179,7 +11242,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HSBC RuPay Platinum Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/rupay-platinum-credit-card/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "shoppingRate": 10,
     "diningRate": 10,
@@ -11236,7 +11299,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "HSBC RuPay Cashback Credit Card",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/products/rupay-cashback-credit-card/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "high",
     "annualFee": 499,
     "joiningFee": 499,
@@ -11316,7 +11379,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Credit card rewards",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/rewards/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "categories": [
       "cashback",
@@ -11365,7 +11428,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Ultimate guide to cashback credit cards",
     "sourceUrl": "https://www.hsbc.co.in/credit-cards/",
     "catalogueUrl": "https://www.hsbc.co.in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "cashback"
@@ -11400,7 +11463,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Discover endless benefits & privileges with our range of Credit Cards",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "feeWaiverSpend": 4,
     "loungeVisits": 1,
@@ -11437,7 +11500,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Rewards Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "loungeVisits": 1,
     "categories": [
@@ -11474,7 +11537,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Standard Chartered EaseMyTrip Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "maxRewardRate": 20,
     "travelRate": 20,
@@ -11528,7 +11591,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Smart Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "maxCashbackRate": 2,
     "shoppingRate": 2,
@@ -11577,7 +11640,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Ultimate Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "maxCashbackRate": 5,
     "maxRewardRate": 5,
@@ -11623,7 +11686,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Platinum Rewards Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "co-branded"
@@ -11658,7 +11721,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Super Value Titanium Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "maxCashbackRate": 5,
     "maxRewardRate": 5,
@@ -11704,7 +11767,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "Manhattan Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "medium",
     "maxCashbackRate": 5,
     "maxRewardRate": 5,
@@ -11748,7 +11811,7 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
     "name": "DigiSmart Credit Card",
     "sourceUrl": "https://www.sc.com/in/credit-cards/",
     "catalogueUrl": "https://www.sc.com/in/credit-cards/",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
+    "fetchedAt": "2026-11-09T09:52:57.276Z",
     "confidence": "low",
     "categories": [
       "shopping"
@@ -11772,443 +11835,6 @@ export const autoCardCatalog: AutoCardCatalogRecord[] = [
       "co-branded": 0
     },
     "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "3fdae4dab240dd",
-    "issuer": "Federal Bank",
-    "name": "Step-by-Step Process to Apply for Credit Card",
-    "sourceUrl": "https://www.federal.bank.in/credit-card-activation",
-    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
-    "confidence": "medium",
-    "categories": [
-      "travel",
-      "shopping",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 8,
-      "shopping": 16,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 8,
-      "forex": 12,
-      "lounge": 0,
-      "premium": 12,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 47,
-      "low-fee": 0,
-      "co-branded": 48
-    },
-    "detectedBenefits": [
-      "Send Money to India in Foreign Currency"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "4026177c1d0e12",
-    "issuer": "Federal Bank",
-    "name": "Credit Card Features & Benefits",
-    "sourceUrl": "https://www.federal.bank.in/credit-cards",
-    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
-    "confidence": "low",
-    "categories": [
-      "fuel"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 16,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [
-      "Fuel Surcharge Waiver - Save more on every fuel transaction across select fuel stations (T&C apply)"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "ac54ebed35dd8a",
-    "issuer": "Federal Bank",
-    "name": "Documents Required for Credit Card",
-    "sourceUrl": "https://www.federal.bank.in/credit-cards",
-    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
-    "confidence": "low",
-    "categories": [
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 39,
-      "low-fee": 0,
-      "co-branded": 44
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "9eb85fff279de9",
-    "issuer": "Federal Bank",
-    "name": "Federal Bank Credit Card Charges, Fees & Interest Rates",
-    "sourceUrl": "https://www.federal.bank.in/how-to-use-credit-cards-wisely",
-    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
-    "confidence": "medium",
-    "categories": [
-      "travel",
-      "shopping",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 12,
-      "shopping": 20,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 8,
-      "forex": 12,
-      "lounge": 0,
-      "premium": 24,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 51,
-      "low-fee": 0,
-      "co-branded": 48
-    },
-    "detectedBenefits": [
-      "Send Money to India in Foreign Currency"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "eacf7a8ef1f71a",
-    "issuer": "Federal Bank",
-    "name": "Federal Bank Credit Card EMI",
-    "sourceUrl": "https://www.federal.bank.in/credit-card-emi",
-    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
-    "confidence": "medium",
-    "maxCashbackRate": 1.33,
-    "shoppingRate": 1,
-    "categories": [
-      "cashback",
-      "travel",
-      "shopping",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 26.64,
-      "fuel": 0,
-      "travel": 16,
-      "shopping": 35,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 8,
-      "forex": 12,
-      "lounge": 0,
-      "premium": 12,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 51,
-      "low-fee": 0,
-      "co-branded": 56
-    },
-    "detectedBenefits": [
-      "Credit Card EMI – Flexible Tenure & Cashback Offers | Federal Bank",
-      "Send Money to India in Foreign Currency",
-      "Attractive Cashbacks & Instant Discounts",
-      "Benefit from attractive cashbacks and instant discounts on select merchants and brands.",
-      "Instant discounts and cashback on select brands and merchants."
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1.33,
-        "context": "s Instant discounts and cashback on select brands and merchants. Interest rate starts at 1.33% p.m. Flexible tenures ranging from 3 to 24 months. Low processing fee, starting at just ₹99. Example: Buying"
-      },
-      {
-        "value": 1.33,
-        "context": "ses EMI mode of payment. 3. Customer checks and confirms the interest rate (applicable at 1.33% p.m.) and tenure starting from 3 to 24 months. 4. Processing fees charged @1% or min ₹99 will be applicable."
-      },
-      {
-        "value": 1,
-        "context": "cable at 1.33% p.m.) and tenure starting from 3 to 24 months. 4. Processing fees charged @1% or min ₹99 will be applicable. 5. Customer confirms the transaction by entering the Credit card PIN. 6. Custo"
-      },
-      {
-        "value": 1.33,
-        "context": "nt at the checkout page. 3. Customer checks and confirms the interest rate (applicable at 1.33% p.m.) and tenure starting from 3 to 24 months. 4. Customer confirms the transaction via OTP received on mail/"
-      },
-      {
-        "value": 1.5,
-        "context": "rtner merchants. Tenure options from 3 to 24 months. Lowest interest rates applicalble at 1.5% p.m Lower processing fees starting at ₹ 99. Eligibility Transactions settled and unbilled retail purchases f"
-      },
-      {
-        "value": 18,
-        "context": "nverted into EMI. Rates & Charges Feature Details Post Purchase EMI Interest Rate Flat 18% p.a. (1.5% monthly) across all tenures from 3 to 24 months . Merchant EMI Interest Rate Reduced rate of 15."
-      },
-      {
-        "value": 1.5,
-        "context": "to EMI. Rates & Charges Feature Details Post Purchase EMI Interest Rate Flat 18% p.a. (1.5% monthly) across all tenures from 3 to 24 months . Merchant EMI Interest Rate Reduced rate of 15.99% p.a. (1"
-      },
-      {
-        "value": 15.99,
-        "context": "ly) across all tenures from 3 to 24 months . Merchant EMI Interest Rate Reduced rate of 15.99% p.a. (1.33% monthly) across all tenures from 3 to 24 months . Processing Fees 1% of the transaction amount"
-      },
-      {
-        "value": 1.33,
-        "context": "l tenures from 3 to 24 months . Merchant EMI Interest Rate Reduced rate of 15.99% p.a. (1.33% monthly) across all tenures from 3 to 24 months . Processing Fees 1% of the transaction amount or ₹99 , whi"
-      },
-      {
-        "value": 1,
-        "context": "of 15.99% p.a. (1.33% monthly) across all tenures from 3 to 24 months . Processing Fees 1% of the transaction amount or ₹99 , whichever is higher, during EMI conversion. Foreclosure Charges 3% of th"
-      }
-    ]
-  },
-  {
-    "id": "945d753850d732",
-    "issuer": "Federal Bank",
-    "name": "Can I cancel my credit card at any time?",
-    "sourceUrl": "https://www.federal.bank.in/credit-cards",
-    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [
-      "Reward points are redeemed (if applicable)"
-    ],
-    "detectedPercentages": []
-  },
-  {
-    "id": "ca0aa10f665c49",
-    "issuer": "Federal Bank",
-    "name": "Credit Card Application",
-    "sourceUrl": "https://www.federal.bank.in/credit-cards",
-    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
-    "confidence": "low",
-    "categories": [
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 0,
-      "low-fee": 0,
-      "co-branded": 32
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "cf1b5919b2aaf3",
-    "issuer": "Federal Bank",
-    "name": "Additional details about Add-on Card ?",
-    "sourceUrl": "https://www.federal.bank.in/add-on-cards",
-    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
-    "confidence": "high",
-    "maxRewardRate": 1,
-    "fuelRate": 1,
-    "surchargeWaiverRate": 1,
-    "shoppingRate": 1,
-    "diningRate": 1,
-    "travelRate": 1,
-    "loungeVisits": 1,
-    "categories": [
-      "fuel",
-      "travel",
-      "shopping",
-      "dining",
-      "upi",
-      "forex",
-      "lounge",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 27,
-      "travel": 32.5,
-      "shopping": 31,
-      "grocery": 0,
-      "dining": 21,
-      "utilities": 0,
-      "upi": 8,
-      "forex": 12,
-      "lounge": 16,
-      "premium": 13,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 47,
-      "low-fee": 0,
-      "co-branded": 56
-    },
-    "detectedBenefits": [
-      "Send Money to India in Foreign Currency",
-      "Earn 10x Rewards on your first transaction",
-      "Enjoy our bespoke 3-2-1 rewards structure curated for you & your family for spends on various categories",
-      "Gain access to a wide variety of offers and deals , including travel, food & dining, shopping, sports, entertainment, lifestyle and much more.",
-      "1% fuel surcharge waiver at all fuel stations across India. (For Celesta and Imperio Credit Cards)"
-    ],
-    "detectedPercentages": [
-      {
-        "value": 1,
-        "context": "ncluding travel, food & dining, shopping, sports, entertainment, lifestyle and much more. 1% fuel surcharge waiver at all fuel stations across India. (For Celesta and Imperio Credit Cards) Key Points A"
-      }
-    ]
-  },
-  {
-    "id": "fd6d1f676cd301",
-    "issuer": "Federal Bank",
-    "name": "Secured Credit Cards",
-    "sourceUrl": "https://www.federal.bank.in/credit-cards",
-    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
-    "confidence": "low",
-    "categories": [
-      "beginner"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 0,
-      "shopping": 0,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 0,
-      "forex": 0,
-      "lounge": 0,
-      "premium": 0,
-      "business": 0,
-      "lifetime-free": 0,
-      "beginner": 39,
-      "low-fee": 0,
-      "co-branded": 0
-    },
-    "detectedBenefits": [],
-    "detectedPercentages": []
-  },
-  {
-    "id": "ac6a1a167dc412",
-    "issuer": "Federal Bank",
-    "name": "Debit Cards Vs Credit Cards",
-    "sourceUrl": "https://www.federal.bank.in/difference-between-debit-cards-and-credit-cards",
-    "catalogueUrl": "https://www.federal.bank.in/credit-cards",
-    "fetchedAt": "2026-11-05T09:33:42.870Z",
-    "confidence": "medium",
-    "categories": [
-      "travel",
-      "shopping",
-      "upi",
-      "forex",
-      "premium",
-      "business",
-      "beginner",
-      "co-branded"
-    ],
-    "categoryScores": {
-      "cashback": 0,
-      "fuel": 0,
-      "travel": 8,
-      "shopping": 16,
-      "grocery": 0,
-      "dining": 0,
-      "utilities": 0,
-      "upi": 8,
-      "forex": 12,
-      "lounge": 0,
-      "premium": 12,
-      "business": 35,
-      "lifetime-free": 0,
-      "beginner": 47,
-      "low-fee": 0,
-      "co-branded": 48
-    },
-    "detectedBenefits": [
-      "Send Money to India in Foreign Currency"
-    ],
     "detectedPercentages": []
   },
   {
