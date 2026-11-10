@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-09'
+export const WATCH_CHECKED_AT = '2026-11-10'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,26 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'motilal-oswal-conservative-fof-merger-november-2026',
+    title: 'Motilal Oswal Conservative FoF: merger scheduled for 13 November',
+    summary: 'The special exit-load-free window closed on 9 November. Check the receiving scheme and any active systematic instructions before the scheduled merger.',
+    category: 'Mutual funds', checkedAt: '2026-11-10', announcementDate: '2026-10-08', eventDate: '2026-11-13', dateLabel: 'Merger scheduled · after close of business',
+    source: 'https://nsearchives.nseindia.com/content/circulars/NMF76820.zip',
+    sourceLabel: 'NSE archive: signed Motilal Oswal AMC addendum and NSE MF Invest circular (ZIP)',
+    sourceLocation: 'Open Addendum .pdf, dated 8 October, especially sections 1–3. NMF76820.pdf is the NSE circular dated 9 October.',
+    audience: 'Existing holders of Motilal Oswal Asset Allocation Passive Fund of Fund – Conservative or Motilal Oswal Multi Asset Passive Fund of Funds, including investors with active systematic instructions.',
+    facts: [
+      'The Conservative scheme is scheduled to merge into Motilal Oswal Multi Asset Passive Fund of Funds after close of business on 13 November 2026. The receiving scheme uses a dynamic allocation across equity, debt and commodities rather than the Conservative scheme’s debt-weighted allocation.',
+      'The AMC’s optional exit-load-free window applied to existing holders of both schemes and closed at 3:00 pm IST on 9 November. Holders who did not opt out will continue in the receiving scheme.',
+      'NSE MF Invest says it discontinues inflows and outflows for the merging scheme from 10 November and transfers registered SIP, XSIP, STP and SWP instructions to the receiving scheme after business hours on 13 November. These are NSE platform instructions.',
+    ],
+    actions: [
+      'Match the exact scheme and plan on your statement. Read the receiving scheme’s allocation and risk disclosures and check the units and plan shown on your first statement after the merger.',
+      'If you have a pending request or want to stop future instalments, ask your platform or the AMC which instructions will carry over and how to cancel or amend them. For demat holdings, check with your depository participant.',
+    ],
+    limits: 'The 8 October AMC notice and 9 October NSE circular were checked on 10 November. The merger was upcoming at that check. The expired special window does not establish current exit-load relief. Confirm channel-specific transaction availability, applicable exit load and tax treatment before a fresh transaction.',
+  },
   {
     slug: 'hdfc-four-schemes-riskometer-october-2026-portfolio',
     title: 'Four HDFC schemes: check the revised risk-o-meter before investing',

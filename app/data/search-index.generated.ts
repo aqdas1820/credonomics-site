@@ -320,6 +320,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:motilal-oswal-conservative-fof-merger-november-2026",
+    "title": "Motilal Oswal Conservative FoF: merger scheduled for 13 November",
+    "description": "The special exit-load-free window closed on 9 November. Check the receiving scheme and any active systematic instructions before the scheduled merger.",
+    "href": "/research/watch/motilal-oswal-conservative-fof-merger-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-10",
+    "keywords": "Motilal Oswal Conservative FoF: merger scheduled for 13 November motilal-oswal-conservative-fof-merger-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:navi-fund-minimum-redemption-switch-out-november-2026",
     "title": "Navi Mutual Fund revises minimum redemption and switch-out for 11 schemes",
     "description": "For investments made from 6 November 2026, the minimum is the lowest of ₹100, one unit or the account balance.",
