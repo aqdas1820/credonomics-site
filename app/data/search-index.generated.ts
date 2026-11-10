@@ -102,11 +102,11 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "watch:amex-november-2026-fees-and-service-dates",
     "title": "Amex November: prepare for service windows, milestones and fees",
-    "description": "Review settings and eligible benefit enrolments before 11 November. New EMI processing and post-purchase conversion have different disruption windows.",
+    "description": "Check the service windows before converting an EMI or closing a Card. Online cancellation pauses 12–15 November.",
     "href": "/research/watch/amex-november-2026-fees-and-service-dates",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-11-08",
+    "updated": "2026-11-10",
     "keywords": "Amex November: prepare for service windows, milestones and fees amex-november-2026-fees-and-service-dates Research",
     "priority": 92
   },
