@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-11-09T11:23:25.933Z",
+  "generatedAt": "2026-11-10T11:03:34.312Z",
   "recordCount": 1,
   "nseCount": 1,
   "bseCount": 0,
