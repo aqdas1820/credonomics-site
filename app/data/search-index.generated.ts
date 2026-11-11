@@ -375,6 +375,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:rbi-domestic-money-transfer-cash-limits-november-2026",
+    "title": "RBI domestic money transfers: cash limits and ID checks by channel",
+    "description": "RBI’s 11 November directions put cash pay-in and cash pay-out rules in one place. The limit depends on who sends the cash and how.",
+    "href": "/research/watch/rbi-domestic-money-transfer-cash-limits-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-11",
+    "keywords": "RBI domestic money transfers: cash limits and ID checks by channel rbi-domestic-money-transfer-cash-limits-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:sbi-card-transport-fuel-fees-december-2026",
     "title": "SBI Card December fees: transport is per transaction; fuel is per billing cycle",
     "description": "From 1 December 2026, the announced 1% fees use different thresholds: transport transactions above ₹30,000 and total cycle fuel spends above ₹50,000.",
