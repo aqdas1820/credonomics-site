@@ -1,6 +1,6 @@
-export const WATCH_CHECKED_AT = '2026-11-10'
+export const WATCH_CHECKED_AT = '2026-11-11'
 export type WatchItem = {
-  slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Pensions'
+  slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
   sourceLocation: string; audience: string; facts: string[]; actions: string[]; limits: string
   publishedAt?: string; updateNote?: string
@@ -11,6 +11,28 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'rbi-domestic-money-transfer-cash-limits-november-2026',
+    title: 'RBI domestic money transfers: cash limits and ID checks by channel',
+    summary: 'RBI’s 11 November directions put cash pay-in and cash pay-out rules in one place. The limit depends on who sends the cash and how.',
+    category: 'Banking', checkedAt: '2026-11-11', announcementDate: '2026-11-11', eventDate: '2026-11-11', dateLabel: 'Directions effective immediately',
+    source: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13752&Mode=0',
+    sourceLabel: 'RBI Domestic Money Transfer Directions, 2026',
+    sourceLocation: 'Circular RBI/DPSS/2026-27/476. Sections C–E cover cash limits and safeguards. Sections G–H cover charges and grievances.',
+    additionalSources: [{ url: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62052', label: 'RBI Integrated Ombudsman Scheme, 2026' }],
+    audience: 'People sending cash to a beneficiary’s bank account or sending from a bank account to a recipient without one.',
+    facts: [
+      'Cash pay-out: when a bank customer sends funds for a recipient without a bank account to collect in cash, the limit is ₹10,000 per transfer and ₹25,000 per month per beneficiary. The remitting bank records the beneficiary’s name and address.',
+      'Cash pay-in: a walk-in customer at a bank branch can send up to ₹50,000 to a beneficiary’s bank account via NEFT. For cash pay-in through participating bank correspondents, ATMs or similar channels, the limit is ₹5,000 per transfer and ₹25,000 per month per sender.',
+      'For cash pay-in, the remitting bank or its correspondent registers the sender using a verified mobile number and a self-certified officially valid document. Each transfer requires an additional authentication factor.',
+      'Providers may charge for the service. Complaints under these directions fall within the RBI Integrated Ombudsman Scheme, subject to that scheme’s conditions.',
+    ],
+    actions: [
+      'Before travelling, confirm that the branch or authorised agent offers the service you need, what identification to bring and what fee applies.',
+      'Keep the transfer reference and receipt. If there is a problem, raise it with the provider and retain the complaint reference for escalation under the Ombudsman Scheme.',
+    ],
+    limits: 'RBI issued the directions on 11 November with immediate effect and consolidated the earlier circulars. These limits apply to the specified cash remittance channels. Card-to-card transfers are governed separately.',
+  },
   {
     slug: 'motilal-oswal-conservative-fof-merger-november-2026',
     title: 'Motilal Oswal Conservative FoF: merger scheduled for 13 November',
