@@ -551,6 +551,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:invesco-overseas-fof-sip-pause-november-2026",
+    "title": "Three Invesco overseas FoFs: existing SIP instalments are paused",
+    "description": "Invesco paused new registrations and existing instalments for three overseas FoFs from 3 November. Check your mandate before setting up a replacement SIP.",
+    "href": "/research/watch/invesco-overseas-fof-sip-pause-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-12",
+    "keywords": "Three Invesco overseas FoFs: existing SIP instalments are paused invesco-overseas-fof-sip-pause-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:hdfc-fund-covered-call-exit-window-november-2026",
     "title": "Two HDFC schemes: optional exit window closed on 6 November",
     "description": "The special exit window ended at 3 pm IST on 6 November. The covered-call change is scheduled for 9 November.",
