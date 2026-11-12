@@ -144,6 +144,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:sebi-iepfa-niveshak-shivir-delhi-november-2026",
+    "title": "Delhi investor help camp on 17 November: unpaid dividends and share records",
+    "description": "SEBI and IEPFA will offer in-person help with unpaid dividends, pending claims, nomination and share records. Bring government ID.",
+    "href": "/research/watch/sebi-iepfa-niveshak-shivir-delhi-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-12",
+    "keywords": "Delhi investor help camp on 17 November: unpaid dividends and share records sebi-iepfa-niveshak-shivir-delhi-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:digital-life-certificate-campaign-november-2026",
     "title": "Digital Life Certificate Campaign 5: find pension submission help in November",
     "description": "The 1–30 November campaign offers help with Jeevan Pramaan through camps and participating pension agencies.",
@@ -240,6 +251,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "Official issuer / fund notice",
     "updated": "2026-10-27",
     "keywords": "HSBC Live+ Myntra: temporary 10% cashback ends on 31 October hsbc-live-plus-myntra-offer-october-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:icici-card-replacement-insurance-inox-november-december-2026",
+    "title": "ICICI cards: check November and December fee and benefit changes",
+    "description": "Selected business card fees change on 25 November. Card and Priority Pass replacement fees change on 11 December, followed by select insurance and INOX withdrawals on 15 December.",
+    "href": "/research/watch/icici-card-replacement-insurance-inox-november-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-12",
+    "keywords": "ICICI cards: check November and December fee and benefit changes icici-card-replacement-insurance-inox-november-december-2026 Research",
     "priority": 92
   },
   {
