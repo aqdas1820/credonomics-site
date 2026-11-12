@@ -430,6 +430,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:sebi-digital-kyc-overseas-investors-december-2026",
+    "title": "SEBI digital KYC from abroad: who can use the new process from 3 December",
+    "description": "Eligible overseas clients can complete digital KYC from a FATF-compliant country once the new process takes effect. Ask your intermediary which documents and verification steps it supports.",
+    "href": "/research/watch/sebi-digital-kyc-overseas-investors-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-12",
+    "keywords": "SEBI digital KYC from abroad: who can use the new process from 3 December sebi-digital-kyc-overseas-investors-december-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:sebi-early-pay-in-margin-waiver-february-2027",
     "title": "SEBI early pay-in: additional cash-market margin relief from February 2027",
     "description": "Accepted securities early pay-in can support eligible subsequent cash-segment positions; broker margin checks still apply.",
