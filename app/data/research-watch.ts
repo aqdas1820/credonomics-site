@@ -12,6 +12,27 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'sebi-digital-kyc-overseas-investors-december-2026',
+    title: 'SEBI digital KYC from abroad: who can use the new process from 3 December',
+    summary: 'Eligible overseas clients can complete digital KYC from a FATF-compliant country once the new process takes effect. Ask your intermediary which documents and verification steps it supports.',
+    category: 'Markets', checkedAt: '2026-11-12', announcementDate: '2026-11-04', eventDate: '2026-12-03', dateLabel: 'Digital KYC framework effective',
+    source: 'https://www.sebi.gov.in/legal/circulars/nov-2026/review-of-know-your-client-process-for-individual-person-resident-outside-india-clients_105603.html',
+    sourceLabel: 'SEBI circular on KYC for individuals resident outside India',
+    sourceLocation: 'Circular 25175/2026, paragraphs 3–5 on eligibility and verification and paragraphs 6–8 on scope and commencement.',
+    additionalSources: [{ url: 'https://nsdl.com/nsdl/2026-11/2026-0179-Policy-SEBI%20circular%20on%20Review%20of%20Know%20Your%20Client%20process%20for%20individual%20Person%20Resident%20Outside%20India%20clients..pdf', label: 'NSDL circular with the full SEBI text attached' }],
+    audience: 'Individual NRIs, OCI cardholders and foreign nationals who qualify as persons resident outside India and need securities KYC with a SEBI-regulated intermediary.',
+    facts: [
+      'From 3 December 2026, an intermediary may accept digital KYC from an eligible individual in a FATF-compliant country. The circular also covers re-KYC from a FATF-compliant country.',
+      'The intermediary checks PAN and collects a passport copy, the OCI card where applicable, and proof of identity and current overseas address. Documents in another language require an attested English translation.',
+      'If in-person verification is impractical, video verification requires an authorised official and checks on the client’s location. The intermediary can retrieve existing KYC records and may request more information where verification or due diligence requires it.',
+    ],
+    actions: [
+      'Ask your intermediary whether it supports the process for your country and account type. Confirm the accepted documents, signature requirements and how to schedule video verification.',
+      'Have your PAN, passport and current overseas address proof ready, plus your OCI card and Central KYC ID if applicable. Use the intermediary’s official channel to submit documents.',
+    ],
+    limits: 'The circular was issued on 4 November and checked on 12 November. The new process was upcoming at that check. Existing KYC rules continue for clients in FATF non-compliant countries and for KYC performed before commencement. Foreign nationals applying as Foreign Portfolio Investors follow the separate FPI framework. The circular permits digital submission and intermediaries still verify eligibility.',
+  },
+  {
     slug: 'invesco-overseas-fof-sip-pause-november-2026',
     title: 'Three Invesco overseas FoFs: existing SIP instalments are paused',
     summary: 'Invesco paused new registrations and existing instalments for three overseas FoFs from 3 November. Check your mandate before setting up a replacement SIP.',
