@@ -12,6 +12,50 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'icici-card-replacement-insurance-inox-november-december-2026',
+    title: 'ICICI cards: check November and December fee and benefit changes',
+    summary: 'Selected business card fees change on 25 November. Card and Priority Pass replacement fees change on 11 December, followed by select insurance and INOX withdrawals on 15 December.',
+    category: 'Credit cards', checkedAt: '2026-11-12', eventDate: '2026-11-25', dateLabel: 'First fee changes effective',
+    source: 'https://www.icicibank.com/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/credit-card-charges-updated-notice.pdf',
+    sourceLabel: 'ICICI Bank notice on credit card features and charges',
+    sourceLocation: 'Pages 1–4, effective date and applicable card columns. The later pages contain separate earlier notices.',
+    cardIds: ['amazon-pay-icici', 'icici-coral', 'icici-rubyx', 'icici-sapphiro', 'icici-hpcl-super-saver'],
+    audience: 'ICICI cardholders whose exact card is covered by a fee or benefit row, including users of the listed business, corporate and purchase cards.',
+    facts: [
+      '25 November: For the business and corporate cards listed in the DCC row, the bank’s fee for covered international transactions billed in INR rises from 1% to 3.50%. The separate replacement row raises the fee from ₹200 to ₹300 plus GST for the listed business, corporate and purchase cards.',
+      '11 December: The general card replacement fee rises from ₹200 to ₹300 plus GST. ICICI lists Emeralde Private Metal, 1838 Reserve and Times Black as exceptions to this row.',
+      '11 December: Priority Pass replacement goes from nil to ₹300 plus GST on the cards listed in that separate row. It includes Emeralde Private Metal and Times Black even though those cards are exceptions to the general card replacement row.',
+      '15 December: ICICI withdraws complimentary air accident and related cover on Emeralde Private Metal, Times Black, Emeralde, Emeralde Private, Diamant, Sapphiro and Rubyx. Cancellation For Any Reason cover ends on the first four of those cards. A separate row ends personal and air accident cover on Parakram and Parakram Select.',
+      '15 December: The listed INOX benefit ends on Rubyx, Coral, Expressions, Chennai Super Kings, MakeMyTrip Platinum, HPCL Super Saver, Emirates Rubyx, MakeMyTrip Signature and MakeMyTrip ICICI Bank Credit Card.',
+    ],
+    actions: [
+      'Match the full card name to the relevant row, including the separate lists for physical card and Priority Pass replacements.',
+      'If you rely on an affected cover for a trip, check with the issuer or insurer how the dates and policy terms apply to your booking. For a movie booking, check the offer’s current terms before checkout.',
+      'If using a listed business or corporate card internationally, check the billing currency and compare the applicable fees before choosing a currency.',
+    ],
+    limits: 'All three dates were upcoming when checked on 12 November. The issuer PDF does not specify a publication date. The withdrawal rows apply to the named covers and card variants. Treatment of individual bookings and claims needs insurer confirmation.',
+  },
+  {
+    slug: 'sebi-iepfa-niveshak-shivir-delhi-november-2026',
+    title: 'Delhi investor help camp on 17 November: unpaid dividends and share records',
+    summary: 'SEBI and IEPFA will offer in-person help with unpaid dividends, pending claims, nomination and share records. Bring government ID.',
+    category: 'Markets', checkedAt: '2026-11-12', announcementDate: '2026-11-12', eventDate: '2026-11-17', dateLabel: 'Delhi help camp · 10 am to 4 pm IST',
+    source: 'https://www.sebi.gov.in/sebi_data/attachdocs/nov-2026/1794478121235.pdf',
+    sourceLabel: 'SEBI press release 71/2026',
+    sourceLocation: 'Page 1 lists services and participants. Page 2 gives the venue, hours and identification guidance.',
+    additionalSources: [{ url: 'https://www.sebi.gov.in/media-and-notifications/press-releases/nov-2026/niveshak-shivir-to-be-held-on-november-17-2026-at-new-delhi_105731.html', label: 'SEBI announcement page' }],
+    audience: 'Shareholders and their representatives who can attend in New Delhi and need help with unpaid dividends, shares or related records.',
+    facts: [
+      'The camp is on 17 November 2026 from 10 am to 4 pm at Jacaranda Hall, India Habitat Centre, Lodhi Road, New Delhi. SEBI specifies entry from Gate 3 on Vardhaman Marg.',
+      'The organisers list help with unpaid dividends up to seven years, pending IEPFA claims, company KYC and nomination updates, transmission of securities and duplicate share certificates.',
+    ],
+    actions: [
+      'Bring official government identification, as SEBI advises for shareholders and representatives.',
+      'If you have them, keep the company name, folio or demat details and any pending claim reference handy so the relevant registrar can identify your case.',
+    ],
+    limits: 'SEBI announced the camp on 12 November. It was upcoming when checked the same day. The camp provides assistance. Resolution and eligibility depend on the case and the applicable process.',
+  },
+  {
     slug: 'sebi-digital-kyc-overseas-investors-december-2026',
     title: 'SEBI digital KYC from abroad: who can use the new process from 3 December',
     summary: 'Eligible overseas clients can complete digital KYC from a FATF-compliant country once the new process takes effect. Ask your intermediary which documents and verification steps it supports.',
