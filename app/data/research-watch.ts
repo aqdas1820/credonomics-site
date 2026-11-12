@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-11'
+export const WATCH_CHECKED_AT = '2026-11-12'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,27 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'invesco-overseas-fof-sip-pause-november-2026',
+    title: 'Three Invesco overseas FoFs: existing SIP instalments are paused',
+    summary: 'Invesco paused new registrations and existing instalments for three overseas FoFs from 3 November. Check your mandate before setting up a replacement SIP.',
+    category: 'Mutual funds', checkedAt: '2026-11-12', announcementDate: '2026-11-03', eventDate: '2026-11-03', dateLabel: 'Systematic investment pause · close of business', statusLabel: 'Subscription restrictions',
+    source: 'https://invescomutualfund.com/docs/default-source/addendum-pdf/75---notice---suspension-of-sips-etc---fof-overseas---nov-3-26.pdf',
+    sourceLabel: 'Invesco Mutual Fund: 3 November notice and addendum',
+    sourceLocation: 'Signed notice dated 3 November, including the target-scheme exception and existing instalment treatment.',
+    additionalSources: [{ url: 'https://www.invescomutualfund.com/literature-forms/addendums', label: 'Invesco Mutual Fund: notices and addenda' }],
+    audience: 'Investors with or considering Invesco India’s Invesco Global Equity Income, Invesco Pan European Equity or Invesco Global Consumer Trends Fund of Fund.',
+    facts: [
+      'From close of business on 3 November 2026, Invesco paused fresh SIP registrations and new STP and IDCW Transfer Plan registrations into these three schemes. For STP and IDCW Transfer Plan registrations, the restriction applies when a named scheme is the target.',
+      'The pause also covers instalments of existing SIPs, STPs and IDCW Transfer Plans into the named schemes. Invesco says the registrations remain active in its system and are to resume when it lifts the suspension.',
+      'The November notice cites the separate 29 September pause on lump-sum purchases and switch-ins. Redemptions, switch-outs, switches between plans or options within the schemes, and new or existing SWPs are outside the November pause.',
+    ],
+    actions: [
+      'Check the exact scheme and transaction type in your folio. If an expected instalment was skipped, confirm the status of the mandate with Invesco or your platform.',
+      'Before starting a replacement SIP, check whether your existing instruction can restart automatically when the pause is lifted. Confirm the latest AMC notice before submitting a fresh order.',
+    ],
+    limits: 'The signed notice is dated 3 November and was checked on 12 November. The pause runs until Invesco issues a revocation notice. The addendum gives no restart date.',
+  },
   {
     slug: 'rbi-domestic-money-transfer-cash-limits-november-2026',
     title: 'RBI domestic money transfers: cash limits and ID checks by channel',
