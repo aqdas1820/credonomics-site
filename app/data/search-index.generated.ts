@@ -573,6 +573,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:baroda-bnp-paribas-three-schemes-riskometer-october-2026",
+    "title": "Three Baroda BNP Paribas schemes move to higher risk-o-meter levels",
+    "description": "The risk labels rise for Equity Savings, Income Plus Arbitrage Active FOF and Corporate Bond, based on their 31 October portfolios.",
+    "href": "/research/watch/baroda-bnp-paribas-three-schemes-riskometer-october-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-13",
+    "keywords": "Three Baroda BNP Paribas schemes move to higher risk-o-meter levels baroda-bnp-paribas-three-schemes-riskometer-october-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:gold-fof-subscription-restrictions-hdfc-baroda-october-2026",
     "title": "Three gold FoFs: fresh investment restrictions do not stop existing SIPs",
     "description": "HDFC and Baroda BNP Paribas notices distinguish fresh subscriptions from existing systematic transactions and redemptions. Check your exact scheme.",
@@ -718,7 +729,7 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "route:/research/watch",
     "title": "Research Watch: Verified Changes & Action Dates",
-    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch. Latest publication: 5 November 2026, with scope and action dates.",
+    "description": "Source-checked card, deposit, market and mutual-fund updates from CredoNomics Research Watch, with affected holders and action dates.",
     "href": "/research/watch",
     "category": "Research",
     "source": "Research Desk",

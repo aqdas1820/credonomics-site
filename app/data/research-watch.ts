@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-12'
+export const WATCH_CHECKED_AT = '2026-11-13'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,28 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'baroda-bnp-paribas-three-schemes-riskometer-october-2026',
+    title: 'Three Baroda BNP Paribas schemes move to higher risk-o-meter levels',
+    summary: 'The risk labels rise for Equity Savings, Income Plus Arbitrage Active FOF and Corporate Bond, based on their 31 October portfolios.',
+    category: 'Mutual funds', checkedAt: '2026-11-13', announcementDate: '2026-11-09', eventDate: '2026-10-31', dateLabel: 'Portfolio assessment date', statusLabel: 'Clarification checked',
+    source: 'https://www.barodabnpparibasmf.in/assets/download_documents/Disclosure_of_Changes_in_the_Scheme_Risk-o-meter_20776.pdf',
+    sourceLabel: 'Baroda BNP Paribas Mutual Fund addendum 105/2026',
+    sourceLocation: 'Page 1 compares the September and October portfolio risk levels. Page 2 gives the notice date',
+    additionalSources: [{ url: 'https://www.barodabnpparibasmf.in/downloads/notice-cum-addenda', label: 'Baroda BNP Paribas Mutual Fund notice register' }],
+    audience: 'Investors who hold or are considering any of the three named Baroda BNP Paribas Mutual Fund schemes.',
+    facts: [
+      'Baroda BNP Paribas Equity Savings Fund moves from Moderate to Moderately High.',
+      'Baroda BNP Paribas Income Plus Arbitrage Active FOF moves from “Low to Moderate” to “Moderate”.',
+      'Baroda BNP Paribas Corporate Bond Fund moves from “Low to Moderate” to “Moderate”.',
+      'The addendum compares risk levels assessed on 30 September and 31 October 2026 and identifies only these three schemes.',
+    ],
+    actions: [
+      'Match the full scheme name on your folio or order screen. Check the AMC’s latest risk label and portfolio before investing more, especially if you chose the fund for a lower risk level.',
+      'If you are considering a switch, check the applicable exit load and tax treatment before placing an order.',
+    ],
+    limits: 'The AMC dated the notice 9 November and gives 31 October as the assessment date. It specifies no separate effective date or investor action deadline. The revised labels describe portfolio risk. The notice gives no special exit window.',
+  },
   {
     slug: 'icici-card-replacement-insurance-inox-november-december-2026',
     title: 'ICICI cards: check November and December fee and benefit changes',
