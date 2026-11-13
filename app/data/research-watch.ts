@@ -12,6 +12,30 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'federal-bank-bank-of-baroda-retail-fd-rates-november-2026',
+    title: 'Federal Bank and Bank of Baroda FDs: check the exact tenure and rate',
+    summary: 'Rates effective 12 November include 6.80% for Federal Bank’s 18-month resident FD and 6.85% for Bank of Baroda’s 555-day special FD, before senior rates.',
+    category: 'Bank deposits', checkedAt: '2026-11-13', eventDate: '2026-11-12', dateLabel: 'Retail rate schedules effective',
+    source: 'https://www.federal.bank.in/deposit-rate',
+    sourceLabel: 'Federal Bank resident term deposit rate table',
+    sourceLocation: 'Resident Term Deposits effective from 12 November 2026, single deposits below ₹3 crore',
+    additionalSources: [
+      { url: 'https://bankofbaroda.bank.in/interest-rate-and-service-charges/deposits-interest-rates/fixed-deposits-callable-and-non-callable-upto-ten-crores', label: 'Bank of Baroda domestic term deposit rates for fresh bookings and renewals' },
+    ],
+    audience: 'Resident depositors comparing fresh retail fixed deposits or renewals below ₹3 crore, including those eligible for senior or super senior rates.',
+    facts: [
+      'Federal Bank’s resident table lists 6.80% p.a. for general depositors and 7.40% for senior citizens at exactly 18 months and from 2 years to under 3 years. Above 1 year to under 18 months and above 18 months to under 2 years, the corresponding rates are 6.55% and 7.15%.',
+      'Federal Bank lists 6.00% for general depositors and 6.60% for seniors across 181–270 days.',
+      'Bank of Baroda lists 6.85%, 7.35% and 7.45% p.a. for the 555-day bob Golden Goal deposit for general, resident senior and resident super senior depositors respectively. The corresponding 444-day bob Square Drive rates are 6.45%, 6.95% and 7.05%.',
+      'The Bank of Baroda schedule explicitly covers fresh deposits and renewals. Its standard one-year rate is 6.25% for general depositors and 6.75% for both resident senior categories.',
+    ],
+    actions: [
+      'Match the exact maturity date, single deposit amount and age category against the bank’s current booking quote. Compare annual interest rates on the same payout basis.',
+      'If you are considering closing an existing deposit early, check the interest payable for the actual time held and any premature-withdrawal penalty before comparing the proceeds with a fresh booking.',
+    ],
+    limits: 'Both linked tables specify an effective date of 12 November 2026. No separate announcement date is stated for these tables. Rates shown are annual interest rates. Other schedules apply to bulk, non-callable and certain non-resident deposits.',
+  },
+  {
     slug: 'sgb-2018-19-series-iii-final-redemption-november-2026',
     title: 'SGB 2018–19 Series III matures on 13 November at ₹14,024 per unit',
     summary: 'Check the bank account on record for the maturity credit. RBI’s final redemption price applies to units still held in this tranche.',

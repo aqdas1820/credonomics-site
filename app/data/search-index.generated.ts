@@ -188,6 +188,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:federal-bank-bank-of-baroda-retail-fd-rates-november-2026",
+    "title": "Federal Bank and Bank of Baroda FDs: check the exact tenure and rate",
+    "description": "Rates effective 12 November include 6.80% for Federal Bank’s 18-month resident FD and 6.85% for Bank of Baroda’s 555-day special FD, before senior rates.",
+    "href": "/research/watch/federal-bank-bank-of-baroda-retail-fd-rates-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-13",
+    "keywords": "Federal Bank and Bank of Baroda FDs: check the exact tenure and rate federal-bank-bank-of-baroda-retail-fd-rates-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:axis-complimentary-membership-renewal-consent-november-2026",
     "title": "Four Axis cards: check consent before complimentary membership renewal",
     "description": "From 15 November 2026, applicable memberships renew only with explicit consent. Individual renewal dates and card eligibility still matter.",
