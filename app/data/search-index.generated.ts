@@ -102,11 +102,11 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "watch:amex-november-2026-fees-and-service-dates",
     "title": "Amex November: prepare for service windows, milestones and fees",
-    "description": "Check the service windows before converting an EMI or closing a Card. Online cancellation pauses 12–15 November.",
+    "description": "From 15 November, Amex says payments made after 9 pm will show in the card account the next day. Check payment timing alongside the temporary service windows.",
     "href": "/research/watch/amex-november-2026-fees-and-service-dates",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-11-10",
+    "updated": "2026-11-14",
     "keywords": "Amex November: prepare for service windows, milestones and fees amex-november-2026-fees-and-service-dates Research",
     "priority": 92
   },
