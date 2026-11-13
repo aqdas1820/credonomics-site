@@ -485,6 +485,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:sgb-2018-19-series-iii-final-redemption-november-2026",
+    "title": "SGB 2018–19 Series III matures on 13 November at ₹14,024 per unit",
+    "description": "Check the bank account on record for the maturity credit. RBI’s final redemption price applies to units still held in this tranche.",
+    "href": "/research/watch/sgb-2018-19-series-iii-final-redemption-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-13",
+    "keywords": "SGB 2018–19 Series III matures on 13 November at ₹14,024 per unit sgb-2018-19-series-iii-final-redemption-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:sgb-2019-20-series-vi-redemption-price-october-2026",
     "title": "SGB 2019-20 Series VI: ₹14,213 per unit for 30 October premature redemption",
     "description": "RBI’s price applies to the named tranche’s 30 October redemption, separately from the earlier Series I update.",
