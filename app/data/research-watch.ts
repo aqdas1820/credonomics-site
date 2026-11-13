@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-13'
+export const WATCH_CHECKED_AT = '2026-11-14'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,27 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'pnb-680-day-regular-uttam-fd-rates-november-2026',
+    title: 'PNB’s 680-day FD: compare regular and Uttam rates before locking in',
+    summary: 'PNB lists 6.80% p.a. for the regular 680-day FD and 6.90% for eligible Uttam deposits. Uttam restricts early withdrawals.',
+    category: 'Bank deposits', checkedAt: '2026-11-14', eventDate: '2026-11-05', dateLabel: 'Revised deposit rates effective',
+    source: 'https://pnb.bank.in/Interest-Rates-Deposit.html',
+    sourceLabel: 'Punjab National Bank deposit rate schedules',
+    sourceLocation: 'Domestic term deposits below ₹3 crore, Domestic/NRO and Uttam tables and senior eligibility notes',
+    additionalSources: [{ url: 'https://pnb.bank.in/pnb-uttam-deposit-scheme.html', label: 'PNB Uttam scheme terms and premature withdrawal exceptions' }],
+    audience: 'Depositors comparing PNB’s regular domestic fixed deposits below ₹3 crore and the retail Uttam rate bracket for deposits above ₹1 crore and below ₹3 crore.',
+    facts: [
+      'At exactly 680 days, the regular domestic FD lists 6.80% p.a. for the general public, 7.30% for resident seniors and 7.55% for resident super seniors. At 444 days, the respective rates are 6.70%, 7.20% and 7.45%.',
+      'For the retail Uttam bracket above ₹1 crore and below ₹3 crore, PNB lists 6.90%, 7.40% and 7.65% p.a. at 680 days for those same categories. Uttam is non-callable. PNB’s scheme terms list limited early-withdrawal exceptions, including death of a depositor and certain legal or regulatory directions.',
+      'The senior category is age 60 to under 80. The super senior category starts at 80. PNB excludes NRO deposits from the domestic senior rate uplift.',
+    ],
+    actions: [
+      'Match the exact number of days, deposit amount and age category against the bank’s booking quote.',
+      'Before choosing Uttam for the extra 0.10 percentage point at 680 days, check whether you can leave the funds in place until maturity. For an existing FD, ask the bank for the early-closure proceeds before comparing them with a fresh booking.',
+    ],
+    limits: 'The rate table was updated on 5 November and gives the same effective date. A separate advance announcement date is unspecified. The figures are annual interest rates for the stated brackets. Bulk deposits and other PNB products have separate terms.',
+  },
   {
     slug: 'federal-bank-bank-of-baroda-retail-fd-rates-november-2026',
     title: 'Federal Bank and Bank of Baroda FDs: check the exact tenure and rate',

@@ -397,6 +397,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:pnb-680-day-regular-uttam-fd-rates-november-2026",
+    "title": "PNB’s 680-day FD: compare regular and Uttam rates before locking in",
+    "description": "PNB lists 6.80% p.a. for the regular 680-day FD and 6.90% for eligible Uttam deposits. Uttam restricts early withdrawals.",
+    "href": "/research/watch/pnb-680-day-regular-uttam-fd-rates-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-14",
+    "keywords": "PNB’s 680-day FD: compare regular and Uttam rates before locking in pnb-680-day-regular-uttam-fd-rates-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:pusad-urban-cooperative-bank-rbi-directions-february-2027",
     "title": "Pusad Urban Co-operative Bank: RBI extends directions to 7 February",
     "description": "The extension runs from close of business on 7 November 2026 to close of business on 7 February 2027, subject to review.",
