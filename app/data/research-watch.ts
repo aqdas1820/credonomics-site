@@ -12,6 +12,29 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'sgb-2018-19-series-iii-final-redemption-november-2026',
+    title: 'SGB 2018–19 Series III matures on 13 November at ₹14,024 per unit',
+    summary: 'Check the bank account on record for the maturity credit. RBI’s final redemption price applies to units still held in this tranche.',
+    category: 'Markets', checkedAt: '2026-11-13', announcementDate: '2026-11-12', eventDate: '2026-11-13', dateLabel: 'Final redemption date',
+    source: 'https://www.rbi.org.in/scripts/bs_pressreleasedisplay.aspx/BS_PressReleaseDisplay.aspx?prid=63964',
+    sourceLabel: 'RBI press release 2026–2027/1486',
+    sourceLocation: '12 November release, paragraphs 1–2',
+    additionalSources: [
+      { url: 'https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12181', label: 'RBI SGB guidelines, sections 5, 12, 13 and 18' },
+      { url: 'https://www.rbi.org.in/commonman/Upload/English/Notification/PDFs/NOTI57_E08102018.PDF', label: 'Original RBI issue circular, issuance calendar and interest terms' },
+    ],
+    audience: 'Investors who still hold units of Sovereign Gold Bond 2018–19 Series III, issued on 13 November 2018.',
+    facts: [
+      'RBI announced on 12 November that the tranche matures on 13 November 2026 at ₹14,024 per unit. The price uses the average of the IBJA closing prices for 999-purity gold on 10, 11 and 12 November.',
+      'RBI’s guidelines provide for maturity proceeds to be credited to the bank account on record without a claim to RBI. The original terms provide for the final interest instalment at maturity.',
+    ],
+    actions: [
+      'Match the tranche on your holding record, multiply ₹14,024 by the units you still hold and check the registered bank account for the redemption credit.',
+      'If the credit is missing or the bank details are outdated, contact your receiving office for certificate holdings or your depository participant for demat holdings. For Retail Direct holdings, use the service request option on the RBI Retail Direct portal.',
+    ],
+    limits: 'The ₹14,024 figure is the redemption price per unit for this tranche. Interest is calculated separately under the issue terms. RBI’s price release gives no intraday credit time.',
+  },
+  {
     slug: 'baroda-bnp-paribas-three-schemes-riskometer-october-2026',
     title: 'Three Baroda BNP Paribas schemes move to higher risk-o-meter levels',
     summary: 'The risk labels rise for Equity Savings, Income Plus Arbitrage Active FOF and Corporate Bond, based on their 31 October portfolios.',
