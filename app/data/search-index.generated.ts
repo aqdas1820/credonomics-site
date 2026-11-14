@@ -190,11 +190,11 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "watch:federal-bank-bank-of-baroda-retail-fd-rates-november-2026",
     "title": "Federal Bank and Bank of Baroda FDs: check the exact tenure and rate",
-    "description": "Rates effective 12 November include 6.80% for Federal Bank’s 18-month resident FD and 6.85% for Bank of Baroda’s 555-day special FD, before senior rates.",
+    "description": "Federal Bank lists 6.80% p.a. at 18 months. Bank of Baroda’s 555-day Golden Goal reaches 7.50% p.a. for eligible resident super seniors in the non-callable bracket.",
     "href": "/research/watch/federal-bank-bank-of-baroda-retail-fd-rates-november-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-11-13",
+    "updated": "2026-11-14",
     "keywords": "Federal Bank and Bank of Baroda FDs: check the exact tenure and rate federal-bank-bank-of-baroda-retail-fd-rates-november-2026 Research",
     "priority": 92
   },

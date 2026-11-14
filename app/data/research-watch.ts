@@ -35,26 +35,28 @@ export const researchWatch: WatchItem[] = [
   {
     slug: 'federal-bank-bank-of-baroda-retail-fd-rates-november-2026',
     title: 'Federal Bank and Bank of Baroda FDs: check the exact tenure and rate',
-    summary: 'Rates effective 12 November include 6.80% for Federal Bank’s 18-month resident FD and 6.85% for Bank of Baroda’s 555-day special FD, before senior rates.',
-    category: 'Bank deposits', checkedAt: '2026-11-13', eventDate: '2026-11-12', dateLabel: 'Retail rate schedules effective',
+    summary: 'Federal Bank lists 6.80% p.a. at 18 months. Bank of Baroda’s 555-day Golden Goal reaches 7.50% p.a. for eligible resident super seniors in the non-callable bracket.',
+    category: 'Bank deposits', checkedAt: '2026-11-14', publishedAt: '2026-11-13', updateNote: '14 November: added Bank of Baroda’s non-callable Golden Goal rates, amount bracket and withdrawal terms.', eventDate: '2026-11-12', dateLabel: 'Retail rate schedules effective',
     source: 'https://www.federal.bank.in/deposit-rate',
     sourceLabel: 'Federal Bank resident term deposit rate table',
     sourceLocation: 'Resident Term Deposits effective from 12 November 2026, single deposits below ₹3 crore',
     additionalSources: [
-      { url: 'https://bankofbaroda.bank.in/interest-rate-and-service-charges/deposits-interest-rates/fixed-deposits-callable-and-non-callable-upto-ten-crores', label: 'Bank of Baroda domestic term deposit rates for fresh bookings and renewals' },
+      { url: 'https://bankofbaroda.bank.in/interest-rate-and-service-charges/deposits-interest-rates/fixed-deposits-callable-and-non-callable-upto-ten-crores', label: 'Bank of Baroda domestic retail and Baroda Advantage rate tables' },
     ],
     audience: 'Resident depositors comparing fresh retail fixed deposits or renewals below ₹3 crore, including those eligible for senior or super senior rates.',
     facts: [
       'Federal Bank’s resident table lists 6.80% p.a. for general depositors and 7.40% for senior citizens at exactly 18 months and from 2 years to under 3 years. Above 1 year to under 18 months and above 18 months to under 2 years, the corresponding rates are 6.55% and 7.15%.',
       'Federal Bank lists 6.00% for general depositors and 6.60% for seniors across 181–270 days.',
-      'Bank of Baroda lists 6.85%, 7.35% and 7.45% p.a. for the 555-day bob Golden Goal deposit for general, resident senior and resident super senior depositors respectively. The corresponding 444-day bob Square Drive rates are 6.45%, 6.95% and 7.05%.',
+      'Bank of Baroda lists 6.85%, 7.35% and 7.45% p.a. for the callable 555-day bob Golden Goal deposit for general, resident senior and resident super senior depositors respectively. The corresponding 444-day bob Square Drive rates are 6.45%, 6.95% and 7.05%.',
+      'For the non-callable 555-day Golden Goal in the Baroda Advantage table, the rates are 6.90%, 7.40% and 7.50% p.a. for general, resident senior and resident super senior depositors respectively. The table applies to a single deposit above ₹1 crore and below ₹3 crore.',
       'The Bank of Baroda schedule explicitly covers fresh deposits and renewals. Its standard one-year rate is 6.25% for general depositors and 6.75% for both resident senior categories.',
     ],
     actions: [
       'Match the exact maturity date, single deposit amount and age category against the bank’s current booking quote. Compare annual interest rates on the same payout basis.',
+      'Before choosing the non-callable option for the extra 0.05 percentage point at 555 days, check whether you can leave the deposit until maturity. The bank’s schedule says premature withdrawal is unavailable for non-callable deposits.',
       'If you are considering closing an existing deposit early, check the interest payable for the actual time held and any premature-withdrawal penalty before comparing the proceeds with a fresh booking.',
     ],
-    limits: 'Both linked tables specify an effective date of 12 November 2026. No separate announcement date is stated for these tables. Rates shown are annual interest rates. Other schedules apply to bulk, non-callable and certain non-resident deposits.',
+    limits: 'Both linked tables specify an effective date of 12 November 2026. No separate announcement date is stated for these tables. Rates shown are annual interest rates. The 7.50% rate is specific to the non-callable Golden Goal bracket and resident super senior eligibility. Separate schedules apply to Federal Bank’s non-callable deposits, bulk deposits and certain non-resident deposits.',
   },
   {
     slug: 'sgb-2018-19-series-iii-final-redemption-november-2026',
