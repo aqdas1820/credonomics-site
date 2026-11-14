@@ -101,13 +101,13 @@ export const searchIndex: readonly SearchEntry[] = [
   },
   {
     "id": "watch:amex-november-2026-fees-and-service-dates",
-    "title": "Amex November: overnight rewards and account access pauses",
-    "description": "Amex plans to pause points redemptions from 6 pm IST on 14 November and app and website account access from midnight. Both are expected back at 6 am IST on 15 November.",
+    "title": "Amex November: service windows and overseas card replacement",
+    "description": "Amex estimates 7–10 business days for replacing a card lost or stolen abroad. Points redemptions and online access also have separate overnight service windows.",
     "href": "/research/watch/amex-november-2026-fees-and-service-dates",
     "category": "Research",
     "source": "Official issuer / fund notice",
     "updated": "2026-11-14",
-    "keywords": "Amex November: overnight rewards and account access pauses amex-november-2026-fees-and-service-dates Research",
+    "keywords": "Amex November: service windows and overseas card replacement amex-november-2026-fees-and-service-dates Research",
     "priority": 92
   },
   {
