@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-14'
+export const WATCH_CHECKED_AT = '2026-11-15'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,101 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'tiruvalla-afzalpur-dicgc-claims-november-2026',
+    title: 'Tiruvalla and Afzalpur co-operative banks: deposit insurance documents due 22 November',
+    summary: 'DICGC lists 22 November for claim documents at both banks and 6 January for conditional payment.',
+    category: 'Bank deposits', checkedAt: '2026-11-15', announcementDate: '2026-10-09', eventDate: '2026-11-22', dateLabel: 'Claim and willingness date in both DICGC notices',
+    source: 'https://dicgc.org.in/sites/default/files/2026-10/5b-press-release-english-and-hindi-the-tiruvalla-urban-co-operative-bank-ltd-tiruvalla-pathanamthitta_0.pdf',
+    sourceLabel: 'DICGC: Tiruvalla Urban Co-operative Bank payment notice',
+    sourceLocation: 'English release dated 9 October 2026, table and paragraphs 1–3 on page 2',
+    additionalSources: [
+      { url: 'https://dicgc.org.in/sites/default/files/2026-10/4b-press-release-english-and-hindi-sri-mahatma-basaveshwar-co-operative-bank-ltd-afzalpur_0.pdf', label: 'DICGC: Sri Mahatma Basaveshwar Co-operative Bank, Afzalpur, payment notice' },
+      { url: 'https://www.rbi.org.in/scripts/FS_PressRelease.aspx?fn=2755&prid=63763', label: 'RBI: Tiruvalla directions and withdrawal restriction' },
+      { url: 'https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63764', label: 'RBI: Afzalpur directions and withdrawal restriction' },
+      { url: 'https://www.dicgc.org.in/FAQs', label: 'DICGC: general rules for submitting willingness forms under All-Inclusive Directions' },
+    ],
+    audience: 'Depositors of Tiruvalla Urban Co-operative Bank Ltd. in Pathanamthitta, Kerala, and Sri Mahatma Basaveshwar Co-operative Bank Ltd. in Afzalpur, Karnataka.',
+    facts: [
+      'Both DICGC notices list 22 November 2026 for claim and willingness submission to the respective bank. Both list 6 January 2027 for payment, subject to timely filing of the depositor list by the bank and verification of claim documents.',
+      'Each notice calls for officially valid identity documents, written willingness and alternate bank account details. The insurance ceiling is ₹5 lakh for deposits held in the same capacity and right.',
+      'RBI’s separate six-month directions prohibit account withdrawals at both banks from close of business on 8 October, subject to review. Loan set-off is permitted under the conditions in the relevant directions.',
+    ],
+    actions: [
+      'Contact your bank for its document submission arrangements ahead of 22 November and keep an acknowledgement of submission.',
+      'If you miss 22 November, contact the bank promptly. DICGC’s general FAQ allows willingness submissions while the bank remains under All-Inclusive Directions. Ask the bank how it handles later filings.',
+    ],
+    limits: 'Neither notice gives a cutoff hour or a payment date for late submissions. The 6 January date is conditional. Check the status of your own claim with your bank.',
+  },
+  {
+    slug: 'puducherry-cooperative-bank-dicgc-claim-december-2026',
+    title: 'Puducherry Co-operative Urban Bank: submit deposit insurance documents by 5 December',
+    summary: 'DICGC lists 5 December for claim documents and 19 January for conditional payment. RBI’s ₹5,000 withdrawal limit is separate.',
+    category: 'Bank deposits', checkedAt: '2026-11-15', announcementDate: '2026-10-22', eventDate: '2026-12-05', dateLabel: 'Claim and willingness date in DICGC notice',
+    source: 'https://dicgc.org.in/sites/default/files/2026-10/4b-press-release-english-and-hindi-puducherry-co-operative-urban-bank-ltd-puducherry-tamil-nadu_0.pdf',
+    sourceLabel: 'DICGC: Puducherry Co-operative Urban Bank payment notice',
+    sourceLocation: 'English release dated 22 October 2026, table and paragraphs 1–3 on page 2',
+    additionalSources: [
+      { url: 'https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63840', label: 'RBI: withdrawal limit and directions effective from close of business on 21 October' },
+      { url: 'https://www.dicgc.org.in/FAQs', label: 'DICGC: general rules for submitting willingness forms under All-Inclusive Directions' },
+    ],
+    audience: 'Depositors of Puducherry Co-operative Urban Bank Ltd. in Puducherry.',
+    facts: [
+      'The DICGC release lists 5 December 2026 for submission of claim documents and willingness to the bank. It lists 19 January 2027 for payment, subject to the bank filing its depositor list on time and verification of the claim documents.',
+      'The notice calls for officially valid identity documents, a written willingness declaration and alternate bank account details. One declaration covers the depositor’s accounts at the bank. Insurance is capped at ₹5 lakh for deposits held in the same capacity and right.',
+      'RBI’s separate directions took effect at close of business on 21 October 2026. They permit withdrawals up to ₹5,000 per depositor and allow loan set-off subject to the directions. RBI issued them for six months, subject to review.',
+    ],
+    actions: [
+      'Contact the bank through its official channels for the willingness form and document requirements. Submit them by the date in the notice and keep an acknowledgement.',
+      'If you miss 5 December, contact the bank promptly. DICGC’s general FAQ says willingness can be submitted while the bank remains under All-Inclusive Directions. Ask the bank how a later submission will be handled.',
+    ],
+    limits: 'The bank-specific notice gives no cutoff hour. The payment date is conditional, and the release gives no payment date for late submissions. Ask the bank to confirm your individual claim status.',
+  },
+  {
+    slug: 'idfc-business-card-upi-rewards-october-2026',
+    title: 'Three IDFC FIRST business cards: UPI rewards depend on the app',
+    summary: 'From 26 October, the bank lists the higher rate on eligible UPI payments above ₹2,000 made in its own app.',
+    category: 'Credit cards', checkedAt: '2026-11-15', eventDate: '2026-10-26', dateLabel: 'Revised UPI rewards effective',
+    source: 'https://www.idfcfirst.bank.in/credit-card/micro-enterprise-credit-card',
+    sourceLabel: 'IDFC FIRST Bank: Micro Enterprise credit card terms',
+    sourceLocation: 'Rewards section and its effective-date footnote',
+    additionalSources: [
+      { url: 'https://www.idfcfirst.bank.in/credit-card/business-max-credit-card', label: 'IDFC FIRST Bank: Business Max rewards and effective date' },
+      { url: 'https://www.idfcfirst.bank.in/credit-card/business-multiplier-credit-card', label: 'IDFC FIRST Bank: Business Multiplier and its FIRST Digital companion card' },
+    ],
+    audience: 'Holders of IDFC FIRST Bank’s Micro Enterprise and Business Max cards, and Business Multiplier holders using their complimentary FIRST Digital credit card for UPI.',
+    facts: [
+      'The three card pages list up to 3 points per ₹200 on eligible UPI payments above ₹2,000 via the IDFC FIRST Bank Mobile App. They list 1 point per ₹200 for eligible payments below ₹2,000 and for eligible UPI payments through other apps.',
+      'The issuer values a point at ₹0.25. Business Multiplier’s UPI rules apply to its complimentary FIRST Digital card.',
+    ],
+    actions: [
+      'For an eligible business UPI payment above ₹2,000, confirm that the correct card is selected in the bank app if you are counting on the higher rate.',
+      'Check the points credited on your statement. Ask the bank about a payment of exactly ₹2,000 or one in an excluded category.',
+    ],
+    limits: 'The issuer pages give the effective date without a separate notice date. They describe the threshold as above or below ₹2,000, leaving the exact boundary unclear. Micro Enterprise’s page also lists insurance in both a reward row and an exclusion. Insurance reward treatment remains unverified.',
+  },
+  {
+    slug: 'google-pay-flex-axis-rewards-october-2026',
+    title: 'Google Pay Flex Axis: check the previous cycle before counting on 3.2% in Stars',
+    summary: 'Axis’s 16 October promotion uses a ₹15,000 spend threshold, a prior-cycle ₹100 test and a combined 1,500-Star cap per reward cycle.',
+    category: 'Credit cards', checkedAt: '2026-11-15', eventDate: '2026-10-16', dateLabel: 'Axis promotional rewards effective',
+    source: 'https://www.axis.bank.in/docs/default-source/default-document-library/credit-card/terms-and-conditions-for-google-pay-flex-axis-bank-credit-card.pdf',
+    sourceLabel: 'Axis Bank: Google Pay Flex Axis card terms',
+    sourceLocation: 'Rewards Program exclusions, Accelerated Stars milestone table and Cycles, Fees and Charges',
+    additionalSources: [{ url: 'https://support.google.com/pay/india/answer/16547967?hl=en', label: 'Google Pay Help: Flex Stars, eligible payments and redemption' }],
+    audience: 'Existing Google Pay Flex Axis Bank Credit Card holders comparing rewards on eligible personal spending.',
+    facts: [
+      'With at least ₹100 of eligible net spend in the previous reward cycle, Axis lists 1.6% in Stars for eligible Google One members on up to ₹15,000 of current-cycle spend and 3.2% after crossing ₹15,000. For non-members the rates are 0.8% and 1.6%. The higher tier applies to all eligible spend in that cycle.',
+      'Below ₹100 of eligible net spend in the previous cycle, the corresponding rates are 0.8% and 1.6% for eligible members, and 0.4% and 0.8% for non-members. The reward cycle runs from the 16th to the 15th.',
+      'Eligible Google One members can earn 450 extra Stars for ₹3,000 in qualifying Google Pay bills and recharges and 250 extra Stars for ₹5,000 in qualifying Google Pay UPI food and grocery spend. Each bonus is available once per cycle. The combined cap is 1,500 Stars per reward cycle, including category bonuses.',
+      'Google Pay values one Star at ₹1 when redeemed through its supported options. Google One memberships billed through third parties and family-group members are excluded from the membership benefit. Axis lists 15 October 2027 as the scheduled end of the promotion, subject to extension.',
+    ],
+    actions: [
+      'Open Flex in Google Pay and check your previous cycle’s eligible spend, membership status and current Stars. Check that the payment method and merchant qualify before counting a category bonus.',
+      'Use the reward-cycle dates when checking a threshold. Review Axis’s excluded categories, including rent, insurance and wallet spend, before budgeting for rewards.',
+    ],
+    limits: 'The dated Axis terms govern this Axis promotion. Google Pay’s help page uses “below ₹15,000”; the Axis milestone table includes exactly ₹15,000 in its lower tier. The announcement date was not established. SBI Card offers and Google’s device and subscription promotions have separate terms.',
+  },
   {
     slug: 'pnb-680-day-regular-uttam-fd-rates-november-2026',
     title: 'PNB’s 680-day FD: compare regular and Uttam rates before locking in',

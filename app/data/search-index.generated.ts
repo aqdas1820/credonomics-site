@@ -221,6 +221,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:google-pay-flex-axis-rewards-october-2026",
+    "title": "Google Pay Flex Axis: check the previous cycle before counting on 3.2% in Stars",
+    "description": "Axis’s 16 October promotion uses a ₹15,000 spend threshold, a prior-cycle ₹100 test and a combined 1,500-Star cap per reward cycle.",
+    "href": "/research/watch/google-pay-flex-axis-rewards-october-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-15",
+    "keywords": "Google Pay Flex Axis: check the previous cycle before counting on 3.2% in Stars google-pay-flex-axis-rewards-october-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:hdfc-balanced-advantage-value-online-daily-sip-november-2026",
     "title": "HDFC Balanced Advantage and Value: online daily SIP minimum drops to ₹20",
     "description": "From 2 November, the two schemes require at least 30 online daily SIP instalments instead of six.",
@@ -405,6 +416,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "Official issuer / fund notice",
     "updated": "2026-11-14",
     "keywords": "PNB’s 680-day FD: compare regular and Uttam rates before locking in pnb-680-day-regular-uttam-fd-rates-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:puducherry-cooperative-bank-dicgc-claim-december-2026",
+    "title": "Puducherry Co-operative Urban Bank: submit deposit insurance documents by 5 December",
+    "description": "DICGC lists 5 December for claim documents and 19 January for conditional payment. RBI’s ₹5,000 withdrawal limit is separate.",
+    "href": "/research/watch/puducherry-cooperative-bank-dicgc-claim-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-15",
+    "keywords": "Puducherry Co-operative Urban Bank: submit deposit insurance documents by 5 December puducherry-cooperative-bank-dicgc-claim-december-2026 Research",
     "priority": 92
   },
   {
@@ -628,6 +650,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:idfc-business-card-upi-rewards-october-2026",
+    "title": "Three IDFC FIRST business cards: UPI rewards depend on the app",
+    "description": "From 26 October, the bank lists the higher rate on eligible UPI payments above ₹2,000 made in its own app.",
+    "href": "/research/watch/idfc-business-card-upi-rewards-october-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-15",
+    "keywords": "Three IDFC FIRST business cards: UPI rewards depend on the app idfc-business-card-upi-rewards-october-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:invesco-overseas-fof-sip-pause-november-2026",
     "title": "Three Invesco overseas FoFs: existing SIP instalments are paused",
     "description": "Invesco paused new registrations and existing instalments for three overseas FoFs from 3 November. Check your mandate before setting up a replacement SIP.",
@@ -636,6 +669,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "Official issuer / fund notice",
     "updated": "2026-11-12",
     "keywords": "Three Invesco overseas FoFs: existing SIP instalments are paused invesco-overseas-fof-sip-pause-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:tiruvalla-afzalpur-dicgc-claims-november-2026",
+    "title": "Tiruvalla and Afzalpur co-operative banks: deposit insurance documents due 22 November",
+    "description": "DICGC lists 22 November for claim documents at both banks and 6 January for conditional payment.",
+    "href": "/research/watch/tiruvalla-afzalpur-dicgc-claims-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-15",
+    "keywords": "Tiruvalla and Afzalpur co-operative banks: deposit insurance documents due 22 November tiruvalla-afzalpur-dicgc-claims-november-2026 Research",
     "priority": 92
   },
   {
