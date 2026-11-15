@@ -101,13 +101,13 @@ export const searchIndex: readonly SearchEntry[] = [
   },
   {
     "id": "watch:amex-november-2026-fees-and-service-dates",
-    "title": "Amex November: service windows and overseas card replacement",
-    "description": "Amex estimates 7–10 business days for replacing a card lost or stolen abroad. Points redemptions and online access also have separate overnight service windows.",
+    "title": "Amex November: first sign-in after the app and website upgrade",
+    "description": "For your first sign-in after the 15 November upgrade, start with your existing credentials, verify the OTP and follow Amex’s password and security-key prompts.",
     "href": "/research/watch/amex-november-2026-fees-and-service-dates",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-11-14",
-    "keywords": "Amex November: service windows and overseas card replacement amex-november-2026-fees-and-service-dates Research",
+    "updated": "2026-11-15",
+    "keywords": "Amex November: first sign-in after the app and website upgrade amex-november-2026-fees-and-service-dates Research",
     "priority": 92
   },
   {
