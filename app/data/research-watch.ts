@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-15'
+export const WATCH_CHECKED_AT = '2026-11-16'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,30 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'roarbank-emi-foreclosure-fee-november-2026',
+    title: 'Roarbank credit card: EMI foreclosure fee rises to 3% on 21 November',
+    summary: 'The fee for closing a standard or Partner EMI early rises from 2% to 3% of the remaining principal, plus applicable GST.',
+    category: 'Credit cards', checkedAt: '2026-11-16', eventDate: '2026-11-21', dateLabel: 'Revised EMI foreclosure fee effective',
+    source: 'https://roar.unity.bank.in/doc/Key%20Fact%20Sheet%20Roarbank.pdf',
+    sourceLabel: 'Unity Small Finance Bank: Roarbank credit card Key Fact Statement',
+    sourceLocation: 'September 2026 edition, dated rows for EMI and Partner EMI foreclosure fees',
+    additionalSources: [
+      { url: 'https://roar.unity.bank.in/doc/MITC%20Credit%20card.pdf', label: 'Roarbank credit card MITC: standard EMI Early Closure and Partner EMI Foreclosure' },
+      { url: 'https://roar.unity.bank.in/en/tariffs', label: 'Roarbank tariff overview, which still shows the 2% rate at the check date' },
+    ],
+    audience: 'Unity Small Finance Bank Roarbank credit card holders considering early closure of a standard or Partner EMI plan.',
+    facts: [
+      'The dated Key Fact Statement and MITC put the 3% fee into effect on 21 November 2026. The earlier rate is 2%. Both percentages are applied to the remaining principal at foreclosure. GST applies to the fee.',
+      'The MITC requires full prepayment of the remaining principal for early closure. Partial prepayments are unavailable for both plan types.',
+      'The tariff overview still listed 2% when checked on 16 November. The dated credit-card documents specify when the new rate starts.',
+    ],
+    actions: [
+      'Ask Roarbank for the total foreclosure quote, including the remaining principal, fee and GST. Compare it with the remaining instalments before deciding.',
+      'If you are near 21 November, confirm the date Roarbank will use for foreclosure and the rate in your quote before paying.',
+    ],
+    limits: 'The change was upcoming when checked on 16 November. The Key Fact Statement identifies a September 2026 edition without an exact announcement date. The documents give no cutoff hour or clear treatment for requests submitted before 21 November and processed later.',
+  },
   {
     slug: 'motilal-oswal-seven-schemes-100-monthly-sip-november-2026',
     title: 'Seven Motilal Oswal funds lower the lump-sum and monthly SIP minimum to ₹100',

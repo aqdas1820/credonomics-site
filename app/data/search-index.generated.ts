@@ -474,6 +474,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:roarbank-emi-foreclosure-fee-november-2026",
+    "title": "Roarbank credit card: EMI foreclosure fee rises to 3% on 21 November",
+    "description": "The fee for closing a standard or Partner EMI early rises from 2% to 3% of the remaining principal, plus applicable GST.",
+    "href": "/research/watch/roarbank-emi-foreclosure-fee-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-16",
+    "keywords": "Roarbank credit card: EMI foreclosure fee rises to 3% on 21 November roarbank-emi-foreclosure-fee-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:sbi-card-transport-fuel-fees-december-2026",
     "title": "SBI Card December fees: transport is per transaction; fuel is per billing cycle",
     "description": "From 1 December 2026, the announced 1% fees use different thresholds: transport transactions above ₹30,000 and total cycle fuel spends above ₹50,000.",
