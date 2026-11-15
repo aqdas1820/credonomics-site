@@ -101,13 +101,13 @@ export const searchIndex: readonly SearchEntry[] = [
   },
   {
     "id": "watch:amex-november-2026-fees-and-service-dates",
-    "title": "Amex November: first sign-in after the app and website upgrade",
-    "description": "For your first sign-in after the 15 November upgrade, start with your existing credentials, verify the OTP and follow Amex’s password and security-key prompts.",
+    "title": "Amex November: first sign-in and overseas cash advance rules",
+    "description": "The 15 November credit-card terms set a 30-day cash advance limit abroad and say withdrawals in India are temporarily suspended. First sign-in and recovery steps are also covered.",
     "href": "/research/watch/amex-november-2026-fees-and-service-dates",
     "category": "Research",
     "source": "Official issuer / fund notice",
     "updated": "2026-11-15",
-    "keywords": "Amex November: first sign-in after the app and website upgrade amex-november-2026-fees-and-service-dates Research",
+    "keywords": "Amex November: first sign-in and overseas cash advance rules amex-november-2026-fees-and-service-dates Research",
     "priority": 92
   },
   {
