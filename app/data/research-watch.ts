@@ -12,6 +12,26 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'motilal-oswal-seven-schemes-100-monthly-sip-november-2026',
+    title: 'Seven Motilal Oswal funds lower the lump-sum and monthly SIP minimum to ₹100',
+    summary: 'The ₹500 minimum drops to ₹100 on 16 November for the seven schemes in the fund’s addendum. NSE confirms the change on its MF Invest platform.',
+    category: 'Mutual funds', checkedAt: '2026-11-15', announcementDate: '2026-11-12', eventDate: '2026-11-16', dateLabel: 'Revised minimum investment effective',
+    source: 'https://nsearchives.nseindia.com/content/circulars/NMF77428.zip',
+    sourceLabel: 'NSE circular NSE/NMFTM/77428 and signed Motilal Oswal Mutual Fund addendum (ZIP)',
+    sourceLocation: 'Open NMF77428.pdf for the 13 November NSE platform notice and REVISION IN MINIMUM INVESTMENT AMOUNT_v1.pdf for the 12 November fund addendum and scheme list',
+    audience: 'Investors placing a lump-sum order or setting up a monthly SIP in one of the seven named Motilal Oswal Mutual Fund schemes.',
+    facts: [
+      'From 16 November 2026, the minimum lump-sum investment and monthly SIP amount fall from ₹500 to ₹100. The fund allows ₹1 increments above the minimum.',
+      'The seven schemes are Motilal Oswal Large and Midcap Fund, Midcap Fund, Small Cap Fund, Quant Fund, Active Momentum Fund, Special Opportunities Fund and Quality Fund.',
+      'The fund signed its addendum on 12 November. NSE published its platform circular on 13 November and confirms the same effective date for NSE MF Invest.',
+    ],
+    actions: [
+      'From 16 November, select the exact scheme and check the minimum displayed by your intermediary before submitting an order or registering a monthly SIP.',
+      'To change an existing monthly SIP amount, check the mandate and the platform’s modification process before changing or cancelling instructions.',
+    ],
+    limits: 'The revised minimum was upcoming when checked on 15 November. The addendum covers lump-sum purchases and monthly SIPs for the seven listed schemes. The NSE circular confirms platform support for NSE MF Invest. Availability elsewhere, changes to existing SIP mandates and other SIP frequencies require separate confirmation.',
+  },
+  {
     slug: 'au-zenith-plus-currency-markup-taj-december-2026',
     title: 'AU Zenith+: currency markup, international rewards and Taj milestone change on 1 December',
     summary: 'From 1 December AU lists a 0% currency markup, ends points on international spends and switches the yearly milestone to Taj Preferred.',
