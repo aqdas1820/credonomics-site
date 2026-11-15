@@ -13,23 +13,24 @@ export type WatchItem = {
 export const researchWatch: WatchItem[] = [
   {
     slug: 'au-zenith-plus-currency-markup-taj-december-2026',
-    title: 'AU Zenith+: currency markup and the Taj milestone change on 1 December',
-    summary: 'AU lists a 0% currency markup and a switch to Taj Preferred for cardholders who qualify for the yearly milestone from 1 December.',
-    category: 'Credit cards', checkedAt: '2026-11-15', eventDate: '2026-12-01', dateLabel: 'Currency markup and yearly milestone changes effective',
+    title: 'AU Zenith+: currency markup, international rewards and Taj milestone change on 1 December',
+    summary: 'From 1 December AU lists a 0% currency markup, ends points on international spends and switches the yearly milestone to Taj Preferred.',
+    category: 'Credit cards', checkedAt: '2026-11-15', eventDate: '2026-12-01', dateLabel: 'Zenith+ changes effective',
     source: 'https://www.au.bank.in/pdf/credit-card/Schedule-of-Charges-CC.pdf',
     sourceLabel: 'AU Small Finance Bank: credit card Key Fact Statement',
     sourceLocation: 'Page 5, foreign currency and dynamic or static conversion markup table, updated 2 November 2026',
-    additionalSources: [{ url: 'https://www.au.bank.in/premium-banking/credit-cards/zenith-plus-credit-card', label: 'AU Small Finance Bank: Zenith+ product terms and dated Taj milestone footnote' }],
+    additionalSources: [{ url: 'https://www.au.bank.in/premium-banking/credit-cards/zenith-plus-credit-card', label: 'AU Small Finance Bank: dated Zenith+ rewards and Taj milestone footnotes' }],
     audience: 'AU Zenith+ Credit Card holders planning overseas spending or approaching the yearly Taj milestone.',
     facts: [
       'AU’s charges table lists 0.99% for Zenith+ and places Zenith+ in the 0% row from 1 December 2026. This is the issuer’s markup. A merchant’s own currency conversion may still affect the total price.',
+      'AU’s reward details list 2 points per ₹100 of eligible international spend before the change. The dated footnote says international spends stop earning reward points from 1 December.',
       'AU says cardholders who qualify for the yearly milestone from 1 December by spending at least ₹12 lakh in their card anniversary year become eligible for Taj Preferred instead of Taj Epicure. AU describes a complimentary night at selected hotels.',
     ],
     actions: [
-      'Check that your card is Zenith+ and compare the actual currency and exchange rate shown at checkout.',
+      'Check that your card is Zenith+. When comparing costs for a December purchase, allow for the loss of points and compare the actual currency and exchange rate shown at checkout.',
       'If you are close to the milestone, check your card anniversary date and qualifying spend with AU. Ask AU which benefit applies if a purchase posts around the cutoff, or if you already qualified.',
     ],
-    limits: 'Both changes were upcoming when checked on 15 November. The charges document was updated on 2 November. A separate announcement date for the product-page footnote was not established. Existing Taj memberships, cutoff posting treatment and any change to international reward-point earning remain unverified.',
+    limits: 'The changes were upcoming when checked on 15 November. The charges document was updated on 2 November. Separate announcement dates for the product-page footnotes were not established. Treatment of existing Taj memberships and transactions posting near the cutoff remains unverified.',
   },
   {
     slug: 'bobcard-onecard-late-payment-slabs-october-2026',

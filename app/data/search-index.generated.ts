@@ -112,13 +112,13 @@ export const searchIndex: readonly SearchEntry[] = [
   },
   {
     "id": "watch:au-zenith-plus-currency-markup-taj-december-2026",
-    "title": "AU Zenith+: currency markup and the Taj milestone change on 1 December",
-    "description": "AU lists a 0% currency markup and a switch to Taj Preferred for cardholders who qualify for the yearly milestone from 1 December.",
+    "title": "AU Zenith+: currency markup, international rewards and Taj milestone change on 1 December",
+    "description": "From 1 December AU lists a 0% currency markup, ends points on international spends and switches the yearly milestone to Taj Preferred.",
     "href": "/research/watch/au-zenith-plus-currency-markup-taj-december-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
     "updated": "2026-11-15",
-    "keywords": "AU Zenith+: currency markup and the Taj milestone change on 1 December au-zenith-plus-currency-markup-taj-december-2026 Research",
+    "keywords": "AU Zenith+: currency markup, international rewards and Taj milestone change on 1 December au-zenith-plus-currency-markup-taj-december-2026 Research",
     "priority": 92
   },
   {
