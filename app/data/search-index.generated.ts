@@ -111,6 +111,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:au-zenith-plus-currency-markup-taj-december-2026",
+    "title": "AU Zenith+: currency markup, international rewards and Taj milestone change on 1 December",
+    "description": "From 1 December AU lists a 0% currency markup, ends points on international spends and switches the yearly milestone to Taj Preferred.",
+    "href": "/research/watch/au-zenith-plus-currency-markup-taj-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-15",
+    "keywords": "AU Zenith+: currency markup, international rewards and Taj milestone change on 1 December au-zenith-plus-currency-markup-taj-december-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:axis-myzone-district-movie-spend-november-2026",
     "title": "Axis movie offers: check the November spend rule for four cards",
     "description": "MYZONE, SELECT and PRIVILEGE District offers and NEO’s BookMyShow discount have a ₹25,000 eligible-spend condition from 1 November.",
@@ -130,6 +141,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "Official issuer / fund notice",
     "updated": "2026-10-27",
     "keywords": "Axis Vistara cards: current spending cutoff is after 15 December 2026 axis-vistara-spending-discontinuation-december-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:bobcard-onecard-late-payment-slabs-october-2026",
+    "title": "BOBCARD OneCard: check the late-payment slabs in force since 11 October",
+    "description": "BOBCARD’s new slabs range from ₹0 to ₹1,300 before GST. Check the issuer and the outstanding amount on your statement.",
+    "href": "/research/watch/bobcard-onecard-late-payment-slabs-october-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-15",
+    "keywords": "BOBCARD OneCard: check the late-payment slabs in force since 11 October bobcard-onecard-late-payment-slabs-october-2026 Research",
     "priority": 92
   },
   {
