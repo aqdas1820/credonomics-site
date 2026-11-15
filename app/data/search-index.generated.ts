@@ -551,6 +551,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:motilal-oswal-seven-schemes-100-monthly-sip-november-2026",
+    "title": "Seven Motilal Oswal funds lower the lump-sum and monthly SIP minimum to ₹100",
+    "description": "The ₹500 minimum drops to ₹100 on 16 November for the seven schemes in the fund’s addendum. NSE confirms the change on its MF Invest platform.",
+    "href": "/research/watch/motilal-oswal-seven-schemes-100-monthly-sip-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-15",
+    "keywords": "Seven Motilal Oswal funds lower the lump-sum and monthly SIP minimum to ₹100 motilal-oswal-seven-schemes-100-monthly-sip-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:sgb-2018-19-series-iii-final-redemption-november-2026",
     "title": "SGB 2018–19 Series III matures on 13 November at ₹14,024 per unit",
     "description": "Check the bank account on record for the maturity credit. RBI’s final redemption price applies to units still held in this tranche.",
