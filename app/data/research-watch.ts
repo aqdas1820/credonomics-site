@@ -12,6 +12,46 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'au-zenith-plus-currency-markup-taj-december-2026',
+    title: 'AU Zenith+: currency markup and the Taj milestone change on 1 December',
+    summary: 'AU lists a 0% currency markup and a switch to Taj Preferred for cardholders who qualify for the yearly milestone from 1 December.',
+    category: 'Credit cards', checkedAt: '2026-11-15', eventDate: '2026-12-01', dateLabel: 'Currency markup and yearly milestone changes effective',
+    source: 'https://www.au.bank.in/pdf/credit-card/Schedule-of-Charges-CC.pdf',
+    sourceLabel: 'AU Small Finance Bank: credit card Key Fact Statement',
+    sourceLocation: 'Page 5, foreign currency and dynamic or static conversion markup table, updated 2 November 2026',
+    additionalSources: [{ url: 'https://www.au.bank.in/premium-banking/credit-cards/zenith-plus-credit-card', label: 'AU Small Finance Bank: Zenith+ product terms and dated Taj milestone footnote' }],
+    audience: 'AU Zenith+ Credit Card holders planning overseas spending or approaching the yearly Taj milestone.',
+    facts: [
+      'AU’s charges table lists 0.99% for Zenith+ and places Zenith+ in the 0% row from 1 December 2026. This is the issuer’s markup. A merchant’s own currency conversion may still affect the total price.',
+      'AU says cardholders who qualify for the yearly milestone from 1 December by spending at least ₹12 lakh in their card anniversary year become eligible for Taj Preferred instead of Taj Epicure. AU describes a complimentary night at selected hotels.',
+    ],
+    actions: [
+      'Check that your card is Zenith+ and compare the actual currency and exchange rate shown at checkout.',
+      'If you are close to the milestone, check your card anniversary date and qualifying spend with AU. Ask AU which benefit applies if a purchase posts around the cutoff, or if you already qualified.',
+    ],
+    limits: 'Both changes were upcoming when checked on 15 November. The charges document was updated on 2 November. A separate announcement date for the product-page footnote was not established. Existing Taj memberships, cutoff posting treatment and any change to international reward-point earning remain unverified.',
+  },
+  {
+    slug: 'bobcard-onecard-late-payment-slabs-october-2026',
+    title: 'BOBCARD OneCard: check the late-payment slabs in force since 11 October',
+    summary: 'BOBCARD’s new slabs range from ₹0 to ₹1,300 before GST. Check the issuer and the outstanding amount on your statement.',
+    category: 'Credit cards', checkedAt: '2026-11-15', eventDate: '2026-10-11', dateLabel: 'Revised late-payment slabs effective',
+    source: 'https://assets.getonecard.app/assets/legal/BOBCARD_KFS.pdf',
+    sourceLabel: 'BOBCARD One co-branded credit card Key Fact Statement',
+    sourceLocation: 'Page 2, item 09 and the GST note. Page 3, Minimum Amount Due',
+    audience: 'OneCard holders whose card issuer is BOBCARD Limited.',
+    facts: [
+      'For outstanding amounts up to ₹250 the fee is ₹0. For ₹251–₹1,000 it is ₹250. For ₹1,001–₹5,000 it is ₹700, up from ₹500.',
+      'For ₹5,001–₹10,000 the fee is ₹1,000. For ₹10,001–₹15,000 it is ₹1,100 and for ₹15,001–₹25,000 it is ₹1,200. The previous fee across those three bands was ₹1,000.',
+      'For ₹25,001 and above, the fee is ₹1,300, up from ₹1,250. GST applies to chargeable fees. The Key Fact Statement ties late-payment charges to failure to pay the Minimum Amount Due by the due date.',
+    ],
+    actions: [
+      'Confirm the issuer in the OneCard app or on your statement before applying these slabs.',
+      'Check the Minimum Amount Due, payment due date and outstanding balance on the statement. Allow enough time for the payment to be credited. Interest can still apply if you carry a balance.',
+    ],
+    limits: 'The Key Fact Statement gives the effective date. A separate announcement date was not established. The schedule applies to BOBCARD’s co-branded OneCard. Check your own issuer’s terms for any other OneCard.',
+  },
+  {
     slug: 'tiruvalla-afzalpur-dicgc-claims-november-2026',
     title: 'Tiruvalla and Afzalpur co-operative banks: deposit insurance documents due 22 November',
     summary: 'DICGC lists 22 November for claim documents at both banks and 6 January for conditional payment.',
