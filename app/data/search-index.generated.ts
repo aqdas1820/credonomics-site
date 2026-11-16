@@ -144,6 +144,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:bank-of-india-home-car-processing-fee-waiver-march-2027",
+    "title": "Bank of India waives processing fees on eligible home and new car loans through 31 March",
+    "description": "Check the loan type, CIBIL score and exceptions for home loan takeovers and electric vehicles before relying on the waiver.",
+    "href": "/research/watch/bank-of-india-home-car-processing-fee-waiver-march-2027",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-16",
+    "keywords": "Bank of India waives processing fees on eligible home and new car loans through 31 March bank-of-india-home-car-processing-fee-waiver-march-2027 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:bobcard-onecard-late-payment-slabs-october-2026",
     "title": "BOBCARD OneCard: check the late-payment slabs in force since 11 October",
     "description": "BOBCARD’s new slabs range from ₹0 to ₹1,300 before GST. Check the issuer and the outstanding amount on your statement.",
