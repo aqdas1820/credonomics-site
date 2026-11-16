@@ -100,6 +100,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 93
   },
   {
+    "id": "watch:rbi-retail-direct-government-bond-auction-20-november-2026",
+    "title": "20 November government bond auction: check the retail bid cutoff and price",
+    "description": "Two Government of India bonds mature in 2031 and 2066. The minimum bid is ₹10,000 in face value. Check your platform’s cutoff before bidding.",
+    "href": "/research/watch/rbi-retail-direct-government-bond-auction-20-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-16",
+    "keywords": "20 November government bond auction: check the retail bid cutoff and price rbi-retail-direct-government-bond-auction-20-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:amex-november-2026-fees-and-service-dates",
     "title": "Amex November: first sign-in and overseas cash advance rules",
     "description": "The 15 November credit-card terms set a 30-day cash advance limit abroad and say withdrawals in India are temporarily suspended. First sign-in and recovery steps are also covered.",

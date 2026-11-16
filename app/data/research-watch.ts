@@ -12,6 +12,30 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'rbi-retail-direct-government-bond-auction-20-november-2026',
+    title: '20 November government bond auction: check the retail bid cutoff and price',
+    summary: 'Two Government of India bonds mature in 2031 and 2066. The minimum bid is ₹10,000 in face value. Check your platform’s cutoff before bidding.',
+    category: 'Markets', checkedAt: '2026-11-16', announcementDate: '2026-11-16', eventDate: '2026-11-20', dateLabel: 'Auction date',
+    source: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63983',
+    sourceLabel: 'RBI: 16 November dated government securities auction notice',
+    sourceLocation: 'Release 2026-2027/1505, issue table, paragraph 4 and annex paragraphs 4–7',
+    additionalSources: [
+      { url: 'https://www.rbi.org.in/commonman/english/scripts/FAQs.aspx?Id=3337', label: 'RBI Retail Direct FAQ: primary auctions and non-competitive pricing' },
+      { url: 'https://rbiretaildirect.org.in/index.html', label: 'RBI Retail Direct portal' },
+    ],
+    audience: 'Individual investors considering a non-competitive bid for either of the two government bonds, including RBI Retail Direct users.',
+    facts: [
+      'RBI announced on 16 November that the Government of India will reissue 6.53% GS 2031, which matures on 7 September 2031, and 7.71% GS 2066, which matures on 18 May 2066. RBI lists the auction on 20 November and settlement on 23 November 2026.',
+      'The notice gives 10:30 am to 11:00 am IST on 20 November for submission of non-competitive bids to RBI’s e-Kuber system. The minimum bid is ₹10,000 in face value, with additional amounts in multiples of ₹10,000.',
+      'A non-competitive bidder selects the face amount. The weighted-average price is determined at the auction. The percentages in the bond names are their coupons. Your yield depends on the purchase price.',
+    ],
+    actions: [
+      'Open Primary Market in RBI Retail Direct, or check with your intermediary, and confirm the customer cutoff and required funding before submitting. Use the cutoff shown by your own channel.',
+      'Match the security name and maturity to your time horizon. Check the allotted amount and price after the auction. Selling before maturity can result in a loss.',
+    ],
+    limits: 'Upcoming when checked on 16 November. The e-Kuber window is the submission window in RBI’s notice. A separate customer-facing cutoff for this auction was not verified. The issue price and allotment will be determined at the auction.',
+  },
+  {
     slug: 'tata-neu-plus-hdfc-lifetime-free-offer-january-2027',
     title: 'Tata Neu Plus HDFC: check eligibility for the lifetime-free offer',
     summary: 'HDFC lists a 31 January deadline for qualifying new applications made through its digital platform without staff assistance.',
