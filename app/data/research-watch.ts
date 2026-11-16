@@ -12,6 +12,26 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'bank-of-india-home-car-processing-fee-waiver-march-2027',
+    title: 'Bank of India waives processing fees on eligible home and new car loans through 31 March',
+    summary: 'Check the loan type, CIBIL score and exceptions for home loan takeovers and electric vehicles before relying on the waiver.',
+    category: 'Banking', checkedAt: '2026-11-16', statusLabel: 'Limited-time offer', eventDate: '2027-03-31', dateLabel: 'Processing-fee waiver period ends',
+    source: 'https://bankofindia.bank.in/documents/20121/28761619/Floating_ROI_wef-07102026.pdf',
+    sourceLabel: 'Bank of India: floating-rate retail loan rates and processing charges',
+    sourceLocation: 'Pages 1 and 4, revised processing-charge columns for 1 October 2026 to 31 March 2027',
+    audience: 'Applicants for Bank of India floating-rate Star Home, Star Smart Home, Star Diamond Home or Star Vehicle loans for a new four-wheeler, including borrowers considering a home loan takeover.',
+    facts: [
+      'The bank lists nil processing charges for the qualifying rows from 1 October 2026 through 31 March 2027. The floating-rate schedule itself is marked effective 7 October 2026.',
+      'For the listed home loans, the nil-charge row covers a personal CIBIL score of 725 or above or a score shown as −1 or 0. The row also lists home loan takeovers. Other home loan borrowers below 725 fall under the standard-charge row.',
+      'For a new four-wheeler, the individual nil-charge row uses the same personal CIBIL threshold and score codes. A separate EV row lists nil charges irrespective of personal CIBIL score. The table also lists nil charges for non-individuals rated BBB or above or CMR-3 or better, with separate charges for other non-individual borrowers.',
+    ],
+    actions: [
+      'Ask Bank of India to name the fee row that applies to your quote. If you are transferring a home loan or buying an EV, ask the bank to confirm the relevant exception in writing.',
+      'Before paying or applying near 31 March, ask whether application, sanction or disbursement determines eligibility. Compare the interest rate and any legal, valuation or other charges on the written quote.',
+    ],
+    limits: 'Checked on 16 November 2026. A separate announcement date was unavailable. The waiver applies to the processing charge. The schedule gives no cutoff time, treatment for applications already in progress or refund terms.',
+  },
+  {
     slug: 'indusind-indulge-crest-celesta-golf-spend-december-2026',
     title: 'Three IndusInd cards need more than ₹50,000 in statement spend for complimentary golf',
     summary: 'From 3 December, the higher threshold applies to Indulge, Crest and Celesta. Check the last statement of the card you use to book.',
