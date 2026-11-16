@@ -705,6 +705,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:indusind-indulge-crest-celesta-golf-spend-december-2026",
+    "title": "Three IndusInd cards need more than ₹50,000 in statement spend for complimentary golf",
+    "description": "From 3 December, the higher threshold applies to Indulge, Crest and Celesta. Check the last statement of the card you use to book.",
+    "href": "/research/watch/indusind-indulge-crest-celesta-golf-spend-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-16",
+    "keywords": "Three IndusInd cards need more than ₹50,000 in statement spend for complimentary golf indusind-indulge-crest-celesta-golf-spend-december-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:invesco-overseas-fof-sip-pause-november-2026",
     "title": "Three Invesco overseas FoFs: existing SIP instalments are paused",
     "description": "Invesco paused new registrations and existing instalments for three overseas FoFs from 3 November. Check your mandate before setting up a replacement SIP.",
