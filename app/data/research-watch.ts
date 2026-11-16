@@ -12,6 +12,26 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'indusind-indulge-crest-celesta-golf-spend-december-2026',
+    title: 'Three IndusInd cards need more than ₹50,000 in statement spend for complimentary golf',
+    summary: 'From 3 December, the higher threshold applies to Indulge, Crest and Celesta. Check the last statement of the card you use to book.',
+    category: 'Credit cards', checkedAt: '2026-11-16', eventDate: '2026-12-03', dateLabel: 'Revised golf spend threshold effective',
+    source: 'https://bank.indusind.bank.in/content/dam/indusind-corporate/Other/Golf-T-C-doc.pdf',
+    sourceLabel: 'IndusInd Bank Golf Program terms and conditions',
+    sourceLocation: 'General Conditions, dated 3 December change and card-specific spending rules',
+    audience: 'Primary IndusInd Indulge, Crest and Celesta credit cardholders booking complimentary golf games or lessons.',
+    facts: [
+      'The dated change raises the threshold for Indulge, Crest and Celesta from ₹25,000 to more than ₹50,000 in eligible retail spending on the last generated statement. Exactly ₹50,000 falls short for these three variants.',
+      'Pioneer Heritage, Pioneer Legacy and Pinnacle retain the stated ₹25,000 threshold. Pioneer Private retains its stated ₹50,000 threshold. Tiger has no minimum spend requirement under the terms.',
+      'For holders of multiple variants, the terms use the highest variant for the benefit limits and check spend on the specific card entered at booking. Eligible add-on card purchases count towards spend. Complimentary bookings are for primary cardholders.',
+    ],
+    actions: [
+      'Check eligible retail spending on your latest generated statement before booking. The terms exclude cash withdrawals, loans, EMI conversions, fees and interest from eligible spending.',
+      'Enter the card whose statement you checked and verify the booking charge before confirming. Ask IndusInd how it will treat a booking made before 3 December for a later game or lesson.',
+    ],
+    limits: 'The change was upcoming when checked on 16 November. The PDF gives an effective date without a separate announcement date. Its general FAQ retains generic threshold wording. The dated clause specifies the new threshold for the three named variants. The notice gives no transition rule for existing bookings.',
+  },
+  {
     slug: 'roarbank-emi-foreclosure-fee-november-2026',
     title: 'Roarbank credit card: EMI foreclosure fee rises to 3% on 21 November',
     summary: 'The fee for closing a standard or Partner EMI early rises from 2% to 3% of the remaining principal, plus applicable GST.',
