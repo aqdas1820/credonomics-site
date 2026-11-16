@@ -678,8 +678,19 @@ export const searchIndex: readonly SearchEntry[] = [
     "href": "/research/watch/tata-neu-hdfc-manual-neucoins-claims-november-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-10-24",
+    "updated": "2026-11-16",
     "keywords": "Tata Neu HDFC: claim NeuCoins manually from 25 November tata-neu-hdfc-manual-neucoins-claims-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:tata-neu-plus-hdfc-lifetime-free-offer-january-2027",
+    "title": "Tata Neu Plus HDFC: check eligibility for the lifetime-free offer",
+    "description": "HDFC lists a 31 January deadline for qualifying new applications made through its digital platform without staff assistance.",
+    "href": "/research/watch/tata-neu-plus-hdfc-lifetime-free-offer-january-2027",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-16",
+    "keywords": "Tata Neu Plus HDFC: check eligibility for the lifetime-free offer tata-neu-plus-hdfc-lifetime-free-offer-january-2027 Research",
     "priority": 92
   },
   {

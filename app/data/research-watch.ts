@@ -12,6 +12,27 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'tata-neu-plus-hdfc-lifetime-free-offer-january-2027',
+    title: 'Tata Neu Plus HDFC: check eligibility for the lifetime-free offer',
+    summary: 'HDFC lists a 31 January deadline for qualifying new applications made through its digital platform without staff assistance.',
+    category: 'Credit cards', checkedAt: '2026-11-16', statusLabel: 'Limited-time offer', eventDate: '2027-01-31', dateLabel: 'Listed application window ends',
+    source: 'https://www.hdfc.bank.in/credit-cards/tata-neu-plus-hdfc-bank-credit-card',
+    sourceLabel: 'HDFC Bank: Tata Neu Plus credit card',
+    sourceLocation: 'More about the card → Fees & Charges',
+    cardIds: ['tata-neu-plus-hdfc'],
+    audience: 'New Tata Neu Plus HDFC Bank credit-card applicants considering the bank’s self-service digital application.',
+    facts: [
+      'The offer covers eligible applications HDFC receives from 10 November 2026 through 31 January 2027 via its digital platform without bank staff assistance. HDFC excludes existing customers from this offer.',
+      'HDFC says eligible cards will be converted to lifetime free within 90 days of card opening. The same page lists a standard joining and renewal fee of ₹499 plus applicable taxes and a separate ₹1 lakh annual-spend waiver for renewal.',
+      'HDFC excludes lifetime-free and first-year-free cardholders from the welcome benefit.',
+    ],
+    actions: [
+      'Before submitting, check that your exact card and application channel show the lifetime-free terms. If you already have an HDFC relationship, ask the bank how it defines an existing customer for this offer.',
+      'Save the application confirmation and the quoted fee terms. After approval, check the fee status and ask HDFC to confirm conversion if it is still unclear 90 days after opening.',
+    ],
+    limits: 'The offer was listed when checked on 16 November 2026. A separate announcement date and a cutoff hour were unavailable. HDFC may change or withdraw the offer. The page gives no fee-refund procedure or promise of approval.',
+  },
+  {
     slug: 'bank-of-india-home-car-processing-fee-waiver-march-2027',
     title: 'Bank of India waives processing fees on eligible home and new car loans through 31 March',
     summary: 'Check the loan type, CIBIL score and exceptions for home loan takeovers and electric vehicles before relying on the waiver.',
@@ -921,13 +942,23 @@ export const researchWatch: WatchItem[] = [
     slug: 'tata-neu-hdfc-manual-neucoins-claims-november-2026',
     title: 'Tata Neu HDFC: claim NeuCoins manually from 25 November',
     summary: 'A new claim step replaces automatic transfer for statements from 25 November 2026; unclaimed rewards can expire.',
-    category: 'Credit cards', checkedAt: '2026-10-24', eventDate: '2026-11-25', dateLabel: 'Claim process effective',
-    source: 'https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/pdfs/TataNeuCC_neucoins_Claim.pdf', sourceLabel: 'HDFC Bank: Tata NeuCoins claim and redemption process', sourceLocation: 'Updated 21 October 2026; pages 1–3',
-    cardIds: ['tata-neu-infinity-hdfc'],
-    audience: 'Primary holders of Tata Neu HDFC Bank credit cards.',
-    facts: ['Statements before 25 November retain the existing automatic-transfer process. From that date, primary holders must claim spend-earned NeuCoins through the Tata Neu app.', 'Claimable rewards update within seven working days of the statement; credit after claiming can take another seven working days.', 'The stated minimum is 100 NeuCoins, with up to three successful daily claims. Unclaimed rewards expire after the claim window.'],
-    actions: ['Use your bank-registered mobile number, open NeuCard and choose Claim NeuCoins.', 'Check expiry warnings on each statement. The usual claim window is 12 months from the statement; a billing-cycle change can move the deadline.'],
-    limits: 'Claiming and using credited rewards have separate validity rules. Welcome/promotional rewards keep their own terms. This is an HDFC notice; it does not establish a matching SBI change or a lower earning rate.',
+    category: 'Credit cards', checkedAt: '2026-11-16', publishedAt: '2026-10-24', eventDate: '2026-11-25', dateLabel: 'Claim process effective',
+    updateNote: '16 November: confirmed Plus coverage and added guidance on claimable balances and recently unblocked cards.',
+    source: 'https://www.hdfc.bank.in/kannada/content/dam/hdfcbankpws/in/en/pdfs/TataNeuCC_neucoins_Claim.pdf', sourceLabel: 'HDFC Bank: Tata NeuCoins claim and redemption process', sourceLocation: 'Document updated 21 October 2026. See the claimable balance FAQ on page 2.',
+    additionalSources: [{ url: 'https://www.hdfc.bank.in/credit-cards/tata-neu-plus-hdfc-bank-credit-card', label: 'HDFC Bank: Plus card, NeuCoins Validity and Redemption' }],
+    cardIds: ['tata-neu-infinity-hdfc', 'tata-neu-plus-hdfc'],
+    audience: 'Primary holders of Tata Neu Plus and Infinity HDFC Bank credit cards.',
+    facts: [
+      'Statements before 25 November retain the existing automatic-transfer process. From that date, primary holders must claim spend-earned NeuCoins through the Tata Neu app.',
+      'Claimable rewards update within seven working days of the statement. The app balance accounts for claims already processed and any rewards reversed or deducted since that statement. Credit after claiming can take another seven working days.',
+      'The stated minimum is 100 NeuCoins, with up to three successful claims per day. HDFC may lower the minimum and says the app will display any revised limit at claim time. Unclaimed rewards expire after the claim window.',
+      'If HDFC unblocks your card at your request, it can take up to three working days before you can initiate a claim.',
+    ],
+    actions: [
+      'Use your bank-registered mobile number, open NeuCard and choose Claim NeuCoins. If the app and statement differ, check for recent claims or reversals and ask HDFC about any remaining difference.',
+      'Check expiry warnings on each statement. The usual claim window is 12 months from the statement. A billing-cycle change can move the deadline.',
+    ],
+    limits: 'Upcoming when rechecked on 16 November. The bank’s document was updated on 21 October and gives no separate announcement date. Claimed and unclaimed NeuCoins have separate expiry rules. Welcome and promotional rewards follow their own terms.',
   },
   {
     slug: 'sbm-zet-late-fee-october-2026',
