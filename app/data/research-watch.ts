@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-16'
+export const WATCH_CHECKED_AT = '2026-11-17'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,26 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'indian-overseas-bank-444-day-retail-fd-november-2026',
+    title: 'Indian Overseas Bank: 444-day FD rate rises as shorter rates fall',
+    summary: 'For deposits below ₹3 crore, IOB lists 6.75% on the 444-day domestic FD and 4.50% on 180–269 days. Check the separate NRE and bulk tables.',
+    category: 'Bank deposits', checkedAt: '2026-11-17', eventDate: '2026-11-10', dateLabel: 'Retail rates effective',
+    source: 'https://www.iob.bank.in/en/domestic-nro-nre-retail-term-deposit-rates',
+    sourceLabel: 'Indian Overseas Bank: domestic, NRO and NRE term deposit rate tables',
+    sourceLocation: 'Domestic Rates, NRE Term Deposits and 16 November Bulk Deposit sections',
+    audience: 'People booking or renewing an Indian Overseas Bank term deposit below ₹3 crore, including eligible senior and super senior depositors.',
+    facts: [
+      'From 10 November 2026, the 444-day domestic rate below ₹3 crore rises from 6.60% to 6.75% p.a. The 180–269-day rate falls from 4.75% to 4.50%. The one-year rate stays at 6.50%.',
+      'The domestic table retains a 0.50 percentage point addition for eligible depositors aged 60 or above and 0.75 points for those aged 80 or above. That puts the eligible 444-day rates at 7.25% and 7.50%, respectively.',
+      'The separate NRE table also lists 6.75% p.a. for 444 days below ₹3 crore. The 16 November bulk table applies to a single rupee deposit of ₹3 crore or more and has its own callable and non-callable columns.',
+    ],
+    actions: [
+      'Check the exact tenure, account type, deposit size and any age concession on the booking or renewal quote. For NRE deposits, use the separate rate table.',
+      'If you might need the money early, ask IOB for the premature-closure terms and the amount you would receive before booking or breaking a deposit. The bank lists foreclosure charges by deposit size and says non-callable deposits cannot be closed early.',
+    ],
+    limits: 'The bank updated the rate page on 16 November and specifies 10 November as the retail effective date. A separate announcement date was unavailable. The rates are annual quoted rates and the booking or renewal quote determines the terms on your deposit.',
+  },
   {
     slug: 'rbi-retail-direct-government-bond-auction-20-november-2026',
     title: '20 November government bond auction: check the retail bid cutoff and price',

@@ -353,6 +353,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:indian-overseas-bank-444-day-retail-fd-november-2026",
+    "title": "Indian Overseas Bank: 444-day FD rate rises as shorter rates fall",
+    "description": "For deposits below ₹3 crore, IOB lists 6.75% on the 444-day domestic FD and 4.50% on 180–269 days. Check the separate NRE and bulk tables.",
+    "href": "/research/watch/indian-overseas-bank-444-day-retail-fd-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-17",
+    "keywords": "Indian Overseas Bank: 444-day FD rate rises as shorter rates fall indian-overseas-bank-444-day-retail-fd-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:idfc-indigo-international-rewards-october-2026",
     "title": "IndiGo IDFC FIRST: international reward rule changes on 26 October",
     "description": "The issuer specifies 1 BluChip per ₹100 on international purchases from 26 October 2026.",
