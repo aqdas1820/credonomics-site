@@ -177,6 +177,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:cosmos-bank-740-775-day-retail-fds-november-2026",
+    "title": "Cosmos Bank: special general and senior FD rates use different tenures",
+    "description": "The 16 November table lists 7.40% for 740 days in the general column and 7.75% for 775 days in the resident senior column. Both rows specify monthly payout.",
+    "href": "/research/watch/cosmos-bank-740-775-day-retail-fds-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-17",
+    "keywords": "Cosmos Bank: special general and senior FD rates use different tenures cosmos-bank-740-775-day-retail-fds-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:dehradun-urban-cooperative-bank-rbi-directions-february-2027",
     "title": "Dehradun Urban Co-operative Bank: RBI extends directions to 10 February",
     "description": "The extension runs from close of business on 10 November 2026 to close of business on 10 February 2027, subject to review.",
@@ -350,6 +361,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "Official issuer / fund notice",
     "updated": "2026-10-26",
     "keywords": "Indian Bank special FDs: compare the revised 555-day and 777-day rates indian-bank-special-fd-rates-october-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:indian-overseas-bank-444-day-retail-fd-november-2026",
+    "title": "Indian Overseas Bank: 444-day FD rate rises as shorter rates fall",
+    "description": "For deposits below ₹3 crore, IOB lists 6.75% on the 444-day domestic FD and 4.50% on 180–269 days. Check the separate NRE and bulk tables.",
+    "href": "/research/watch/indian-overseas-bank-444-day-retail-fd-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-17",
+    "keywords": "Indian Overseas Bank: 444-day FD rate rises as shorter rates fall indian-overseas-bank-444-day-retail-fd-november-2026 Research",
     "priority": 92
   },
   {
