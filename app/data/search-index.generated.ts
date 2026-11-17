@@ -452,6 +452,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:nagar-sahakari-etawah-rbi-directions-february-2027",
+    "title": "Nagar Sahakari Bank, Etawah: RBI extends directions to 18 February",
+    "description": "The three-month extension begins at close of business on 18 November. Depositors can check existing claims through DICGC.",
+    "href": "/research/watch/nagar-sahakari-etawah-rbi-directions-february-2027",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-17",
+    "keywords": "Nagar Sahakari Bank, Etawah: RBI extends directions to 18 February nagar-sahakari-etawah-rbi-directions-february-2027 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:navi-fund-minimum-redemption-switch-out-november-2026",
     "title": "Navi Mutual Fund revises minimum redemption and switch-out for 11 schemes",
     "description": "For investments made from 6 November 2026, the minimum is the lowest of ₹100, one unit or the account balance.",
@@ -658,6 +669,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "Official issuer / fund notice",
     "updated": "2026-10-27",
     "keywords": "SGB 2020-21 Series I: ₹14,159 per unit for 28 October premature redemption sgb-2020-21-series-i-redemption-price-october-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:sgb-series-viii-premature-redemption-price-november-2026",
+    "title": "SGB 2020–21 Series VIII: ₹13,499 per unit for 18 November premature redemption",
+    "description": "RBI announced the price on 17 November. The request window for this tranche closed on 9 November.",
+    "href": "/research/watch/sgb-series-viii-premature-redemption-price-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-17",
+    "keywords": "SGB 2020–21 Series VIII: ₹13,499 per unit for 18 November premature redemption sgb-series-viii-premature-redemption-price-november-2026 Research",
     "priority": 92
   },
   {
