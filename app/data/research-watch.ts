@@ -12,6 +12,27 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'central-bank-of-india-cent-green-deposit-rates-november-2026',
+    title: 'Cent Green Deposit: check the rate and maturity before booking',
+    summary: 'Central Bank of India’s 10 November table lists three tenures. The 2,222-day and 3,333-day options carry the same quoted rate.',
+    category: 'Bank deposits', checkedAt: '2026-11-17', eventDate: '2026-11-10', dateLabel: 'Revised scheme rates effective',
+    source: 'https://centralbank.bank.in/en/domestic-term-deposit-interest-rate-per-annum',
+    sourceLabel: 'Central Bank of India: domestic term deposit rates',
+    sourceLocation: 'Cent Green Deposit table effective 10 November 2026',
+    additionalSources: [{ url: 'https://centralbank.bank.in/en/CENT_GRREN_TIME_DEPOSIT_SCHEME', label: 'Central Bank of India: Cent Green Time Deposit scheme features' }],
+    audience: 'People considering a new Cent Green Time Deposit, including eligible senior citizens.',
+    facts: [
+      'At 1,111 days the quoted rates are 6.75% p.a. for the general public and 7.25% for eligible seniors. The bank lists annualised yields of 6.92% and 7.45%, respectively.',
+      'Both the 2,222-day and 3,333-day terms quote 7.00% p.a. for the general public and 7.50% for eligible seniors. The corresponding annualised yields are 7.19% and 7.71%.',
+      'The scheme page lists a minimum of ₹50,000 and a maximum of ₹1,99,99,999. It says to open it through Cent Net Banking or Cent Mobile. At maturity the amount goes to the linked account, with no automatic renewal.',
+    ],
+    actions: [
+      'Compare the quoted rate, annualised yield and exact maturity date in the booking screen. If your choice is between 2,222 and 3,333 days, check how long you want the money committed at the same quoted rate.',
+      'Confirm senior eligibility and premature-closure terms with the bank. Check the linked account for maturity credit and make a fresh booking if you decide to reinvest.',
+    ],
+    limits: 'The bank’s rate table specifies 10 November 2026 as effective. It gives no separate announcement date. These are the scheme’s published rates and annualised yields, before individual tax effects. Confirm your final rate and payout terms on the booking quote.',
+  },
+  {
     slug: 'cosmos-bank-740-775-day-retail-fds-november-2026',
     title: 'Cosmos Bank: special general and senior FD rates use different tenures',
     summary: 'The 16 November table lists 7.40% for 740 days in the general column and 7.75% for 775 days in the resident senior column. Both rows specify monthly payout.',
