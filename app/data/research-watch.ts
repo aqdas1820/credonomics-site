@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-17'
+export const WATCH_CHECKED_AT = '2026-11-18'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -930,15 +930,28 @@ export const researchWatch: WatchItem[] = [
   },
   {
     slug: 'makemytrip-icici-mycash-rules-november-2026',
-    title: 'MakeMyTrip ICICI: international rewards change on 10 November; check myCash dates',
-    summary: 'International spends outside MakeMyTrip stop earning rewards on 10 November. A new 24-month myCash validity is also listed, but exact cutover wording differs between official sources.',
-    category: 'Credit cards', checkedAt: '2026-10-27', eventDate: '2026-11-10', dateLabel: 'Reward rules effective',
+    title: 'MakeMyTrip ICICI: check the zero forex and DCC fees and the myCash rules',
+    summary: 'The current co-brand has zero issuer forex markup and DCC fees from 10 November. Overseas purchases outside MakeMyTrip stop earning myCash. Signature and Platinum have separate terms.',
+    category: 'Credit cards', checkedAt: '2026-11-18', publishedAt: '2026-10-27', eventDate: '2026-11-10', dateLabel: 'Fee and reward rules effective',
+    updateNote: '18 November: added the dated forex and DCC fee exceptions and practical billing guidance.',
     source: 'https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/makemytrip-icici-credit-card-terms-and-conditions.pdf', sourceLabel: 'ICICI Bank: MakeMyTrip card terms', sourceLocation: 'Section 6; reward table on PDF page 5 and validity on page 7',
-    additionalSources: [{ url: 'https://promos.makemytrip.com/mmt-icici-rupay-card-terms.html', label: 'MakeMyTrip: current card terms and transition wording' }],
+    additionalSources: [
+      { url: 'https://promos.makemytrip.com/mmt-icici-rupay-card-terms.html', label: 'MakeMyTrip: current card terms and transition wording' },
+      { url: 'https://www.icici.bank.in/managed-assets/docs/personal/cards/mitc_cc.pdf', label: 'ICICI Bank: 6 November MITC, forex markup and DCC exceptions on PDF pages 10–11' },
+    ],
     audience: 'Holders of the current MakeMyTrip ICICI Bank Credit Card programme offering Mastercard and RuPay variants.',
-    facts: ['From 10 November 2026, international spends outside MakeMyTrip earn no rewards under the current programme’s reward table. This is not a stop on all MakeMyTrip booking rewards.', 'Both official sources introduce 24-month validity for new-programme myCash. ICICI’s PDF says effective 10 November; MakeMyTrip says rewards earned till 10 November retain lifetime validity and those earned after it get two years from credit. Treatment of rewards earned on 10 November remains unconfirmed.', 'The PDF separately states that myCash from the old MakeMyTrip ICICI Signature and Platinum programmes expires within 12 months of credit. Do not apply the new programme’s transition rule to those cards.'],
-    actions: ['Check your exact card programme and the category of an overseas purchase before counting on myCash.', 'Track newly earned myCash and its displayed expiry separately from older balances. Ask the issuer or MakeMyTrip to reconcile any unclear earning-date boundary.', 'Before closing a card, check remaining myCash and applicable terms: the PDF says card-earned myCash remains available while the card is active.'],
-    limits: 'Upcoming at this check. Announcement date was not established. The exact 10 November myCash-validity boundary and pending-transaction treatment remain HOLD; do not assume eligibility from a purchase date alone. General marketing still says never-expiring rewards; use the dated terms and confirm your own balance with the issuer. Do not infer cash refunds or bank-account withdrawal rights. This guide covers the verified reward and validity rules only; it does not publish a forex-fee claim or alter current rankings.',
+    facts: [
+      'ICICI’s MITC dated 6 November lists zero issuer forex markup on foreign-currency transactions and no issuer DCC fee on covered INR transactions from 10 November 2026. Both exceptions apply to the current MakeMyTrip ICICI Bank Credit Card. The bank excludes the older MakeMyTrip Signature and Platinum cards from both exceptions.',
+      'From 10 November, international spends outside MakeMyTrip earn no myCash under the current programme’s reward table. Eligible MakeMyTrip bookings have separate reward rules.',
+      'Both official sources introduce 24-month myCash validity. ICICI uses 10 November as the effective date. MakeMyTrip says rewards earned through 10 November retain lifetime validity and those earned later expire two years from credit. The treatment of rewards earned on 10 November remains unconfirmed.',
+      'ICICI separately lists 12-month myCash validity from credit for the older Signature and Platinum programmes.',
+    ],
+    actions: [
+      'Check your exact card name and the charge in the issuer’s terms before paying abroad. Compare the merchant’s final INR offer with paying in local currency. The merchant’s quoted exchange rate can still affect the total.',
+      'Use the applicable reward category when comparing a purchase. Track new and older myCash balances separately, and ask ICICI or MakeMyTrip to verify any unclear expiry date.',
+      'Before closing a card, check the remaining myCash. ICICI’s terms say card-earned myCash remains available while the card is active.',
+    ],
+    limits: 'Checked on 18 November. The MITC was updated on 6 November and gives 10 November as the effective date. A separate announcement date was unavailable. The exact myCash expiry boundary on 10 November and pending-transaction treatment remain on HOLD. The fee exceptions describe issuer charges. Merchant conversion rates, refund treatment and cash withdrawal terms require separate checks.',
   },
   {
     slug: 'axis-vistara-spending-discontinuation-december-2026',
