@@ -452,6 +452,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:marriott-bonvoy-hdfc-anniversary-enrolled-spend-november-2026",
+    "title": "Marriott Bonvoy HDFC: enrolled cardholders have until 30 November to meet the spend milestone",
+    "description": "Enrolment closed on 10 November. Eligible spend can earn 15,000 or 30,000 bonus points, but HDFC tracks replacement cards separately.",
+    "href": "/research/watch/marriott-bonvoy-hdfc-anniversary-enrolled-spend-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-17",
+    "keywords": "Marriott Bonvoy HDFC: enrolled cardholders have until 30 November to meet the spend milestone marriott-bonvoy-hdfc-anniversary-enrolled-spend-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:motilal-oswal-conservative-fof-merger-november-2026",
     "title": "Motilal Oswal Conservative FoF: merger scheduled for 13 November",
     "description": "The special exit-load-free window closed on 9 November. Check the receiving scheme and any active systematic instructions before the scheduled merger.",
