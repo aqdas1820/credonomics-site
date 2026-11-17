@@ -12,6 +12,25 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'cosmos-bank-740-775-day-retail-fds-november-2026',
+    title: 'Cosmos Bank: special general and senior FD rates use different tenures',
+    summary: 'The 16 November table lists 7.40% for 740 days in the general column and 7.75% for 775 days in the resident senior column. Both rows specify monthly payout.',
+    category: 'Bank deposits', checkedAt: '2026-11-17', eventDate: '2026-11-16', dateLabel: 'Date of the published rate table',
+    source: 'https://cosmos.bank.in/interest-rates',
+    sourceLabel: 'Cosmos Bank: domestic term deposit interest rates',
+    sourceLocation: '16 November table, general and resident senior columns and payout footnotes',
+    audience: 'People comparing domestic term deposits at Cosmos Co-operative Bank, including eligible resident seniors.',
+    facts: [
+      'The 16 November 2026 rate table lists 7.40% p.a. for 740 days in the general column and 7.75% p.a. for 775 days in the resident senior column. Both rows are marked for monthly payout only.',
+      'The first bulk column, ₹1 crore to ₹3 crore, gives 6.65% p.a. for the general 740-day row and 7.10% for the resident senior 775-day row. At exactly 16 months, the general and resident senior columns list 7.10% and 7.30%, respectively, with monthly or quarterly payout.',
+    ],
+    actions: [
+      'Ask for a quote that shows your deposit amount, customer category, exact tenure, payout frequency and applicable interest rate. If you prefer cumulative interest, compare the quote for a deposit that offers it.',
+      'Confirm the premature-closure terms before booking. Ask the bank to confirm which table applies if your deposit is near a bulk threshold.',
+    ],
+    limits: 'Checked on 17 November 2026. The table is dated 16 November and gives no separate announcement date. These are annual rate quotes for the stated rows. The guide does not establish a change for all tenures or any NRE rate.',
+  },
+  {
     slug: 'indian-overseas-bank-444-day-retail-fd-november-2026',
     title: 'Indian Overseas Bank: 444-day FD rate rises as shorter rates fall',
     summary: 'For deposits below ₹3 crore, IOB lists 6.75% on the 444-day domestic FD and 4.50% on 180–269 days. Check the separate NRE and bulk tables.',

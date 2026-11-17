@@ -177,6 +177,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:cosmos-bank-740-775-day-retail-fds-november-2026",
+    "title": "Cosmos Bank: special general and senior FD rates use different tenures",
+    "description": "The 16 November table lists 7.40% for 740 days in the general column and 7.75% for 775 days in the resident senior column. Both rows specify monthly payout.",
+    "href": "/research/watch/cosmos-bank-740-775-day-retail-fds-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-17",
+    "keywords": "Cosmos Bank: special general and senior FD rates use different tenures cosmos-bank-740-775-day-retail-fds-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:dehradun-urban-cooperative-bank-rbi-directions-february-2027",
     "title": "Dehradun Urban Co-operative Bank: RBI extends directions to 10 February",
     "description": "The extension runs from close of business on 10 November 2026 to close of business on 10 February 2027, subject to review.",
