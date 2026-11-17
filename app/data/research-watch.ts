@@ -12,6 +12,70 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'dynasif-sip-stp-minimum-swp-november-2026',
+    title: 'DynaSIF lowers SIP and STP minimums and adds withdrawals to one strategy',
+    summary: 'From 17 November, monthly SIPs and STPs start at ₹1,000 per instalment. A new monthly SWP applies to Equity Long-Short only.',
+    category: 'Mutual funds', checkedAt: '2026-11-17', announcementDate: '2026-11-09', eventDate: '2026-11-17', dateLabel: 'Revised terms effective',
+    source: 'https://x-docket.360.one/Addendum_Changes_in_SIP_STP_Amount_in_all_Strategies_and_Introduction_of_SWP_in_a_Strategy_ba625aa860.pdf',
+    sourceLabel: '360 ONE Asset Management: DynaSIF addendum 21/2026',
+    sourceLocation: 'Pages 1–3, strategy tables, withdrawal conditions and signing date',
+    additionalSources: [{ url: 'https://nsearchives.nseindia.com/content/circulars/NMF77441.pdf', label: 'NSE MF Invest: circular 1846/2026 dated 16 November' }],
+    audience: 'Eligible DynaSIF investors setting up a SIP or STP, and Equity Long-Short investors considering a systematic withdrawal plan.',
+    facts: [
+      'The addendum identifies Equity Long-Short, Equity Ex-Top 100 Long-Short and Active Asset Allocator Long-Short. For these three, monthly SIP and STP minimums fall from ₹20,000 to ₹1,000 per instalment, with a minimum of six months. The quarterly SIP minimum falls from ₹50,000 to ₹3,000 per instalment, with a minimum of six quarters.',
+      'Only Equity Long-Short adds a monthly systematic withdrawal plan. It requires at least ₹10,000 per instalment, then allows ₹1 increments, with a minimum of six months. The scheduled date is the seventh, or the following business day when the seventh is a non-business day.',
+      'For that SWP, the addendum lists a minimum investment threshold of ₹10 lakh across DynaSIF strategies for individuals and ₹1 lakh for accredited investors. It says the SWP is rejected if the balance falls below the applicable threshold.',
+    ],
+    actions: [
+      'Check the strategy name, instalment frequency and processing date before registering. The default monthly STP timing differs by strategy. Verify the options shown by your platform.',
+      'Before setting a withdrawal, ask the fund how it checks the balance threshold and review the applicable exit and tax terms. A lower instalment minimum and an investment threshold are separate conditions.',
+    ],
+    limits: 'The fund signed the addendum on 9 November. NSE confirmed implementation on NSE MF Invest in its 16 November circular. The fund applies the amendments to prospective investments from 17 November. Automatic changes to existing instructions and availability on other platforms were not verified.',
+  },
+  {
+    slug: 'sgb-series-viii-premature-redemption-price-november-2026',
+    title: 'SGB 2020–21 Series VIII: ₹13,499 per unit for 18 November premature redemption',
+    summary: 'RBI announced the price on 17 November. The request window for this tranche closed on 9 November.',
+    category: 'Markets', checkedAt: '2026-11-17', announcementDate: '2026-11-17', eventDate: '2026-11-18', dateLabel: 'Premature redemption date',
+    source: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63990',
+    sourceLabel: 'RBI: 17 November premature redemption price notice',
+    sourceLocation: 'Release 2026-2027/1512, paragraphs 1–2',
+    additionalSources: [{ url: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63416', label: 'RBI: October 2026–March 2027 premature redemption calendar, row 18' }],
+    audience: 'Holders of SGB 2020–21 Series VIII, issued on 18 November 2020, who submitted a premature redemption request for this date.',
+    facts: [
+      'RBI sets the premature redemption price at ₹13,499 per unit for 18 November 2026. The price uses the average of IBJA closing prices for 999-purity gold on 13, 16 and 17 November.',
+      'RBI’s calendar listed 17 October to 9 November 2026 for investors to submit requests through their receiving office, depository or RBI Retail Direct.',
+    ],
+    actions: [
+      'Check the tranche and issue date on your holding record. If you submitted a request, confirm its status and the number of units accepted through the same channel.',
+      'Use ₹13,499 per accepted unit to reconcile the redemption entry. If you missed the request window, check RBI’s calendar for any later eligible date.',
+    ],
+    limits: 'The 18 November redemption was upcoming when checked. The price applies to this tranche’s premature redemption. The announcement gives no separate bank-credit time or individual tax treatment and establishes no reopening of the request window.',
+  },
+  {
+    slug: 'nagar-sahakari-etawah-rbi-directions-february-2027',
+    title: 'Nagar Sahakari Bank, Etawah: RBI extends directions to 18 February',
+    summary: 'The three-month extension begins at close of business on 18 November. Depositors can check existing claims through DICGC.',
+    category: 'Bank deposits', checkedAt: '2026-11-17', announcementDate: '2026-11-17', eventDate: '2026-11-18', dateLabel: 'Extension starts at close of business',
+    source: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63988',
+    sourceLabel: 'RBI: Nagar Sahakari Bank Ltd., Etawah extension',
+    sourceLocation: 'Release 2026-2027/1510, paragraphs 1–4',
+    additionalSources: [
+      { url: 'https://www.dicgc.org.in/check_your_claim_status', label: 'DICGC: official deposit-insurance claim status' },
+      { url: 'https://dicgc.org.in/contact_details_banks_liquidators', label: 'DICGC: bank nodal contact directory' },
+    ],
+    audience: 'Depositors of Nagar Sahakari Bank Ltd. in Etawah, Uttar Pradesh.',
+    facts: [
+      'RBI extends its existing directions from close of business on 18 November 2026 through close of business on 18 February 2027, subject to review. The other terms of the original directive continue.',
+      'RBI cautions against treating an extension as evidence that it is satisfied with the bank’s financial position. The 17 November notice gives no new deposit-insurance claim or payment date.',
+    ],
+    actions: [
+      'Confirm any account-specific withdrawal conditions with the bank through its official contact. If you filed a deposit-insurance claim, check its status using DICGC’s claim-status page.',
+      'For a missing or pending claim, ask the bank’s nodal contact in the DICGC directory what records it has and what documents it needs.',
+    ],
+    limits: 'The extension was upcoming at the 17 November check. The announcement establishes the new period for this specific bank. Individual withdrawal access, claim eligibility and payment timing require confirmation.',
+  },
+  {
     slug: 'central-bank-of-india-cent-green-deposit-rates-november-2026',
     title: 'Cent Green Deposit: check the rate and maturity before booking',
     summary: 'Central Bank of India’s 10 November table lists three tenures. The 2,222-day and 3,333-day options carry the same quoted rate.',
