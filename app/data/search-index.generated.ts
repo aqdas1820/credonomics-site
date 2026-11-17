@@ -442,13 +442,13 @@ export const searchIndex: readonly SearchEntry[] = [
   },
   {
     "id": "watch:makemytrip-icici-mycash-rules-november-2026",
-    "title": "MakeMyTrip ICICI: international rewards change on 10 November; check myCash dates",
-    "description": "International spends outside MakeMyTrip stop earning rewards on 10 November. A new 24-month myCash validity is also listed, but exact cutover wording differs between official sources.",
+    "title": "MakeMyTrip ICICI: check the zero forex and DCC fees and the myCash rules",
+    "description": "The current co-brand has zero issuer forex markup and DCC fees from 10 November. Overseas purchases outside MakeMyTrip stop earning myCash. Signature and Platinum have separate terms.",
     "href": "/research/watch/makemytrip-icici-mycash-rules-november-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-10-27",
-    "keywords": "MakeMyTrip ICICI: international rewards change on 10 November; check myCash dates makemytrip-icici-mycash-rules-november-2026 Research",
+    "updated": "2026-11-18",
+    "keywords": "MakeMyTrip ICICI: check the zero forex and DCC fees and the myCash rules makemytrip-icici-mycash-rules-november-2026 Research",
     "priority": 92
   },
   {
