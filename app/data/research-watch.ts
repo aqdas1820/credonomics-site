@@ -12,6 +12,27 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'marriott-bonvoy-hdfc-anniversary-enrolled-spend-november-2026',
+    title: 'Marriott Bonvoy HDFC: enrolled cardholders have until 30 November to meet the spend milestone',
+    summary: 'Enrolment closed on 10 November. Eligible spend can earn 15,000 or 30,000 bonus points, but HDFC tracks replacement cards separately.',
+    category: 'Credit cards', checkedAt: '2026-11-17', statusLabel: 'Limited-time offer', eventDate: '2026-11-30', dateLabel: 'Eligible spend window closes',
+    source: 'https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/marriott-bonvoy-credit/faqs-anniversary.pdf',
+    sourceLabel: 'HDFC Bank: Marriott Bonvoy Anniversary Offer 2026 FAQ',
+    sourceLocation: 'Questions 3, 7 and 12–19',
+    additionalSources: [{ url: 'https://www.hdfc.bank.in/credit-cards/marriott-bonvoy-credit-card', label: 'HDFC Bank: Marriott Bonvoy card page, Anniversary Offer 2026' }],
+    audience: 'Primary Marriott Bonvoy HDFC Bank credit-card holders who successfully enrolled in the 2026 anniversary offer.',
+    facts: [
+      'The offer runs from 1 October to 30 November 2026. Enrolment closed on 10 November. If you enrolled on or before 1 October, eligible spending counts from 1 October. If you enrolled later, it counts from your enrolment date.',
+      'The offer awards either 15,000 Marriott Bonvoy points at ₹1.5 lakh of eligible spend or 30,000 points at ₹2.5 lakh. EMI and wallet reloads are excluded. Bill payments, fees and other card charges do not count as purchases.',
+      'HDFC tracks spending on a lost card and its reissued replacement separately for this offer. For qualifying cardholders, HDFC says points will go to the linked Marriott Bonvoy account by 28 February 2027.',
+    ],
+    actions: [
+      'Find your enrolment confirmation and total eligible purchases on statements from the applicable start date. If your card was reissued after a loss, track each card’s spending separately.',
+      'If a purchase is close to 30 November, ask HDFC which date it uses to count the transaction. Check the linked Marriott Bonvoy account by the published credit date and keep the enrolment confirmation and relevant statements.',
+    ],
+    limits: 'Checked on 17 November. HDFC gives the offer and enrolment dates without a separate announcement date. The spend window remained open for enrolled cardholders at the check. The FAQ does not specify a cutoff hour or settle how a transaction posted after the deadline will be counted.',
+  },
+  {
     slug: 'dynasif-sip-stp-minimum-swp-november-2026',
     title: 'DynaSIF lowers SIP and STP minimums and adds withdrawals to one strategy',
     summary: 'From 17 November, monthly SIPs and STPs start at ₹1,000 per instalment. A new monthly SWP applies to Equity Long-Short only.',
