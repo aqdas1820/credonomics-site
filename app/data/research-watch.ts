@@ -12,6 +12,27 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'dynasif-sip-stp-minimum-swp-november-2026',
+    title: 'DynaSIF lowers SIP and STP minimums and adds withdrawals to one strategy',
+    summary: 'From 17 November, monthly SIPs and STPs start at ₹1,000 per instalment. A new monthly SWP applies to Equity Long-Short only.',
+    category: 'Mutual funds', checkedAt: '2026-11-17', announcementDate: '2026-11-09', eventDate: '2026-11-17', dateLabel: 'Revised terms effective',
+    source: 'https://x-docket.360.one/Addendum_Changes_in_SIP_STP_Amount_in_all_Strategies_and_Introduction_of_SWP_in_a_Strategy_ba625aa860.pdf',
+    sourceLabel: '360 ONE Asset Management: DynaSIF addendum 21/2026',
+    sourceLocation: 'Pages 1–3, strategy tables, withdrawal conditions and signing date',
+    additionalSources: [{ url: 'https://nsearchives.nseindia.com/content/circulars/NMF77441.pdf', label: 'NSE MF Invest: circular 1846/2026 dated 16 November' }],
+    audience: 'Eligible DynaSIF investors setting up a SIP or STP, and Equity Long-Short investors considering a systematic withdrawal plan.',
+    facts: [
+      'The addendum identifies Equity Long-Short, Equity Ex-Top 100 Long-Short and Active Asset Allocator Long-Short. For these three, monthly SIP and STP minimums fall from ₹20,000 to ₹1,000 per instalment, with a minimum of six months. The quarterly SIP minimum falls from ₹50,000 to ₹3,000 per instalment, with a minimum of six quarters.',
+      'Only Equity Long-Short adds a monthly systematic withdrawal plan. It requires at least ₹10,000 per instalment, then allows ₹1 increments, with a minimum of six months. The scheduled date is the seventh, or the following business day when the seventh is a non-business day.',
+      'For that SWP, the addendum lists a minimum investment threshold of ₹10 lakh across DynaSIF strategies for individuals and ₹1 lakh for accredited investors. It says the SWP is rejected if the balance falls below the applicable threshold.',
+    ],
+    actions: [
+      'Check the strategy name, instalment frequency and processing date before registering. The default monthly STP timing differs by strategy. Verify the options shown by your platform.',
+      'Before setting a withdrawal, ask the fund how it checks the balance threshold and review the applicable exit and tax terms. A lower instalment minimum and an investment threshold are separate conditions.',
+    ],
+    limits: 'The fund signed the addendum on 9 November. NSE confirmed implementation on NSE MF Invest in its 16 November circular. The fund applies the amendments to prospective investments from 17 November. Automatic changes to existing instructions and availability on other platforms were not verified.',
+  },
+  {
     slug: 'sgb-series-viii-premature-redemption-price-november-2026',
     title: 'SGB 2020–21 Series VIII: ₹13,499 per unit for 18 November premature redemption',
     summary: 'RBI announced the price on 17 November. The request window for this tranche closed on 9 November.',

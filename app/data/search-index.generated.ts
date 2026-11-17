@@ -232,6 +232,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:dynasif-sip-stp-minimum-swp-november-2026",
+    "title": "DynaSIF lowers SIP and STP minimums and adds withdrawals to one strategy",
+    "description": "From 17 November, monthly SIPs and STPs start at ₹1,000 per instalment. A new monthly SWP applies to Equity Long-Short only.",
+    "href": "/research/watch/dynasif-sip-stp-minimum-swp-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-17",
+    "keywords": "DynaSIF lowers SIP and STP minimums and adds withdrawals to one strategy dynasif-sip-stp-minimum-swp-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:edelweiss-overseas-paused-sips-healthcare-reopening-2026",
     "title": "Edelweiss: six funds’ paused SIPs close; Healthcare reopening is separate",
     "description": "Check your systematic registration: the six-fund closure does not apply to the Healthcare fund’s planned November reactivation.",
