@@ -10,7 +10,7 @@ The official HDFC Bank rate page was checked on 18 November 2026. Its Domestic /
 
 [HDFC Bank official FD interest-rate page](https://www.hdfc.bank.in/fixed-deposit/fd-interest-rate)
 
-The guide keeps the under-₹3 crore table separate from higher deposit bands, distinguishes the checked and effective dates, and directs readers to confirm the rate on the value date. It does not estimate maturity values or post-tax returns.
+The guide keeps the under-₹3 crore table separate from higher deposit bands, distinguishes the checked and effective dates, and directs readers to confirm the rate on the value date. It also notes HDFC’s premature-withdrawal treatment, the NRE one-year rule and the discounted monthly-payout rate. It does not estimate maturity values or post-tax returns.
 
 ## Deduplication and implementation
 
