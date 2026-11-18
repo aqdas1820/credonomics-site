@@ -26,12 +26,15 @@ export const researchWatch: WatchItem[] = [
       'The resident senior-citizen column lists 7.20% p.a. from 3 years 1 day to 5 years, and 7.10% p.a. from 5 years 1 day to 10 years.',
       'Selected shorter-tenure rows include 5.65% / 6.15% for 6 months 1 day to 9 months, 5.90% / 6.40% for 9 months 1 day to under 1 year, and 6.25% / 6.75% for 1 year to under 15 months (general / resident senior).',
       'HDFC says resident senior-citizen rates apply only to resident individuals aged 60 or above and do not apply to NRIs. The minimum tenor for an NRE deposit is 1 year.',
+      'For deposits booked on or after 22 July 2023, HDFC says premature closure, sweep-in or partial withdrawal uses a rate 1% less (as applicable) than the rate on the booking date for the period the deposit remained with the bank, rather than the contracted rate. HDFC says an NRE deposit prematurely withdrawn before one year earns no interest.',
+      'For tenures above six months, HDFC calculates interest quarterly. Its monthly-interest option pays at a discounted rate over the standard FD rate.',
       'HDFC says rates may change without prior notice. It asks depositors to ascertain the rate on the FD value date; the applicable base rate is tied to the date the deposit is accepted.',
     ],
     actions: [
       'Match the amount and exact tenure to the under-₹3 crore table. HDFC publishes separate rate schedules for deposits of ₹3 crore and above.',
       'For an NRE deposit, account for the one-year minimum and do not use the resident senior-citizen rate column for an NRI deposit.',
-      'Recheck the rate on the value date / deposit-acceptance date. Review payout choice, premature-withdrawal terms and tax treatment separately; the headline annual rate is not a maturity-value or post-tax return estimate.',
+      'Recheck the rate on the value date / deposit-acceptance date. If you may need early access, read the premature-withdrawal rule and its effect on the applicable rate; for NRE deposits, check the one-year minimum carefully.',
+      'If you want monthly interest, confirm the discounted payout rate with HDFC. The standard annual rate is not a monthly-payout yield or a maturity-value / post-tax return estimate.'
     ],
     limits: 'Checked 18 November 2026. The official page identifies 4 November as the effective date but gives no separate announcement date. Rates are per annum and apply to the published under-₹3 crore table; higher deposit bands have separate schedules. Senior-citizen rates are for resident individuals aged 60+ and do not apply to NRIs; NRE deposits have a one-year minimum. Rates can change without prior notice, so confirm the value-date rate before booking. No maturity or post-tax return is inferred.',
   },
