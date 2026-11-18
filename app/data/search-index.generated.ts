@@ -166,6 +166,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:bobcard-lounge-mumbai-t1c-etihad-november-2026",
+    "title": "BOBCARD lounge access: Mumbai T1-C is listed and Etihad cards have separate rules",
+    "description": "The newer BOBCARD terms list Travel Club at Mumbai T1-C. They also specify quarterly Etihad card visits without a minimum spend.",
+    "href": "/research/watch/bobcard-lounge-mumbai-t1c-etihad-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-18",
+    "keywords": "BOBCARD lounge access: Mumbai T1-C is listed and Etihad cards have separate rules bobcard-lounge-mumbai-t1c-etihad-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:bobcard-onecard-late-payment-slabs-october-2026",
     "title": "BOBCARD OneCard: check the late-payment slabs in force since 11 October",
     "description": "BOBCARD’s new slabs range from ₹0 to ₹1,300 before GST. Check the issuer and the outstanding amount on your statement.",
@@ -625,6 +636,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "Official issuer / fund notice",
     "updated": "2026-11-04",
     "keywords": "SEBI accessibility extension: three compliance steps due by 31 January 2027 sebi-digital-accessibility-extension-january-2027 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:sebi-commodity-derivatives-margin-december-2026",
+    "title": "SEBI commodity derivatives rules: check revised margin floors from 1 December",
+    "description": "The 17 November circular sets the same minimum initial margin for agricultural and non-agricultural commodities in each volatility band. Check the actual margin for your contract before trading.",
+    "href": "/research/watch/sebi-commodity-derivatives-margin-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-18",
+    "keywords": "SEBI commodity derivatives rules: check revised margin floors from 1 December sebi-commodity-derivatives-margin-december-2026 Research",
     "priority": 92
   },
   {
