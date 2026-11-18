@@ -22,8 +22,7 @@ export const researchWatch: WatchItem[] = [
     sourceLocation: 'Sections 5.1–5.2 and Annexure 2, Domestic Airports Lounge List.',
     additionalSources: [
       { url: 'https://media.bobcard.co.in/media/0h5cim12/features-and-rewards-important-terms-conditions-11112026.pdf', label: 'BOBCARD: preceding terms (PDF), Annexure 2' },
-      { url: 'https://www.bobcard.co.in/credit-card-types/bobcard-etihad-guest', label: 'BOBCARD: Etihad Guest card' },
-      { url: 'https://www.bobcard.co.in/credit-card-types/bobcard-etihad-guest-premium', label: 'BOBCARD: Etihad Guest Premium card' },
+      { url: 'https://media.bobcard.co.in/media/utrlq3g0/bobcard-etihad-global-lounge-list.pdf', label: 'BOBCARD: Etihad cards’ global lounge list (PDF)' },
     ],
     audience: 'BOBCARD cardholders checking lounge access before a flight, especially Mumbai domestic departures and holders of either Etihad card.',
     facts: [
@@ -34,7 +33,7 @@ export const researchWatch: WatchItem[] = [
     ],
     actions: [
       'Check your flight’s terminal and departure type in Annexure 2, then look up your exact card in the eligibility table and check how many visits remain. Confirm availability before relying on lounge access.',
-      'If your card has a spend requirement, check your previous calendar quarter’s settled eligible spend. For an eligible international Etihad visit, use the lounge information linked from the relevant card page.',
+      'If your card has a spend requirement, check your previous calendar quarter’s settled eligible spend. For an international Etihad visit, consult the issuer’s separate global list and confirm your exact lounge before travelling.',
     ],
     limits: '18 November is the verification date. The PDFs give no separate announcement or effective date for the T1-C listing. The domestic annexure repeats a Kolkata entry, so the guide uses named locations and avoids an aggregate network count. Access is subject to authorization, lounge capacity and operator rules.',
   },
