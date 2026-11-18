@@ -12,6 +12,32 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'sgb-2020-21-series-ii-premature-redemption-price-november-2026',
+    title: 'SGB 2020–21 Series II: ₹13,345 per unit for 19 November premature redemption',
+    summary: 'RBI announced the price on 18 November. The request window for this tranche closed on 9 November.',
+    category: 'Markets', checkedAt: '2026-11-19', publishedAt: '2026-11-19', announcementDate: '2026-11-18', eventDate: '2026-11-19', dateLabel: 'Premature redemption date',
+    source: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63996',
+    sourceLabel: 'RBI: 18 November premature redemption price notice',
+    sourceLocation: 'Press Release 2026–2027/1518, paragraphs 1–2',
+    additionalSources: [
+      { url: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63416', label: 'RBI: October 2026–March 2027 SGB redemption calendar, row 12' },
+      { url: 'https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11864&Mode=0', label: 'RBI: SGB 2020–21 Series II issuance schedule, 13 April 2020' },
+    ],
+    audience: 'Holders of SGB 2020–21 Series II, issued on 19 May 2020, who submitted a premature-redemption request for 19 November 2026.',
+    facts: [
+      'RBI announced on 18 November 2026 that the premature-redemption price for SGB 2020–21 Series II due on 19 November 2026 is ₹13,345 per unit.',
+      'The price is based on the simple average of IBJA-published closing prices for 999-purity gold on 16, 17 and 18 November 2026. It is specific to this tranche, not a quote for other SGB series.',
+      'RBI’s 21 August 2026 calendar identifies this tranche as issued on 19 May 2020 and lists the request window as 19 October–9 November 2026. That window has closed.',
+      'The price notice says premature redemption may be permitted after the fifth year from issue on an interest-payment date. It does not announce a fresh request window.',
+    ],
+    actions: [
+      'If you submitted a request during 19 October–9 November, match the series and issue date on your holding record, then compare the accepted unit count and ₹13,345 per-unit amount with the redemption entry from your receiving office, depository/depository participant or RBI Retail Direct account.',
+      'If no request was submitted during that window, do not treat the 18 November price notice as reopening it; check RBI’s current calendar and your servicing institution for a later eligible date.',
+      'Keep the request acknowledgement and holding statement if the unit count or per-unit amount differs.',
+    ],
+    limits: 'Checked: 19 November 2026. Announcement date: 18 November 2026. Premature-redemption date: 19 November 2026. RBI’s calendar lists the request window as 19 October–9 November, now closed. The price notice does not confirm any individual request, accepted unit count, payment-credit date or tax outcome. ₹13,345 applies only to SGB 2020–21 Series II; it is not a quote for other tranches, a reopened application window or a recommendation to redeem.',
+  },
+  {
     slug: 'sebi-direct-plan-default-amc-digital-platforms-november-2026',
     title: 'SEBI Chairman says Direct Plans become default on AMC digital platforms from 1 November',
     summary: 'A 28 October SEBI speech states that Direct Plans would be the default on AMC digital platforms from 1 November, with higher-expense disclosure for investors choosing Regular Plans. App-by-app implementation is not independently verified.',
