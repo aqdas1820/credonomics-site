@@ -154,12 +154,13 @@ Editorial content only. Payments, authentication, customer/financial records, in
 
 ## Release verification
 
-- Pull request: pending.
-- Reviewed feature-branch head: pending.
-- Unit tests: pending.
-- TypeScript: pending.
-- Production build: pending.
-- Vercel preview: pending.
-- Production deployment and public-route verification: pending.
-- Final merge commit: pending.
-- Rollback branch points to the exact pre-edit production `main` SHA shown above.
+- Pull request: [#119](https://github.com/aqdas1820/credonomics-site/pull/119).
+- Reviewed feature-branch head: `59d981acd0add20b3297922096756558f7976e6e`.
+- Unit tests: `npm test` passed — 177 tests across 29 files.
+- TypeScript: `npm run typecheck` passed.
+- Production build: `npm run build` passed; Next.js compiled successfully and generated 333 static pages, including the two new Research Watch routes, the November bulletin, search and sitemap.
+- Validation run: [GitHub Actions #44377773896](https://github.com/aqdas1820/credonomics-site/actions/runs/44377773896). It ran on an identical application source tree via a temporary push-only validation branch; the temporary workflow is not part of the PR or production branch.
+- Vercel preview: <https://credonomics-site-4qo8ysf23-aqdasshaikh1820-9566s-projects.vercel.app> — READY, deployment `dpl_7HaccUg8RgdsPQKSBNtDRbHNqTbH`. The preview build is ready; public production-route verification remains pending merge.
+- Production deployment and public-route verification: pending merge.
+- Final merge commit: pending merge.
+- Rollback branch `backup/pre-research-watch-amex-indianbank-20261119` points to the exact pre-edit production `main` SHA shown above.
