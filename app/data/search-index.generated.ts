@@ -1429,7 +1429,7 @@ export const searchIndex: readonly SearchEntry[] = [
     "updated": "",
     "keywords": "watchlist Watchlist Platform",
     "priority": 60
-  }
+  },
   {
     "id": "watch:hdfc-bank-retail-fd-rates-november-2026",
     "title": "HDFC Bank FD rates: up to 6.60% general and 7.20% for resident seniors",
