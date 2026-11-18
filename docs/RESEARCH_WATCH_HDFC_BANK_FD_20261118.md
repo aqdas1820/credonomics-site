@@ -21,3 +21,9 @@ The Watch article data drives the homepage, Research Watch hub, November bulleti
 ## Scope
 
 Editorial content only. Payments, authentication, customer/financial records, infrastructure, secrets, paid resources and automation schedules are untouched. No external messages or comments were sent.
+## Release verification
+
+- Pull request: [#118](https://github.com/aqdas1820/credonomics-site/pull/118).
+- GitHub Actions validation run [44324967696](https://github.com/aqdas1820/credonomics-site/actions/runs/44324967696): 177 unit tests across 29 files passed; `npm run typecheck` passed. The run used the code-bearing commit `46a16aebbc61a54eae70bc735c6598c70f53cd9a`; the final PR head only removed the temporary branch-only validation workflow, with no application-source changes.
+- Vercel preview deployment `dpl_D15VbQx6Hr7VXDDF5psZjPkj1Lqe` reached READY for PR head `693abfc27a49c470ad8d74dc52f96d20bf24979f`; its build completed and the Vercel status check passed.
+- Production deployment verification is recorded in the merged PR evidence after release.
