@@ -1,4 +1,4 @@
-name: Temporary editorial validation
+name: Temporary editorial validation - final content
 on:
   push:
     branches:
