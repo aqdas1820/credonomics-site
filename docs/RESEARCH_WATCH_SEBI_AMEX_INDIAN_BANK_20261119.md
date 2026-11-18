@@ -143,6 +143,7 @@ Primary source:
 ## Other screening and deduplication
 
 - The SEBI Direct Plan statement was absent from the current Research Watch and November bulletin. It was the October 29 Research Watch task’s high-priority HOLD; the official speech PDF is now readable. The publication is deliberately limited to the verified speech statement, while implementation details remain unverified.
+- Research Watch task `6adc4a968f4881919162894e39d400bc` had no newer recorded result than 29 October 2026 and was disabled. This run used the available recorded findings plus fresh official-source checks on 19 November; no automation schedule was changed.
 - The Indian Bank bulk schedule is separate from the existing under-₹3 crore special-retail-FD guide. No retail/bulk rate mixing or before/after claim was added.
 - Draft fund filings without a confirmed offer opening or complete investor-facing terms were not promoted to publication.
 - PNB’s separate 16 November credit-related service-charge schedule was inspected. It contains a mix of commercial-credit and term-loan charges, while parts of the extracted term-loan table are incomplete and the exact retail-product applicability is not clear. It remains HOLD rather than being presented as a blanket consumer-loan fee change. The savings-account interest-credit-cycle notice remains HOLD pending retrieval of the underlying notice.
@@ -156,12 +157,13 @@ Editorial content only. Payments, authentication, customer/financial records, in
 ## Release verification
 
 - Pull request: [#119](https://github.com/aqdas1820/credonomics-site/pull/119).
-- Reviewed feature-branch head: `59d981acd0add20b3297922096756558f7976e6e`.
-- Unit tests: `npm test` passed — 177 tests across 29 files.
+- Exact pre-edit production `main` SHA: `3d73748162dbee05ea3298a8e68deca834ce65a6`.
+- Reviewed feature-branch head: `3845e80bdfd194d4ab0bbc20af402cd13d7319c5`. The later change to this release note is documentation-only; the reviewed application source is unchanged.
+- Unit tests: `npm test` passed — **177 tests across 29 files**.
 - TypeScript: `npm run typecheck` passed.
-- Production build: `npm run build` passed; Next.js compiled successfully and generated 333 static pages, including the two new Research Watch routes, the November bulletin, search and sitemap.
-- Validation run: [GitHub Actions #44377773896](https://github.com/aqdas1820/credonomics-site/actions/runs/44377773896). It ran on an identical application source tree via a temporary push-only validation branch; the temporary workflow is not part of the PR or production branch.
-- Vercel preview: <https://credonomics-site-4qo8ysf23-aqdasshaikh1820-9566s-projects.vercel.app> — READY, deployment `dpl_7HaccUg8RgdsPQKSBNtDRbHNqTbH`. The preview build is ready; public production-route verification remains pending merge.
+- Production build: `npm run build` passed; Next.js generated **333 static pages**. The build generated **132 CredoNomics search entries** and included the two new Research Watch routes, November bulletin, search and sitemap.
+- Validation run: [GitHub Actions #44380420400](https://github.com/aqdas1820/credonomics-site/actions/runs/44380420400), on validation-branch head `bbcd9c3e86074f770dec3e1ac403a3819e91a358`. It used the exact updated `app/data/research-watch.ts` from the feature branch; the release note is documentation-only. The temporary push-only validation workflow is not part of the PR or production branch.
+- Vercel preview: **READY**, deployment `dpl_B5hoPCLVRqntYjgDWBmEKzydENLa`, for feature-branch head `3845e80bdfd194d4ab0bbc20af402cd13d7319c5`. Preview host: https://credonomics-site-tzil5vnmg-aqdasshaikh1820-9566s-projects.vercel.app. The public web checker could not retrieve Vercel preview URLs; production-route verification will be performed after merge.
 - Production deployment and public-route verification: pending merge.
 - Final merge commit: pending merge.
-- Rollback branch `backup/pre-research-watch-amex-indianbank-20261119` points to the exact pre-edit production `main` SHA shown above.
+- Rollback branch `backup/pre-research-watch-amex-indianbank-20261119` points to the exact pre-edit production `main` SHA above.
