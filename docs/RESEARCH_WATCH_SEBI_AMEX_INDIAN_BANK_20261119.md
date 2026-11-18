@@ -137,8 +137,7 @@ Primary source:
 - HDFC Balanced Advantage Fund and HDFC Children’s Fund: Notice 1370 still identifies the exit window through 3 pm on 6 November and the change effective 9 November. No extension was found.
 - Tata Neu HDFC manual claims: HDFC’s PDF remains updated 21 October and states that manual claims begin for statements from 25 November. It applies to the primary cardholder; the claimable balance is available within seven working days of the statement date, card-earned NeuCoins have a 12-month claim window, up to three successful requests per day are allowed with a 100-NeuCoin minimum, and special-promotion/welcome rewards follow their own expiry terms.
   - https://www.hdfc.bank.in/kannada/content/dam/hdfcbankpws/in/en/pdfs/TataNeuCC_neucoins_Claim.pdf
-- SBM ZET fees: the current repository record remains product-specific and states the published 5% of outstanding late fee, bounded by ₹50 and ₹1,000 before GST, from 23 October. Direct retrieval of the official PDF was unavailable in this pass, so no new revision or correction is asserted.
-  - https://www.sbm.bank.in/pdf/terms-conditions/SBM-Secured-Credit-Card-T-C.pdf
+- SBM ZET fees: the current official MITC was retrieved on 19 November at https://www.sbm.bank.in/pdf/terms-conditions/SBM-Secured-Credit-Card-T%26C.pdf. It confirms the ZET late fee at 5% of Total Outstanding Due (minimum ₹50, maximum ₹1,000), plus GST, and the more-than-3-days-past-due trigger. It lists a ₹499 cancellation fee within 2 years from card issuance date (not activation), and separately lists 1% rental and 1% education fees effective 15 July 2026. No newer late-fee revision was found; the follow-up article correction replaces the old inaccessible URL and corrects the cancellation-window reference.
 
 ## Other screening and deduplication
 
@@ -156,14 +155,26 @@ Editorial content only. Payments, authentication, customer/financial records, in
 
 ## Release verification
 
-- Pull request: [#119](https://github.com/aqdas1820/credonomics-site/pull/119).
-- Exact pre-edit production `main` SHA: `3d73748162dbee05ea3298a8e68deca834ce65a6`.
-- Reviewed feature-branch head: `3845e80bdfd194d4ab0bbc20af402cd13d7319c5`. The later change to this release note is documentation-only; the reviewed application source is unchanged.
-- Unit tests: `npm test` passed — **177 tests across 29 files**.
-- TypeScript: `npm run typecheck` passed.
-- Production build: `npm run build` passed; Next.js generated **333 static pages**. The build generated **132 CredoNomics search entries** and included the two new Research Watch routes, November bulletin, search and sitemap.
-- Validation run: [GitHub Actions #44380420400](https://github.com/aqdas1820/credonomics-site/actions/runs/44380420400), on validation-branch head `bbcd9c3e86074f770dec3e1ac403a3819e91a358`. It used the exact updated `app/data/research-watch.ts` from the feature branch; the release note is documentation-only. The temporary push-only validation workflow is not part of the PR or production branch.
-- Vercel preview: **READY**, deployment `dpl_B5hoPCLVRqntYjgDWBmEKzydENLa`, for feature-branch head `3845e80bdfd194d4ab0bbc20af402cd13d7319c5`. Preview host: https://credonomics-site-tzil5vnmg-aqdasshaikh1820-9566s-projects.vercel.app. The public web checker could not retrieve Vercel preview URLs; production-route verification will be performed after merge.
-- Production deployment and public-route verification: pending merge.
-- Final merge commit: pending merge.
-- Rollback branch `backup/pre-research-watch-amex-indianbank-20261119` points to the exact pre-edit production `main` SHA above.
+### PR #119 publication
+- [PR #119](https://github.com/aqdas1820/credonomics-site/pull/119) merged on 19 November 2026.
+- Merge / production main commit: `58e10ad39e505273781c74b164c32cfc1e977f17`.
+- Vercel production deployment: `dpl_FgHFCSNzd6c5WTEd9BWBHDBQHy2D`, **READY**, deployed commit `58e10ad39e505273781c74b164c32cfc1e977f17`. The Vercel deployment lookup for both `www.credonomics.in` and `credonomics.in` resolved to this deployment.
+- Public pages verified: [Research Watch hub](https://www.credonomics.in/research/watch/), [November bulletin](https://www.credonomics.in/updates/2026-11/), [SEBI Direct Plan guide](https://www.credonomics.in/research/watch/sebi-direct-plan-default-amc-digital-platforms-november-2026), [Indian Bank bulk-deposit guide](https://www.credonomics.in/research/watch/indian-bank-bulk-term-deposit-rates-3-5-crore-november-2026), [Amex November guide](https://www.credonomics.in/research/watch/amex-november-2026-fees-and-service-dates/), [IDFC IndiGo guide](https://www.credonomics.in/research/watch/idfc-indigo-international-rewards-october-2026/), [Axis membership guide](https://www.credonomics.in/research/watch/axis-complimentary-membership-renewal-consent-november-2026/), and the [SBM ZET guide](https://www.credonomics.in/research/watch/sbm-zet-late-fee-october-2026) via the October bulletin.
+- The Research Watch hub and November bulletin show a 19 November check and both new items. The SEBI and Indian Bank article routes were opened from the hub; their official SEBI speech page and Indian Bank deposit-rate page were opened successfully. The Amex page displays the 15 November MITC refund/reversal clause and its limitations. IDFC and Axis updates were visible on their article pages; the Axis PDF and IDFC issuer pages were verified.
+- The current SBM MITC is now accessible at the exact encoded URL above. It confirms the ZET fee table and clarifies the cancellation window is measured from card issuance. The article update is in follow-up PR #120.
+- The public sitemap XML endpoint and the `/search?q=...` page could not be retrieved by the web checker. The production build generated **132 search entries**, and `app/sitemap.ts` consumes the same Research Watch data; live XML contents and interactive search results were not independently fetched. Some no-trailing-slash requests returned stale 18 November snapshots; trailing-slash and hub click-through requests returned the current 19 November pages.
+- No ranking formulas, card valuations, payment flows, authentication, customer/financial records, infrastructure, secrets or paid resources were changed.
+
+### Validation for PR #119
+- Unit tests: **177 passed across 29 files**.
+- TypeScript: **passed**.
+- Production build: **passed**; Next.js generated **333 static pages** and **132 search entries**.
+- Validation run: [GitHub Actions #44380420400](https://github.com/aqdas1820/credonomics-site/actions/runs/44380420400), on validation-branch head `bbcd9c3e86074f770dec3e1ac403a3819e91a358`, with the exact updated `app/data/research-watch.ts`. The temporary push-only validation workflow is not part of production.
+- Vercel preview for the reviewed application source: **READY**, deployment `dpl_B5hoPCLVRqntYjgDWBmEKzydENLa`, commit `3845e80bdfd194d4ab0bbc20af402cd13d7319c5`.
+
+### Follow-up PR #120
+- Exact pre-edit production `main` SHA: `58e10ad39e505273781c74b164c32cfc1e977f17`.
+- Rollback branch: `backup/pre-sbm-mitc-correction-20261119` points to that exact SHA.
+- Feature branch: `editorial/sbm-mitc-release-evidence-20261119`.
+- This follow-up corrects the SBM ZET source URL and cancellation-window wording, adds the current MITC’s 3-day late-fee trigger and separately dated 15 July rental/education fees, and records the PR #119 production evidence. No other product ranking or financial logic changes are included.
+- Follow-up PR, validation and deployment evidence: pending.
