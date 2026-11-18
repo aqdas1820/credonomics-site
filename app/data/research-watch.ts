@@ -12,6 +12,54 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'bobcard-lounge-mumbai-t1c-etihad-november-2026',
+    title: 'BOBCARD lounge access: Mumbai T1-C is listed and Etihad cards have separate rules',
+    summary: 'The newer BOBCARD terms list Travel Club at Mumbai T1-C. They also specify quarterly Etihad card visits without a minimum spend.',
+    category: 'Credit cards', checkedAt: '2026-11-18', eventDate: '2026-11-18', dateLabel: 'Issuer list verified',
+    statusLabel: 'Clarification checked',
+    source: 'https://media.bobcard.co.in/media/0h5cim12/features-and-rewards-important-terms-conditions-16112026.pdf',
+    sourceLabel: 'BOBCARD: current features and rewards terms (PDF)',
+    sourceLocation: 'Sections 5.1–5.2 and Annexure 2, Domestic Airports Lounge List.',
+    additionalSources: [
+      { url: 'https://media.bobcard.co.in/media/0h5cim12/features-and-rewards-important-terms-conditions-11112026.pdf', label: 'BOBCARD: preceding terms (PDF), Annexure 2' },
+      { url: 'https://www.bobcard.co.in/credit-card-types/bobcard-etihad-guest', label: 'BOBCARD: Etihad Guest card' },
+      { url: 'https://www.bobcard.co.in/credit-card-types/bobcard-etihad-guest-premium', label: 'BOBCARD: Etihad Guest Premium card' },
+    ],
+    audience: 'BOBCARD cardholders checking lounge access before a flight, especially Mumbai domestic departures and holders of either Etihad card.',
+    facts: [
+      'The current Annexure 2 lists Travel Club for domestic departures at Mumbai T1-C. The preceding edition lists Mumbai T1-B and T2 entries but has no T1-C row.',
+      'The Etihad Guest card lists 2 domestic and 1 international visit per quarter. Etihad Guest Premium lists 3 domestic and 2 international visits per quarter. The current eligibility table gives both cards a minimum-spend exception.',
+      'The current table lists unlimited visits for Eterna, Eterna–FD and Tiara after ₹75,000 in eligible net spend in the previous calendar quarter. Premier, Premier–FD and HPCL each list one visit per quarter after ₹20,000 in eligible net spend.',
+      'BOBCARD counts eligible settled transactions for its spend conditions. Section 5.2 excludes fees, interest, other bank charges, reversals and EMI instalments.',
+    ],
+    actions: [
+      'Check your flight’s terminal and departure type in Annexure 2, then look up your exact card in the eligibility table and check how many visits remain. Confirm availability before relying on lounge access.',
+      'If your card has a spend requirement, check your previous calendar quarter’s settled eligible spend. For an eligible international Etihad visit, use the lounge information linked from the relevant card page.',
+    ],
+    limits: '18 November is the verification date. The PDFs give no separate announcement or effective date for the T1-C listing. The domestic annexure repeats a Kolkata entry, so the guide uses named locations and avoids an aggregate network count. Access is subject to authorization, lounge capacity and operator rules.',
+  },
+  {
+    slug: 'sebi-commodity-derivatives-margin-december-2026',
+    title: 'SEBI commodity derivatives rules: check revised margin floors from 1 December',
+    summary: 'The 17 November circular sets the same minimum initial margin for agricultural and non-agricultural commodities in each volatility band. Check the actual margin for your contract before trading.',
+    category: 'Markets', checkedAt: '2026-11-18', announcementDate: '2026-11-17',
+    eventDate: '2026-12-01', dateLabel: 'Revised regulatory margin floors take effect',
+    source: 'https://www.sebi.gov.in/sebi_data/attachdocs/nov-2026/1794917100786.PDF',
+    sourceLabel: 'SEBI: 17 November commodity derivatives margin circular (PDF)',
+    sourceLocation: 'Paragraphs 2–5 and the table replacing paragraph 9.1.3.I.a(iv) of the commodity derivatives master circular.',
+    additionalSources: [{ url: 'https://www.sebi.gov.in/legal/circulars/nov-2026/review-of-margin-framework-for-commodity-derivatives-segment_105799.html', label: 'SEBI: official circular listing' }],
+    audience: 'Retail traders using exchange-traded commodity derivatives in India, particularly traders of agricultural commodity contracts.',
+    facts: [
+      'From 1 December 2026, the minimum initial margin is 6% for low-volatility commodities, 8% for medium-volatility commodities and 10% for high-volatility commodities. Each floor applies to both agricultural and non-agricultural commodities.',
+      'The corresponding minimum margin periods of risk are 2, 2 and 3 days. This is a risk-model parameter used by clearing corporations.',
+      'SEBI says the circular applies for one year from its 17 November 2026 issuance and may be extended by a separate circular.',
+    ],
+    actions: [
+      'Before entering or rolling a trade around 1 December, check your exact contract’s margin with your broker or the relevant exchange or clearing corporation. Review any extra margin and the available balance for existing positions.',
+    ],
+    limits: 'These are regulatory floors. The cash needed for a specific order can be higher depending on the contract and applicable exchange, clearing or broker requirements. The circular does not quantify the change in margin for individual contracts.',
+  },
+  {
     slug: 'hdfc-bizblack-tax-rewards-quarterly-voucher-december-2026',
     title: 'HDFC BizBlack Metal: check December tax rewards and the January voucher milestone',
     summary: 'From 21 December, eligible tax payments earn 4 core points per ₹200 and are excluded from the ₹50,000 spend needed to unlock 5X. The quarterly voucher starts in January.',
