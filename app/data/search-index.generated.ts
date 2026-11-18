@@ -320,6 +320,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:hdfc-bizblack-tax-rewards-quarterly-voucher-december-2026",
+    "title": "HDFC BizBlack Metal: check December tax rewards and the January voucher milestone",
+    "description": "From 21 December, eligible tax payments earn 4 core points per ₹200 and are excluded from the ₹50,000 spend needed to unlock 5X. The quarterly voucher starts in January.",
+    "href": "/research/watch/hdfc-bizblack-tax-rewards-quarterly-voucher-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-18",
+    "keywords": "HDFC BizBlack Metal: check December tax rewards and the January voucher milestone hdfc-bizblack-tax-rewards-quarterly-voucher-december-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:hdfc-base-expense-ratio-selected-plans-november-2026",
     "title": "HDFC Mutual Fund: selected plan expense ratios change on 16 November",
     "description": "The notices cover Base Expense Ratios: ten Regular Plans fall; four Direct Plans rise and two fall. Check your exact scheme and plan.",

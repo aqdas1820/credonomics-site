@@ -12,6 +12,31 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'hdfc-bizblack-tax-rewards-quarterly-voucher-december-2026',
+    title: 'HDFC BizBlack Metal: check December tax rewards and the January voucher milestone',
+    summary: 'From 21 December, eligible tax payments earn 4 core points per ₹200 and are excluded from the ₹50,000 spend needed to unlock 5X. The quarterly voucher starts in January.',
+    category: 'Credit cards', checkedAt: '2026-11-18', eventDate: '2026-12-21', dateLabel: 'Tax reward and 5X changes begin',
+    source: 'https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/business-credit-cards/biz-black/pdfs/biz-black-t-and-c.pdf',
+    sourceLabel: 'HDFC Bank: revised BizBlack Metal terms (PDF)',
+    sourceLocation: 'Sections 1–3: core points, quarterly milestone and accelerated points.',
+    additionalSources: [{
+      url: 'https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/business-credit-cards/biz-black/pdfs/biz-black-customer-communication-3-nov-2026.pdf',
+      label: 'HDFC Bank: BizBlack Metal cardholder communication (PDF)',
+    }],
+    audience: 'HDFC Bank BizBlack Metal cardholders who pay income tax or GST, use the card’s accelerated rewards, or track milestone vouchers.',
+    facts: [
+      'From 21 December 2026, eligible income tax and GST payments earn 4 core reward points per ₹200. HDFC lists 5 points per ₹150 for other eligible spends, with the exclusions in section 1. The overall limit remains 1,50,000 reward points per statement cycle.',
+      'The revised 5X terms start with the 21 December 2026–20 January 2027 statement cycle. To unlock 5X, reach ₹50,000 in qualifying retail spend in the cycle. Income tax, GST and EMI do not count toward that threshold. Once you qualify, eligible tax payments can still earn 5X through the specified payment routes.',
+      'HDFC defines 5X as core points plus four times the core points in accelerated points. The accelerated portion for Business Essential spends is capped at 7,500 points per statement cycle and is credited in the next cycle.',
+      'From 1 January 2027, ₹4 lakh of eligible spending in a calendar quarter earns a ₹5,000 Taj Stay or SmartBuy Flight voucher. HDFC previously listed a ₹5 lakh milestone. The new quarterly tally excludes income tax, GST, fuel, rent and EMI. HDFC lists up to four vouchers a year.',
+    ],
+    actions: [
+      'Check your statement dates and tally qualifying retail spend separately from income tax and GST. HDFC uses the settlement or posting date, and reversals can bring qualifying spend below ₹50,000.',
+      'Track the voucher separately by calendar quarter, beginning January–March 2027. Compare any payment fees with the rewards you can realistically redeem, and keep statutory payment deadlines.',
+    ],
+    limits: 'This notice applies to BizBlack Metal. The issuer PDFs specify effective dates. The public announcement date was unconfirmed when checked. Actual rewards depend on the payment route, statement timing, exclusions, caps and redemption choice.',
+  },
+  {
     slug: 'marriott-bonvoy-hdfc-anniversary-enrolled-spend-november-2026',
     title: 'Marriott Bonvoy HDFC: enrolled cardholders have until 30 November to meet the spend milestone',
     summary: 'Enrolment closed on 10 November. Eligible spend can earn 15,000 or 30,000 bonus points, but HDFC tracks replacement cards separately.',
