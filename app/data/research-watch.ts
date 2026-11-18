@@ -12,6 +12,30 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'hdfc-bank-retail-fd-rates-november-2026',
+    title: 'HDFC Bank FD rates: up to 6.60% general and 7.20% for resident seniors',
+    summary: 'HDFC’s under-₹3 crore Domestic/NRO/NRE table is effective from 4 November 2026. General rates top out at 6.60% p.a.; eligible resident seniors get up to 7.20% for a narrower tenure band.',
+    category: 'Bank deposits', checkedAt: '2026-11-18', eventDate: '2026-11-04', dateLabel: 'Retail FD rate table effective',
+    source: 'https://www.hdfc.bank.in/fixed-deposit/fd-interest-rate',
+    sourceLabel: 'HDFC Bank: fixed deposit interest rates',
+    sourceLocation: 'Domestic / NRO / NRE FD table for deposits below ₹3 crore, plus notes on NRI eligibility, NRE minimum tenor, value-date rate and premature withdrawal.',
+    audience: 'People comparing or booking HDFC Bank fixed deposits below ₹3 crore, especially resident senior citizens and NRI depositors.',
+    facts: [
+      'HDFC Bank’s official Domestic / NRO / NRE table for deposits below ₹3 crore is marked applicable from 4 November 2026. The page does not separately state an announcement date.',
+      'For general customers, the listed rate is 6.60% p.a. for tenures from 3 years 1 day to 10 years.',
+      'The resident senior-citizen column lists 7.20% p.a. from 3 years 1 day to 5 years, and 7.10% p.a. from 5 years 1 day to 10 years.',
+      'Selected shorter-tenure rows include 5.65% / 6.15% for 6 months 1 day to 9 months, 5.90% / 6.40% for 9 months 1 day to under 1 year, and 6.25% / 6.75% for 1 year to under 15 months (general / resident senior).',
+      'HDFC says resident senior-citizen rates apply only to resident individuals aged 60 or above and do not apply to NRIs. The minimum tenor for an NRE deposit is 1 year.',
+      'HDFC says rates may change without prior notice. It asks depositors to ascertain the rate on the FD value date; the applicable base rate is tied to the date the deposit is accepted.',
+    ],
+    actions: [
+      'Match the amount and exact tenure to the under-₹3 crore table. HDFC publishes separate rate schedules for deposits of ₹3 crore and above.',
+      'For an NRE deposit, account for the one-year minimum and do not use the resident senior-citizen rate column for an NRI deposit.',
+      'Recheck the rate on the value date / deposit-acceptance date. Review payout choice, premature-withdrawal terms and tax treatment separately; the headline annual rate is not a maturity-value or post-tax return estimate.',
+    ],
+    limits: 'Checked 18 November 2026. The official page identifies 4 November as the effective date but gives no separate announcement date. Rates are per annum and apply to the published under-₹3 crore table; higher deposit bands have separate schedules. Senior-citizen rates are for resident individuals aged 60+ and do not apply to NRIs; NRE deposits have a one-year minimum. Rates can change without prior notice, so confirm the value-date rate before booking. No maturity or post-tax return is inferred.',
+  },
+  {
     slug: 'bobcard-lounge-mumbai-t1c-etihad-november-2026',
     title: 'BOBCARD lounge access: Mumbai T1-C is listed and Etihad cards have separate rules',
     summary: 'The newer BOBCARD terms list Travel Club at Mumbai T1-C. They also specify quarterly Etihad card visits without a minimum spend.',
