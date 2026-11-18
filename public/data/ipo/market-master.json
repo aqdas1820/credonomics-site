@@ -1,39 +1,42 @@
 {
   "meta": {
-    "generatedAt": "2026-11-17T11:44:10.475Z",
+    "generatedAt": "2026-11-18T11:32:07.864Z",
     "recordCount": 1,
     "nseCount": 1,
     "bseCount": 0,
     "activeCount": 1,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 0 · BSE SME unavailable · BSE mainboard 0 · preserved previous"
+    "sourceStatus": "NSE API 1 · BSE SME unavailable · BSE mainboard 0"
   },
   "records": [
     {
-      "slug": "vedant-poly-fabs-ltd-ba0db5c",
-      "companyName": "Vedant Poly Fabs Limited",
-      "symbol": "VPFL",
-      "marketSegment": "sme",
+      "slug": "crystal-crop-protection-ltd-3c69112",
+      "companyName": "Crystal Crop Protection Limited",
+      "symbol": "CRYSTALCP",
+      "marketSegment": "mainboard",
       "status": "open",
-      "securityType": "SME",
+      "securityType": "Equity",
       "issue": {
-        "openDate": "2026-11-02",
-        "closeDate": "2026-11-04",
+        "priceBandLow": 259,
+        "priceBandHigh": 272,
+        "openDate": "2026-11-18",
+        "closeDate": "2026-11-20",
         "exchange": [
           "NSE"
         ]
       },
       "subscription": {
-        "total": 1.84,
-        "updatedAt": "2026-11-04T10:48:29.845Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=VPFL&type=Active"
+        "total": 0.7347673917566332,
+        "updatedAt": "2026-11-18T11:32:07.864Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=CRYSTALCP&type=Active"
       },
-      "sharesOffered": 6030000,
-      "sharesBid": 11082000,
+      "sharesOffered": 12170076,
+      "sharesBid": 8942175,
+      "estimatedIssueValueCr": 331.03,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=VPFL&type=Active",
-      "fetchedAt": "2026-11-04T10:48:29.845Z"
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=CRYSTALCP&type=Active",
+      "fetchedAt": "2026-11-18T11:32:07.864Z"
     }
   ]
 }
