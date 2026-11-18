@@ -1,0 +1,24 @@
+name: Editorial validation
+
+on:
+  push:
+    branches:
+      - validation/sgb-series-ii-20261119
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm test -- --reporter=dot
+      - run: npm run typecheck
+      - run: npm run build
