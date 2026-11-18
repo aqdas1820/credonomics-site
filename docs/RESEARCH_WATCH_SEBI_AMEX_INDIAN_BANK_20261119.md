@@ -96,15 +96,16 @@ Primary sources:
 ### IDFC FIRST international rewards and IndiGo BluChip correction
 
 - Checked: 19 November 2026.
-- FIRST Select and FIRST Millennia product pages list 10X on international purchases under their card-specific terms.
+- FIRST Select’s 18 June 2026 cardholder update removes the previous ₹20,000 monthly unlock for 10X on eligible Dining, Travel and International purchases; it defines international purchases as transactions at international merchants. The current page still has one image label with the older threshold wording, so the dated cardholder PDF is used to resolve it. FIRST Millennia’s current product page also lists 10X on Dining, Travel and International purchases.
 - FIRST Wealth’s headline says 10X on international spends, while its detailed section says international spends done on the cardholder’s birthday. This conflict remains HOLD; no general Wealth international rate is claimed.
-- The current IndiGo FIRST Dual FAQ lists 1 BluChip on international spends but does not show a per-₹100 denominator. The earlier per-₹100 wording is not repeated.
+- The current IndiGo FIRST Dual page’s earning table lists 1 BluChip on international spends and its general footnote says the displayed category rates are per ₹100. The FAQ bullet alone omits the denominator, but the table resolves it; no fixed rupee value is inferred.
 - No reward-point cash conversion, complete cap valuation or ranking change is made.
 
 Primary sources:
 
 - https://www.idfcfirst.bank.in/content/dam/idfcfirstbank/pdf/credit-card/Credit-Card-Communication-13-Sep-26.pdf
 - https://www.idfcfirst.bank.in/credit-card/select
+- https://www.idfcfirst.bank.in/content/dam/idfcfirstbank/pdf/credit-card/FIRST-Select-Credit-Card-Communication-May-26.pdf (18 June 2026 update removing the prior ₹20,000 unlock for eligible 10X categories)
 - https://www.idfcfirst.bank.in/credit-card/millennia
 - https://www.idfcfirst.bank.in/credit-card/wealth
 - https://www.idfcfirst.bank.in/credit-card/indigo-credit-card
@@ -131,7 +132,7 @@ Primary source:
 
 ## Re-read of the 24 October initial batch
 
-- IDFC IndiGo international rewards: current FAQ lists 1 BluChip on international spends but does not show a per-₹100 denominator; the previous wording is held pending issuer clarification.
+- IDFC IndiGo international rewards: the current issuer page’s earning table and per-₹100 footnote support 1 BluChip per ₹100 on international spends; the FAQ bullet alone omits the denominator. The prior HOLD is resolved, but no fixed rupee value per BluChip is inferred.
 - American Express November changes: current Consumer Experience Updates page and 15 November credit-card MITC were re-read. The eligible refund/reversal adjustment clause above is the material addition. Product-specific rules and unresolved milestone/restoration wording remain explicit.
 - HDFC Balanced Advantage Fund and HDFC Children’s Fund: Notice 1370 still identifies the exit window through 3 pm on 6 November and the change effective 9 November. No extension was found.
 - Tata Neu HDFC manual claims: HDFC’s PDF remains updated 21 October and states that manual claims begin for statements from 25 November. It applies to the primary cardholder; the claimable balance is available within seven working days of the statement date, card-earned NeuCoins have a 12-month claim window, up to three successful requests per day are allowed with a 100-NeuCoin minimum, and special-promotion/welcome rewards follow their own expiry terms.
@@ -144,7 +145,7 @@ Primary source:
 - The SEBI Direct Plan statement was absent from the current Research Watch and November bulletin. It was the October 29 Research Watch task’s high-priority HOLD; the official speech PDF is now readable. The publication is deliberately limited to the verified speech statement, while implementation details remain unverified.
 - The Indian Bank bulk schedule is separate from the existing under-₹3 crore special-retail-FD guide. No retail/bulk rate mixing or before/after claim was added.
 - Draft fund filings without a confirmed offer opening or complete investor-facing terms were not promoted to publication.
-- PNB’s 16 November credit-related service-charge notice appears in the bank index but was not treated as a retail consumer fee change; its exact audience and terms require separate review. The savings-account interest-credit-cycle notice remains HOLD pending retrieval of the underlying notice.
+- PNB’s separate 16 November credit-related service-charge schedule was inspected. It contains a mix of commercial-credit and term-loan charges, while parts of the extracted term-loan table are incomplete and the exact retail-product applicability is not clear. It remains HOLD rather than being presented as a blanket consumer-loan fee change. The savings-account interest-credit-cycle notice remains HOLD pending retrieval of the underlying notice.
 - Current public Research Watch, November bulletin, homepage and existing Amex article were inspected before editing. The existing Research Watch, homepage and monthly bulletin are data-driven; the search-index generator and sitemap consume the same Watch data. No matching normalized card-detail records exist for the affected IDFC, Axis and PNB variants, and no individual HDFC fund detail route exists, so no card/fund detail page was fabricated.
 - No card ranking formula, reward valuation, customer or financial record was changed.
 
