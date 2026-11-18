@@ -1429,5 +1429,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "updated": "",
     "keywords": "watchlist Watchlist Platform",
     "priority": 60
-  }
+  },
+  {
+    "id": "watch:hdfc-bank-retail-fd-rates-november-2026",
+    "title": "HDFC Bank FD rates: up to 6.60% general and 7.20% for resident seniors",
+    "description": "HDFC’s under-₹3 crore Domestic/NRO/NRE table is effective from 4 November 2026. General rates top out at 6.60% p.a.; eligible resident seniors get up to 7.20% for a narrower tenure band.",
+    "href": "/research/watch/hdfc-bank-retail-fd-rates-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-18",
+    "keywords": "HDFC Bank FD rates up to 6.60% general and 7.20% for resident seniors hdfc-bank-retail-fd-rates-november-2026 Research",
+    "priority": 92
+  },
+
 ]
