@@ -46,10 +46,13 @@ No ranking formulas, reward valuations, card/fund records, payment flows, authen
 
 ## Validation and release evidence
 
-- Unit tests: pending.
-- TypeScript: pending.
-- Production build and generated search-index count: pending.
-- Vercel preview and post-merge production READY / deployed-commit verification: pending.
-- Public article, hub, November bulletin and official source-link verification: pending.
-- Pull request and merge commit: pending.
-- Production deployment ID: pending.
+- GitHub Actions validation run #44385277231: https://github.com/aqdas1820/credonomics-site/actions/runs/44385277231 — **success**.
+- Unit tests: **177 passed across 29 test files**.
+- TypeScript: passed.
+- Production build: passed; prebuild generated **133 CredoNomics search entries**, and Next.js generated all **334 static pages**. The build route table includes `/research/watch/sgb-2020-21-series-ii-premature-redemption-price-november-2026`.
+- Vercel preview deployment `dpl_3hz169kk636Eti6EY5nESm2ubnYV`: **READY**, built from feature head `c317ed5b65733c90e512916bf8220cce202ff82b`; Vercel commit check succeeded.
+- PR #121: https://github.com/aqdas1820/credonomics-site/pull/121 — merged. Merge commit / published source commit: `c17f15cba98ac43dad0b6a832b3f4c62bb97da48`.
+- Vercel production deployment `dpl_ANorvaSTnnQyN7DyVmb5jiHvaAXe`: **READY**, target `production`, deployed commit `c17f15cba98ac43dad0b6a832b3f4c62bb97da48`; aliases include `www.credonomics.in` and `credonomics.in`.
+- **Public visibility is not independently confirmed.** The public-page checker returned an internal error for the new article route, sitemap and search page. The public Research Watch hub, November bulletin and homepage returned snapshots that did not yet show the new Series II item. Therefore the deployment is READY and the route is in the production build, but this release note does **not** claim that the article is confirmed live. The intended route is https://www.credonomics.in/research/watch/sgb-2020-21-series-ii-premature-redemption-price-november-2026.
+- The three RBI source URLs above were opened directly and verified. Because the article page could not be fetched publicly, its rendered source-link anchors could not be independently clicked from the live page.
+- Follow-up: re-check the public article, hub, November bulletin, homepage, sitemap and search after cache/edge propagation; only then mark public visibility verified.
