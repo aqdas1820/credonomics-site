@@ -12,30 +12,6 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
-    slug: 'sbi-card-google-pay-flex-pay-in-emi-rates-november-2026',
-    title: 'Google Pay Flex SBI: Pay in EMI rates vary by bureau-score band; eligible fee waiver',
-    summary: 'Only selected primary Google Pay Flex SBI cardholders are covered. From 12 November, published rate bands range from 10.25%–25.00% p.a.; eligible 18/24/36-month requests get a promotional processing-fee waiver.',
-    category: 'Credit cards', checkedAt: '2026-11-19', publishedAt: '2026-11-19', eventDate: '2026-11-12', dateLabel: 'Pay in EMI rates and promotional fee offer effective',
-    updateNote: '19 November: added the current issuer terms for this Google Pay Flex SBI-only Pay in EMI facility. The issuer states a 12 November effective date but does not separately state an announcement date.',
-    source: 'https://www.sbicard.com/en/pay-in-emi-tnc.page', sourceLabel: 'SBI Card: Pay in EMI terms for Google Pay Flex SBI cardholders', sourceLocation: 'Pay in EMI Terms & Conditions, clauses 1–3 (eligibility and eligible transactions), 6–8 (minimum and tenures), 11–13 (rate bands and processing-fee offer), 15–20 (EMI billing and payment obligations), and 31 (applicable GST).',
-    additionalSources: [{ url: 'https://www.sbicard.com/en/most-important-terms-and-conditions.page', label: 'SBI Card: current cardholder MITC for Minimum Amount Due and standard charges' }],
-    audience: 'Selected eligible Indian-resident primary holders of a valid Google Pay Flex SBI Credit Card using the Google Pay app. This is not a facility for every SBI Cardholder.',
-    facts: [
-      'SBI Card limits this Pay in EMI offer to selected Indian-resident customers with a valid and subsisting primary Google Pay Flex SBI Credit Card. The facility is available only through the Google Pay app; delinquent or otherwise ineligible customers and add-on cardholders are excluded.',
-      'Only eligible retail transactions from the latest bill can be converted. The minimum booking amount is ₹2,500, and the request window runs from bill generation until the upcoming payment due date. Previous-cycle transactions, cash, ongoing EMIs, excluded merchant categories, interest, fees, charges, GST and other card charges are excluded.',
-      'From 12 November 2026, the issuer lists annual interest-rate bands by bureau score: 700 or below, 19.25%–25.00%; 701–780, 16.00%–21.50%; above 780, 10.25%–16.00%. These are ranges, not a guaranteed rate for every customer. SBI Card says the offer uses the bureau score at launch and that rates and charges may change.',
-      'A promotional processing-fee waiver applies to eligible Pay in EMI service requests raised from 12 November 2026 for 18-, 24- and 36-month tenures. The 36-month option requires a booking amount of at least ₹30,000. For other tenures, the listed processing fee is 1% of the booking amount or ₹2,000, whichever is lower.',
-      'The waiver is not an interest-free offer. SBI Card says interest is charged on a reducing balance and the monthly EMI forms part of the Minimum Amount Due. The remaining statement amount must still be paid; unpaid dues can attract late-payment fees and standard finance charges under the cardholder MITC. Applicable taxes are separate.',
-    ],
-    actions: [
-      'If this offer appears for your eligible primary card in Google Pay, check the personalized annual rate, tenure, processing fee, GST and total repayment shown before confirming. Do not assume the lowest rate in a score band is your offered rate.',
-      'Check that the purchase is an eligible retail transaction in the latest bill, is at least ₹2,500 and is still within the bill-generation-to-payment-due-date window. Earlier-cycle transactions, cash, ongoing EMIs and excluded charges are not eligible.',
-      'For an 18-, 24- or 36-month request, confirm that the service request is raised on or after 12 November and that the processing-fee waiver is shown at booking. For 36 months, confirm the booking amount is at least ₹30,000.',
-      'Continue paying the remaining statement amount and each EMI by its due date. Compare the total interest and taxes with paying the purchase in full; a processing-fee waiver does not remove interest.',
-    ],
-    limits: 'Checked: 19 November 2026. SBI Card states that the rate bands and promotional processing-fee waiver take effect from 12 November 2026; the page does not separately state an announcement date. This offer is limited to selected eligible Indian-resident primary Google Pay Flex SBI Credit Cardholders using Google Pay, not all SBI cards or all Flexipay bookings. The rate bands are ranges and the issuer may revise rates and charges. The fee waiver is promotional and limited to eligible 18-, 24- and 36-month requests; the 36-month option has a ₹30,000 minimum booking amount. No card-ranking formula or normalized card valuation is changed.',
-  },
-  {
     slug: 'sgb-2020-21-series-ii-premature-redemption-price-november-2026',
     title: 'SGB 2020–21 Series II: ₹13,345 per unit for 19 November premature redemption',
     summary: 'RBI announced the price on 18 November. The request window for this tranche closed on 9 November.',
