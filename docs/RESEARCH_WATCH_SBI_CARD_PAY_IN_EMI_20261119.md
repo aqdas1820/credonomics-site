@@ -1,63 +1,54 @@
-# Research Watch publication · Google Pay Flex SBI Pay in EMI · 19 November 2026
+# Research Watch correction · SBI Card Pay in EMI terms · 19 November 2026
 
-## Verified update
+## Withdrawal and HOLD decision
 
-- New guide: [Google Pay Flex SBI Pay in EMI rates and processing-fee waiver](https://www.credonomics.in/research/watch/sbi-card-google-pay-flex-pay-in-emi-rates-november-2026).
-- Affected audience: selected eligible Indian-resident primary holders of a valid Google Pay Flex SBI Credit Card who can access the offer through the Google Pay app. This is not a facility for every SBI Cardholder.
+The Google Pay Flex SBI Pay in EMI guide added in content PR #125 is withdrawn from the public Research Watch feed because the current issuer source conflicts with the earlier captured version used for that guide. No rate or processing-fee claim is being republished until SBI Card provides a dated clarification or a stable, reconcilable notice.
+
 - Checked: 19 November 2026.
-- Effective date stated by SBI Card: 12 November 2026.
-- Separate announcement/publication date: not stated on the issuer terms page.
-- The issuer's current terms list bureau-score-based annual rate bands of 19.25%–25.00% for scores of 700 or below, 16.00%–21.50% for 701–780, and 10.25%–16.00% above 780.
-- Eligible Pay in EMI service requests raised from 12 November for 18-, 24- and 36-month tenures receive a promotional processing-fee waiver. The 36-month option requires a booking amount of at least ₹30,000. Other tenures carry a processing fee of 1% of booking amount or ₹2,000, whichever is lower.
-- The guide explicitly states that this is not interest-free: interest is charged on a reducing balance, and the EMI forms part of the Minimum Amount Due. It also retains the latest-bill-only, ₹2,500 minimum, Google Pay-only, primary-cardholder-only and selected-customer restrictions.
+- Current official source: https://www.sbicard.com/en/pay-in-emi-tnc.page
+- Separate announcement/revision date: not stated.
+- SBI Card's currently accessible page states, in clauses 11–12, that from 11 September 2026 the annual rates are 22.00%–26.00% for bureau scores of 700 or below, 16.50%–19.50% for 701–780, and 10.00%–16.00% above 780. It states a promotional processing-fee waiver for 24- and 36-month bookings from 11 September; other tenures carry 1% of booking amount or ₹2,000, whichever is lower.
+- An earlier captured version of the same issuer URL during this review displayed a different effective date and different rate/waiver terms (12 November 2026; different score bands; 18-, 24- and 36-month fee waiver). The current customer-notices page did not provide a dated Pay in EMI notice that reconciles the two versions.
+- Because the issuer has not supplied a dated revision record or separate notice explaining the difference, neither version is treated as a verified change. The item is on HOLD and removed from the public data feed. The current 11 September wording is recorded here for audit only, not as a new consumer update.
 
-## Primary sources
+## Stable product-specific context (audit only)
 
-1. SBI Card, Pay in EMI Terms & Conditions (clauses 1–3, 6–8, 11–13, 15–20 and 31):  
+The currently accessible terms page describes this as a select-customer offer for Indian residents with a valid primary Google Pay Flex SBI Credit Card, available only through the Google Pay app. It excludes delinquent or otherwise ineligible cardholders and add-on cardholders, limits conversion to eligible retail transactions in the latest bill, sets a ₹2,500 minimum booking amount, and requires at least ₹30,000 for the 36-month tenure. These restrictions do not resolve the contradictory rate/fee clauses, so no public article is retained.
+
+## Primary sources checked
+
+1. SBI Card, Pay in EMI Terms & Conditions (current clauses 1–13 and 15–20):  
    https://www.sbicard.com/en/pay-in-emi-tnc.page
-2. SBI Card, Most Important Terms & Conditions:  
+2. SBI Card, Customer Notices:  
+   https://www.sbicard.com/en/customer-notices.page
+3. SBI Card, Most Important Terms & Conditions:  
    https://www.sbicard.com/en/most-important-terms-and-conditions.page
 
-The Pay in EMI page is the controlling product-specific source. The separate cardholder MITC is linked for Minimum Amount Due and standard charges. No competitor claim is used as evidence.
+The Pay in EMI terms page is the product-specific source. The customer-notices page did not surface a dated Pay in EMI revision. No competitor claim is used to resolve the discrepancy.
 
 ## Research and deduplication
 
-- Re-read current `app/data/research-watch.ts` on main. The five 24 October initial-batch items remain distinct and current:
-  - IDFC FIRST IndiGo international rewards: current issuer table and per-₹100 footnote clarify 1 BluChip per ₹100; no fixed rupee value is inferred.
-  - Amex November changes: current 15 November credit-card MITC and its product-specific wording remain in the existing guide; no refund eligibility, process or timeline is inferred.
-  - HDFC Balanced Advantage Fund / HDFC Children’s Fund: Notice 1370 says the 9 November change is effective and the optional exit window closed on 6 November; fund-specific lock-in and unit exceptions remain.
-  - Tata Neu HDFC: the 19 November correction covers blocked/closed-card, reissue and variant-change exceptions; manual claims start 25 November.
-  - SBM ZET: the current secured-card MITC confirms the ZET-specific late-fee formula, three-day trigger, issuance-date cancellation window and separately dated rental/education charges.
-- The current main also already covers SBI Card's separate December transport/fuel fees; this Pay in EMI item is a different, product-specific facility and is not attached to those card-wide fee terms.
-- The current public homepage, Research Watch hub, November bulletin and Cards directory were inspected. The public card directory lists 102 normalized cards; Google Pay Flex SBI is not a matching normalized card record or card detail page. No generic SBI card page is linked and no card-level ranking is changed.
-- NPCI's 11 November Vyapaar Saksham circular concerns acquiring-member/merchant acceptance incentives, not a new universal consumer UPI charge. RBI/SEBI searches did not establish another new consumer-actionable notice in this review window. Contradictory or legally incomplete items remain on HOLD.
-- Research Watch task `6adc4a968f4881919162894e39d400bc` was found, but its stored run result could not be read. Available prior conversation context, current repository publication records and fresh primary-source checks were used; no task result is inferred.
+- The 24 October initial batch was re-read against current files: IDFC IndiGo international rewards, Amex November MITC changes, HDFC Balanced Advantage/Children's Fund optional exit window, Tata Neu HDFC manual claims and SBM ZET fees. Existing product-specific exceptions remain; no duplicate updates were created.
+- The separate SBI Card December transport/fuel-fee guide is unrelated and remains unchanged.
+- NPCI's 11 November Vyapaar Saksham circular concerns merchant/acquiring-member acceptance incentives, not a new universal consumer UPI charge. RBI/SEBI searches did not establish another new consumer-actionable notice in this review window. Contradictory or legally incomplete items remain on HOLD.
+- Research Watch task `6adc4a968f4881919162894e39d400bc` was found, but its stored run result could not be read. Available prior conversation context, current repository records and fresh primary-source checks were used; no task result is inferred.
 
-## Data-driven integration and safeguards
+## Repository correction and safeguards
 
-- The guide is added to the existing `app/data/research-watch.ts` feed. Existing patterns generate the article route, homepage, Research Watch hub, November bulletin, search index and sitemap from this data.
-- No separate card detail page or navigation change is appropriate: there is no matching normalized Google Pay Flex SBI card entry, and the existing Research/Research Watch navigation already exposes the feed.
-- No ranking formulas, reward valuations, payments, authentication, customer/financial records, infrastructure, secrets, paid resources or automation schedules are changed. The daily 10 AM research report is left untouched. No external messages or comments are sent.
+- The SBI Pay in EMI record is removed from `app/data/research-watch.ts`. The existing data-driven homepage Research Watch brief, hub, November bulletin, search index and sitemap will regenerate without this item.
+- No generic SBI card page or normalized card record was changed; no card ranking formula or reward valuation was changed.
+- No payment flows, authentication, customer/financial records, infrastructure, secrets, paid resources or automation schedules are changed. The daily 10 AM research report is left untouched. No external messages or comments are sent.
 
-## Base and rollback
+## Release and rollback history
 
-- Exact pre-edit main SHA: `cdf7fad49982608e50464ba2fc3f2eb269606933`.
-- Rollback branch: `backup/pre-sbi-pay-in-emi-20261119` (created from that exact SHA).
-- Feature branch: `editorial/sbi-pay-in-emi-20261119`.
+- Original pre-article main SHA: `cdf7fad49982608e50464ba2fc3f2eb269606933`.
+- Original pre-article rollback branch: `backup/pre-sbi-pay-in-emi-20261119`.
+- Incorrect content PR #125 merged as `7be284f49be1362169d1514f5e955e9433acd6ee`; its Vercel production deployment was READY, but public visibility was not independently confirmed.
+- Release-evidence PR #127 merged as `522e92b6a7350385712054eb23901f8342719714`.
+- Exact pre-withdrawal main SHA: `522e92b6a7350385712054eb23901f8342719714`.
+- Withdrawal rollback branch: `backup/pre-withdraw-sbi-pay-in-emi-20261119`.
+- Withdrawal feature branch: `editorial/withdraw-sbi-pay-in-emi-20261119`.
 
-## Validation and production evidence
+## Validation
 
-- GitHub Actions validation run #44502229828: success.
-- Unit tests: 177 passed across 29 test files.
-- TypeScript: passed.
-- Production build: passed; generated 134 CredoNomics search entries and 335 static pages, including the new Research Watch article route, search route and sitemap route.
-- Vercel preview: READY, deployment `dpl_4Qmva9JBJfB83Est1fcd5hdpMuiV`, for feature head `05cac72d068439bd15d4d782844d0a493dac4186`.
-- Content PR #125 merged. Production commit: `7be284f49be1362169d1514f5e955e9433acd6ee`.
-- Vercel production: READY, deployment `dpl_5SuPgJGzpUEUpXqzSK14hEuF69Zy`, target `production`, project `prj_NXyFJfuc7NwEmp5ws9CASP33Ybg0`. Vercel resolves both `www.credonomics.in` and `credonomics.in` to this deployment; alias error is null.
-- The production build log lists the new article route. The search-index generator reports 134 entries and the build reports 335 static pages. The official SBI Card Pay in EMI terms and MITC URLs were independently opened.
-- **Public visibility remains unconfirmed.** The public Research Watch hub and November bulletin snapshots still returned the previous list without the new SBI guide. Direct fetches of the new article route returned an internal error; search and sitemap fetches were not accessible to the checker. A direct HTTP check from the execution environment failed at DNS resolution. The deployment and domain assignment are READY, but the public content could not be independently confirmed. Do not describe this guide as publicly live until the route and listing are fetched successfully.
-- Existing unrelated CSS/Autoprefixer and lint warnings are non-blocking; the build completed successfully.
-
-## Release state
-
-Repository publication is merged and the Vercel production deployment is READY. The public-route/listing verification blocker is recorded explicitly; no claim of public visibility is made.
+Withdrawal PR validation, preview build, merge, production deployment and post-deploy public-page verification are pending. The item must remain absent from the public feed until the source discrepancy is resolved.
