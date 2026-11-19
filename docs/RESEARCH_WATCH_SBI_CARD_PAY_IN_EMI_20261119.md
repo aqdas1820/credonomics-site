@@ -47,4 +47,17 @@ The Pay in EMI page is the controlling product-specific source. The separate car
 
 ## Validation and production evidence
 
-Pending review, tests, preview, merge, production deployment and public-page verification. This section will be completed only after those checks succeed.
+- GitHub Actions validation run #44502229828: success.
+- Unit tests: 177 passed across 29 test files.
+- TypeScript: passed.
+- Production build: passed; generated 134 CredoNomics search entries and 335 static pages, including the new Research Watch article route, search route and sitemap route.
+- Vercel preview: READY, deployment `dpl_4Qmva9JBJfB83Est1fcd5hdpMuiV`, for feature head `05cac72d068439bd15d4d782844d0a493dac4186`.
+- Content PR #125 merged. Production commit: `7be284f49be1362169d1514f5e955e9433acd6ee`.
+- Vercel production: READY, deployment `dpl_5SuPgJGzpUEUpXqzSK14hEuF69Zy`, target `production`, project `prj_NXyFJfuc7NwEmp5ws9CASP33Ybg0`. Vercel resolves both `www.credonomics.in` and `credonomics.in` to this deployment; alias error is null.
+- The production build log lists the new article route. The search-index generator reports 134 entries and the build reports 335 static pages. The official SBI Card Pay in EMI terms and MITC URLs were independently opened.
+- **Public visibility remains unconfirmed.** The public Research Watch hub and November bulletin snapshots still returned the previous list without the new SBI guide. Direct fetches of the new article route returned an internal error; search and sitemap fetches were not accessible to the checker. A direct HTTP check from the execution environment failed at DNS resolution. The deployment and domain assignment are READY, but the public content could not be independently confirmed. Do not describe this guide as publicly live until the route and listing are fetched successfully.
+- Existing unrelated CSS/Autoprefixer and lint warnings are non-blocking; the build completed successfully.
+
+## Release state
+
+Repository publication is merged and the Vercel production deployment is READY. The public-route/listing verification blocker is recorded explicitly; no claim of public visibility is made.
