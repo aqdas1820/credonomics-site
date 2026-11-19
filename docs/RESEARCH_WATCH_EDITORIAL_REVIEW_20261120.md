@@ -62,9 +62,20 @@ This is a staged editorial review, not a production release. The feature branch 
 - Providers may set reasonable charges; no universal fee or free-service claim is made.
 - Consumer-facing note: distinguish cash pay-in from cash pay-out; do not apply these DMT limits to UPI or card-to-card transfers.
 
+### SBM ZET — current MITC confirms the fee formula, not its effective date
+
+- Original publication date preserved: 24 October 2026
+- Rechecked: 20 November 2026
+- Affected audience: SBM ZET secured credit-card holders
+- Current official MITC: https://www.sbm.bank.in/pdf/terms-conditions/SBM-Secured-Credit-Card-T%26C.pdf
+- Verified: page 9, Table 08 lists 5% of Total Outstanding Due, minimum ₹50 and maximum ₹1,000 for SBM ZET. The same document says the fee is triggered when the account remains past due for more than 3 days and specifies Payment Due Date +3 days.
+- Other current ZET terms: page 7, Table 06 lists ₹499 cancellation within two years from card issuance (not activation); page 8, Table 07 lists 1% rental and 1% education transaction fees effective 15 July 2026.
+- Effective-date HOLD: the current MITC does not state an effective date for the 5% row. The previously recorded 23 October date is not independently verified in the current primary document and has been removed from the dated timeline. No effective date is asserted.
+- Product-specific scope: the MITC contains separate fee rows for SBM ZET and other co-brands; no blanket SBM fee change is inferred.
+
 ## Existing coverage rechecked
 
-The 24 October initial batch was re-read in the current repository data and public guides: IDFC IndiGo international rewards; Amex November changes; HDFC Balanced Advantage and Children’s Fund exit windows; Tata Neu HDFC manual NeuCoins claims; and SBM ZET fees. Existing product-specific exclusions and unresolved transition language remain in place. No duplicate article was added for those findings.
+The 24 October initial batch was re-read in the current repository data and public guides: IDFC IndiGo international rewards; Amex November changes; HDFC Balanced Advantage and Children’s Fund exit windows; Tata Neu HDFC manual NeuCoins claims; and SBM ZET fees. The SBM ZET current MITC confirms the 5% formula but does not state its effective date, so the previously recorded 23 October date is now HOLD. Existing product-specific exclusions and unresolved transition language remain in place. No duplicate article was added for those findings.
 
 The 29 October Research Watch automation result remains the latest recorded task result. The Research Watch task is disabled. Its 29 October SEBI Direct Plan default finding remains HOLD: the official SEBI speech page is available, but the linked original PDF timed out during this review and no implementing circular was independently verified. No claim is promoted from HOLD.
 
