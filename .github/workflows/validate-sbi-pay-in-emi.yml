@@ -1,0 +1,26 @@
+name: Temporary SBI Pay in EMI validation
+on:
+  pull_request:
+    branches:
+      - validation/base-sbi-pay-in-emi-20261119
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run actions/checkout@v4
+        uses: actions/checkout@v4
+      - name: Run actions/setup-node@v4
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Run npm ci
+        run: npm ci
+      - name: Run npm test -- --reporter=dot
+        run: npm test -- --reporter=dot
+      - name: Run npm run typecheck
+        run: npm run typecheck
+      - name: Run npm run build
+        run: npm run build
