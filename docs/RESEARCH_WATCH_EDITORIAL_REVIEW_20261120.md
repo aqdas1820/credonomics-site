@@ -49,6 +49,19 @@ This is a staged editorial review, not a production release. The feature branch 
 - Taj milestone: the product page says customers becoming eligible for the yearly milestone from 1 December with ₹12 lakh in card-anniversary-year spend become eligible for Taj Preferred, including a complimentary night at selected hotels.
 - Limitations: merchant currency conversion may still affect the total; existing Taj memberships and pre-cutoff milestone transitions remain unverified. No reward valuation or ranking formula is changed.
 
+### RBI Domestic Money Transfer Directions — no new limits
+
+- Original publication date preserved: 11 November 2026
+- Rechecked: 20 November 2026
+- Announcement and effective date: 11 November 2026; effective immediately
+- Affected audience: people using DMT cash pay-in or cash pay-out services, including bank branches, Business Correspondents and ATMs
+- Current official Directions: https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13752&Mode=0
+- Earlier official circulars checked: https://rbi.org.in/scripts/FS_Notification.aspx?Id=6750&Mode=0&fn=9 and https://rbi.org.in/scripts/FS_Notification.aspx?Id=12707&Mode=0&fn=9
+- Correction: the 2011 circular already set the ₹10,000 per transaction / ₹25,000 monthly cash pay-out cap and the ₹5,000 per transaction / ₹25,000 monthly BC/ATM cash pay-in cap. The 2024 review expressly retained all other 2011 instructions, including transaction limits. The 11 November 2026 Directions repeat those limits and repeal the two earlier circulars. This is a consolidation, not a limit hike.
+- Branch walk-in NEFT remains up to ₹50,000. Cash pay-in through BCs/ATMs remains ₹5,000 per transaction and ₹25,000 per month per remitter. Card-to-card transfers remain outside this DMT framework.
+- Providers may set reasonable charges; no universal fee or free-service claim is made.
+- Consumer-facing note: distinguish cash pay-in from cash pay-out; do not apply these DMT limits to UPI or card-to-card transfers.
+
 ## Existing coverage rechecked
 
 The 24 October initial batch was re-read in the current repository data and public guides: IDFC IndiGo international rewards; Amex November changes; HDFC Balanced Advantage and Children’s Fund exit windows; Tata Neu HDFC manual NeuCoins claims; and SBM ZET fees. Existing product-specific exclusions and unresolved transition language remain in place. No duplicate article was added for those findings.
@@ -62,11 +75,11 @@ The existing `researchWatch` data source drives the article route, Research Watc
 ## Validation and release gate
 
 - Current production before this review: Vercel READY on `bd150f3c5c39827a45eaaf6a24e0e4acd95fe615`.
-- Vercel preview build for this feature branch: pending.
+- Vercel preview build for the feature commit `8fb9e540fdd6bff2055d85aac04e723f5a87393e`: READY. The Next.js production build completed, generated 338 static pages and 135 search entries, and ran its built-in lint/type-validity check.
 - Unit tests: not run. The existing GitHub Actions workflows are path-scoped; none covers `app/data/research-watch.ts` or this editorial review.
 - Standalone TypeScript command: not run. Local repository clone is blocked by DNS resolution failure for `github.com`; creating a new paid sandbox or changing project build settings was avoided.
-- Production build: not yet run for this branch; the Vercel preview will exercise the existing build pipeline. A successful build is not a substitute for the missing unit-test result.
-- PR is intentionally draft. Do not merge or deploy until unit tests and standalone TypeScript validation can be completed without changing infrastructure or paid resources.
+- Production build: completed on the Vercel preview. The Next.js build log includes `Linting and checking validity of types`; the build completed successfully. Standalone `npm run typecheck` was not run. The preview URL could not be fetched by the public-page checker, so preview article/hub/bulletin/sitemap visibility is not independently confirmed. A successful build is not a substitute for the missing unit-test result.
+- Draft PR #131 is intentionally not merged. Do not merge or deploy until unit tests can be completed without changing infrastructure or paid resources; TypeScript validity was checked as part of the successful Next.js build.
 
 ## Safeguards
 
