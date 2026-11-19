@@ -1477,25 +1477,25 @@ export const researchWatch: WatchItem[] = [
   },
   {
     slug: 'sbm-zet-late-fee-october-2026',
-    title: 'SBM ZET: late-payment fee becomes balance-linked',
-    summary: 'Current MITC confirms 5% of Total Outstanding Due (minimum ₹50, maximum ₹1,000); a separate 1% rental and education fee is also listed.',
-    category: 'Credit cards', publishedAt: '2026-10-24', checkedAt: '2026-11-19', eventDate: '2026-10-23', dateLabel: 'Late-fee change effective',
-    updateNote: '19 November: re-read the current official SBM Secured Credit Card MITC. It confirms the ZET late fee of 5% of Total Outstanding Due (minimum ₹50, maximum ₹1,000), plus GST, and the more-than-3-days-past-due trigger. It lists ₹499 cancellation fee within two years from card issuance date (not activation) and separately lists 1% rental and 1% education fees effective 15 July 2026. No newer late-fee change found; replaced the older inaccessible URL with the current official PDF.',
-    source: 'https://www.sbm.bank.in/pdf/terms-conditions/SBM-Secured-Credit-Card-T%26C.pdf', sourceLabel: 'SBM Bank: Secured Credit Card MITC & Cardholder Member Agreement', sourceLocation: 'Page 9, Table 08 and late-payment trigger; page 7, Table 05 (card cancellation fee); page 8, Table 07 (rental and education fees).',
+    title: 'SBM ZET: current MITC lists 5% late fee; effective date not stated',
+    summary: 'The current official MITC lists 5% of Total Outstanding Due, minimum ₹50 and maximum ₹1,000. It does not state an effective date for this ZET row.',
+    category: 'Credit cards', publishedAt: '2026-10-24', checkedAt: '2026-11-20', eventDate: '2026-11-20', dateLabel: 'Current MITC checked; effective date not stated', statusLabel: 'Clarification checked',
+    updateNote: '20 November correction: the current official MITC confirms the ZET-specific 5% late-fee formula and the more-than-3-days-past-due trigger. The MITC does not state an effective date for the 5% row, so the earlier 23 October date is no longer presented as independently verified. The same MITC lists a ₹499 cancellation fee within two years from card issuance (not activation) and 1% rental and education fees effective 15 July 2026.',
+    source: 'https://www.sbm.bank.in/pdf/terms-conditions/SBM-Secured-Credit-Card-T%26C.pdf', sourceLabel: 'SBM Bank: Secured Credit Card MITC & Cardholder Member Agreement', sourceLocation: 'Page 9, Table 08 (SBM ZET late-fee row) and the more-than-3-days-past-due trigger; page 7, Table 06 (cancellation fee); page 8, Table 07 (rental and education fees).',
     audience: 'SBM ZET secured credit-card holders.',
     facts: [
-      'The 23 October 2026 notice changed the ZET late fee from a flat ₹299 to 5% of Total Outstanding Due, subject to a ₹50 minimum and ₹1,000 maximum. GST applies. The current MITC Table 08 confirms the same ZET fee row.',
-      'The current MITC says late-payment charges are levied only when the statement outstanding remains past due for more than 3 days. It applies if no payment or a payment below the Minimum Amount Due is received by Payment Due Date +3 days; the fee is computed from the payment due date.',
-      'The current MITC Table 05 lists a ₹499 card-cancellation fee if the SBM ZET card is cancelled within 2 years from the card issuance date. This is measured from issuance, not activation.',
-      'Separately, effective 15 July 2026, the current MITC lists a 1% transaction fee on eligible rental payments using SBM ZET and a 1% fee on eligible education payments using SBM ZET. GST applies to these fees too.',
-      'Other SBM card variants have different late-fee and transaction-fee rows; the ZET terms must not be generalized to every SBM co-brand.'
+      'The current official MITC Table 08 specifically lists SBM ZET late-payment charges at 5% of Total Outstanding Due, subject to a ₹50 minimum and ₹1,000 maximum. GST applies. The current MITC table does not state the effective date for this row.',
+      'The current MITC says late-payment charges apply when the statement outstanding remains past due for more than 3 days. The trigger is no payment or a payment below the Minimum Amount Due by Payment Due Date +3 days; the fee is computed from the payment due date and charged on the outstanding amount.',
+      'The current MITC Table 06 lists a ₹499 card-cancellation fee if the SBM ZET card is cancelled within 2 years from the card issuance date. This is measured from issuance, not activation.',
+      'Effective 15 July 2026, the current MITC Table 07 lists a 1% transaction fee on eligible rental payments using SBM ZET and a 1% fee on eligible education payments using SBM ZET. GST applies to these fees too.',
+      'Other SBM card variants have different late-fee and transaction-fee rows; the ZET terms must not be generalized to every SBM co-brand.',
     ],
     actions: [
       'To avoid a late fee, ensure at least the Minimum Amount Due is received by Payment Due Date +3 days; check the exact due date on your statement. Paying only the minimum can still incur interest if the Total Amount Due remains unpaid.',
       'Before closing the card, check its issuance date; the current MITC lists a ₹499 cancellation fee if it is cancelled within 2 years of issuance.',
-      'Before rental or education payments, check the merchant category and account statement; the current ZET schedule lists a separate 1% fee plus GST.'
+      'Before rental or education payments, check the merchant category and account statement; the current ZET schedule lists a separate 1% fee plus GST.',
     ],
-    limits: 'Checked 19 November 2026. The current MITC confirms the ZET late-fee formula and more-than-3-days-past-due trigger, but does not state a separate effective date for the 5% row; 23 October is retained from the earlier notice record. The 1% rental and education fees are separately effective 15 July 2026. The cancellation window is measured from card issuance, not activation. Applies to SBM ZET only; other SBM variants differ. No blanket fee change is inferred.'
+    limits: 'Checked 20 November 2026. The current official MITC confirms the ZET-specific 5% late-fee formula and more-than-3-days-past-due trigger, but does not state an effective date for the 5% row. The previously recorded 23 October date is not independently verified in the current primary document and is not asserted here. The 1% rental and education fees are separately effective 15 July 2026. The cancellation window is measured from card issuance, not activation. Applies to SBM ZET only; other SBM variants differ. No blanket fee change is inferred.',
   },
 ]
 
