@@ -42,9 +42,14 @@ Editorial content only. No card-ranking formulas, reward valuations, payments, a
 
 ## Validation and release evidence
 
-- Unit tests: pending.
-- TypeScript: pending.
-- Production build and generated search-index count: pending.
-- Vercel preview and production deployment: pending.
-- Public article, homepage, Research Watch, both monthly bulletins, Tata Neu Plus/Infinity card pages, search, sitemap and official source-link verification: pending.
-- Pull request, merge commit and rollback verification: pending.
+- Unit tests: **177 passed across 29 files**. GitHub Actions run [#44425138397](https://github.com/aqdas1820/credonomics-site/actions/runs/44425138397) completed successfully on validation branch `validation/tata-neu-claim-exceptions-20261119`; it tested the same application content as the reviewed feature branch.
+- TypeScript: **passed**.
+- Production build: **passed**. The build generated **133 CredoNomics search entries** and **334 static pages**, including the Research Watch dynamic route, October and November bulletins, `/search`, and `/sitemap.xml`.
+- Vercel preview: **READY**, deployment `dpl_86pRndXEK9AhqmLnM5xH8sJ4CPMj`, for feature-branch head `cbc189ad2ed774e858edd06b462e6065e02bf0cd`.
+- Content PR: [#123](https://github.com/aqdas1820/credonomics-site/pull/123), merged 19 November 2026. Merge commit and production `main` SHA: `943558bb4f8f95ead8f0a12a1e03588899d45635`.
+- Vercel production: **READY**, deployment `dpl_AYoeTGJPT5zX7M5PZJzwrpZNeSpp`, serving the merged commit with aliases `www.credonomics.in` and `credonomics.in`. Build completed; existing non-blocking lint, image and Autoprefixer warnings in unrelated files remain.
+- Rollback branch `backup/pre-tata-neu-claim-exceptions-20261119` was rechecked and points exactly to the pre-edit main SHA `4a55849666151dc77350d295252762036ec1737a`.
+- Public pages verified: [the Tata Neu guide](https://www.credonomics.in/research/watch/tata-neu-hdfc-manual-neucoins-claims-november-2026) (the trailing-slash request redirected to the canonical route and displayed the 19 November correction), [homepage](https://www.credonomics.in/), [Research Watch hub](https://www.credonomics.in/research/watch), [October bulletin](https://www.credonomics.in/updates/2026-10), [November bulletin](https://www.credonomics.in/updates/2026-11), [Tata Neu Plus card page](https://www.credonomics.in/cards/tata-neu-plus-hdfc), and [Tata Neu Infinity card page](https://www.credonomics.in/cards/tata-neu-infinity-hdfc). The guide shows the blocked/closed-card rule, reissue/variant transfer timing, and 19 November check date. The official [HDFC Bank claim PDF](https://www.hdfc.bank.in/kannada/content/dam/hdfcbankpws/in/en/pdfs/TataNeuCC_neucoins_Claim.pdf) was opened from the live article; its four pages support the published details.
+- Search and sitemap integration: build-time search generation reported 133 entries; `scripts/generate-search-index.mjs` reads `app/data/research-watch.ts`, and `app/sitemap.ts` adds every `researchWatch` slug. The web checker could not directly fetch the query-string search results or `/sitemap.xml`; their public endpoints are therefore not claimed as independently browser-verified in this run.
+- An earlier no-trailing-slash crawler snapshot of the guide showed the prior 16 November text; the trailing-slash canonical redirect returned the updated 19 November page. Homepage, hub, both bulletins and both card pages also returned the updated summary.
+- No ranking formula, reward valuation, payment/authentication flow, customer/financial record, infrastructure, secret, paid resource or automation schedule was changed. The daily 10 AM research report was left untouched. No external messages or comments were sent.
