@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-19'
+export const WATCH_CHECKED_AT = '2026-11-20'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,32 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+  {
+    slug: 'axis-select-district-movie-offer-spend-condition-november-2026',
+    title: 'Axis Select: District movie offer requires ₹25,000 eligible spend from 1 November',
+    summary: 'Axis says the Select card’s District offer now requires ₹25,000 in eligible spend in the preceding three calendar months; the offer remains capped at ₹250 off twice monthly.',
+    category: 'Credit cards', checkedAt: '2026-11-20', publishedAt: '2026-11-20', eventDate: '2026-11-01', dateLabel: 'Minimum eligible spend condition effective',
+    source: 'https://cug.axisbank.com/cards/credit-card/axis-bank-select-credit-card',
+    sourceLabel: 'Axis Bank: Select Credit Card official product page',
+    sourceLocation: 'Buy one get one offer on movie tickets; explicit 1 November 2026 effective-date line and ₹25,000 preceding-three-calendar-month spend condition',
+    additionalSources: [
+      { url: 'https://cug.axisbank.com/cards/credit-card/privilege-credit-card-with-unlimited-benefits', label: 'Axis Bank Privilege Credit Card official page: separate once-monthly District offer and ₹25,000 prior-three-calendar-month spend condition; no separate effective date stated on the page' },
+      { url: 'https://cug.axisbank.com/cards/credit-card/privilege-easy-credit-card', label: 'Axis Bank Privilege Easy Credit Card official page: separate once-monthly District offer and ₹25,000 prior-three-calendar-month spend condition; no separate effective date stated on the page' },
+    ],
+    audience: 'Existing Axis Bank Select Credit Card holders who use the District app movie-ticket offer.',
+    facts: [
+      'Axis Bank’s Select card page says that from 1 November 2026 access to the District movie offer is subject to minimum eligible spend of ₹25,000 in the preceding three calendar months.',
+      'The Select offer is a 100% discount on the second movie ticket, up to ₹250 off, twice per month, using the code AXISSELECT. The discount is capped; it is not a guaranteed ₹250 saving on every booking.',
+      'Axis Bank’s separate Privilege and Privilege Easy product pages also show a ₹25,000 spend condition in the previous three calendar months, but each page lists the offer as once per month and does not state the same 1 November effective date. Those product-specific terms are not treated as part of the dated Select notice.',
+      'The Select page does not define which transaction categories count as eligible spend or state a new-card exception. Do not assume every card transaction qualifies or that newly issued cards are exempt.',
+    ],
+    actions: [
+      'Before booking, check the eligible spend total for the preceding three calendar months on the Select card and confirm the offer is available in the District app. Use AXISSELECT only where the issuer’s offer terms show it applies.',
+      'If the card is newly issued, replaced or recently upgraded, or if a transaction category is unclear, ask Axis which transactions count and whether any transition exception applies; the product page does not specify one.',
+      'If holding Privilege or Privilege Easy instead, check that product’s own page and offer frequency. Do not apply the Select twice-monthly cap to those variants.',
+    ],
+    limits: 'Checked 20 November 2026. The Select product page gives 1 November 2026 as the effective date but does not separately state an announcement date. This dated statement is specific to Axis Select. Privilege and Privilege Easy product pages separately display the ₹25,000/three-calendar-month condition but do not state the same effective date and list a once-monthly offer. Axis does not define eligible-spend categories or new-card transition treatment on the pages checked. No before/after spend threshold is asserted and no card-ranking formula is changed.',
+  },
   {
     slug: 'sbi-card-google-pay-flex-pay-in-emi-rates-november-2026',
     title: 'Google Pay Flex SBI: Pay in EMI rates vary by bureau-score band; eligible fee waiver',
@@ -447,27 +473,30 @@ export const researchWatch: WatchItem[] = [
   },
   {
     slug: 'roarbank-emi-foreclosure-fee-november-2026',
-    title: 'Roarbank credit card: EMI foreclosure fee rises to 3% on 21 November',
-    summary: 'The fee for closing a standard or Partner EMI early rises from 2% to 3% of the remaining principal, plus applicable GST.',
-    category: 'Credit cards', checkedAt: '2026-11-16', eventDate: '2026-11-21', dateLabel: 'Revised EMI foreclosure fee effective',
+    title: 'Roarbank credit card: 3% EMI foreclosure fee starts on 21 November',
+    summary: 'The dated KFS and MITC set 3% of remaining principal plus GST from 21 November; the current tariff page already displays 3% but gives no effective date.',
+    category: 'Credit cards', checkedAt: '2026-11-20', publishedAt: '2026-11-16', eventDate: '2026-11-21', dateLabel: 'Revised EMI foreclosure fee effective',
+    updateNote: '20 November: the current tariff page now displays 3%, not 2%. The September KFS and MITC still specify that 3% takes effect on 21 November for both Standard EMI and Partner EMI. No request-versus-processing transition rule is published.',
     source: 'https://roar.unity.bank.in/doc/Key%20Fact%20Sheet%20Roarbank.pdf',
     sourceLabel: 'Unity Small Finance Bank: Roarbank credit card Key Fact Statement',
-    sourceLocation: 'September 2026 edition, dated rows for EMI and Partner EMI foreclosure fees',
+    sourceLocation: 'Pages 3–4, standard EMI and Partner EMI foreclosure fee rows; both show the 21 November 2026 effective date',
     additionalSources: [
-      { url: 'https://roar.unity.bank.in/doc/MITC%20Credit%20card.pdf', label: 'Roarbank credit card MITC: standard EMI Early Closure and Partner EMI Foreclosure' },
-      { url: 'https://roar.unity.bank.in/en/tariffs', label: 'Roarbank tariff overview, which still shows the 2% rate at the check date' },
+      { url: 'https://roar.unity.bank.in/doc/MITC%20Credit%20card.pdf', label: 'Roarbank MITC: standard EMI early closure and Partner EMI foreclosure clauses, including the 21 November rate and no-partial-prepayment rule' },
+      { url: 'https://roar.unity.bank.in/en/tariffs', label: 'Current Roarbank tariff page: displays a 3% early-repayment/foreclosure fee but does not state its effective date' },
     ],
     audience: 'Unity Small Finance Bank Roarbank credit card holders considering early closure of a standard or Partner EMI plan.',
     facts: [
-      'The dated Key Fact Statement and MITC put the 3% fee into effect on 21 November 2026. The earlier rate is 2%. Both percentages are applied to the remaining principal at foreclosure. GST applies to the fee.',
-      'The MITC requires full prepayment of the remaining principal for early closure. Partial prepayments are unavailable for both plan types.',
-      'The tariff overview still listed 2% when checked on 16 November. The dated credit-card documents specify when the new rate starts.',
+      'The September 2026 KFS and MITC show the earlier 2% fee and a separate 3% fee effective 21 November 2026 for both standard EMI and Partner EMI. The fee is calculated on principal outstanding at foreclosure; applicable GST is additional.',
+      'The MITC says partial prepayments are not permitted for standard EMI or Partner EMI. Early closure requires payment of the remaining principal and the applicable foreclosure fee and tax.',
+      'As checked on 20 November, the current public tariff page displays 3% for early repayment/foreclosure but does not state when the revised rate starts. The dated KFS and MITC specify 21 November.',
+      'The documents do not say whether a request submitted before 21 November but processed on or after that date uses the request date or processing date.',
     ],
     actions: [
-      'Ask Roarbank for the total foreclosure quote, including the remaining principal, fee and GST. Compare it with the remaining instalments before deciding.',
-      'If you are near 21 November, confirm the date Roarbank will use for foreclosure and the rate in your quote before paying.',
+      'If planning an early closure on or around 21 November, request a written payoff quote from Roarbank that itemizes remaining principal, foreclosure fee and GST.',
+      'Ask Roarbank to confirm which date controls if a request is submitted before 21 November but processed afterwards; do not infer the transition rule from the tariff page alone.',
+      'Compare the quoted early-closure amount with the remaining scheduled instalments before deciding.',
     ],
-    limits: 'The change was upcoming when checked on 16 November. The Key Fact Statement identifies a September 2026 edition without an exact announcement date. The documents give no cutoff hour or clear treatment for requests submitted before 21 November and processed later.',
+    limits: 'Checked 20 November 2026. The dated KFS and MITC set the 3% fee effective date as 21 November; a separate announcement date is not stated. The current tariff page already displays 3% but has no effective date. The issuer documents do not resolve request/processing cutoff treatment. No fee is calculated here for an individual account.',
   },
   {
     slug: 'motilal-oswal-seven-schemes-100-monthly-sip-november-2026',
@@ -491,24 +520,30 @@ export const researchWatch: WatchItem[] = [
   },
   {
     slug: 'au-zenith-plus-currency-markup-taj-december-2026',
-    title: 'AU Zenith+: currency markup, international rewards and Taj milestone change on 1 December',
-    summary: 'From 1 December AU lists a 0% currency markup, ends points on international spends and switches the yearly milestone to Taj Preferred.',
-    category: 'Credit cards', checkedAt: '2026-11-15', eventDate: '2026-12-01', dateLabel: 'Zenith+ changes effective',
-    source: 'https://www.au.bank.in/pdf/credit-card/Schedule-of-Charges-CC.pdf',
-    sourceLabel: 'AU Small Finance Bank: credit card Key Fact Statement',
-    sourceLocation: 'Page 5, foreign currency and dynamic or static conversion markup table, updated 2 November 2026',
-    additionalSources: [{ url: 'https://www.au.bank.in/premium-banking/credit-cards/zenith-plus-credit-card', label: 'AU Small Finance Bank: dated Zenith+ rewards and Taj milestone footnotes' }],
-    audience: 'AU Zenith+ Credit Card holders planning overseas spending or approaching the yearly Taj milestone.',
+    title: 'AU Zenith+: 0% forex markup and Taj Preferred milestone from 1 December; reward change unverified',
+    summary: 'AU’s 2 November MITC sets 0% issuer currency markup from 1 December. Its current product page still advertises up to 2 points per ₹100 on international spends, so a reward removal is not verified.',
+    category: 'Credit cards', checkedAt: '2026-11-20', publishedAt: '2026-11-15', eventDate: '2026-12-01', dateLabel: 'Zenith+ markup and milestone changes effective',
+    updateNote: '20 November correction: the current AU product page still advertises up to 2 Reward Points per ₹100 on dining, travel and international spends. The earlier claim that international spends stop earning points from 1 December is not supported by the current official product page or the 2 November MITC and is removed. No reward devaluation is claimed.',
+    source: 'https://www.au.bank.in/as/as/SOC_CC-MITC%28with-Schedule-of-Charges%29.pdf',
+    sourceLabel: 'AU Small Finance Bank: Most Important Terms and Conditions, version 2.23 dated 2 November 2026',
+    sourceLocation: 'Foreign-currency transaction and dynamic/static conversion markup table; Zenith+ is listed at 0% effective 1 December 2026',
+    additionalSources: [
+      { url: 'https://www.au.bank.in/premium-banking/credit-cards/zenith-plus-credit-card', label: 'AU Zenith+ official product page: current reward wording and 12 lakh yearly milestone/Taj Preferred footnote' },
+    ],
+    audience: 'AU Zenith+ credit card holders planning international transactions or approaching the ₹12 lakh yearly milestone.',
     facts: [
-      'AU’s charges table lists 0.99% for Zenith+ and places Zenith+ in the 0% row from 1 December 2026. This is the issuer’s markup. A merchant’s own currency conversion may still affect the total price.',
-      'AU’s reward details list 2 points per ₹100 of eligible international spend before the change. The dated footnote says international spends stop earning reward points from 1 December.',
-      'AU says cardholders who qualify for the yearly milestone from 1 December by spending at least ₹12 lakh in their card anniversary year become eligible for Taj Preferred instead of Taj Epicure. AU describes a complimentary night at selected hotels.',
+      'AU’s 2 November 2026 MITC lists 0.99% for Zenith+ in the current markup row and places Zenith+ in the 0% row effective 1 December 2026. This is the issuer’s currency markup; a merchant’s own conversion or dynamic currency conversion can still affect the total price.',
+      'AU’s current product page continues to advertise up to 2 Reward Points per ₹100 on dining, travel and international spends. The official sources checked on 20 November do not show a dated removal of international reward points from 1 December, so the earlier claim of a reward stop is withdrawn.',
+      'The product page says customers who become eligible for the yearly milestone from 1 December by spending at least ₹12 lakh in their card-anniversary year become eligible for Taj Preferred membership, which includes a complimentary night at selected hotels.',
+      'The product page does not explain how existing Taj memberships or customers who crossed the yearly milestone before 1 December will be treated.',
     ],
     actions: [
-      'Check that your card is Zenith+. When comparing costs for a December purchase, allow for the loss of points and compare the actual currency and exchange rate shown at checkout.',
-      'If you are close to the milestone, check your card anniversary date and qualifying spend with AU. Ask AU which benefit applies if a purchase posts around the cutoff, or if you already qualified.',
+      'Check that the card is Zenith+. From 1 December, compare the merchant’s displayed currency and any conversion option as well as the issuer markup; 0% issuer markup does not remove merchant conversion costs.',
+      'Do not assume international reward points stop on 1 December. Check the current reward terms for the exact card variant and transaction category before relying on a points estimate.',
+      'If a transaction or milestone falls close to 1 December, ask AU which date controls and how it treats customers who already qualified; the current product page does not specify the transition rule.',
+      'If approaching ₹12 lakh, check the card-anniversary year and eligible net retail spend with AU before relying on the Taj Preferred benefit.',
     ],
-    limits: 'The changes were upcoming when checked on 15 November. The charges document was updated on 2 November. Separate announcement dates for the product-page footnotes were not established. Treatment of existing Taj memberships and transactions posting near the cutoff remains unverified.',
+    limits: 'Checked 20 November 2026. MITC version 2.23 is dated 2 November and lists the Zenith+ 0% issuer markup effective 1 December; a separate announcement date is not stated. The current product page still advertises up to 2 points per ₹100 on dining, travel and international spends, and no dated removal of international rewards was found in the official sources checked. The issuer markup is not the same as merchant currency conversion. Existing Taj membership and pre-cutoff milestone transition treatment remain unverified. No reward valuation or card-ranking formula is changed.',
   },
   {
     slug: 'bobcard-onecard-late-payment-slabs-october-2026',
