@@ -62,4 +62,49 @@ Editorial content only. Payments, authentication, customer/financial records, in
 
 ## Release verification
 
-Pending: reviewed PR, Vercel preview build, unit tests, TypeScript, production build, production merge/deployment, public route verification and exact production commit evidence.
+**Production publication completed and independently verified.**
+
+- Content PR: [#138](https://github.com/aqdas1820/credonomics-site/pull/138) — merged 20 November 2026.
+- Content merge / production commit: `a6fe88c91bf8b9d3f2b190ed83477e3eca0abc1b`.
+- Production Vercel deployment: `dpl_A5vb5y9dHX5CrZWVbV8MmmBhAx1j` — **READY**.
+- Production deployment URL: https://vercel.com/aqdasshaikh1820-9566s-projects/credonomics-site/A5vb5y9dHX5CrZWVbV8MmmBhAx1j
+- Preview deployment for the reviewed final PR head: `dpl_AgVGMaNPGo1TfSuHqj5sk9zMwdR5` — **READY**; the preview article and integration routes were checked before merge.
+- Unit tests: **177 passed across 29 test files**.
+- TypeScript: `tsc --noEmit --pretty false` completed successfully.
+- Production build: Next.js build completed successfully; existing CSS autoprefixer and lint warnings were non-blocking and unrelated to the editorial data change.
+- Build-time search-index generator: **139 entries**.
+- Static pages generated: **342**.
+
+### Production URL checks
+
+Direct production-domain fetches returned **HTTP 200** for each route below. The article body included the RBI penalty amount, Fusion grievance email, express limitation on customer transaction/agreement validity and both full RBI source URLs.
+
+- Article: https://www.credonomics.in/research/watch/rbi-fusion-finance-penalty-internal-ombudsman-november-2026
+- Research Watch hub: https://www.credonomics.in/research/watch
+- November bulletin: https://www.credonomics.in/updates/2026-11
+- Homepage: https://www.credonomics.in/
+- Search page: https://www.credonomics.in/search?q=Fusion%20Finance
+- Sitemap: https://www.credonomics.in/sitemap.xml — contains the exact article URL.
+
+The Research Watch hub, November bulletin and homepage contain the new article title. The search-index generator ran successfully and the public search route returned HTTP 200. The generated search index is a build-time TypeScript artifact, not a separately exposed public JSON file; no claim is made that a standalone index URL was fetched.
+
+### Source-link verification
+
+The article’s full official source links were opened and checked:
+
+- RBI penalty release: https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64015
+- RBI NBFC Internal Ombudsman Directions, 2026: https://www.rbi.org.in/ScriptS/BS_ViewMasDirections.aspx?id=13274
+- Fusion Finance current customer-grievance page: https://fusionfin.com/customer-grievance/
+- RBI Complaint Management System: https://cms.rbi.org.in
+
+The Fusion grievance page displays two different toll-free number formats in different page areas. The article therefore links to the current official grievance page and does not reproduce a phone number. The verified customer-care email is `customercare@fusionfin.com`.
+
+### Final repository and rollback references
+
+- Pre-edit main SHA preserved: `5ab3f9e894377a087b1118c562c6570c9cf09dde`.
+- Content rollback branch: `backup/pre-fusion-finance-rbi-penalty-20261120-2125` — points to that exact pre-edit SHA.
+- Pre-evidence main SHA: `a6fe88c91bf8b9d3f2b190ed83477e3eca0abc1b`.
+- Release-evidence rollback branch: `backup/pre-fusion-finance-release-evidence-20261120-2142` — created from the exact pre-evidence SHA.
+- Release-evidence feature branch: `docs/fusion-finance-release-evidence-20261120-2142`.
+
+The current release-evidence update is documentation-only. No card ranking formula, payment, authentication, customer/financial record, infrastructure, secret, paid resource or automation schedule was changed.
