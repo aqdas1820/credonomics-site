@@ -12,6 +12,32 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'npci-upi-p2m-dispute-routing-december-2026',
+    title: 'UPI merchant disputes: NPCI changes bank routing from 23 December; timelines stay unchanged',
+    summary: 'NPCI will route most applicable UPI person-to-merchant disputes to the Payee PSP bank from 23 December. Listed exceptions remain with the beneficiary bank; existing resolution timelines and customer compensation are unchanged.',
+    category: 'Banking', checkedAt: '2026-11-20', publishedAt: '2026-11-20', announcementDate: '2026-11-04', eventDate: '2026-12-23', dateLabel: 'Revised UPI dispute routing implemented',
+    source: 'https://www.npci.org.in/uploads/UPI_URCS_OC_241_Revision_of_dispute_routing_logic_for_UPI_P2_M_transactions_in_URCS_1c6c076393.pdf',
+    sourceLabel: 'NPCI: UPI Operating Circular 241/2026–27 — revision of dispute routing for UPI P2M transactions',
+    sourceLocation: 'Pages 1–3: revised Payee PSP routing, timed-out transaction categories, unchanged dispute processes and implementation date; Annexures I–II: Payee PSP and beneficiary-bank routing lists.',
+    audience: 'People who pay merchants using UPI and may need to raise a person-to-merchant (P2M) transaction dispute. This is a bank-side URCS routing change, not a new UPI refund or complaint entitlement.',
+    facts: [
+      'NPCI circular UPI/OC No. 241/2026–27 is dated 4 November 2026 and is addressed to UPI members. It says the revised routing will be implemented in URCS from 23 December 2026.',
+      'For applicable UPI person-to-merchant disputes, the actioning/responding route moves to the Payee PSP bank instead of the Beneficiary Bank, across two-party, three-party and four-party transaction models. The circular also says the revised logic is implemented in UDIR and MyUPI.',
+      'The page-1 summary names these timed-out P2M dispute families for beneficiary-bank handling: Deferred Chargeback (reason code 121), Chargeback (reason code 108), Online Refunds, Negative Good Faith Chargeback, Transaction Credit Confirmation (TCC) and Complaint Raise. The detailed annexures then assign actioning and responding banks by dispute type, reason code, transaction model and UDIR applicability; the broad labels are not blanket consumer-level routing rules.',
+      'Annexures I and II contain separate Payee PSP and Beneficiary Bank tables. Online/UDIR Refund and Complaint Raise categories appear in both tables with code-specific bank roles, and the Beneficiary Bank annexure also lists TCC, representment, chargeback acceptance, complaint response and specific post-TAT good-faith / negative-chargeback / debit-adjustment entries. The circular is a member-bank routing specification; this guide does not infer which bank will handle an individual customer case from a broad label.',
+      'Two further routing exceptions are stated: disputes remain with the beneficiary bank when the Payee PSP field is blank for IFSC-and-account-number-based transactions, or when the Payee PSP entity is NPI (BHIM Services Limited).',
+      'NPCI says existing dispute processes, rules, timelines and obligations remain unchanged, including RBI-prescribed turnaround times, customer compensation and dispute-resolution timelines. The circular does not announce a new consumer refund process, refund eligibility rule or compensation amount.',
+      'Disputes and adjustments raised before 23 December 2026 remain unaffected and continue under the existing routing lifecycle.',
+    ],
+    actions: [
+      'No change to your UPI app or bank complaint channel is announced in this circular. If a merchant-payment dispute arises, continue following the existing complaint instructions shown by your bank or UPI app; do not contact a different bank solely because the internal routing changes.',
+      'Keep the UPI transaction ID, date, amount, merchant details and any existing complaint reference so the bank or app can identify the transaction.',
+      'If you raised a dispute or adjustment before 23 December 2026, NPCI says the existing routing remains applicable. The circular does not ask customers to re-file earlier disputes.',
+      'Do not treat this as a promise that a merchant payment will be refunded. The circular changes member-bank dispute routing; it does not change refund eligibility or customer-facing timelines.',
+    ],
+    limits: 'Checked 20 November 2026. NPCI issued the circular on 4 November and states an implementation date of 23 December 2026. Scope is UPI person-to-merchant (P2M) disputes in URCS, not person-to-person transfers. Timed-out dispute categories listed in the circular, blank Payee PSP field for IFSC/account-number transactions, and NPI (BHIM Services Limited) Payee PSP cases remain routed to the beneficiary bank. Disputes and adjustments raised before the effective date are unaffected. NPCI expressly says existing processes, RBI TATs, customer compensation and dispute-resolution timelines remain unchanged. The circular is addressed to UPI members and describes back-office routing. Page 1 gives high-level timed-out dispute families, while Annexures I and II provide code-by-code Payee PSP and Beneficiary Bank tables; Online/UDIR Refund and Complaint Raise entries appear in both annexures with different bank roles and UDIR applicability. The guide does not infer the route for an individual case from a broad dispute label. It does not establish a new consumer complaint channel, refund eligibility, refund process or additional compensation. No such entitlement is inferred.',
+  },
+  {
     slug: 'axis-select-district-movie-offer-spend-condition-november-2026',
     title: 'Axis Select: District movie offer requires ₹25,000 eligible spend from 1 November',
     summary: 'Axis says the Select card’s District offer now requires ₹25,000 in eligible spend in the preceding three calendar months; the offer remains capped at ₹250 off twice monthly.',
