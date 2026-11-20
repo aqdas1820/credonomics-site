@@ -88,13 +88,25 @@ The 29 October Research Watch automation result remains the latest recorded task
 - Current official rates page: https://www.jana.bank.in/interest-rates/
 - Retail FD notice: https://www.jana.bank.in/images/Notice/Interest-Rate-for-Domestic-NRE-NRO-Retail-Fixed-Deposits.pdf
 - RD notice: https://www.jana.bank.in/images/Notice/Notice-Revision-in-Interest-Rates-Recurring-Deposits.pdf
+- RD product page: https://www.jana.bank.in/deposits/recurring-deposit/
 - Deposit policy: https://www.jana.bank.in/images/policies/deposits-and-deposit-interest-policy.pdf
 - Premature-withdrawal notice: https://www.jana.bank.in/images/Notice/Revision-in-premature-withdrawal-penal-rate.pdf
 - Reconciliation: the current interest-rate page marks both retail FD and RD tables effective 6 November and matches the two notices dated 6 November. The FD table reaches 8.00% p.a. for general depositors and 8.30% for eligible resident seniors at 3 years. The RD table reaches the same rates at 36 months.
 - FD exceptions: senior rates are only for resident Indian customers aged 60 or above, with no premium for 7–180-day tenures; NRE deposits have a one-year minimum and earn no interest if liquidated before one year; NRO interest is taxable; Tax Saver FD is capped at ₹1.5 lakh, has a five-year lock-in and no senior premium. Retail FD premature closure carries a 1% penalty and no interest is paid for closure within seven days.
-- RD exceptions: minimum six-month tenure, ₹100 minimum monthly instalment in ₹100 multiples, five-day grace period, 1.5% delayed/missed-instalment penalty, possible closure after five consecutive missed instalments, 1% premature-withdrawal penalty and no interest for closure within 30 days.
+- RD exceptions: the separate RD product page and terms specify a six-month minimum, ₹100 minimum monthly instalment in ₹100 multiples, five-day grace period, 1.5% delayed/missed-instalment penalty, possible closure after five consecutive missed instalments, 1% premature-withdrawal penalty and no interest for closure within 30 days. The rate table also displays 1–6 month bands, but those shorter bands are not presented as bookable because they conflict with the product’s six-month minimum; only the six-month point and longer tenures are described.
 - Separate FD Plus / bulk schedules: HOLD. The live rate page labels both as effective 20 November 2026, but the linked FD Plus PDF is dated 8 April 2026 and the linked bulk PDF is dated 15 July 2026. The documents do not reconcile to the live page date, so neither schedule is included in the published article.
 - No cross-bank comparison, post-tax yield or ranking formula change is made.
+
+### South Indian Bank MCLR — HOLD pending issuer-page reconciliation
+
+- Exchange filing date: 18 November 2026
+- Filing effective date: 20 November 2026
+- Filing: https://nsearchives.nseindia.com/corporate/SOUTHBANK_18112026163013_SD_STT_MCLRCHANGE_18NOV2026.pdf
+- Current bank interest-rate page: https://www.southindianbank.bank.in/quick-links/interest-rates/investors-desk
+- PDF still linked by that page: https://www.southindianbank.bank.in/userfiles/upload/mclr_20_10_2026.pdf
+- The 18 November NSE filing states overnight 8.25%, one-month 8.60%, three-month 9.30%, six-month 9.35% and one-year 9.55%, effective 20 November. However, the bank’s own interest-rate page still labels its MCLR link as effective 20 October and points to the older PDF (8.20%, 8.55%, 9.25%, 9.30%, 9.50%). The newer filing says the information is also hosted on the bank website, but the live bank page has not yet been reconciled.
+- HOLD: do not publish the 20 November schedule until the issuer page or a current bank-hosted MCLR document matches the exchange filing. Do not state a direction or basis-point change while the issuer page remains inconsistent.
+- Scope limitation if later cleared: the bank’s 20 October PDF says the MCLR applies to new MCLR-linked loans and eligible renewals/resets; it also says floating retail, micro and small loans disbursed from 1 October 2019 are linked to EBLR. Do not imply that this MCLR revision automatically changes all retail home/personal loans or every borrower’s EMI.
 
 ## Integration
 
