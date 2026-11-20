@@ -96,6 +96,17 @@ The 29 October Research Watch automation result remains the latest recorded task
 - Separate FD Plus / bulk schedules: HOLD. The live rate page labels both as effective 20 November 2026, but the linked FD Plus PDF is dated 8 April 2026 and the linked bulk PDF is dated 15 July 2026. The documents do not reconcile to the live page date, so neither schedule is included in the published article.
 - No cross-bank comparison, post-tax yield or ranking formula change is made.
 
+### South Indian Bank MCLR — HOLD pending issuer-page reconciliation
+
+- Exchange filing date: 18 November 2026
+- Filing effective date: 20 November 2026
+- Filing: https://nsearchives.nseindia.com/corporate/SOUTHBANK_18112026163013_SD_STT_MCLRCHANGE_18NOV2026.pdf
+- Current bank interest-rate page: https://www.southindianbank.bank.in/quick-links/interest-rates/investors-desk
+- PDF still linked by that page: https://www.southindianbank.bank.in/userfiles/upload/mclr_20_10_2026.pdf
+- The 18 November NSE filing states overnight 8.25%, one-month 8.60%, three-month 9.30%, six-month 9.35% and one-year 9.55%, effective 20 November. However, the bank’s own interest-rate page still labels its MCLR link as effective 20 October and points to the older PDF (8.20%, 8.55%, 9.25%, 9.30%, 9.50%). The newer filing says the information is also hosted on the bank website, but the live bank page has not yet been reconciled.
+- HOLD: do not publish the 20 November schedule until the issuer page or a current bank-hosted MCLR document matches the exchange filing. Do not state a direction or basis-point change while the issuer page remains inconsistent.
+- Scope limitation if later cleared: the bank’s 20 October PDF says the MCLR applies to new MCLR-linked loans and eligible renewals/resets; it also says floating retail, micro and small loans disbursed from 1 October 2019 are linked to EBLR. Do not imply that this MCLR revision automatically changes all retail home/personal loans or every borrower’s EMI.
+
 ## Integration
 
 The existing `researchWatch` data source drives the article route, Research Watch hub, homepage brief, month-filtered bulletin, search-index generator and sitemap. The new Axis item is included in that data source. No verified Axis Select card-detail record exists in `verified-real-cards.ts`, so no incomplete card page or ranking entry is created.
