@@ -77,7 +77,7 @@ This is a staged editorial review, not a production release. The feature branch 
 
 The 24 October initial batch was re-read in the current repository data and public guides: IDFC IndiGo international rewards; Amex November changes; HDFC Balanced Advantage and Children’s Fund exit windows; Tata Neu HDFC manual NeuCoins claims; and SBM ZET fees. The SBM ZET current MITC confirms the 5% formula but does not state its effective date, so the previously recorded 23 October date is now HOLD. Existing product-specific exclusions and unresolved transition language remain in place. No duplicate article was added for those findings.
 
-The 29 October Research Watch automation result remains the latest recorded task result. The Research Watch task is disabled. Its 29 October SEBI Direct Plan default finding remains HOLD: the official SEBI speech page is available, but the linked original PDF timed out during this review and no implementing circular was independently verified. No claim is promoted from HOLD.
+The 29 October Research Watch automation result remains the latest recorded task result; the Research Watch task is disabled. The SEBI Direct Plan item is reported only as an attributed Chairman statement: the 28 October speech page and original PDF were read, and the 20 March 2026 Master Circular was checked. The speech says Direct Plans would be the default on AMC-operated digital platforms from 1 November, with higher-expense disclosure for investors choosing Regular Plans. No implementing circular or app-by-app rollout evidence was found, so the item does not claim a universal default across third-party apps, automatic conversion of existing holdings/SIPs, or an operational rule beyond the speech.
 
 ### Jana Small Finance Bank — retail FD and RD rates
 
@@ -111,4 +111,4 @@ The existing `researchWatch` data source drives the article route, Research Watc
 
 ## Safeguards
 
-No payment flows, authentication, customer or financial records, infrastructure, secrets, paid resources, ranking formulas or automation schedules were changed. No external messages or comments were sent. The daily 10 AM research report was not modified; its separate automation was already disabled when checked.
+No payment flows, authentication, customer or financial records, infrastructure, secrets, paid resources, ranking formulas or automation schedules were changed. No external messages or comments were sent. The separate daily 10 AM CredoNomics Daily Research automation was already disabled when checked (last run recorded on 8 November 2026); it was left unchanged, not re-enabled or rescheduled.
