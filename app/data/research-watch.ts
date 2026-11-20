@@ -12,6 +12,30 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'hdfc-flipkart-wholesale-card-phaseout-cashback-december-2026',
+    title: 'Flipkart Wholesale HDFC card: migration underway; cashback ends on 1 December',
+    summary: 'HDFC says existing cardholders are being migrated to another HDFC card. From 1 December, the old card earns no cashback; eligible November cashback is due in the first week of December.',
+    category: 'Credit cards', checkedAt: '2026-11-20', publishedAt: '2026-11-20', eventDate: '2026-12-01', dateLabel: 'Cashback stops on card spends', statusLabel: 'Phased migration',
+    source: 'https://www.hdfc.bank.in/business-credit-cards/flipkart-wholesale-credit-card',
+    sourceLabel: 'HDFC Bank: Flipkart Wholesale Credit Card — migration and cashback notice',
+    sourceLocation: 'Important Information block, checked 20 November 2026: phase-out and migration statement, customer communication date, 1 December cashback cutoff and first-week-of-December credit timing; legacy benefit bullets remain lower on the same page.',
+    audience: 'Existing holders of the Flipkart Wholesale HDFC Bank Credit Card. HDFC lists this as a business credit-card product for Flipkart Wholesale / Best Price members.',
+    facts: [
+      'HDFC Bank says the Flipkart Wholesale HDFC Bank Credit Card is being phased out and that it is in the process of migrating all existing customers to another HDFC Bank Credit Card.',
+      'HDFC says migration communications were sent to existing customers on 31 October 2026 and directs them to check their SMS or email for individual details. The public page does not state a separate public announcement date or an individual migration schedule.',
+      'Effective 1 December 2026, spends on the Flipkart Wholesale HDFC Bank Credit Card will not earn cashback.',
+      'HDFC says eligible cashback for spends made in November 2026 will be credited to the account in the first week of December 2026.',
+      'The same product page continues to display the card’s legacy cashback-benefit bullets below the Important Information block. The bank’s explicit 1 December notice is the relevant cutoff for future spends; the older benefit bullets should not be read as continuing beyond that date.'
+    ],
+    actions: [
+      'If you hold this card, look for HDFC Bank’s migration communication sent on 31 October and use the bank’s official authenticated channel to confirm the replacement card and your individual timeline.',
+      'Do not count on cashback for spends from 1 December 2026 on the Flipkart Wholesale card; HDFC explicitly says those spends will not earn cashback.',
+      'Check eligible November cashback in the first week of December as HDFC states. If the credit or an individual transaction is unclear, compare the statement and ask the issuer about that transaction rather than assuming every purchase qualifies.',
+      'When HDFC provides replacement-card details, review that card’s own fees, rewards, limits and exclusions. Check recurring card-on-file payments and card controls; the public notice does not say existing mandates or controls transfer automatically.'
+    ],
+    limits: 'Checked 20 November 2026. HDFC says customer migration communications were sent on 31 October; no separate public announcement date is stated. The cashback cessation is effective 1 December 2026. HDFC says existing customers are being migrated but the public notice does not identify each replacement variant, individual migration date, any choice/consent process, replacement-card fees or rewards, credit-limit treatment, or transfer of recurring mandates. The product page still displays legacy cashback bullets and application sections below the notice; those sections do not override the 1 December cashback cutoff, and this guide makes no claim about whether new applications remain open. HDFC does not clarify treatment of transactions made before 1 December but posted later, reversals, individual exclusions or a separate cashback-claim process. No automatic migration detail, refund eligibility or replacement-card benefit is inferred. No card-ranking formula is changed.'
+  },
+  {
     slug: 'npci-upi-p2m-dispute-routing-december-2026',
     title: 'UPI merchant disputes: NPCI changes bank routing from 23 December; timelines stay unchanged',
     summary: 'NPCI will route most applicable UPI person-to-merchant disputes to the Payee PSP bank from 23 December. Listed exceptions remain with the beneficiary bank; existing resolution timelines and customer compensation are unchanged.',
