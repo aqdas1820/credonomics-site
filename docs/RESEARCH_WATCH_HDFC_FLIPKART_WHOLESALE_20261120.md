@@ -29,7 +29,7 @@ This is new to the current Research Watch dataset and was not found in the exist
 - The public page does not identify each customer's replacement variant or individual migration date.
 - No replacement-card fee, rewards, limit, consent/choice process, old-card end date, or recurring-mandate transfer rule is stated.
 - The page does not resolve transactions made before 1 December but posted after the cutoff, individual exclusions, reversals, or a separate cashback claim process.
-- The older cashback-benefit bullets remain lower on the same page. Do not apply them to spends from 1 December onward.
+- The older cashback-benefit bullets and application sections remain lower on the same page. Do not apply the old cashback benefits to spends from 1 December onward; do not infer whether new applications remain open.
 - Do not infer automatic migration details, refund eligibility, or replacement-card benefits.
 
 ## Publication scope
