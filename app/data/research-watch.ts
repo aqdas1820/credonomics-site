@@ -532,7 +532,7 @@ export const researchWatch: WatchItem[] = [
     ],
     audience: 'AU Zenith+ credit card holders planning international transactions or approaching the ₹12 lakh yearly milestone.',
     facts: [
-      'AU’s 2 November 2026 MITC lists 0.99% for Zenith+ in the current markup row and places Zenith+ in the 0% row effective 1 December 2026. This is the issuer’s currency markup; a merchant’s own conversion or dynamic currency conversion can still affect the total price.',
+      'AU’s 2 November 2026 MITC lists 0.99% for Zenith+ in the current markup row and places Zenith+ in the 0% row effective 1 December 2026. The current Zenith+ product page still displays a 0.99% forex-markup headline, so use the dated MITC for the upcoming effective date and do not treat 0% as effective before 1 December. This is the issuer’s currency markup; a merchant’s own conversion or dynamic currency conversion can still affect the total price.',
       'AU’s current product page continues to advertise up to 2 Reward Points per ₹100 on dining, travel and international spends. The official sources checked on 20 November do not show a dated removal of international reward points from 1 December, so the earlier claim of a reward stop is withdrawn.',
       'The product page says customers who become eligible for the yearly milestone from 1 December by spending at least ₹12 lakh in their card-anniversary year become eligible for Taj Preferred membership, which includes a complimentary night at selected hotels.',
       'The product page does not explain how existing Taj memberships or customers who crossed the yearly milestone before 1 December will be treated.',
@@ -543,7 +543,7 @@ export const researchWatch: WatchItem[] = [
       'If a transaction or milestone falls close to 1 December, ask AU which date controls and how it treats customers who already qualified; the current product page does not specify the transition rule.',
       'If approaching ₹12 lakh, check the card-anniversary year and eligible net retail spend with AU before relying on the Taj Preferred benefit.',
     ],
-    limits: 'Checked 20 November 2026. MITC version 2.23 is dated 2 November and lists the Zenith+ 0% issuer markup effective 1 December; a separate announcement date is not stated. The current product page still advertises up to 2 points per ₹100 on dining, travel and international spends, and no dated removal of international rewards was found in the official sources checked. The issuer markup is not the same as merchant currency conversion. Existing Taj membership and pre-cutoff milestone transition treatment remain unverified. No reward valuation or card-ranking formula is changed.',
+    limits: 'Checked 20 November 2026. MITC version 2.23 is dated 2 November and lists the Zenith+ 0% issuer markup effective 1 December; a separate announcement date is not stated. The current product page still advertises up to 2 points per ₹100 on dining, travel and international spends, and no dated removal of international rewards was found in the official sources checked. The current product page still shows a 0.99% forex-markup headline while the dated MITC sets 0% from 1 December; the dated MITC is used for the future effective date. The issuer markup is not the same as merchant currency conversion. Existing Taj membership and pre-cutoff milestone transition treatment remain unverified. No reward valuation or card-ranking formula is changed.',
   },
   {
     slug: 'bobcard-onecard-late-payment-slabs-october-2026',
