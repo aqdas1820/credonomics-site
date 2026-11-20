@@ -1497,6 +1497,42 @@ export const researchWatch: WatchItem[] = [
     ],
     limits: 'Checked 20 November 2026. The current official MITC confirms the ZET-specific 5% late-fee formula and more-than-3-days-past-due trigger, but does not state an effective date for the 5% row. The previously recorded 23 October date is not independently verified in the current primary document and is not asserted here. The 1% rental and education fees are separately effective 15 July 2026. The cancellation window is measured from card issuance, not activation. Applies to SBM ZET only; other SBM variants differ. No blanket fee change is inferred.',
   },
+  {
+    slug: 'jana-small-finance-bank-retail-fd-rd-rates-november-2026',
+    title: 'Jana Small Finance Bank FD and RD rates: 8.00% general and 8.30% resident seniors',
+    summary: 'The 6 November schedules cover retail FDs below ₹3 crore and recurring deposits. Senior rates apply only to resident Indians aged 60 or above; NRE deposits have a one-year minimum.',
+    category: 'Bank deposits', checkedAt: '2026-11-20', publishedAt: '2026-11-20', announcementDate: '2026-11-06', eventDate: '2026-11-06', dateLabel: 'Retail FD and RD rates effective',
+    updateNote: '20 November: the current Jana rate page and the 6 November FD and RD notices agree on the retail schedules. The same page lists separate FD Plus and bulk schedules as effective 20 November, but their linked PDFs still show 8 April and 15 July dates respectively; those separate products are held out pending a matching current notice.',
+    source: 'https://www.jana.bank.in/interest-rates/',
+    sourceLabel: 'Jana Small Finance Bank: current interest-rate page',
+    sourceLocation: 'Retail Fixed Deposits for Domestic/NRO/NRE Customers and Recurring Deposit tables, both marked effective 6 November 2026; related product-specific eligibility and premature-withdrawal notes.',
+    additionalSources: [
+      { url: 'https://www.jana.bank.in/images/Notice/Interest-Rate-for-Domestic-NRE-NRO-Retail-Fixed-Deposits.pdf', label: 'Jana Small Finance Bank notice dated 6 November 2026: revised domestic/NRO/NRE retail FD rates' },
+      { url: 'https://www.jana.bank.in/images/Notice/Notice-Revision-in-Interest-Rates-Recurring-Deposits.pdf', label: 'Jana Small Finance Bank notice dated 6 November 2026: revised recurring-deposit rates' },
+      { url: 'https://www.jana.bank.in/images/policies/deposits-and-deposit-interest-policy.pdf', label: 'Jana Small Finance Bank Deposits and Deposit Interest Rate Policy: premature-withdrawal, interest calculation and payout rules' },
+      { url: 'https://www.jana.bank.in/images/Notice/Revision-in-premature-withdrawal-penal-rate.pdf', label: 'Jana Small Finance Bank notice dated 2 October 2024: 1% premature-withdrawal penalty for retail domestic/NRO/NRE FDs and RDs; Liquid Plus exception' },
+    ],
+    audience: 'People comparing or booking Jana Small Finance Bank retail fixed deposits or recurring deposits. The FD table covers domestic/NRO/NRE deposits below ₹3 crore; the senior-citizen column is limited to resident Indian senior citizens.',
+    facts: [
+      'Jana’s current rate page and its notice dated 6 November 2026 show the same retail FD schedule effective from 6 November. For deposits below ₹3 crore, general / eligible resident-senior rates are: 7–14 days 3.50% / 3.50%; 15–60 days 4.25% / 4.25%; 61–90 days 4.75% / 4.75%; 91–120 days 5.00% / 5.00%; 121–180 days 6.00% / 6.00%; 181–270 days 7.30% / 7.80%; 271 days–1 year 7.00% / 7.50%; over 1–2 years 7.30% / 7.80%; over 2–under 3 years 7.65% / 8.15%; 3 years 8.00% / 8.30%; over 3–5 years 7.77% / 8.00%; over 5–10 years 6.50% / 7.00%.',
+      'The senior-citizen rates apply only to resident Indian customers aged 60 or above. Jana says there is no senior premium for retail tenures from 7 days to 180 days; the higher senior rates begin at 181 days. The senior column does not apply to NRE/NRO deposits.',
+      'NRE fixed deposits have a minimum tenure of one year. Jana says no interest is payable if an NRE deposit is liquidated before completing one year. Interest earned on NRO fixed deposits is taxable under applicable income-tax provisions.',
+      'For a premature retail FD closure, Jana says the applicable rate is the lower of the contracted rate or the rate for the period actually maintained, less a 1% premature-withdrawal penalty. No interest is payable if the FD is withdrawn within 7 days. Tax Saver FD has a 5-year lock-in, a ₹1.5 lakh maximum and no senior-citizen preferential rate.',
+      'The current RD table is also marked effective from 6 November 2026. General / senior rates are: 1–2 months 4.25% / 4.25%; over 2–3 months 4.75% / 4.75%; over 3–4 months 5.00% / 5.00%; over 4–6 months 6.00% / 6.00%; over 6–9 months 7.30% / 7.80%; over 9–12 months 7.00% / 7.50%; over 12–24 months 7.30% / 7.80%; over 24–35 months 7.65% / 8.15%; 36 months 8.00% / 8.30%; over 36–60 months 7.77% / 8.00%; over 60–120 months 6.50% / 7.00%.',
+      'Jana lists a minimum RD tenure of 6 months and a minimum monthly instalment of ₹100, in multiples of ₹100. A 5-day grace period applies to late instalments; a 1.5% instalment penalty is listed for delayed or missed payments, and the bank reserves the right to close an RD after five consecutive missed instalments.',
+      'For premature RD withdrawal, the bank lists a 1% penalty and says no interest is payable if the RD is withdrawn within 30 days. The senior-citizen RD premium applies only for tenures above 6 months, not for the shorter 1–6 month rows.',
+      'The page also labels FD Plus and bulk-deposit schedules as effective from 20 November 2026, but the linked FD Plus PDF itself is dated 8 April 2026 and the linked bulk-deposit PDF is dated 15 July 2026. Those separate schedules are not included here because the dates do not reconcile.',
+    ],
+    actions: [
+      'Match the exact FD tenure and depositor category to the retail table, then recheck the rate on the booking/value date. Jana says rates may change without prior notice.',
+      'Use the senior column only if the depositor is a resident Indian aged 60 or above. Do not apply the resident-senior premium to NRE/NRO deposits or to retail FD tenures of 180 days or less.',
+      'For an NRE FD, account for the one-year minimum and the no-interest rule for liquidation before one year. For an NRO FD, check the applicable tax treatment before comparing post-tax returns.',
+      'Before closing an FD early, ask the bank for the applicable rate for the period actually maintained and the 1% penalty. Tax Saver FD has a five-year lock-in; no early-withdrawal assumption is made for it.',
+      'For an RD, check the six-month minimum, ₹100 instalment multiples and five-day grace period. Keep the mandate funded; five consecutive missed instalments may lead the bank to close the RD.',
+      'Do not rely on the separate FD Plus or bulk rates shown as 20 November-effective until the linked official notice dates and the live page reconcile; confirm those products with the bank before booking.',
+    ],
+    limits: 'Checked 20 November 2026. The FD and RD notices are dated 6 November and match the current rate page, which marks both retail schedules effective 6 November. The retail FD table applies to deposits below ₹3 crore; senior rates are only for resident Indian customers aged 60 or above and are not an NRE/NRO benefit. NRE premature liquidation before one year earns no interest; retail FD early closure carries a 1% penalty and no interest is payable within 7 days; RD early closure carries a 1% penalty and no interest is payable within 30 days. The page’s separate FD Plus and bulk sections say 20 November, but their linked PDFs show 8 April and 15 July respectively; those schedules remain on HOLD and are not represented. Rates can change without prior notice. This is not a cross-bank comparison or a post-tax return estimate.',
+  },
 ]
 
 export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer' | 'Directions extended' | 'Campaign underway' | 'Deadline passed' {
