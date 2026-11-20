@@ -44,6 +44,21 @@ No payments, authentication, customer/financial records, infrastructure, secrets
 - Validation-only branch: `verify/npci-upi-dispute-routing-20261120-0651`, commit `a69a13d57ccd3a856c85dcfc3d6cd2d3ef1a8817`. Its temporary `package.json` prebuild change runs tests and typecheck before the normal generators; this validation-only change is not on the feature branch and will not be merged.
 - Vercel validation preview: [READY](https://vercel.com/aqdasshaikh1820-9566s-projects/credonomics-site/HsWDDNyNsjd4qBPPf6mpQFCXBYzT), deployment `dpl_HsWDDNyNsjd4qBPPf6mpQFCXBYzT`.
 
-## Release evidence
+## Release evidence — content release
 
-PR review, merge and production deployment are pending. After merge, record the exact merged commit, Vercel production deployment ID/status, public route checks and source-link verification before describing the article as live.
+- PR: [#132](https://github.com/aqdas1820/credonomics-site/pull/132), merged 20 November 2026.
+- Merged / deployed Git commit: `05ba229f9229ff4678d75e0c59fcc8f822951ad5`.
+- Vercel production deployment: `dpl_F4F25eFVjggAzi57vwXJaMmvE4Bh`, state **READY**, project `prj_NXyFJfuc7NwEmp5ws9CASP33Ybg0`.
+- Production aliases assigned: `www.credonomics.in` and `credonomics.in`.
+- Production build generated the new static route `/research/watch/npci-upi-p2m-dispute-routing-december-2026`, Research Watch hub, November bulletin and `/sitemap.xml`; search index generated 137 entries.
+- Unit tests: 177 passed across 29 files. Standalone TypeScript (`npm run typecheck`) passed. Next.js production build passed.
+- The official 13-page NPCI PDF was opened and its page-1 summary, Annexures I–II, unchanged TAT/compensation statement and 23 December implementation date were checked.
+
+### Public visibility limitation
+
+The deployment is READY and the custom-domain aliases are assigned, but public visibility is **not independently confirmed**:
+- The public article route returned an Internal Error to the public-page checker.
+- The Research Watch hub and November bulletin returned an older 19 November snapshot and did not show the 20 November item.
+- This may be a stale edge/search snapshot, but the current public fetch does not establish that the new article is visible. Do not describe it as publicly verified live until a fresh public fetch shows the article and its source link.
+
+The pre-merge main SHA `7f5fbb3533f21a43b5b6a5c363ae37a761b80703` is preserved at `backup/pre-npci-upi-dispute-routing-20261120-0651`. The release-evidence-only follow-up PR is based on `05ba229f9229ff4678d75e0c59fcc8f822951ad5`; rollback branch for this documentation change: `backup/pre-npci-release-evidence-20261120`.
