@@ -79,6 +79,23 @@ The 24 October initial batch was re-read in the current repository data and publ
 
 The 29 October Research Watch automation result remains the latest recorded task result. The Research Watch task is disabled. Its 29 October SEBI Direct Plan default finding remains HOLD: the official SEBI speech page is available, but the linked original PDF timed out during this review and no implementing circular was independently verified. No claim is promoted from HOLD.
 
+### Jana Small Finance Bank — retail FD and RD rates
+
+- Checked: 20 November 2026
+- Notice / announcement date: 6 November 2026
+- Effective date: 6 November 2026
+- Affected audience: people comparing or booking Jana retail fixed deposits or recurring deposits; FD schedule covers domestic/NRO/NRE deposits below ₹3 crore.
+- Current official rates page: https://www.jana.bank.in/interest-rates/
+- Retail FD notice: https://www.jana.bank.in/images/Notice/Interest-Rate-for-Domestic-NRE-NRO-Retail-Fixed-Deposits.pdf
+- RD notice: https://www.jana.bank.in/images/Notice/Notice-Revision-in-Interest-Rates-Recurring-Deposits.pdf
+- Deposit policy: https://www.jana.bank.in/images/policies/deposits-and-deposit-interest-policy.pdf
+- Premature-withdrawal notice: https://www.jana.bank.in/images/Notice/Revision-in-premature-withdrawal-penal-rate.pdf
+- Reconciliation: the current interest-rate page marks both retail FD and RD tables effective 6 November and matches the two notices dated 6 November. The FD table reaches 8.00% p.a. for general depositors and 8.30% for eligible resident seniors at 3 years. The RD table reaches the same rates at 36 months.
+- FD exceptions: senior rates are only for resident Indian customers aged 60 or above, with no premium for 7–180-day tenures; NRE deposits have a one-year minimum and earn no interest if liquidated before one year; NRO interest is taxable; Tax Saver FD is capped at ₹1.5 lakh, has a five-year lock-in and no senior premium. Retail FD premature closure carries a 1% penalty and no interest is paid for closure within seven days.
+- RD exceptions: minimum six-month tenure, ₹100 minimum monthly instalment in ₹100 multiples, five-day grace period, 1.5% delayed/missed-instalment penalty, possible closure after five consecutive missed instalments, 1% premature-withdrawal penalty and no interest for closure within 30 days.
+- Separate FD Plus / bulk schedules: HOLD. The live rate page labels both as effective 20 November 2026, but the linked FD Plus PDF is dated 8 April 2026 and the linked bulk PDF is dated 15 July 2026. The documents do not reconcile to the live page date, so neither schedule is included in the published article.
+- No cross-bank comparison, post-tax yield or ranking formula change is made.
+
 ## Integration
 
 The existing `researchWatch` data source drives the article route, Research Watch hub, homepage brief, month-filtered bulletin, search-index generator and sitemap. The new Axis item is included in that data source. No verified Axis Select card-detail record exists in `verified-real-cards.ts`, so no incomplete card page or ranking entry is created.
