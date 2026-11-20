@@ -12,6 +12,39 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
   {
+    slug: 'rbi-fusion-finance-penalty-internal-ombudsman-november-2026',
+    title: 'RBI penalises Fusion Finance ₹7.5 lakh over KYC and complaint-escalation failures',
+    summary: 'RBI says Fusion Finance failed to obtain specified KYC documents in some account openings and to escalate partly or wholly rejected complaints to its Internal Ombudsman. The penalty does not decide individual loan validity or award customer relief.',
+    category: 'Banking', checkedAt: '2026-11-20', publishedAt: '2026-11-20', announcementDate: '2026-11-20', eventDate: '2026-11-17', dateLabel: 'RBI penalty order dated', statusLabel: 'Clarification checked',
+    source: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64015',
+    sourceLabel: 'RBI: monetary penalty on Fusion Finance Limited',
+    sourceLocation: 'Press Release 2026-2027/1537, dated 20 November 2026; order dated 17 November; sustained KYC and Internal Ombudsman findings and express limitation on customer transactions and agreements.',
+    additionalSources: [
+      { url: 'https://www.rbi.org.in/ScriptS/BS_ViewMasDirections.aspx?id=13274', label: 'RBI: Non-Banking Financial Companies – Internal Ombudsman Directions, 2026 (issued 14 January 2026)' },
+      { url: 'https://fusionfin.com/customer-grievance/', label: 'Fusion Finance: current official customer-grievance channels' },
+      { url: 'https://cms.rbi.org.in', label: 'RBI Complaint Management System (CMS), for complaints covered by the RBI Integrated Ombudsman Scheme' },
+    ],
+    audience: 'Fusion Finance customers, particularly microfinance and MSME borrowers whose complaints have been partly resolved or wholly rejected, and customers entering a new account-based relationship.',
+    facts: [
+      'RBI’s press release dated 20 November 2026 reports an order dated 17 November 2026 imposing a ₹7.50 lakh monetary penalty on Fusion Finance Limited for non-compliance with RBI directions on Know Your Customer (KYC) and Internal Ombudsman requirements. The statutory inspection referred to the company’s financial position as at 31 March 2026.',
+      'The KYC finding was that the company failed to obtain PAN, an equivalent electronic document or Form 60 from customers while establishing an account-based relationship. RBI does not identify the affected accounts or disclose how many customers were involved.',
+      'The complaint-handling finding was that the company failed to escalate partly or wholly rejected complaints to the Internal Ombudsman for a final decision within the prescribed time.',
+      'RBI’s Non-Banking Financial Companies – Internal Ombudsman Directions, 2026 were issued on 14 January 2026 and came into force immediately, except clauses 7(2), 14(2) and 14(4), which were to be complied with by 30 June 2026. Under clause 14, complaints that are partly resolved or wholly rejected by the NBFC’s internal grievance process must be auto-escalated to the Internal Ombudsman for review. For other complaints, the escalation must occur within 20 days of receipt; where RBI, NPCI or card-network rules prescribe a resolution timeline, the NBFC must allow the Internal Ombudsman at least 10 days for review so the final decision can meet the applicable timeline.',
+      'The Directions require the NBFC to communicate a final decision within 30 days of receipt of the complaint, subject to the specific timelines that apply to regulated complaint categories. If a complaint remains partly resolved or wholly rejected after Internal Ombudsman review, the NBFC must advise the customer about the RBI Ombudsman option where the complaint is covered by the RBI Integrated Ombudsman Scheme and provide the RBI Complaint Management System URL.',
+      'The Internal Ombudsman is not a direct customer complaint channel. The office reviews complaints already examined by the NBFC and partly resolved or wholly rejected by it; customers should use the NBFC’s published grievance channels rather than attempting to contact the Internal Ombudsman directly.',
+      'Fusion Finance’s current customer-grievance page lists customercare@fusionfin.com. The page displays inconsistent toll-free number renderings, so this guide links to the official page instead of reproducing a phone number.',
+      'RBI expressly says the penalty is based on regulatory-compliance deficiencies and is not intended to pronounce upon the validity of any transaction or agreement entered into with customers. The release does not grant automatic compensation, refund, loan cancellation, reversal of dues or reopening of an individual complaint.',
+    ],
+    actions: [
+      'If a Fusion Finance complaint has been partly resolved or wholly rejected, use the company’s official customer-grievance page and keep a dated copy of the complaint, acknowledgement/reference, documents submitted and written response. Ask the company in writing for the status of the required Internal Ombudsman review; do not send a direct complaint to the Internal Ombudsman.',
+      'For ordinary complaints, RBI’s 2026 Directions specify auto-escalation to the Internal Ombudsman within 20 days of receipt. Where RBI, NPCI or card-network timelines apply, the NBFC must allow the Internal Ombudsman at least 10 days to review before the final response. The final decision must be communicated within 30 days of receipt, subject to the applicable specific timeline.',
+      'If a complaint remains partly resolved or wholly rejected after Internal Ombudsman review, read the final response for the RBI Ombudsman option. Use the RBI CMS portal only if the complaint is covered by the RBI Integrated Ombudsman Scheme; coverage and outcome are not guaranteed.',
+      'If Fusion asks you to complete KYC, submit the requested PAN or Form 60 only through a verified official company channel and retain the acknowledgement. RBI’s press release does not direct all existing customers to re-submit KYC solely because of this penalty.',
+      'Do not treat the penalty as a change to your loan agreement or as an automatic right to a refund, compensation, loan cancellation or reversal of dues.',
+    ],
+    limits: 'Checked 20 November 2026. RBI announcement date: 20 November 2026; penalty order date: 17 November 2026; inspection reference date: 31 March 2026. No separate customer-level effective date is stated for the penalty. RBI does not quantify affected accounts/customers and expressly says the order does not pronounce upon the validity of customer transactions or agreements. It does not itself award compensation, refund, loan cancellation, reversal of dues or reopening of individual complaints, and it does not direct every existing customer to re-submit KYC. The 2026 NBFC Internal Ombudsman Directions are subject to their applicability criteria and clause 14(5) exclusions, including specified matters pending or decided before judicial/quasi-judicial fora and credit-information disputes with a separate statutory remedy. The Internal Ombudsman is not a direct customer complaint channel. RBI Ombudsman access is subject to coverage under the Integrated Ombudsman Scheme. No lending rate, fee, repayment rule or product term is changed. No card-ranking formula or financial record is changed.',
+  },
+  {
     slug: 'hdfc-flipkart-wholesale-card-phaseout-cashback-december-2026',
     title: 'Flipkart Wholesale HDFC card: migration underway; cashback ends on 1 December',
     summary: 'HDFC says existing cardholders are being migrated to another HDFC card. From 1 December, the old card earns no cashback; eligible November cashback is due in the first week of December.',
