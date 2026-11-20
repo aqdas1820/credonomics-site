@@ -34,6 +34,16 @@ No payments, authentication, customer/financial records, infrastructure, secrets
 - Rollback branch: `backup/pre-npci-upi-dispute-routing-20261120-0651`
 - Feature branch: `editorial/npci-upi-dispute-routing-20261120-0651`
 
+## Validation evidence
+
+- Unit tests: `177 passed` across `29 test files`, run through the existing Vercel preview build's temporary validation-only `prebuild` command.
+- Standalone TypeScript: `npm run typecheck` passed (`tsc --noEmit --pretty false`).
+- Production build: `next build` completed successfully on Next.js 15.5.28.
+- Search index: `137` entries generated, including the new Research Watch item.
+- Static route generation: `/research/watch/npci-upi-p2m-dispute-routing-december-2026`, the Research Watch hub, November bulletin and `/sitemap.xml` were included in the build output.
+- Validation-only branch: `verify/npci-upi-dispute-routing-20261120-0651`, commit `a69a13d57ccd3a856c85dcfc3d6cd2d3ef1a8817`. Its temporary `package.json` prebuild change runs tests and typecheck before the normal generators; this validation-only change is not on the feature branch and will not be merged.
+- Vercel validation preview: [READY](https://vercel.com/aqdasshaikh1820-9566s-projects/credonomics-site/HsWDDNyNsjd4qBPPf6mpQFCXBYzT), deployment `dpl_HsWDDNyNsjd4qBPPf6mpQFCXBYzT`.
+
 ## Release evidence
 
-Pending validation, PR review, merge and production deployment. This section must be completed with the merged commit, Vercel production deployment ID/status, public-route checks and final verification results before the release is described as live.
+PR review, merge and production deployment are pending. After merge, record the exact merged commit, Vercel production deployment ID/status, public route checks and source-link verification before describing the article as live.
