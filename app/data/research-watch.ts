@@ -42,7 +42,7 @@ export const researchWatch: WatchItem[] = [
     title: 'Jana Small Finance Bank FD and RD rates: 8.00% general and 8.30% resident seniors',
     summary: 'The 6 November schedules cover retail FDs below ₹3 crore and recurring deposits. Senior rates apply only to resident Indians aged 60 or above; NRE deposits have a one-year minimum.',
     category: 'Bank deposits', checkedAt: '2026-11-20', publishedAt: '2026-11-20', announcementDate: '2026-11-06', eventDate: '2026-11-06', dateLabel: 'Retail FD and RD rates effective',
-    updateNote: '20 November: the current Jana rate page and the 6 November FD and RD notices agree on the retail schedules. The same page lists separate FD Plus and bulk schedules as effective 20 November, but their linked PDFs still show 8 April and 15 July dates respectively; those separate products are held out pending a matching current notice.',
+    updateNote: '20 November: the current Jana rate page and the 6 November FD and RD notices agree on the retail rate rows. The separate RD product page sets a six-month minimum, so the shorter RD bands shown in the rate table are not presented as bookable. The rate page also lists separate FD Plus and bulk schedules as effective 20 November, but their linked PDFs still show 8 April and 15 July dates respectively; those separate products are held out pending matching current notices.',
     source: 'https://www.jana.bank.in/interest-rates/',
     sourceLabel: 'Jana Small Finance Bank: current interest-rate page',
     sourceLocation: 'Retail Fixed Deposits for Domestic/NRO/NRE Customers and Recurring Deposit tables, both marked effective 6 November 2026; related product-specific eligibility and premature-withdrawal notes.',
