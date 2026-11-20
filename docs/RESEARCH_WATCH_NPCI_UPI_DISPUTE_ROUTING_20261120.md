@@ -13,7 +13,7 @@
 
 From 23 December 2026, applicable P2M disputes in URCS are routed to the Payee PSP bank instead of the Beneficiary Bank across two-party, three-party and four-party transaction models. NPCI says the revised routing is also implemented in UDIR and MyUPI.
 
-The beneficiary bank continues to receive the listed timed-out categories: Deferred Chargeback (reason code 121), Chargeback (reason code 108), Online Refunds, Negative Good Faith Chargeback, TCC and Complaint Raise. Additional exceptions apply where the Payee PSP field is blank for IFSC-and-account-number-based transactions or where the Payee PSP is NPI (BHIM Services Limited).
+The page-1 summary names timed-out categories for beneficiary-bank handling: Deferred Chargeback (reason code 121), Chargeback (reason code 108), Online Refunds, Negative Good Faith Chargeback, TCC and Complaint Raise. Annexures I and II then provide code-by-code Payee PSP and Beneficiary Bank tables. Online/UDIR Refund and Complaint Raise entries appear in both annexures with different actioning/responding-bank roles and UDIR applicability; the broad labels are not blanket consumer-level routing rules. The Beneficiary Bank annexure also lists TCC, representment, chargeback acceptance, complaint response and specific post-TAT good-faith, negative-chargeback and debit-adjustment entries. The guide does not infer the route for an individual case from a broad dispute label. Additional conditions route disputes to the Beneficiary Bank where the Payee PSP field is blank for IFSC-and-account-number-based transactions or the Payee PSP is NPI (BHIM Services Limited).
 
 NPCI expressly says existing dispute processes, rules, timelines, RBI-prescribed TATs, customer compensation and dispute-resolution timelines remain unchanged. Disputes and adjustments raised before 23 December remain under the existing routing. No new consumer complaint channel, refund eligibility, refund process or compensation amount is inferred.
 
@@ -34,6 +34,16 @@ No payments, authentication, customer/financial records, infrastructure, secrets
 - Rollback branch: `backup/pre-npci-upi-dispute-routing-20261120-0651`
 - Feature branch: `editorial/npci-upi-dispute-routing-20261120-0651`
 
+## Validation evidence
+
+- Unit tests: `177 passed` across `29 test files`, run through the existing Vercel preview build's temporary validation-only `prebuild` command.
+- Standalone TypeScript: `npm run typecheck` passed (`tsc --noEmit --pretty false`).
+- Production build: `next build` completed successfully on Next.js 15.5.28.
+- Search index: `137` entries generated, including the new Research Watch item.
+- Static route generation: `/research/watch/npci-upi-p2m-dispute-routing-december-2026`, the Research Watch hub, November bulletin and `/sitemap.xml` were included in the build output.
+- Validation-only branch: `verify/npci-upi-dispute-routing-20261120-0651`, commit `a69a13d57ccd3a856c85dcfc3d6cd2d3ef1a8817`. Its temporary `package.json` prebuild change runs tests and typecheck before the normal generators; this validation-only change is not on the feature branch and will not be merged.
+- Vercel validation preview: [READY](https://vercel.com/aqdasshaikh1820-9566s-projects/credonomics-site/HsWDDNyNsjd4qBPPf6mpQFCXBYzT), deployment `dpl_HsWDDNyNsjd4qBPPf6mpQFCXBYzT`.
+
 ## Release evidence
 
-Pending validation, PR review, merge and production deployment. This section must be completed with the merged commit, Vercel production deployment ID/status, public-route checks and final verification results before the release is described as live.
+PR review, merge and production deployment are pending. After merge, record the exact merged commit, Vercel production deployment ID/status, public route checks and source-link verification before describing the article as live.
