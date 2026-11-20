@@ -4,7 +4,7 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-11-19T11:30:55.398Z",
+  "generatedAt": "2026-11-20T11:27:23.842Z",
   "recordCount": 3,
   "nseCount": 3,
   "bseCount": 0,
@@ -31,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 1.633955285077924,
-      "updatedAt": "2026-11-19T11:30:55.398Z",
+      "total": 10.039972634517648,
+      "updatedAt": "2026-11-20T11:27:23.842Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=CRYSTALCP&type=Active"
     },
     "sharesOffered": 12170076,
-    "sharesBid": 19885360,
+    "sharesBid": 122187230,
     "estimatedIssueValueCr": 331.03,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=CRYSTALCP&type=Active",
-    "fetchedAt": "2026-11-19T11:30:55.398Z"
+    "fetchedAt": "2026-11-20T11:27:23.842Z"
   },
   {
     "slug": "mahanadi-coalfields-ltd-b2e27f4",
@@ -60,17 +60,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.05862614763445074,
-      "updatedAt": "2026-11-19T11:30:55.398Z",
+      "total": 0.11430992247733272,
+      "updatedAt": "2026-11-20T11:27:23.842Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MAHACOAL&type=Active"
     },
     "sharesOffered": 493068045,
-    "sharesBid": 28906680,
+    "sharesBid": 56362570,
     "estimatedIssueValueCr": 6705.73,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MAHACOAL&type=Active",
-    "fetchedAt": "2026-11-19T11:30:55.398Z"
+    "fetchedAt": "2026-11-20T11:27:23.842Z"
   },
   {
     "slug": "watrana-rentals-ltd-b12d52b",
@@ -89,16 +89,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 3.47,
-      "updatedAt": "2026-11-19T11:30:55.398Z",
+      "total": 11.07,
+      "updatedAt": "2026-11-20T11:27:23.842Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=WATRANA&type=Active"
     },
     "sharesOffered": 3516000,
-    "sharesBid": 12184800,
+    "sharesBid": 38926200,
     "estimatedIssueValueCr": 86.14,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=WATRANA&type=Active",
-    "fetchedAt": "2026-11-19T11:30:55.398Z"
+    "fetchedAt": "2026-11-20T11:27:23.842Z"
   }
 ]
