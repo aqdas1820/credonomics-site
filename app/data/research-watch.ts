@@ -15,7 +15,7 @@ export const researchWatch: WatchItem[] = [
     slug: 'rbi-fusion-finance-penalty-internal-ombudsman-november-2026',
     title: 'RBI penalises Fusion Finance ₹7.5 lakh over KYC and complaint-escalation failures',
     summary: 'RBI says Fusion Finance failed to obtain specified KYC documents while establishing account-based relationships and to escalate partly or wholly rejected complaints to its Internal Ombudsman. The penalty does not decide individual loan validity or award customer relief.',
-    category: 'Banking', checkedAt: '2026-11-20', publishedAt: '2026-11-20', announcementDate: '2026-11-20', eventDate: '2026-11-17', dateLabel: 'RBI penalty order dated', statusLabel: 'RBI enforcement action',
+    category: 'Banking', checkedAt: '2026-11-20', publishedAt: '2026-11-20', announcementDate: '2026-11-20', eventDate: '2026-11-17', dateLabel: 'RBI penalty order dated', statusLabel: 'Clarification checked',
     source: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64015',
     sourceLabel: 'RBI: monetary penalty on Fusion Finance Limited',
     sourceLocation: 'Press Release 2026-2027/1537, dated 20 November 2026; order dated 17 November; sustained KYC and Internal Ombudsman findings and express limitation on customer transactions and agreements.',
