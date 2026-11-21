@@ -1655,7 +1655,7 @@ export const researchWatch: WatchItem[] = [
       'If the loan is EBLR/repo-linked, do not apply these MCLR figures to it. Check the applicable EBLR benchmark and product-specific terms separately.',
     ],
     limits: 'Checked 21 November 2026. Announcement / exchange-filing date: 18 November 2026. Effective date: 20 November 2026. The five MCLR tenors each rose 5 basis points versus the bank’s 20 October schedule. Applicability is limited to new MCLR-linked loans or advances sanctioned or first disbursed on or after 20 November and facilities renewed, reviewed or reset on or after that date where switching to MCLR is permitted at the borrower’s option. The bank states that floating retail, micro and small loans disbursed from 1 October 2019, and medium-enterprise floating loans from 1 April 2020, are EBLR-linked. The MCLR schedule does not establish an automatic rate or EMI change for every existing borrower; impact depends on the loan’s benchmark, spread, reset clause and tenor. No customer-specific EMI calculation, universal borrower impact or rate-switch entitlement is inferred.',
-  },,
+  },
 
   {
     slug: 'rbi-forex-service-reporting-resident-individuals-november-2026',
