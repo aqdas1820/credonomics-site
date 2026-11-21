@@ -34,16 +34,39 @@ The update is limited to regulatory minimum floors. It does not establish the ma
 - Content commit: `cec29c1cf7ee66265f7d3f8131bc867d85af104e`
 - Changed file: `app/data/research-watch.ts`
 - Expected article URL: https://www.credonomics.in/research/watch/sebi-commodity-derivatives-margin-december-2026
+- Content PR #144: https://github.com/aqdas1820/credonomics-site/pull/144 (merged)
+- Content merge commit: `765ed2b1dbf8e806325169790e9b88001e415f5e`
+- Production deployment: `dpl_8Kk96uRrb8HRszrFghY3ffRE4faK` (READY; deployed commit matches the merge commit)
+- Production deployment details: https://vercel.com/aqdasshaikh1820-9566s-projects/credonomics-site/8Kk96uRrb8HRszrFghY3ffRE4faK
+- The Vercel production deployment reports aliases `www.credonomics.in` and `credonomics.in` assigned to that READY deployment.
 
 ## Publication pattern
 
 The existing Research Watch data source drives the article, homepage cards, Research Watch hub, monthly bulletin, navigation, search index and sitemap. No separate card or fund record exists for this regulatory update, so no card/fund page or ranking formula is changed.
 
-## Validation status at PR preparation
+## Validation and public-release evidence
 
-- Source and old/new table comparison reviewed.
-- Exact main SHA and rollback reference preserved.
-- Unit tests, standalone TypeScript, production build, preview and public-page verification: pending PR validation and deployment.
+**GitHub PR #144** was merged after the exact intended head `ea9a404069e3c535401cac64f76e60cb9dd8498f` passed the Vercel preview build. The preview deployment was READY, but Vercel deployment protection prevented the public web checker from fetching the preview URL.
+
+**Production deployment**
+- Deployment ID: `dpl_8Kk96uRrb8HRszrFghY3ffRE4faK`
+- State: READY
+- Deployed commit: `765ed2b1dbf8e806325169790e9b88001e415f5e`
+- Custom-domain aliases reported by Vercel: `www.credonomics.in` and `credonomics.in`
+- Build output: 344 static pages generated; 141 search-index entries and 41 automated IPO dashboard records generated.
+
+**Validation on the PR head and production build**
+- Unit tests: 177 passed across 29 test files.
+- Standalone TypeScript: `tsc --noEmit --pretty false` passed (the build proceeded to Next.js production compilation).
+- Next.js production build: completed successfully; 344/344 static pages generated.
+- Existing non-blocking CSS autoprefixer, React-hook ESLint and image-optimization warnings remained; no build error was reported.
+
+**Public visibility limitation**
+- The public article URL returned HTTP 200, but the retrieved page still showed the pre-correction 18 November title, summary, checked date and old action text.
+- The Research Watch hub still listed the old commodity-margin summary/check date.
+- The November bulletin returned an older snapshot.
+- Public search and sitemap fetches returned Internal Error.
+- Vercel confirms the custom-domain aliases point to the READY deployment and its deployed commit matches the merge commit, but the public content checker has not confirmed the revised article rendering. Therefore this release is recorded as merged and deployed, **not as publicly verified live content**. No cache, DNS, routing, infrastructure or deployment-protection settings were changed.
 
 ## Safeguards
 
