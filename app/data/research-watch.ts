@@ -11,6 +11,37 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+{
+    slug: 'rbi-forex-service-reporting-resident-individuals-november-2026',
+    title: 'RBI clarifies foreign-service reporting rules for resident individuals and businesses',
+    summary: 'RBI says a FEMA-resident individual does not need a separate Export Declaration Form for service exports when the required payment details are given to the authorised dealer bank. The ₹10 lakh threshold applies differently to non-individual exporters and service importers; normal bank checks remain.',
+    category: 'Banking', checkedAt: '2026-11-21', publishedAt: '2026-11-21', announcementDate: '2026-11-20', eventDate: '2026-10-01', dateLabel: 'New Trade Regulations effective', statusLabel: 'Clarification checked',
+    source: 'https://rbi.org.in/scripts/FAQDisplay.aspx?Id=181',
+    sourceLabel: 'RBI: FAQs on Foreign Exchange Management (Export and Import of Goods and Services) Regulations, 2026',
+    sourceLocation: 'FAQ dated 20 November 2026: Q1–Q2 (scope and pre-1 October transactions), Q3–Q4 and Q12 (service-export EDF and inward remittance), Q7 and Q9 (filing timelines), Q14–Q16 (service-import information and E/IDPMS reporting), Q17 (bank policy/SOP).',
+    additionalSources: [
+      { url: 'https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13750&Mode=0', label: 'RBI: Second Amendment Regulations dated 2 November 2026, effective 1 October 2026' },
+      { url: 'https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13277&Mode=0', label: 'RBI: consolidated Foreign Exchange Management (Export and Import of Goods and Services) Regulations, 2026, amended through 2 November' },
+    ],
+    audience: 'FEMA-resident natural persons receiving overseas payments for services or paying overseas providers for services, and non-individual service exporters or importers whose individual inward remittance or invoice/contract value is near ₹10 lakh. This update concerns services and software, not a general relaxation for goods trade.',
+    facts: [
+      'RBI published the clarifying FAQ on 20 November 2026. The underlying Foreign Exchange Management (Export and Import of Goods and Services) Regulations were notified on 13 January 2026 and became effective on 1 October 2026. The Second Amendment is dated 2 November 2026 but expressly takes effect from 1 October 2026. Transactions undertaken before 1 October continue under the framework that applied when they began, even if completion or payment occurs later.',
+      'The amended Regulations define a “resident individual” as a person resident in India who is a natural person. Under FAQ Q3 and Regulation 3(2)(a), a resident individual exporting services is deemed to have submitted the Export Declaration Form (EDF) when the required service-payment information is provided to the authorised dealer (AD) bank for crediting the inward remittance. A separate EDF is not required for that resident-individual service export.',
+      'For service exporters other than resident individuals, each inward remittance of up to ₹10 lakh (or equivalent foreign currency) is treated as an EDF submission when the required details are given to the AD. Where a single inward remittance exceeds ₹10 lakh, the non-individual exporter must file the EDF before the inward remittance is credited. For such above-threshold cases, RBI says software-export EDFs are due within 30 days from the end of the invoice month; for other services, within 30 days from the end of the invoice month or on/before receipt of payment. For an advance receipt, the FAQ specifies 30 days from the end of the month in which the invoice is raised.',
+      'For service imports, RBI says the existing information supplied to the AD for an outward remittance continues to suffice for resident individuals and for non-individual importers whose invoice or contract value is up to ₹10 lakh. Under amended Regulation 18(1)(d), the AD’s IDPMS entry for service-import details is specifically for an importer other than a resident individual where the invoice or contract value exceeds ₹10 lakh; the bank must enter the details within five working days of receiving them.',
+      'The simplification does not remove normal bank checks. Regulation 4(2) requires the AD to satisfy itself about the genuineness of the transaction before crediting or debiting the customer’s account. RBI FAQ Q15 also confirms that ADs continue to report inward and outward remittance details in E/IDPMS for service exports and imports, including resident individuals and non-individuals within the specified threshold.',
+      'For software exports by non-individuals based in the Domestic Tariff Area, the SOFTEX form was discontinued from 1 October 2026; the EDF is filed with an AD or Software Technology Parks of India (STPI). For exporters operating from a Special Economic Zone, the EDF may be filed with the SEZ Development Commissioner.',
+      'Under Regulation 19(4), AD banks must publish their trade-related policy and the main features of their standard operating procedure on their websites. RBI says these should describe the documents, timelines, charges, approvals and grievance/appeal process for trade transactions.',
+    ],
+    actions: [
+      'If you are a FEMA-resident natural person receiving payment for services supplied overseas, give your AD bank the service and payment details it requests for inward-remittance credit and keep the bank acknowledgement. RBI says a separate EDF is not required for a resident individual’s service export.',
+      'If you are paying an overseas provider for services, continue to provide the transaction information and supporting material your AD bank requests before the outward remittance. The FAQ does not remove the bank’s genuineness checks or other applicable requirements.',
+      'If the exporter or importer is a company or another non-individual, check the correct threshold basis: each inward remittance for service exports, and the invoice or contract value for service imports. Ask the AD bank whether an EDF or import-service details are required before the credit or payment.',
+      'For non-individual software exports, confirm the EDF filing route with the AD bank or STPI; an SEZ exporter should check the route with the Development Commissioner of the SEZ.',
+      'Read the AD bank’s published trade policy and SOP for its document checklist, timelines, charges and grievance route. If the bank’s request appears inconsistent with the RBI FAQ or Regulations, ask for the applicable rule and a written explanation.',
+    ],
+    limits: 'Checked 21 November 2026. RBI FAQ publication date: 20 November 2026. Second Amendment date: 2 November 2026, with effect from 1 October 2026; the underlying Regulations were notified on 13 January 2026 and also took effect on 1 October. The new framework applies to transactions undertaken on or after 1 October; transactions begun earlier remain under the previous framework even if completed later. The ₹10 lakh test for non-individual service exporters is per inward remittance; for service imports it is the invoice or contract value. This is a services/software reporting clarification, not a tax exemption, general LRS change, waiver of bank KYC or genuineness checks, or blanket relaxation for goods trade. The RBI FAQ is general guidance; FEMA, the Regulations, Directions and permissions prevail if inconsistent. Banks may still request transaction-specific information under their published policies.',
+  },
   {
     slug: 'rbi-fusion-finance-penalty-internal-ombudsman-november-2026',
     title: 'RBI penalises Fusion Finance ₹7.5 lakh over KYC and complaint-escalation failures',
@@ -1656,6 +1687,7 @@ export const researchWatch: WatchItem[] = [
     ],
     limits: 'Checked 21 November 2026. Announcement / exchange-filing date: 18 November 2026. Effective date: 20 November 2026. The five MCLR tenors each rose 5 basis points versus the bank’s 20 October schedule. Applicability is limited to new MCLR-linked loans or advances sanctioned or first disbursed on or after 20 November and facilities renewed, reviewed or reset on or after that date where switching to MCLR is permitted at the borrower’s option. The bank states that floating retail, micro and small loans disbursed from 1 October 2019, and medium-enterprise floating loans from 1 April 2020, are EBLR-linked. The MCLR schedule does not establish an automatic rate or EMI change for every existing borrower; impact depends on the loan’s benchmark, spread, reset clause and tenor. No customer-specific EMI calculation, universal borrower impact or rate-switch entitlement is inferred.',
   },
+
 ]
 
 export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer' | 'Directions extended' | 'Campaign underway' | 'Deadline passed' {
