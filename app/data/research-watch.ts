@@ -1623,7 +1623,7 @@ export const researchWatch: WatchItem[] = [
       'Before rental or education payments, check the merchant category and account statement; the current ZET schedule lists a separate 1% fee plus GST.',
     ],
     limits: 'Checked 20 November 2026. The current official MITC confirms the ZET-specific 5% late-fee formula and more-than-3-days-past-due trigger, but does not state an effective date for the 5% row. The previously recorded 23 October date is not independently verified in the current primary document and is not asserted here. The 1% rental and education fees are separately effective 15 July 2026. The cancellation window is measured from card issuance, not activation. Applies to SBM ZET only; other SBM variants differ. No blanket fee change is inferred.',
-  },,
+  },
 
   {
     slug: 'south-indian-bank-mclr-revision-20-november-2026',
