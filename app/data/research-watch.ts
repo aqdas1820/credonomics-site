@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-20'
+export const WATCH_CHECKED_AT = '2026-11-21'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -1623,6 +1623,38 @@ export const researchWatch: WatchItem[] = [
       'Before rental or education payments, check the merchant category and account statement; the current ZET schedule lists a separate 1% fee plus GST.',
     ],
     limits: 'Checked 20 November 2026. The current official MITC confirms the ZET-specific 5% late-fee formula and more-than-3-days-past-due trigger, but does not state an effective date for the 5% row. The previously recorded 23 October date is not independently verified in the current primary document and is not asserted here. The 1% rental and education fees are separately effective 15 July 2026. The cancellation window is measured from card issuance, not activation. Applies to SBM ZET only; other SBM variants differ. No blanket fee change is inferred.',
+  },,
+
+  {
+    slug: 'south-indian-bank-mclr-revision-20-november-2026',
+    title: 'South Indian Bank raises every MCLR tenor by 5 bps from 20 November',
+    summary: 'The bank’s revised schedule increases all five MCLR tenors by 5 basis points. It applies to new MCLR-linked lending and specified renewals or resets—not automatically to all floating-rate retail loans.',
+    category: 'Banking', checkedAt: '2026-11-21', publishedAt: '2026-11-21', announcementDate: '2026-11-18', eventDate: '2026-11-20', dateLabel: 'Revised MCLR schedule effective',
+    source: 'https://www.southindianbank.bank.in/userfiles/upload/mclr_20_11_2026.pdf',
+    sourceLabel: 'South Indian Bank: MCLR schedule effective 20 November 2026',
+    sourceLocation: 'Page 1: tenor-wise MCLR table and applicability clauses; the bank’s current interest-rate page separately labels the schedule effective 20 November; the NSE filing dated 18 November reports the revision.',
+    additionalSources: [
+      { url: 'https://nsearchives.nseindia.com/corporate/SOUTHBANK_18112026163013_SD_STT_MCLRCHANGE_18NOV2026.pdf', label: 'South Indian Bank: NSE filing dated 18 November 2026' },
+      { url: 'https://www.southindianbank.bank.in/quick-links/interest-rates/investors-desk', label: 'South Indian Bank: current interest rates and product-linked benchmarks' },
+      { url: 'https://www.southindianbank.bank.in/userfiles/upload/mclr_20_10_2026.pdf', label: 'South Indian Bank: previous MCLR schedule effective 20 October 2026' },
+    ],
+    audience: 'Existing and prospective South Indian Bank borrowers whose facility is explicitly linked to MCLR, particularly borrowers whose loan is being sanctioned, first disbursed, renewed, reviewed or reset around the effective date. This is not a blanket update for all retail floating-rate borrowers.',
+    facts: [
+      'South Indian Bank’s exchange filing is dated 18 November 2026 and states that revised MCLR rates take effect on 20 November 2026. The bank’s current interest-rate page now labels its MCLR schedule as effective from 20 November; the bank-hosted one-page schedule carries the same effective date.',
+      'The revised schedule lists Overnight MCLR at 8.25%, One-month at 8.60%, Three-month at 9.30%, Six-month at 9.35% and One-year at 9.55%.',
+      'Compared with the bank’s previous schedule effective 20 October 2026, each of the five published tenors is 5 basis points higher (0.05 percentage point). This is a comparison of benchmark rates, not a claim that every borrower’s loan rate or EMI rises by the same amount.',
+      'The bank’s 20 November schedule says the revised rates apply only to new loans or advances linked to MCLR sanctioned or first disbursed on or after 20 November 2026, and to credit facilities renewed, reviewed or reset on or after that date where switching to an MCLR-linked interest rate is permitted at the borrower’s option. The MCLR remains effective until the next review.',
+      'The same schedule states that floating-rate loans to retail, micro and small segments disbursed from 1 October 2019 are linked to the external benchmark (EBLR); floating-rate loans to medium enterprises from 1 April 2020 are also linked to EBLR. The bank’s current rate page separately lists repo-linked EBLR products and MCLR-linked schemes.',
+      'MCLR is a benchmark, not the complete customer loan rate. The applicable spread, product terms, contractual reset frequency and benchmark tenor determine the rate that applies to a particular facility.',
+    ],
+    actions: [
+      'Check the loan sanction letter, Key Facts Statement and latest statement for the benchmark (MCLR or EBLR/repo), applicable tenor, spread and next reset date. Do not assume the MCLR update applies just because the loan is with South Indian Bank.',
+      'If the facility is MCLR-linked, compare the tenor shown in the loan documents with the new schedule and ask the bank for the revised rate and next reset date for that specific account.',
+      'For a new MCLR-linked loan sanctioned or first disbursed on or after 20 November, ask the bank to confirm the applicable tenor and spread in writing before accepting the offer.',
+      'For an existing facility being renewed, reviewed or reset, confirm whether a switch to MCLR is permitted at the borrower’s option under the facility terms; the schedule does not make every existing loan switch automatically.',
+      'If the loan is EBLR/repo-linked, do not apply these MCLR figures to it. Check the applicable EBLR benchmark and product-specific terms separately.',
+    ],
+    limits: 'Checked 21 November 2026. Announcement / exchange-filing date: 18 November 2026. Effective date: 20 November 2026. The five MCLR tenors each rose 5 basis points versus the bank’s 20 October schedule. Applicability is limited to new MCLR-linked loans or advances sanctioned or first disbursed on or after 20 November and facilities renewed, reviewed or reset on or after that date where switching to MCLR is permitted at the borrower’s option. The bank states that floating retail, micro and small loans disbursed from 1 October 2019, and medium-enterprise floating loans from 1 April 2020, are EBLR-linked. The MCLR schedule does not establish an automatic rate or EMI change for every existing borrower; impact depends on the loan’s benchmark, spread, reset clause and tenor. No customer-specific EMI calculation, universal borrower impact or rate-switch entitlement is inferred.',
   },
 ]
 
