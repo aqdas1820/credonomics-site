@@ -737,7 +737,7 @@ export const researchWatch: WatchItem[] = [
     slug: 'tiruvalla-afzalpur-dicgc-claims-november-2026',
     title: 'Tiruvalla and Afzalpur co-operative banks: deposit insurance documents due 22 November',
     summary: 'Both DICGC notices list 22 November for claim documents; its FAQ says willingness forms have no cut-off while a bank remains under AID. The 6 January payment date is conditional.',
-    category: 'Bank deposits', checkedAt: '2026-11-22', announcementDate: '2026-10-09', eventDate: '2026-11-22', dateLabel: 'Claim and willingness date in both DICGC notices', statusLabel: 'Deadline-date clarification checked',
+    category: 'Bank deposits', checkedAt: '2026-11-22', announcementDate: '2026-10-09', eventDate: '2026-11-22', dateLabel: 'Claim and willingness date in both DICGC notices', statusLabel: 'Clarification checked',
     updateNote: '22 November: rechecked both 9 October bank-specific notices, DICGC’s current press-release register, its Banks Under AID list and its FAQ. The notices still list 22 November, with no cutoff hour. DICGC’s FAQ says there is no cut-off for willingness forms while the bank remains under AID; this does not guarantee inclusion in the current claim list or payment on 6 January. No later bank-specific extension or replacement notice was found in the current DICGC register.',
     source: 'https://dicgc.org.in/sites/default/files/2026-10/5b-press-release-english-and-hindi-the-tiruvalla-urban-co-operative-bank-ltd-tiruvalla-pathanamthitta_0.pdf',
     sourceLabel: 'DICGC: Tiruvalla Urban Co-operative Bank payment notice',
