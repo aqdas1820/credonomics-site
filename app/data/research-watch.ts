@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-21'
+export const WATCH_CHECKED_AT = '2026-11-22'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
