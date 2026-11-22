@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-21'
+export const WATCH_CHECKED_AT = '2026-11-22'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -641,30 +641,30 @@ export const researchWatch: WatchItem[] = [
   },
   {
     slug: 'roarbank-emi-foreclosure-fee-november-2026',
-    title: 'Roarbank credit card: 3% EMI foreclosure fee starts on 21 November',
-    summary: 'The dated KFS and MITC set 3% of remaining principal plus GST from 21 November; the current tariff page already displays 3% but gives no effective date.',
-    category: 'Credit cards', checkedAt: '2026-11-20', publishedAt: '2026-11-16', eventDate: '2026-11-21', dateLabel: 'Revised EMI foreclosure fee effective',
-    updateNote: '20 November: the current tariff page now displays 3%, not 2%. The September KFS and MITC still specify that 3% takes effect on 21 November for both Standard EMI and Partner EMI. No request-versus-processing transition rule is published.',
+    title: 'Roarbank credit card: 3% EMI foreclosure fee now applies from 21 November',
+    summary: 'The 3% fee on remaining principal plus GST now applies to both Standard EMI and Partner EMI; the current tariff page also displays 3%.',
+    category: 'Credit cards', checkedAt: '2026-11-22', publishedAt: '2026-11-16', eventDate: '2026-11-21', dateLabel: 'Revised EMI foreclosure fee effective',
+    updateNote: '22 November: the 21 November effective date has passed. The current tariff page displays 3%, consistent with the dated KFS and MITC for both Standard EMI and Partner EMI. The documents still do not say whether a request submitted before 21 November but processed afterwards uses the request date or processing date.',
     source: 'https://roar.unity.bank.in/doc/Key%20Fact%20Sheet%20Roarbank.pdf',
     sourceLabel: 'Unity Small Finance Bank: Roarbank credit card Key Fact Statement',
-    sourceLocation: 'Pages 3–4, standard EMI and Partner EMI foreclosure fee rows; both show the 21 November 2026 effective date',
+    sourceLocation: 'KFS page 3 and MITC pages 8, 21 and 30: standard EMI and Partner EMI rows separately show 3% of remaining principal from 21 November 2026, plus applicable GST.',
     additionalSources: [
       { url: 'https://roar.unity.bank.in/doc/MITC%20Credit%20card.pdf', label: 'Roarbank MITC: standard EMI early closure and Partner EMI foreclosure clauses, including the 21 November rate and no-partial-prepayment rule' },
-      { url: 'https://roar.unity.bank.in/en/tariffs', label: 'Current Roarbank tariff page: displays a 3% early-repayment/foreclosure fee but does not state its effective date' },
+      { url: 'https://roar.unity.bank.in/en/tariffs', label: 'Current Roarbank tariff page, checked 22 November: displays a 3% early-repayment/foreclosure fee' },
     ],
     audience: 'Unity Small Finance Bank Roarbank credit card holders considering early closure of a standard or Partner EMI plan.',
     facts: [
       'The September 2026 KFS and MITC show the earlier 2% fee and a separate 3% fee effective 21 November 2026 for both standard EMI and Partner EMI. The fee is calculated on principal outstanding at foreclosure; applicable GST is additional.',
       'The MITC says partial prepayments are not permitted for standard EMI or Partner EMI. Early closure requires payment of the remaining principal and the applicable foreclosure fee and tax.',
-      'As checked on 20 November, the current public tariff page displays 3% for early repayment/foreclosure but does not state when the revised rate starts. The dated KFS and MITC specify 21 November.',
+      'Checked 22 November, the current public tariff page displays 3% for early repayment/foreclosure, consistent with the dated KFS and MITC. The tariff page itself does not state the effective date; the dated documents specify 21 November.',
       'The documents do not say whether a request submitted before 21 November but processed on or after that date uses the request date or processing date.',
     ],
     actions: [
-      'If planning an early closure on or around 21 November, request a written payoff quote from Roarbank that itemizes remaining principal, foreclosure fee and GST.',
-      'Ask Roarbank to confirm which date controls if a request is submitted before 21 November but processed afterwards; do not infer the transition rule from the tariff page alone.',
-      'Compare the quoted early-closure amount with the remaining scheduled instalments before deciding.',
+      'For an active Standard EMI or Partner EMI plan, if you are considering full early closure now, request a written payoff quote that itemizes remaining principal, the 3% foreclosure fee and GST.',
+      'If you submitted a foreclosure request before 21 November but it is still pending or was processed on or after that date, ask the bank in writing which date determines the fee; the issuer documents do not specify this transition.',
+      'Partial prepayments are not permitted under the MITC. Compare the full payoff amount with the remaining scheduled instalments before deciding.'
     ],
-    limits: 'Checked 20 November 2026. The dated KFS and MITC set the 3% fee effective date as 21 November; a separate announcement date is not stated. The current tariff page already displays 3% but has no effective date. The issuer documents do not resolve request/processing cutoff treatment. No fee is calculated here for an individual account.',
+    limits: 'Checked 22 November 2026. The revised 3% fee became effective on 21 November 2026 for both Standard EMI and Partner EMI; a separate announcement date is not stated. The fee is calculated on remaining principal and applicable GST is additional. The current tariff page displays 3% but does not state the effective date. The issuer documents do not resolve how a request submitted before 21 November but processed afterwards is treated. Partial prepayments are not permitted. No fee is calculated here for an individual account.',
   },
   {
     slug: 'motilal-oswal-seven-schemes-100-monthly-sip-november-2026',
