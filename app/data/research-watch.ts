@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-22'
+export const WATCH_CHECKED_AT = '2026-11-23'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -735,35 +735,35 @@ export const researchWatch: WatchItem[] = [
   },
   {
     slug: 'tiruvalla-afzalpur-dicgc-claims-november-2026',
-    title: 'Tiruvalla and Afzalpur co-operative banks: deposit insurance documents due 22 November',
-    summary: 'Both DICGC notices list 22 November for claim documents; its FAQ says willingness forms have no cut-off while a bank remains under AID. The 6 January payment date is conditional.',
-    category: 'Bank deposits', checkedAt: '2026-11-22', announcementDate: '2026-10-09', eventDate: '2026-11-22', dateLabel: 'Claim and willingness date in both DICGC notices', statusLabel: 'Clarification checked',
-    updateNote: '22 November: rechecked both 9 October bank-specific notices, DICGC’s current press-release register, its Banks Under AID list and its FAQ. The notices still list 22 November, with no cutoff hour. DICGC’s FAQ says there is no cut-off for willingness forms while the bank remains under AID; this does not guarantee inclusion in the current claim list or payment on 6 January. No later bank-specific extension or replacement notice was found in the current DICGC register.',
+    title: 'Tiruvalla and Afzalpur depositors: 22 November notice date passed; willingness forms remain possible under AID',
+    summary: 'The notices’ 22 November date has passed. DICGC says willingness forms may still be submitted while a bank remains under AID; inclusion in the current claim list and 6 January payment are not guaranteed.',
+    category: 'Bank deposits', checkedAt: '2026-11-23', publishedAt: '2026-11-15', announcementDate: '2026-10-09', eventDate: '2026-11-22', dateLabel: 'Notice date passed; willingness-form rule clarified', statusLabel: 'Clarification checked',
+    updateNote: '23 November: the date in both notices has passed. DICGC’s FAQ says willingness forms may be submitted at any time while the bank remains under AID. This is not a blanket extension of every supporting-document deadline and does not guarantee inclusion in the current claim list or payment on 6 January. The latest published DICGC Banks Under AID list is dated 14 October and includes both banks; confirm the bank’s AID status when submitting.',
     source: 'https://dicgc.org.in/sites/default/files/2026-10/5b-press-release-english-and-hindi-the-tiruvalla-urban-co-operative-bank-ltd-tiruvalla-pathanamthitta_0.pdf',
     sourceLabel: 'DICGC: Tiruvalla Urban Co-operative Bank payment notice',
-    sourceLocation: 'English release dated 9 October 2026, table and paragraphs 1–3 on page 2; DICGC FAQ question “Is there any cut-off date for submission of willingness forms?” (lines 171–175); current press-release register and Banks Under AID list checked 22 November.',
+    sourceLocation: 'English release dated 9 October 2026, table and paragraphs 1–3 on page 2; DICGC FAQ question “Is there any cut-off date for submission of willingness forms by depositors?”; Banks Under AID list last updated 14 October; RBI directions dated 8 October state a six-month period subject to review. DICGC press-release register rechecked 23 November; no later bank-specific extension or replacement notice was found.',
     additionalSources: [
       { url: 'https://dicgc.org.in/sites/default/files/2026-10/4b-press-release-english-and-hindi-sri-mahatma-basaveshwar-co-operative-bank-ltd-afzalpur_0.pdf', label: 'DICGC: Sri Mahatma Basaveshwar Co-operative Bank, Afzalpur, payment notice' },
-      { url: 'https://www.rbi.org.in/scripts/FS_PressRelease.aspx?fn=2755&prid=63763', label: 'RBI: Tiruvalla directions and withdrawal restriction' },
-      { url: 'https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63764', label: 'RBI: Afzalpur directions and withdrawal restriction' },
-      { url: 'https://dicgc.org.in/FAQs', label: 'DICGC: FAQ — no cut-off for willingness forms while a bank remains under AID' },
-      { url: 'https://www.dicgc.org.in/information-corner/press-release', label: 'DICGC: current press-release register, checked 22 November 2026' },
+      { url: 'https://www.rbi.org.in/scripts/FS_PressRelease.aspx?fn=2755&prid=63763', label: 'RBI: Tiruvalla directions effective from close of business on 8 October; six-month period subject to review' },
+      { url: 'https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63764', label: 'RBI: Afzalpur directions effective from close of business on 8 October; six-month period subject to review' },
+      { url: 'https://www.dicgc.org.in/FAQs', label: 'DICGC: FAQ — no cut-off for willingness forms while a bank remains under AID' },
+      { url: 'https://www.dicgc.org.in/information-corner/press-release', label: 'DICGC: current press-release register, rechecked 23 November 2026' },
       { url: 'https://www.dicgc.org.in/banks-under-aid', label: 'DICGC: Banks Under AID list, last updated 14 October 2026' },
     ],
     audience: 'Depositors of Tiruvalla Urban Co-operative Bank Ltd. in Pathanamthitta, Kerala, and Sri Mahatma Basaveshwar Co-operative Bank Ltd. in Afzalpur, Karnataka.',
     facts: [
       'Both DICGC notices dated 9 October 2026 list 22 November 2026 as the last date for claim/willingness submission to the respective bank. Both list 6 January 2027 for payment, subject to the bank submitting the claim list in the prescribed form and DICGC verifying the claim documents.',
-      'DICGC’s current FAQ, checked 22 November, explicitly says there is no cut-off date for willingness forms: depositors may submit them to the bank for onward submission while the bank remains under AID. This general FAQ does not confirm that a late form will be included in the current claim list or paid on 6 January.',
-      'The current DICGC press-release register still lists the 9 October notices for these two banks and no later bank-specific extension or replacement notice. The DICGC Banks Under AID list, last updated 14 October 2026, includes both banks.',
+      'The 22 November date in the bank-specific notices has passed. DICGC’s current FAQ says there is no cut-off date for willingness forms: depositors may submit them to the bank for onward submission to DICGC at any time, provided the bank is under AID when the form is submitted. The FAQ addresses willingness forms; it does not state that every supporting-document deadline or the bank’s claim-list submission timetable is extended.',
+      'The latest published DICGC Banks Under AID list is dated 14 October 2026 and includes both banks. RBI’s 8 October press releases say the respective directions remain in force for six months from close of business on 8 October, subject to review. Depositors should confirm with the bank that it remains under AID at the time of submission. The DICGC press-release register, rechecked 23 November, still lists the 9 October notices and shows no later bank-specific extension or replacement notice.',
       'Each notice calls for officially valid identity documents, written willingness and alternate bank account details. The insurance ceiling is ₹5 lakh for deposits held in the same capacity and right.',
-      'RBI’s separate six-month directions prohibit account withdrawals at both banks from close of business on 8 October, subject to review. Loan set-off is permitted under the conditions in the relevant directions.',
+      'RBI’s separate directions restrict withdrawals at both banks from close of business on 8 October, subject to review. Loan set-off is permitted only under the conditions in the relevant directions.',
     ],
     actions: [
-      'If you have not submitted the form, contact the bank’s CEO/administrator promptly and ask how to submit the signed willingness form, officially valid identity documents and alternate bank details. Keep a dated acknowledgement.',
-      'DICGC’s FAQ says willingness forms have no cut-off while the bank remains under AID. Ask the bank whether a later submission can still be added to its claim list; do not assume it will qualify for the 6 January payment date.',
+      'If you have not submitted the form, contact the bank’s CEO/administrator promptly. Ask whether the bank remains under AID and how to submit the signed willingness form, officially valid identity documents and alternate bank details. Keep a dated acknowledgement.',
+      'DICGC’s FAQ says willingness forms have no cut-off while the bank remains under AID. Ask the bank whether a late form and its supporting documents can still be included in the claim list it sends to DICGC. Do not assume this guarantees inclusion in the current list or payment on 6 January.',
       'If you already submitted the documents, retain the acknowledgement and ask the bank to confirm whether your claim details are included in the list sent to DICGC.',
     ],
-    limits: 'Checked 22 November 2026. Both bank-specific DICGC notices are dated 9 October and list 22 November as the last date for claim/willingness submission, but specify no cutoff hour. DICGC’s current FAQ says there is no cut-off for willingness forms provided the bank remains under AID at the time of submission; it does not guarantee inclusion in the current claim list or payment on 6 January. The 6 January 2027 payment date is conditional on bank list submission and DICGC verification. The Banks Under AID list was last updated 14 October 2026. RBI’s directions run for six months from close of business on 8 October, subject to review. No individual eligibility or payment is inferred.',
+    limits: 'Checked 23 November 2026. Both bank-specific DICGC notices are dated 9 October and list 22 November as the last date for claim/willingness submission; that notice date has passed. DICGC’s FAQ says willingness forms may be submitted at any time provided the bank is under AID at the time of submission. The FAQ does not establish a blanket extension for every supporting document or the bank’s claim-list timetable. The latest published Banks Under AID list is dated 14 October and includes both banks; RBI’s directions dated 8 October state a six-month period from close of business that day, subject to review. Confirm the bank’s current AID status and handling of late documents directly with the bank. The 6 January 2027 payment date remains conditional on bank list submission and DICGC verification. No individual eligibility or payment is inferred.',
   },
   {
     slug: 'puducherry-cooperative-bank-dicgc-claim-december-2026',
