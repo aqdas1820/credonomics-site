@@ -70,7 +70,44 @@ The entry is in `app/data/research-watch.ts`. Existing `ResearchWatchBrief` data
 
 ## Validation and release evidence
 
-- Unit tests, TypeScript and production build: pending final-head PR validation.
-- PR #152; final reviewed head SHA: pending.
-- Merge commit and production deployment ID: pending.
-- Public article, hub, bulletin, homepage, search-index and sitemap verification: pending.
+### GitHub review and rollback
+
+- Content PR: [#152](https://github.com/aqdas1820/credonomics-site/pull/152) — merged.
+- Reviewed feature-branch head: `3209a2f07ede52d38e4a4edbe40a1673a7d2660f`.
+- Merge commit and production source commit: `f574ef9ba3459fc6741275693d0e9ade49c4a1d3`.
+- Exact pre-edit `main` SHA: `a0638e8be362c0c92e75f982fc809c48806b470c`.
+- Pre-edit rollback reference: `backup/pre-icici-savings-charges-20261123-1920`.
+- Evidence-update base `main` SHA: `f574ef9ba3459fc6741275693d0e9ade49c4a1d3`.
+- Evidence-update rollback reference: `backup/pre-icici-release-evidence-20261123-1950`.
+
+### Build and deployment
+
+- Vercel preview deployment: `dpl_6sBzVmzsAsGssqgJwRg13hwfVrD3` — READY for the reviewed feature-branch head.
+- Production deployment: `dpl_4w9btLRZkVAbMFuLRbsRFDm1MDSj` — READY; deployed commit matches `f574ef9ba3459fc6741275693d0e9ade49c4a1d3`.
+- Unit tests: 177 passed across 29 test files.
+- TypeScript: `tsc --noEmit --pretty false` passed.
+- Search-index generation: 142 CredoNomics entries.
+- Automated IPO dashboard generation: 41 records.
+- Next.js production build: completed; 344/344 static pages generated.
+- Existing non-blocking CSS/autoprefixer, React Hook and image-optimization warnings remain.
+
+### Public verification limitation
+
+Vercel reports the production deployment READY and both `credonomics.in` and `www.credonomics.in` aliases assigned to that deployment. However, the independent public-page checker did not verify the new article:
+
+- The new article URL returned Internal Error.
+- Research Watch hub and November bulletin still displayed the 21 November publication snapshot and did not show the new ICICI guide.
+- Homepage showed the previous Research Watch card list.
+- Public search and sitemap XML fetches returned Internal Error.
+- The direct Vercel deployment URL was not accessible through the public checker.
+- Vercel runtime-error query for the new route returned no runtime errors in the checked one-hour window; runtime-log query for the latest 15 minutes returned no matching error/fatal entries.
+
+Therefore this release is **merged and deployed to a READY Vercel production deployment, but public rendering is not independently verified**. No DNS, cache, routing, alias, protection or infrastructure changes were made to force visibility. Do not describe the new article as publicly live until the article, hub and bulletin render the new record.
+
+### Automation and scope safeguards
+
+- Research Watch task `6adc4a968f4881919162894e39d400bc` remains disabled; latest recorded result available in this review is 29 October 2026.
+- CredoNomics Daily Research task `6adbd4ecb2e48191960ca0a36ac53f91` was already disabled; last recorded run was 8 November 2026. It was not re-enabled.
+- No automation schedules were changed.
+- No payments, authentication, customer/financial records, infrastructure, secrets, paid resources or card-ranking formulas were changed.
+- No external messages or comments were sent.
