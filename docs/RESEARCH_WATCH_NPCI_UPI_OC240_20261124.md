@@ -97,15 +97,15 @@ This was not present in the current `app/data/research-watch.ts`, the public Res
 
 ### Public visibility verification — not confirmed
 
-The production deployment is READY, but the public content could not be confirmed live during this verification.
+The production deployment is READY, but the public content could not be confirmed live during this verification. The build's search-index generator writes `app/data/search-index.generated.ts`, and `app/sitemap.ts` imports `researchWatch` and adds each article slug; both build-time patterns include the new record.
 
 - https://www.credonomics.in/research/watch — page fetch succeeded, but its visible snapshot still says latest check `2026-11-23`; the OC 240 entry is absent.
-- https://www.credonomics.in/updates/2026-11 — page fetch returned HTTP 200, but its visible snapshot still says latest check `2026-11-23`; the OC 240 entry is absent.
+- https://www.credonomics.in/updates/2026-11 — page fetch succeeded, but its visible snapshot still says latest check `2026-11-23`; the OC 240 entry is absent.
 - https://www.credonomics.in/ — page fetch returned HTTP 200, but its visible snapshot still says latest check `2026-11-23`; the OC 240 entry is absent.
 - https://www.credonomics.in/research/watch/npci-upi-dispute-reason-codes-effective-25-november-2026 — public checker returned Internal Error.
 - https://www.credonomics.in/search?q=NPCI — public checker returned Internal Error.
 - https://www.credonomics.in/sitemap.xml — public checker returned Internal Error.
-- https://www.credonomics.in/search-index.json — public checker returned Internal Error.
+- The generated search index is `app/data/search-index.generated.ts`; the production prebuild generated 143 entries. The public `/search?q=NPCI` route returned Internal Error.
 - Query-string cache-busting did not resolve the stale hub/bulletin/homepage snapshot or the article/search/sitemap fetch errors.
 - The Vercel preview and deployment hostnames were also inaccessible to the public checker. A direct runtime `curl` attempt could not resolve the domain because outbound DNS is unavailable in that runtime; this is not evidence that the public DNS itself is broken.
 - The official NPCI OC 240 and OC 241 PDFs and the NPCI UPI circular register were independently opened and checked.
