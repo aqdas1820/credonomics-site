@@ -12,6 +12,107 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
 {
+  "slug": "rbi-draft-electronic-banking-safeguards-november-2026",
+  "title": "RBI proposes payment-channel locks, customer-set limits and trusted-person checks",
+  "summary": "A 23 November draft would let bank customers disable digital-payment channels, set transaction and beneficiary limits, and use an account-wide Stop Switch. A voluntary Trusted Person Mechanism would add approval for certain high-value transfers; these are proposals, not current rules.",
+  "category": "Banking",
+  "checkedAt": "2026-11-23",
+  "publishedAt": "2026-11-23",
+  "announcementDate": "2026-11-23",
+  "eventDate": "2026-12-14",
+  "dateLabel": "RBI public comments due",
+  "source": "https://www.rbi.org.in/SCRIPTS/BS_PressReleaseDisplay.aspx?prid=64026",
+  "sourceLabel": "RBI: Draft Amendment Directions for Preventive Safeguards for Electronic Banking Transactions",
+  "sourceLocation": "Press Release 2026-2027/1548, paragraphs 1–3; supporting draft clauses are linked below across all seven bank categories.",
+  "additionalSources": [
+    {
+      "url": "https://www.rbi.org.in/scripts/bs_viewcontent.aspx?Id=5221",
+      "label": "RBI draft: Commercial Banks — Responsible Business Conduct, Fifth Amendment Directions, 2026"
+    },
+    {
+      "url": "https://www.rbi.org.in/scripts/bs_viewcontent.aspx?Id=5222",
+      "label": "RBI draft: Small Finance Banks — Responsible Business Conduct, Fifth Amendment Directions, 2026"
+    },
+    {
+      "url": "https://www.rbi.org.in/scripts/bs_viewcontent.aspx?Id=5223",
+      "label": "RBI draft: Payments Banks — Responsible Business Conduct, Third Amendment Directions, 2026"
+    },
+    {
+      "url": "https://www.rbi.org.in/scripts/bs_viewcontent.aspx?Id=5224",
+      "label": "RBI draft: Local Area Banks — Responsible Business Conduct, Fifth Amendment Directions, 2026"
+    },
+    {
+      "url": "https://www.rbi.org.in/scripts/bs_viewcontent.aspx?Id=5225",
+      "label": "RBI draft: Regional Rural Banks — Responsible Business Conduct, Fifth Amendment Directions, 2026"
+    },
+    {
+      "url": "https://www.rbi.org.in/scripts/bs_viewcontent.aspx?Id=5226",
+      "label": "RBI draft: Urban Co-operative Banks — Responsible Business Conduct, Fifth Amendment Directions, 2026"
+    },
+    {
+      "url": "https://www.rbi.org.in/scripts/bs_viewcontent.aspx?Id=5227",
+      "label": "RBI draft: Rural Co-operative Banks — Responsible Business Conduct, Fifth Amendment Directions, 2026"
+    },
+    {
+      "url": "https://rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62535",
+      "label": "RBI: 9 April 2026 discussion paper on safeguards in digital payments to curb fraud"
+    }
+  ],
+  "audience": "Customers of commercial banks, small finance banks, payments banks, local area banks, regional rural banks, urban co-operative banks and rural co-operative banks. Card controls would cover the relevant debit, credit and prepaid cards issued by those banks, subject to the stated PPI exceptions.",
+  "facts": [
+    "RBI issued seven draft Amendment Directions on 23 November 2026, following feedback on its 9 April 2026 discussion paper. The drafts are open for comments from regulated entities, the public and other stakeholders through 14 December 2026. They are proposals, not final directions currently in force.",
+    "For digital payment channels other than cards, the drafts would require banks to let customers disable one or more channels and later re-enable them with authentication. Optional customer-set controls would include per-transaction, per-beneficiary and daily limits for each channel, an aggregate daily limit across all digital payment channels, and time windows during which selected channels remain disabled.",
+    "For debit, credit and prepaid cards, the drafts would require on/off controls and transaction-limit settings for domestic and international use at PoS, ATMs, online and contactless points, within the overall card limit set by the issuer. The card-specific clauses expressly exclude Gift PPI cards and Transit PPI cards.",
+    "The proposed account-wide Stop Switch would immediately disable customer-initiated outward debits. It would not stop ongoing recurring mandates or standing instructions, lien marking, or bank-initiated debits to recover due charges or loan instalments. Inward credits would continue. While active, the draft would also prevent new customer-initiated debits, new payment mandates, new standing instructions and registration of UPI on new third-party payment applications.",
+    "At customer onboarding, the drafts would keep digital payment channels disabled by default until the customer gives explicit consent and completes the required authentication. The card-issue exception would enable physical and virtual cards only for contact-based domestic ATM and PoS use; forex prepaid cards have a separate outside-India contact/contactless exception. Existing card controls would carry over on reissue. Other newly enabled channels would have a bank-set aggregate transfer ceiling for the first 24 hours, with any later increase subject to the bank's risk assessment and policy.",
+    "The Trusted Person Mechanism (TPM) would be voluntary and would add another authentication factor for electronic fund transfers above a threshold chosen by the customer. The drafts exclude payments through the UPI channel linked to the account, merchant payments through any channel or instrument, and recurring payments through standing instructions, e-mandates or NACH mandates.",
+    "A trusted person would have to be at least 18, pass identity verification using an Officially Valid Document, and use a mobile number different from the customer's registered number. A 24-hour cooling period is proposed before TPM activation. For a transfer above the customer's threshold, the trusted person would have one hour to approve; a rejection or no response would cause the transaction to be rejected. The trusted person would not become a joint holder or authorised signatory, could not operate the account or view balances, deposits, investments or insurance details, and would not incur financial liability merely by approving or rejecting a transaction.",
+    "The drafts would expand the definition of bank negligence in fraudulent electronic banking transactions. The listed omissions include failures involving authentication and beneficiary-change controls, mandatory alerts, 24x7 fraud/lost-card reporting channels, prompt action after customer reports, relevant blocking after repeated failed authentication, and implementation of customer controls or TPM. System malfunction or security breach at the bank, and collusion by a bank employee or a third party engaged by the bank, are also listed.",
+    "The proposed commencement is not identical across all seven bank categories or clauses. The main customer-control and TPM provisions are proposed from 1 July 2027, or an earlier date a bank chooses; specified parts of the expanded negligence definition are proposed from 1 January 2027. Those dates remain proposals until RBI finalises the directions."
+  ],
+  "actions": [
+    "Do not assume a new Stop Switch or Trusted Person feature is available today. For immediate protection, review the card and channel controls already offered by your own bank and use only features that the bank currently confirms are active.",
+    "If you are a consumer group, bank customer, regulated entity or other stakeholder wishing to comment, submit feedback by 14 December 2026 through the relevant Connect 2 Regulate link on RBI's draft page, or email mcsdorfeedback@rbi.org.in with the full name of the draft Amendment Directions and the regulated-entity type in the subject line.",
+    "When comparing the proposal with your own account, check which of the seven bank categories applies and read that bank-category draft. The commencement clauses and some existing security-control references differ across categories.",
+    "If you experience an unauthorised transaction now, use your bank's existing 24x7 fraud-reporting channel and preserve the complaint acknowledgement. Do not wait for this draft to become final or treat it as an automatic refund or compensation rule."
+  ],
+  "limits": "Checked 23 November 2026. Announcement date: 23 November 2026. Public-comment deadline: 14 December 2026. This is a draft consultation, not an operative rule. Proposed commencement dates are 1 January 2027 for specified parts of the expanded negligence definition and 1 July 2027 (or earlier bank adoption) for the main controls and TPM, with clause references differing by bank category. The Stop Switch has explicit recurring-mandate, standing-instruction, lien and bank-recovery exceptions. TPM is voluntary and excludes linked-UPI payments, merchant payments and specified recurring payments. Gift PPI and Transit PPI cards are excluded from the card-specific clauses. The draft does not create an automatic refund, compensation or liability outcome for every fraudulent transaction; individual claims remain subject to the applicable final framework and facts."
+},
+{
+  "slug": "sgb-2021-22-series-i-premature-redemption-price-november-2026",
+  "title": "SGB 2021–22 Series I: RBI sets ₹12,612 per unit for 25 November premature redemption",
+  "summary": "RBI announced ₹12,612 per unit on 23 November for the 25 November 2026 premature-redemption date. The request window for this specific tranche closed on 16 November; the price notice does not reopen it.",
+  "category": "Markets",
+  "checkedAt": "2026-11-23",
+  "publishedAt": "2026-11-23",
+  "announcementDate": "2026-11-23",
+  "eventDate": "2026-11-25",
+  "dateLabel": "Premature redemption date",
+  "source": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64030",
+  "sourceLabel": "RBI: SGB 2021–22 Series I premature-redemption price notice",
+  "sourceLocation": "Press Release 2026-2027/1552, paragraphs 1–2.",
+  "additionalSources": [
+    {
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63416",
+      "label": "RBI: October 2026–March 2027 SGB premature-redemption calendar, row 23"
+    }
+  ],
+  "audience": "Holders of SGB 2021–22 Series I, issued on 25 May 2021, who submitted a premature-redemption request for 25 November 2026 through a receiving office, NSDL, CDSL or RBI Retail Direct.",
+  "facts": [
+    "RBI's press release dated 23 November 2026 sets the premature-redemption price for SGB 2021–22 Series I due on 25 November 2026 at ₹12,612 per unit.",
+    "The price is based on the simple average of IBJA-published closing prices for 999-purity gold on the three preceding business days: 19, 20 and 23 November 2026. It applies to this tranche only.",
+    "RBI's 21 August 2026 calendar identifies the tranche as 2021–22 Series I, issued on 25 May 2021. It lists the premature-redemption date as 25 November 2026 and the investor request window as 23 October to 16 November 2026; that window has closed.",
+    "The price notice states that premature redemption may be permitted after the fifth year from issue on an interest-payment date. It does not announce a fresh request window or reopen the closed calendar window.",
+    "The announced price does not confirm whether an individual request was accepted, the number of units accepted, the date funds will be credited or the tax treatment of a particular holding."
+  ],
+  "actions": [
+    "If you submitted a request within 23 October–16 November, match the series and issue date on your holding record, retain the request acknowledgement and check the accepted unit count and redemption entry with your receiving office, NSDL, CDSL or RBI Retail Direct.",
+    "If no request was submitted by 16 November, do not treat the 23 November price announcement as reopening the window. Check the next RBI redemption calendar and the institution through which you hold the bond for a later eligible date.",
+    "Do not use ₹12,612 as a current market quote or as the redemption price for another SGB series; RBI's figure is specific to SGB 2021–22 Series I."
+  ],
+  "limits": "Checked 23 November 2026. Announcement date: 23 November 2026. Premature-redemption date: 25 November 2026. RBI's calendar request window was 23 October–16 November 2026 and is closed. ₹12,612 per unit applies only to SGB 2021–22 Series I and is based on the specified IBJA gold-price average. The price notice does not verify an individual request, accepted units, payment-credit date or tax outcome. It does not reopen the request window and is not a recommendation to redeem."
+},
+{
     slug: 'icici-savings-account-cash-nach-charges-december-2026',
     title: 'ICICI Bank savings and salary accounts: cash, DD and ECS/NACH charges change from 1 December',
     summary: 'Across the verified domestic account schedules, the value-based charge on eligible branch cash deposits and withdrawals rises from ₹3.50 to ₹4 per ₹1,000. Second and third financial ECS/NACH returns become ₹550. DDs up to ₹1 lakh become free only in Select Salary, Power Pay and Defence Salary schedules; BSBDA/PMJDY and Special Needs Savings cash charges remain nil.',
