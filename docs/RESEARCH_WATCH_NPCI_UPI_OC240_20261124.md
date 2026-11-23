@@ -101,7 +101,7 @@ The production deployment is READY, but the public content could not be confirme
 
 - https://www.credonomics.in/research/watch — page fetch succeeded, but its visible snapshot still says latest check `2026-11-23`; the OC 240 entry is absent.
 - https://www.credonomics.in/updates/2026-11 — page fetch succeeded, but its visible snapshot still says latest check `2026-11-23`; the OC 240 entry is absent.
-- https://www.credonomics.in/ — page fetch returned HTTP 200, but its visible snapshot still says latest check `2026-11-23`; the OC 240 entry is absent.
+- https://www.credonomics.in/ — page fetch succeeded, but its visible snapshot still says latest check `2026-11-23`; the OC 240 entry is absent.
 - https://www.credonomics.in/research/watch/npci-upi-dispute-reason-codes-effective-25-november-2026 — public checker returned Internal Error.
 - https://www.credonomics.in/search?q=NPCI — public checker returned Internal Error.
 - https://www.credonomics.in/sitemap.xml — public checker returned Internal Error.
@@ -122,10 +122,3 @@ The production deployment is READY, but the public content could not be confirme
 ### Scope safeguards
 
 No card/fund data, card-ranking formulas, reward valuations, payments, authentication, customer/financial records, infrastructure, secrets or paid resources were changed. No external messages or comments were sent.
-- Content PR and reviewed head SHA.
-- Merge commit and final main SHA.
-- Unit-test and TypeScript results.
-- Search-index, IPO-data and static-page build results.
-- Vercel production deployment ID, READY state and deployed commit.
-- Public article, hub, homepage, November bulletin, search-index, sitemap and source-link checks.
-- Final rollback reference.
