@@ -4,52 +4,23 @@
 import type { IpoMarketRecord } from './ipo-types'
 
 export const ipoMarketMasterMeta = {
-  "generatedAt": "2026-11-20T11:27:23.842Z",
-  "recordCount": 3,
-  "nseCount": 3,
+  "generatedAt": "2026-11-23T12:22:42.986Z",
+  "recordCount": 2,
+  "nseCount": 2,
   "bseCount": 0,
-  "activeCount": 3,
+  "activeCount": 2,
   "upcomingCount": 0,
-  "sourceStatus": "NSE API 3 · BSE SME unavailable · BSE mainboard 0"
+  "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard 0"
 } as const
 
 export const ipoMarketMaster: IpoMarketRecord[] = [
-  {
-    "slug": "crystal-crop-protection-ltd-3c69112",
-    "companyName": "Crystal Crop Protection Limited",
-    "symbol": "CRYSTALCP",
-    "marketSegment": "mainboard",
-    "status": "open",
-    "securityType": "Equity",
-    "issue": {
-      "priceBandLow": 259,
-      "priceBandHigh": 272,
-      "openDate": "2026-11-18",
-      "closeDate": "2026-11-20",
-      "exchange": [
-        "NSE"
-      ]
-    },
-    "subscription": {
-      "total": 10.039972634517648,
-      "updatedAt": "2026-11-20T11:27:23.842Z",
-      "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=CRYSTALCP&type=Active"
-    },
-    "sharesOffered": 12170076,
-    "sharesBid": 122187230,
-    "estimatedIssueValueCr": 331.03,
-    "marketSource": "NSE",
-    "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-    "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=CRYSTALCP&type=Active",
-    "fetchedAt": "2026-11-20T11:27:23.842Z"
-  },
   {
     "slug": "mahanadi-coalfields-ltd-b2e27f4",
     "companyName": "Mahanadi Coalfields Limited",
     "symbol": "MAHACOAL",
     "marketSegment": "mainboard",
     "status": "open",
-    "securityType": "Equity",
+    "securityType": "EQ",
     "issue": {
       "priceBandLow": 129,
       "priceBandHigh": 136,
@@ -60,17 +31,17 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 0.11430992247733272,
-      "updatedAt": "2026-11-20T11:27:23.842Z",
+      "total": 0.6324682630771581,
+      "updatedAt": "2026-11-23T12:22:42.986Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MAHACOAL&type=Active"
     },
     "sharesOffered": 493068045,
-    "sharesBid": 56362570,
+    "sharesBid": 311849890,
     "estimatedIssueValueCr": 6705.73,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MAHACOAL&type=Active",
-    "fetchedAt": "2026-11-20T11:27:23.842Z"
+    "fetchedAt": "2026-11-23T12:22:42.986Z"
   },
   {
     "slug": "watrana-rentals-ltd-b12d52b",
@@ -89,16 +60,16 @@ export const ipoMarketMaster: IpoMarketRecord[] = [
       ]
     },
     "subscription": {
-      "total": 11.07,
-      "updatedAt": "2026-11-20T11:27:23.842Z",
+      "total": 139.76,
+      "updatedAt": "2026-11-23T12:22:42.986Z",
       "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=WATRANA&type=Active"
     },
     "sharesOffered": 3516000,
-    "sharesBid": 38926200,
+    "sharesBid": 491402400,
     "estimatedIssueValueCr": 86.14,
     "marketSource": "NSE",
     "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
     "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=WATRANA&type=Active",
-    "fetchedAt": "2026-11-20T11:27:23.842Z"
+    "fetchedAt": "2026-11-23T12:22:42.986Z"
   }
 ]
