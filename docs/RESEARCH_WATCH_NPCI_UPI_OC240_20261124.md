@@ -61,7 +61,7 @@ This was not present in the current `app/data/research-watch.ts`, the public Res
 - Content PR: https://github.com/aqdas1820/credonomics-site/pull/157
 - Reviewed PR head SHA: `253bf5d318c180d8825049a58450d594cffb368d`
 - Merge commit: `327aa375ae6580b514fc75677f515f010d17c259`
-- Final main SHA after content merge: `327aa375ae6580b514fc75677f515f010d17c259`
+- Main SHA immediately after content PR #157 merge: `327aa375ae6580b514fc75677f515f010d17c259`
 - PR state: merged; merge used the exact reviewed head SHA.
 - Pre-edit main SHA: `5f7d6351503863f45addc4ab2e4dd067f546d274`
 - Exact pre-edit rollback branch: `backup/pre-npci-upi-oc240-20261124-0046`
@@ -99,7 +99,7 @@ This was not present in the current `app/data/research-watch.ts`, the public Res
 
 The production deployment is READY, but the public content could not be confirmed live during this verification.
 
-- https://www.credonomics.in/research/watch — page fetch returned HTTP 200, but its visible snapshot still says latest check `2026-11-23`; the OC 240 entry is absent.
+- https://www.credonomics.in/research/watch — page fetch succeeded, but its visible snapshot still says latest check `2026-11-23`; the OC 240 entry is absent.
 - https://www.credonomics.in/updates/2026-11 — page fetch returned HTTP 200, but its visible snapshot still says latest check `2026-11-23`; the OC 240 entry is absent.
 - https://www.credonomics.in/ — page fetch returned HTTP 200, but its visible snapshot still says latest check `2026-11-23`; the OC 240 entry is absent.
 - https://www.credonomics.in/research/watch/npci-upi-dispute-reason-codes-effective-25-november-2026 — public checker returned Internal Error.
