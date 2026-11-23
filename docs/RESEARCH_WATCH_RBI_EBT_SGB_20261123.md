@@ -88,10 +88,51 @@ The price notice does not verify any individual's accepted request, unit count, 
 
 ## Release evidence
 
-To be completed after PR review, merge, Vercel production build and public verification:
-- Content PR and reviewed head SHA.
-- Merge commit and final main SHA.
-- Unit-test, TypeScript, search-index, IPO-data and production-build results.
-- Vercel production deployment ID, READY state and deployed commit.
-- Public article, hub, homepage, November bulletin, search-index, sitemap and source-link checks.
-- Final rollback reference.
+### GitHub
+
+- Content PR: [#154 — Publish RBI EBT safeguards draft and SGB Series I redemption price](https://github.com/aqdas1820/credonomics-site/pull/154)
+- PR reviewed head SHA: `24a9a11ae2bda76783bd172b0a8e9bba0a773502`
+- PR merge commit / post-publication main SHA: `611cfd6cb0894ce04b22cc51689bc3a4b2eff584`
+- Pre-edit main SHA: `0de0109115c8b7a5068c5af7f106ae52c1315a14`
+- Rollback branch preserving the exact pre-edit main: `backup/pre-rbi-ebt-sgb-20261123-1947`
+- Evidence-refresh branch base: `611cfd6cb0894ce04b22cc51689bc3a4b2eff584`
+
+### Validation
+
+The existing Vercel Git build pipeline ran the repository's prebuild checks and the Next.js production build:
+
+- Unit tests: **177 passed across 29 test files**.
+- TypeScript: `npm run typecheck` completed successfully (`tsc --noEmit --pretty false`).
+- IPO dashboard generator: **41 records generated**.
+- Search-index generator: **142 CredoNomics search entries generated**, including the two new Research Watch items.
+- Next.js 15.5.28 production build: compiled successfully; **346 static pages** generated, including:
+  - `/research/watch/rbi-draft-electronic-banking-safeguards-november-2026`
+  - `/research/watch/sgb-2021-22-series-i-premature-redemption-price-november-2026`
+- Vercel preview deployment: `dpl_Dsb3qmaj8xgueBSQHZ4ss8GNd9vc`, **READY**, for reviewed head `24a9a11ae2bda76783bd172b0a8e9bba0a773502`.
+- Vercel production deployment: `dpl_5Zivz3gHcSZTyXAznHd75F52oRX2`, **READY**, for main commit `611cfd6cb0894ce04b22cc51689bc3a4b2eff584`. Vercel assigned both `www.credonomics.in` and `credonomics.in`; the production deployment check reported success.
+- Non-blocking pre-existing warnings remain for React Hook dependencies, `<img>` usage and CSS autoprefixer alignment. No build errors were reported.
+
+### Public rendering verification limitation
+
+The post-deployment public checker did not confirm the new content on the custom domain:
+
+- `/research/watch`, `/updates/2026-11` and the homepage returned HTTP 200, but each still showed the earlier 23 November snapshot with the ICICI article at the top; neither new item appeared in the visible Research Watch list.
+- Both new individual article URLs returned an Internal Error from the public checker.
+- The public search endpoint and `/sitemap.xml` also returned Internal Error.
+- Cache-busting query attempts did not resolve the discrepancy.
+- The production deployment is READY and custom-domain aliases are assigned, but the public HTML/rendering mismatch remains unresolved. **Do not describe the new articles as publicly verified/live until the two article routes and the hub are independently confirmed.**
+- No DNS, cache-purge, routing, infrastructure or access-control changes were attempted. The issue is recorded as a verification blocker rather than diagnosed speculatively.
+
+### Source verification and prior batch recheck
+
+- RBI draft press release 2026-2027/1548 and the seven bank-category draft documents (RBI IDs 5221–5227) were opened and checked. The consultation deadline and proposed status are stated separately.
+- RBI SGB calendar 2026-2027/938 was opened; row 23 confirms the 2021–22 Series I request window and redemption date. RBI price notice 2026-2027/1552 was confirmed from the official RBI search result; its direct page fetch returned Internal Error during the check.
+- The 24 October batch was re-read from the current `app/data/research-watch.ts` and rechecked against current issuer/fund documents: IDFC IndiGo; Amex 15 November MITC; HDFC Notice 1370 and 9 November KIM; Tata Neu HDFC claim PDF updated 21 October; SBM secured-card MITC. The SBM ZET late-fee effective date remains unspecified and was not inferred. No reward devaluation, refund process, ranking formula or valuation change was introduced.
+
+### Final safeguards
+
+- No payment, authentication, customer/financial-record, infrastructure, secret or paid-resource code changed.
+- No card/fund product data, card ranking formulas or reward valuations changed.
+- No external message or comment was sent.
+- Research Watch task `6adc4a968f4881919162894e39d400bc` was already disabled; no schedule was changed.
+- The daily 10 AM CredoNomics Daily Research task was already disabled in the available automation record; it was left unchanged. No automation was enabled, disabled, rescheduled or created in this run.
