@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-23'
+export const WATCH_CHECKED_AT = '2026-11-24'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -112,6 +112,42 @@ export const researchWatch: WatchItem[] = [
   ],
   "limits": "Checked 23 November 2026. Announcement date: 23 November 2026. Premature-redemption date: 25 November 2026. RBI's calendar request window was 23 October–16 November 2026 and is closed. ₹12,612 per unit applies only to SGB 2021–22 Series I and is based on the specified IBJA gold-price average. The price notice does not verify an individual request, accepted units, payment-credit date or tax outcome. It does not reopen the request window and is not a recommendation to redeem."
 },
+  {
+    slug: 'npci-upi-dispute-reason-codes-effective-25-november-2026',
+    title: 'NPCI updates UPI dispute codes from 25 November: what customers should know',
+    summary: 'NPCI’s URCS workflow renames wrong-payment chargebacks and adds reason codes for overcharges, duplicate payments and cancelled, defective or undelivered goods. This is a bank/app back-office change—not a new customer refund or compensation promise.',
+    category: 'Banking',
+    checkedAt: '2026-11-24',
+    publishedAt: '2026-11-24',
+    announcementDate: '2026-11-04',
+    eventDate: '2026-11-25',
+    dateLabel: 'URCS dispute-rule changes implemented',
+    source: 'https://www.npci.org.in/uploads/UPI_URCS_OC_240_Standardization_in_Dispute_Management_6f4a6542c3.pdf',
+    sourceLabel: 'NPCI: UPI Operating Circular 240/2026–27 — Standardization of Dispute Management Rules in URCS',
+    sourceLocation: 'Pages 1–3 and Annexure I: revised dispute names, reason codes, evidence types and 25 November implementation date.',
+    additionalSources: [
+      { url: 'https://www.npci.org.in/uploads/UPI_URCS_OC_241_Revision_of_dispute_routing_logic_for_UPI_P2_M_transactions_in_URCS_1c6c076393.pdf', label: 'NPCI: UPI Operating Circular 241/2026–27 — separate P2M routing changes from 23 December and revised 1061/1096 descriptions; Annexure I also lists 1084 for Online/UDIR Refund and Credit Adjustment' },
+      { url: 'https://www.npci.org.in/circulars/upi', label: 'NPCI: official UPI circular register' },
+    ],
+    audience: 'UPI users who may need to dispute merchant payments, duplicate or multiple transactions, excess charges, wrong payments, cancelled or returned goods/services, defective or undelivered goods/services, or fraud-related debits. The circular is addressed to UPI member banks and UPI application providers; it changes specified URCS reason-code and evidence workflows, not the customer complaint channel.',
+    facts: [
+      'NPCI/UPI/OC No. 240/2026–27 is dated 4 November 2026 and is addressed to all UPI members and UPI application providers. NPCI states that the listed changes will be implemented in its Unified Resolution and Complaint System (URCS) with effect from 25 November 2026.',
+      'The workflow name “Wrong Credit Chargeback” is changed to “Wrong Payment – Reversal Request” for the raise, acceptance and rejection stages. NPCI also permits Wrong Payment – Reversal Request and Fraud Chargeback for deemed-approved transactions after Transaction Credit Confirmation (TCC) updates.',
+      'The circular revises existing descriptions: code 1063 for Chargeback Raise includes “Paid by alternate means/Duplicate/Multiple Transactions”; code 1085 changes from “Card holder was charged more than the transaction amount” to “User was charged more than the transaction amount”; and code 131’s fraud-chargeback representment description refers to FIR, NCRP or customer-complaint copies for obtaining debit confirmation. Code 1084 is discontinued specifically for Chargeback Raise (flag B).',
+      'New URCS reason-code entries cover a complaint that a user was charged more than the transaction amount (U011), responses indicating no excess charge or an excess charge (110/101), cancelled or returned goods/services (1061), goods/services not as described or defective (1062), goods/services not provided or received (1064), excess charges in specified credit-adjustment/online-refund/return entries (1066), and Government Revenue Collection Payments (133). Other new entries identify outcomes for wrong-payment reversal-request rejection (WC6/WC7) and specified deferred chargeback stages.',
+      'NPCI’s evidence table is part of the member-bank URCS workflow. For a specified deferred chargeback alleging an excess amount, it lists a customer complaint, UPI payment receipt and purchase bill/invoice. For a specified fraud chargeback, it lists an FIR/police complaint/NCRP detail or a customer complaint copy raised through a banking channel. This is not a blanket instruction that every UPI dispute requires an FIR or NCRP filing.',
+      'A separate same-date circular, OC 241/2026–27, has its own 23 December 2026 implementation date for P2M dispute routing. It separately revises the 1061 description to “Goods and services cancelled / returned” and the 1096 description to “Service / Goods provided, refer to the supporting documents” for its routing specification. Its Annexure I still lists code 1084 for Online/UDIR Refund and Credit Adjustment. Therefore OC 240’s discontinuation of 1084 is limited to Chargeback Raise (flag B); it is not a global removal across every dispute type.',
+      'The TAT column in OC 240’s Annexure I is part of the URCS reason-code/workflow table. The circular is addressed to members and app providers and does not announce a new customer-facing refund deadline, refund eligibility rule, complaint channel or compensation amount. The separate OC 241 says its routing changes leave existing processes, RBI-prescribed TATs and customer compensation unchanged.',
+    ],
+    actions: [
+      'If a UPI payment is disputed, continue using the complaint channel shown by your bank or UPI app. This circular does not ask customers to switch banks, use a new app or re-file an existing complaint.',
+      'Keep the UPI transaction ID, date, amount, merchant details, payment receipt and any bank/app complaint reference. For an overcharge, duplicate payment or merchant-service issue, describe what actually happened and retain the relevant invoice or order record if available.',
+      'Do not try to choose an internal URCS reason code yourself. The circular changes the member-bank/app workflow; your bank or UPI app remains the customer-facing contact.',
+      'For a suspected unauthorised or fraudulent transaction, report it promptly through your bank’s existing official channel and retain the complaint reference. The circular’s evidence table does not mean every customer must obtain an FIR or NCRP report.',
+      'Treat the separate OC 241 routing change as upcoming until 23 December 2026. It does not require customers with existing disputes to contact a different bank or re-submit their cases.',
+    ],
+    limits: 'Checked 24 November 2026. Announcement date: 4 November 2026. URCS implementation date: 25 November 2026. Scope is the specified UPI dispute names, reason codes and evidence mappings used by member banks and UPI application providers; it is not a new customer-facing complaint process and is not asserted to cover every UPI transaction type or dispute stage. The Annexure TAT column is not presented as a new consumer refund SLA. OC 241/2026–27 is a separate same-date circular with P2M routing implementation on 23 December 2026; it separately revises 1061 and 1096 descriptions in its routing specification and still lists 1084 for Online/UDIR Refund and Credit Adjustment. OC 240 discontinues 1084 only for Chargeback Raise (flag B). Neither circular establishes new refund eligibility, a new refund process, a new customer-facing deadline or an additional compensation entitlement. No such entitlement is inferred.',
+  },
 {
     slug: 'icici-savings-account-cash-nach-charges-december-2026',
     title: 'ICICI Bank savings and salary accounts: cash, DD and ECS/NACH charges change from 1 December',
