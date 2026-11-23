@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-23'
+export const WATCH_CHECKED_AT = '2026-11-24'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,49 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+{
+  "slug": "npci-upi-urcs-dispute-evidence-reason-codes-november-2026",
+  "title": "UPI disputes: NPCI standardises reason codes and evidence from 25 November",
+  "summary": "NPCI's 4 November OC 240 updates bank-side URCS reason codes and indicative evidence for specified UPI disputes from 25 November. Keep the transaction receipt, purchase invoice and relevant complaint records; this is not a new refund entitlement or customer deadline.",
+  "category": "Banking",
+  "checkedAt": "2026-11-24",
+  "publishedAt": "2026-11-24",
+  "announcementDate": "2026-11-04",
+  "eventDate": "2026-11-25",
+  "dateLabel": "URCS dispute-management changes take effect",
+  "source": "https://www.npci.org.in/uploads/UPI_URCS_OC_240_Standardization_in_Dispute_Management_6f4a6542c3.pdf",
+  "sourceLabel": "NPCI: UPI Operating Circular 240/2026–27 — Standardization of Dispute Management Rules in URCS",
+  "sourceLocation": "Pages 1–3, sections 1–6, especially the indicative evidence table; Annexure I lists revised reason codes and internal TAT fields.",
+  "additionalSources": [
+    {
+      "url": "https://www.npci.org.in/uploads/UPI_URCS_OC_241_Revision_of_dispute_routing_logic_for_UPI_P2_M_transactions_in_URCS_1c6c076393.pdf",
+      "label": "NPCI UPI OC 241/2026–27: separate P2M dispute-routing change effective 23 December 2026"
+    },
+    {
+      "url": "https://www.npci.org.in/circulars/upi",
+      "label": "NPCI official UPI circular register"
+    }
+  ],
+  "audience": "UPI customers who may need to dispute merchant-payment issues such as excess charges, duplicate or multiple payments, cancelled or returned purchases, goods or services not received, or unauthorised transactions. The circular is addressed to UPI member banks and application providers and changes their URCS back-office handling.",
+  "facts": [
+    "NPCI/UPI/OC No. 240/2026–27 is dated 4 November 2026 and is addressed to all UPI members and UPI application providers. The circular says the changes in the UPI Dispute Management Rules in URCS take effect on 25 November 2026.",
+    "NPCI renames the Wrong Credit Chargeback process as Wrong Payment - Reversal Request (including the WC, WA and WR flags) and permits Wrong Payment - Reversal Request and Fraud Chargeback for deemed-approved transactions after Transaction Credit Confirmation (TCC) updates. These are bank/app back-office changes, not a new customer complaint channel.",
+    "The circular revises reason-code descriptions: 1063 now covers payment by alternate means and duplicate/multiple transactions; 1085 is described as the user being charged more than the transaction amount; and reason code 1084 is discontinued for Chargeback Raise. Code 131's fraud-representment description is expanded to include FIR, NCRP or customer-complaint copies not provided for obtaining debit confirmation.",
+    "New or revised codes cover excess charges, cancelled or returned goods/services, defective or not-as-described goods/services, goods/services not received, duplicate/multiple payments, fraud and government-revenue collection payments. These codes are used in URCS; customers do not need to select them themselves.",
+    "NPCI's evidence table is stage- and reason-code-specific and labels the listed documents as indicative. For a deferred chargeback under reason code 1085 (user charged more than the transaction amount), it lists a customer complaint, UPI payment receipt and purchase bill/invoice. For representment under reason code 1112 (no excess charges levied), it lists a purchase invoice with a complete breakup and justification.",
+    "For a fraud chargeback raise under reason code 128, the table lists an FIR/police-complaint copy or NCRP complaint details, or a customer complaint copy/details raised through a banking channel that identify the transaction as unauthorised/fraud. This does not make an FIR mandatory for every UPI dispute; the applicable evidence depends on the case and stage.",
+    "The circular also lists evidence for certain wrong-payment reversal rejection stages: a bank declaration or follow-up record when the customer cannot be contacted; customer confirmation when the credit received was correct; and a customer declaration with transaction screenshot where the amount was returned by other means.",
+    "OC 240 is separate from NPCI OC 241/2026–27. OC 240 standardises reason codes and evidence from 25 November; OC 241 changes routing for applicable UPI P2M disputes from 23 December, with its own exceptions. The two circulars do not replace each other."
+  ],
+  "actions": [
+    "If you raise a UPI dispute about a merchant purchase, keep the UPI transaction receipt, transaction ID, purchase bill/invoice and relevant complaint or merchant communication. For the specific excess-charge deferred-chargeback stage, NPCI lists the complaint, UPI receipt and purchase bill/invoice as indicative supporting material.",
+    "If your bank asks for evidence for a fraud-related UPI chargeback, ask which item applies to your case. NPCI lists FIR/police-complaint or NCRP details, or a customer complaint copy/details submitted through a banking channel that identify the transaction as unauthorised/fraud; it does not say every case requires an FIR.",
+    "For an excess-charge representment where the response is that no excess charges were levied, NPCI lists an invoice with a complete breakup and justification. Keep that invoice if available.",
+    "Continue using your bank or UPI app's existing complaint channel. Do not try to choose NPCI's internal URCS reason codes yourself; banks and UPI application providers handle those back-office stages.",
+    "Do not treat this circular as a promise of refund, chargeback acceptance, compensation or a new customer-resolution deadline. Ask your bank for the evidence applicable to your specific transaction."
+  ],
+  "limits": "Checked 24 November 2026. Announcement date: 4 November 2026. URCS implementation date: 25 November 2026. The circular is addressed to UPI member banks and application providers and changes back-office dispute-management rules. Its evidence table is indicative and specific to transaction type, reason code and dispute stage; it does not make every listed document mandatory in every case. The circular does not establish a new customer complaint channel, refund eligibility, guaranteed reversal, compensation amount or a customer-facing resolution deadline. Annexure TAT fields are internal workflow data and are not presented here as customer service-level commitments. This is separate from OC 241/2026–27, which changes applicable UPI P2M dispute routing from 23 December 2026 and retains its own exceptions."
+},
 {
   "slug": "rbi-draft-electronic-banking-safeguards-november-2026",
   "title": "RBI proposes payment-channel locks, customer-set limits and trusted-person checks",
@@ -251,10 +294,12 @@ export const researchWatch: WatchItem[] = [
     slug: 'npci-upi-p2m-dispute-routing-december-2026',
     title: 'UPI merchant disputes: NPCI changes bank routing from 23 December; timelines stay unchanged',
     summary: 'NPCI will route most applicable UPI person-to-merchant disputes to the Payee PSP bank from 23 December. Listed exceptions remain with the beneficiary bank; existing resolution timelines and customer compensation are unchanged.',
-    category: 'Banking', checkedAt: '2026-11-20', publishedAt: '2026-11-20', announcementDate: '2026-11-04', eventDate: '2026-12-23', dateLabel: 'Revised UPI dispute routing implemented',
+    category: 'Banking', checkedAt: '2026-11-24', publishedAt: '2026-11-20', announcementDate: '2026-11-04', eventDate: '2026-12-23', dateLabel: 'Revised UPI dispute routing implemented',
     source: 'https://www.npci.org.in/uploads/UPI_URCS_OC_241_Revision_of_dispute_routing_logic_for_UPI_P2_M_transactions_in_URCS_1c6c076393.pdf',
     sourceLabel: 'NPCI: UPI Operating Circular 241/2026–27 — revision of dispute routing for UPI P2M transactions',
     sourceLocation: 'Pages 1–3: revised Payee PSP routing, timed-out transaction categories, unchanged dispute processes and implementation date; Annexures I–II: Payee PSP and beneficiary-bank routing lists.',
+    updateNote: 'Rechecked 24 November 2026. NPCI OC 240/2026–27 is a separate URCS reason-code and evidence update effective 25 November; it does not replace or advance this OC 241 routing change, which remains scheduled for 23 December 2026.',
+    additionalSources: [{ url: 'https://www.npci.org.in/uploads/UPI_URCS_OC_240_Standardization_in_Dispute_Management_6f4a6542c3.pdf', label: 'NPCI UPI OC 240/2026–27: separate reason-code and evidence update effective 25 November 2026' }],
     audience: 'People who pay merchants using UPI and may need to raise a person-to-merchant (P2M) transaction dispute. This is a bank-side URCS routing change, not a new UPI refund or complaint entitlement.',
     facts: [
       'NPCI circular UPI/OC No. 241/2026–27 is dated 4 November 2026 and is addressed to UPI members. It says the revised routing will be implemented in URCS from 23 December 2026.',
