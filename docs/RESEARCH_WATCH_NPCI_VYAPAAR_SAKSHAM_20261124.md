@@ -60,7 +60,7 @@ The item was absent from the current `app/data/research-watch.ts`, the public Re
 - Add the explicit `Implementation date unconfirmed` status so the article does not imply a fixed future date.
 - Keep announcement date (11 November), checked/publication date (24 November) and scheme start (not yet notified) separate.
 - Existing `ResearchWatchBrief` component feeds the Research Watch hub, homepage and November bulletin.
-- Existing `scripts/generate-search-index.mjs` reads `app/data/research-watch.ts`; the production prebuild regenerates the search index.
+- The new WatchItem follows the repository's unquoted-key data pattern required by `scripts/generate-search-index.mjs`; the production prebuild regenerates the search index and includes the new slug.
 - Existing `app/sitemap.ts` imports `researchWatch` and adds each article slug.
 - Existing Research navigation already links to Research Watch; no new navigation item is needed.
 - No card or fund page is directly affected.
