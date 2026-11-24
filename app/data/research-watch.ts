@@ -21,7 +21,6 @@ export const researchWatch: WatchItem[] = [
   announcementDate: "2026-11-23",
   eventDate: "2027-04-01",
   dateLabel: "Final directions effective",
-  statusLabel: "Upcoming at check",
   source: "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64028",
   sourceLabel: "RBI Press Release 2026-2027/1550 — final securitisation amendments for four regulated-entity categories",
   sourceLocation: "Press release dated 23 November 2026, paragraphs 1–5; final Directions dated 23 November, replacement paragraphs 27/26 and new paragraphs 28A/27A; compare the corresponding 2025 Directions.",
@@ -43,8 +42,7 @@ export const researchWatch: WatchItem[] = [
     "Do not treat securitisation notes as bank deposits. Review the issue documents for the explicit non-insurance and non-deposit-liability disclosures required by the 2025 RBI directions.",
     "If you are an underlying borrower, do not infer an EMI, interest-rate or loan-servicing change from this investor-side securities amendment. Check your lender's separate official communication for any change to your loan."
   ],
-  limits: "Announcement date: 23 November 2026. Checked and published: 24 November 2026. Final effective date: 1 April 2027. The four final directions cover securitisation notes under the relevant RBI frameworks for commercial banks, small finance banks, NBFCs/HFCs and All India Financial Institutions. The ₹1 crore issuance minimum already existed in the 2025 directions; the new changes add dematerialised issuance/holding/transfer and a ₹1 crore minimum at subsequent transfers. Only notes with amortisation structures receive the stated amortised-value trading exception. Notes issued before 1 April 2027 are expressly included from that date, but RBI does not separately explain whether an existing below-₹1 crore holding may continue to be held without transfer; no forced-sale rule or general exemption is inferred. The 2025 directions state that securitisation notes are not insured and are not deposit liabilities. This is not a change to underlying borrower loan contracts or EMIs."
-  ,
+  limits: "Announcement date: 23 November 2026. Checked and published: 24 November 2026. Final effective date: 1 April 2027. The four final directions cover securitisation notes under the relevant RBI frameworks for commercial banks, small finance banks, NBFCs/HFCs and All India Financial Institutions. The ₹1 crore issuance minimum already existed in the 2025 directions; the new changes add dematerialised issuance/holding/transfer and a ₹1 crore minimum at subsequent transfers. Only notes with amortisation structures receive the stated amortised-value trading exception. Notes issued before 1 April 2027 are expressly included from that date, but RBI does not separately explain whether an existing below-₹1 crore holding may continue to be held without transfer; no forced-sale rule or general exemption is inferred. The 2025 directions state that securitisation notes are not insured and are not deposit liabilities. This is not a change to underlying borrower loan contracts or EMIs.",
   additionalSources: [
     { url: "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13753&Mode=0", label: "RBI final Amendment Directions for Commercial Banks, 23 November 2026" },
     { url: "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13754&Mode=0", label: "RBI final Amendment Directions for Small Finance Banks, 23 November 2026" },
