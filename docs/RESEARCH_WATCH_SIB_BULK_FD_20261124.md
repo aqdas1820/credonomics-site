@@ -92,6 +92,7 @@ No speculative DNS change, cache purge, routing change or infrastructure modific
 ## Other research decisions
 
 - The 24 October initial batch was rechecked against current issuer/fund documents: IDFC IndiGo international rewards, Amex November MITC, the two HDFC scheme notices, Tata Neu HDFC manual claims and SBM ZET fees. SBM ZET's effective date remains HOLD; no blanket refund or devaluation inference was made.
+- The SBM ZET article was corrected on 24 November after re-reading the current issuer MITC: SBM ZET is listed at a flat ₹299 late-payment fee; the 5%/₹1,000 row belongs to SBM Kredit.Pe. No separate ZET effective date is stated. See the companion correction record.
 - A reported RBL utility/rental reward restoration and fee-removal claim remains HOLD because no current official issuer notice or matching current MITC was independently verified.
 - Union Mutual Fund merger and Axis MF scheme-specific subscription restriction candidates remain HOLD where the original official annexure could not be read.
 - No ranking formula or valuation was changed.
