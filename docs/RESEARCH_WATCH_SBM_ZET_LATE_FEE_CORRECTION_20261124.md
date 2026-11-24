@@ -4,7 +4,7 @@
 
 On 24 November 2026, the current official SBM Secured Credit Card MITC was re-read. The product-specific table lists a flat ₹299 late-payment fee for SBM ZET. The 5% of outstanding amount, capped at ₹1,000, row belongs to SBM Kredit.Pe, not SBM ZET. The MITC does not show a ₹50 minimum for the ZET row and does not state a separate effective date for the ₹299 fee.
 
-The previously published SBM ZET article incorrectly attributed the Kredit.Pe row to ZET. The article is corrected with an explicit correction note; no refund, waiver or fee-reversal process is inferred.
+The previously published SBM ZET article incorrectly attributed the Kredit.Pe row to ZET. The article is corrected with an explicit correction note. This is a correction of the product mapping in the current MITC, not a claim that the ₹299 fee first became effective on 24 November. No refund, waiver or fee-reversal process is inferred.
 
 ## Dates and affected audience
 
