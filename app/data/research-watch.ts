@@ -12,6 +12,51 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
 {
+  slug: "rbi-securitisation-notes-demat-transfer-minimum-april-2027",
+  title: "RBI securitisation notes: demat-only holding and ₹1 crore transfer floor from April 2027",
+  summary: "Final directions cover notes issued by banks, small finance banks, NBFCs/HFCs and AIFIs. The ₹1 crore issuance minimum already existed; the new rules add demat-only holding and a minimum for later transfers, with a narrow amortising-note exception.",
+  category: "Markets",
+  checkedAt: "2026-11-24",
+  publishedAt: "2026-11-24",
+  announcementDate: "2026-11-23",
+  eventDate: "2027-04-01",
+  dateLabel: "Final directions effective",
+  source: "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64028",
+  sourceLabel: "RBI Press Release 2026-2027/1550 — final securitisation amendments for four regulated-entity categories",
+  sourceLocation: "Press release dated 23 November 2026, paragraphs 1–5; final Directions dated 23 November, replacement paragraphs 27/26 and new paragraphs 28A/27A; compare the corresponding 2025 Directions.",
+  audience: "Existing or prospective investors in securitisation notes issued under RBI directions for commercial banks, small finance banks, NBFCs/HFCs and All India Financial Institutions; issuers, special-purpose entities, trustees and depositories.",
+  facts: [
+    "On 23 November 2026, RBI issued final securitisation-transaction amendments for commercial banks, small finance banks, NBFCs and All India Financial Institutions. All four final directions state that they come into force on 1 April 2027.",
+    "From 1 April 2027, issuance, holding and subsequent transfer of securitisation notes under these directions must be in dematerialised form. The minimum ticket size is ₹1 crore per single investor at issuance and at any subsequent transfer.",
+    "The ₹1 crore minimum at issuance was already present in the 2025 directions. The material additions are dematerialised holding and the ₹1 crore floor at subsequent transfers; this is not a newly introduced ₹1 crore issuance minimum.",
+    "A limited exception applies to notes with amortisation structures: they may be traded at amortised value if the ticket size falls below ₹1 crore. The text does not create a general below-₹1 crore exception for every note.",
+    "The final directions expressly apply the new requirements to transactions in securitisation notes issued before 1 April 2027 as well. The text does not separately describe a forced-sale requirement for an existing holding below ₹1 crore; no forced sale or blanket exemption is inferred.",
+    "For public offers of securitisation notes, the final directions require compliance with Regulation 21 of the SEBI (Issue and Listing of Securitised Debt Instruments and Security Receipts) Regulations, 2008, as amended. The final wording should be read from the current SEBI regulation rather than assuming the old RBI wording is unchanged.",
+    "RBI's July 2026 draft had proposed 1 October 2026 as the commencement date. The final directions issued after stakeholder feedback set 1 April 2027 instead; the final date, not the draft date, controls.",
+    "The 2025 RBI securitisation directions require investors to be told that securitisation notes are not insured and do not represent deposit liabilities of the originator, servicer or trustee. They should not be treated as bank deposits or as DICGC-insured balances.",
+    "These amendments regulate securitisation notes and their holding/transfer mechanics. They do not themselves revise an underlying borrower's loan agreement, EMI, interest rate or repayment schedule."
+  ],
+  actions: [
+    "If you already hold securitisation notes, ask the issuer/originator, special-purpose entity, trustee or depository how dematerialisation will be handled before 1 April 2027. If your holding is below ₹1 crore, ask specifically how the legacy holding and any later transfer will be treated; do not assume a forced sale.",
+    "Before considering a new purchase or transfer, verify the single-investor ticket size, demat arrangements, whether the note has an amortisation structure and the applicable amortised value. Read the issue document and its risk disclosures; this update is not an investment recommendation.",
+    "Do not treat securitisation notes as bank deposits. Review the issue documents for the explicit non-insurance and non-deposit-liability disclosures required by the 2025 RBI directions.",
+    "If you are an underlying borrower, do not infer an EMI, interest-rate or loan-servicing change from this investor-side securities amendment. Check your lender's separate official communication for any change to your loan."
+  ],
+  limits: "Announcement date: 23 November 2026. Checked and published: 24 November 2026. Final effective date: 1 April 2027. The four final directions cover securitisation notes under the relevant RBI frameworks for commercial banks, small finance banks, NBFCs/HFCs and All India Financial Institutions. The ₹1 crore issuance minimum already existed in the 2025 directions; the new changes add dematerialised issuance/holding/transfer and a ₹1 crore minimum at subsequent transfers. Only notes with amortisation structures receive the stated amortised-value trading exception. Notes issued before 1 April 2027 are expressly included from that date, but RBI does not separately explain whether an existing below-₹1 crore holding may continue to be held without transfer; no forced-sale rule or general exemption is inferred. The 2025 directions state that securitisation notes are not insured and are not deposit liabilities. This is not a change to underlying borrower loan contracts or EMIs.",
+  additionalSources: [
+    { url: "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13753&Mode=0", label: "RBI final Amendment Directions for Commercial Banks, 23 November 2026" },
+    { url: "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13754&Mode=0", label: "RBI final Amendment Directions for Small Finance Banks, 23 November 2026" },
+    { url: "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13755&Mode=0", label: "RBI final Amendment Directions for NBFCs, 23 November 2026" },
+    { url: "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13756&Mode=0", label: "RBI final Amendment Directions for All India Financial Institutions, 23 November 2026" },
+    { url: "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13150", label: "RBI 2025 Commercial Banks Securitisation Transactions Directions — issuance minimum and investor disclosures" },
+    { url: "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13118", label: "RBI 2025 Small Finance Banks Securitisation Transactions Directions" },
+    { url: "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=12951", label: "RBI 2025 NBFC Securitisation Transactions Directions, updated 1 July 2026" },
+    { url: "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=12976", label: "RBI 2025 All India Financial Institutions Securitisation Transactions Directions" },
+    { url: "https://rbi.org.in/scripts/bs_viewcontent.aspx?Id=5124", label: "RBI July 2026 draft amendment — proposed 1 October 2026 commencement, superseded by the final directions" }
+  ]
+},
+
+{
   slug: "npci-upi-vyapaar-saksham-small-merchant-scheme-november-2026",
   title: "NPCI's UPI Vyapaar Saksham scheme: what small merchants qualify for",
   summary: "NPCI's 11 November circular sets out a fund-backed scheme for small-merchant QR and soundbox acceptance. Incentives are claimed by acquiring banks, not paid directly to shops; the scheme start remains tied to UPI MDR implementation, whose revised date has not been notified.",
