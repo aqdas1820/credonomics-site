@@ -76,3 +76,25 @@ This is an investor advisory, not a new trading prohibition, a finding against e
 ## Scope safeguards
 
 No card/fund data, card-ranking formulas, reward valuations, payments, authentication, customer/financial records, infrastructure, secrets or paid resources were changed. No external messages or comments were sent. No automation schedules were changed.
+
+
+## Final release verification — 24 November 2026
+
+- Content PR: [#159](https://github.com/aqdas1820/credonomics-site/pull/159), merged.
+- Content merge commit: `bbf06ad5b3c0f080b7d7b2d26b81a2f4b749be04`.
+- Production deployment: `dpl_Gsfpifxy876f4QTLoWYHADc14pTq`.
+- Vercel state: `READY`; deployed Git commit matches the content merge commit. Production aliases assigned: `www.credonomics.in`, `credonomics.in`.
+- Vercel build: 177/177 unit tests passed across 29/29 test files; TypeScript `tsc --noEmit` passed; IPO dashboard generated 41 records; search index generated 143 entries; Next.js production build completed and generated 347/347 static pages.
+- Build emitted existing non-blocking ESLint/React Hook, `<img>` and Autoprefixer warnings. No new build error was reported.
+- The generated route manifest includes `/research/watch/[slug]`, `/research/watch`, `/updates/2026-11` and `/sitemap.xml`. The existing sitemap generator loops through all `researchWatch` slugs; the search-index generator enriches all items in `app/data/research-watch.ts`.
+- Public rendering remains **unverified**: web fetches for the updated article, Research Watch hub, November bulletin, sitemap and search returned cache-miss/internal-error responses. A direct container request to `www.credonomics.in` failed DNS resolution (`Could not resolve host`). The homepage was only available as a stale three-month-old crawl and cannot confirm this release. Therefore this record does not claim public visibility.
+- The official SEBI PDF, press-release page, recognised-intermediaries directory, Investor Support page and SEBI Check links were independently opened during source verification.
+
+### Final scope
+
+Only the existing SEBI investor-warning research entry and this release-evidence document were changed. No payments, authentication, customer/financial records, infrastructure, secrets, paid resources, card/fund rankings or automation schedules were changed. No external messages or comments were sent.
+
+- Original pre-edit main SHA: `4482b6e1bcd79e8283d945e46013e97cda490389`.
+- Original rollback branch: [backup/pre-sebi-pr76-20261124-1022](https://github.com/aqdas1820/credonomics-site/tree/backup/pre-sebi-pr76-20261124-1022).
+- Evidence-update base SHA: `bbf06ad5b3c0f080b7d7b2d26b81a2f4b749be04`.
+- Evidence-update rollback branch: [backup/pre-sebi-pr76-evidence-20261124-1022](https://github.com/aqdas1820/credonomics-site/tree/backup/pre-sebi-pr76-evidence-20261124-1022).
