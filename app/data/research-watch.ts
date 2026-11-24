@@ -2113,6 +2113,37 @@ export const researchWatch: WatchItem[] = [
     limits: 'Checked 21 November 2026. Announcement / exchange-filing date: 18 November 2026. Effective date: 20 November 2026. The five MCLR tenors each rose 5 basis points versus the bank’s 20 October schedule. Applicability is limited to new MCLR-linked loans or advances sanctioned or first disbursed on or after 20 November and facilities renewed, reviewed or reset on or after that date where switching to MCLR is permitted at the borrower’s option. The bank states that floating retail, micro and small loans disbursed from 1 October 2019, and medium-enterprise floating loans from 1 April 2020, are EBLR-linked. The MCLR schedule does not establish an automatic rate or EMI change for every existing borrower; impact depends on the loan’s benchmark, spread, reset clause and tenor. No customer-specific EMI calculation, universal borrower impact or rate-switch entitlement is inferred.',
   },
 
+  {
+    slug: 'epfo-cbt-approves-proposed-withdrawal-changes-not-yet-effective-november-2026',
+    title: 'EPFO board approves PF withdrawal changes, but new rules are not yet in force',
+    summary: 'The 19 November CBT release records approval of a 10% minimum balance, a shorter final-withdrawal wait and voluntary retirement SWP. Formal implementation details and an effective date remain unconfirmed.',
+    category: 'Pensions',
+    checkedAt: '2026-11-25',
+    publishedAt: '2026-11-25',
+    announcementDate: '2026-11-19',
+    eventDate: '2026-11-19',
+    dateLabel: 'CBT approval announced',
+    statusLabel: 'Implementation date unconfirmed',
+    source: 'https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338667&lang=1&reg=1',
+    sourceLabel: 'Ministry of Labour & Employment: 240th CBT meeting release',
+    sourceLocation: 'PIB release posted 19 November 2026 at 6:28 PM: paragraphs on the proposed EPF-member Systematic Withdrawal Plan and the Board-approved minimum-balance and final-withdrawal waiting-period provisions.',
+    audience: 'EPF members considering partial or final withdrawal, employees approaching retirement, and families reviewing how retirement savings may eventually be paid out.',
+    facts: [
+      'The Ministry of Labour & Employment reported on 19 November 2026 that the 240th Central Board of Trustees (EPF) meeting approved several EPFO proposals. This article reports the Board decision as announced by PIB; it does not treat the announcement as an already-operative EPF Scheme amendment.',
+      'For the minimum-balance and final-withdrawal provisions, the PIB release says the Board approved reducing the minimum balance to be maintained from 25% to 10% and reducing the waiting period for final PF withdrawal from 12 months to 2 months. The release does not state a commencement date or provide the final amended scheme text for these provisions.',
+      'The Board also approved a proposal for a voluntary Systematic Withdrawal Plan (SWP) for retiring EPF members. The release describes possible monthly, quarterly or half-yearly instalments instead of taking the accumulated PF savings in one go.',
+      'The PIB release says the SWP proposal would be voluntary and that the remaining corpus would continue to generate returns. It also describes a possible option for a nominee or dependent to withdraw the remaining balance or continue periodic payments if the member dies during the payout period; the detailed rules and eligibility are not supplied in the release.',
+      'For the SWP, the same PIB release says the necessary EPF Scheme amendments will be notified after approval from the Ministry. It does not provide a launch date, application process, payout formula, final eligibility rules or tax treatment.',
+      'The official announcement therefore confirms a Board-approved policy development, not a presently available new withdrawal facility. No automatic change to an existing member claim, balance or settlement date is inferred.'
+    ],
+    actions: [
+      'If you need to submit an EPF claim now, follow the current EPFO member-portal instructions and rules shown for your claim type. Do not calculate an available withdrawal using the announced 10% or 2-month figures until the formal change is notified and effective.',
+      'If you are planning retirement withdrawals, wait for the official EPF Scheme amendment and EPFO implementation guidance before relying on SWP frequency, payout amount, nominee treatment or tax details.',
+      'Check the EPFO and Ministry of Labour & Employment official channels for the implementing notification. Keep the PIB announcement as evidence of the Board decision, not as proof that the new facility is live.'
+    ],
+    limits: 'Announcement date: 19 November 2026. Checked and published: 25 November 2026. The PIB release records the CBT decision but does not state an effective date for the 10% minimum-balance or 2-month final-withdrawal provisions. It describes the SWP as a proposal and says the necessary EPF Scheme amendments will be notified after Ministry approval. No implementing Gazette notification or EPFO launch instruction was identified in this check. Eligibility, application steps, payout calculations, tax treatment, treatment of pending claims and the exact commencement date remain unverified. Until formal implementation, members should use the rules and claim instructions currently in force; no new withdrawal entitlement or guaranteed payout is asserted.'
+  },
+
 ]
 
 export function watchStatus(item: WatchItem): 'Upcoming at check' | 'Effective at check' | 'Clarification checked' | 'Phased migration' | 'Investor advisory' | 'Subscription restrictions' | 'Availability checked' | 'Limited-time offer' | 'Directions extended' | 'Campaign underway' | 'Deadline passed' | 'Implementation date unconfirmed' {
