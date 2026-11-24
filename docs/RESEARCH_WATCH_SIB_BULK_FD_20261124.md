@@ -45,27 +45,60 @@ This is a current rate-schedule update, not a claim that every rate increased. T
 
 ## Website implementation
 
-- Add one source-backed WatchItem to `app/data/research-watch.ts`.
-- Use checked/publication date 24 November 2026 and effective date 24 November 2026; do not invent a separate announcement date.
-- The existing data-driven article route is `/research/watch/south-indian-bank-bulk-fd-rates-3-crore-plus-november-2026`.
-- The existing Research Watch data flow supplies the hub, homepage brief and November bulletin.
+- One source-backed WatchItem is included in `app/data/research-watch.ts`.
+- Checked/publication date and effective date are 24 November 2026; no separate announcement date is invented.
+- Article route: `/research/watch/south-indian-bank-bulk-fd-rates-3-crore-plus-november-2026`.
+- Existing data-driven Research Watch flow supplies the hub, homepage brief and November bulletin.
 - The existing prebuild search-index generator reads Research Watch entries; `app/sitemap.ts` imports the same data and adds each article URL.
 - Existing Research navigation already links to Research Watch.
 - No card or fund page is directly affected. No card ranking, reward valuation or formula is changed.
-- No payments, authentication, customer/financial records, infrastructure, secrets or paid resources are changed.
 
-## Repository and rollback
+## Repository, PR and rollback
 
 - Repository: `aqdas1820/credonomics-site`
 - Exact pre-edit main SHA: `b73076e61628330dd67aed191aced2c59f07bcde`
 - Rollback branch: `backup/pre-sib-bulk-fd-20261124-2119`
-- Feature branch: `editorial/sib-bulk-fd-20261124-2119`
-- Editorial check: 24 November 2026.
+- Content branch: `editorial/sib-bulk-fd-20261124-2119`
+- Content PR: [#167](https://github.com/aqdas1820/credonomics-site/pull/167) — merged.
+- Reviewed PR head: `2124824be2eb2d611f6e2a986bcf4a51f6775f62`
+- Content merge / production commit: `ec9018a399108e003ababc87b02c1cb58d1c5ed8`
 
-## Release evidence
+## Build and production evidence
 
-Preview build, unit tests, TypeScript, production build, PR review/merge, production deployment and public-page/source-link verification are pending. This record will be updated with exact PR, commit, deployment and verification results. No release is considered public until the article, Research Watch hub, homepage, November bulletin and primary-source links are checked against the production domain.
+- Preview deployment: `dpl_9aocHReC5aEzsbg1nVMo1iK18eWz` — READY, commit `2124824be2eb2d611f6e2a986bcf4a51f6775f62`.
+- Production deployment: `dpl_GTVcNj9g7xyDUwS7YyLR8s7ZhscS` — READY, target production.
+- Production deployment's Git source commit matches main at the content release SHA `ec9018a399108e003ababc87b02c1cb58d1c5ed8`.
+- Vercel reports `www.credonomics.in` and `credonomics.in` aliases assigned.
+- Unit tests: 177 passed across 29 files.
+- TypeScript: `tsc --noEmit` completed successfully; the prebuild proceeded to data generation and Next.js build.
+- IPO dashboard generator: 41 records.
+- Search-index generator: 147 entries.
+- Production build: completed; Next.js generated 351 static pages and included the Research Watch dynamic article route group and `/sitemap.xml`.
+- Existing non-blocking warnings remain: Autoprefixer flex-start/flex-end compatibility warnings, React Hook dependency warnings, image-element warnings and webpack cache serialization warnings.
+
+## Public verification status
+
+**Public rendering is not independently confirmed. Do not treat this release as publicly verified.**
+
+After the production deployment reached READY:
+- The new article URL returned Internal Error from the public fetcher.
+- Research Watch and the November bulletin returned cache-miss/internal errors.
+- `/sitemap.xml` returned Internal Error.
+- The homepage returned an old crawl snapshot from three months earlier and did not establish current release visibility.
+- The Vercel deployment API confirms the production deployment is READY and aliases are assigned, but the Vercel deployment file-tree API returned 404 (file tree unavailable). This is not a public-page verification.
+
+No speculative DNS change, cache purge, routing change or infrastructure modification was attempted. The release is recorded as deployed to a READY production deployment, with public visibility unconfirmed.
+
+## Other research decisions
+
+- The current repository entries for all five 24 October batch topics were re-read. Source refreshes were completed where accessible; the IDFC September notice PDF, Amex Consumer Experience Updates page, HDFC Notice 1370/KIM PDFs and Tata Neu manual-claim PDF returned cache-miss/internal errors in this run. The accessible IDFC product page did not reproduce the international-spend earn table, and the current Amex MITC PDF is dated 31 March 2026 rather than November. No new claim was inferred from those inaccessible or non-matching documents; the previously verified entries were not expanded.
+- The SBM ZET article was corrected on 24 November after re-reading the current issuer MITC: SBM ZET is listed at a flat ₹299 late-payment fee; the 5%/₹1,000 row belongs to SBM Kredit.Pe. No ₹50 minimum or separate ZET effective date appears in the current table. This is a product-mapping correction, not a claim that the ₹299 fee first became effective on 24 November. See the companion correction record.
+- A reported RBL utility/rental reward restoration and fee-removal claim remains HOLD because no current official issuer notice or matching current MITC was independently verified.
+- Union Mutual Fund merger and Axis MF scheme-specific subscription restriction candidates remain HOLD where the original official annexure could not be read.
+- No ranking formula or valuation was changed.
 
 ## Scope safeguards
 
-No payment, authentication, customer/financial-record, infrastructure, secret or paid-resource file is changed. No card/fund ranking formula, reward valuation or financial-service workflow is changed. No external messages or comments are sent. No automation schedules are changed.
+No payment, authentication, customer/financial-record, infrastructure, secret or paid-resource file was changed. No card/fund ranking formula, reward valuation or financial-service workflow was changed. No external messages or comments were sent. No automation schedules were changed.
+
+The Research Watch task record remains disabled (last recorded run 29 October 2026). The daily 10 AM research report record also remains in its pre-existing disabled state (last recorded run 8 November 2026); it was not re-enabled or rescheduled.
