@@ -12,6 +12,42 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
 {
+  slug: "sebi-ipo-prelisting-premium-investor-advisory-november-2026",
+  title: "SEBI warns investors not to rely on unofficial IPO pre-listing premiums",
+  summary: "SEBI's 23 November advisory says pre-listing premium figures are unofficial, unverified and unregulated—not listing-price or return signals. It also explains that disputes from these transactions have no SEBI or exchange investor-protection and grievance-redressal route.",
+  category: "Markets",
+  checkedAt: "2026-11-24",
+  publishedAt: "2026-11-24",
+  announcementDate: "2026-11-23",
+  eventDate: "2026-11-23",
+  dateLabel: "SEBI investor advisory issued",
+  statusLabel: "Investor advisory",
+  source: "https://www.sebi.gov.in/sebi_data/attachdocs/nov-2026/1795441481174.pdf",
+  sourceLabel: "SEBI Press Release 75/2026 — Advisory Regarding Unregulated Pre-listing Premium",
+  sourceLocation: "Pages 1–2: status of pre-listing premium figures, advice to intermediaries and investors, and non-availability of dispute redressal.",
+  audience: "Retail investors reviewing upcoming IPOs and SEBI-registered intermediaries or market participants who publish or distribute IPO-related information.",
+  facts: [
+    "SEBI Press Release 75/2026, dated 23 November 2026, says pre-listing premium figures are being widely published across websites, digital platforms, newspapers and by some SEBI-registered intermediaries and market participants, where they are portrayed as likely listing prices or anticipated returns.",
+    "SEBI describes these figures as unofficial, unverified and unregulated. The purported transactions occur before formal listing and outside the recognised stock-exchange framework, without regulatory oversight, settlement guarantee, investor protection or a formal price-discovery process.",
+    "The release says publication, display, circulation or dissemination of such figures may be discontinued across the securities market. It advises SEBI-registered intermediaries and market participants to refrain from publishing, displaying or broadcasting them on websites, platforms or other channels, including email, SMS and social media.",
+    "For investors, SEBI says not to treat pre-listing premiums as indicators of listing price or expected returns, to refrain from related transactions because they fall entirely outside the regulatory framework, and to transact in IPOs exclusively through SEBI-registered intermediaries and authorised platforms.",
+    "For disputes arising from or relating to these transactions, SEBI says investor-protection benefits under SEBI or stock-exchange jurisdiction are unavailable, as are exchange-administered investor grievance mechanisms and the exchanges/depositories' Online Dispute Resolution portal."
+  ],
+  actions: [
+    "Do not treat an unofficial pre-listing premium as a forecast of an IPO's listing price or as an estimate of expected return.",
+    "When reviewing an IPO, use the current DRHP, RHP or prospectus, the official issue price band, issuer disclosures and recognised exchange or registrar announcements rather than unofficial pre-listing figures.",
+    "Use SEBI-registered intermediaries and authorised platforms for IPO applications and securities-market transactions. Verify the exact intermediary independently through SEBI's official directory; do not rely on a forwarded registration screenshot.",
+    "Avoid transactions linked to pre-listing premium figures. SEBI says these transactions are outside the regulatory framework and related disputes do not have the stated SEBI, exchange or ODR grievance routes."
+  ],
+  limits: "Announcement date: 23 November 2026. Checked and published: 24 November 2026. PR 75/2026 states no separate effective date. It is an investor advisory: SEBI says publication may be discontinued and advises SEBI-registered intermediaries and market participants to refrain from publishing or broadcasting these figures. Do not describe the press release as a new statutory ban on every discussion or as a change to IPO scoring rules. No pre-listing premium values, platform details, transaction instructions or listing-gain forecasts are provided. CredoNomics already excludes this unofficial signal from its fundamental IPO Data Score; no formula or weight is changed.",
+  additionalSources: [
+    { url: "https://www.sebi.gov.in/media-and-notifications/press-releases/nov-2026/advisory-regarding-unregulated-pre-listing-premium-often-called-as-grey-market-premium-gmp-for-upcoming-initial-public-offers-ipos-_105942.html", label: "SEBI official press-release page for PR 75/2026, dated 23 November 2026" },
+    { url: "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognised=yes", label: "SEBI Recognised Intermediaries directory" },
+    { url: "https://www.credonomics.in/ipo/methodology", label: "CredoNomics IPO Data Score methodology — unofficial pre-listing premiums are excluded" }
+  ]
+},
+
+{
   slug: "rbi-securitisation-notes-demat-transfer-minimum-april-2027",
   title: "RBI securitisation notes: demat-only holding and ₹1 crore transfer floor from April 2027",
   summary: "Final directions cover notes issued by banks, small finance banks, NBFCs/HFCs and AIFIs. The ₹1 crore issuance minimum already existed; the new rules add demat-only holding and a minimum for later transfers, with a narrow amortising-note exception.",
