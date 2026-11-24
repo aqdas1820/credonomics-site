@@ -118,6 +118,42 @@ No payments, authentication, customer/financial records, infrastructure, secrets
 
 ## Validation and deployment evidence
 
-- The repository `prebuild` runs `npm test`, `npm run typecheck`, IPO dashboard generation and search-index generation before `next build`.
-- Vercel preview/production build, unit-test, TypeScript, static-page, search-index and sitemap results: **to be appended after CI/deployment verification**.
-- Content PR, merge SHA, production deployment ID, public-page checks and source-link checks: **to be appended after release verification**.
+### GitHub release
+
+- Content PR: [#169 — Publish Ujjivan deposit schedule and update 25 November Research Watch statuses](https://github.com/aqdas1820/credonomics-site/pull/169) — merged.
+- Content commit: `2c553894c7546ae1af1d98b5fdafe8549c9f9f69`.
+- Merge commit and current `main`: `0a99c9e4fd517d8182c3fa83c214ab30f321023b`.
+- Exact pre-edit `main`: `ec9018a399108e003ababc87b02c1cb58d1c5ed8`.
+- Pre-edit rollback branch: `backup/pre-research-watch-20261125-0122`.
+- Evidence-edit rollback branch: `backup/pre-research-watch-evidence-20261125-0122` (points to the content-release main SHA above).
+
+### Vercel builds
+
+- Preview deployment: `dpl_HrQ92vJzXEqHagiBzBMuvprVrfWS` — READY for the content PR head.
+- Production content deployment: `dpl_HWCL8TRH5nsToKCokt21bP8rfCQ2` — READY; deployed commit matches `main` SHA `0a99c9e4fd517d8182c3fa83c214ab30f321023b`.
+- Both `www.credonomics.in` and apex `credonomics.in` aliases are assigned to this production deployment; apex redirects to www with HTTP 308.
+- The build's `prebuild` completed `npm test`, `npm run typecheck`, IPO dashboard generation and search-index generation before `next build`.
+- Unit tests: **177/177 passed across 29/29 files**.
+- TypeScript: **passed** (`tsc --noEmit --pretty false`); Next.js lint/type validation completed with warnings only.
+- IPO dashboard: **41 records generated**.
+- Search index: **148 entries generated**.
+- Static pages: **352 generated**, including `/research/watch/ujjivan-sfb-fd-rd-rates-effective-19-november-2026`, the Research Watch hub, November bulletin and `/sitemap.xml`.
+- Next.js production build completed in approximately one minute. Existing non-blocking Autoprefixer/CSS, React Hook and `<img>` optimization warnings remain.
+
+### Public visibility verification — unresolved
+
+The Vercel deployment and custom-domain aliases are READY, but the external public checker did not confirm the new content:
+
+- Research Watch hub: HTTP 200, but still displays latest publication/check as 24 November 2026.
+- November bulletin: HTTP 200, but still displays latest check as 24 November 2026.
+- Homepage: HTTP 200; the text snapshot did not expose the new Ujjivan item.
+- New Ujjivan article route: Internal Error from the public checker.
+- NPCI OC240, Tata Neu and SGB article routes still show their previous checked dates and “Upcoming at check” status in the public snapshot, despite the updated data being in the deployed build.
+- ICICI article snapshot remains on the earlier “Upcoming at check” version; the deployed data now marks it “Implementation date unconfirmed”.
+- `/search?q=Ujjivan` and `/sitemap.xml` returned Internal Error to the public checker. The search index and sitemap route were generated successfully in the build, but public endpoint functionality is not independently verified.
+
+Therefore the content is merged into GitHub main and the production deployment is READY with both custom-domain aliases assigned, but **public rendering is not confirmed**. Do not describe the new article or updated status cards as publicly live until the custom-domain pages return the new content. No DNS, cache purge, routing or infrastructure changes were attempted.
+
+### Evidence PR
+
+This final deployment/public-visibility record is being added separately after content PR #169 so that the deployment ID and observed public status are not guessed.
