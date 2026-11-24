@@ -74,6 +74,47 @@ The item was absent from the current `app/data/research-watch.ts`, the public Re
 - Feature branch: `editorial/npci-upi-vyapaar-saksham-20261124-1049`
 - Editorial check: 24 November 2026.
 
-## Final release evidence
+## Final release verification — 24 November 2026
 
-Pending PR checks, merge, production deployment and public-route/source-link verification. This section will be completed only after those steps are confirmed.
+- Content PR: [#161](https://github.com/aqdas1820/credonomics-site/pull/161), merged.
+- Content merge commit: `30cf3da1e269f88db6ff558c8f93c83a23e17482`.
+- Production deployment: `dpl_DyhEWzXNhKpwkV7JFzQqfYBZNNDf`.
+- Vercel state: `READY`, target `production`; deployed Git commit matches main. Vercel reports production aliases assigned: `www.credonomics.in` and `credonomics.in`.
+- Final main SHA at content release: `30cf3da1e269f88db6ff558c8f93c83a23e17482`.
+- Vercel prebuild: 177/177 unit tests passed across 29/29 test files; `tsc --noEmit --pretty false` passed; automated IPO dashboard generated 41 records; search index generated 144 entries; Next.js production build completed.
+- Build route manifest includes `/research/watch/npci-upi-vyapaar-saksham-small-merchant-scheme-november-2026`, `/research/watch` and `/updates/2026-11`. The sitemap source loops over every `researchWatch` item. The search-index generator reads the data file and includes the new slug using the repository's unquoted-key data pattern.
+- Existing non-blocking Autoprefixer, React Hook and `<img>` optimization warnings remained; no build errors were reported.
+- Official source links were independently opened: NPCI OC242 PDF, Ministry of Finance PIB release (15 September), NPCI MDR FAQ, One97 Communications' NSE filing reproducing the 13 October NPCI deferral, and NPCI's UPI circular register.
+
+### Public-rendering verification limitation
+
+- Fresh public fetches of the new article, Research Watch hub, November bulletin, homepage, sitemap and search returned `Internal Error` from the external page checker after the production deployment.
+- The last accessible unparameterized crawl of the hub, bulletin and homepage still showed the prior 24 November snapshot without the new UPI Vyapaar Saksham item. Cache-busted requests then returned `Internal Error`.
+- Vercel confirms the production deployment is READY and the custom-domain aliases are assigned, but the article and public index visibility could not be independently confirmed. This release record therefore does **not** claim that the new content is publicly visible.
+
+### Rechecks and HOLD decisions
+
+- Re-read the five 24 October initial-batch records (IDFC IndiGo, Amex November MITC, HDFC scheme exit window, Tata Neu HDFC manual claims and SBM ZET fees) against current issuer/fund documents. No material correction cleared verification; SBM ZET's effective date remains unverified.
+- RBI NEFT procedural PDF/FAQ retrieval remained blocked; no new procedural claim was published.
+- SEBI PR 75/2026's official PDF body remained inaccessible.
+- Union Mutual Fund merger and Axis Mutual Fund subscription restrictions remain HOLD until complete current AMC addenda and affected-scheme annexures are independently readable.
+- ICICI credit-card charge detail PDF remained inaccessible; no extra product claim was inferred.
+- AU Zenith+ reward-change claims remain unverified; no blanket reward devaluation was published.
+- No refund eligibility/process was inferred. No ranking formula or card/fund valuation was changed.
+
+### Repository and rollback
+
+- Repository: `aqdas1820/credonomics-site`.
+- Exact pre-edit main SHA: `e1501218a44d97a92f61db3032c41a6f29910aa8`.
+- Original rollback branch: [backup/pre-upi-vyapaar-saksham-20261124-1049](https://github.com/aqdas1820/credonomics-site/tree/backup/pre-upi-vyapaar-saksham-20261124-1049).
+- Content feature branch: `editorial/npci-upi-vyapaar-saksham-20261124-1049`.
+- Evidence-update base SHA: `30cf3da1e269f88db6ff558c8f93c83a23e17482`.
+- Evidence-update rollback branch: [backup/pre-upi-vyapaar-evidence-20261124-1115](https://github.com/aqdas1820/credonomics-site/tree/backup/pre-upi-vyapaar-evidence-20261124-1115).
+
+### Scope safeguards
+
+Only the Research Watch data entry, its explicit unconfirmed-date status, and this publication-evidence document were changed. No card/fund records, ranking formulas, reward valuations, payments, authentication, customer/financial records, infrastructure, secrets or paid resources were changed. No external messages or comments were sent. No automation schedules were changed.
+
+- Research Watch task `6adc4a968f4881919162894e39d400bc` was already disabled; last recorded run: 29 October 2026.
+- The separate daily 10 AM research-report task was already disabled in the available automation record (last recorded run: 8 November 2026); it was left unchanged.
+- The current publication automation was left unchanged.
