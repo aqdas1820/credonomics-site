@@ -66,7 +66,39 @@ No implementing Gazette notification or EPFO launch instruction was identified i
 
 ## Release evidence
 
-Content PR, merge SHA, preview/production deployment, test results, deployed commit and public-page/source-link verification will be appended after the release workflow. A READY deployment alone will not be described as publicly live unless the production article, hub, homepage, November bulletin and primary source link are independently checked.
+### Content PR and merge
+
+- Content PR: https://github.com/aqdas1820/credonomics-site/pull/171
+- Reviewed head SHA: ec847bf7da1216d09a606a100b0c41b7f2722a20
+- Content merge commit: d48dce8657b44c2f39f84e27021798ec3678eee5
+- Exact pre-edit main SHA: b7bfa3f1a5b7a9bb122839a1b259febf7d8955fa
+- Rollback reference: https://github.com/aqdas1820/credonomics-site/tree/backup/pre-epfo-cbt-20261125-0149
+
+### Build and validation
+
+- Vercel preview deployment: dpl_FBpgLH1vXxrFmCAyJuPgLAKHPTcg — READY for the reviewed PR head ec847bf7da1216d09a606a100b0c41b7f2722a20.
+- Production deployment for content merge: dpl_5eNqXx4JgGEErvu5gZG3LTjV5R4B — READY; deployed commit d48dce8657b44c2f39f84e27021798ec3678eee5 matches main.
+- Existing prebuild ran 29 test files / 177 tests: all passed.
+- TypeScript check: passed.
+- Search-index generation: 149 entries.
+- IPO dashboard generation: 41 records.
+- Next.js production build: completed; 353 static pages generated.
+- Existing non-blocking CSS/autoprefixer, React Hook and image-optimization warnings remain; no new warning was treated as a release blocker.
+
+### Public verification and blocker
+
+- Official PIB source: accessible and checked at https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338667&lang=1&reg=1.
+- Research Watch hub: HTTP 200, but its public snapshot still says latest publication/check 24 November 2026 and does not show the EPFO entry.
+- November bulletin: HTTP 200, but its public snapshot still says latest check 24 November 2026 and does not show the EPFO entry.
+- Homepage: HTTP 200, but its Research Watch section still shows the 24 November snapshot and does not show the EPFO entry.
+- Individual EPFO article URL returned Internal Error to the independent public checker.
+- Sitemap endpoint returned Internal Error to the independent public checker.
+- Vercel reports production READY and the custom-domain aliases assigned, but those facts do not establish public rendering. The article is therefore NOT marked publicly live/verified.
+- No DNS, cache-purge, routing, infrastructure or paid-resource changes were attempted.
+
+### Release decision
+
+The source-backed article is merged and deployed, with the explicit not-yet-in-force caveat. Public rendering remains unverified because the public checker shows stale hub/bulletin/homepage snapshots and cannot fetch the article or sitemap. Keep the publication evidence open for a later public verification; do not infer that the content is live solely from the READY deployment.
 
 ## Safeguards
 
