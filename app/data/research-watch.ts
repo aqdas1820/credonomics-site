@@ -12,21 +12,21 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
 {
-  "slug": "npci-upi-vyapaar-saksham-small-merchant-scheme-november-2026",
-  "title": "NPCI's UPI Vyapaar Saksham scheme: what small merchants qualify for",
-  "summary": "NPCI's 11 November circular sets out a fund-backed scheme for small-merchant QR and soundbox acceptance. Incentives are claimed by acquiring banks, not paid directly to shops; the scheme start remains tied to UPI MDR implementation, whose revised date has not been notified.",
-  "category": "Banking",
-  "checkedAt": "2026-11-24",
-  "publishedAt": "2026-11-24",
-  "announcementDate": "2026-11-11",
-  "eventDate": "Not yet notified",
-  "dateLabel": "MDR implementation / scheme start",
-  "statusLabel": "Implementation date unconfirmed",
-  "source": "https://www.npci.org.in/uploads/UPI_OC_242_UPI_Vyapaar_Saksham_Scheme_for_Promoting_UPI_Acceptance_among_Small_Merchants_1842428cd7.pdf",
-  "sourceLabel": "NPCI/UPI/OC No. 242/2026–27 — UPI Vyapaar Saksham Scheme for Promoting UPI Acceptance among Small Merchants",
-  "sourceLocation": "Circular dated 11 November 2026, pages 1 and 4–7; Annexure I definitions and Annexure II claim format on pages 12–15; scheme period and fund-management clauses.",
-  "audience": "Small merchants with previous-financial-year turnover up to ₹40 lakh in the scheme's target geographies, acquiring banks/payment aggregators, and UPI users who want to distinguish merchant-side incentives from customer charges.",
-  "facts": [
+  slug: "npci-upi-vyapaar-saksham-small-merchant-scheme-november-2026",
+  title: "NPCI's UPI Vyapaar Saksham scheme: what small merchants qualify for",
+  summary: "NPCI's 11 November circular sets out a fund-backed scheme for small-merchant QR and soundbox acceptance. Incentives are claimed by acquiring banks, not paid directly to shops; the scheme start remains tied to UPI MDR implementation, whose revised date has not been notified.",
+  category: "Banking",
+  checkedAt: "2026-11-24",
+  publishedAt: "2026-11-24",
+  announcementDate: "2026-11-11",
+  eventDate: "Not yet notified",
+  dateLabel: "MDR implementation / scheme start",
+  statusLabel: "Implementation date unconfirmed",
+  source: "https://www.npci.org.in/uploads/UPI_OC_242_UPI_Vyapaar_Saksham_Scheme_for_Promoting_UPI_Acceptance_among_Small_Merchants_1842428cd7.pdf",
+  sourceLabel: "NPCI/UPI/OC No. 242/2026–27 — UPI Vyapaar Saksham Scheme for Promoting UPI Acceptance among Small Merchants",
+  sourceLocation: "Circular dated 11 November 2026, pages 1 and 4–7; Annexure I definitions and Annexure II claim format on pages 12–15; scheme period and fund-management clauses.",
+  audience: "Small merchants with previous-financial-year turnover up to ₹40 lakh in the scheme's target geographies, acquiring banks/payment aggregators, and UPI users who want to distinguish merchant-side incentives from customer charges.",
+  facts: [
     "NPCI Circular OC242, dated 11 November 2026, introduces the UPI Vyapaar Saksham Scheme to expand physical QR-code and soundbox acceptance and encourage transaction growth. Its three-year period begins from the date UPI MDR is implemented.",
     "For this scheme, a small merchant means annual turnover up to ₹40 lakh in the previous financial year. Target areas are Tier 3–6 centres, the North-Eastern States, Jammu & Kashmir and Ladakh; Tier 1–2 merchants qualify only when covered by a notified Central Government scheme such as PM SVANidhi or PM Vishwakarma.",
     "The fund is built from 5% of participating issuing banks', acquiring banks', payer PSPs' and UPI application providers' MDR shares, excluding specified non-eligible categories such as industry programmes and capital-market transactions.",
@@ -38,29 +38,29 @@ export const researchWatch: WatchItem[] = [
     "The 15 September NPCI FAQ originally listed 15 October 2026 for MDR implementation. NPCI's 13 October deferral, reproduced in a listed-company exchange filing, moved implementation to immediately after Diwali on a date to be notified separately. OC242, issued on 11 November, still ties the scheme period to MDR implementation but does not state the replacement date; the start date remains unconfirmed.",
     "The Ministry of Finance's 15 September framework says P2P UPI remains free, P2M payments up to ₹2,000 and qualifying P2PM merchants receiving up to ₹1 lakh per month through UPI QR remain zero-MDR, and MDR is not a customer charge. Banks were advised to ensure merchants do not pass MDR to customers, and UPI apps may not impose platform fees. The scheme's ₹40 lakh annual-turnover definition is separate from the P2PM ₹1 lakh monthly-receipt threshold."
   ],
-  "actions": [
+  actions: [
     "If you run a small shop, ask your acquiring bank or payment aggregator whether it participates and how it will verify your previous-year turnover, location, merchant-onboarding date, QR/soundbox deployment and eligible settled transactions. The circular does not provide a direct merchant claim form.",
     "Keep turnover records, onboarding and device-deployment evidence, and eligible transaction records. Ask the acquiring bank whether the same QR or soundbox has already received support under another scheme.",
     "Do not split a payment artificially to keep it at or below ₹2,000; OC242 expressly excludes artificial transaction splitting from eligible activity.",
     "If a customer is asked to pay a separate UPI MDR or app/platform fee, check the Ministry of Finance framework and the relevant bank or app's official notice; OC242 itself does not create a customer charge."
   ],
-  "limits": "This is an NPCI member/acquiring-bank incentive scheme, not a direct cash grant or guaranteed free device for every shop. The ₹300 and ₹750 amounts are bank-side incentives for qualifying infrastructure; acquiring banks submit claims, NPCI validates them, and component funds can be exhausted with pro-rata settlement. The three-year scheme period begins only when UPI MDR is implemented. NPCI's 15 September FAQ listed 15 October, but a 13 October NPCI deferral moved implementation to post-Diwali on a date to be notified; OC242 does not provide that date. The scheme's ₹40 lakh annual-turnover test must not be confused with the separate P2PM zero-MDR threshold of up to ₹1 lakh in monthly UPI QR receipts. No direct merchant payout, customer MDR or platform fee is inferred.",
-  "additionalSources": [
+  limits: "This is an NPCI member/acquiring-bank incentive scheme, not a direct cash grant or guaranteed free device for every shop. The ₹300 and ₹750 amounts are bank-side incentives for qualifying infrastructure; acquiring banks submit claims, NPCI validates them, and component funds can be exhausted with pro-rata settlement. The three-year scheme period begins only when UPI MDR is implemented. NPCI's 15 September FAQ listed 15 October, but a 13 October NPCI deferral moved implementation to post-Diwali on a date to be notified; OC242 does not provide that date. The scheme's ₹40 lakh annual-turnover test must not be confused with the separate P2PM zero-MDR threshold of up to ₹1 lakh in monthly UPI QR receipts. No direct merchant payout, customer MDR or platform fee is inferred.",
+  additionalSources: [
     {
-      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2310586&lang=1&reg=22",
-      "label": "Ministry of Finance: UPI remains free for P2P, eligible small merchants and customers — 15 September 2026"
+      url: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2310586&lang=1&reg=22",
+      label: "Ministry of Finance: UPI remains free for P2P, eligible small merchants and customers — 15 September 2026"
     },
     {
-      "url": "https://www.npci.org.in/uploads/FA_Qs_Merchant_Discount_Rate_MDR_on_Select_UPI_P2_M_Transactions_58dba1d39e.pdf",
-      "label": "NPCI MDR FAQ dated 15 September 2026 — original 15 October date, later superseded by the 13 October deferral"
+      url: "https://www.npci.org.in/uploads/FA_Qs_Merchant_Discount_Rate_MDR_on_Select_UPI_P2_M_Transactions_58dba1d39e.pdf",
+      label: "NPCI MDR FAQ dated 15 September 2026 — original 15 October date, later superseded by the 13 October deferral"
     },
     {
-      "url": "https://nsearchives.nseindia.com/corporate/PAYTM_13102026143153_SE_DisclosureUpdateNPCIOct2026sd.pdf",
-      "label": "One97 Communications exchange filing reproducing NPCI's 13 October 2026 MDR deferral"
+      url: "https://nsearchives.nseindia.com/corporate/PAYTM_13102026143153_SE_DisclosureUpdateNPCIOct2026sd.pdf",
+      label: "One97 Communications exchange filing reproducing NPCI's 13 October 2026 MDR deferral"
     },
     {
-      "url": "https://www.npci.org.in/circulars/upi",
-      "label": "NPCI official UPI circular register, checked 24 November 2026"
+      url: "https://www.npci.org.in/circulars/upi",
+      label: "NPCI official UPI circular register, checked 24 November 2026"
     }
   ]
 },
