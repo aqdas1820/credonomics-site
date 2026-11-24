@@ -61,4 +61,32 @@ The article does not publish any pre-listing premium figures, platform names, ac
 
 ## Release evidence
 
-Preview build, tests, TypeScript, production build, PR review/merge, production deployment and public-page verification will be recorded here after completion. No release is considered public until the article, hub, homepage, November bulletin and primary-source links are checked against the production domain.
+### GitHub
+
+- Content PR: [#165 — Publish SEBI's IPO pre-listing-premium investor advisory](https://github.com/aqdas1820/credonomics-site/pull/165), merged.
+- Merge commit / final main SHA: `74344f695c77bfde52293bae992813e03956c6bf`.
+- PR head reviewed and merged without movement: `21e19fc43529fb26f83496cebba0a60161abbdb9`.
+- Original pre-edit main SHA: `26cfd5c8f8b67fb283d49869525b0c432b6032af`.
+- Exact rollback branch for the content release: `backup/pre-sebi-gmp-advisory-20261124-2022`.
+- Evidence-update rollback branch: `backup/pre-sebi-gmp-release-evidence-20261124-2022`.
+
+### Build and checks
+
+- Vercel preview deployment: `dpl_CmxSc5ww1p31TuombC8nWmwX4mkX` — READY for the exact PR head.
+- Production deployment: `dpl_62qm33tFpprdanodqWzoMM67ZCVn` — READY; deployed commit matches final main SHA.
+- The repository `prebuild` command ran: `npm test`, `npm run typecheck`, `node scripts/generate-ipo-dashboard.mjs` and `node scripts/generate-search-index.mjs`.
+- Unit tests: 177 passed across 29 test files.
+- TypeScript: `tsc --noEmit --pretty false` completed without an error; the production build continued.
+- Next.js production build completed and Vercel created the deployment outputs. Existing non-blocking CSS/Autoprefixer, React Hook, image-optimization and webpack-cache warnings remain.
+- The search-index generator reads the current Research Watch data; the sitemap imports `researchWatch` and emits one URL per item. No ranking formula or weights changed.
+
+### Public verification limitation
+
+- Vercel reports production state READY and assigns both `www.credonomics.in` and `credonomics.in` aliases to the deployment.
+- The public checker returned Internal Error or Cache miss for the new article route, Research Watch hub, November bulletin, IPO methodology page, search route and sitemap.
+- A fresh homepage/Research Watch search snapshot still showed the previous top items and did not independently confirm the new guide. The public article therefore remains **not independently confirmed as visible**, despite the READY deployment and source inclusion.
+- The production Vercel deployment URL is https://credonomics-site-jo5yz8di7-aqdasshaikh1820-9566s-projects.vercel.app and its inspector is https://vercel.com/aqdasshaikh1820-9566s-projects/credonomics-site/62qm33tFpprdanodqWzoMM67ZCVn.
+- Intended public route: https://www.credonomics.in/research/watch/sebi-ipo-prelisting-premium-investor-advisory-november-2026. This is a target URL, not a public-visibility confirmation.
+- No DNS, cache purge, routing, infrastructure or paid-resource change was attempted.
+
+The release is recorded as merged and production READY, but public visibility is not marked confirmed until the article, hub, homepage, November bulletin, methodology page, search and sitemap can be fetched from the production domain.
