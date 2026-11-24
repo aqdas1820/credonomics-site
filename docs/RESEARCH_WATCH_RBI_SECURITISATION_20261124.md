@@ -84,4 +84,51 @@ The final text expressly brings transactions in notes issued before 1 April 2027
 
 ## Final release evidence
 
-Pending PR review, test/typecheck/build validation, merge, production deployment and public-page/source-link verification. This section must be completed only from observed results.
+### GitHub
+
+- Content PR: [#163 — Publish RBI securitisation-note demat and transfer rules for April 2027](https://github.com/aqdas1820/credonomics-site/pull/163)
+- PR merged: 24 November 2026.
+- Merge commit: `b027e3a016bfadad51c57d2cd421171537d1aa82`
+- Final main SHA at content release: `b027e3a016bfadad51c57d2cd421171537d1aa82`
+- Parent/pre-edit main SHA: `30cf3da1e269f88db6ff558c8f93c83a23e17482`
+- Exact rollback branch: `backup/pre-rbi-securitisation-notes-20261124-1119`
+
+### Vercel production
+
+- Production deployment: `dpl_GgpDztsMXkErJkqZis6HQ76HMSGF`
+- Deployment URL: https://credonomics-site-8e7rvqemc-aqdasshaikh1820-9566s-projects.vercel.app
+- State: READY.
+- Git commit: `b027e3a016bfadad51c57d2cd421171537d1aa82` (matches main at content release).
+- Custom-domain aliases assigned to this deployment: `www.credonomics.in` and `credonomics.in`; apex redirects to www.
+- Preview validation deployment: `dpl_4z9cGGvL4agQiFTgUsCUkiFRn263`, READY, commit `44eea1a4365ebb7c234e89400de7956cc640be9d`.
+
+### Build and test evidence
+
+The existing Vercel prebuild and production build completed successfully:
+
+- Unit tests: 177 passed across 29 test files.
+- TypeScript: `tsc --noEmit --pretty false` passed.
+- IPO dashboard generator: 41 records.
+- Research/search index generator: 145 entries.
+- Next.js static generation: 349/349 pages.
+- Route manifest includes:
+  - `/research/watch/rbi-securitisation-notes-demat-transfer-minimum-april-2027`
+  - `/research/watch`
+  - `/updates/2026-11`
+  - `/sitemap.xml`
+- Production build completed; no build error. Existing non-blocking CSS/Autoprefixer, React Hook and image-optimization warnings remain.
+
+### Public verification limitation
+
+The production deployment is READY and the custom-domain aliases point to it, but the external public-page checker did not confirm the new content:
+
+- `/research/watch`, `/updates/2026-11` and the homepage returned HTTP 200 snapshots that still showed the prior cards and did not display the new securitisation item.
+- The new article URL returned Internal Error to the checker.
+- `/sitemap.xml` and a search query for the new article returned Internal Error.
+- Cache-busted checks of the hub, bulletin and article also returned Internal Error.
+
+The Next.js route manifest confirms that the article route was generated in the READY deployment, but this is not a substitute for a successful public fetch. Therefore public rendering is **not independently confirmed** and this record does not claim that the article is publicly visible. No speculative DNS, cache-purge, routing or infrastructure change was attempted.
+
+### Scope confirmation
+
+Only Research Watch editorial data and this release record were changed. No payment, authentication, customer/financial-record, infrastructure, secret, paid-resource, card-ranking or reward-valuation changes were made. No external messages/comments were sent and no automation schedule was changed.
