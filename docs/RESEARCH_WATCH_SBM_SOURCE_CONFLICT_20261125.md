@@ -97,3 +97,27 @@ After PR #173's READY deployment, the public article fetch still returned the pr
 ## Release evidence
 
 Append the corrective PR/head SHA, preview checks, merge commit, production deployment identity/state, deployed commit match, public article/hub/bulletin/homepage checks, search/sitemap checks and source-link verification after the corrective release. A READY deployment alone is not proof of public visibility.
+
+
+## Corrective release evidence — PR #174
+
+- Corrective PR: https://github.com/aqdas1820/credonomics-site/pull/174
+- Reviewed PR head SHA: `3439903f3fa2e1d3e0e662f9049841bb0a99238b`.
+- PR #174 merge commit / final main SHA at content release: `dc1a0f1d80f445e97c6f4617f3122b65c77c7807`.
+- Preview deployment: `dpl_9fKXMReyShxj8XafRySrgAymmwbT`, READY for the reviewed PR head.
+- Production deployment: `dpl_FuxBoJUfSQnq48VcKoGzHG9UmeAF`, READY; deployed commit matches the final main SHA. Production aliases assigned: `www.credonomics.in` and `credonomics.in`.
+- Preview/production prebuild: 177/177 unit tests passed; TypeScript passed; 41 automated IPO records generated; 149 search entries generated; Next.js production build completed and 353 static pages generated. Existing non-blocking Autoprefixer, React Hook and `<img>` optimization warnings remain.
+- Public article verified: https://www.credonomics.in/research/watch/sbm-zet-late-fee-october-2026. It displays the consolidated MITC's 5% late-fee formula, ₹50 minimum, ₹1,000 maximum, and explicitly says the effective date is not stated.
+- Public Research Watch hub, November bulletin and homepage were fetched successfully and include the SBM ZET entry, checked 25 November 2026.
+- The article's primary-source link was clicked and resolves to the 52-page consolidated SBM MITC. The notice-board URL was fetched separately and redirects to the same consolidated document; no separate current ₹299 ZET schedule was verified.
+- Public search and `/sitemap.xml` fetches returned Internal Error to the external checker. Search-index generation (149 entries) and static page generation passed in the build, but public search/sitemap endpoints are not claimed as independently verified.
+- Earlier PR #173's HOLD interpretation was superseded by PR #174 after the notice-board redirect was confirmed. The earlier indexed ₹299 snippet is not treated as a current issuer document.
+- No new consumer-finance rule or ranking formula was introduced; this release corrects source interpretation and effective-date wording only.
+- No payments, authentication, customer/financial records, infrastructure, secrets, paid resources, external messages/comments or automation schedules were changed.
+
+## Release-evidence repository update
+
+- Pre-evidence-edit main SHA: `dc1a0f1d80f445e97c6f4617f3122b65c77c7807`.
+- Backup reference: `backup/pre-sbm-release-evidence-20261125-1122`.
+- Evidence-only branch: `editorial/sbm-release-evidence-20261125-1122`.
+- The evidence-only PR and its documentation deployment are recorded in GitHub history; this section records the content publication deployment, not a second content release.
