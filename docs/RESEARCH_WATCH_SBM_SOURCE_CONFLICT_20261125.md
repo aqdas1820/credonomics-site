@@ -132,3 +132,12 @@ Append the corrective PR/head SHA, preview checks, merge commit, production depl
 - The public guide correction distinguishes the current product-page-linked 5% MITC from the separate older direct-fetch PDF listing ₹299. It keeps the 5% effective date and account-level applicability unconfirmed. No fee ranking, card ranking, reward valuation or formula changed.
 - No payments, authentication, customer/financial records, infrastructure, secrets, paid resources, external messages/comments or automation schedules were changed. The separate daily 10 AM research-report automation was left as found (disabled); it was not re-enabled or rescheduled.
 
+
+
+## Second source-path recheck — 25 November 2026, 12:19 IST
+
+- Re-opened the official SBM secured-credit-card page: https://www.sbm.bank.in/personal-banking/cards/secured-credit-card . The SBM ZET-specific “MITC & CMA” link resolves to the 52-page consolidated PDF: https://www.sbm.bank.in/pdf/terms-conditions/SBM-Secured-Credit-Card-T%26C.pdf .
+- Re-opened the exact legacy notice-board URL: https://www.sbm.bank.in/pdf/notice-board/SBM-ZET-Credit-Card-MITC.pdf . At 12:19 IST it redirected to the same 52-page consolidated PDF. The earlier 11:22 IST direct-fetch result recorded above had returned a distinct older PDF listing INR 299. The different retrieval results are preserved rather than silently discarding either observation.
+- Current consolidated PDF Table 08 (page 10) lists SBM ZET late-payment charges at 5% of Total Outstanding Due, minimum ₹50 and maximum ₹1,000, plus GST. The same PDF says charges apply when the statement outstanding remains past due for more than three days and refers to Payment Due Date +3 days. The consolidated 5% row still does not state an effective date.
+- Editorial correction: the article now says both official URL paths resolved to the consolidated PDF at the 12:19 check, while explicitly retaining the earlier 11:22 result showing a separate older ₹299 document. No effective date, version precedence or account-level fee is inferred. Card-specific statement holders are directed to ask SBM which MITC version and effective date applies to their account.
+- Public article before correction still displayed the prior 5%-only title/summary and omitted the source-path discrepancy. A new content release is required to attempt to bring the public article, Research Watch hub, homepage and November bulletin into line with the reviewed main data. A READY deployment alone will not be treated as proof of public visibility.
