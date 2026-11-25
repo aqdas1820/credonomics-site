@@ -10,37 +10,29 @@
 - Prior PR #173 merge commit: `6e5e1f1537cb1d137cad9d38394f63f1cf9b6651`.
 - Prior Vercel production deployment: `dpl_4XfhfKMxFWT6fYZjQLEsYvzNQjv3`, READY on the pre-correction main SHA. Its public article fetch still returned the pre-PR text, so the HOLD wording from PR #173 was not independently confirmed as public.
 
-## Correction to the earlier source-conflict interpretation
+## Further source reconciliation — 25 November 2026, 11:49 IST
 
-The earlier review treated the following as two separate current issuer documents:
+The official SBM secured-credit-card page lists a separate “MITC & CMA” link under the SBM ZET Credit Card:
 
-1. https://www.sbm.bank.in/pdf/terms-conditions/SBM-Secured-Credit-Card-T%26C.pdf
-2. https://www.sbm.bank.in/pdf/notice-board/SBM-ZET-Credit-Card-MITC.pdf
+https://www.sbm.bank.in/personal-banking/cards/secured-credit-card
 
-A direct public fetch on 25 November shows that the notice-board URL redirects to the same consolidated 52-page MITC currently served from the terms-and-conditions URL:
+Following that ZET-specific product-page link on 25 November resolved to the 52-page consolidated terms-and-conditions PDF:
 
 https://www.sbm.bank.in/pdf/terms-conditions/SBM-Secured-Credit-Card-T&C.pdf
 
-The two URLs therefore do **not** expose two different current documents. The previously indexed ₹299 row is not present in the currently accessible notice-board URL and must not be treated as a current issuer schedule. The earlier assumption that two current issuer PDFs conflict was incorrect; PR #173's HOLD wording is superseded by this correction.
+The consolidated PDF’s Table No. 08 (page 10) lists SBM ZET late-payment charges at 5% of Total Outstanding Due, with a ₹50 minimum and ₹1,000 maximum, plus GST. The surrounding text states the more-than-three-days-past-due trigger and refers to Payment Due Date +3 days. The 5% row still does not state an effective date.
 
-## Current consolidated SBM ZET terms
+A separate direct fetch of the legacy notice-board URL returned a distinct older PDF:
 
-The currently accessible consolidated MITC confirms:
+https://www.sbm.bank.in/pdf/notice-board/SBM-ZET-Credit-Card-MITC.pdf
 
-- PDF page 10, Table No. 08: SBM ZET late-payment fee is 5% of Total Outstanding Due, minimum ₹50 and maximum ₹1,000, plus applicable GST.
-- The surrounding text specifies a more-than-three-days-past-due trigger and refers to Payment Due Date +3 days.
-- PDF page 7, Table No. 06: ₹499 card-cancellation fee within two years from the card issuance date (not activation).
-- PDF page 8, Table No. 07: 1% rental and 1% education transaction fees for SBM ZET effective 15 July 2026; these are separate from late-payment charges.
-- The accessible consolidated MITC does not state an effective date for the 5% ZET late-fee row. The previously reported 23 October date remains unverified and is not asserted.
+That returned document has its own Table No. 08 and lists SBM ZET at INR 299. It contains older 2020-era illustrative examples and is not the 52-page PDF reached through the current product-page link.
 
-Primary sources:
+This means the earlier statement that the notice-board URL consistently redirects to the consolidated document, and that no separate accessible ₹299 document exists, was too broad. The current product-page link resolves to the consolidated 5% schedule, but a direct fetch of the legacy URL still surfaced a separate older document. We do not infer that the ₹299 row remains effective, nor that the 5% row has a particular commencement date.
 
-- Consolidated MITC: https://www.sbm.bank.in/pdf/terms-conditions/SBM-Secured-Credit-Card-T%26C.pdf
-- Notice-board URL (currently redirects to the same consolidated MITC): https://www.sbm.bank.in/pdf/notice-board/SBM-ZET-Credit-Card-MITC.pdf
+Editorial correction: the public guide now distinguishes the current product-page link target from the legacy direct-fetch result, reports both exact official URLs, leaves the 5% effective date unconfirmed, and advises cardholders to ask SBM which MITC version and effective date applies to their statement. No account-level fee outcome is inferred.
 
-The existing article is restored to the consolidated MITC's 5% ZET formula and now explains that the notice-board URL redirects to the same PDF. It does not present the indexed ₹299 row as current. The 5% effective date remains explicitly unverified. No blanket fee change or individual account outcome is inferred.
-
-The earlier open PR #168 proposed replacing the 5% row with ₹299 using the stale indexed snippet. It was not merged and remains unmerged; that single-source correction was not accepted.
+The consolidated document separately lists a ₹499 cancellation fee within two years from card issuance and 1% rental and education transaction fees effective 15 July 2026. Those are separate product-specific provisions, not evidence of the late-fee effective date.
 
 ## Recheck of the 24 October initial batch
 
@@ -109,9 +101,9 @@ Append the corrective PR/head SHA, preview checks, merge commit, production depl
 - Preview/production prebuild: 177/177 unit tests passed; TypeScript passed; 41 automated IPO records generated; 149 search entries generated; Next.js production build completed and 353 static pages generated. Existing non-blocking Autoprefixer, React Hook and `<img>` optimization warnings remain.
 - Public article verified: https://www.credonomics.in/research/watch/sbm-zet-late-fee-october-2026. It displays the consolidated MITC's 5% late-fee formula, ₹50 minimum, ₹1,000 maximum, and explicitly says the effective date is not stated.
 - Public Research Watch hub, November bulletin and homepage were fetched successfully and include the SBM ZET entry, checked 25 November 2026.
-- The article's primary-source link was clicked and resolves to the 52-page consolidated SBM MITC. The notice-board URL was fetched separately and redirects to the same consolidated document; no separate current ₹299 ZET schedule was verified.
+- At the PR #174 check, the current product-page link was followed to the consolidated 52-page MITC. A later direct fetch of the legacy notice-board URL surfaced a distinct older PDF listing ₹299; this source-path discrepancy is documented in the follow-up correction.
 - Public search and `/sitemap.xml` fetches returned Internal Error to the external checker. Search-index generation (149 entries) and static page generation passed in the build, but public search/sitemap endpoints are not claimed as independently verified.
-- Earlier PR #173's HOLD interpretation was superseded by PR #174 after the notice-board redirect was confirmed. The earlier indexed ₹299 snippet is not treated as a current issuer document.
+- PR #174 correctly followed the current product-page link to the consolidated 5% MITC, but its broader statement about the legacy URL and the absence of an accessible ₹299 document is superseded by the 25 November follow-up source reconciliation.
 - No new consumer-finance rule or ranking formula was introduced; this release corrects source interpretation and effective-date wording only.
 - No payments, authentication, customer/financial records, infrastructure, secrets, paid resources, external messages/comments or automation schedules were changed.
 
