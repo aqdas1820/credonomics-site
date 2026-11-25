@@ -1,36 +1,46 @@
-# Research Watch source-conflict correction — SBM ZET (25 November 2026)
+# Research Watch SBM ZET source-link redirect correction — 25 November 2026
 
 ## Review and repository baseline
 
 - Checked: 25 November 2026, 11:22 IST.
 - Repository: `aqdas1820/credonomics-site`.
-- Exact pre-edit `main` SHA: `45423e1d69103aafc22d5f3ee23b565a9e2e5205`.
-- Rollback reference created before edits: `backup/pre-sbm-source-conflict-20261125-1122`.
-- Editorial branch: `editorial/sbm-source-conflict-20261125-1122`.
-- Existing production deployment before edits: `dpl_GySNypCeYif48A8kbiGA85wGXyYJ`, READY on the pre-edit main SHA.
+- Exact pre-correction `main` SHA: `6e5e1f1537cb1d137cad9d38394f63f1cf9b6651`.
+- Rollback reference created before this correction: `backup/pre-sbm-redirect-correction-20261125-1122`.
+- Editorial branch: `editorial/sbm-redirect-correction-20261125-1122`.
+- Prior PR #173 merge commit: `6e5e1f1537cb1d137cad9d38394f63f1cf9b6651`.
+- Prior Vercel production deployment: `dpl_4XfhfKMxFWT6fYZjQLEsYvzNQjv3`, READY on the pre-correction main SHA. Its public article fetch still returned the pre-PR text, so the HOLD wording from PR #173 was not independently confirmed as public.
 
-## Material correction: SBM ZET issuer documents conflict
+## Correction to the earlier source-conflict interpretation
 
-Existing article:
-`/research/watch/sbm-zet-late-fee-october-2026`
+The earlier review treated the following as two separate current issuer documents:
 
-Two separate issuer-hosted PDFs currently available from SBM Bank do not agree:
+1. https://www.sbm.bank.in/pdf/terms-conditions/SBM-Secured-Credit-Card-T%26C.pdf
+2. https://www.sbm.bank.in/pdf/notice-board/SBM-ZET-Credit-Card-MITC.pdf
 
-1. Consolidated terms-and-conditions MITC:
-   https://www.sbm.bank.in/pdf/terms-conditions/SBM-Secured-Credit-Card-T%26C.pdf
-   - PDF page 9, Table No. 08 lists SBM ZET late-payment fees at 5% of Total Outstanding Due, minimum ₹50 and maximum ₹1,000, plus applicable GST.
-   - The preceding text says the fee is triggered when the statement outstanding remains past due for more than three days and refers to Payment Due Date +3 days.
-   - PDF page 7, Table No. 06 lists a ₹499 cancellation fee within two years from card issuance.
-   - PDF page 8, Table No. 07 separately lists 1% eligible rental and education transaction fees effective 15 July 2026.
+A direct public fetch on 25 November shows that the notice-board URL redirects to the same consolidated 52-page MITC currently served from the terms-and-conditions URL:
 
-2. Separate ZET-specific MITC PDF in the issuer's notice-board directory:
-   https://www.sbm.bank.in/pdf/notice-board/SBM-ZET-Credit-Card-MITC.pdf
-   - Its late-payment table lists a flat ₹299 for SBM ZET and assigns the 5%-of-outstanding (maximum ₹1,000) row to SBM Kredit.Pe.
-   - Its cancellation row lists ₹499 if the ZET card is cancelled within one year from activation.
+https://www.sbm.bank.in/pdf/terms-conditions/SBM-Secured-Credit-Card-T&C.pdf
 
-Both documents are issuer-hosted. The accessible copies do not explain which version supersedes the other, provide a revision date that resolves the mismatch, or state an effective date for the ZET late-fee row. The cancellation window also conflicts. The article therefore changes from a definitive 5% description to an explicit **HOLD** on the applicable late-fee amount and cancellation period. It presents both source rows, directs readers to obtain the version and effective date applicable to their card in writing, and does not infer a refund or charge-reversal outcome.
+The two URLs therefore do **not** expose two different current documents. The previously indexed ₹299 row is not present in the currently accessible notice-board URL and must not be treated as a current issuer schedule. The earlier assumption that two current issuer PDFs conflict was incorrect; PR #173's HOLD wording is superseded by this correction.
 
-The earlier open PR #168 proposed replacing the 5% row with ₹299 using only the notice-board PDF. It was not merged: that would have presented one conflicting issuer document as conclusive while ignoring the consolidated MITC. No comment or external message was sent.
+## Current consolidated SBM ZET terms
+
+The currently accessible consolidated MITC confirms:
+
+- PDF page 10, Table No. 08: SBM ZET late-payment fee is 5% of Total Outstanding Due, minimum ₹50 and maximum ₹1,000, plus applicable GST.
+- The surrounding text specifies a more-than-three-days-past-due trigger and refers to Payment Due Date +3 days.
+- PDF page 7, Table No. 06: ₹499 card-cancellation fee within two years from the card issuance date (not activation).
+- PDF page 8, Table No. 07: 1% rental and 1% education transaction fees for SBM ZET effective 15 July 2026; these are separate from late-payment charges.
+- The accessible consolidated MITC does not state an effective date for the 5% ZET late-fee row. The previously reported 23 October date remains unverified and is not asserted.
+
+Primary sources:
+
+- Consolidated MITC: https://www.sbm.bank.in/pdf/terms-conditions/SBM-Secured-Credit-Card-T%26C.pdf
+- Notice-board URL (currently redirects to the same consolidated MITC): https://www.sbm.bank.in/pdf/notice-board/SBM-ZET-Credit-Card-MITC.pdf
+
+The existing article is restored to the consolidated MITC's 5% ZET formula and now explains that the notice-board URL redirects to the same PDF. It does not present the indexed ₹299 row as current. The 5% effective date remains explicitly unverified. No blanket fee change or individual account outcome is inferred.
+
+The earlier open PR #168 proposed replacing the 5% row with ₹299 using the stale indexed snippet. It was not merged and remains unmerged; that single-source correction was not accepted.
 
 ## Recheck of the 24 October initial batch
 
@@ -45,11 +55,11 @@ The existing records in `app/data/research-watch.ts` and their current issuer/fu
   - https://files.hdfcfund.com/s3fs-public/2026-10/1370%20-%20Notice%20cum%20Addendum%20-%20Change%20in%20Fundamental%20attributes%20of%20Schemes%20-%20w.e.f.%20-%20November%2009,%202026.pdf
 - **Tata Neu HDFC:** issuer PDF updated 21 October and effective 25 November. Manual claiming applies to spend-earned NeuCoins on statements generated on/after 25 November; earlier statements retain automatic transfer. Minimum 100 NeuCoins per claim and up to three successful requests per day; blocked/closed-card, unblocking, reissue and variant-change exceptions remain.
   - https://www.hdfc.bank.in/kannada/content/dam/hdfcbankpws/in/en/pdfs/TataNeuCC_neucoins_Claim.pdf
-- **SBM ZET:** both issuer PDFs re-read; the late-fee amount and cancellation period are now HOLD because of the document conflict described above. The consolidated MITC's separate 1% rental/education fees effective 15 July 2026 are not described as late fees.
+- **SBM ZET:** current consolidated MITC re-read. 5%/₹50/₹1,000 row is supported by the current consolidated PDF; effective date is not stated. The notice-board URL redirects to the same document; no separate current ₹299 ZET schedule was verified.
 
 ## Other current candidates and duplicate checks
 
-- **ICICI Bank credit-card notices:** the official notice board lists a change effective 25 November 2026 and separate notices for 11 and 15 December. The full notice PDF and exact affected-card rows could not be independently retrieved from the issuer page in this run. Keep the detailed claims HOLD; do not reproduce competitor-only card lists or fees.
+- **ICICI Bank credit-card notices:** the official notice board lists a change effective 25 November 2026 and separate notices for 11 and 15 December. The full notice PDF and exact affected-card rows could not be independently retrieved from the issuer page in this run. Keep detailed claims HOLD; do not reproduce competitor-only card lists or fees.
   - https://www.icici.bank.in/about-us/notice-board
 - **Roarbank EMI foreclosure:** current KFS and MITC state 3% of remaining principal plus applicable GST from 21 November for Standard EMI and Partner EMI; the current tariff page and dedicated EMI page now also display 3%. The request-submitted-before/processed-after transition remains unresolved. Existing article already covers this; no duplicate.
   - https://roar.unity.bank.in/doc/Key%20Fact%20Sheet%20Roarbank.pdf
@@ -66,11 +76,13 @@ The existing data-driven Research Watch record is updated in place; the slug is 
 
 The existing data source drives the Research Watch hub, homepage brief, November bulletin, search index and sitemap. No separate navigation, card-ranking, fund-ranking or reward-valuation change is required.
 
-Public pages inspected before editing:
+Public pages inspected before and after the previous release:
 - https://www.credonomics.in/
 - https://www.credonomics.in/research/watch
 - https://www.credonomics.in/updates/2026-11
 - https://www.credonomics.in/research/watch/sbm-zet-late-fee-october-2026
+
+After PR #173's READY deployment, the public article fetch still returned the pre-PR 5% title/summary rather than the HOLD text. This is recorded as a stale public-rendering observation; it is not evidence that the HOLD version was live. Recheck the article after the corrective deployment.
 
 ## Safeguards and automation
 
@@ -84,4 +96,4 @@ Public pages inspected before editing:
 
 ## Release evidence
 
-This file is the pre-merge source and editorial record. Append the reviewed PR/head SHA, preview checks, merge commit, production deployment identity/state, deployed commit match, public-page/source-link verification and any remaining blockers after the release. A READY deployment alone is not proof of public visibility.
+Append the corrective PR/head SHA, preview checks, merge commit, production deployment identity/state, deployed commit match, public article/hub/bulletin/homepage checks, search/sitemap checks and source-link verification after the corrective release. A READY deployment alone is not proof of public visibility.
