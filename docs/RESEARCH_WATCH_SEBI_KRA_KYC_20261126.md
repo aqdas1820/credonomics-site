@@ -2,11 +2,11 @@
 
 ## Editorial decision
 
-Published a new, source-verified consumer update for SEBI Circular **HO/38/14/(25)2026-MIRSD-POD3**, issued **25 November 2026**. The circular’s provisions take effect **24 December 2026**. Verification date: **26 November 2026**.
+Added a new, source-verified consumer update record for SEBI Circular **HO/38/14/(25)2026-MIRSD-POD3**, issued **25 November 2026**. The circular’s provisions take effect **24 December 2026**. Verification date: **26 November 2026**.
 
 The update is limited to securities-market KYC. It does not claim that all financial-services KYC becomes universally portable, that every KYC record is validated, or that investors must immediately redo KYC.
 
-## Published article
+## Article record and intended public routes
 
 - Canonical route: https://www.credonomics.in/research/watch/sebi-kyc-kra-simplification-december-2026
 - Research Watch hub: https://www.credonomics.in/research/watch
