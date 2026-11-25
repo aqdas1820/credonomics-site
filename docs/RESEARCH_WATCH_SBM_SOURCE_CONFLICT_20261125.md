@@ -113,3 +113,22 @@ Append the corrective PR/head SHA, preview checks, merge commit, production depl
 - Backup reference: `backup/pre-sbm-release-evidence-20261125-1122`.
 - Evidence-only branch: `editorial/sbm-release-evidence-20261125-1122`.
 - The evidence-only PR and its documentation deployment are recorded in GitHub history; this section records the content publication deployment, not a second content release.
+
+
+## Follow-up source-path correction release evidence — 25 November 2026
+
+- Pre-edit main SHA for content correction: `acc740db20ba36545767e3a464381b608987e18e`.
+- Exact content rollback reference: `backup/pre-sbm-legacy-pdf-20261125-1150`.
+- Content feature branch: `editorial/sbm-legacy-pdf-20261125-1150`.
+- Content PR #176: https://github.com/aqdas1820/credonomics-site/pull/176
+- Content PR head: `f96f41c96c47e2c43693be81f61a54420949e024`.
+- Content merge commit / main SHA: `8ae2b9a4a804ba4d51409811c58a4222bffc999d`.
+- Production deployment: `dpl_8YM732w39oypDhPsapreJVsW4jYV`, state READY, target production, deployed commit matches `8ae2b9a4a804ba4d51409811c58a4222bffc999d`; aliases include `www.credonomics.in` and `credonomics.in`.
+- Preview deployment: `dpl_Ds2nTGiQhj7aPBipV1dAWvrozMkp`, state READY on content PR head `f96f41c96c47e2c43693be81f61a54420949e024`.
+- Existing Vercel prebuild ran `npm test` and `npm run typecheck` before the generators and Next build. The build proceeded through both commands, generated 41 automated IPO dashboard records and 149 CredoNomics search entries, compiled Next.js successfully, generated 353 static pages and completed deployment. The available event excerpt did not expose a final aggregate unit-test count; no exact count is asserted here. Existing non-blocking Autoprefixer, React Hook and `<img>` optimization warnings remain.
+- Public verification after the READY deployment was **not** successful: the public SBM article route still returned the earlier title/body and omitted the newly added source-path distinction; the Research Watch hub and November bulletin still showed the prior 5%-only summary. The homepage opened, but a targeted SBM lookup did not complete. `/sitemap.xml` returned Internal Error to the public checker. Therefore the deployment is READY, but the corrected public rendering is not confirmed live.
+- No cache purge, DNS, routing or infrastructure changes were attempted. Search-index generation passed during build, but public search rendering was not independently confirmed.
+- Official sources rechecked: https://www.sbm.bank.in/personal-banking/cards/secured-credit-card ; https://www.sbm.bank.in/pdf/terms-conditions/SBM-Secured-Credit-Card-T&C.pdf ; https://www.sbm.bank.in/pdf/notice-board/SBM-ZET-Credit-Card-MITC.pdf
+- The public guide correction distinguishes the current product-page-linked 5% MITC from the separate older direct-fetch PDF listing ₹299. It keeps the 5% effective date and account-level applicability unconfirmed. No fee ranking, card ranking, reward valuation or formula changed.
+- No payments, authentication, customer/financial records, infrastructure, secrets, paid resources, external messages/comments or automation schedules were changed. The separate daily 10 AM research-report automation was left as found (disabled); it was not re-enabled or rescheduled.
+
