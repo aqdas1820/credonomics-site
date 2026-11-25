@@ -141,3 +141,40 @@ Append the corrective PR/head SHA, preview checks, merge commit, production depl
 - Current consolidated PDF Table 08 (page 10) lists SBM ZET late-payment charges at 5% of Total Outstanding Due, minimum ₹50 and maximum ₹1,000, plus GST. The same PDF says charges apply when the statement outstanding remains past due for more than three days and refers to Payment Due Date +3 days. The consolidated 5% row still does not state an effective date.
 - Editorial correction: the article now says both official URL paths resolved to the consolidated PDF at the 12:19 check, while explicitly retaining the earlier 11:22 result showing a separate older ₹299 document. No effective date, version precedence or account-level fee is inferred. Card-specific statement holders are directed to ask SBM which MITC version and effective date applies to their account.
 - Public article before correction still displayed the prior 5%-only title/summary and omitted the source-path discrepancy. A new content release is required to attempt to bring the public article, Research Watch hub, homepage and November bulletin into line with the reviewed main data. A READY deployment alone will not be treated as proof of public visibility.
+
+
+## Release evidence — 25 November 2026, PR #178
+
+### Reviewed change and source record
+- Exact pre-edit `main` SHA: `8606fa050fa8634070d44007d4d5b9451e48884d`.
+- Rollback reference created before editing: `backup/pre-sbm-source-recheck-20261125-1219`.
+- Content feature branch: `editorial/sbm-source-recheck-20261125-1219`.
+- Content PR #178: https://github.com/aqdas1820/credonomics-site/pull/178 .
+- Reviewed PR head: `49aa1ee45869cebdafce1256d0aaaeb417d761da`.
+- Merge commit / current `main` SHA: `676faab316055cb05fc71b3480c72fa504750a9f`.
+- The only editorial change is the existing SBM ZET Research Watch record and this evidence file; no duplicate article, card ranking, reward valuation or formula change.
+
+### Build and deployment evidence
+- Vercel preview deployment `dpl_HksqXek3mT6wnGmz67DZK3u7jCEk`: READY on reviewed PR head `49aa1ee45869cebdafce1256d0aaaeb417d761da`.
+- Preview prebuild: 29 test files passed, 177/177 unit tests passed; `tsc --noEmit --pretty false` completed and the build proceeded to the Next.js production build.
+- Generators: 41 automated IPO dashboard records and 149 CredoNomics search entries.
+- Next.js build: compiled successfully, generated 353/353 static pages, completed and deployed. Existing non-blocking Autoprefixer, React Hook and `<img>` optimization warnings remain; npm also reported an unknown `cache-dir` setting and an install-script allowlist warning.
+- Production deployment `dpl_DUNiUPQSsd2SHELeMW1o6cYyxkCv`: READY, target `production`, deployed commit exactly matches `676faab316055cb05fc71b3480c72fa504750a9f`.
+- Vercel confirms `www.credonomics.in` and `credonomics.in` aliases are assigned to `dpl_DUNiUPQSsd2SHELeMW1o6cYyxkCv`; apex redirects to `www` with 308.
+
+### Public verification outcome — correction not confirmed live
+- `https://www.credonomics.in/research/watch/sbm-zet-late-fee-october-2026` remained accessible after the READY deployment, but the public page still displayed the earlier title and 5%-only summary and did not display the 12:19 IST source-path correction. This is a concrete discrepancy between merged `main` and the public response; do not describe the correction as live-confirmed.
+- `https://www.credonomics.in/research/watch` and `https://www.credonomics.in/updates/2026-11` returned HTTP 200 and showed the existing 25 November Research Watch snapshot, but the public text view did not confirm the new SBM source-path detail.
+- Homepage returned HTTP 200; the targeted SBM correction was not independently confirmed in the visible homepage text.
+- Public `https://www.credonomics.in/sitemap.xml` and `https://www.credonomics.in/search?q=SBM%20ZET` returned Internal Error to the public checker. Search-index generation passed in the build, but public search and sitemap delivery remain unverified.
+- Vercel deployment and alias records are READY and correctly mapped. The public checker could still be serving stale page content; no cache purge, DNS, routing or infrastructure change was attempted.
+
+### Consumer-finance interpretation retained
+- At the 12:19 IST source recheck, the official SBM product-page MITC link and exact legacy notice-board URL both resolved to the same 52-page consolidated PDF; Table 08 lists 5% of Total Outstanding Due (₹50 minimum, ₹1,000 maximum), plus GST.
+- An earlier 11:22 IST direct fetch returned a distinct older PDF listing ₹299. Both observations are retained. The bank documents do not reconcile the differing retrieval results or state an effective date for the consolidated 5% row.
+- No fee effective date, version precedence, historical statement treatment or account-level outcome is inferred. The guide directs cardholders to request the MITC version and effective date applicable to their own statement.
+
+### Scope safeguards
+- No payments, authentication, customer/financial records, infrastructure, secrets, paid resources or card-ranking formulas changed.
+- No external messages or comments were sent.
+- No automation schedules were changed. Research Watch task `6adc4a968f4881919162894e39d400bc` remains as retrieved (disabled; last saved run 29 October 2026). The separate daily 10 AM report was not re-enabled or rescheduled.
