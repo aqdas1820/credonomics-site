@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-25'
+export const WATCH_CHECKED_AT = '2026-11-26'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,47 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+{
+  slug: 'sebi-kyc-kra-simplification-december-2026',
+  title: 'SEBI simplifies securities-market KYC from 24 December: what investors should check',
+  summary: 'SEBI’s 25 November circular centralises common supplementary KYC details at KRAs and sets conditions for portable validated records. Intermediaries may still request additional information under due diligence.',
+  category: 'Markets',
+  checkedAt: '2026-11-26',
+  publishedAt: '2026-11-26',
+  announcementDate: '2026-11-25',
+  eventDate: '2026-12-24',
+  dateLabel: 'SEBI KYC circular provisions effective',
+  source: 'https://www.sebi.gov.in/sebi_data/attachdocs/nov-2026/1795605346389.pdf',
+  sourceLabel: 'SEBI Circular HO/38/14/(25)2026-MIRSD-POD3 — Simplification of client on-boarding and rationalisation of risk management framework at KYC Registration Agencies',
+  sourceLocation: 'Official 11-page circular dated 25 November 2026: paragraphs 3.1–3.7 on pages 2–10; effective-date and KRA SOP provisions at paragraphs 6–7 on page 10.',
+  audience: 'Individuals opening or maintaining securities-market accounts through SEBI-registered intermediaries, including brokers, depository participants and mutual funds/RTAs. Separate provisions cover eligible OCI and foreign-national residents in India and certain individual persons resident outside India.',
+  facts: [
+    'SEBI issued Circular HO/38/14/(25)2026-MIRSD-POD3 on 25 November 2026 to SEBI-registered intermediaries, recognised stock exchanges, clearing corporations and depositories. It amends the KYC Master Circular dated 12 October 2023. The circular says its provisions take effect 30 days after issue, specifically 24 December 2026; KRAs must issue an implementation SOP within 30 days.',
+    'Common supplementary information in Part II of the account-opening form is to be centralised at KRA level. Within three working days after completing a new client’s initial KYC, the intermediary must upload the prescribed information, including the income range, FATCA/CRS information under the separate 11 November 2026 SEBI circular, PEP status, occupation, CKYC ID if available, DIGIPIN if available and the applicable OVD expiry date.',
+    'Intermediaries must update client KYC records using information received from KRAs and the Central KYC Records Registry. They may still seek additional information as part of due diligence, and must provide clients an option to confirm updates to their KYC records.',
+    'A repeat mobile-number verification by an intermediary accessing the KRA database becomes optional only where the number is already tagged by the KRA as both Aadhaar-seeded and verified. This is not a blanket waiver for every mobile number or a general change to account-security checks.',
+    'A KYC record is treated as validated and portable when all prescribed attributes under paragraphs 96/97 of the KYC Master Circular have been verified by the KRA against official databases, for address using either the current or permanent address, and PAN–Aadhaar linkage has been verified. KRAs must share attribute-wise validation tags. If a fetched record is not validated, the intermediary may seek additional information as relevant; portability is not automatic for every record.',
+    'For non-mutual-fund intermediaries, account closure must be reported to the KRA within five working days; the KRA must update or delink the relevant record within two working days after receiving the information. If an intermediary downloads a KYC record but does not open an account within 21 working days, it must notify the KRA within the following five working days, after which the KRA must delink the record within two working days.',
+    'For mutual funds, the fund or its RTA must notify the KRA within five working days when the client has no transactions and no holdings across folios for six months. The KRA must stop sending KYC updates to that fund/RTA within two working days after receiving the notice. This is a data-linkage rule for zero-balance folios, not a new fee or a closure of the investor’s other accounts.',
+    'For an individual name change, updated PAN and Aadhaar showing the new name can be submitted without separate proof of the name change. If the change is not reflected in both, the required documents depend on the reason: marriage certificate, passport showing the husband’s name or Gazette notification for marriage-related changes; Gazette notification for other individual name changes and for a parent’s or spouse’s name change. Karnataka and Punjab have a specific alternative-document route for non-marriage name changes by private individuals where official Gazette publication is not possible, including a request letter, sworn affidavit, local and national newspaper publication and KYC in the changed name.',
+    'An OCI card holder or foreign national who is resident in India under section 6 of the Income-tax Act, 2025 may treat overseas address proof as optional only if the person provides proof of their Indian residential address and the intermediary verifies it. The circular separately extends paragraphs 3.1–3.4, 3.6 and 3.7 to individual persons resident outside India from FATF-compliant countries; that extension does not include the paragraph 3.5 overseas-address provision.',
+    'The circular states that all other provisions of the 12 October 2023 KYC Master Circular remain unchanged.'
+  ],
+  actions: [
+    'When opening or updating a securities-market account on or after 24 December 2026, expect some common KYC details to be reused from the KRA record. Review any KYC update notice and use the option to confirm or query the update where offered.',
+    'Keep your PAN–Aadhaar linkage, address information and officially valid document details accurate. If an intermediary asks for additional information because a KRA record is not validated or its due diligence requires it, the circular does not remove that request.',
+    'If your name has changed, check whether the new name is already reflected in both PAN and Aadhaar. If not, ask the intermediary for the document route that matches the reason and, where relevant, the Karnataka/Punjab exception.',
+    'An OCI card holder or foreign national should rely on the overseas-address relaxation only if resident in India under the cited tax-law test and able to provide an Indian address proof that the intermediary verifies.',
+    'No immediate re-KYC exercise for every investor is prescribed by this circular. Check the intermediary’s communication and the KRA implementation SOP rather than submitting documents again without a request.'
+  ],
+  limits: 'Checked 26 November 2026. Announcement date: 25 November 2026. Effective date: 24 December 2026. This is a securities-market KYC circular amending SEBI’s 12 October 2023 KYC Master Circular; it is not a universal change to bank-account or insurance KYC. CKYC ID and DIGIPIN are uploaded if available. A verified mobile-number check is optional only when the KRA already tags the number as Aadhaar-seeded and verified. Portability requires the prescribed paragraph 96/97 attributes to be source-verified, including either current or permanent address, plus verified PAN–Aadhaar linkage; unvalidated records may still require additional information. The overseas-address relaxation is limited to OCI card holders and foreign nationals resident in India who provide a verified Indian address. The special extension to individual persons resident outside India from FATF-compliant countries covers paragraphs 3.1–3.4, 3.6 and 3.7, not paragraph 3.5. Karnataka/Punjab have additional name-change documents for specified non-marriage cases. KRAs must issue an SOP within 30 days. All other provisions of the KYC Master Circular remain unchanged.',
+  additionalSources: [
+    { url: 'https://www.sebi.gov.in/legal/circulars/nov-2026/simplification-of-client-on-boarding-and-rationalisation-of-risk-management-framework-at-kyc-registration-agencies_105839.html', label: 'SEBI official circular landing page, dated 25 November 2026' },
+    { url: 'https://www.sebi.gov.in/legal/master-circulars/oct-2023/master-circular-on-know-your-client-kyc-norms-for-the-securities-market_77945.html', label: 'SEBI Master Circular on KYC norms for the securities market, 12 October 2023, as amended' },
+    { url: 'https://www.sebi.gov.in/legal/circulars/nov-2026/reporting-requirement-under-foreign-account-tax-compliance-act-fatca-and-common-reporting-standard-crs-revised-through-income-tax-act-2025-read-with-income-tax-rules-2026_105705.html', label: 'SEBI FATCA/CRS reporting circular dated 11 November 2026, referenced by the new KYC circular' },
+    { url: 'https://www.sebi.gov.in/sebi_data/attachdocs/nov-2026/1794392501415.pdf', label: 'Exact official SEBI FATCA/CRS circular PDF dated 11 November 2026' }
+  ]
+},
 {
   slug: 'ujjivan-sfb-fd-rd-rates-effective-19-november-2026',
   title: 'Ujjivan SFB FD and RD rates from 19 November: up to 8.20% on Platina',
