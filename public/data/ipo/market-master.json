@@ -1,71 +1,42 @@
 {
   "meta": {
-    "generatedAt": "2026-11-24T13:34:43.642Z",
-    "recordCount": 2,
-    "nseCount": 2,
+    "generatedAt": "2026-11-25T12:44:06.896Z",
+    "recordCount": 1,
+    "nseCount": 1,
     "bseCount": 0,
-    "activeCount": 2,
+    "activeCount": 1,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 0 · BSE SME unavailable · BSE mainboard 0 · preserved previous"
+    "sourceStatus": "NSE API 1 · BSE SME unavailable · BSE mainboard 0"
   },
   "records": [
     {
-      "slug": "mahanadi-coalfields-ltd-b2e27f4",
-      "companyName": "Mahanadi Coalfields Limited",
-      "symbol": "MAHACOAL",
-      "marketSegment": "mainboard",
-      "status": "open",
-      "securityType": "EQ",
-      "issue": {
-        "priceBandLow": 129,
-        "priceBandHigh": 136,
-        "openDate": "2026-11-19",
-        "closeDate": "2026-11-23",
-        "exchange": [
-          "NSE"
-        ]
-      },
-      "subscription": {
-        "total": 0.6324682630771581,
-        "updatedAt": "2026-11-23T12:22:42.986Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MAHACOAL&type=Active"
-      },
-      "sharesOffered": 493068045,
-      "sharesBid": 311849890,
-      "estimatedIssueValueCr": 6705.73,
-      "marketSource": "NSE",
-      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=MAHACOAL&type=Active",
-      "fetchedAt": "2026-11-23T12:22:42.986Z"
-    },
-    {
-      "slug": "watrana-rentals-ltd-b12d52b",
-      "companyName": "Watrana Rentals Limited",
-      "symbol": "WATRANA",
+      "slug": "shree-siddhivinayak-greentech-industries-ltd-e1cceac",
+      "companyName": "Shree Siddhivinayak Greentech Industries Limited",
+      "symbol": "SHREESIDHI",
       "marketSegment": "sme",
       "status": "open",
       "securityType": "SME",
       "issue": {
-        "priceBandLow": 232,
-        "priceBandHigh": 245,
-        "openDate": "2026-11-19",
-        "closeDate": "2026-11-23",
+        "priceBandLow": 130,
+        "priceBandHigh": 142,
+        "openDate": "2026-11-25",
+        "closeDate": "2026-11-27",
         "exchange": [
           "NSE"
         ]
       },
       "subscription": {
-        "total": 139.76,
-        "updatedAt": "2026-11-23T12:22:42.986Z",
-        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=WATRANA&type=Active"
+        "total": 0.38,
+        "updatedAt": "2026-11-25T12:44:06.896Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SHREESIDHI&type=Active"
       },
-      "sharesOffered": 3516000,
-      "sharesBid": 491402400,
-      "estimatedIssueValueCr": 86.14,
+      "sharesOffered": 6596000,
+      "sharesBid": 2536000,
+      "estimatedIssueValueCr": 93.66,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=WATRANA&type=Active",
-      "fetchedAt": "2026-11-23T12:22:42.986Z"
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SHREESIDHI&type=Active",
+      "fetchedAt": "2026-11-25T12:44:06.896Z"
     }
   ]
 }
