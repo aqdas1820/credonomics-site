@@ -111,3 +111,49 @@ Therefore this release is **merged and deployed to a READY Vercel production dep
 - No automation schedules were changed.
 - No payments, authentication, customer/financial records, infrastructure, secrets, paid resources or card-ranking formulas were changed.
 - No external messages or comments were sent.
+
+
+## 25 November 2026 — product-specific Special Needs correction
+
+A fresh recheck of the issuer's current domestic schedules found that the earlier summary grouped distinct Special Needs products too broadly. The existing article is corrected rather than creating a duplicate.
+
+- Original article publication date: 23 November 2026.
+- Recheck date: 25 November 2026.
+- Separate announcement date: not stated in the issuer schedules.
+- Effective date: 1 December 2026.
+- Base `main` SHA for this correction: `705ed361304c8717021580addbbd137f99e7ced5`.
+- Exact rollback reference: `backup/pre-icici-savings-special-needs-20261125-1654`.
+- Feature branch: `research-watch/icici-savings-special-needs-20261125-1654`.
+- Data correction commit: `1525a91e13dbe95f8ca41d1a8bd00521331a4e8c`.
+- Review PR and production validation: pending.
+
+### Newly verified schedule
+
+ICICI Bank's separate **Savings Account for Unlearned (Special Needs)** schedule contains a dated Annexure 1 effective 1 December 2026. It is distinct from the Special Needs Savings schedule for visually impaired/incapacitated customers.
+
+For the Unlearned schedule, the annexure states:
+- Three complimentary branch cash-deposit transactions per month, then ₹150 per transaction.
+- Three complimentary branch cash-withdrawal transactions per month, then ₹150 per transaction.
+- ₹1 lakh monthly value limit for each category; above it, ₹4 per ₹1,000 or ₹150, whichever is higher.
+- For financially caused ECS/NACH returns: first ₹500; second and third ₹550 each; maximum three instances per month for the same mandate.
+- Applicable taxes are additional.
+
+### Corrected product distinctions
+
+- BSBDA/PMJDY: cash transaction charges remain nil; the 1 December annexure changes ECS/NACH return fees.
+- Special Needs Savings for visually impaired/incapacitated customers: the checked schedule lists Home Branch cash transaction charges as nil; its 1 December annexure changes ECS/NACH return fees.
+- Savings Account for Unlearned (Special Needs): separate schedule; cash and ECS/NACH revisions both apply.
+- Salary Account for Visually Impaired: a separate salary product with the cash-charge revision.
+- The article does not generalise one Special Needs product's tariff to another.
+
+### Additional exact primary source
+
+- https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/docs/pdf/iterate-savings-account-socs.pdf — ICICI Bank Savings Account for Unlearned (Special Needs), Annexure 1, PDF page 6.
+
+The article's checked date is updated to 25 November while its original 23 November publication date and 1 December effective date are preserved. The issuer documents do not state a separate announcement date.
+
+### Validation and release evidence
+
+- Unit tests, TypeScript, production build, merge commit and production deployment: pending.
+- Public rendering of the corrected article, Research Watch hub, November bulletin, homepage, search and sitemap: pending.
+- No payment, authentication, customer/financial-record, infrastructure, secret, paid-resource or card-ranking changes are included.
