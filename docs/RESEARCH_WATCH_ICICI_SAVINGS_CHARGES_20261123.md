@@ -125,7 +125,7 @@ A fresh recheck of the issuer's current domestic schedules found that the earlie
 - Exact rollback reference: `backup/pre-icici-savings-special-needs-20261125-1654`.
 - Feature branch: `research-watch/icici-savings-special-needs-20261125-1654`.
 - Data correction commit: `1525a91e13dbe95f8ca41d1a8bd00521331a4e8c`.
-- Review PR and production validation: pending.
+- Content PR #182: merged; merge commit: 8c7f7171b3e1bec7168e653adff308bbf8a254e5. Feature-branch head reviewed: 220eca31fa08cb4896869fa355a3b5eb2d3fff49.
 
 ### Newly verified schedule
 
@@ -154,6 +154,11 @@ The article's checked date is updated to 25 November while its original 23 Novem
 
 ### Validation and release evidence
 
-- Unit tests, TypeScript, production build, merge commit and production deployment: pending.
-- Public rendering of the corrected article, Research Watch hub, November bulletin, homepage, search and sitemap: pending.
+- Unit tests: 177/177 passed across 29 test files.
+- TypeScript: tsc --noEmit --pretty false passed.
+- Production build: Next.js 15.5.28 completed; 353 static pages generated; 41 IPO dashboard records and 149 search entries generated.
+- Vercel production deployment: dpl_Dcs4eTqZmK2kq9MAX7yendsnAvCe, state READY, aliases assigned to www.credonomics.in and credonomics.in; deployed commit matches main at 8c7f7171b3e1bec7168e653adff308bbf8a254e5.
+- Non-blocking existing CSS/autoprefixer, React Hook and image-optimization warnings remain.
+- Public article fetch after deployment still returned the pre-correction snapshot (23 November checked date and old broad Special Needs wording). Cache-buster requests and the preview hostname returned Internal Error. The Research Watch hub, November bulletin and homepage returned HTTP 200 but their text snapshots did not establish the correction. Public search and sitemap fetches returned Internal Error. Therefore the correction is merged and deployed READY but public rendering is not independently confirmed.
+- No cache purge, DNS, routing or infrastructure changes were attempted.
 - No payment, authentication, customer/financial-record, infrastructure, secret, paid-resource or card-ranking changes are included.
