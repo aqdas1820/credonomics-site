@@ -2067,7 +2067,7 @@ export const researchWatch: WatchItem[] = [
     checkedAt: '2026-11-25',
     eventDate: '2026-11-25',
     dateLabel: 'Issuer documents compared; amounts on hold',
-    statusLabel: 'Primary-source conflict — HOLD',
+    statusLabel: 'Clarification checked',
     updateNote: '25 November correction: two official PDFs currently hosted by SBM Bank do not agree. The consolidated MITC at the bank’s terms-and-conditions URL lists 5% of Total Outstanding Due (₹50 minimum, ₹1,000 maximum) for ZET; a separate ZET-specific PDF in the notice-board directory lists ₹299. The cancellation row also differs: the consolidated MITC says ₹499 within two years from card issuance, while the notice-board PDF says ₹499 within one year from activation. Neither copy explains which version supersedes the other, and neither states an effective date for the ZET late-fee row. This guide now treats the late-fee amount and cancellation window as unresolved; do not rely on either figure without confirmation from SBM.',
     source: 'https://www.sbm.bank.in/pdf/terms-conditions/SBM-Secured-Credit-Card-T%26C.pdf',
     sourceLabel: 'SBM Bank: Secured Credit Card MITC and Cardholder Member Agreement (consolidated terms-and-conditions PDF)',
