@@ -32,7 +32,7 @@ Verified terms and limits:
 - The ₹5,000 additional-purchase minimum and SIP instalment minimums do not replace the overall threshold.
 - Exit load is 0.50% on the applicable NAV for redemption/switch-out on or before 90 days from allotment, nil after 90 days.
 - The NFO risk band is 2, but the ISID says the label may change after actual investments. Unhedged short exposure may reach 25% of net assets; the documents warn of derivative, market, liquidity and capital-loss risks.
-- HDFC's current product page lists 8 December as the re-opening date; the ISID expresses reopening as within five working days after allotment. The article treats the issuer-page date as current display and advises rechecking after allotment.
+- The KIM and ISID state that continuous sale and repurchase will reopen within five working days after allotment; neither offer document gives a fixed calendar re-opening date. The article advises checking the issuer page after allotment for the actual dealing date.
 - The KIM states the units have not been approved or recommended by SEBI; no return or investment-objective assurance is claimed.
 
 ## Git and rollback evidence
