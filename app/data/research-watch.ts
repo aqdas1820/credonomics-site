@@ -48,7 +48,6 @@ export const researchWatch: WatchItem[] = [
   ]
 },
 {
-{
   slug: 'kotak-infinity-equity-long-short-sif-nfo-december-2026',
   title: 'Kotak Infinity Equity Long-Short SIF NFO closes 1 December: ₹10 lakh threshold and 25% short exposure',
   summary: 'Kotak’s KIM v3 lists a 17 November–1 December NFO. Ordinary investors face a ₹10 lakh aggregate Infinity SIF threshold; the open-ended strategy permits unhedged short exposure up to 25% of net assets and has daily dealing subject to threshold rules.',
@@ -87,6 +86,7 @@ export const researchWatch: WatchItem[] = [
     { url: 'https://infinitysif.kotakmf.com/', label: 'Kotak Infinity SIF: official SIF website' }
   ]
 },
+{
   slug: 'sebi-kyc-kra-simplification-december-2026',
   title: 'SEBI simplifies securities-market KYC from 24 December: what investors should check',
   summary: 'SEBI’s 25 November circular centralises common supplementary KYC details at KRAs and sets conditions for portable validated records. Intermediaries may still request additional information under due diligence.',
