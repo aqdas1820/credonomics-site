@@ -12,6 +12,39 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
 {
+  slug: 'dalmia-bharat-open-market-buyback-november-2026',
+  title: 'Dalmia Bharat approves ₹700 crore open-market buyback: ₹1,850 is a ceiling, not a guaranteed price',
+  summary: 'The 25 November public announcement sets a maximum ₹700 crore buyback at up to ₹1,850 per share through BSE/NSE. It is an open-market purchase, not a tender offer; the exact opening date was not separately stated at the 26 November check.',
+  category: 'Markets',
+  checkedAt: '2026-11-26',
+  publishedAt: '2026-11-26',
+  announcementDate: '2026-11-25',
+  eventDate: '2027-03-05',
+  dateLabel: 'Latest stated closing date · subject to earlier closure',
+  source: 'https://nsearchives.nseindia.com/corporate/DALBHARAT_26112026163637_SEfilingPA26112026.pdf',
+  sourceLabel: 'Dalmia Bharat Limited: Public Announcement dated 25 November 2026, filed with NSE on 26 November 2026',
+  sourceLocation: 'Public Announcement sections 1.1–1.3 on board approval, size, price and buyback period; sections 4.2–5 on the price ceiling and indicative share count; closing-period schedule; board outcome dated 23 November 2026.',
+  audience: 'Existing Dalmia Bharat equity shareholders and beneficial owners reviewing the company’s approved buyback. Promoters, members of the promoter group and persons in control are excluded. This is factual corporate-action coverage, not an investment recommendation.',
+  facts: [
+    'Dalmia Bharat’s Board approved the buyback on 23 November 2026. The Public Announcement is dated 25 November and the company filed it with NSE on 26 November, stating that it was published in Financial Express, Jansatta and Dinamalar on 26 November.',
+    'The company approved an open-market buyback through BSE and NSE for up to ₹700 crore, at a maximum price of ₹1,850 per fully paid-up ₹2 equity share. The announcement says purchases will be made at the company’s discretion based on prevailing market prices, which may be below ₹1,850. The stated price is a ceiling, not a guaranteed selling price.',
+    'At the maximum price and maximum buyback size, the indicative maximum is 37,83,783 shares, approximately 2.02% of paid-up equity capital. If the company buys below ₹1,850, it may buy more shares, but total deployment remains subject to the ₹700 crore maximum.',
+    'The buyback is through the open-market stock-exchange mechanism, not a tender offer. Do not assume a fixed pro-rata entitlement or that every shareholder’s sale will be purchased by the company.',
+    'The Public Announcement says the buyback must open within four working days of 25 November and close within 66 working days from its opening. The latest stated closing date is 5 March 2027, but the Board may close earlier after the minimum buyback size is reached and the required notice and formalities are completed. The exact opening date was not separately confirmed in the documents checked on 26 November.',
+    'The company must deploy at least 75% of the maximum size, or ₹525 crore, towards the buyback, and at least 40% of the maximum size, or ₹280 crore, within the initial half of the 66-working-day period. These are company-level deployment obligations, not a guarantee that a particular shareholder’s shares will be bought.',
+    'The promoters, promoter group and persons in control are excluded. The Public Announcement also says any statutory approvals required from a shareholder, including RBI approval where applicable, remain that shareholder’s responsibility.'
+  ],
+  actions: [
+    'If you already hold Dalmia Bharat shares, read the complete Public Announcement and check subsequent company, BSE and NSE notices for the actual opening date, any earlier closure and final status.',
+    'Treat ₹1,850 only as the maximum permitted purchase price. The company may buy at lower prevailing market prices, and the open-market route does not provide a guaranteed individual acceptance or a tender entitlement.',
+    'Do not buy shares solely to try to participate in the buyback. This guide explains the disclosed corporate action; it does not recommend buying or selling the stock.'
+  ],
+  limits: 'Checked 26 November 2026. Board approval: 23 November; Public Announcement date: 25 November; newspaper publication and NSE filing: 26 November. The announcement says the buyback will open within four working days of 25 November, but the exact opening date was not separately stated in the documents checked. It must close within 66 working days of opening; 5 March 2027 is the latest stated date, subject to earlier closure after deployment of the maximum size or after the minimum buyback size is reached and required notice is given. ₹1,850 is a maximum price, not a promised execution price. The indicative 37,83,783-share figure assumes the maximum price and maximum size; actual share count depends on execution prices. Promoters, promoter-group members and persons in control are excluded. Certain shareholders may need statutory approvals, including RBI approval where applicable. No tax conclusion is made. This is factual corporate-action information, not an investment recommendation.',
+  additionalSources: [
+    { url: 'https://nsearchives.nseindia.com/corporate/DALBHARAT_23112026113131_outcomeBMbb23112026n.pdf', label: 'Dalmia Bharat Limited: 23 November 2026 Board outcome approving the open-market buyback, maximum size and price' }
+  ]
+},
+{
   slug: 'hdfc-hsif-hybrid-long-short-nfo-november-2026',
   title: 'HDFC H-SIF Hybrid Long-Short NFO closes 27 November: ₹10 lakh threshold and interval redemptions',
   summary: 'HDFC Mutual Fund lists the H-SIF NFO for 13–27 November. The interval strategy has a ₹10 lakh aggregate SIF minimum for ordinary investors, twice-weekly redemptions and derivatives exposure.',
