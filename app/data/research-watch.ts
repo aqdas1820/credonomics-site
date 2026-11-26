@@ -12,6 +12,43 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
 {
+  slug: 'hdfc-hsif-hybrid-long-short-nfo-november-2026',
+  title: 'HDFC H-SIF Hybrid Long-Short NFO closes 27 November: ₹10 lakh threshold and interval redemptions',
+  summary: 'HDFC Mutual Fund lists the H-SIF NFO for 13–27 November. The interval strategy has a ₹10 lakh aggregate SIF minimum for ordinary investors, twice-weekly redemptions and derivatives exposure.',
+  category: 'Mutual funds',
+  checkedAt: '2026-11-26',
+  publishedAt: '2026-11-26',
+  announcementDate: '2026-10-28',
+  eventDate: '2026-11-27',
+  dateLabel: 'NFO closes',
+  statusLabel: 'Limited-time offer',
+  source: 'https://hsif-files.hdfcfund.com/s3fs-public/2026-11/H-SIF%20Hybrid%20Long-Short%20Fund_ISID.pdf',
+  sourceLabel: 'HDFC Mutual Fund: H-SIF Hybrid Long-Short Fund Investment Strategy Information Document (ISID)',
+  sourceLocation: 'ISID Section I pages 1 and 6–8: NFO dates, interval subscription/redemption frequency, notice period, minimum investment threshold and exit load; Section II pages 29–31: derivative and unhedged-short risk disclosures.',
+  audience: 'Eligible adult investors reviewing HDFC Mutual Fund’s H-SIF Hybrid Long-Short Fund NFO, and existing SIF investors checking its dealing and liquidity terms. This is a specialised investment strategy, not a recommendation or a regular daily-liquid mutual fund.',
+  facts: [
+    'HDFC’s official Key Information Memorandum (KIM), dated 28 October 2026, and current H-SIF product page list the New Fund Offer from 13 November through 27 November 2026. The current product page lists 8 December as the re-opening date; the ISID describes re-opening within five working days after allotment, so investors should re-check the issuer page for the final dealing date after allotment.',
+    'The ISID classifies the product as an interval investment strategy. It accepts subscriptions on business days but offers redemptions twice weekly, on Mondays and Wednesdays; if either day is not a business day, processing moves to the next business day. The KIM says the notice period may be up to 15 days and valid redemption proceeds are dispatched within three working days after receipt at the official points of acceptance. This is not daily redemption.',
+    'The strategy invests across equity and debt securities and can use derivatives, including unhedged short exposure of up to 25% of net assets. The ISID explains that adverse price moves in short positions and derivative strategies can create losses and additional volatility; there is no assurance that the investment objective will be achieved.',
+    'For a non-accredited investor, the minimum investment threshold is ₹10,00,000 in aggregate across H-SIF investment strategies at PAN and holding-pattern level. The threshold applies only to SIF investments and does not include ordinary mutual-fund schemes of the same AMC. The KIM lists ₹10,000 as the minimum for an accredited investor. A ₹5,000 minimum additional purchase and the SIP instalment amounts are not substitutes for the ordinary investor’s ₹10 lakh threshold.',
+    'The KIM lists a 0.50% exit load on the applicable NAV if units are redeemed or switched out on or before 90 days from allotment; the listed exit load is nil after 90 days.',
+    'The NFO documents show risk band level 2 for the strategy and its benchmark at the NFO stage. The ISID says this label is based on an internal assessment and may change after actual investments are made. The KIM separately warns that SIF investments involve relatively higher risk, including potential loss of capital, liquidity risk and market volatility.',
+    'The KIM states that the units have not been approved or recommended by SEBI and that SEBI has not certified the accuracy or adequacy of the KIM. The NFO presentation is informational and does not guarantee returns.'
+  ],
+  actions: [
+    'Do not treat the NFO closing date as a reason to invest. If you are an eligible adult investor already evaluating this category, read the full ISID and KIM and independently assess whether the strategy, risks and liquidity terms fit your circumstances.',
+    'Check the ₹10 lakh aggregate SIF threshold before relying on a SIP instalment amount or the ₹5,000 additional-purchase minimum. Confirm accredited-investor treatment against the issuer’s current KIM and required accreditation evidence.',
+    'Review the twice-weekly redemption schedule, possible notice period, exit load, expenses and tax treatment before making any decision. Do not assume daily liquidity or a guaranteed redemption date.'
+  ],
+  limits: 'Checked 26 November 2026. The KIM is dated 28 October 2026; the NFO opened 13 November and is listed to close 27 November 2026. HDFC’s product page currently lists 8 December as the re-opening date, while the ISID states that continuous sale and repurchase will reopen within five working days after allotment; the final post-allotment dealing date should be checked on the issuer page. This is an interval SIF strategy, not a conventional daily-liquid mutual fund. Ordinary investors must meet the ₹10 lakh aggregate SIF threshold; the KIM lists a ₹10,000 minimum for accredited investors. Redemptions are twice weekly and the KIM allows a notice period of up to 15 days. The NFO risk band may change after actual holdings are made. Derivatives and unhedged short exposure up to 25% of net assets create additional risks; capital loss is possible and the objective is not assured. SEBI has not approved or recommended the units. This guide is factual information, not an investment recommendation.',
+  additionalSources: [
+    { url: 'https://hsif.hdfcfund.com/funds/h-sif-hybrid-long-short-fund', label: 'HDFC Mutual Fund: current H-SIF Hybrid Long-Short Fund product page, NFO dates and issuer-listed re-opening date' },
+    { url: 'https://hsif-files.hdfcfund.com/s3fs-public/2026-11/H-SIF%20Hybrid%20Long-Short%20Fund%20KIM%20with%20App%20Form_1.pdf', label: 'HDFC Mutual Fund: Key Information Memorandum dated 28 October 2026, minimum investment, accredited-investor minimum, redemption schedule, notice period and exit load' },
+    { url: 'https://hsif-files.hdfcfund.com/s3fs-public/2026-11/NFO%20Presentation%20-%20H-SIF%20Hybrid%20Long-Short%20Fund%20-%20November%202026.pdf', label: 'HDFC Mutual Fund: November 2026 NFO presentation, strategy features and derivative exposure' },
+    { url: 'https://hsif.hdfcfund.com/mandatory-disclosures', label: 'HDFC Mutual Fund H-SIF: statutory disclosure and offer-document register' }
+  ]
+},
+{
   slug: 'sebi-kyc-kra-simplification-december-2026',
   title: 'SEBI simplifies securities-market KYC from 24 December: what investors should check',
   summary: 'SEBI’s 25 November circular centralises common supplementary KYC details at KRAs and sets conditions for portable validated records. Intermediaries may still request additional information under due diligence.',
