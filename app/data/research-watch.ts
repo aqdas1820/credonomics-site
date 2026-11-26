@@ -12,6 +12,45 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
 {
+    slug: 'rbl-credit-card-rent-utility-fee-removal-december-2026',
+    title: 'RBL credit cards: rent and utility fees end from 1 December 2026',
+    summary: 'RBL’s current MITC says its 1% rent fee and the 1% fee on utility spends above ₹50,000 per month per card will stop from 1 December. Reward eligibility and platform charges are separate.',
+    category: 'Credit cards',
+    checkedAt: '2026-11-26',
+    publishedAt: '2026-11-26',
+    eventDate: '2026-12-01',
+    dateLabel: 'Rent and utility fee removal effective',
+    source: 'https://webassets.rbl.bank.in/document/Credit%20Cards/RBL-MITC-final.pdf',
+    sourceLabel: 'RBL Bank: current Most Important Terms and Conditions for Credit Cards',
+    sourceLocation: 'Pages 2–3: MITC applicability to all RBL Bank credit cards and its relationship with cardmember/product terms; page 13: rental MCC 6513, utility MCC 4900 and the explicit 1 December 2026 fee-removal clauses; pages 13–14: fuel/auto, selected education, FASTag/toll and merchant-EMI charges, and the statement that payment networks determine MCCs.',
+    audience: 'RBL Bank credit-card holders who pay rent or have monthly utility spending above ₹50,000 on a card. The change concerns issuer fees only; it is not a reward-points or milestone announcement.',
+    facts: [
+      'RBL’s official credit-card page links to this current 57-page MITC. The document says it applies to all credit cards issued by RBL Bank, to be read with the Cardmember Agreement and product terms wherever applicable. The MITC does not state a separate announcement date; it was checked on 26 November 2026.',
+      'Until the stated change takes effect, the MITC lists a 1% fee on rental transactions made at applicable merchants under Merchant Category Code (MCC) 6513.',
+      'Until the stated change takes effect, the MITC lists a 1% fee when aggregate utility spending exceeds ₹50,000 per month per card, under MCC 4900. The wording does not specify that the fee is charged only on the amount above ₹50,000.',
+      'The MITC explicitly says that, effective 1 December 2026, no fee will be levied on rental transactions and no fee will be levied on utility transactions. This is an upcoming issuer-fee change at the 26 November check date.',
+      'The MITC says the standard GST rate of 18% applies to fees and charges. Removing the RBL fee does not itself remove any separate charge that a rent, utility or payment platform may levy.',
+      'Other fee rows remain separate: 1% on each fuel/auto transaction above ₹10,000, capped at ₹3,000 per transaction; 1% on selected third-party-app education payments; 1% on FASTag/toll transactions above ₹10,000 per transaction; and a merchant-EMI processing fee of 1.5% or ₹150, whichever is higher.',
+      'RBL states that Merchant Category Codes are determined by the payment network, not by the bank. The fee removal does not state that rent or utility transactions will earn reward points or count toward a card-specific milestone.'
+    ],
+    actions: [
+      'If you use an RBL card for rent or utility bills, check the merchant category shown for the transaction and review the statement for any issuer fee on or after 1 December 2026.',
+      'Compare any app or payment-platform convenience charge separately; the RBL MITC change addresses the bank’s card fee, not third-party platform pricing.',
+      'Do not assume that a fee-free rent or utility transaction earns points or counts toward a milestone. Check the reward terms for your exact RBL card, since those rules are product-specific.'
+    ],
+    limits: 'Checked 26 November 2026. RBL’s official Terms and Conditions page and credit-card page link the current MITC. The document states that it applies to all RBL Bank credit cards, but is to be read with the Cardmember Agreement and product terms wherever applicable. The MITC does not separately state an announcement date. It lists the old 1% rent fee (MCC 6513) and 1% utility fee after aggregate monthly utility spends exceed ₹50,000 per card (MCC 4900), then expressly says no fee will be levied on either category from 1 December 2026. The utility wording does not say the old fee was calculated only on the excess above ₹50,000. MCC classification is determined by the payment network. The notice does not change reward eligibility, milestone treatment or third-party platform charges. Fuel/auto, selected third-party education, FASTag/toll and merchant-EMI fees remain listed separately. No card-ranking or reward-valuation formula is changed.',
+    additionalSources: [
+      {
+        url: 'https://www.rbl.bank.in/terms-and-conditions',
+        label: 'RBL Bank: official Terms and Conditions page linking the current credit-card MITC'
+      },
+      {
+        url: 'https://www.rbl.bank.in/personal-banking/cards/credit-cards',
+        label: 'RBL Bank: official credit-card page linking the Most Important Terms and Conditions'
+      }
+    ]
+  },
+{
   "slug": "sbi-card-hp-emi-instant-discount-december-2026",
   "title": "SBI Card HP EMI offer: model-specific ₹7,000–₹15,000 instant discount through 15 December",
   "summary": "SBI Card lists an HP offer through 15 December: eligible models carry SKU-specific instant discounts, but only on 6-month-or-longer EMI. Interest, processing fees, card exclusions and unresolved stacking terms matter.",
@@ -956,27 +995,42 @@ export const researchWatch: WatchItem[] = [
   {
     slug: 'hdfc-bizblack-tax-rewards-quarterly-voucher-december-2026',
     title: 'HDFC BizBlack Metal: check December tax rewards and the January voucher milestone',
-    summary: 'From 21 December, eligible tax payments earn 4 core points per ₹200 and are excluded from the ₹50,000 spend needed to unlock 5X. The quarterly voucher starts in January.',
-    category: 'Credit cards', checkedAt: '2026-11-18', eventDate: '2026-12-21', dateLabel: 'Tax reward and 5X changes begin',
+    summary: 'From 21 December, eligible tax payments earn 4 core points per ₹200 and are excluded from the ₹50,000 spend needed to unlock 5X. The quarterly voucher threshold falls to ₹4 lakh from January.',
+    category: 'Credit cards',
+    checkedAt: '2026-11-26',
+    publishedAt: '2026-11-18',
+    eventDate: '2026-12-21',
+    dateLabel: 'Tax reward and 5X changes begin',
+    updateNote: '26 November: rechecked HDFC Bank’s current two-page BizBlack Metal terms and the linked cardholder communication. The revised terms retain the 21 December 2026 reward-cycle changes and the ₹4 lakh quarterly milestone from 1 January 2027. HDFC’s product-page benefit summary still shows the earlier ₹5 lakh milestone; the revised terms and linked change notice specify the upcoming ₹4 lakh threshold. The document does not state a separate announcement date.',
     source: 'https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/business-credit-cards/biz-black/pdfs/biz-black-t-and-c.pdf',
-    sourceLabel: 'HDFC Bank: revised BizBlack Metal terms (PDF)',
-    sourceLocation: 'Sections 1–3: core points, quarterly milestone and accelerated points.',
-    additionalSources: [{
-      url: 'https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/business-credit-cards/biz-black/pdfs/biz-black-customer-communication-3-nov-2026.pdf',
-      label: 'HDFC Bank: BizBlack Metal cardholder communication (PDF)',
-    }],
-    audience: 'HDFC Bank BizBlack Metal cardholders who pay income tax or GST, use the card’s accelerated rewards, or track milestone vouchers.',
+    sourceLabel: 'HDFC Bank: revised BizBlack Metal terms, effective from 21 December 2026',
+    sourceLocation: 'Two-page revised terms: page 1 sections 1–3 on core reward points, calendar-quarter milestone and accelerated reward categories; page 2 on settlement/posting, reversal, PayZapp exclusions and card-upgrade/billing-cycle exceptions. The HDFC product page still displays the earlier ₹5 lakh milestone in its benefit summary and links to the revised change notice.',
+    additionalSources: [
+      {
+        url: 'https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/business-credit-cards/biz-black/pdfs/biz-black-customer-communication-3-nov-2026.pdf',
+        label: 'HDFC Bank: BizBlack Metal cardholder communication describing the December and January changes'
+      },
+      {
+        url: 'https://www.hdfc.bank.in/business-credit-cards/biz-black-credit-card/onboarding',
+        label: 'HDFC Bank: current BizBlack Metal product page, including the link to the revised change notice'
+      }
+    ],
+    audience: 'HDFC Bank BizBlack Metal cardholders who pay income tax or GST, use the card’s accelerated business rewards, or track quarterly milestone vouchers.',
     facts: [
-      'From 21 December 2026, eligible income tax and GST payments earn 4 core reward points per ₹200. HDFC lists 5 points per ₹150 for other eligible spends, with the exclusions in section 1. The overall limit remains 1,50,000 reward points per statement cycle.',
-      'The revised 5X terms start with the 21 December 2026–20 January 2027 statement cycle. To unlock 5X, reach ₹50,000 in qualifying retail spend in the cycle. Income tax, GST and EMI do not count toward that threshold. Once you qualify, eligible tax payments can still earn 5X through the specified payment routes.',
-      'HDFC defines 5X as core points plus four times the core points in accelerated points. The accelerated portion for Business Essential spends is capped at 7,500 points per statement cycle and is credited in the next cycle.',
-      'From 1 January 2027, ₹4 lakh of eligible spending in a calendar quarter earns a ₹5,000 Taj Stay or SmartBuy Flight voucher. HDFC previously listed a ₹5 lakh milestone. The new quarterly tally excludes income tax, GST, fuel, rent and EMI. HDFC lists up to four vouchers a year.',
+      'The revised two-page HDFC terms state that the reward-structure and accelerated-reward changes apply from the statement cycle beginning 21 December 2026 (21 December 2026–20 January 2027). The documents checked do not state a separate announcement date; this entry was rechecked on 26 November 2026.',
+      'From 21 December, eligible Income Tax and GST payments earn 4 core Reward Points per ₹200. Other eligible spends earn 5 core Reward Points per ₹150; the revised terms exclude Income Tax, GST, fuel, wallet, rent, education and EMI from that other-spend rate. The overall maximum remains 1,50,000 Reward Points per statement cycle.',
+      'The revised 5X programme covers bill payments through SmartPay and PayZapp; Income Tax/Advance Tax through eportal.incometax.gov.in; GST through payment.gst.gov.in; hotel and flight bookings on MMT MyBiz powered by SmartBuy BizDeals; and business software bought through Nuclei on SmartBuy BizDeals. It requires ₹50,000 of qualifying retail spend per statement cycle, excluding Income Tax and GST. EMI spends are not counted as retail spend for this threshold.',
+      'HDFC defines 5X as 1X core plus 4X accelerated Reward Points. Accelerated points on Business Essential spends are capped at 7,500 per statement cycle and are posted in the next billing cycle. Only settled transactions count. If reversals within the statement cycle bring qualifying spend below ₹50,000, accelerated points are not awarded; later returns/cancellations can reverse the corresponding points in the next cycle. An upgrade or downgrade during the cycle also disqualifies accelerated points on eligible business spends.',
+      'All PayZapp transactions are eligible for accelerated points except Clubs, Housing, Rent, Hospital, Education, Donation, Mutual Funds, Loans, Credit Card payments and Wallet Load. The named Income Tax and GST portals are the routes specified for accelerated tax rewards; the terms do not promise the same treatment for every payment channel.',
+      'From 1 January 2027, a ₹5,000 Taj Stay or SmartBuy Flight voucher is listed for ₹4 lakh of eligible spend in each calendar quarter (January–March, April–June, July–September and October–December). Income Tax, GST, fuel, rent and EMI transactions do not count. The communication describes up to four vouchers, worth up to ₹20,000, in a year.',
+      'HDFC’s product-page benefit summary still displays the earlier ₹5 lakh milestone. Its linked change notice and the revised two-page terms specify the upcoming ₹4 lakh milestone from 1 January 2027. This is disclosed as a current-page summary lag; no assumption is made about when HDFC will refresh that summary.'
     ],
     actions: [
-      'Check your statement dates and tally qualifying retail spend separately from income tax and GST. HDFC uses the settlement or posting date, and reversals can bring qualifying spend below ₹50,000.',
-      'Track the voucher separately by calendar quarter, beginning January–March 2027. Compare any payment fees with the rewards you can realistically redeem, and keep statutory payment deadlines.',
+      'For the 21 December statement cycle, track qualifying retail spend separately from Income Tax, GST and EMI. Count only settled transactions and allow for reversals that may take the total below ₹50,000.',
+      'For accelerated tax rewards, use the specific Income Tax/Advance Tax and GST portals named in the revised terms. Check the statement posting date and the applicable exclusions before assuming points will accrue.',
+      'Track the ₹4 lakh milestone separately for each calendar quarter from January 2027. Do not make tax payments or extra purchases solely to chase points or a voucher; compare payment charges and the redemption value you can actually use.'
     ],
-    limits: 'This notice applies to BizBlack Metal. The issuer PDFs specify effective dates. The public announcement date was unconfirmed when checked. Actual rewards depend on the payment route, statement timing, exclusions, caps and redemption choice.',
+    limits: 'Applies only to HDFC Bank BizBlack Metal. Checked 26 November 2026. The revised terms specify the 21 December 2026 statement-cycle start for core and accelerated reward changes and 1 January 2027 for the ₹4 lakh quarterly voucher milestone; a separate announcement date is not stated in the documents checked. HDFC’s product-page summary still shows the earlier ₹5 lakh milestone while its linked change notice and revised terms specify ₹4 lakh from January; this discrepancy is disclosed. The ₹50,000 5X threshold excludes Income Tax and GST, and EMI is not retail spend. Only settled transactions count; reversals, card upgrades/downgrades and billing-cycle changes have specific consequences. PayZapp exclusions and the named tax-payment routes remain product-specific. The overall 1,50,000-point statement-cycle cap and 7,500-point accelerated Business Essential cap remain. No point-to-rupee valuation, individual tax treatment or ranking formula is changed.'
   },
   {
     slug: 'marriott-bonvoy-hdfc-anniversary-enrolled-spend-november-2026',
