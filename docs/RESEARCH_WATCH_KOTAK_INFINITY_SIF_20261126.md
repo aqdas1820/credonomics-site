@@ -98,7 +98,7 @@ Existing Vercel build pipeline ran:
 - Unit tests: 177/177 passed across 29/29 test files.
 - TypeScript: `tsc --noEmit --pretty false` completed without errors.
 - IPO dashboard and search-index prebuild generators completed.
-- Next.js production build compiled successfully and generated 355/355 static pages.
+- Next.js production build compiled and completed successfully; the final preview build logged 355/355 static pages.
 - Non-blocking existing Autoprefixer, React Hook dependency and image-optimization warnings remain.
 
 Production direct-fetch verification (all HTTP 200):
