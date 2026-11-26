@@ -12,6 +12,43 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
 {
+  "slug": "sbi-card-hp-emi-instant-discount-december-2026",
+  "title": "SBI Card HP EMI offer: model-specific ₹7,000–₹15,000 instant discount through 15 December",
+  "summary": "SBI Card lists an HP offer through 15 December: eligible models carry SKU-specific instant discounts, but only on 6-month-or-longer EMI. Interest, processing fees, card exclusions and unresolved stacking terms matter.",
+  "category": "Credit cards",
+  "checkedAt": "2026-11-26",
+  "publishedAt": "2026-11-26",
+  "eventDate": "2026-12-15",
+  "dateLabel": "Offer ends (inclusive)",
+  "statusLabel": "Limited-time offer",
+  "source": "https://www.sbicard.com/en/personal/offer/hp-25nov26.page",
+  "sourceLabel": "SBI Card: HP merchant EMI offer, validity 21 November–15 December 2026",
+  "sourceLocation": "Official offer page, offer validity and eligibility at the top; summary and detailed terms at sections covering discount, EMI tenure, online/offline channels, eligible-card exclusions, frequency, no-clubbing wording, interest/processing fees and cancellations. Linked 23-page model list contains eligible SKUs and model-specific discount amounts. SBI Card's linked offline-store list PDF was too large to retrieve in this check, so no individual offline store is named.",
+  "audience": "Existing SBI/Tata credit-card holders who are already considering an eligible HP laptop, desktop or PC during the offer period. This is a time-limited merchant EMI discount, not a permanent card benefit or a recommendation to borrow.",
+  "facts": [
+    "SBI Card's official offer page lists validity from 21 November through 15 December 2026, both dates inclusive. The issuer page does not separately state an announcement date; this offer was checked on 26 November 2026.",
+    "The offer is an instant discount of up to ₹15,000 per card on eligible HP models. The linked official SKU list shows model-specific amounts of ₹7,000, ₹10,000 or ₹15,000; the maximum does not apply to every model.",
+    "The discount is available only on merchant-EMI transactions with a tenure of at least six months. The issuer lists HP's online e-store powered by PinePG/PayU and selected offline stores using Pine Labs, PPSL (Paytm) or Benow EDC machines. The exact offline-store list was not independently inspected in this check.",
+    "The offer page excludes SBI/Tata corporate cards, SBI Paytm co-brand cards and SBI Cashback cards. RuPay credit-card UPI transactions are excluded. The detailed terms additionally exclude Flipkart SBI Card for online transactions.",
+    "SBI Card describes the benefit as an instant discount and says no cashback will be posted later, even though the linked SKU sheet labels its amount column 'Cashback'. The offer page says merchant-EMI interest and processing fees will still be charged.",
+    "The offer page's summary says one use per card per aggregator per channel during the offer, while its detailed terms say once per card per aggregator per channel per month. The article does not assume repeat-use eligibility.",
+    "The same detailed terms say two offers cannot be clubbed, but separately say the discount is over and above EMI interest subvention or manufacturer cashback/discount. Those statements do not clearly resolve every concurrent OEM/store promotion; no stacking entitlement is assumed.",
+    "A full cancellation or return makes the transaction ineligible. A partial cancellation qualifies only on the net amount paid, subject to the offer terms. The issuer asks cardholders to retain the charge slip for 180 days after the programme ends."
+  ],
+  "actions": [
+    "Before checkout, match the exact HP model/SKU against SBI Card's official list and confirm the discount shown for that model; do not assume every HP product qualifies for ₹15,000.",
+    "Check that the card, channel and EMI tenure qualify. Compare the cash price with the full EMI cost, including interest, processing fee and applicable taxes; do not take an EMI solely to obtain the discount.",
+    "Do not assume that another store/OEM offer can be combined or that the offer can be used more than once. Ask SBI Card and the merchant to confirm the applicable terms before payment, and retain the charge slip."
+  ],
+  "limits": "Checked 26 November 2026. SBI Card lists the offer period as 21 November–15 December 2026 inclusive; no separate announcement date is stated on the issuer page. The official model list shows SKU-specific discount amounts of ₹7,000, ₹10,000 or ₹15,000, so the headline maximum is not universal. The offer requires a six-month-or-longer merchant EMI; interest and processing fees apply. Eligible-card exclusions include corporate, SBI Paytm co-brand and SBI Cashback cards, RuPay credit-card UPI transactions, and Flipkart SBI Card for online transactions. The linked offline-store list PDF could not be retrieved because of its size, so no specific offline store is named. The offer summary and detailed terms differ on repeat-use frequency, and the detailed terms contain potentially conflicting wording on combining the discount with other manufacturer/OEM promotions; neither repeat-use entitlement nor offer stacking is asserted. Full returns/cancellations disqualify; partial cancellations are limited to the net amount paid. This is a temporary merchant offer, not a permanent card feature. No card reward, fee or ranking formula was changed.",
+  "additionalSources": [
+    {
+      "url": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/offers/categories/shopping/hp-25nov26/Model%20List_HP.pdf",
+      "label": "SBI Card: official HP model/SKU list with model-specific instant-discount amounts"
+    }
+  ]
+},
+{
   slug: 'dalmia-bharat-open-market-buyback-november-2026',
   title: 'Dalmia Bharat ₹700 crore buyback: opens by 2 December; ₹1,850 is only a ceiling',
   summary: 'The 25 November Public Announcement sets a maximum ₹700 crore open-market buyback at up to ₹1,850 per share. Its timetable says it opens by 2 December; actual matched prices can be lower and vary by seller.',
