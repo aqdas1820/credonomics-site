@@ -45,7 +45,6 @@ export const researchWatch: WatchItem[] = [
     { url: 'https://hsif.hdfcfund.com/funds/h-sif-hybrid-long-short-fund', label: 'HDFC Mutual Fund: current H-SIF Hybrid Long-Short Fund product page and NFO dates' },
     { url: 'https://hsif-files.hdfcfund.com/s3fs-public/2026-11/H-SIF%20Hybrid%20Long-Short%20Fund%20KIM%20with%20App%20Form_1.pdf', label: 'HDFC Mutual Fund: Key Information Memorandum dated 28 October 2026, minimum investment, accredited-investor minimum, redemption schedule, notice period and exit load' },
     { url: 'https://hsif-files.hdfcfund.com/s3fs-public/2026-11/NFO%20Presentation%20-%20H-SIF%20Hybrid%20Long-Short%20Fund%20-%20November%202026.pdf', label: 'HDFC Mutual Fund: November 2026 NFO presentation, strategy features and derivative exposure' },
-    { url: 'https://hsif.hdfcfund.com/mandatory-disclosures', label: 'HDFC Mutual Fund H-SIF: statutory disclosure and offer-document register' }
   ]
 },
 {
