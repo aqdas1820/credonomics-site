@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generatedAt": "2026-11-25T12:44:06.896Z",
-    "recordCount": 1,
-    "nseCount": 1,
+    "generatedAt": "2026-11-26T12:19:42.643Z",
+    "recordCount": 2,
+    "nseCount": 2,
     "bseCount": 0,
-    "activeCount": 1,
+    "activeCount": 2,
     "upcomingCount": 0,
-    "sourceStatus": "NSE API 1 · BSE SME unavailable · BSE mainboard 0"
+    "sourceStatus": "NSE API 2 · BSE SME unavailable · BSE mainboard 0"
   },
   "records": [
     {
@@ -26,17 +26,46 @@
         ]
       },
       "subscription": {
-        "total": 0.38,
-        "updatedAt": "2026-11-25T12:44:06.896Z",
+        "total": 1.24,
+        "updatedAt": "2026-11-26T12:19:42.643Z",
         "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SHREESIDHI&type=Active"
       },
       "sharesOffered": 6596000,
-      "sharesBid": 2536000,
+      "sharesBid": 8198000,
       "estimatedIssueValueCr": 93.66,
       "marketSource": "NSE",
       "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=SME&symbol=SHREESIDHI&type=Active",
-      "fetchedAt": "2026-11-25T12:44:06.896Z"
+      "fetchedAt": "2026-11-26T12:19:42.643Z"
+    },
+    {
+      "slug": "foodlink-f-and-b-holdings-india-ltd-58fd723",
+      "companyName": "Foodlink F&B Holdings (India) Limited",
+      "symbol": "FOODLINK",
+      "marketSegment": "mainboard",
+      "status": "open",
+      "securityType": "EQ",
+      "issue": {
+        "priceBandLow": 181,
+        "priceBandHigh": 191,
+        "openDate": "2026-11-26",
+        "closeDate": "2026-11-30",
+        "exchange": [
+          "NSE"
+        ]
+      },
+      "subscription": {
+        "total": 0.8717804233854953,
+        "updatedAt": "2026-11-26T12:19:42.643Z",
+        "sourceUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=FOODLINK&type=Active"
+      },
+      "sharesOffered": 10474048,
+      "sharesBid": 9131070,
+      "estimatedIssueValueCr": 200.05,
+      "marketSource": "NSE",
+      "sourceUrl": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "issueInfoUrl": "https://www.nseindia.com/market-data/issue-information?series=EQ&symbol=FOODLINK&type=Active",
+      "fetchedAt": "2026-11-26T12:19:42.643Z"
     }
   ]
 }
