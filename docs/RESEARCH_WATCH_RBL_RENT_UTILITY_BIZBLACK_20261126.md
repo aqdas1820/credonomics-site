@@ -71,3 +71,44 @@ Build, test, preview and production deployment evidence will be appended after r
 ## Scope and safeguards
 
 Only the Research Watch data and this editorial evidence document are in scope. No payments, authentication, customer/financial records, infrastructure, secrets, paid resources, card-ranking formulas or reward-valuation formulas are changed. No external messages or comments are sent. Automation schedules and task statuses are left unchanged. The saved daily 10 AM research-report task remains in its existing disabled state; it is not re-enabled or rescheduled by this publication run.
+
+
+## Merge, build and production result
+
+### GitHub
+
+- Content PR: [#196](https://github.com/aqdas1820/credonomics-site/pull/196) — merged.
+- Reviewed PR head: `fc07f7c8099f6d90e8f292c564420c37bc54390f`.
+- Merge method: squash.
+- Content merge / production source commit: `6ec5ba2525ca0b3ab2c7ceddb5c30d53d0baafbd`.
+- Current main at the time of production verification: `6ec5ba2525ca0b3ab2c7ceddb5c30d53d0baafbd`.
+
+### Preview and production checks
+
+- Exact PR-head Vercel preview: [deployment dpl_DSroGEAvhPfjY3kiFoctqoA6jgmf](https://vercel.com/aqdasshaikh1820-9566s-projects/credonomics-site/DSroGEAvhPfjY3kiFoctqoA6jgmf) — READY, commit `fc07f7c8099f6d90e8f292c564420c37bc54390f`.
+- Production deployment: [deployment dpl_A41DTVrQwNSTVERU5qA2Q6gKkK8e](https://vercel.com/aqdasshaikh1820-9566s-projects/credonomics-site/A41DTVrQwNSTVERU5qA2Q6gKkK8e) — READY, commit `6ec5ba2525ca0b3ab2c7ceddb5c30d53d0baafbd`.
+- Production aliases reported by Vercel: `credonomics.in` and `www.credonomics.in`.
+- Unit tests: 29 test files, 177 tests passed.
+- TypeScript: `npm run typecheck` completed successfully in the existing prebuild sequence.
+- IPO dashboard generator: 41 records generated.
+- Search-index generator: 154 entries generated.
+- Next.js production build: compiled successfully; 359 static pages generated.
+- Build output includes the new RBL article route, `/search` and `/sitemap.xml`.
+- Existing non-blocking Autoprefixer, React Hook and image-optimization warnings remain.
+
+### Public verification outcome — not live-confirmed
+
+Vercel reports the production deployment READY and both production aliases assigned. However, independent public fetching does not yet confirm the new content is being served:
+
+- New RBL article route `/research/watch/rbl-credit-card-rent-utility-fee-removal-december-2026`: public fetch returned Internal Error.
+- Existing HDFC BizBlack article route returned HTTP 200 but still displayed the older `Checked 2026-11-18` content and did not show the 26 November recheck details.
+- Research Watch hub and November bulletin returned HTTP 200 and showed the 26 November feed snapshot, but the RBL entry was not found in the returned public page content.
+- Homepage returned HTTP 200 but did not show the new RBL entry; the existing BizBlack card still displayed the 18 November check date.
+- Public search query and `/sitemap.xml` returned Internal Error.
+- The RBL and HDFC issuer PDFs and the RBL official terms/product pages were independently accessible during source verification.
+
+Therefore the repository merge and Vercel deployment succeeded, but public rendering is **not confirmed**. Do not describe the new RBL guide or refreshed BizBlack details as publicly live until the public article routes and shared surfaces serve the new content. No cache purge, DNS, routing, alias or infrastructure change was attempted; the discrepancy is left for a separately authorised/verified investigation.
+
+## Final scope confirmation
+
+No payment, authentication, customer/financial record, infrastructure, secret, paid resource, card ranking, reward valuation or product eligibility formula changed. No external messages or comments were sent. No automation schedule or task status was changed. The Research Watch source task remains disabled in its saved record (last recorded run 29 October 2026). The saved daily 10 AM research-report task also remains disabled (last recorded run 8 November 2026); this run did not re-enable or reschedule it.
