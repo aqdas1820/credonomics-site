@@ -82,3 +82,33 @@ Therefore this change is **merged and deployed READY, but the corrected Amex art
 Only the Research Watch data record and this release-evidence document are in scope. Payments, authentication, customer/financial records, infrastructure, secrets, paid resources and ranking formulas were not changed. No external messages or comments were sent.
 
 Research Watch source task `6adc4a968f4881919162894e39d400bc` remains disabled with its last recorded result dated 29 October 2026. The saved daily 10 AM research-report record is also disabled (last recorded run 8 November 2026). Neither task status nor any automation schedule was changed in this run.
+
+
+## Follow-up source clarification — Amex consumer credit-balance FAQ
+
+Checked **26 November 2026**. This is a source-backed addition to the existing Amex article, not a new article or a general refund-eligibility claim.
+
+The official Amex India consumer FAQ states that where an unclaimed credit balance is **greater than ₹50,000**, the cardmember **may be asked** to provide additional information, including:
+- a bank statement reflecting the last payment made towards the Card;
+- payee name;
+- bank account number; and
+- IFSC code.
+
+The FAQ says Customer Service will provide the necessary details when the request is submitted. It does not say that this list is mandatory for every request. It also provides separate instructions for cancelled Cards. No processing time, universal refund entitlement, or eligibility for every merchant credit is inferred.
+
+- Exact official FAQ: https://www.americanexpress.com/in/customer-service/faq.payments-statements-and-balance.claim-a-refund-of-the-credit-balance.html
+- Existing 15 November 2026 credit-card MITC, page 15: https://www.americanexpress.com/content/dam/amex/in/legal/mitc/Lending_MITC_English.pdf
+- The MITC's credit-balance instruction remains distinct from its separate eligible-refund/reversal adjustment towards the Minimum and Total Amount Due.
+
+### Follow-up Git and rollback evidence
+
+- Pre-edit main SHA: `6a6836fd286a2944525961e730f09b33e687d6f7`
+- Rollback branch created at that exact SHA: `backup/pre-amex-faq-clarification-20261126-1253`
+- Content feature branch: `research-watch/amex-credit-balance-faq-clarification-20261126-1253`
+- Content commit: `a09197221eaf103d9bd9f5b99f4a244832e47916`
+
+### Verification and publication status
+
+The public homepage, Research Watch hub and November bulletin show the 26 November KRA publication. The Amex article route still serves an older checked-date snapshot (25 November on the apex URL; 19 November on a trailing-slash/www fetch) and does not yet expose the 26 November MITC correction or this FAQ detail. Vercel confirms both custom-domain aliases point to the production deployment built from main SHA `6a6836fd286a2944525961e730f09b33e687d6f7`. This is a public-render discrepancy; no DNS, cache-purge, routing or infrastructure change was made. Do not describe the Amex FAQ addition as publicly live until the canonical article route exposes it.
+
+No card ranking formula, reward valuation, payment, authentication, customer/financial record, infrastructure, secret, paid resource or automation schedule was changed.
