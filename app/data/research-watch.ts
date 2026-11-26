@@ -48,6 +48,45 @@ export const researchWatch: WatchItem[] = [
   ]
 },
 {
+  slug: 'kotak-infinity-equity-long-short-sif-nfo-december-2026',
+  title: 'Kotak Infinity Equity Long-Short SIF NFO closes 1 December: ₹10 lakh threshold and 25% short exposure',
+  summary: 'Kotak’s KIM v3 lists a 17 November–1 December NFO. Ordinary investors face a ₹10 lakh aggregate Infinity SIF threshold; the open-ended strategy permits unhedged short exposure up to 25% of net assets and has daily dealing subject to threshold rules.',
+  category: 'Mutual funds',
+  checkedAt: '2026-11-26',
+  publishedAt: '2026-11-26',
+  announcementDate: '2026-10-27',
+  eventDate: '2026-12-01',
+  dateLabel: 'NFO closes',
+  statusLabel: 'Limited-time offer',
+  source: 'https://vatseelabs-s3.kotakmf.com/SIFForms/Infinity-Equity-Long-Short-Fund/KOTAK_INFINITY_EQUITY_LONG_SHORT_FUND_KIM_V3.pdf',
+  sourceLabel: 'Kotak Mutual Fund: Infinity Equity Long-Short Fund Key Information Memorandum, version 3, dated 27 October 2026',
+  sourceLocation: 'KIM cover page and sections on NFO dates, risk classification, asset allocation, minimum investment threshold, application/redemption amounts, load structure and expenses; ISID Section I on daily dealing frequency, minimum threshold and permitted short exposure.',
+  audience: 'Readers checking Kotak Mutual Fund’s Infinity Equity Long-Short Fund NFO and existing Infinity SIF investors reviewing its minimum-threshold and dealing terms. This is a specialised investment strategy under the SIF framework, not a standard retail mutual-fund scheme or an investment recommendation.',
+  facts: [
+    'Kotak’s Key Information Memorandum (KIM) version 3, dated 27 October 2026, lists the New Fund Offer from 17 November through 1 December 2026 and says continuous sale and repurchase will reopen on 10 December 2026. The current Kotak product page separately lists the strategy’s dealing frequency, minimum investment and exit-load terms.',
+    'The strategy is an open-ended equity long-short SIF investing in listed equity and equity-related instruments, with limited short exposure through derivatives. Its stated objective is long-term capital appreciation; the KIM says there is no assurance that the objective will be achieved.',
+    'At the NFO stage, the strategy and its Nifty 100 Total Return Index (TRI) benchmark are both labelled Risk Level 3 on the five-level AMFI risk band. The KIM says this label is based on an internal assessment and may change after actual investments are made.',
+    'The indicative allocation ranges are 80–100% in equity and equity-related instruments, 0–20% in debt and money-market instruments, and 0–20% in InvITs. Unhedged short exposure through equity derivatives may be up to 25% of net assets. Derivatives and short positions can create losses when prices move against the position.',
+    'For an ordinary investor, the minimum investment threshold is ₹10 lakh in aggregate across all Infinity SIF strategies at the investor’s PAN level. Investments in Kotak’s regular mutual-fund schemes do not count toward this SIF threshold. The KIM lists a ₹1 lakh minimum for accredited investors and limited exceptions for mandatory AMC designated-employee investments and existing SIF investors whose aggregate Infinity SIF investment already exceeds ₹10 lakh. An exception should not be assumed without checking the issuer’s eligibility requirements.',
+    'The ISID lists daily subscription and daily redemption on business days and says the AMC may change redemption frequency in future subject to regulations. The KIM lists a minimum redemption request of ₹10,000 or all units, whichever is lower, but partial redemptions or switch-outs may be processed only to the extent that the remaining aggregate Infinity SIF investment does not fall below ₹10 lakh. If market-value declines passively take the aggregate below the threshold, the KIM says only the entire remaining SIF investment may be redeemed. The KIM says SIP/SWP/STP begin only after the strategy reopens and lists ₹10,000 per instalment with at least six instalments, but these facilities remain subject to an initial aggregate ₹10 lakh SIF investment. The ISID lists no notice period; the KIM says redemption proceeds are generally initiated within three business days, subject to specified exceptions. Daily dealing therefore does not guarantee unrestricted partial liquidity.',
+    'The exit load is 0.50% of NAV for redemption or switch-out on or before completion of 30 days from allotment, and nil after 30 days. The KIM exempts units issued on reinvestment of IDCW and switches between different plans or options of the strategy.',
+    'The KIM’s expense schedule sets a maximum base expense ratio of 2.10% per year for the first ₹500 crore of daily net assets, with lower AUM-slab ceilings above that level. Permitted brokerage costs, transaction costs and statutory levies may be additional. The KIM says actual current expenses should be checked on the Infinity SIF website; 2.10% is not presented here as an all-in current charge.',
+    'The KIM says this is a new investment strategy and portfolio-holdings and turnover data are not available in the offer document. It also states that SEBI has neither approved nor disapproved the units nor certified the KIM’s accuracy or adequacy. SIF investments involve relatively higher risks, including possible capital loss, liquidity risk and market volatility.',
+    'These are Kotak Infinity-specific terms. They are not the HDFC H-SIF interval-redemption schedule or its 90-day exit-load terms; the two products have different offer documents and dealing rules.'
+  ],
+  actions: [
+    'Do not treat the NFO closing date as a reason to invest. If you are already evaluating SIFs, read the complete KIM and ISID and assess the strategy, derivative exposure and liquidity terms independently.',
+    'Before relying on the minimum, check your aggregate investment across all Infinity SIF strategies at PAN level. Do not count regular Kotak mutual-fund schemes toward this threshold; verify accredited-investor or other exception status against the issuer’s documents.',
+    'Check whether a partial redemption would leave at least ₹10 lakh across Infinity SIF strategies, and review the 30-day exit load and current expense disclosure. Do not assume daily redemption frequency removes the aggregate minimum-balance restriction.'
+  ],
+  limits: 'Checked 26 November 2026. KIM version 3 is dated 27 October 2026; the NFO opened 17 November and is listed to close 1 December, with continuous sale and repurchase listed to reopen 10 December. The checked issuer product page and KIM show the same strategy terms; no later conflicting NFO date was found in the reviewed official documents. The ₹10 lakh threshold applies across Infinity SIF strategies at PAN level, not regular Kotak mutual-fund schemes; the KIM lists a ₹1 lakh accredited-investor minimum and limited exceptions. Daily subscription/redemption is on business days and remains constrained by the minimum threshold and partial-redemption rule. A passive fall below ₹10 lakh permits only full redemption of the remaining investment. The 0.50% exit load applies through 30 days, with IDCW-reinvestment and plan/option-switch exceptions. Expense figures are ceilings/estimates, not an all-in current TER. The NFO risk band may change after actual holdings; unhedged short exposure may reach 25% of net assets. The new strategy has no portfolio history in the KIM. Capital loss is possible, the objective is not assured, and SEBI has not approved or disapproved the units. This is factual information, not an investment recommendation.',
+  additionalSources: [
+    { url: 'https://www.kotakmf.com/sif/funds/equity-long-short', label: 'Kotak Mutual Fund: current Infinity Equity Long-Short Fund product page, strategy details, dealing frequency and disclosures' },
+    { url: 'https://vatseelabs-s3.kotakmf.com/SIFForms/Infinity-Equity-Long-Short-Fund/ISID_Infinity_Equity_Long_Short_Fund.pdf', label: 'Kotak Infinity SIF: Investment Strategy Information Document, daily dealing, allocation ranges, short exposure and minimum-threshold restrictions' },
+    { url: 'https://infinitysif.kotakmf.com/', label: 'Kotak Infinity SIF: official SIF website' }
+  ]
+},
+{
   slug: 'sebi-kyc-kra-simplification-december-2026',
   title: 'SEBI simplifies securities-market KYC from 24 December: what investors should check',
   summary: 'SEBI’s 25 November circular centralises common supplementary KYC details at KRAs and sets conditions for portable validated records. Intermediaries may still request additional information under due diligence.',
