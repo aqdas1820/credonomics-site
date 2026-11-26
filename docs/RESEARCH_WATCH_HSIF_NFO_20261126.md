@@ -22,11 +22,10 @@ The article is data-driven through `app/data/research-watch.ts`. The homepage, R
 2. HDFC H-SIF KIM dated 28 October 2026: https://hsif-files.hdfcfund.com/s3fs-public/2026-11/H-SIF%20Hybrid%20Long-Short%20Fund%20KIM%20with%20App%20Form_1.pdf
 3. Current HDFC product page: https://hsif.hdfcfund.com/funds/h-sif-hybrid-long-short-fund
 4. HDFC November 2026 NFO presentation: https://hsif-files.hdfcfund.com/s3fs-public/2026-11/NFO%20Presentation%20-%20H-SIF%20Hybrid%20Long-Short%20Fund%20-%20November%202026.pdf
-5. HDFC H-SIF mandatory disclosures: https://hsif.hdfcfund.com/mandatory-disclosures
 
 Verified terms and limits:
 
-- NFO dates are 13–27 November 2026 in the KIM, ISID, NFO presentation and current HDFC product page. No extension/addendum was found in the current issuer material checked.
+- NFO dates are 13–27 November 2026 in the KIM, ISID, NFO presentation and current HDFC product page. The KIM says any modification to the NFO period must be announced by addendum on the H-SIF webpage. No revised date was visible on the current product page or in the checked offer documents; the separate statutory-disclosures page could not be retrieved, so no broader claim about every possible addendum is made.
 - The strategy is interval-based: subscriptions on business days; redemptions twice weekly (Monday/Wednesday), shifted to the next business day if needed. The KIM allows a notice period of up to 15 days and states valid redemption proceeds are dispatched within three working days after receipt at the official acceptance points.
 - Non-accredited investors must meet the ₹10 lakh aggregate threshold across H-SIF strategies at PAN and holding-pattern level; ordinary HDFC mutual-fund scheme investments do not count toward this threshold. The KIM lists ₹10,000 as the accredited-investor minimum.
 - The ₹5,000 additional-purchase minimum and SIP instalment minimums do not replace the overall threshold.
