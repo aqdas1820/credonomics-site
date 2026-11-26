@@ -25,7 +25,7 @@ export const researchWatch: WatchItem[] = [
   source: 'https://hsif-files.hdfcfund.com/s3fs-public/2026-11/H-SIF%20Hybrid%20Long-Short%20Fund_ISID.pdf',
   sourceLabel: 'HDFC Mutual Fund: H-SIF Hybrid Long-Short Fund Investment Strategy Information Document (ISID)',
   sourceLocation: 'ISID Section I pages 1 and 6–8: NFO dates, interval subscription/redemption frequency, notice period, minimum investment threshold and exit load; Section II pages 29–31: derivative and unhedged-short risk disclosures.',
-  audience: 'Eligible adult investors reviewing HDFC Mutual Fund’s H-SIF Hybrid Long-Short Fund NFO, and existing SIF investors checking its dealing and liquidity terms. This is a specialised investment strategy, not a recommendation or a regular daily-liquid mutual fund.',
+  audience: 'Eligible investors reviewing HDFC Mutual Fund’s H-SIF Hybrid Long-Short Fund NFO, and existing SIF investors checking its dealing and liquidity terms. This is a specialised investment strategy, not a recommendation or a regular daily-liquid mutual fund.',
   facts: [
     'HDFC’s official Key Information Memorandum (KIM), dated 28 October 2026, and current H-SIF product page list the New Fund Offer from 13 November through 27 November 2026. The current product page lists 8 December as the re-opening date; the ISID describes re-opening within five working days after allotment, so investors should re-check the issuer page for the final dealing date after allotment.',
     'The ISID classifies the product as an interval investment strategy. It accepts subscriptions on business days but offers redemptions twice weekly, on Mondays and Wednesdays; if either day is not a business day, processing moves to the next business day. The KIM says the notice period may be up to 15 days and valid redemption proceeds are dispatched within three working days after receipt at the official points of acceptance. This is not daily redemption.',
@@ -36,7 +36,7 @@ export const researchWatch: WatchItem[] = [
     'The KIM states that the units have not been approved or recommended by SEBI and that SEBI has not certified the accuracy or adequacy of the KIM. The NFO presentation is informational and does not guarantee returns.'
   ],
   actions: [
-    'Do not treat the NFO closing date as a reason to invest. If you are an eligible adult investor already evaluating this category, read the full ISID and KIM and independently assess whether the strategy, risks and liquidity terms fit your circumstances.',
+    'Do not treat the NFO closing date as a reason to invest. If you are eligible and already evaluating this category, read the full ISID and KIM and independently assess whether the strategy, risks and liquidity terms fit your circumstances.',
     'Check the ₹10 lakh aggregate SIF threshold before relying on a SIP instalment amount or the ₹5,000 additional-purchase minimum. Confirm accredited-investor treatment against the issuer’s current KIM and required accreditation evidence.',
     'Review the twice-weekly redemption schedule, possible notice period, exit load, expenses and tax treatment before making any decision. Do not assume daily liquidity or a guaranteed redemption date.'
   ],
