@@ -23,10 +23,10 @@ export const researchWatch: WatchItem[] = [
   statusLabel: "Limited-time offer",
   source: "https://www.axismf.com/1/5/464/2243/4299/SID_Axis_Nifty_Large_Midcap250_Index_Fund_6b01e1d5cb.pdf",
   sourceLabel: "Axis Mutual Fund: Scheme Information Document for Axis Nifty LargeMidcap 250 Index Fund",
-  sourceLocation: "SID cover and pages 2–8: NFO dates, objective, Direct/Regular plans, Growth option, minimum application, exit load, index allocation and derivatives limits; pages 20–22: maximum base expense ratio and additional permitted cost components. Cross-check: Axis AMC KIM pages 1–4 for riskometer/load, pages 23–24 for SIP start dates and the multiple-SIP restriction; Axis AMC NFO page for scheme structure and demat FAQ; AMFI NFO register for offer dates/minimum; NSE Indices official Nifty LargeMidcap 250 page for constituent universe, 50:50 segment weights, quarterly reset and semi-annual reconstitution.",
+  sourceLocation: "SID cover and pages 2–8: NFO dates, objective, Direct/Regular plans, Growth option, minimum application, exit load, index allocation and derivatives limits; pages 20–22: maximum base expense ratio and additional permitted cost components. Cross-check: Axis AMC KIM pages 1–4 for riskometer/load, pages 23–24 for SIP start dates and the multiple-SIP restriction; Axis AMC NFO page for offer dates, scheme structure, minimum and demat FAQ; NSE Indices official Nifty LargeMidcap 250 page for constituent universe, 50:50 segment weights, quarterly reset and semi-annual reconstitution. Actual TER can be rechecked through Axis AMC's statutory disclosure page.
   audience: "Readers comparing new open-ended equity index funds and reviewing Axis Mutual Fund's NFO terms. This is factual product information, not an investment recommendation.",
   facts: [
-    "Axis Mutual Fund's Scheme Information Document (SID) lists the New Fund Offer from 27 November through 11 December 2026. The AMC's current NFO page and AMFI's NFO register show the same dates and a ₹100 minimum. The reviewed offer documents do not state a separate public announcement date. Checked 27 November 2026.",
+    "Axis Mutual Fund's Scheme Information Document (SID) and current AMC NFO page list the New Fund Offer from 27 November through 11 December 2026 and a ₹100 minimum. The reviewed offer documents do not state a separate public announcement date. Checked 27 November 2026.",
     "The scheme is an open-ended index fund whose objective is to provide returns before expenses corresponding to the Nifty LargeMidcap 250 TRI, subject to tracking error. The SID says there is no assurance that the objective will be achieved.",
     "NSE Indices describes the underlying Nifty LargeMidcap 250 as 100 Nifty 100 constituents plus 150 Nifty Midcap 150 constituents. The aggregate large-cap and mid-cap weights are 50% each and reset quarterly; the index is reconstituted semi-annually. Individual stocks within each segment are weighted by free-float market capitalisation. The segment weights can drift between scheduled resets.",
     "The SID's normal allocation range is 95–100% in securities covered by the index and 0–5% in money-market instruments and units of debt/liquid mutual-fund schemes. It permits exposure to equity derivatives of index constituents up to 15% of net assets for rebalancing or when an underlying security is not sufficiently available; the scheme says it will not undertake short selling.",
@@ -55,15 +55,11 @@ export const researchWatch: WatchItem[] = [
       label: "Axis Mutual Fund: current NFO page, offer dates, scheme structure, minimum amount and demat FAQ",
     },
     {
-      url: "https://www.amfiindia.com/new-fund-offer",
-      label: "AMFI: current New Fund Offer register, including Axis Nifty LargeMidcap 250 Index Fund",
-    },
-    {
       url: "https://www.niftyindices.com/indices/equity/broad-based-indices/nifty-largemidcap-250",
       label: "NSE Indices: Nifty LargeMidcap 250 constituents, segment weights and rebalance/reconstitution schedule",
     },
     {
-      url: "https://www.axismf.com/total-expense-ratio",
+      url: "https://www.axismf.com/servicecenter/statementsandtaxandschemeinformation/terinformation",
       label: "Axis Mutual Fund: current Total Expense Ratio disclosure page for checking the actual scheme TER once published",
     },
   ],
