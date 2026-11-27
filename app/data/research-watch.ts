@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-27'
+export const WATCH_CHECKED_AT = '2026-11-28'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,86 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+{
+  slug: 'abakkus-dynamic-asset-allocation-fund-nfo-december-2026',
+  title: 'Abakkus Dynamic Asset Allocation Fund: current SID lists 8–22 December NFO',
+  summary: 'The AMC-linked 18 November SID lists an 8–22 December NFO and a 31 December reopening. Both the scheme and benchmark are Very High Risk; the stated allocation ranges are 10–90% each for equity and debt.',
+  category: 'Mutual funds',
+  checkedAt: '2026-11-28',
+  publishedAt: '2026-11-28',
+  eventDate: '2026-12-22',
+  dateLabel: 'NFO closes',
+  source: 'https://www.abakkusmf.com/uploads/Abakkus_Dynamic_Asset_Allocation_Fund_NFO_SID_693595e3f7.pdf',
+  sourceLabel: 'Abakkus Mutual Fund: Scheme Information Document dated 18 November 2026',
+  sourceLocation: 'SID pages 1–2: NFO dates, scheme and benchmark risk-o-meters and benchmark; page 6: minimum application, SIP and exit load; pages 14–16: asset allocation and strategy.',
+  audience: 'Readers comparing upcoming dynamic asset-allocation hybrid NFOs and checking the fund’s risk, allocation, minimums and exit load. This is factual information, not an investment recommendation.',
+  facts: [
+    'The AMC’s current Scheme Documents page links an SID dated 18 November 2026. That SID lists the NFO opening on 8 December, closing on 22 December and the scheme reopening on 31 December. An older 22 October SID still accessible on the AMC file host lists 16–30 November and an 8 December reopening. We use the 18 November version linked from the current AMC page; no separate rescheduling announcement date or reason was located.',
+    'The scheme is an open-ended dynamic asset-allocation hybrid fund investing in equity and debt instruments. Its stated objective is long-term capital appreciation, but the SID gives no assurance that the objective will be achieved.',
+    'At the NFO stage, both the scheme and benchmark risk-o-meters are Very High Risk. The SID says the risk label may change after actual investments are made.',
+    'The benchmark is the CRISIL Hybrid 50+50 – Moderate Index.',
+    'The indicative allocation ranges are 10–90% for equity and equity-related instruments and 10–90% for debt and money-market instruments. The SID says gross equity exposure is expected to be 65–90%; net equity exposure may be reduced below 65% through hedging. This is not a fixed 50:50 allocation.',
+    'The minimum lump-sum application is ₹500. The stated SIP minimum is ₹500 with at least six instalments; the minimum additional purchase is ₹500.',
+    'The SID lists a 1% exit load if units are redeemed or switched out before six months from allotment and nil exit load after six months. No entry load applies; switches between plans, options and sub-options of the same scheme carry no exit load.',
+    'The scheme offers Direct and Regular plans with the Growth option; IDCW is not applicable.',
+    'The SID states a ₹10 face value per unit. Face value is not a measure of whether an NFO is cheap or fairly valued.',
+    'The SID states that the units have not been approved or recommended by SEBI and that SEBI has not certified the accuracy or adequacy of the SID.',
+    'The current KIM link appears on the AMC’s official Scheme Documents page but timed out during this check. All numeric terms in this guide are taken from the accessible current SID; no KIM-only claims are made.'
+  ],
+  actions: [
+    'Use the 18 November SID linked from the AMC’s current Scheme Documents page, not the older 22 October file’s NFO dates. Check the AMC page for any later addendum before acting.',
+    'Treat the NFO as upcoming: it is listed to open on 8 December and close on 22 December 2026; the SID lists reopening on 31 December. Do not assume the NFO is open before its stated opening date.',
+    'Read the Very High Risk labels and the 10–90% allocation ranges carefully. Understand the difference between gross and net equity exposure and the role of derivative hedging.',
+    'Check the six-month exit-load period and the SIP minimum of six instalments against your own time horizon. This is not a recommendation to invest.',
+    'Do not treat the ₹10 face value as a sign of cheapness. Review the current KIM and SAI, expenses, tax treatment and later portfolio disclosures before making any decision.'
+  ],
+  limits: 'Checked 28 November 2026. The current SID is dated 18 November and is the version linked from the AMC’s current Scheme Documents page. It lists the NFO for 8–22 December and reopening on 31 December. An older 22 October SID remains accessible and shows 16–30 November and an 8 December reopening; no separate rescheduling announcement date or reason was located. The current KIM link was present on the official AMC page but timed out during this check; all published numeric terms are supported by the accessible current SID, and no KIM-only claims are made. Risk labels may change after actual investments. The scheme objective is not assured. No fund recommendation or ranking change is made.',
+  additionalSources: [
+    { url: 'https://www.abakkusmf.com/statutory-disclosures.html', label: 'Abakkus Mutual Fund current statutory disclosures and Scheme Documents page; links the 18 November SID and current KIM' },
+    { url: 'https://www.abakkusmf.com/uploads/Abakkus_Dynamic_Asset_Allocation_Fund_NFO_KIM_485e878082.pdf', label: 'Abakkus Dynamic Asset Allocation Fund KIM; current link listed by the AMC, but automated retrieval timed out on 28 November and no KIM-only claims are used' },
+    { url: 'https://www.abakkusmf.com/uploads/Abakkus_Dynamic_Asset_Allocation_Fund_NFO_SID_3216bae391.pdf', label: 'Earlier 22 October 2026 SID showing the older 16–30 November NFO schedule; not the current date schedule' }
+  ]
+},
+{
+  slug: 'hdfc-hsif-hybrid-long-short-nfo-november-2026',
+  title: 'HDFC H-SIF Hybrid Long-Short: NFO ended 27 November; ongoing subscription shown separately',
+  summary: 'HDFC’s current product page lists the 13–27 November NFO dates but displays “SIF Open for Subscription”. The KIM says continuous sale and repurchase reopen within five working days after allotment; this is not an NFO extension.',
+  category: 'Mutual funds',
+  checkedAt: '2026-11-28',
+  publishedAt: '2026-11-26',
+  eventDate: '2026-11-27',
+  dateLabel: 'NFO last date',
+  statusLabel: 'Availability checked',
+  source: 'https://hsif.hdfcfund.com/funds/h-sif-hybrid-long-short-fund',
+  sourceLabel: 'HDFC Mutual Fund: current H-SIF Hybrid Long-Short Fund product page and NFO dates',
+  sourceLocation: 'Product page top: current subscription status and NFO dates; KIM dated 28 October pages 1–2: NFO dates and continuous-offer reopening; KIM pages 7–8 and 22–23: threshold, SWP/STP, redemption schedule and exit load; ISID pages 1, 6–8 and 29–31: strategy, risk and derivatives.',
+  audience: 'Eligible investors reviewing HDFC’s H-SIF Hybrid Long-Short strategy and existing SIF holders checking its dealing and liquidity terms. This is a specialised investment strategy, not a regular daily-liquid mutual fund or recommendation.',
+  updateNote: 'Checked 28 November 2026: the stated NFO last date (27 November) has passed. HDFC’s current product page displays “SIF Open for Subscription”; the KIM describes continuous sale and repurchase separately. This is not evidence of an NFO extension.',
+  facts: [
+    'HDFC’s current product page lists the NFO as 13–27 November 2026 and currently displays “SIF Open for Subscription”. The stated NFO window has passed; do not describe the NFO itself as still open or extended.',
+    'The KIM and ISID, both dated 28 October 2026, say continuous sale and repurchase reopen within five working days after allotment; neither gives a fixed calendar date. The current product page does not state the exact first continuous-sale date or a transaction cut-off. Confirm live availability and cut-off with HDFC before any transaction.',
+    'For a non-accredited investor, the minimum investment threshold is ₹10,00,000 in aggregate across H-SIF investment strategies at PAN and holding-pattern level. The threshold applies only to SIF investments and excludes ordinary mutual-fund schemes of the same AMC. The KIM lists ₹10,000 as the minimum for an accredited investor, subject to the applicable accreditation requirements.',
+    'The KIM permits SIP registration by an existing investor only while meeting the ₹10 lakh threshold. For SWP, the balance after each withdrawal must remain at least ₹10 lakh; for STP, the balance after each transfer-out instalment must also remain at least ₹10 lakh. If market movements passively reduce the aggregate value below the threshold, only the entire remaining SIF investment may then be redeemed.',
+    'Redemptions are offered twice weekly, on Mondays and Wednesdays; if either day is not a business day, processing moves to the next business day. The KIM says the notice period may be up to 15 days and valid redemption proceeds are dispatched within three working days after receipt at the official points of acceptance. This is not daily redemption.',
+    'The KIM lists a 0.50% exit load on the applicable NAV if units are redeemed or switched out on or before 90 days from allotment; the listed exit load is nil after 90 days.',
+    'The strategy can use derivatives, with exposure up to 100% of net assets and unhedged short exposure of up to 25% of net assets. Adverse moves can create losses and volatility; there is no assurance that the investment objective will be achieved.',
+    'The offer documents show risk-band level 2 for the strategy and its benchmark at the NFO stage. The ISID says this is based on an internal assessment and may change after actual investments are made; it is not the standard mutual-fund risk-o-meter.',
+    'The KIM states that the units have not been approved or recommended by SEBI and that SEBI has not certified the accuracy or adequacy of the KIM.'
+  ],
+  actions: [
+    'Do not treat the 27 November NFO last date as if the NFO is still open. If checking a fresh transaction now, distinguish the current product-page subscription status from the expired NFO window and verify the live cut-off with HDFC.',
+    'Check the ₹10 lakh aggregate SIF threshold at PAN and holding-pattern level before relying on a SIP instalment amount or additional-purchase minimum. Accredited-investor treatment is a separate exception and requires the issuer’s current eligibility checks.',
+    'Review twice-weekly redemption, the possible 15-day notice period and the 0.50% exit load within 90 days. Do not assume daily liquidity or a guaranteed redemption date.',
+    'Check the ₹10 lakh minimum-balance rule for SWP/STP and the passive-breach restriction before assuming a partial exit is available.',
+    'Read the current KIM and ISID and check for later addenda before any decision.'
+  ],
+  limits: 'Checked 28 November 2026. HDFC’s current product page displays “SIF Open for Subscription” while retaining NFO dates of 13–27 November. The NFO last date has passed; no NFO extension notice was located. The KIM and ISID are dated 28 October and state that continuous sale and repurchase reopen within five working days after allotment, without a fixed calendar date. The product page does not provide the exact first continuous-sale date or a live transaction cut-off, so verify those at transaction time. The ₹10 lakh threshold, accredited-investor exception, SWP/STP minimum-balance rule and twice-weekly redemption terms are product-specific. Risk-band level 2 may change after actual holdings; derivatives and unhedged short exposure create additional risks and capital loss is possible. This is factual information, not an investment recommendation.',
+  additionalSources: [
+    { url: 'https://hsif-files.hdfcfund.com/s3fs-public/2026-11/H-SIF%20Hybrid%20Long-Short%20Fund%20KIM%20with%20App%20Form_1.pdf', label: 'HDFC Mutual Fund: Key Information Memorandum dated 28 October 2026, NFO dates, continuous-sale reopening, minimum investment, accredited-investor minimum, SWP/STP balance rules, redemption schedule, notice period and exit load' },
+    { url: 'https://hsif-files.hdfcfund.com/s3fs-public/2026-11/H-SIF%20Hybrid%20Long-Short%20Fund_ISID.pdf', label: 'HDFC Mutual Fund: Investment Strategy Information Document, strategy, risk band, interval dealing and derivatives exposure' },
+    { url: 'https://hsif-files.hdfcfund.com/s3fs-public/2026-11/NFO%20Presentation%20-%20H-SIF%20Hybrid%20Long-Short%20Fund%20-%20November%202026.pdf', label: 'HDFC Mutual Fund: November 2026 NFO presentation, strategy features and derivative exposure' }
+  ]
+},
 {
   slug: "rbi-card-atm-directions-november-2026",
   title: "RBI’s 2026 card and ATM Directions: what consumers can verify and what remains unconfirmed",
@@ -330,42 +410,6 @@ export const researchWatch: WatchItem[] = [
   limits: 'Checked 26 November 2026. Board approval: 23 November; Public Announcement date: 25 November; newspaper publication and NSE filing: 26 November. The Public Announcement timetable says the buyback opens on or before 2 December 2026; the actual opening date was not separately stated in the documents checked. It must close within 66 working days of opening; 5 March 2027 is the latest stated date, subject to earlier closure if the maximum size is deployed or the Board closes after the minimum buyback size is reached and required notice is given. ₹1,850 is a maximum price, not a promised execution price. The indicative 37,83,783-share figure assumes the maximum price and maximum size; actual share count depends on execution prices. Buy orders may not be placed every day; the actual price for each seller is the matched trade price and is not uniform. The company has no obligation to buy a particular holder’s shares, even if the maximum size is not reached. The buyback is for fully paid, freely transferable shares held in dematerialised form; partly-paid, locked-in and non-transferable shares are excluded until the relevant condition is resolved. Promoters, promoter-group members and persons in control are excluded. Certain shareholders may need statutory approvals, including RBI approval where applicable. No tax conclusion is made. This is factual corporate-action information, not an investment recommendation.',
   additionalSources: [
     { url: 'https://nsearchives.nseindia.com/corporate/DALBHARAT_23112026113131_outcomeBMbb23112026n.pdf', label: 'Dalmia Bharat Limited: 23 November 2026 Board outcome approving the open-market buyback, maximum size and price' }
-  ]
-},
-{
-  slug: 'hdfc-hsif-hybrid-long-short-nfo-november-2026',
-  title: 'HDFC H-SIF Hybrid Long-Short NFO closes 27 November: ₹10 lakh threshold and interval redemptions',
-  summary: 'HDFC Mutual Fund lists the H-SIF NFO for 13–27 November. The interval strategy has a ₹10 lakh aggregate SIF minimum for ordinary investors, twice-weekly redemptions and derivatives exposure.',
-  category: 'Mutual funds',
-  checkedAt: '2026-11-26',
-  publishedAt: '2026-11-26',
-  announcementDate: '2026-10-28',
-  eventDate: '2026-11-27',
-  dateLabel: 'NFO closes',
-  statusLabel: 'Limited-time offer',
-  source: 'https://hsif-files.hdfcfund.com/s3fs-public/2026-11/H-SIF%20Hybrid%20Long-Short%20Fund_ISID.pdf',
-  sourceLabel: 'HDFC Mutual Fund: H-SIF Hybrid Long-Short Fund Investment Strategy Information Document (ISID)',
-  sourceLocation: 'ISID Section I pages 1 and 6–8: NFO dates, interval subscription/redemption frequency, notice period, minimum investment threshold and exit load; KIM pages 7–8 and 22–23: minimum investment, SWP/STP balance requirements and passive-breach consequences; Section II pages 29–31: derivative and unhedged-short risk disclosures.',
-  audience: 'Eligible investors reviewing HDFC Mutual Fund’s H-SIF Hybrid Long-Short Fund NFO, and existing SIF investors checking its dealing and liquidity terms. This is a specialised investment strategy, not a recommendation or a regular daily-liquid mutual fund.',
-  facts: [
-    'HDFC’s official Key Information Memorandum (KIM), dated 28 October 2026, and current H-SIF product page list the New Fund Offer from 13 November through 27 November 2026. The KIM and ISID say the strategy will re-open for continuous sale and repurchase within five working days after allotment; neither offer document states a fixed calendar re-opening date.',
-    'The ISID classifies the product as an interval investment strategy and lists daily subscription frequency. Redemptions are offered twice weekly, on Mondays and Wednesdays; if either day is not a business day, processing moves to the next business day. The KIM says the notice period may be up to 15 days and valid redemption proceeds are dispatched within three working days after receipt at the official points of acceptance. This is not daily redemption.',
-    'The strategy invests across equity and debt securities and can use derivatives, including unhedged short exposure of up to 25% of net assets. The ISID explains that adverse price moves in short positions and derivative strategies can create losses and additional volatility; there is no assurance that the investment objective will be achieved.',
-    'For a non-accredited investor, the minimum investment threshold is ₹10,00,000 in aggregate across H-SIF investment strategies at PAN and holding-pattern level. The threshold applies only to SIF investments and does not include ordinary mutual-fund schemes of the same AMC. The KIM lists ₹10,000 as the minimum for an accredited investor. A ₹5,000 minimum additional purchase and the SIP instalment amounts are not substitutes for the ordinary investor’s ₹10 lakh threshold. The KIM permits SIP registration by an existing investor only while meeting the ₹10 lakh threshold. For SWP, the balance after each withdrawal must remain at least ₹10 lakh; for STP, the balance after each transfer-out instalment must also remain at least ₹10 lakh. If market movements passively reduce the aggregate value below the threshold, that is not treated as an active breach, but the KIM says only the entire remaining SIF investment may then be redeemed.',
-    'The KIM lists a 0.50% exit load on the applicable NAV if units are redeemed or switched out on or before 90 days from allotment; the listed exit load is nil after 90 days.',
-    'The NFO documents show risk band level 2 for the strategy and its benchmark at the NFO stage. The ISID says this label is based on an internal assessment and may change after actual investments are made. The KIM separately warns that SIF investments involve relatively higher risk, including potential loss of capital, liquidity risk and market volatility.',
-    'The KIM states that the units have not been approved or recommended by SEBI and that SEBI has not certified the accuracy or adequacy of the KIM. No return or investment-objective guarantee is stated in the offer documents.'
-  ],
-  actions: [
-    'Do not treat the NFO closing date as a reason to invest. If you are eligible and already evaluating this category, read the full ISID and KIM and independently assess whether the strategy, risks and liquidity terms fit your circumstances.',
-    'Check the ₹10 lakh aggregate SIF threshold before relying on a SIP instalment amount or the ₹5,000 additional-purchase minimum. Confirm accredited-investor treatment against the issuer’s current KIM and required accreditation evidence.',
-    'Review the twice-weekly redemption schedule, possible notice period, exit load, expenses and tax treatment before making any decision. Check the ₹10 lakh minimum-balance rule for SWP/STP and the passive-breach restriction before assuming a partial exit is available. Do not assume daily liquidity or a guaranteed redemption date.'
-  ],
-  limits: 'Checked 26 November 2026. The KIM is dated 28 October 2026; the NFO opened 13 November and is listed to close 27 November 2026. The KIM and ISID state that continuous sale and repurchase will reopen within five working days after allotment; they do not specify a fixed calendar re-opening date. Check the issuer page after allotment for the actual dealing date. This is an interval SIF strategy, not a conventional daily-liquid mutual fund. Ordinary investors must meet the ₹10 lakh aggregate SIF threshold; the KIM lists a ₹10,000 minimum for accredited investors. SWP/STP withdrawals or transfer-outs must preserve a ₹10 lakh minimum balance; after a passive market-value fall below the threshold, the KIM permits only full redemption of the remaining SIF investment. Redemptions are twice weekly and the KIM allows a notice period of up to 15 days. The NFO risk band may change after actual holdings are made. Derivatives and unhedged short exposure up to 25% of net assets create additional risks; capital loss is possible and the objective is not assured. SEBI has not approved or recommended the units. This guide is factual information, not an investment recommendation.',
-  additionalSources: [
-    { url: 'https://hsif.hdfcfund.com/funds/h-sif-hybrid-long-short-fund', label: 'HDFC Mutual Fund: current H-SIF Hybrid Long-Short Fund product page and NFO dates' },
-    { url: 'https://hsif-files.hdfcfund.com/s3fs-public/2026-11/H-SIF%20Hybrid%20Long-Short%20Fund%20KIM%20with%20App%20Form_1.pdf', label: 'HDFC Mutual Fund: Key Information Memorandum dated 28 October 2026, minimum investment, accredited-investor minimum, SWP/STP balance rules, passive-breach consequences, redemption schedule, notice period and exit load' },
-    { url: 'https://hsif-files.hdfcfund.com/s3fs-public/2026-11/NFO%20Presentation%20-%20H-SIF%20Hybrid%20Long-Short%20Fund%20-%20November%202026.pdf', label: 'HDFC Mutual Fund: November 2026 NFO presentation, strategy features and derivative exposure' },
   ]
 },
 {
