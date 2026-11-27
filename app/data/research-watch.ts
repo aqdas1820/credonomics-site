@@ -12,6 +12,48 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
 {
+  slug: "rbi-card-atm-directions-consolidated-november-2026",
+  title: "RBI publishes consolidated card and ATM rulebooks: check issuer controls, free transactions and charges",
+  summary: "RBI's 27 November Master Directions pages list new rulebooks for card-based payments and ATM/PoS cash withdrawals. Existing RBI FAQs describe the prior consumer baseline, including issuer-set card controls, the ₹5,000 contactless AFA exception and ATM free-transaction rules; these are not presented as new 27 November benefits or fee changes.",
+  category: "Banking",
+  checkedAt: "2026-11-27",
+  publishedAt: "2026-11-27",
+  announcementDate: "2026-11-27",
+  eventDate: "2026-11-27",
+  dateLabel: "Consolidated RBI Directions listed (commencement not separately asserted)",
+  statusLabel: "Implementation date unconfirmed",
+  source: "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13760",
+  sourceLabel: "Reserve Bank of India (Digital Payments – Card-based transaction) Directions, 2026",
+  sourceLocation: "Current RBI Master Directions page for card-based transactions (370 KB); RBI's November circular index lists the card, ATM/PoS cash-withdrawal and White Label ATM Operator Directions on 27 November 2026. The separate RBI card FAQ is updated 11 May 2023; the ATM/White Label ATM FAQ is updated 4 July 2025.",
+  audience: "Cardholders, debit-card users, savings-account customers and people using bank or White Label ATMs. This is a regulatory-reference update, not an issuer-specific fee notice or a card recommendation.",
+  facts: [
+    "RBI's official November 2026 circular index lists three new payment-system documents dated 27 November: the Digital Payments – Card-based transaction Directions, 2026; the Cash Withdrawal Transactions through Automated Teller Machines and Point of Sale Terminals Directions, 2026; and the White Label ATM Operators Directions, 2026. The current Master Directions pages list the card document (370 KB), cash-withdrawal document (309 KB) and White Label ATM document (230 KB). Checked 27 November 2026.",
+    "The new card-based and cash-withdrawal Directions are now the current RBI document references for those subjects. This guide does not infer that the issue of a consolidated document itself creates a new universal card fee, reward devaluation, ATM charge or transaction limit. No separate commencement date is asserted here; readers should consult the full current Directions and their issuer's current schedule.",
+    "RBI's Card Transactions FAQ, last updated 11 May 2023, says the card issuer decides cash-withdrawal and purchase limits. Within the issuer's limits, cardholders may set and modify limits for domestic, international, PoS, ATM, online and contactless use. The FAQ is an older reference snapshot, not a clause-by-clause summary of the 27 November 2026 Directions.",
+    "The same RBI FAQ describes the existing Additional Factor of Authentication (AFA) rule and its exception for eligible NFC contactless card-present transactions (excluding ATM transactions) up to ₹5,000 per transaction, subject to EMV standards. RBI's 4 December 2020 circular raised this threshold from ₹2,000 with effect from 1 January 2021 and retained the cardholder's discretion to use contact or contactless mode. This is not a new ₹5,000 benefit announced on 27 November 2026.",
+    "RBI's ATM/White Label ATM FAQ, updated 4 July 2025, lists minimum monthly free transactions for savings-bank accounts: five financial transactions at the customer's own bank's ATMs; three transactions at other banks' ATMs in the six named metro locations; and five at other banks' ATMs elsewhere. Other-bank counts include financial and non-financial transactions; non-cash transactions at the customer's own-bank ATMs are stated to remain free and outside the count. Banks may offer more free transactions.",
+    "The same 2025 ATM FAQ says Basic Savings Bank Deposit Accounts are treated separately from the normal savings-account free-transaction prescription. It also says specified failures attributable to technical issues, non-availability of cash or invalid PIN/validation are not counted as valid ATM transactions and should not attract charges. These are the FAQ's stated rules; check the current 2026 Directions and your account's terms for any later change.",
+    "RBI's 2025 ATM FAQ states that charges beyond the mandated free count cannot exceed ₹23 per transaction plus applicable taxes. It separately says service charges for credit-card cash withdrawals at ATMs are determined by banks. Do not apply a savings-account debit-card free-transaction count to a credit-card cash advance.",
+    "Because the consumer FAQs carry update dates of 2023 (cards) and 2025 (ATM), they should be read as dated RBI reference material alongside the newer 2026 Directions, not as proof that every older clause is unchanged. Where the current Directions or a bank's current product/account schedule differs, verify the applicable current document before relying on a charge or limit."
+  ],
+  actions: [
+    "Open your bank's card-control settings and review domestic/international, online, ATM, PoS and contactless channels. Set limits within the issuer's permitted range and keep transaction alerts enabled; the RBI FAQ says the issuer sets the outer limits.",
+    "Before relying on an ATM free-transaction count, identify whether it is your own bank or another bank, whether the other-bank ATM is in one of the six metro locations, and whether your account is a Basic Savings Bank Deposit Account. Check whether your bank offers more than the RBI minimum.",
+    "Read your bank's current account tariff and card MITC alongside the relevant 2026 RBI Direction. Do not treat the older FAQ's ₹23 cap or ₹5,000 contactless threshold as a newly introduced November 2026 benefit.",
+    "If a statement shows an ATM fee or card charge you do not recognise, compare the transaction type and account/card variant with the bank's current published schedule and raise the query through the bank's official complaint channel. Keep the statement and transaction reference.",
+    "For a credit-card ATM cash advance, check the card issuer's own cash-advance fee and interest terms; the RBI ATM FAQ distinguishes these from savings-account ATM free-transaction counts."
+  ],
+  limits: "Checked 27 November 2026. RBI's official circular index lists the new card-based, ATM/PoS cash-withdrawal and White Label ATM Operator Directions on 27 November 2026. The new card and cash-withdrawal Master Directions pages are linked as primary sources. No separate commencement date, new universal fee, new reward rule or changed customer transaction limit is asserted in this guide. RBI's Card Transactions FAQ is updated 11 May 2023 and its ATM/White Label ATM FAQ is updated 4 July 2025; they are dated reference snapshots and must not be treated as a full restatement of the 2026 Directions. Issuer limits, account type, Basic Savings Bank Deposit Account treatment, credit-card cash-advance charges and bank-specific tariffs remain distinct. No card ranking formula, reward valuation or issuer fee record is changed.",
+  additionalSources: [
+    { url: "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13761", label: "RBI: Cash Withdrawal Transactions through ATMs and PoS Directions, 2026" },
+    { url: "https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13762", label: "RBI: White Label ATM Operators Directions, 2026" },
+    { url: "https://www.rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx", label: "RBI: November 2026 circular index" },
+    { url: "https://www.rbi.org.in/scripts/FS_FAQs.aspx?Id=103&fn=9", label: "RBI: Card Transactions FAQ, updated 11 May 2023" },
+    { url: "https://www.rbi.org.in/Scripts/FAQDisplay.aspx?Id=75", label: "RBI: ATM/White Label ATM FAQ, updated 4 July 2025" },
+    { url: "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11999&Mode=0&fn=9", label: "RBI: Contactless card AFA relaxation circular dated 4 December 2020" }
+  ]
+},
+{
   slug: "hdfc-conservative-retirement-covered-call-exit-december-2026",
   title: "HDFC Conservative Hybrid and Retirement Funds: covered-call strategy from 30 December; exit window closes 29 December",
   summary: "HDFC’s 18 November notice permits covered calls in Conservative Hybrid and three Retirement Fund plans from 30 December. Eligible existing holders may switch or redeem without exit load through 3 pm on 29 December, subject to lock-in and other exceptions.",
