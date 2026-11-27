@@ -66,15 +66,37 @@ No manual search-index or sitemap edit is required; the production prebuild rege
 
 - Repository: `aqdas1820/credonomics-site`.
 - Exact base `main` SHA: `ac432f5afc7a45850e131f4cc5383c7d62455280`.
-- Rollback reference created from that exact SHA: `backup/pre-baroda-balanced-hybrid-nfo-20261127-1331`.
+- Rollback reference created from that exact SHA: `backup/pre-baroda-balanced-hybrid-nfo-20261127-1331`; independently compared and confirmed identical to the base SHA.
 - Feature branch: `research-watch-baroda-balanced-hybrid-nfo-20261127-1331`.
 - Content file: `app/data/research-watch.ts`.
-- Release evidence is to be appended after PR review, merge, production deployment and public-route verification.
+- Content PR #204 merged as `f59280ab9a9ec4ee98c934cb0e67f2878509ca5c`.
+- Release evidence is recorded in this file in the documentation-only follow-up PR #205.
 
-## Validation and publication evidence
+## Validation and production evidence
 
-- Unit tests, TypeScript and production build: pending preview/build workflow.
-- PR number and intended head SHA: pending.
-- Merge commit and production deployment ID: pending.
-- Public article, Research Watch hub, homepage, November bulletin, Mutual Fund Intelligence page, search entry and sitemap verification: pending.
-- Any failed or stale public route will be reported as unconfirmed; production READY alone will not be described as proof that content is publicly visible.
+- Preview deployment: `dpl_4G25s4S5Kp1wZkr5v2ycTgHMg88i`, READY for feature head `917f5d259a94359b58a1fc4c31525219546ef512`.
+- Production deployment: `dpl_k2VwiAtsVwK4dB3qoSChyMweTcbT`, READY, target `production`, deployed commit `f59280ab9a9ec4ee98c934cb0e67f2878509ca5c`, matching current `main`. Vercel assigned `credonomics.in` and `www.credonomics.in` aliases.
+- Unit tests: **177 passed across 29 test files**.
+- TypeScript: **passed**; the chained prebuild proceeded to the generators and production build.
+- IPO dashboard generator: **41 records**.
+- Search-index generator: **158 entries**.
+- Next.js production build: **completed**, generating **363 static pages**.
+- Build output includes `/research/watch/baroda-bnp-paribas-balanced-hybrid-fund-nfo-december-2026`, `/research/watch`, `/updates/2026-11`, `/mutual-funds`, `/search` and `/sitemap.xml`.
+- Existing Autoprefixer mixed-support warnings were non-blocking; no build failure was reported.
+
+## Public visibility verification — unresolved
+
+The production deployment is READY and the article route is present in the generated build output, but public visibility was **not independently confirmed** during this release check:
+
+- The canonical article URL returned Internal Error through the public page checker.
+- The Research Watch hub was accessible but still showed its 26 November publication/check snapshot and did not include this guide.
+- The November bulletin and Mutual Fund Intelligence page showed their 27 November snapshots with the HDFC, Bajaj and Axis items, but did not show the Baroda guide in the displayed Research Watch entries.
+- The homepage showed its 27 November Research Watch feed with HDFC, Bajaj, Axis and earlier entries; the Baroda guide was not present in the displayed feed.
+- Public search for the Baroda guide and `/sitemap.xml` returned Internal Error.
+- The deployment-specific Vercel article URL also returned Internal Error through the public page checker.
+
+The article data is in GitHub `main`, the production deployment is READY and the route is statically generated, but this release record does **not** assert that the article is publicly live. The official AMC NFO page, KIM and SID remained accessible and were independently checked. No cache purge, DNS, routing, middleware, Vercel configuration or other infrastructure changes were attempted. Recheck the canonical route, hub, homepage, bulletin, Mutual Fund Intelligence page, search and sitemap before treating public visibility as resolved.
+
+## Scope and safeguards
+
+Only the Research Watch data record and this release note were changed. No card/fund ranking formula, reward valuation, payment flow, authentication, customer/financial record, infrastructure, secret, paid resource or automation schedule was changed. No external messages or comments were sent.
