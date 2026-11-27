@@ -12,6 +12,51 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
 {
+  slug: "bajaj-finserv-business-cycle-fund-nfo-december-2026",
+  title: "Bajaj Finserv Business Cycle Fund NFO closes 4 December: ₹500 minimum and Very High risk",
+  summary: "The open-ended thematic equity NFO runs from 20 November to 4 December. Its SID permits 80–100% in equity selected around business cycles, uses the BSE 500 TRI as benchmark and labels the scheme Very High risk.",
+  category: "Mutual funds",
+  checkedAt: "2026-11-27",
+  publishedAt: "2026-11-27",
+  eventDate: "2026-12-04",
+  dateLabel: "NFO closes (verify the platform-specific cut-off)",
+  statusLabel: "Limited-time offer",
+  source: "https://portal.amfiindia.com/spages/14599.pdf",
+  sourceLabel: "Bajaj Finserv Mutual Fund: Scheme Information Document dated 1 October 2026 (AMFI-hosted copy)",
+  sourceLocation: "SID pages 1–2: scheme identity, NFO dates and NFO-stage riskometer; page 5: BSE 500 TRI benchmark; pages 26–27: asset allocation and permitted exposures; page 17: minimum application and SIP terms; pages 34–35: fund managers; page 43: exit load. NSE circular NMF77503, page 1: NSE MF Invest window, tentative allotment and platform funds deadline.",
+  audience: "Readers checking the terms and structure of Bajaj Finserv Mutual Fund's new open-ended business-cycle thematic equity scheme. This is factual product information, not an investment recommendation.",
+  facts: [
+    "The Scheme Information Document (SID) is dated 1 October 2026. It lists the NFO opening on 20 November and closing on 4 December 2026. The scheme is scheduled to reopen for continuous sale and redemption within five business days of allotment; the SID does not give a fixed calendar reopening date. Checked 27 November 2026.",
+    "NSE circular NMF77503, dated 19 November 2026, lists the scheme on NSE MF Invest from 20 November through 4 December at 11:59 pm on that platform, with a tentative allotment date of 11 December. It asks members using that platform to ensure cleared funds reach the clearing corporation by 3:00 pm on 10 December. These are NSE-platform operating cut-offs, not a universal cut-off for every distributor or application channel.",
+    "The SID describes an open-ended, actively managed thematic equity scheme. Its objective is long-term capital appreciation through allocation among sectors and stocks at different stages of business cycles. The document expressly says there is no assurance that the objective will be achieved.",
+    "The SID's indicative allocation allows 80–100% of total assets in equity and equity-related instruments of companies selected on a business-cycle basis, 0–20% in other equity and equity-related instruments, and 0–20% in money-market and other liquid instruments and specified units. The strategy may favour leading sectors and may be absent from some sectors at different times; it is not a passive index-tracking fund.",
+    "The benchmark is the BSE 500 Total Return Index (TRI). A benchmark is a comparison measure; it does not mean the scheme will hold the index or deliver its returns. The fund manager has discretion to change sector and stock allocations within the SID's limits.",
+    "At the NFO stage, the SID labels both the scheme and its benchmark Very High risk. It says this label is based on an internal assessment or model portfolio and may change after actual investments are made. The label is not a return forecast or capital-protection promise.",
+    "The minimum NFO lump-sum application is ₹500, with additional amounts in multiples of ₹1. The SID lists SIPs from ₹500 with a minimum of six instalments. The NFO offer price is ₹10 per unit; that price alone says nothing about valuation, cheapness or future returns.",
+    "The SID lists an exit load of 1% of applicable NAV when units are redeemed or switched out within three months from allotment, and nil after three months. It applies to purchases through lump sum, switch-in, SIP and STP. The SID separately waives load for specified switches to another equity scheme of the same AMC, switches between Direct and Regular Plans, and option changes within the same plan; regulatory rebalancing exceptions also apply.",
+    "The SID names Sorbh Gupta and Bharat Hegde for the equity portion and Siddharth Chaudhary for the debt portion. This is a new scheme, so no scheme return history is available at the NFO stage."
+  ],
+  actions: [
+    "Do not treat the 4 December closing date or the ₹10 NFO offer price as a reason to apply. The offer price is not a valuation signal and the scheme has no performance history.",
+    "Read the current SID, KIM, product label and riskometer, and check the AMC's SID-disclosure page for any later addendum before making an application.",
+    "If using NSE MF Invest, note its platform-specific 11:59 pm closing time on 4 December and the 3:00 pm cleared-funds deadline on 10 December. Other platforms may impose earlier cut-offs; confirm directly with the chosen channel.",
+    "Understand the 80–100% business-cycle equity allocation, Very High risk label and the possibility of changing sector exposure. Do not assume the strategy can reliably time economic cycles or protect against equity-market losses.",
+    "Review the actual portfolio and current total expense ratio after the scheme launches. Do not substitute the BSE 500 TRI's historical returns or the SID's regulatory expense ceilings for the scheme's own performance or current costs.",
+    "Before redeeming or switching, check the three-month exit-load rule and the SID's specific switch and regulatory exceptions for the exact transaction."
+  ],
+  limits: "Checked 27 November 2026. The primary fund document is the SID dated 1 October 2026, hosted by AMFI; the NSE platform schedule is from circular NMF77503 dated 19 November 2026. A separate AMC public-announcement date was not established in these documents. The 11:59 pm NFO cut-off and 10 December 3:00 pm cleared-funds deadline apply to NSE MF Invest operations only and must not be treated as universal distributor cut-offs. The SID's NFO-stage riskometer may change after actual holdings are made. The AMC's SID-disclosure page returned HTTP 403 to the research checker on 27 November, so a later addendum could not be ruled out; readers should recheck the issuer's current documents. No actual current TER, return forecast or suitability claim is made. No card ranking, reward valuation, fund portfolio record or investment formula is changed. Factual product information only; not investment advice.",
+  additionalSources: [
+    {
+      url: "https://nsearchives.nseindia.com/content/circulars/NMF77503.pdf",
+      label: "NSE circular NMF77503 dated 19 November 2026: NSE MF Invest NFO window, tentative allotment and platform funds deadline"
+    },
+    {
+      url: "https://www.bajajamc.com/sid-disclosure",
+      label: "Bajaj Asset Management: SID disclosure page for any later scheme addenda"
+    }
+  ]
+},
+{
   slug: "axis-nifty-largemidcap-250-index-fund-nfo-december-2026",
   title: "Axis Nifty LargeMidcap 250 NFO opens 27 November: ₹100 minimum, 50:50 large/mid-cap index and Very High risk",
   summary: "Axis AMC lists the NFO from 27 November to 11 December. The open-ended index fund tracks the Nifty LargeMidcap 250 TRI; the index combines 100 large-cap and 150 mid-cap constituents with 50:50 segment weights reset quarterly. The scheme is labelled Very High risk.",
