@@ -28,9 +28,9 @@ The HDFC addenda index lists Notice-cum-Addendum No. 1378. The four-page notice 
 - Affected schemes: HDFC Conservative Hybrid Fund and HDFC Retirement Fund — Equity Plan, Hybrid-Equity Plan and Hybrid-Debt Plan.
 - The notice treats the covered-call permission as a change in fundamental attributes.
 - Covered calls are limited to constituent stocks of NIFTY 50 and BSE SENSEX.
-- Total notional value of written calls cannot exceed 15% of the total market value of the underlying equity shares held by the scheme.
-- Shares underlying written calls cannot exceed 30% of the unencumbered shares of the particular company held by the scheme.
-- A call cannot be written without holding the underlying equity shares; the option is marked to market daily.
+- Total notional value of written calls, taking into account strike price and premium value, cannot exceed 15% of the total market value of the underlying equity shares held by the scheme at all times.
+- Shares underlying written calls cannot exceed 30% of the unencumbered shares of the particular company held by the scheme at all times.
+- A call cannot be written without holding the underlying equity shares; the scheme cannot enter into another derivative contract to hedge a written call; the option is marked to market daily.
 - The notice says option premium may generate additional income, but the downside from a fall in the underlying share price is reduced only to the extent of the premium earned.
 - Eligible existing holders may switch to another HDFC Mutual Fund scheme or redeem at applicable NAV without exit load during the stated optional window.
 - The exit option is voluntary. If a holder has no objection, no action is required and consent is deemed.
@@ -80,11 +80,14 @@ Sources reviewed for the HOLD:
 
 ## Validation and production evidence
 
-- Preview deployment: pending.
-- Unit tests: pending final reviewed head.
-- TypeScript: pending final reviewed head.
-- IPO/search-index generators: pending final reviewed head.
-- Production build: pending final reviewed head.
+- First reviewed preview deployment: dpl_8DTaMyQptfqeSFAdmTyqvLAoffEM, READY, branch `research-watch-hdfc-covered-call-exit-20261127-0948`, commit c2e7379d07ecd82486e54931ef705c436b368862.
+- Preview prebuild unit tests: 177 passed across 29 test files.
+- TypeScript: `tsc --noEmit --pretty false` completed without errors; Next.js compile succeeded.
+- Existing generators: 41 IPO dashboard records and 157 search entries generated.
+- Production build: Next.js 15.5.28 completed; 362 static pages generated. Route output includes the new HDFC article, `/research/watch`, `/updates/2026-11`, `/mutual-funds`, `/search` and `/sitemap.xml`.
+- Existing non-blocking warnings: Autoprefixer mixed-support warnings, React Hook dependency warnings and image-optimization warnings in unrelated existing files.
+- The preview hostname returned Internal Error to the external web checker, so preview-page rendering was not independently confirmed there. The Vercel deployment itself is READY and its build manifest contains the required routes.
+- Final intended head after the precision correction: pending a fresh preview build.
 - Production deployment ID/state/deployed commit: pending.
 - Public article, homepage, Research Watch hub, November bulletin, Mutual Fund Intelligence page, search and sitemap verification: pending.
 
