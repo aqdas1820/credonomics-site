@@ -64,3 +64,33 @@ Thus production deployment READY and alias assignment are confirmed, but public 
 ## Scope safeguards
 
 Only the data-driven Research Watch record and this evidence note are changed. Existing homepage, Research Watch, November bulletin and mutual-fund landing page consume the shared data; the sitemap imports the same data and the search-index generator consumes it through its existing parser. No payments, authentication, customer/financial records, infrastructure, secrets, paid resources, ranking formulas or automation schedules are changed. No external messages/comments are sent.
+
+
+## Search-index correction and final content deployment
+
+- Search-index correction PR #199 merged as commit c9955f8aaeae31cf8e823b042e069816391cdc93.
+- Exact pre-correction main SHA: cab73382c6c519e08c88fd7c39e174140d48a970.
+- Search-index correction rollback branch: backup/pre-axis-search-index-fix-20261127-0845 (verified at that exact SHA).
+- Search-index correction feature branch: research-watch-axis-search-index-fix-20261127-0845.
+- Search-index correction preview: dpl_8ykiRkFumuGEDPK9WsubJTk8EH3V — READY for commit 4457fb02dd8e603ef5e86c87518237ae4544849c.
+- Final content production deployment after PR #199: dpl_5xBThdyECUTm1WRGM1u6CKtUQUq1 — READY, target production, deployed commit c9955f8aaeae31cf8e823b042e069816391cdc93.
+- The production prebuild passed 177/177 tests across 29 files, TypeScript, IPO dashboard generation (41 records) and search-index generation (155 entries). The Next.js production build completed. Its route manifest includes /research/watch/axis-nifty-largemidcap-250-index-fund-nfo-december-2026 and /sitemap.xml.
+- Vercel aliases credonomics.in and www.credonomics.in are assigned to dpl_5xBThdyECUTm1WRGM1u6CKtUQUq1.
+
+## Final public verification status
+
+Public checks after the final content deployment still did not confirm the article:
+- Research Watch hub continues to display the 26 November snapshot and does not show the 27 November Axis item.
+- Homepage and November bulletin also continue to display the 26 November snapshot.
+- Direct article route returns Internal Error.
+- Public search and sitemap endpoints return Internal Error, including a cache-busted fetch attempt.
+
+The repository data, generated search-index count, Next.js route manifest, production READY state and Vercel alias assignments are confirmed. Public rendering is not. No cache purge, DNS edit, alias reassignment, routing change or infrastructure modification was attempted. Do not describe the Axis guide as publicly live until the public article, hub, homepage, bulletin, search and sitemap return the current content.
+
+## Final repository state
+
+- Main SHA after content and search-index correction: c9955f8aaeae31cf8e823b042e069816391cdc93.
+- Exact rollback for the content publication: backup/pre-axis-largemidcap-nfo-20261127-0819 at a8a43670ccf0c4531fb2b086f0b4cdb5a09b006c.
+- Exact rollback for the search-index correction: backup/pre-axis-search-index-fix-20261127-0845 at cab73382c6c519e08c88fd7c39e174140d48a970.
+- Release-evidence-only update base SHA: c9955f8aaeae31cf8e823b042e069816391cdc93; rollback branch backup/pre-axis-release-evidence-20261127-0845 preserves that exact SHA.
+- No automation schedule or task status was changed; the saved Research Watch task and daily 10 AM report remain in their prior states.
