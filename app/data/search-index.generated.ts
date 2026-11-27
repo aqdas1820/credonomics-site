@@ -100,47 +100,91 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 93
   },
   {
-    "id": "watch:rbi-retail-direct-government-bond-auction-20-november-2026",
-    "title": "20 November government bond auction: check the retail bid cutoff and price",
-    "description": "Two Government of India bonds mature in 2031 and 2066. The minimum bid is ₹10,000 in face value. Check your platform’s cutoff before bidding.",
-    "href": "/research/watch/rbi-retail-direct-government-bond-auction-20-november-2026",
+    "id": "watch:rbi-final-money-mule-debit-hold-sop-july-2027",
+    "title": "RBI issues final bank SOP for suspected money-mule debit holds; default start 1 July 2027",
+    "description": "RBI issued six final KYC amendment directions on 27 November for banks' procedures on temporary debit holds linked to suspected money-mule activity and cyber-enabled fraud. The default commencement is 1 July 2027, although a bank may implement earlier; detailed final customer timelines are not asserted here.",
+    "href": "/research/watch/rbi-final-money-mule-debit-hold-sop-july-2027",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-11-16",
-    "keywords": "20 November government bond auction: check the retail bid cutoff and price rbi-retail-direct-government-bond-auction-20-november-2026 Research",
+    "updated": "2026-11-28",
+    "keywords": "RBI final money-mule debit-hold SOP suspected money mule accounts cyber-enabled financial fraud KYC Amendment Directions July 2027 bank temporary debit hold",
+    "priority": 93
+  },
+  {
+    "id": "watch:abakkus-dynamic-asset-allocation-fund-nfo-december-2026",
+    "title": "Abakkus Dynamic Asset Allocation Fund: current SID lists 8–22 December NFO",
+    "description": "The AMC-linked 18 November SID lists an 8–22 December NFO and a 31 December reopening. Both the scheme and benchmark are Very High Risk; the stated allocation ranges are 10–90% each for equity and debt.",
+    "href": "/research/watch/abakkus-dynamic-asset-allocation-fund-nfo-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-28",
+    "keywords": "Abakkus Dynamic Asset Allocation Fund: current SID lists 8–22 December NFO abakkus-dynamic-asset-allocation-fund-nfo-december-2026 Research",
     "priority": 92
   },
   {
     "id": "watch:amex-november-2026-fees-and-service-dates",
     "title": "Amex November: first sign-in and overseas cash advance rules",
-    "description": "The 15 November credit-card terms set a 30-day cash advance limit abroad and say withdrawals in India are temporarily suspended. First sign-in and recovery steps are also covered.",
+    "description": "The 15 November credit-card MITC sets a 30-day cash-advance limit abroad and adds a due-date adjustment rule for eligible refunds and reversals. It separately explains credit-balance refund requests; Amex may ask for extra details when an u",
     "href": "/research/watch/amex-november-2026-fees-and-service-dates",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-11-15",
+    "updated": "2026-11-26",
     "keywords": "Amex November: first sign-in and overseas cash advance rules amex-november-2026-fees-and-service-dates Research",
     "priority": 92
   },
   {
     "id": "watch:au-zenith-plus-currency-markup-taj-december-2026",
-    "title": "AU Zenith+: currency markup, international rewards and Taj milestone change on 1 December",
-    "description": "From 1 December AU lists a 0% currency markup, ends points on international spends and switches the yearly milestone to Taj Preferred.",
+    "title": "AU Zenith+: 0% forex markup and Taj Preferred milestone from 1 December; reward change unverified",
+    "description": "AU’s 2 November MITC sets 0% issuer currency markup from 1 December. Its current product page still advertises up to 2 points per ₹100 on international spends, so a reward removal is not verified.",
     "href": "/research/watch/au-zenith-plus-currency-markup-taj-december-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-11-15",
-    "keywords": "AU Zenith+: currency markup, international rewards and Taj milestone change on 1 December au-zenith-plus-currency-markup-taj-december-2026 Research",
+    "updated": "2026-11-20",
+    "keywords": "AU Zenith+: 0% forex markup and Taj Preferred milestone from 1 December; reward change unverified au-zenith-plus-currency-markup-taj-december-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:axis-complimentary-membership-renewal-consent-november-2026",
+    "title": "Axis Bank: consent required for complimentary membership renewal on nine card variants",
+    "description": "From 15 November 2026, the listed complimentary memberships renew only after explicit consent. The membership-to-card pairings differ.",
+    "href": "/research/watch/axis-complimentary-membership-renewal-consent-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-19",
+    "keywords": "Axis Bank: consent required for complimentary membership renewal on nine card variants axis-complimentary-membership-renewal-consent-november-2026 Research",
     "priority": 92
   },
   {
     "id": "watch:axis-myzone-district-movie-spend-november-2026",
-    "title": "Axis movie offers: check the November spend rule for four cards",
-    "description": "MYZONE, SELECT and PRIVILEGE District offers and NEO’s BookMyShow discount have a ₹25,000 eligible-spend condition from 1 November.",
+    "title": "Axis movie offers: ₹25,000 spend rule effective for MYZONE, NEO and PRIVILEGE; SELECT on hold",
+    "description": "The 1 November threshold is confirmed in three card-specific notices. SELECT’s current notice could not be retrieved, so its exact condition remains on hold.",
     "href": "/research/watch/axis-myzone-district-movie-spend-november-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-10-30",
-    "keywords": "Axis movie offers: check the November spend rule for four cards axis-myzone-district-movie-spend-november-2026 Research",
+    "updated": "2026-11-19",
+    "keywords": "Axis movie offers: ₹25,000 spend rule effective for MYZONE, NEO and PRIVILEGE; SELECT on hold axis-myzone-district-movie-spend-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:axis-nifty-largemidcap-250-index-fund-nfo-december-2026",
+    "title": "Axis Nifty LargeMidcap 250 NFO opens 27 November: ₹100 minimum, 50:50 large/mid-cap index and Very High risk",
+    "description": "Axis AMC lists the NFO from 27 November to 11 December. The open-ended index fund tracks the Nifty LargeMidcap 250 TRI; the index combines 100 large-cap and 150 mid-cap constituents with 50:50 segment weights reset quarterly. The scheme is ",
+    "href": "/research/watch/axis-nifty-largemidcap-250-index-fund-nfo-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-27",
+    "keywords": "Axis Nifty LargeMidcap 250 NFO opens 27 November: ₹100 minimum, 50:50 large/mid-cap index and Very High risk axis-nifty-largemidcap-250-index-fund-nfo-december-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:axis-select-district-movie-offer-spend-condition-november-2026",
+    "title": "Axis Select: District movie offer requires ₹25,000 eligible spend from 1 November",
+    "description": "Axis says the Select card’s District offer now requires ₹25,000 in eligible spend in the preceding three calendar months; the offer remains capped at ₹250 off twice monthly.",
+    "href": "/research/watch/axis-select-district-movie-offer-spend-condition-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-20",
+    "keywords": "Axis Select: District movie offer requires ₹25,000 eligible spend from 1 November axis-select-district-movie-offer-spend-condition-november-2026 Research",
     "priority": 92
   },
   {
@@ -155,6 +199,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:bajaj-finserv-business-cycle-fund-nfo-december-2026",
+    "title": "Bajaj Finserv Business Cycle Fund NFO closes 4 December: ₹500 minimum and Very High risk",
+    "description": "The open-ended thematic equity NFO runs from 20 November to 4 December. Its SID permits 80–100% in equity selected around business cycles, uses the BSE 500 TRI as benchmark and labels the scheme Very High risk.",
+    "href": "/research/watch/bajaj-finserv-business-cycle-fund-nfo-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-27",
+    "keywords": "Bajaj Finserv Business Cycle Fund NFO closes 4 December: ₹500 minimum and Very High risk bajaj-finserv-business-cycle-fund-nfo-december-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:bank-of-india-home-car-processing-fee-waiver-march-2027",
     "title": "Bank of India waives processing fees on eligible home and new car loans through 31 March",
     "description": "Check the loan type, CIBIL score and exceptions for home loan takeovers and electric vehicles before relying on the waiver.",
@@ -163,6 +218,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "Official issuer / fund notice",
     "updated": "2026-11-16",
     "keywords": "Bank of India waives processing fees on eligible home and new car loans through 31 March bank-of-india-home-car-processing-fee-waiver-march-2027 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:baroda-bnp-paribas-balanced-hybrid-fund-nfo-december-2026",
+    "title": "Baroda BNP Paribas Balanced Hybrid Fund NFO closes 8 December: ₹1,000 lump-sum minimum and High Risk label",
+    "description": "The NFO runs from 25 November to 8 December. The scheme targets 40–60% equity and 40–60% debt, prohibits arbitrage and carries a High Risk NFO label for both scheme and benchmark. The KIM lists a ₹1,000 minimum lump-sum application; exit-lo",
+    "href": "/research/watch/baroda-bnp-paribas-balanced-hybrid-fund-nfo-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-27",
+    "keywords": "Baroda BNP Paribas Balanced Hybrid Fund NFO closes 8 December: ₹1,000 lump-sum minimum and High Risk label baroda-bnp-paribas-balanced-hybrid-fund-nfo-december-2026 Research",
     "priority": 92
   },
   {
@@ -207,6 +273,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "Official issuer / fund notice",
     "updated": "2026-11-17",
     "keywords": "Cosmos Bank: special general and senior FD rates use different tenures cosmos-bank-740-775-day-retail-fds-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:dalmia-bharat-open-market-buyback-november-2026",
+    "title": "Dalmia Bharat ₹700 crore buyback: opens by 2 December; ₹1,850 is only a ceiling",
+    "description": "The 25 November Public Announcement sets a maximum ₹700 crore open-market buyback at up to ₹1,850 per share. Its timetable says it opens by 2 December; actual matched prices can be lower and vary by seller.",
+    "href": "/research/watch/dalmia-bharat-open-market-buyback-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-26",
+    "keywords": "Dalmia Bharat ₹700 crore buyback: opens by 2 December; ₹1,850 is only a ceiling dalmia-bharat-open-market-buyback-november-2026 Research",
     "priority": 92
   },
   {
@@ -265,6 +342,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:epfo-cbt-approves-proposed-withdrawal-changes-not-yet-effective-november-2026",
+    "title": "EPFO board approves PF withdrawal changes, but new rules are not yet in force",
+    "description": "The 19 November CBT release records approval of a 10% minimum balance, a shorter final-withdrawal wait and voluntary retirement SWP. Formal implementation details and an effective date remain unconfirmed.",
+    "href": "/research/watch/epfo-cbt-approves-proposed-withdrawal-changes-not-yet-effective-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-25",
+    "keywords": "EPFO board approves PF withdrawal changes, but new rules are not yet in force epfo-cbt-approves-proposed-withdrawal-changes-not-yet-effective-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:eternal-sbi-early-access-closed-october-2026",
     "title": "Eternal SBI Card: early access is closed; check your invitation separately",
     "description": "The current Eternal page says early access is closed. This does not establish the status of an existing invitation or a future application window.",
@@ -287,14 +375,14 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
-    "id": "watch:axis-complimentary-membership-renewal-consent-november-2026",
-    "title": "Four Axis cards: check consent before complimentary membership renewal",
-    "description": "From 15 November 2026, applicable memberships renew only with explicit consent. Individual renewal dates and card eligibility still matter.",
-    "href": "/research/watch/axis-complimentary-membership-renewal-consent-november-2026",
+    "id": "watch:hdfc-flipkart-wholesale-card-phaseout-cashback-december-2026",
+    "title": "Flipkart Wholesale HDFC card: migration underway; cashback ends on 1 December",
+    "description": "HDFC says existing cardholders are being migrated to another HDFC card. From 1 December, the old card earns no cashback; eligible November cashback is due in the first week of December.",
+    "href": "/research/watch/hdfc-flipkart-wholesale-card-phaseout-cashback-december-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-10-26",
-    "keywords": "Four Axis cards: check consent before complimentary membership renewal axis-complimentary-membership-renewal-consent-november-2026 Research",
+    "updated": "2026-11-20",
+    "keywords": "Flipkart Wholesale HDFC card: migration underway; cashback ends on 1 December hdfc-flipkart-wholesale-card-phaseout-cashback-december-2026 Research",
     "priority": 92
   },
   {
@@ -320,6 +408,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:sbi-card-google-pay-flex-pay-in-emi-rates-november-2026",
+    "title": "Google Pay Flex SBI: Pay in EMI rates vary by bureau-score band; eligible fee waiver",
+    "description": "Only selected primary Google Pay Flex SBI cardholders are covered. From 12 November, published rate bands range from 10.25%–25.00% p.a.; eligible 18/24/36-month requests get a promotional processing-fee waiver.",
+    "href": "/research/watch/sbi-card-google-pay-flex-pay-in-emi-rates-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-19",
+    "keywords": "Google Pay Flex SBI: Pay in EMI rates vary by bureau-score band; eligible fee waiver sbi-card-google-pay-flex-pay-in-emi-rates-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:hdfc-balanced-advantage-value-online-daily-sip-november-2026",
     "title": "HDFC Balanced Advantage and Value: online daily SIP minimum drops to ₹20",
     "description": "From 2 November, the two schemes require at least 30 online daily SIP instalments instead of six.",
@@ -331,14 +430,47 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
-    "id": "watch:hdfc-bizblack-tax-rewards-quarterly-voucher-december-2026",
-    "title": "HDFC BizBlack Metal: check December tax rewards and the January voucher milestone",
-    "description": "From 21 December, eligible tax payments earn 4 core points per ₹200 and are excluded from the ₹50,000 spend needed to unlock 5X. The quarterly voucher starts in January.",
-    "href": "/research/watch/hdfc-bizblack-tax-rewards-quarterly-voucher-december-2026",
+    "id": "watch:hdfc-bank-retail-fd-rates-november-2026",
+    "title": "HDFC Bank FD rates: up to 6.60% general and 7.20% for resident seniors",
+    "description": "HDFC’s under-₹3 crore Domestic/NRO/NRE table is effective from 4 November 2026. General rates top out at 6.60% p.a.; eligible resident seniors get up to 7.20% for a narrower tenure band.",
+    "href": "/research/watch/hdfc-bank-retail-fd-rates-november-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
     "updated": "2026-11-18",
+    "keywords": "HDFC Bank FD rates: up to 6.60% general and 7.20% for resident seniors hdfc-bank-retail-fd-rates-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:hdfc-bizblack-tax-rewards-quarterly-voucher-december-2026",
+    "title": "HDFC BizBlack Metal: check December tax rewards and the January voucher milestone",
+    "description": "From 21 December, eligible tax payments earn 4 core points per ₹200 and are excluded from the ₹50,000 spend needed to unlock 5X. The quarterly voucher threshold falls to ₹4 lakh from January.",
+    "href": "/research/watch/hdfc-bizblack-tax-rewards-quarterly-voucher-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-26",
     "keywords": "HDFC BizBlack Metal: check December tax rewards and the January voucher milestone hdfc-bizblack-tax-rewards-quarterly-voucher-december-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:hdfc-conservative-retirement-covered-call-exit-december-2026",
+    "title": "HDFC Conservative Hybrid and Retirement Funds: covered-call strategy from 30 December; exit window closes 29 December",
+    "description": "HDFC’s 18 November notice permits covered calls in Conservative Hybrid and three Retirement Fund plans from 30 December. Eligible existing holders may switch or redeem without exit load through 3 pm on 29 December, subject to lock-in and ot",
+    "href": "/research/watch/hdfc-conservative-retirement-covered-call-exit-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-27",
+    "keywords": "HDFC Conservative Hybrid and Retirement Funds: covered-call strategy from 30 December; exit window closes 29 December hdfc-conservative-retirement-covered-call-exit-december-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:hdfc-hsif-hybrid-long-short-nfo-november-2026",
+    "title": "HDFC H-SIF Hybrid Long-Short: NFO closed 27 November; continuous-offer date not confirmed",
+    "description": "HDFC’s product page and 28 October KIM list the 13–27 November NFO dates. The KIM says continuous sale and repurchase reopen within five working days after allotment, but no fixed calendar date or live transaction cut-off is confirmed.",
+    "href": "/research/watch/hdfc-hsif-hybrid-long-short-nfo-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-28",
+    "keywords": "HDFC H-SIF Hybrid Long-Short: NFO closed 27 November; continuous-offer date not confirmed hdfc-hsif-hybrid-long-short-nfo-november-2026 Research",
     "priority": 92
   },
   {
@@ -375,25 +507,47 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:icici-savings-account-cash-nach-charges-december-2026",
+    "title": "ICICI Bank savings and salary accounts: cash, DD and ECS/NACH charges change from 1 December",
+    "description": "Across verified domestic account schedules, eligible branch cash-deposit and withdrawal value charges rise from ₹3.50 to ₹4 per ₹1,000, while second and third financial ECS/NACH returns become ₹550. The separate Unlearned Special Needs sche",
+    "href": "/research/watch/icici-savings-account-cash-nach-charges-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-25",
+    "keywords": "ICICI Bank savings and salary accounts: cash, DD and ECS/NACH charges change from 1 December icici-savings-account-cash-nach-charges-december-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:icici-card-replacement-insurance-inox-november-december-2026",
-    "title": "ICICI cards: check November and December fee and benefit changes",
-    "description": "Selected business card fees change on 25 November. Card and Priority Pass replacement fees change on 11 December, followed by select insurance and INOX withdrawals on 15 December.",
+    "title": "ICICI cards: business fees effective; retail changes due in December",
+    "description": "The current issuer PDF confirms 25 November changes for listed business, corporate and purchase cards. Separate retail-card replacement, Priority Pass, insurance and INOX changes are scheduled for 11 and 15 December, with card-specific exce",
     "href": "/research/watch/icici-card-replacement-insurance-inox-november-december-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-11-12",
-    "keywords": "ICICI cards: check November and December fee and benefit changes icici-card-replacement-insurance-inox-november-december-2026 Research",
+    "updated": "2026-11-25",
+    "keywords": "ICICI cards: business fees effective; retail changes due in December icici-card-replacement-insurance-inox-november-december-2026 Research",
     "priority": 92
   },
   {
     "id": "watch:idfc-international-rewards-revised-september-notice",
-    "title": "IDFC FIRST international rewards: read the revised September notice",
-    "description": "A later bank communication says applicable international reward points continue alongside zero forex markup; the earlier blanket stop notice is incomplete on its own.",
+    "title": "IDFC FIRST international rewards: card-specific rules after September revision",
+    "description": "Select’s 10X now starts with the first eligible transaction; Millennia lists international 10X. Wealth wording conflicts, while IndiGo’s current rate table clarifies 1 BluChip per ₹100.",
     "href": "/research/watch/idfc-international-rewards-revised-september-notice",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-10-25",
-    "keywords": "IDFC FIRST international rewards: read the revised September notice idfc-international-rewards-revised-september-notice Research",
+    "updated": "2026-11-25",
+    "keywords": "IDFC FIRST international rewards: card-specific rules after September revision idfc-international-rewards-revised-september-notice Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:indian-bank-bulk-term-deposit-rates-3-5-crore-november-2026",
+    "title": "Indian Bank publishes separate 3–5 crore bulk deposit rates as of 17 November",
+    "description": "The separate bulk table shows 6.00% callable and 6.05% non-callable for 1-year and over-1-year to under-2-year deposits. Treasury approval and no senior-citizen add-on apply.",
+    "href": "/research/watch/indian-bank-bulk-term-deposit-rates-3-5-crore-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-19",
+    "keywords": "Indian Bank publishes separate 3–5 crore bulk deposit rates as of 17 November indian-bank-bulk-term-deposit-rates-3-5-crore-november-2026 Research",
     "priority": 92
   },
   {
@@ -420,13 +574,13 @@ export const searchIndex: readonly SearchEntry[] = [
   },
   {
     "id": "watch:idfc-indigo-international-rewards-october-2026",
-    "title": "IndiGo IDFC FIRST: international reward rule changes on 26 October",
-    "description": "The issuer specifies 1 BluChip per ₹100 on international purchases from 26 October 2026.",
+    "title": "IndiGo IDFC FIRST: 1 BluChip per ₹100 on international spends",
+    "description": "The current issuer page’s earning table lists 1 BluChip per ₹100 on international spends; the FAQ bullet omits the denominator, but the table footnote clarifies it.",
     "href": "/research/watch/idfc-indigo-international-rewards-october-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-10-24",
-    "keywords": "IndiGo IDFC FIRST: international reward rule changes on 26 October idfc-indigo-international-rewards-october-2026 Research",
+    "updated": "2026-11-19",
+    "keywords": "IndiGo IDFC FIRST: 1 BluChip per ₹100 on international spends idfc-indigo-international-rewards-october-2026 Research",
     "priority": 92
   },
   {
@@ -449,6 +603,28 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "Official issuer / fund notice",
     "updated": "2026-10-30",
     "keywords": "Irinjalakuda Town bank: existing RBI directions extended to 30 January irinjalakuda-town-bank-rbi-directions-january-2027 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:jana-small-finance-bank-retail-fd-rd-rates-november-2026",
+    "title": "Jana Small Finance Bank FD and RD rates: 8.00% general and 8.30% resident seniors",
+    "description": "The 6 November schedules cover retail FDs below ₹3 crore and recurring deposits. Senior rates apply only to resident Indians aged 60 or above; NRE deposits have a one-year minimum.",
+    "href": "/research/watch/jana-small-finance-bank-retail-fd-rd-rates-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-20",
+    "keywords": "Jana Small Finance Bank FD and RD rates: 8.00% general and 8.30% resident seniors jana-small-finance-bank-retail-fd-rd-rates-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:kotak-infinity-equity-long-short-sif-nfo-december-2026",
+    "title": "Kotak Infinity Equity Long-Short SIF NFO closes 1 December: ₹10 lakh threshold and 25% short exposure",
+    "description": "Kotak’s KIM v3 lists a 17 November–1 December NFO. Ordinary investors face a ₹10 lakh aggregate Infinity SIF threshold; the open-ended strategy permits unhedged short exposure up to 25% of net assets and has daily dealing subject to thresho",
+    "href": "/research/watch/kotak-infinity-equity-long-short-sif-nfo-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-26",
+    "keywords": "Kotak Infinity Equity Long-Short SIF NFO closes 1 December: ₹10 lakh threshold and 25% short exposure kotak-infinity-equity-long-short-sif-nfo-december-2026 Research",
     "priority": 92
   },
   {
@@ -518,24 +694,46 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:npci-upi-dispute-reason-codes-effective-25-november-2026",
+    "title": "NPCI updates UPI dispute codes from 25 November: what customers should know",
+    "description": "NPCI’s URCS workflow renames wrong-payment chargebacks and adds reason codes for overcharges, duplicate payments and cancelled, defective or undelivered goods. This is a bank/app back-office change—not a new customer refund or compensation ",
+    "href": "/research/watch/npci-upi-dispute-reason-codes-effective-25-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-25",
+    "keywords": "NPCI updates UPI dispute codes from 25 November: what customers should know npci-upi-dispute-reason-codes-effective-25-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:npci-upi-vyapaar-saksham-small-merchant-scheme-november-2026",
+    "title": "NPCI's UPI Vyapaar Saksham scheme: what small merchants qualify for",
+    "description": "NPCI's 11 November circular sets out a fund-backed scheme for small-merchant QR and soundbox acceptance. Incentives are claimed by acquiring banks, not paid directly to shops; the scheme start remains tied to UPI MDR implementation, whose r",
+    "href": "/research/watch/npci-upi-vyapaar-saksham-small-merchant-scheme-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-24",
+    "keywords": "NPCI's UPI Vyapaar Saksham scheme: what small merchants qualify for npci-upi-vyapaar-saksham-small-merchant-scheme-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:pnb-atm-crm-charges-november-2026",
     "title": "PNB November ATM/CRM charges: distinguish withdrawals from cardless deposits",
-    "description": "Check the own-ATM free limit, account exemptions and cardless CRM deposit timing before 1 November.",
+    "description": "Since 1 November 2026, PNB’s revised ATM/CRM schedule is effective; free-transaction limits and exemptions depend on account and channel.",
     "href": "/research/watch/pnb-atm-crm-charges-november-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-10-30",
+    "updated": "2026-11-19",
     "keywords": "PNB November ATM/CRM charges: distinguish withdrawals from cardless deposits pnb-atm-crm-charges-november-2026 Research",
     "priority": 92
   },
   {
     "id": "watch:pnb-credit-card-redemption-utility-fees-november-2026",
     "title": "PNB November fees: reward redemption and high utility payments",
-    "description": "From 1 November 2026, the notice adds ₹99 per reward-redemption request and a threshold-based utility fee, before GST.",
+    "description": "Since 1 November 2026, eligible PNB Visa/RuPay cardholders pay ₹99 per reward-redemption request; a threshold-based utility fee also applies, before GST.",
     "href": "/research/watch/pnb-credit-card-redemption-utility-fees-november-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-10-26",
+    "updated": "2026-11-19",
     "keywords": "PNB November fees: reward redemption and high utility payments pnb-credit-card-redemption-utility-fees-november-2026 Research",
     "priority": 92
   },
@@ -552,13 +750,13 @@ export const searchIndex: readonly SearchEntry[] = [
   },
   {
     "id": "watch:puducherry-cooperative-bank-dicgc-claim-december-2026",
-    "title": "Puducherry Co-operative Urban Bank: submit deposit insurance documents by 5 December",
-    "description": "DICGC lists 5 December for claim documents and 19 January for conditional payment. RBI’s ₹5,000 withdrawal limit is separate.",
+    "title": "Puducherry Co-operative Urban Bank: DICGC lists 5 December for claim documents; payment date is conditional",
+    "description": "DICGC’s 22 October notice lists 5 December for claim/willingness submission and 19 January for conditional payment. Its FAQ separately says willingness forms may be submitted while the bank remains under AID; late supporting-document accept",
     "href": "/research/watch/puducherry-cooperative-bank-dicgc-claim-december-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-11-15",
-    "keywords": "Puducherry Co-operative Urban Bank: submit deposit insurance documents by 5 December puducherry-cooperative-bank-dicgc-claim-december-2026 Research",
+    "updated": "2026-11-27",
+    "keywords": "Puducherry Co-operative Urban Bank: DICGC lists 5 December for claim documents; payment date is conditional puducherry-cooperative-bank-dicgc-claim-december-2026 Research",
     "priority": 92
   },
   {
@@ -573,25 +771,91 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:rbi-retail-direct-government-bond-auction-20-november-2026",
+    "title": "RBI 20 November bond auction: cut-off yields published; retail allotment price differs",
+    "description": "The 20 November auction is complete. RBI published cut-off prices and yields for the 2031 and 2066 bonds; non-competitive bidders should check their own weighted-average allotment price before settlement on 23 November.",
+    "href": "/research/watch/rbi-retail-direct-government-bond-auction-20-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-20",
+    "keywords": "RBI 20 November bond auction: cut-off yields published; retail allotment price differs rbi-retail-direct-government-bond-auction-20-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:rbi-forex-service-reporting-resident-individuals-november-2026",
+    "title": "RBI clarifies foreign-service reporting rules for resident individuals and businesses",
+    "description": "RBI says a FEMA-resident individual does not need a separate Export Declaration Form for service exports when the required payment details are given to the authorised dealer bank. The ₹10 lakh threshold applies differently to non-individual",
+    "href": "/research/watch/rbi-forex-service-reporting-resident-individuals-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-21",
+    "keywords": "RBI clarifies foreign-service reporting rules for resident individuals and businesses rbi-forex-service-reporting-resident-individuals-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:rbi-domestic-money-transfer-cash-limits-november-2026",
-    "title": "RBI domestic money transfers: cash limits and ID checks by channel",
-    "description": "RBI’s 11 November directions put cash pay-in and cash pay-out rules in one place. The limit depends on who sends the cash and how.",
+    "title": "RBI domestic money transfers: existing cash limits remain unchanged",
+    "description": "RBI’s 11 November Directions consolidate the 2011 and 2024 rules. The familiar cash pay-in and cash pay-out limits remain unchanged; this is not a limit hike.",
     "href": "/research/watch/rbi-domestic-money-transfer-cash-limits-november-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-11-11",
-    "keywords": "RBI domestic money transfers: cash limits and ID checks by channel rbi-domestic-money-transfer-cash-limits-november-2026 Research",
+    "updated": "2026-11-20",
+    "keywords": "RBI domestic money transfers: existing cash limits remain unchanged rbi-domestic-money-transfer-cash-limits-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:rbi-fusion-finance-penalty-internal-ombudsman-november-2026",
+    "title": "RBI penalises Fusion Finance ₹7.5 lakh over KYC and complaint-escalation failures",
+    "description": "RBI says Fusion Finance failed to obtain specified KYC documents while establishing account-based relationships and to escalate partly or wholly rejected complaints to its Internal Ombudsman. The penalty does not decide individual loan vali",
+    "href": "/research/watch/rbi-fusion-finance-penalty-internal-ombudsman-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-20",
+    "keywords": "RBI penalises Fusion Finance ₹7.5 lakh over KYC and complaint-escalation failures rbi-fusion-finance-penalty-internal-ombudsman-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:rbi-securitisation-notes-demat-transfer-minimum-april-2027",
+    "title": "RBI securitisation notes: demat-only holding and ₹1 crore transfer floor from April 2027",
+    "description": "Final directions cover notes issued by banks, small finance banks, NBFCs/HFCs and AIFIs. The ₹1 crore issuance minimum already existed; the new rules add demat-only holding and a minimum for later transfers, with a narrow amortising-note ex",
+    "href": "/research/watch/rbi-securitisation-notes-demat-transfer-minimum-april-2027",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-24",
+    "keywords": "RBI securitisation notes: demat-only holding and ₹1 crore transfer floor from April 2027 rbi-securitisation-notes-demat-transfer-minimum-april-2027 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:rbi-card-atm-directions-november-2026",
+    "title": "RBI’s 2026 card and ATM Directions: what consumers can verify and what remains unconfirmed",
+    "description": "RBI’s current Master Directions pages list 2026 documents for card-based payments and ATM/PoS cash withdrawals and show a site last-updated date of 27 November. The accessible listing does not establish a separate issue or commencement date",
+    "href": "/research/watch/rbi-card-atm-directions-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-27",
+    "keywords": "RBI’s 2026 card and ATM Directions: what consumers can verify and what remains unconfirmed rbi-card-atm-directions-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:rbl-credit-card-rent-utility-fee-removal-december-2026",
+    "title": "RBL credit cards: rent and utility fees end from 1 December 2026",
+    "description": "RBL’s current MITC says its 1% rent fee and the 1% fee on utility spends above ₹50,000 per month per card will stop from 1 December. Reward eligibility and platform charges are separate.",
+    "href": "/research/watch/rbl-credit-card-rent-utility-fee-removal-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-26",
+    "keywords": "RBL credit cards: rent and utility fees end from 1 December 2026 rbl-credit-card-rent-utility-fee-removal-december-2026 Research",
     "priority": 92
   },
   {
     "id": "watch:roarbank-emi-foreclosure-fee-november-2026",
-    "title": "Roarbank credit card: EMI foreclosure fee rises to 3% on 21 November",
-    "description": "The fee for closing a standard or Partner EMI early rises from 2% to 3% of the remaining principal, plus applicable GST.",
+    "title": "Roarbank credit card: 3% EMI foreclosure fee now applies from 21 November",
+    "description": "The 3% fee on remaining principal plus GST now applies to both Standard EMI and Partner EMI; the current tariff page also displays 3%.",
     "href": "/research/watch/roarbank-emi-foreclosure-fee-november-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-11-16",
-    "keywords": "Roarbank credit card: EMI foreclosure fee rises to 3% on 21 November roarbank-emi-foreclosure-fee-november-2026 Research",
+    "updated": "2026-11-22",
+    "keywords": "Roarbank credit card: 3% EMI foreclosure fee now applies from 21 November roarbank-emi-foreclosure-fee-november-2026 Research",
     "priority": 92
   },
   {
@@ -607,13 +871,13 @@ export const searchIndex: readonly SearchEntry[] = [
   },
   {
     "id": "watch:sbm-zet-late-fee-october-2026",
-    "title": "SBM ZET: late-payment fee becomes balance-linked",
-    "description": "From 23 October 2026, the published fee is 5% of outstanding, with a ₹50 minimum and ₹1,000 maximum, before applicable GST.",
+    "title": "SBM ZET: both official MITC paths now resolve to the 5% schedule; effective date unstated",
+    "description": "At the 12:19 IST recheck, the ZET product-page MITC link and legacy notice-board URL both resolved to the same 52-page consolidated MITC listing 5% of Total Outstanding Due (₹50 minimum, ₹1,000 maximum). An earlier 11:22 fetch returned a se",
     "href": "/research/watch/sbm-zet-late-fee-october-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-10-24",
-    "keywords": "SBM ZET: late-payment fee becomes balance-linked sbm-zet-late-fee-october-2026 Research",
+    "updated": "2026-11-25",
+    "keywords": "SBM ZET: both official MITC paths now resolve to the 5% schedule; effective date unstated sbm-zet-late-fee-october-2026 Research",
     "priority": 92
   },
   {
@@ -639,14 +903,14 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
-    "id": "watch:sebi-commodity-derivatives-margin-december-2026",
-    "title": "SEBI commodity derivatives rules: check revised margin floors from 1 December",
-    "description": "The 17 November circular sets the same minimum initial margin for agricultural and non-agricultural commodities in each volatility band. Check the actual margin for your contract before trading.",
-    "href": "/research/watch/sebi-commodity-derivatives-margin-december-2026",
+    "id": "watch:sebi-direct-plan-default-amc-digital-platforms-november-2026",
+    "title": "SEBI Chairman says Direct Plans become default on AMC digital platforms from 1 November",
+    "description": "A 28 October SEBI speech states that Direct Plans would be the default on AMC digital platforms from 1 November, with higher-expense disclosure for investors choosing Regular Plans. App-by-app implementation is not independently verified.",
+    "href": "/research/watch/sebi-direct-plan-default-amc-digital-platforms-november-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-11-18",
-    "keywords": "SEBI commodity derivatives rules: check revised margin floors from 1 December sebi-commodity-derivatives-margin-december-2026 Research",
+    "updated": "2026-11-19",
+    "keywords": "SEBI Chairman says Direct Plans become default on AMC digital platforms from 1 November sebi-direct-plan-default-amc-digital-platforms-november-2026 Research",
     "priority": 92
   },
   {
@@ -672,14 +936,47 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:sebi-commodity-derivatives-margin-december-2026",
+    "title": "SEBI lowers agricultural commodity-derivative minimum margin floors from 1 December",
+    "description": "From 1 December, the minimum initial-margin floors for agricultural commodities fall by 2 percentage points and minimum MPOR by one day in each volatility band. Non-agri floors are unchanged; actual contract margins may be higher.",
+    "href": "/research/watch/sebi-commodity-derivatives-margin-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-21",
+    "keywords": "SEBI lowers agricultural commodity-derivative minimum margin floors from 1 December sebi-commodity-derivatives-margin-december-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:sebi-kyc-kra-simplification-december-2026",
+    "title": "SEBI simplifies securities-market KYC from 24 December: what investors should check",
+    "description": "SEBI’s 25 November circular centralises common supplementary KYC details at KRAs and sets conditions for portable validated records. Intermediaries may still request additional information under due diligence.",
+    "href": "/research/watch/sebi-kyc-kra-simplification-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-26",
+    "keywords": "SEBI simplifies securities-market KYC from 24 December: what investors should check sebi-kyc-kra-simplification-december-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:sebi-ipo-prelisting-premium-investor-advisory-november-2026",
+    "title": "SEBI warns investors not to rely on unofficial IPO pre-listing premiums",
+    "description": "SEBI's 23 November advisory says pre-listing premium figures are unofficial, unverified and unregulated—not listing-price or return signals. It also explains that disputes from these transactions have no SEBI or exchange investor-protection",
+    "href": "/research/watch/sebi-ipo-prelisting-premium-investor-advisory-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-24",
+    "keywords": "SEBI warns investors not to rely on unofficial IPO pre-listing premiums sebi-ipo-prelisting-premium-investor-advisory-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:sebi-whatsapp-stock-tips-verification-checklist",
-    "title": "SEBI WhatsApp stock-tip warning: verify the intermediary and trading app",
-    "description": "A 22 October advisory flags unknown invitation-only tip groups, planted profit claims and replacement-group invitations. Use official verification links before trusting a recommendation.",
+    "title": "SEBI warns of fake intermediaries in private trading groups: verify apps and bank/UPI IDs",
+    "description": "SEBI’s 23 November follow-up lists fake institutional and international-market pitches, unauthorised apps, third-party bank accounts and impersonated credentials. Use SEBI’s own registration, app and bank/UPI checks.",
     "href": "/research/watch/sebi-whatsapp-stock-tips-verification-checklist",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-10-25",
-    "keywords": "SEBI WhatsApp stock-tip warning: verify the intermediary and trading app sebi-whatsapp-stock-tips-verification-checklist Research",
+    "updated": "2026-11-24",
+    "keywords": "SEBI warns of fake intermediaries in private trading groups: verify apps and bank/UPI IDs sebi-whatsapp-stock-tips-verification-checklist Research",
     "priority": 92
   },
   {
@@ -727,6 +1024,17 @@ export const searchIndex: readonly SearchEntry[] = [
     "priority": 92
   },
   {
+    "id": "watch:sgb-2020-21-series-ii-premature-redemption-price-november-2026",
+    "title": "SGB 2020–21 Series II: ₹13,345 per unit for 19 November premature redemption",
+    "description": "RBI announced the price on 18 November. The request window for this tranche closed on 9 November.",
+    "href": "/research/watch/sgb-2020-21-series-ii-premature-redemption-price-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-19",
+    "keywords": "SGB 2020–21 Series II: ₹13,345 per unit for 19 November premature redemption sgb-2020-21-series-ii-premature-redemption-price-november-2026 Research",
+    "priority": 92
+  },
+  {
     "id": "watch:sgb-series-viii-premature-redemption-price-november-2026",
     "title": "SGB 2020–21 Series VIII: ₹13,499 per unit for 18 November premature redemption",
     "description": "RBI announced the price on 17 November. The request window for this tranche closed on 9 November.",
@@ -746,6 +1054,28 @@ export const searchIndex: readonly SearchEntry[] = [
     "source": "Official issuer / fund notice",
     "updated": "2026-10-30",
     "keywords": "SGB 2021-22 Series VII: ₹14,167 per unit for 2 November premature redemption sgb-2021-22-series-vii-redemption-price-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:south-indian-bank-mclr-revision-20-november-2026",
+    "title": "South Indian Bank raises every MCLR tenor by 5 bps from 20 November",
+    "description": "The bank’s revised schedule increases all five MCLR tenors by 5 basis points. It applies to new MCLR-linked lending and specified renewals or resets—not automatically to all floating-rate retail loans.",
+    "href": "/research/watch/south-indian-bank-mclr-revision-20-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-21",
+    "keywords": "South Indian Bank raises every MCLR tenor by 5 bps from 20 November south-indian-bank-mclr-revision-20-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:south-indian-bank-bulk-fd-rates-3-crore-plus-november-2026",
+    "title": "South Indian Bank: 3 crore+ resident and NRE bulk FD rates effective 24 November",
+    "description": "The current schedule separates resident and NRE deposits, and callable from non-callable placements. The top listed rate is 7.15% for 366–389-day non-callable deposits; amount bands, senior-interest and early-withdrawal rules matter.",
+    "href": "/research/watch/south-indian-bank-bulk-fd-rates-3-crore-plus-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-25",
+    "keywords": "South Indian Bank: 3 crore+ resident and NRE bulk FD rates effective 24 November south-indian-bank-bulk-fd-rates-3-crore-plus-november-2026 Research",
     "priority": 92
   },
   {
@@ -795,11 +1125,11 @@ export const searchIndex: readonly SearchEntry[] = [
   {
     "id": "watch:tata-neu-hdfc-manual-neucoins-claims-november-2026",
     "title": "Tata Neu HDFC: claim NeuCoins manually from 25 November",
-    "description": "A new claim step replaces automatic transfer for statements from 25 November 2026; unclaimed rewards can expire.",
+    "description": "Manual claiming is now required for spend-earned NeuCoins on statements generated on or after 25 November. Earlier statements retain automatic transfer; blocked/closed-card and reissue rules remain.",
     "href": "/research/watch/tata-neu-hdfc-manual-neucoins-claims-november-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-11-16",
+    "updated": "2026-11-25",
     "keywords": "Tata Neu HDFC: claim NeuCoins manually from 25 November tata-neu-hdfc-manual-neucoins-claims-november-2026 Research",
     "priority": 92
   },
@@ -871,24 +1201,46 @@ export const searchIndex: readonly SearchEntry[] = [
   },
   {
     "id": "watch:tiruvalla-afzalpur-dicgc-claims-november-2026",
-    "title": "Tiruvalla and Afzalpur co-operative banks: deposit insurance documents due 22 November",
-    "description": "DICGC lists 22 November for claim documents at both banks and 6 January for conditional payment.",
+    "title": "Tiruvalla and Afzalpur depositors: 22 November notice date passed; willingness forms remain possible under AID",
+    "description": "The notices’ 22 November date has passed. DICGC says willingness forms may still be submitted while a bank remains under AID; inclusion in the current claim list and 6 January payment are not guaranteed.",
     "href": "/research/watch/tiruvalla-afzalpur-dicgc-claims-november-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-11-15",
-    "keywords": "Tiruvalla and Afzalpur co-operative banks: deposit insurance documents due 22 November tiruvalla-afzalpur-dicgc-claims-november-2026 Research",
+    "updated": "2026-11-23",
+    "keywords": "Tiruvalla and Afzalpur depositors: 22 November notice date passed; willingness forms remain possible under AID tiruvalla-afzalpur-dicgc-claims-november-2026 Research",
     "priority": 92
   },
   {
     "id": "watch:hdfc-fund-covered-call-exit-window-november-2026",
-    "title": "Two HDFC schemes: optional exit window closed on 6 November",
-    "description": "The special exit window ended at 3 pm IST on 6 November. The covered-call change is scheduled for 9 November.",
+    "title": "Two HDFC schemes: optional exit window closed; scheme change effective 9 November",
+    "description": "The optional exit window ended at 3 pm IST on 6 November. HDFC Notice 1370 says the fundamental-attribute change took effect on 9 November.",
     "href": "/research/watch/hdfc-fund-covered-call-exit-window-november-2026",
     "category": "Research",
     "source": "Official issuer / fund notice",
-    "updated": "2026-11-07",
-    "keywords": "Two HDFC schemes: optional exit window closed on 6 November hdfc-fund-covered-call-exit-window-november-2026 Research",
+    "updated": "2026-11-25",
+    "keywords": "Two HDFC schemes: optional exit window closed; scheme change effective 9 November hdfc-fund-covered-call-exit-window-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:ujjivan-sfb-fd-rd-rates-effective-19-november-2026",
+    "title": "Ujjivan SFB FD and RD rates from 19 November: up to 8.20% on Platina",
+    "description": "The bank’s published schedule lists 8.10% for selected domestic/NRO/NRE FDs and RDs, and 8.20% for a separate ₹1–<₹3 crore non-callable Platina FD. Senior-citizen additions differ by product.",
+    "href": "/research/watch/ujjivan-sfb-fd-rd-rates-effective-19-november-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-25",
+    "keywords": "Ujjivan SFB FD and RD rates from 19 November: up to 8.20% on Platina ujjivan-sfb-fd-rd-rates-effective-19-november-2026 Research",
+    "priority": 92
+  },
+  {
+    "id": "watch:npci-upi-p2m-dispute-routing-december-2026",
+    "title": "UPI merchant disputes: NPCI changes bank routing from 23 December; timelines stay unchanged",
+    "description": "NPCI will route most applicable UPI person-to-merchant disputes to the Payee PSP bank from 23 December. Listed exceptions remain with the beneficiary bank; existing resolution timelines and customer compensation are unchanged.",
+    "href": "/research/watch/npci-upi-p2m-dispute-routing-december-2026",
+    "category": "Research",
+    "source": "Official issuer / fund notice",
+    "updated": "2026-11-20",
+    "keywords": "UPI merchant disputes: NPCI changes bank routing from 23 December; timelines stay unchanged npci-upi-p2m-dispute-routing-december-2026 Research",
     "priority": 92
   },
   {
@@ -1429,17 +1781,5 @@ export const searchIndex: readonly SearchEntry[] = [
     "updated": "",
     "keywords": "watchlist Watchlist Platform",
     "priority": 60
-  },
-  {
-    "id": "watch:hdfc-bank-retail-fd-rates-november-2026",
-    "title": "HDFC Bank FD rates: up to 6.60% general and 7.20% for resident seniors",
-    "description": "HDFC’s under-₹3 crore Domestic/NRO/NRE table is effective from 4 November 2026. General rates top out at 6.60% p.a.; eligible resident seniors get up to 7.20% for a narrower tenure band.",
-    "href": "/research/watch/hdfc-bank-retail-fd-rates-november-2026",
-    "category": "Research",
-    "source": "Official issuer / fund notice",
-    "updated": "2026-11-18",
-    "keywords": "HDFC Bank FD rates up to 6.60% general and 7.20% for resident seniors hdfc-bank-retail-fd-rates-november-2026 Research",
-    "priority": 92
-  },
-
+  }
 ]
