@@ -21,7 +21,6 @@ export const researchWatch: WatchItem[] = [
   announcementDate: '2026-11-27',
   eventDate: '2027-07-01',
   dateLabel: 'Default commencement date; a bank may implement the SOP earlier',
-  statusLabel: 'Upcoming at check',
   source: 'https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64062',
   sourceLabel: 'RBI Press Release 2026-2027/1584: final KYC Amendment Directions on suspected money-mule accounts',
   sourceLocation: 'RBI press release dated 27 November 2026, paragraphs 1–2 and the list of six final Amendment Directions. The release says feedback on the 11 September draft was examined and modifications incorporated; it states commencement from 1 July 2027 or an earlier date chosen by a bank.',
@@ -49,7 +48,7 @@ export const researchWatch: WatchItem[] = [
     'Use the bank’s published grievance channel if the written basis or review process is unclear. The RBI press release does not promise an automatic release date for any individual account.'
   ],
   limits: 'Checked 28 November 2026. Announcement date: 27 November 2026. Default commencement: 1 July 2027, with earlier implementation permitted at a bank’s discretion. The RBI press release confirms issuance, scope and broad purpose. The six final notification pages are linked, but their attached final text was not independently extracted in this check; therefore this guide does not assert a final transaction threshold, customer reply window, bank decision deadline, maximum hold duration, account-level-hold test or complaint-resolution deadline. The September draft’s ₹1,000 threshold, 20-day reply period, 60-day cap and 1 April 2027 date are draft-only details and are not presented as final rules. No claim is made that every suspected transaction causes a whole-account hold, that current restrictions are automatically lifted, or that the future SOP changes an individual case today.'
-}
+},
 {
   slug: 'abakkus-dynamic-asset-allocation-fund-nfo-december-2026',
   title: 'Abakkus Dynamic Asset Allocation Fund: current SID lists 8–22 December NFO',
