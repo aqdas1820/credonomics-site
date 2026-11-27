@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-26'
+export const WATCH_CHECKED_AT = '2026-11-27'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,45 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+{
+  "slug": "axis-nifty-largemidcap-250-index-fund-nfo-december-2026",
+  "title": "Axis Nifty LargeMidcap 250 NFO opens 27 November: ₹100 minimum, 50:50 large/mid-cap index and Very High risk",
+  "summary": "Axis AMC lists the NFO from 27 November to 11 December. The open-ended index fund tracks the Nifty LargeMidcap 250 TRI; the index combines 100 large-cap and 150 mid-cap constituents with 50:50 segment weights reset quarterly. The scheme is labelled Very High risk.",
+  "category": "Mutual funds",
+  "checkedAt": "2026-11-27",
+  "publishedAt": "2026-11-27",
+  "eventDate": "2026-12-11",
+  "dateLabel": "NFO closes (check the issuer's cut-off time)",
+  "statusLabel": "Limited-time offer",
+  "source": "https://www.axismf.com/nfo/axis-nifty-largemidcap-250-index-fund/np-dg",
+  "sourceLabel": "Axis Mutual Fund: Axis Nifty LargeMidcap 250 Index Fund NFO page",
+  "sourceLocation": "Axis AMC NFO page: Overview, Key facts at a glance, About the Index, NFO FAQs, riskometer disclaimer and Documents section. NSE Indices: index description, segment weights and reconstitution schedule.",
+  "audience": "Readers checking the terms and structure of Axis Mutual Fund's new open-ended equity index fund. This is factual product information, not an investment recommendation.",
+  "facts": [
+    "Axis AMC lists the NFO from 27 November through 11 December 2026. The minimum application is ₹100 and multiples of ₹1 thereafter, both during the NFO and on an ongoing basis. The AMC page says applications must reach the issuer before its cut-off on the closing date; the exact cut-off time is not stated on the page checked. Checked 27 November 2026.",
+    "The scheme is an open-ended index mutual fund that aims to track the Nifty LargeMidcap 250 Total Return Index before expenses, subject to tracking error. The AMC says there is no assurance that the investment objective will be achieved.",
+    "NSE Indices describes the Nifty LargeMidcap 250 as 100 large-cap companies represented by the Nifty 100 and 150 mid-cap companies represented by the Nifty Midcap 150. The two segments carry 50% aggregate weight each, reset quarterly; the index is reconstituted semi-annually.",
+    "The 50:50 rule applies to the aggregate large-cap and mid-cap segments, not equal weighting across all 250 stocks. Axis says individual stocks within each segment are weighted by free-float market capitalisation.",
+    "The AMC labels the scheme and benchmark Very High risk at the NFO stage. Its disclaimer says the NFO riskometer is based on an internal assessment or model portfolio and may vary after actual investments are made.",
+    "The AMC lists an exit load of 0.25% if units are redeemed or switched out within 15 days from allotment, and nil after 15 days. Check the current SID and KIM for the complete treatment of specific transaction types.",
+    "The AMC describes this as an index mutual fund, not an ETF; its FAQ says a demat account is not required. After the NFO, the open-ended scheme is expected to reopen for continuous purchase and redemption at the applicable NAV; the page does not give a fixed calendar reopening date.",
+    "Index returns are not scheme returns. The AMC says actual fund returns may differ from the benchmark because of expenses, cash holdings and tracking error."
+  ],
+  "actions": [
+    "Do not treat the NFO closing date as a reason to invest. Read the current SID, KIM, product label and riskometer from the AMC's NFO page before making any decision.",
+    "Check the issuer's cut-off time and accepted payment/application channel before 11 December; the AMC page does not state a single cut-off time.",
+    "Understand that half of the underlying index's aggregate weight is in mid-cap stocks and that the scheme is labelled Very High risk. This is not a capital-protected product.",
+    "Compare the actual scheme TER and tracking difference when the AMC publishes them. Do not treat benchmark history as fund performance or assume the index's 50:50 split removes equity-market risk.",
+    "Note the listed 0.25% exit load for redemption or switch-out within 15 days from allotment; check the current offer documents for any transaction-specific conditions."
+  ],
+  "limits": "Checked 27 November 2026. The NFO dates, minimum, riskometer, exit-load summary and open-ended structure are from the current Axis AMC NFO page. NSE Indices independently confirms the 100-large-cap/150-mid-cap composition, 50:50 aggregate segment weights, quarterly reset and semi-annual reconstitution. A separate public announcement date is not stated on the reviewed AMC page. The exact NFO closing cut-off time and fixed post-allotment reopening date are not stated. The NFO riskometer may change after actual holdings are made. The AMC's benchmark history is not scheme performance; actual returns may differ because of expenses, cash holdings and tracking error. This guide does not state an actual TER or unverified SIP start dates. No card ranking, mutual-fund portfolio record or investment formula is changed. Factual information only; not an investment recommendation.",
+  "additionalSources": [
+    {
+      "url": "https://www.niftyindices.com/indices/equity/broad-based-indices/nifty-largemidcap-250",
+      "label": "NSE Indices: Nifty LargeMidcap 250 composition, 50:50 segment weights, quarterly reset and semi-annual reconstitution"
+    }
+  ]
+},
 {
     slug: 'rbl-credit-card-rent-utility-fee-removal-december-2026',
     title: 'RBL credit cards: rent and utility fees end from 1 December 2026',
