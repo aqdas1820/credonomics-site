@@ -12,57 +12,43 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
 {
-  slug: "axis-nifty-largemidcap-250-index-fund-nfo-december-2026",
-  title: "Axis Nifty LargeMidcap 250 Index Fund NFO: 50:50 large/mid-cap index, ₹100 minimum and Very High risk",
-  summary: "Axis Mutual Fund's SID and KIM list a 27 November–11 December NFO for an open-ended Nifty LargeMidcap 250 TRI index fund. The index targets equal large/mid-cap segment weights; the scheme is Very High risk, and the KIM specifies separate digital and physical SIP commencement dates.",
-  category: "Mutual funds",
-  checkedAt: "2026-11-27",
-  publishedAt: "2026-11-27",
-  eventDate: "2026-12-11",
-  dateLabel: "NFO closes (check the issuer's cut-off time)",
-  statusLabel: "Limited-time offer",
-  source: "https://www.axismf.com/1/5/464/2243/4299/SID_Axis_Nifty_Large_Midcap250_Index_Fund_6b01e1d5cb.pdf",
-  sourceLabel: "Axis Mutual Fund: Scheme Information Document for Axis Nifty LargeMidcap 250 Index Fund",
-  sourceLocation: "SID cover and pages 2–8: NFO dates, objective, Direct/Regular plans, Growth option, minimum application, exit load, index allocation and derivatives limits; pages 20–22: maximum base expense ratio and additional permitted cost components. Cross-check: Axis AMC KIM pages 1–4 for riskometer/load, pages 23–24 for SIP start dates and the multiple-SIP restriction; Axis AMC NFO page for offer dates, scheme structure, minimum and demat FAQ; NSE Indices official Nifty LargeMidcap 250 page for constituent universe, 50:50 segment weights, quarterly reset and semi-annual reconstitution. Actual TER can be rechecked through Axis AMC's statutory disclosure page.
-  audience: "Readers comparing new open-ended equity index funds and reviewing Axis Mutual Fund's NFO terms. This is factual product information, not an investment recommendation.",
-  facts: [
-    "Axis Mutual Fund's Scheme Information Document (SID) and current AMC NFO page list the New Fund Offer from 27 November through 11 December 2026 and a ₹100 minimum. The reviewed offer documents do not state a separate public announcement date. Checked 27 November 2026.",
-    "The scheme is an open-ended index fund whose objective is to provide returns before expenses corresponding to the Nifty LargeMidcap 250 TRI, subject to tracking error. The SID says there is no assurance that the objective will be achieved.",
-    "NSE Indices describes the underlying Nifty LargeMidcap 250 as 100 Nifty 100 constituents plus 150 Nifty Midcap 150 constituents. The aggregate large-cap and mid-cap weights are 50% each and reset quarterly; the index is reconstituted semi-annually. Individual stocks within each segment are weighted by free-float market capitalisation. The segment weights can drift between scheduled resets.",
-    "The SID's normal allocation range is 95–100% in securities covered by the index and 0–5% in money-market instruments and units of debt/liquid mutual-fund schemes. It permits exposure to equity derivatives of index constituents up to 15% of net assets for rebalancing or when an underlying security is not sufficiently available; the scheme says it will not undertake short selling.",
-    "The KIM labels both the scheme and benchmark Risk-o-meter as Very High at the NFO stage. The SID/KIM caution that the NFO riskometer is based on an internal assessment or model portfolio and may change after actual investments are made.",
-    "The minimum application is ₹100 and multiples of ₹1 thereafter during the NFO and on an ongoing basis. The SID lists Direct and Regular Plans, with the Growth option. The AMC's product FAQ says this is an index mutual fund, not an ETF, and does not require a demat account.",
-  "The KIM's SIP instructions list commencement from 24 December 2026 for digital mode and 7 January 2027 for physical mode. The same instruction section says the multiple-SIP registration facility is unavailable during this scheme's NFO. These SIP dates are separate from the KIM's general reopening statement for continuous sale and repurchase within five business days after allotment; do not conflate the SIP dates with the first day of ordinary lump-sum dealing.",
-    "There is no entry load. The SID/KIM list a 0.25% exit load if units are redeemed or switched out within 15 days from allotment, and nil after 15 days. The KIM says the same load applies to special products such as SIP, STP and SWP; switches between options and sub-options of the scheme do not attract this load.",
-    "The SID sets the maximum base expense ratio at up to 0.90% under the cited regulatory limit. This is not the scheme's actual all-in Total Expense Ratio: permitted brokerage, transaction costs and statutory levies may be additional. The scheme is new, so its actual expense ratio and fund performance history are not yet available.",
-    "The KIM says the scheme will reopen for continuous sale and repurchase within five business days after allotment; it does not specify a fixed calendar reopening date. The SID also says the units have not been approved or recommended by SEBI and that SEBI has not certified the SID's accuracy or adequacy.",
+  "slug": "axis-nifty-largemidcap-250-index-fund-nfo-december-2026",
+  "title": "Axis Nifty LargeMidcap 250 NFO opens 27 November: ₹100 minimum, 50:50 large/mid-cap index and Very High risk",
+  "summary": "Axis AMC lists the NFO from 27 November to 11 December. The open-ended index fund tracks the Nifty LargeMidcap 250 TRI; the index combines 100 large-cap and 150 mid-cap constituents with 50:50 segment weights reset quarterly. The scheme is labelled Very High risk.",
+  "category": "Mutual funds",
+  "checkedAt": "2026-11-27",
+  "publishedAt": "2026-11-27",
+  "eventDate": "2026-12-11",
+  "dateLabel": "NFO closes (check the issuer's cut-off time)",
+  "statusLabel": "NFO open",
+  "source": "https://www.axismf.com/nfo/axis-nifty-largemidcap-250-index-fund/np-dg",
+  "sourceLabel": "Axis Mutual Fund: Axis Nifty LargeMidcap 250 Index Fund NFO page",
+  "sourceLocation": "Axis AMC NFO page: Overview, Key facts at a glance, About the Index, NFO FAQs, riskometer disclaimer and Documents section. NSE Indices: index description, segment weights and reconstitution schedule.",
+  "audience": "Readers checking the terms and structure of Axis Mutual Fund's new open-ended equity index fund. This is factual product information, not an investment recommendation.",
+  "facts": [
+    "Axis AMC lists the NFO from 27 November through 11 December 2026. The minimum application is ₹100 and multiples of ₹1 thereafter, both during the NFO and on an ongoing basis. The AMC page says applications must reach the issuer before its cut-off on the closing date; the exact cut-off time is not stated on the page checked. Checked 27 November 2026.",
+    "The scheme is an open-ended index mutual fund that aims to track the Nifty LargeMidcap 250 Total Return Index before expenses, subject to tracking error. The AMC says there is no assurance that the investment objective will be achieved.",
+    "NSE Indices describes the Nifty LargeMidcap 250 as 100 large-cap companies represented by the Nifty 100 and 150 mid-cap companies represented by the Nifty Midcap 150. The two segments carry 50% aggregate weight each, reset quarterly; the index is reconstituted semi-annually.",
+    "The 50:50 rule applies to the aggregate large-cap and mid-cap segments, not equal weighting across all 250 stocks. Axis says individual stocks within each segment are weighted by free-float market capitalisation.",
+    "The AMC labels the scheme and benchmark Very High risk at the NFO stage. Its disclaimer says the NFO riskometer is based on an internal assessment or model portfolio and may vary after actual investments are made.",
+    "The AMC lists an exit load of 0.25% if units are redeemed or switched out within 15 days from allotment, and nil after 15 days. Check the current SID and KIM for the complete treatment of specific transaction types.",
+    "The AMC describes this as an index mutual fund, not an ETF; its FAQ says a demat account is not required. After the NFO, the open-ended scheme is expected to reopen for continuous purchase and redemption at the applicable NAV; the page does not give a fixed calendar reopening date.",
+    "Index returns are not scheme returns. The AMC says actual fund returns may differ from the benchmark because of expenses, cash holdings and tracking error."
   ],
-  actions: [
-    "Do not treat the NFO closing date as a reason to invest. The scheme is open-ended and its offer documents say continuous purchase and redemption will reopen within five business days after allotment; check the AMC for the actual reopening date.",
-  "Do not assume SIP registration starts with the NFO. The KIM lists digital-mode SIP commencement from 24 December 2026 and physical-mode commencement from 7 January 2027, and says the multiple-SIP registration facility is unavailable during the NFO. Check the issuer's current transaction window and mandate cut-offs.",
-    "Before comparing costs, read the latest SID, KIM, SAI and addenda and check the current TER disclosure. Do not treat the 0.90% maximum base expense ratio as an all-in fee or use the underlying index's historical returns as this new fund's performance.",
-    "Understand the 50% mid-cap segment exposure and Very High risk label. Compare the fund's benchmark, tracking-error controls, actual TER once disclosed and your ability to tolerate equity-market losses before making any decision.",
-    "Note the 0.25% exit load for redemptions or switches within 15 days of allotment; check the current KIM for its treatment of SIP/STP/SWP units and switches between options.",
+  "actions": [
+    "Do not treat the NFO closing date as a reason to invest. Read the current SID, KIM, product label and riskometer from the AMC's NFO page before making any decision.",
+    "Check the issuer's cut-off time and accepted payment/application channel before 11 December; the AMC page does not state a single cut-off time.",
+    "Understand that half of the underlying index's aggregate weight is in mid-cap stocks and that the scheme is labelled Very High risk. This is not a capital-protected product.",
+    "Compare the actual scheme TER and tracking difference when the AMC publishes them. Do not treat benchmark history as fund performance or assume the index's 50:50 split removes equity-market risk.",
+    "Note the listed 0.25% exit load for redemption or switch-out within 15 days from allotment; check the current offer documents for any transaction-specific conditions."
   ],
-  limits: "Checked 27 November 2026. The SID lists the NFO for 27 November–11 December; a separate public announcement date is not stated in the reviewed offer documents. The index's 50:50 large/mid-cap weights reset quarterly and its constituents are reconstituted semi-annually; weights may drift between resets. The scheme's NFO riskometer is Very High and may change after actual holdings are made. The 0.90% figure is a maximum base expense ratio, not actual all-in TER; brokerage, transaction costs and statutory levies may be additional. The new scheme has no fund performance history or actual TER at this check. Index history is not scheme performance. The 0.25% exit load applies within 15 days from allotment, with the KIM's stated special-product and plan/option-switch treatment. The KIM separately lists digital-mode SIP commencement from 24 December 2026 and physical-mode commencement from 7 January 2027, and says the multiple-SIP registration facility is unavailable during the NFO. This does not change the stated reopening of continuous sale and repurchase within five business days after allotment; no fixed calendar reopening date is inferred. SEBI has not approved or recommended the units or certified the SID. No card ranking, mutual-fund portfolio data or investment formula is changed. This guide is factual information, not an investment recommendation.",
-  additionalSources: [
+  "limits": "Checked 27 November 2026. The NFO dates, minimum, riskometer, exit-load summary and open-ended structure are from the current Axis AMC NFO page. NSE Indices independently confirms the 100-large-cap/150-mid-cap composition, 50:50 aggregate segment weights, quarterly reset and semi-annual reconstitution. A separate public announcement date is not stated on the reviewed AMC page. The exact NFO closing cut-off time and fixed post-allotment reopening date are not stated. The NFO riskometer may change after actual holdings are made. The AMC's benchmark history is not scheme performance; actual returns may differ because of expenses, cash holdings and tracking error. This guide does not state an actual TER or unverified SIP start dates. No card ranking, mutual-fund portfolio record or investment formula is changed. Factual information only; not an investment recommendation.",
+  "additionalSources": [
     {
-      url: "https://www.axismf.com/1/5/464/2258/4307/KIM_Axis_Nifty_Large_Midcap_250_Index_Fund_and_FORM_6a274c9a9a.pdf",
-      label: "Axis Mutual Fund: Key Information Memorandum and application form, including NFO riskometers, exit load, plans and reopening terms",
-    },
-    {
-      url: "https://www.axismf.com/nfo/axis-nifty-largemidcap-250-index-fund/np-dg",
-      label: "Axis Mutual Fund: current NFO page, offer dates, scheme structure, minimum amount and demat FAQ",
-    },
-    {
-      url: "https://www.niftyindices.com/indices/equity/broad-based-indices/nifty-largemidcap-250",
-      label: "NSE Indices: Nifty LargeMidcap 250 constituents, segment weights and rebalance/reconstitution schedule",
-    },
-    {
-      url: "https://www.axismf.com/servicecenter/statementsandtaxandschemeinformation/terinformation",
-      label: "Axis Mutual Fund: current Total Expense Ratio disclosure page for checking the actual scheme TER once published",
-    },
-  ],
+      "url": "https://www.niftyindices.com/indices/equity/broad-based-indices/nifty-largemidcap-250",
+      "label": "NSE Indices: Nifty LargeMidcap 250 composition, 50:50 segment weights, quarterly reset and semi-annual reconstitution"
+    }
+  ]
 },
 {
     slug: 'rbl-credit-card-rent-utility-fee-removal-december-2026',
