@@ -7,7 +7,7 @@ Add one source-checked guide for Axis Mutual Fund's new open-ended Nifty LargeMi
 ## Dates
 
 - Checked: 27 November 2026.
-- Publication date: 27 November 2026 (subject to production verification).
+- Repository publication date: 27 November 2026; public rendering remains unconfirmed.
 - NFO window: 27 November–11 December 2026.
 - Separate public announcement date: not stated on the reviewed Axis AMC NFO page.
 - NFO closing cut-off time: not stated on the reviewed page; readers are directed to check the issuer's current cut-off.
@@ -37,22 +37,30 @@ Add one source-checked guide for Axis Mutual Fund's new open-ended Nifty LargeMi
 - No benchmark-history figure presented as scheme performance.
 - No card ranking, mutual-fund portfolio record, or investment formula change.
 
-## Repository release controls
+## Content release controls
 
 - Repository: aqdas1820/credonomics-site.
-- Exact pre-edit main SHA: a8a43670ccf0c4531fb2b086f0b4cdb5a09b006c.
-- Rollback branch: backup/pre-axis-largemidcap-nfo-20261127-0819 (verified at the exact pre-edit main SHA).
-- Feature branch: research-watch-axis-largemidcap-nfo-20261127-0819.
-- Content correction commit after the initial preview syntax failure: 33b69241527aea30870fbe50c655d2271605e3ce.
-- Scope: only the data-driven Research Watch record and this evidence note. Existing homepage, Research Watch, monthly bulletin, mutual-fund landing page, search-index and sitemap patterns consume the shared data. No payments, authentication, customer/financial records, infrastructure, secrets, paid resources or automation schedules are changed.
+- Exact pre-content-edit main SHA: a8a43670ccf0c4531fb2b086f0b4cdb5a09b006c.
+- Original rollback branch: backup/pre-axis-largemidcap-nfo-20261127-0819 (verified at the exact pre-edit SHA).
+- Original feature branch: research-watch-axis-largemidcap-nfo-20261127-0819.
+- Content PR #198 merged as commit: cab73382c6c519e08c88fd7c39e174140d48a970.
+- Content preview deployment: dpl_BQjcKjdRjHGdHQJL7uZ5PocKDfTZ — READY for commit fde1490c32ceead7011c5669d30aec731ff904b2.
+- Content production deployment: dpl_AjBCuzVrf8u6fKdSCrMrm9krKn1n — READY, target production, deployed commit cab73382c6c519e08c88fd7c39e174140d48a970.
+- Vercel production aliases credonomics.in and www.credonomics.in are assigned to that deployment.
 
-## Validation and production evidence
+## Validation and public-rendering limitation
 
-The first preview for the initial branch head failed TypeScript parsing because the source entry contained an unterminated string and missing separators. The content record was rewritten using only the independently checked Axis AMC NFO page and NSE Indices methodology. The new preview must pass the existing unit tests, TypeScript, generators and production build before merge.
+The corrected content PR preview passed 177/177 unit tests across 29 files, TypeScript, the IPO/search generators and the Next.js production build. The generated route manifest included /research/watch/axis-nifty-largemidcap-250-index-fund-nfo-december-2026 and /sitemap.xml.
 
-- Preview validation: pending.
-- Merge commit: pending.
-- Production deployment ID/state/commit: pending.
-- Public article, Research Watch hub, homepage, November bulletin, search and sitemap verification: pending.
+The first production build generated 154 search entries, but inspection of the existing generator (scripts/generate-search-index.mjs) showed it parses unquoted TypeScript property names such as slug:. The initial JSON-quoted item keys therefore did not make the new article discoverable in the generated search index. Follow-up correction branch research-watch-axis-search-index-fix-20261127-0845 reserializes the record with unquoted property names so the existing generator can index it. Its exact pre-fix main SHA is cab73382c6c519e08c88fd7c39e174140d48a970; rollback branch backup/pre-axis-search-index-fix-20261127-0845 preserves that exact SHA.
 
-No public-live claim is made until the production deployment is READY, its deployed commit matches main, and the article and relevant public surfaces are fetched successfully.
+Public checks on 27 November returned:
+- Research Watch hub, homepage and November bulletin still displayed the 26 November snapshot.
+- Direct article route returned Internal Error.
+- Public search and sitemap returned Internal Error.
+
+Thus production deployment READY and alias assignment are confirmed, but public visibility is not. No cache purge, DNS, alias, routing or infrastructure change was attempted. The article must not be described as publicly live until the public route, hub, homepage, bulletin, search and sitemap reflect the current data.
+
+## Scope safeguards
+
+Only the data-driven Research Watch record and this evidence note are changed. Existing homepage, Research Watch, November bulletin and mutual-fund landing page consume the shared data; the sitemap imports the same data and the search-index generator consumes it through its existing parser. No payments, authentication, customer/financial records, infrastructure, secrets, paid resources, ranking formulas or automation schedules are changed. No external messages/comments are sent.
