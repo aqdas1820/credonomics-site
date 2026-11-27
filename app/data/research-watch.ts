@@ -12,6 +12,50 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
 {
+  slug: "hdfc-conservative-retirement-covered-call-exit-december-2026",
+  title: "HDFC Conservative Hybrid and Retirement Funds: covered-call strategy from 30 December; exit window closes 29 December",
+  summary: "HDFC’s 18 November notice permits covered calls in Conservative Hybrid and three Retirement Fund plans from 30 December. Eligible existing holders may switch or redeem without exit load through 3 pm on 29 December, subject to lock-in and other exceptions.",
+  category: "Mutual funds",
+  checkedAt: "2026-11-27",
+  publishedAt: "2026-11-27",
+  announcementDate: "2026-11-18",
+  eventDate: "2026-12-29",
+  dateLabel: "Optional exit window closes (3 pm IST)",
+  source: "https://files.hdfcfund.com/s3fs-public/2026-11/1378%20-%20Notice%20cum%20Addendum%20-%20Change%20in%20Fundamental%20attributes%20of%20Schemes%20-%20w.e.f.%20-%20December%2030,%202026.pdf?VersionId=FuYmqXBzKds1xB783j1FmFcOC1aQnq29",
+  sourceLabel: "HDFC Mutual Fund Notice-cum-Addendum No. 1378 dated 18 November 2026",
+  sourceLocation: "Page 1: affected schemes, covered-call strategy and 15%/30% exposure limits; pages 2–3: covered-call risks, 30-day optional exit window, eligibility and product-specific exceptions; page 4: separate communication to existing unit holders.",
+  audience: "Existing unitholders in HDFC Conservative Hybrid Fund and HDFC Retirement Fund – Equity Plan, Hybrid-Equity Plan or Hybrid-Debt Plan whose valid applications reached the Fund by 3:00 p.m. on 18 November 2026. The exit option is not a blanket offer for every investor or every holding.",
+  facts: [
+    "HDFC AMC’s Notice-cum-Addendum dated 18 November 2026 introduces a covered-call strategy in HDFC Conservative Hybrid Fund and HDFC Retirement Fund – Equity Plan, Hybrid-Equity Plan and Hybrid-Debt Plan. The change is stated to take effect on 30 December 2026. Checked 27 November 2026.",
+    "The permitted covered calls are limited to constituent stocks of the NIFTY 50 and BSE SENSEX. The total notional value of calls written cannot exceed 15% of the total market value of the underlying equity shares held by the scheme; shares underlying the calls cannot exceed 30% of the scheme’s unencumbered shares in that company. The scheme cannot write a call without holding the underlying shares, and the option is marked to market daily.",
+    "The notice says covered calls may generate option premium on shares already held. It also warns that a fall in the underlying share price is offset only to the extent of the premium earned. The strategy is not a return guarantee or capital-protection feature.",
+    "The optional exit window applies only to existing unitholders whose valid applications were received by the Fund up to 3:00 p.m. on 18 November 2026. Those eligible holders may switch to another HDFC Mutual Fund scheme or redeem at the applicable NAV without exit load from 30 November through 3:00 p.m. on 29 December 2026, both dates inclusive. The fundamental-attribute changes take effect on 30 December 2026.",
+    "The exit option is voluntary. The notice says a holder who has no objection to the change need not take action and will be treated as having consented. Requests received after 3:00 p.m. on 29 December fall outside the no-exit-load window and are subject to the applicable scheme exit load, if any.",
+    "For HDFC Retirement Fund plans, the exit option remains subject to completion of the applicable lock-in period specified in the scheme information document. Holders of pledged or encumbered units must first submit a release letter. Units or folios frozen or locked by an authority or for legal non-compliance cannot use the window until the freeze is vacated or the required compliance is completed.",
+    "A holder who does not want future SIP instalments must separately apply to cancel the SIP registration. The notice also asks investors to update any required address or payout-bank details at least 10 working days before exercising the exit option; demat holders should approach their depository participant.",
+    "The notice says the AMC board approved the proposed changes and the trustees noted them; it also records that SEBI noted the proposal by email dated 25 September 2026. This is not described as SEBI approval or a recommendation."
+  ],
+  actions: [
+    "Check whether your valid application was received by HDFC Mutual Fund by 3:00 p.m. on 18 November 2026. The optional no-exit-load window is limited to that existing-holder group.",
+    "If you are eligible and do not accept the change, review the current SID/KIM and submit a switch or redemption request within the window ending 3:00 p.m. on 29 December 2026. The request is processed at the applicable NAV and remains subject to the scheme’s cut-off rules.",
+    "For HDFC Retirement Fund, verify that the applicable lock-in has ended. If units are pledged or encumbered, obtain the required release letter; if a folio is frozen, resolve the freeze or legal-compliance issue first.",
+    "If you want future SIP instalments to stop, cancel the SIP registration separately; using the exit option does not itself cancel future SIP instructions.",
+    "Update payout-bank or address details at least 10 working days before the request if a change is needed. If units are held in demat form, contact your depository participant.",
+    "If you have no objection to the covered-call change, the notice says no exit action is required. Read the official notice and current scheme documents rather than treating the optional window as a compulsory redemption."
+  ],
+  limits: "Checked 27 November 2026. The notice date is 18 November 2026; the optional exit window is 30 November 2026 to 3:00 p.m. on 29 December 2026; the covered-call change is effective 30 December 2026. The exit option applies only to valid applications received by the Fund up to 3:00 p.m. on 18 November. HDFC Retirement Fund lock-in, pledged/encumbered-unit and frozen-folio exceptions remain. Covered calls may generate premium but do not guarantee returns or protect the full value of an underlying share-price decline. The notice says SEBI noted the proposal by email; no SEBI approval or endorsement is claimed. Tax consequences depend on the holder’s circumstances. No fund ranking, portfolio score or investment formula is changed; this is factual notice coverage, not an investment recommendation.",
+  additionalSources: [
+    {
+      url: "https://www.hdfcfund.com/statutory-disclosure/form-disclosures/addenda-notices",
+      label: "HDFC Mutual Fund: current Addenda and Notices index"
+    },
+    {
+      url: "https://www.hdfcfund.com/mutual-funds/fund-documents/sid",
+      label: "HDFC Mutual Fund: current Scheme Information Documents and Key Information Memorandums"
+    }
+  ]
+},
+{
   slug: "bajaj-finserv-business-cycle-fund-nfo-december-2026",
   title: "Bajaj Finserv Business Cycle Fund NFO closes 4 December: ₹500 minimum and Very High risk",
   summary: "The open-ended thematic equity NFO runs from 20 November to 4 December. Its SID permits 80–100% in equity selected around business cycles, uses the BSE 500 TRI as benchmark and labels the scheme Very High risk.",
