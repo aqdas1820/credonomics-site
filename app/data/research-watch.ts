@@ -1569,27 +1569,40 @@ export const researchWatch: WatchItem[] = [
   },
   {
     slug: 'puducherry-cooperative-bank-dicgc-claim-december-2026',
-    title: 'Puducherry Co-operative Urban Bank: submit deposit insurance documents by 5 December',
-    summary: 'DICGC lists 5 December for claim documents and 19 January for conditional payment. RBI’s ₹5,000 withdrawal limit is separate.',
-    category: 'Bank deposits', checkedAt: '2026-11-15', announcementDate: '2026-10-22', eventDate: '2026-12-05', dateLabel: 'Claim and willingness date in DICGC notice',
-    source: 'https://dicgc.org.in/sites/default/files/2026-10/4b-press-release-english-and-hindi-puducherry-co-operative-urban-bank-ltd-puducherry-tamil-nadu_0.pdf',
-    sourceLabel: 'DICGC: Puducherry Co-operative Urban Bank payment notice',
-    sourceLocation: 'English release dated 22 October 2026, table and paragraphs 1–3 on page 2',
-    additionalSources: [
-      { url: 'https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63840', label: 'RBI: withdrawal limit and directions effective from close of business on 21 October' },
-      { url: 'https://www.dicgc.org.in/FAQs', label: 'DICGC: general rules for submitting willingness forms under All-Inclusive Directions' },
-    ],
-    audience: 'Depositors of Puducherry Co-operative Urban Bank Ltd. in Puducherry.',
+    title: 'Puducherry Co-operative Urban Bank: DICGC lists 5 December for claim documents; payment date is conditional',
+    summary: 'DICGC’s 22 October notice lists 5 December for claim/willingness submission and 19 January for conditional payment. Its FAQ separately says willingness forms may be submitted while the bank remains under AID; late supporting-document acceptance and claim-list inclusion are not guaranteed.',
+    category: 'Bank deposits',
+    checkedAt: '2026-11-27',
+    publishedAt: '2026-11-15',
+    announcementDate: '2026-10-22',
+    eventDate: '2026-12-05',
+    dateLabel: 'Claim/willingness date printed in notice (FAQ clarifies willingness forms)',
+    source: 'https://dicgc.org.in/sites/default/files/2026-10/4b-press-release-english-and-hindi-puducherry-co-operative-urban-bank-ltd-puducherry-tamil-nadu.pdf',
+    sourceLabel: 'DICGC Press Release 2026-2027/17 dated 22 October 2026',
+    sourceLocation: 'English release, page 2: table row 1 and paragraphs 1–3',
+    updateNote: '27 November 2026: rechecked DICGC’s official press-release register and corrected the primary PDF link to the current file linked by DICGC. The notice dates remain unchanged. DICGC’s FAQ confirms no cut-off for willingness forms only while the bank remains under AID; it does not establish late supporting-document acceptance or guaranteed claim-list inclusion/payment.',
+    audience: 'Depositors of Puducherry Co-operative Urban Bank Ltd. in Puducherry. The DICGC notice and RBI direction concern this named bank only.',
     facts: [
-      'The DICGC release lists 5 December 2026 for submission of claim documents and willingness to the bank. It lists 19 January 2027 for payment, subject to the bank filing its depositor list on time and verification of the claim documents.',
-      'The notice calls for officially valid identity documents, a written willingness declaration and alternate bank account details. One declaration covers the depositor’s accounts at the bank. Insurance is capped at ₹5 lakh for deposits held in the same capacity and right.',
-      'RBI’s separate directions took effect at close of business on 21 October 2026. They permit withdrawals up to ₹5,000 per depositor and allow loan set-off subject to the directions. RBI issued them for six months, subject to review.',
+      'DICGC’s bank-specific press release dated 22 October 2026 lists 5 December 2026 as the last date for claim/willingness submission to the bank, and 19 January 2027 as the payment date. The payment date is conditional on the bank submitting the depositor list in the prescribed form and manner within statutory timelines and DICGC verifying the claims. Checked 27 November 2026.',
+      'The notice asks depositors to submit claims to the bank with officially valid identity document(s), written willingness, and alternate bank-account details. It says one willingness declaration applies to all deposit accounts held by a depositor at the bank. It states a maximum of ₹5 lakh in the same capacity and same right; this is not ₹5 lakh per account.',
+      'DICGC’s current FAQ says there is no cut-off date for willingness forms, provided the bank is under All-Inclusive Directions (AID) when the form is submitted. This FAQ answer concerns willingness forms; it does not say that late supporting documents will be accepted, that a late file will be included in the current claim list, or that the 19 January payment date applies to late submissions.',
+      'DICGC’s FAQ says deposits held in the same capacity and same right are aggregated, the ₹5 lakh cover includes principal and interest, and bank dues may be set off before the insured amount is determined. The bank-specific notice does not determine an individual depositor’s admissible amount.',
+      'RBI’s separate directions took effect at close of business on 21 October 2026. They permit withdrawals up to ₹5,000 per depositor and allow loan set-off subject to the directions. RBI says the directions remain in force for six months, subject to review. This withdrawal limit is separate from DICGC’s deposit-insurance payment.',
+      'DICGC’s claim-willingness portal states that final payment is made only after the bank verifies KYC documents under the claim-settlement procedure.'
     ],
     actions: [
-      'Contact the bank through its official channels for the willingness form and document requirements. Submit them by the date in the notice and keep an acknowledgement.',
-      'If you miss 5 December, contact the bank promptly. DICGC’s general FAQ says willingness can be submitted while the bank remains under All-Inclusive Directions. Ask the bank how a later submission will be handled.',
+      'If you are a depositor of the exact bank named, contact the bank or administrator through official channels now for the current willingness form and supporting-document requirements. The DICGC notice lists 5 December; keep a dated acknowledgement of what you submit.',
+      'If the 5 December date passes before you complete the documents, contact the bank promptly. DICGC’s FAQ says willingness forms may be submitted while the bank remains under AID at the time of submission, but do not assume late supporting documents will be accepted or included in the current claim list; ask the bank to confirm its handling.',
+      'Read DICGC’s current FAQ on deposit aggregation and set-off before estimating an amount. The ₹5 lakh ceiling is not per account and can be affected by balances held in the same capacity and right and by dues.',
+      'Do not treat RBI’s ₹5,000 withdrawal limit as a DICGC payment or as a guarantee of immediate access to all deposits.'
     ],
-    limits: 'The bank-specific notice gives no cutoff hour. The payment date is conditional, and the release gives no payment date for late submissions. Ask the bank to confirm your individual claim status.',
+    limits: 'Checked 27 November 2026. DICGC’s notice is dated 22 October; it lists 5 December for claim/willingness submission and 19 January 2027 for payment. The 19 January date is conditional on the bank submitting its depositor list within statutory timelines and DICGC verifying the documents. DICGC’s FAQ has no cut-off for willingness forms only, provided the bank remains under AID when the form is submitted; it does not establish late supporting-document acceptance, claim-list inclusion or payment on 19 January. The bank-specific notice gives no cutoff hour. RBI’s direction took effect on 21 October for six months, subject to review; the ₹5,000 withdrawal limit is separate. DICGC’s general ₹5 lakh cap applies per depositor per bank in the same capacity and same right, with accounts aggregated and principal/interest included; bank dues may be set off. No individual eligibility, admissible amount or payment is inferred.',
+    additionalSources: [
+      { url: 'https://www.dicgc.org.in/information-corner/press-release', label: 'DICGC: official press-release register' },
+      { url: 'https://www.dicgc.org.in/FAQs', label: 'DICGC: deposit-insurance coverage, aggregation, set-off and AID willingness-form FAQ' },
+      { url: 'https://www.dicgc.org.in/claim_willingness_form', label: 'DICGC: claim willingness portal; final payment follows bank KYC verification' },
+      { url: 'https://www.rbi.org.in/scripts/FS_PressRelease.aspx?fn=2755&prid=63840', label: 'RBI: Puducherry Co-operative Urban Bank directions effective 21 October 2026' }
+    ]
   },
   {
     slug: 'idfc-business-card-upi-rewards-october-2026',
