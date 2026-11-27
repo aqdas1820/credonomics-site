@@ -60,8 +60,11 @@ Sources reviewed for the HOLD:
 
 - Repository: aqdas1820/credonomics-site.
 - Exact pre-edit main SHA: 939ab2c1a8f1f07887552939be47d32fa97e32a8.
-- Rollback branch: backup/pre-hdfc-covered-call-exit-20261127-0948 (created from that exact SHA).
-- Feature branch: research-watch-hdfc-covered-call-exit-20261127-0948.
+- Content rollback branch: backup/pre-hdfc-covered-call-exit-20261127-0948 (created from that exact SHA).
+- Content feature branch: research-watch-hdfc-covered-call-exit-20261127-0948.
+- Content PR #202 merged successfully; squash commit: 1822de61cde8a431b3943cce23dea9ab5fb5bcf0.
+- Evidence-only documentation branch: release-evidence-hdfc-covered-call-20261127-1048.
+- Evidence-only rollback branch: backup/pre-hdfc-release-evidence-20261127-1048 (created from post-content main SHA 1822de61cde8a431b3943cce23dea9ab5fb5bcf0).
 - Content file: app/data/research-watch.ts.
 - Article route: /research/watch/hdfc-conservative-retirement-covered-call-exit-december-2026.
 - Evidence file: docs/RESEARCH_WATCH_HDFC_CONSERVATIVE_RETIREMENT_EXIT_20261127.md.
@@ -80,17 +83,42 @@ Sources reviewed for the HOLD:
 
 ## Validation and production evidence
 
-- First reviewed preview deployment: dpl_8DTaMyQptfqeSFAdmTyqvLAoffEM, READY, branch `research-watch-hdfc-covered-call-exit-20261127-0948`, commit c2e7379d07ecd82486e54931ef705c436b368862.
-- Preview prebuild unit tests: 177 passed across 29 test files.
-- TypeScript: `tsc --noEmit --pretty false` completed without errors; Next.js compile succeeded.
-- Existing generators: 41 IPO dashboard records and 157 search entries generated.
-- Production build: Next.js 15.5.28 completed; 362 static pages generated. Route output includes the new HDFC article, `/research/watch`, `/updates/2026-11`, `/mutual-funds`, `/search` and `/sitemap.xml`.
-- Existing non-blocking warnings: Autoprefixer mixed-support warnings, React Hook dependency warnings and image-optimization warnings in unrelated existing files.
-- The preview hostname returned Internal Error to the external web checker, so preview-page rendering was not independently confirmed there. The Vercel deployment itself is READY and its build manifest contains the required routes.
-- Final intended head after the precision correction: pending a fresh preview build.
-- Production deployment ID/state/deployed commit: pending.
-- Public article, homepage, Research Watch hub, November bulletin, Mutual Fund Intelligence page, search and sitemap verification: pending.
+### Reviewed PR preview
+
+- Final intended-head preview deployment: dpl_AtE6TkKu8bBBGF3u2C26pgzxxZsu, READY.
+- Preview commit: b4d030558f91aca73e4a2a303b32f68ac1bd8fa5.
+- Unit tests: 177 passed across 29 test files.
+- TypeScript: `tsc --noEmit --pretty false` completed without errors.
+- Existing generators: 41 IPO dashboard records and 157 CredoNomics search entries generated.
+- Next.js 15.5.28 production build completed; 362 static pages generated.
+- Build route output included the new HDFC article, Research Watch hub, November bulletin, Mutual Fund Intelligence page, search route and sitemap route.
+- The preview hostname was not accessible to the external web checker (Internal Error); the Vercel preview deployment itself was READY.
+
+### Merged production deployment
+
+- Content PR: #202 — https://github.com/aqdas1820/credonomics-site/pull/202
+- Squash commit / deployed commit: 1822de61cde8a431b3943cce23dea9ab5fb5bcf0.
+- Production deployment: dpl_HKBJSQMVbUncyvZvCWpgYcCC1GdH, READY.
+- Vercel deployment URL: https://credonomics-site-8u8k0ucui-aqdasshaikh1820-9566s-projects.vercel.app
+- Production aliases listed by Vercel: https://www.credonomics.in and https://credonomics.in.
+- Production build repeated the 177/177 unit tests, 29/29 test files, TypeScript check, 41 IPO records, 157 search entries, and 362 static pages. The new HDFC article route appears in the production route manifest.
+- Existing non-blocking warnings remain: Autoprefixer mixed-support warnings, React Hook dependency warnings and image-optimization warnings in unrelated existing files.
+
+### Public verification result — not live-confirmed
+
+The external public-page checker did not confirm the new article after the production deployment:
+
+- Direct article route https://www.credonomics.in/research/watch/hdfc-conservative-retirement-covered-call-exit-december-2026 returned Internal Error.
+- Research Watch hub https://www.credonomics.in/research/watch remained on a 26 November snapshot and did not show the HDFC article.
+- November bulletin https://www.credonomics.in/updates/2026-11 remained on a 26 November snapshot and did not show the HDFC article.
+- Mutual Fund Intelligence https://www.credonomics.in/mutual-funds remained on a 26 November snapshot and did not show the HDFC article.
+- Homepage https://www.credonomics.in/ did not show the HDFC article in the checked public content.
+- Public search https://www.credonomics.in/search?q=HDFC%20covered%20call returned Internal Error.
+- Public sitemap https://www.credonomics.in/sitemap.xml returned Internal Error.
+- The exact HDFC official four-page Notice-cum-Addendum PDF was accessible and rechecked after deployment.
+
+The content is present in GitHub main and in the READY production build, but public visibility is **not confirmed**. No claim is made that the article is publicly live. No cache purge, DNS edit, alias reassignment, routing change or infrastructure modification was attempted. A likely cache/edge/alias propagation explanation is not assumed without evidence.
 
 ## Scope safeguards
 
-No payments, authentication, customer/financial records, infrastructure, secrets, paid resources, card/fund ranking formulas, portfolio scores, automation schedules or reward valuations are changed. No external messages or comments are sent.
+No payments, authentication, customer/financial records, infrastructure, secrets, paid resources, card/fund ranking formulas, portfolio scores, automation schedules or reward valuations are changed. No external messages or comments are sent. Research Watch task 6adc4a968f4881919162894e39d400bc remains disabled (last recorded run 29 October 2026); the separate daily 10 AM research report is also currently disabled (last recorded run 8 November 2026). Both statuses and schedules were left unchanged as instructed.
