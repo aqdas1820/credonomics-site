@@ -2,14 +2,25 @@
 import type { IpoDiscoveryRecord } from './ipo-types'
 
 export const ipoDiscoveryMeta = {
-  "generatedAt": "2026-11-26T12:19:54.980Z",
+  "generatedAt": "2026-11-27T12:06:29.624Z",
   "source": "SEBI Public Issues",
   "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
-  "recordCount": 38,
+  "recordCount": 39,
   "note": "Discovery layer only. Financial ranking requires separately normalized offer-document data."
 } as const
 
 export const ipoDiscovery: IpoDiscoveryRecord[] = [
+  {
+    "id": "master-chains-n-jewels-limited-addendum-e65243",
+    "companyName": "Master Chains N Jewels Limited",
+    "filingTitle": "Master Chains N Jewels Limited - Addendum to DRHP",
+    "filingDate": "2026-11-27",
+    "documentStage": "addendum",
+    "documentUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/master-chains-n-jewels-limited-addendum-to-drhp_103301.html",
+    "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
+    "firstSeen": "2026-11-27T12:06:29.624Z",
+    "lastSeen": "2026-11-27T12:06:29.624Z"
+  },
   {
     "id": "pride-hotels-limited-addendum-7bb675",
     "companyName": "Pride Hotels Limited",
@@ -19,7 +30,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/pride-hotels-limited-addendum-to-the-drhp_105935.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-11-23T12:22:55.024Z",
-    "lastSeen": "2026-11-26T12:19:54.980Z"
+    "lastSeen": "2026-11-27T12:06:29.624Z"
   },
   {
     "id": "chartered-speed-limited-addendum-to-the-drhp-addendum-f3e670",
@@ -30,7 +41,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/chartered-speed-limited-addendum-to-the-drhp_105815.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-11-19T11:31:07.437Z",
-    "lastSeen": "2026-11-26T12:19:54.980Z"
+    "lastSeen": "2026-11-27T12:06:29.624Z"
   },
   {
     "id": "eldorado-agritech-limited-addendum-9f1ce7",
@@ -41,7 +52,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/eldorado-agritech-limited-addendum-to-the-drhp_105811.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-11-19T11:31:07.437Z",
-    "lastSeen": "2026-11-26T12:19:54.980Z"
+    "lastSeen": "2026-11-27T12:06:29.624Z"
   },
   {
     "id": "learnfluence-education-limited-addendum-9a3266",
@@ -52,7 +63,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/learnfluence-education-limited-addendum-to-drhp_105776.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-11-16T11:04:56.126Z",
-    "lastSeen": "2026-11-26T12:19:54.980Z"
+    "lastSeen": "2026-11-27T12:06:29.624Z"
   },
   {
     "id": "sillverton-industries-limited-addendum-f3e9d2",
@@ -63,7 +74,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/nov-2026/sillverton-industries-limited-addendum-to-drhp_105681.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-11-09T11:23:38.094Z",
-    "lastSeen": "2026-11-26T12:19:54.980Z"
+    "lastSeen": "2026-11-27T12:06:29.624Z"
   },
   {
     "id": "oravel-stays-limited-addendum-8fc2a4",
@@ -74,7 +85,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/oravel-stays-limited-addendum-to-drhp_105418.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-10-26T08:48:39.461Z",
-    "lastSeen": "2026-11-26T12:19:54.980Z"
+    "lastSeen": "2026-11-27T12:06:29.624Z"
   },
   {
     "id": "integris-medtech-limited-addendum-0b85b4",
@@ -85,7 +96,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/integris-medtech-limited-addendum-to-drhp_105416.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-10-26T08:48:39.461Z",
-    "lastSeen": "2026-11-26T12:19:54.980Z"
+    "lastSeen": "2026-11-27T12:06:29.624Z"
   },
   {
     "id": "tablespace-technologies-limited-addendum-8ef8cf",
@@ -96,7 +107,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/tablespace-technologies-limited-addendum-to-drhp_105343.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-10-21T08:29:32.713Z",
-    "lastSeen": "2026-11-26T12:19:54.980Z"
+    "lastSeen": "2026-11-27T12:06:29.624Z"
   },
   {
     "id": "oswal-cables-limited-addendum-225fbb",
@@ -107,7 +118,7 @@ export const ipoDiscovery: IpoDiscoveryRecord[] = [
     "documentUrl": "https://www.sebi.gov.in/filings/public-issues/oct-2026/oswal-cables-limited-addendum-to-drhp_105234.html",
     "sourceUrl": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=10&ssid=15",
     "firstSeen": "2026-10-14T08:38:02.070Z",
-    "lastSeen": "2026-11-26T12:19:54.980Z"
+    "lastSeen": "2026-11-27T12:06:29.624Z"
   },
   {
     "id": "matangi-rubber-limited-addendum-57ae39",
