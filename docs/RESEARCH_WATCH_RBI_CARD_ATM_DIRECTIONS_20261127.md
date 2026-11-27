@@ -51,6 +51,9 @@ The current Research Watch records and issuer documents were re-read; no materia
 - Correction PR #209: https://github.com/aqdas1820/credonomics-site/pull/209
 - Correction merge commit / current main at release-note creation: `52f48c896e33ac69847148f6a5c7f62785373f1e`.
 - Correction rollback reference: `backup/pre-rbi-date-qualification-20261127-2323`.
+- Release-evidence base SHA: `52f48c896e33ac69847148f6a5c7f62785373f1e`.
+- Release-evidence branch: `docs/research-watch-rbi-card-atm-evidence-20261127-2323`.
+- Release-evidence rollback reference: `backup/pre-rbi-release-evidence-20261127-2323`.
 - Production deployment: `dpl_9mHx9MiYUVK1QKvtSwHhiXVw1P1f` — Vercel reported **READY**, target production, deployed commit `52f48c896e33ac69847148f6a5c7f62785373f1e`, with `www.credonomics.in` and `credonomics.in` aliases assigned.
 - Production deployment record: https://vercel.com/aqdasshaikh1820-9566s-projects/credonomics-site/9mHx9MiYUVK1QKvtSwHhiXVw1P1f
 
