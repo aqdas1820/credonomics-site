@@ -1,4 +1,4 @@
-export const WATCH_CHECKED_AT = '2026-11-27'
+export const WATCH_CHECKED_AT = '2026-11-28'
 export type WatchItem = {
   slug: string; title: string; summary: string; category: 'Credit cards' | 'Debit cards' | 'Mutual funds' | 'Markets' | 'Bank deposits' | 'Banking' | 'Pensions'
   checkedAt: string; eventDate: string; dateLabel: string; source: string; sourceLabel: string
@@ -11,6 +11,68 @@ export type WatchItem = {
 
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
+{
+  "slug": "rbi-final-money-mule-debit-hold-sop-july-2027",
+  "title": "RBI issues final bank SOP for suspected money-mule debit holds; default start 1 July 2027",
+  "summary": "RBI issued six final KYC amendment directions on 27 November for banks' procedures on temporary debit holds linked to suspected money-mule activity and cyber-enabled fraud. The default commencement is 1 July 2027, although a bank may implement earlier; detailed final customer timelines are not asserted here.",
+  "category": "Banking",
+  "checkedAt": "2026-11-28",
+  "publishedAt": "2026-11-28",
+  "announcementDate": "2026-11-27",
+  "eventDate": "2027-07-01",
+  "dateLabel": "Default commencement date; a bank may implement the SOP earlier",
+  "source": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=64062",
+  "sourceLabel": "RBI Press Release 2026-2027/1584: final KYC Amendment Directions on suspected money-mule accounts",
+  "sourceLocation": "RBI press release dated 27 November 2026, paragraphs 1–2 and the list of six final Amendment Directions. The release says feedback on the 11 September draft was examined and modifications incorporated; it states commencement from 1 July 2027 or an earlier date chosen by a bank.",
+  "additionalSources": [
+    {
+      "url": "https://www.rbi.org.in/Scripts/Fs_AmendmentDirections.aspx",
+      "label": "RBI: Amendment Directions by Department of Regulation, listing all six 27 November KYC amendments"
+    },
+    {
+      "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13763&Mode=0",
+      "label": "RBI: Commercial Banks – Know Your Customer Second Amendment Directions, 2026"
+    },
+    {
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13764&Mode=0",
+      "label": "RBI: Small Finance Banks – Know Your Customer Second Amendment Directions, 2026"
+    },
+    {
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13768&Mode=0",
+      "label": "RBI: Payments Banks – Know Your Customer Amendment Directions, 2026"
+    },
+    {
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13765&Mode=0",
+      "label": "RBI: Local Area Banks – Know Your Customer Second Amendment Directions, 2026"
+    },
+    {
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13766&Mode=0",
+      "label": "RBI: Regional Rural Banks – Know Your Customer Second Amendment Directions, 2026"
+    },
+    {
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13767&Mode=0",
+      "label": "RBI: Urban Co-operative Banks – Know Your Customer Second Amendment Directions, 2026"
+    },
+    {
+      "url": "https://www.rbi.org.in/scripts/bs_viewcontent.aspx?Id=5170",
+      "label": "RBI: 11 September 2026 draft text, linked only for historical comparison; not the final directions"
+    }
+  ],
+  "audience": "Customers of commercial banks (including small finance banks, payments banks, local area banks and regional rural banks) and urban co-operative banks. The update is about a future bank procedure for suspected money-mule activity and cyber-enabled financial fraud; it does not mean any particular account is flagged.",
+  "facts": [
+    "RBI's press release dated 27 November 2026 says it has issued six final Know Your Customer Amendment Directions covering commercial banks, small finance banks, payments banks, local area banks, regional rural banks and urban co-operative banks.",
+    "The stated subject is a Standard Operating Procedure for banks to place temporary debit holds on amounts or accounts suspected to be linked to money-mule activity and cyber-enabled financial fraud, and to remove such holds in coordination with Law Enforcement Agencies (LEAs). RBI says the September draft feedback was examined and modifications were incorporated in the final directions.",
+    "The default commencement date stated in the final RBI press release is 1 July 2027. A bank may choose to implement the SOP earlier, so the date on which an individual bank starts using it may differ.",
+    "The September draft is not the final text. Its ₹1,000 suspected-transaction threshold, 20-day customer explanation period, 60-day maximum hold and 1 April 2027 proposed start are not repeated as final terms in this guide. The final press release does not restate the detailed customer timelines or thresholds."
+  ],
+  "actions": [
+    "If a debit restriction is placed on an account now, ask the bank for the written reason and the current bank, statutory or LEA instruction on which it relies. Do not assume the future 2027 SOP already governs a present restriction.",
+    "Keep the relevant account statement and ordinary supporting records for legitimate receipts or transfers. If the bank contacts you, use the bank's verified official channel and follow the process stated in its written communication.",
+    "Before relying on a deadline for replying to a future hold notice, check the final direction and the bank's own implementation notice. Do not use the September draft's 20-day or 60-day figures as if they were final.",
+    "Use the bank's published grievance channel if the written basis or review process is unclear. The RBI press release does not promise an automatic release date for any individual account."
+  ],
+  "limits": "Checked 28 November 2026. Announcement date: 27 November 2026. Default commencement: 1 July 2027, with earlier implementation permitted at a bank's discretion. The RBI press release confirms issuance, scope and broad purpose. The six final notification pages are linked, but their attached final text was not independently extracted in this check; therefore this guide does not assert a final transaction threshold, customer reply window, bank decision deadline, maximum hold duration, account-level-hold test or complaint-resolution deadline. The September draft's ₹1,000 threshold, 20-day reply period, 60-day cap and 1 April 2027 date are draft-only details and are not presented as final rules. No claim is made that every suspected transaction causes a whole-account hold, that current restrictions are automatically lifted, or that the future SOP changes an individual case today."
+},
 {
   slug: "rbi-card-atm-directions-november-2026",
   title: "RBI’s 2026 card and ATM Directions: what consumers can verify and what remains unconfirmed",
