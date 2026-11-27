@@ -31,9 +31,8 @@ export const researchWatch: WatchItem[] = [
     "The SID describes an open-ended, actively managed thematic equity scheme. Its objective is long-term capital appreciation through allocation among sectors and stocks at different stages of business cycles. The document expressly says there is no assurance that the objective will be achieved.",
     "The SID's indicative allocation allows 80–100% of total assets in equity and equity-related instruments of companies selected on a business-cycle basis, 0–20% in other equity and equity-related instruments, and 0–20% in money-market and other liquid instruments and specified units. The SID says the scheme may take concentrated exposure in companies selected by the theme, may favour leading sectors and may be absent from some sectors at different times; it is not a passive index-tracking fund.",
     "The benchmark is the BSE 500 Total Return Index (TRI). A benchmark is a comparison measure; it does not mean the scheme will hold the index or deliver its returns. The fund manager has discretion to change sector and stock allocations within the SID's limits. The SID says the scheme will not be listed on a stock exchange at launch, although the AMC may choose to list it later; it is not an ETF.",
-    "At the NFO stage, the SID labels both the scheme and its benchmark Very High risk. It says this label is based on an internal assessment or model portfolio and may change after actual investments are made. The label is not a return forecast or capital-protection promise.
-    "The SID expressly states that the units offered have not been approved or recommended by SEBI and that SEBI has not certified the accuracy or adequacy of the SID. The SID also says the scheme is not listed on a stock exchange at launch, although the AMC may choose to list it later."
-",
+    "At the NFO stage, the SID labels both the scheme and its benchmark Very High risk. It says this label is based on an internal assessment or model portfolio and may change after actual investments are made. The label is not a return forecast or capital-protection promise.",
+    "The SID expressly states that the units offered have not been approved or recommended by SEBI and that SEBI has not certified the accuracy or adequacy of the SID.",
     "The minimum NFO lump-sum application is ₹500, with additional amounts in multiples of ₹1. The SID lists SIPs from ₹500 with a minimum of six instalments. The NFO offer price is ₹10 per unit; that price alone says nothing about valuation, cheapness or future returns.",
     "The SID lists an exit load of 1% of applicable NAV when units are redeemed or switched out within three months from allotment, and nil after three months. It applies to purchases through lump sum, switch-in, SIP and STP. The SID separately excludes switches to another equity scheme of the same AMC, switches between Direct and Regular Plans, option changes within the same plan, bonus units and units allotted on IDCW reinvestment. It also states that no load applies where prescribed SEBI portfolio-rebalancing timelines are missed or where a redemption/switch exceeding 25% of an investor's holding is made to comply with the SEBI Master Circular.",
     "The SID names Sorbh Gupta and Bharat Hegde for the equity portion and Siddharth Chaudhary for the debt portion. This is a new scheme, so no scheme return history is available at the NFO stage."
@@ -50,7 +49,7 @@ export const researchWatch: WatchItem[] = [
   additionalSources: [
     {
       url: "https://nsearchives.nseindia.com/content/circulars/NMF77503.pdf",
-      label: "NSE circular NMF77503 dated 19 November 2026: NSE MF Invest NFO window, tentative allotment and platform funds deadline"
+      label: "NSE circular NMF77503 dated 19 November 2026: NSE MF Invest NFO window, allotment date and member-to-clearing-corporation funds deadline"
     },
     {
       url: "https://www.bajajamc.com/sid-disclosure",
