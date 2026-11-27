@@ -56,6 +56,49 @@ export const researchWatch: WatchItem[] = [
   ]
 },
 {
+  slug: "baroda-bnp-paribas-balanced-hybrid-fund-nfo-december-2026",
+  title: "Baroda BNP Paribas Balanced Hybrid Fund NFO closes 8 December: ₹1,000 lump-sum minimum and High Risk label",
+  summary: "The NFO runs from 25 November to 8 December. The scheme targets 40–60% equity and 40–60% debt, prohibits arbitrage and carries a High Risk NFO label for both scheme and benchmark. The KIM lists a ₹1,000 minimum lump-sum application; exit-load terms and the post-NFO riskometer caveat matter.",
+  category: "Mutual funds",
+  checkedAt: "2026-11-27",
+  publishedAt: "2026-11-27",
+  eventDate: "2026-12-08",
+  dateLabel: "NFO closes (confirm the AMC's current cut-off)",
+  statusLabel: "Limited-time offer",
+  source: "https://www.barodabnpparibasmf.in/balanced-hybrid-fund-nfo/pdf/balanced-hybrid-fund-kim.pdf",
+  sourceLabel: "Baroda BNP Paribas Mutual Fund Key Information Memorandum dated 23 October 2026",
+  sourceLocation: "KIM: NFO schedule, product labelling, asset allocation, minimum application and SIP terms, and exit-load schedule. SID dated 26 October 2026: scheme terms, permitted exposures and risk factors. AMC NFO page: current offer dates and scheme summary.",
+  audience: "People comparing the Baroda BNP Paribas Balanced Hybrid Fund NFO with other hybrid schemes. This is factual product information, not an investment recommendation.",
+  facts: [
+    "The AMC's official NFO page and KIM list the offer period as 25 November to 8 December 2026. Continuous sale and repurchase is scheduled to reopen on 21 December 2026. The KIM is dated 23 October 2026 and the SID is dated 26 October 2026; no separate announcement date is asserted. Checked 27 November 2026.",
+    "The NFO price is ₹10 per unit. The KIM lists a minimum lump-sum application of ₹1,000 in multiples of ₹1. It also lists SIP minimums of ₹500 for daily, weekly and monthly frequencies and ₹1,500 for quarterly frequency; confirm the selected platform's acceptance and start date.",
+    "The scheme is an open-ended Balanced Hybrid Fund. Under normal circumstances, equity and equity-related instruments may be 40–60% of total assets and debt and money-market instruments may also be 40–60%. The benchmark is the NIFTY 50 Hybrid Composite Debt 50:50 Index. The SID says no arbitrage is permitted.",
+    "No-arbitrage does not mean that all derivatives are prohibited. The SID permits equity derivatives up to 50% of equity assets for purposes permitted by SEBI, including hedging and portfolio balancing, subject to the applicable rules and scheme terms.",
+    "At the NFO stage, the KIM labels both the scheme and its benchmark High Risk. It says the scheme riskometer is based on an internal assessment and may vary after the NFO when actual investments are made. The risk label is not a return forecast or capital-protection promise.",
+    "The KIM says the scheme is new and has no performance track record. Its stated objective is long-term capital appreciation and income generation, but the scheme does not guarantee or indicate returns and there is no assurance that its objective will be achieved.",
+    "Exit load: redemption or switch-out of more than 10% of units allotted within one year from allotment attracts 1% of applicable NAV. Redemption or switch-out of up to 10% within that first year is nil-load; after one year the load is nil. The schedule also applies to switches between schemes of the Fund and to SIP, STP and SWP transactions. The KIM separately exempts switches between Direct and Regular Plans or between Growth and IDCW options within the same scheme/plan, and specified bonus or IDCW-reinvestment units."
+  ],
+  actions: [
+    "If you are evaluating the NFO, read the current SID and KIM and compare the scheme's 40–60% equity/debt ranges, benchmark, risk factors and permitted derivative use with existing hybrid funds.",
+    "Check the AMC's NFO page and your chosen platform for the current closing date, cut-off and payment instructions before submitting an application. The KIM says date changes, if any, will be published through an AMC addendum.",
+    "For a lump-sum application, the KIM lists ₹1,000 as the minimum. For SIPs it lists ₹500 daily/weekly/monthly and ₹1,500 quarterly; confirm the platform's available registration date and frequency.",
+    "Before redeeming or switching within the first year, check whether the transaction exceeds 10% of the units allotted and whether the 1% exit load applies. Remember that the schedule also covers scheme-to-scheme switches and SIP/STP/SWP transactions, subject to the stated exceptions.",
+    "Check the scheme's actual riskometer and portfolio disclosures after the NFO. The NFO-stage High Risk label may change when actual investments are made.",
+    "Do not treat the ₹10 NFO price as evidence that units are cheap, and do not infer expected returns from the AMC's illustrative material. The scheme has no performance history."
+  ],
+  limits: "Checked 27 November 2026. The NFO is listed for 25 November–8 December 2026 and continuous sale/repurchase is scheduled to reopen on 21 December. No separate announcement date is asserted; the KIM is dated 23 October and the SID 26 October. The scheme and benchmark are labelled High Risk at the NFO stage, but the KIM says the scheme riskometer may change after actual investments. The new scheme has no performance track record and no return guarantee. No arbitrage is permitted, but specified equity derivatives may be used for permitted purposes within the SID's limits. The 1% exit load applies only to redemption/switch-out above 10% of units allotted within one year, with the stated transaction and plan/option exceptions. NFO dates can be revised by AMC addendum. No investment recommendation, expected return, fund ranking or portfolio score is asserted.",
+  additionalSources: [
+    {
+      url: "https://www.barodabnpparibasmf.in/balanced-hybrid-fund-nfo/pdf/balanced-hybrid-fund-sid.pdf",
+      label: "Baroda BNP Paribas Balanced Hybrid Fund Scheme Information Document dated 26 October 2026"
+    },
+    {
+      url: "https://www.barodabnpparibasmf.in/balanced-hybrid-fund-nfo/",
+      label: "Baroda BNP Paribas Mutual Fund official NFO page"
+    }
+  ]
+},
+{
   slug: "bajaj-finserv-business-cycle-fund-nfo-december-2026",
   title: "Bajaj Finserv Business Cycle Fund NFO closes 4 December: ₹500 minimum and Very High risk",
   summary: "The open-ended thematic equity NFO runs from 20 November to 4 December. Its SID permits 80–100% in equity selected around business cycles, uses the BSE 500 TRI as benchmark and labels the scheme Very High risk.",
