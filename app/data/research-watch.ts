@@ -20,7 +20,7 @@ export const researchWatch: WatchItem[] = [
   "publishedAt": "2026-11-27",
   "eventDate": "2026-12-11",
   "dateLabel": "NFO closes (check the issuer's cut-off time)",
-  "statusLabel": "NFO open",
+  "statusLabel": "Limited-time offer",
   "source": "https://www.axismf.com/nfo/axis-nifty-largemidcap-250-index-fund/np-dg",
   "sourceLabel": "Axis Mutual Fund: Axis Nifty LargeMidcap 250 Index Fund NFO page",
   "sourceLocation": "Axis AMC NFO page: Overview, Key facts at a glance, About the Index, NFO FAQs, riskometer disclaimer and Documents section. NSE Indices: index description, segment weights and reconstitution schedule.",
