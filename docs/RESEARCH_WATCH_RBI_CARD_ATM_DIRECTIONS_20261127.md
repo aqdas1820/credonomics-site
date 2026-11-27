@@ -25,7 +25,6 @@ Accordingly, the Research Watch item does **not** claim a new universal fee, car
 - RBI — White Label ATM Operators Directions, 2026: https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=13762
 - RBI — Card Transactions FAQ (updated 11 May 2023): https://www.rbi.org.in/scripts/FS_FAQs.aspx?Id=103&fn=9
 - RBI — ATM/White Label ATM FAQ (dated 4 July 2025): https://www.rbi.org.in/Scripts/FAQDisplay.aspx?Id=75
-- RBI — Contactless card AFA relaxation circular (4 December 2020): https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11999&Mode=0&fn=9
 
 ## Recheck of the 24 October initial batch
 
@@ -39,11 +38,7 @@ The current Research Watch records and issuer documents were re-read; no materia
 
 ## Other candidates held
 
-- **SBI Card transport/fuel fee rows:** the official webpage and downloadable MITC PDF remain inconsistent. HOLD; no consumer fee-change article.
-- **Federal Bank minimum-amount-due formula:** the September MITC PDF conflicts with current HTML/KFS. HOLD; no revised formula claim.
-- **RBI KYC amendments listed on 27 November:** exact operative clauses were not independently extracted from the official documents. HOLD.
-- **SEBI FPI commodity-derivative directions and NPCI merchant circulars:** not treated as a consumer-facing change without a verified retail impact.
-- **Mutual-fund draft filings:** draft status alone is not represented as an open NFO or final scheme offer.
+- **RBI KYC amendments listed on 27 November:** the official index lists amendments across bank categories, but the operative clauses were not independently verified from accessible full documents. HOLD; no consumer-impact claim published.
 
 ## GitHub and Vercel evidence
 
