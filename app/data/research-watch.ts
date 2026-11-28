@@ -23,7 +23,7 @@ export const researchWatch: WatchItem[] = [
   statusLabel: "Limited-time offer",
   source: "https://storage.googleapis.com/nonprod-static-assets-121to59kaawfgfi7bol/2026/11/612644cf-kim-bandhan-nifty-commodities-index-fund.pdf",
   sourceLabel: "Bandhan Mutual Fund Key Information Memorandum dated 29 October 2026",
-  sourceLocation: "KIM page 1: scheme and benchmark riskometers, NFO dates and reopening; pages 4–5: minimum purchase, SIP and exit-load terms. SID pages 4–5: minimums and 95–100% index allocation; page 26: tracking-error expectations; page 54: tracking-error and tracking-difference disclosure.",
+  sourceLocation: "KIM page 1: scheme and benchmark riskometers, NFO dates and reopening. SID pages 4–5: minimum purchase, SIP, exit-load terms and 95–100% index allocation; page 26: tracking-error expectations; page 54: tracking-error and tracking-difference disclosure.",
   audience: "Readers comparing the upcoming Bandhan Nifty Commodities Index Fund NFO with broader equity index funds. This is factual scheme-document coverage, not an investment recommendation.",
   facts: [
     "The AMC's official NFO page and its 29 October 2026 KIM/SID list the NFO period as 23 November–3 December 2026. The KIM lists 11 December 2026 as the reopening date and also says continuous subscription and redemption will reopen within five business days from allotment. No separate public announcement date was established. Checked 28 November 2026.",
@@ -32,14 +32,14 @@ export const researchWatch: WatchItem[] = [
     "The SID lists a minimum NFO lump-sum purchase of ₹1,000 and a SIP minimum of ₹100 with at least six instalments. It lists a ₹500 minimum for an STP. The stated exit load is nil.",
     "The SID says tracking error is not expected to exceed 2% per annum under normal circumstances, but may exceed that level in abnormal market conditions or around index rebalancing. After launch, tracking error is to be disclosed daily and tracking difference monthly.",
     "The KIM states that the units offered have not been approved or recommended by SEBI and that SEBI has not certified the accuracy or adequacy of the KIM. The scheme does not assure or guarantee returns.",
-    "The ₹10 NFO unit offer price is not evidence that the scheme is cheap or undervalued. A new scheme has no live performance record at launch."
+    "A new scheme has no live performance record at launch; the NFO terms do not establish future returns."
   ],
   actions: [
     "Read the current KIM and SID and check the AMC NFO page for any later addendum before relying on the 3 December closing date or the listed 11 December reopening date. The documents do not establish a universal platform cut-off time.",
     "Understand that the index is concentrated in commodity-linked businesses and that the scheme is labelled Very High Risk at the NFO stage. Do not treat it as a substitute for a diversified all-market portfolio.",
     "Check the minimum that applies to the transaction: the SID lists ₹1,000 for a lump sum, ₹100 for a SIP with at least six instalments, and ₹500 for an STP.",
     "After the scheme launches, review its actual daily TER, portfolio and tracking-error disclosures. The NFO documents do not provide a live performance history.",
-    "Do not use the ₹10 offer price as a valuation shortcut or treat the scheme's stated objective as a return promise."
+    "Do not treat the scheme's stated objective as a return promise or use the NFO terms as a valuation shortcut."
   ],
   limits: "Checked 28 November 2026. The KIM and SID are dated 29 October 2026; the NFO is listed for 23 November–3 December and the KIM lists 11 December as the reopening date, subject to the within-five-business-days-from-allotment wording. A separate announcement date was not established. Both NFO-stage riskometers are Very High Risk but may change after actual investments. The scheme has no performance history at launch, tracking error is possible, and returns are not guaranteed. The SID directs investors to the AMC's current TER disclosure for actual expenses; no current TER is inferred. The KIM says SEBI has not approved or recommended the units or certified the document. No investment recommendation or ranking change is made.",
   additionalSources: [
