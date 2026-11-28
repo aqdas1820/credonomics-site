@@ -150,3 +150,5 @@ The 24 October batch was re-read against current issuer files and official docum
 ## Safeguards
 
 No payment, authentication, customer/financial record, infrastructure, secret, paid-resource, card/fund ranking formula or reward valuation is changed. No external messages or comments are sent. No automation schedule is changed.
+
+Saved automation records were checked read-only: the Research Watch task is already disabled, and the separate Daily Research task is also already disabled (last recorded run 8 November 2026). The current Publish CredoNomics Research task remains enabled. No task was enabled, disabled, rescheduled or otherwise modified; the daily 10 AM report's pre-existing disabled state is not changed by this release.
