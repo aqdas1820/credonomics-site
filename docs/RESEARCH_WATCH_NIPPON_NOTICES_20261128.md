@@ -64,6 +64,19 @@ Primary sources:
 - Nippon India official product note: https://mf.nipponindiaim.com/FundsAndPerformance/ProductNotes/Product-Note-NipponIndia-CRISIL-IBX-SDL-June-2037-Index-Fund.pdf
 - Official Notice/Addendum register: https://mf.nipponindiaim.com/investor-service/quick-links/notice-addendum/
 
+## 4. Nippon India: fund-management responsibility changes
+
+- **Affected audience:** Holders of Nippon India Multi Asset Allocation Fund, Nippon India Silver ETF, Nippon India ETF Gold BeES and Nippon India Multi-Asset Omni FoF.
+- **Notice / announcement date:** 27 November 2026 (Notice Cum Addendum No. 91).
+- **Checked:** 28 November 2026.
+- **Effective time:** Vikram Dhawan ceased to be Key Personnel at close of business on 27 November 2026.
+- **Verified changes:** Vikram Dhawan resigned as Fund Manager - Commodities. The revised fund managers are Vinay Sharma, Saif Mukamad and Sushil Budhia (with the stated overseas-investment roles retained) for Multi Asset Allocation Fund; Saif Mukamad for Silver ETF and ETF Gold BeES; and Sushil Budhia, Shirish Guthe and Saif Mukamad for Multi-Asset Omni FoF.
+- **Limitations:** This is a manager-responsibility update, not a new investment strategy or performance statement. The notice says all other SID/KIM/SAI provisions remain unchanged. No special exit window, fee change, riskometer change or expected-return conclusion is inferred.
+
+Primary sources:
+- Notice Cum Addendum No. 91 (27 November 2026): https://mf.nipponindiaim.com/InvestorServices/Addenda/91-Resignation-of-fund-manager-and-fund-management-responsibilities.pdf
+- Official Notice/Addendum register: https://mf.nipponindiaim.com/investor-service/quick-links/notice-addendum/
+
 ## Items kept on HOLD
 
 - Mahindra Manulife MSIF Hybrid Long-Short Fund: current KIM/application form states 27 November–11 December, while the AMC product page states 26 November–10 December. No reconciled revised addendum was located; no dates or article are published.
