@@ -58,7 +58,49 @@ The September 2026 draft's ₹1,000 suspected-transaction threshold, 20-day cust
 
 ## Release validation
 
-Pending PR review, preview build, merge, production deployment and post-release public/source-link checks. This record will be completed with the exact reviewed PR head, merge commit, tests, TypeScript, production build, Vercel READY deployment, public URLs and final main SHA after those checks.
+### GitHub review and merge
+
+- Content PR: [#217 — Clarify final RBI money-mule debit-hold SOP timelines](https://github.com/aqdas1820/credonomics-site/pull/217).
+- Reviewed PR head: `d099058ffd8cdd343e2daf26310f4b07e4747681`.
+- Preview deployment: `dpl_FGhoZz3E3f6YARzCS4FNHGHtSSzC`, READY for the reviewed PR head.
+- PR #217 merged by squash; content merge commit: `859e78e4d7ee0d835d6d1e96e52997d39bb3310c`.
+- Exact pre-edit main SHA: `b1cdb87a33d109f2dd643e4c8fd72e5985b388de`.
+- Exact rollback reference: `backup/pre-rbi-money-mule-sop-detail-20261128-1423`.
+
+### Production build and deployment
+
+- Production deployment: `dpl_2rvbCPJ8NWUtfEvsfF3tTxvqCTj5`.
+- Vercel state: `READY`; target: production.
+- Deployed commit matches content merge commit: `859e78e4d7ee0d835d6d1e96e52997d39bb3310c`.
+- Production aliases assigned: `www.credonomics.in` and `credonomics.in`.
+- Existing repository prebuild and production build completed:
+  - Unit tests: 29 test files, 177 tests passed.
+  - TypeScript: `tsc --noEmit --pretty false` passed.
+  - IPO dashboard generator: 41 records.
+  - Search-index generator: 163 entries.
+  - Next.js 15.5.28 production build completed; 369/369 static pages generated.
+  - Route manifest includes `/research/watch/rbi-final-money-mule-debit-hold-sop-july-2027`, `/research/watch`, `/updates/2026-11`, `/search` and `/sitemap.xml`.
+- Non-blocking existing warnings remain: Autoprefixer mixed-support notices, a React Hook dependency warning and an edge-runtime static-generation notice. No build error was reported.
+
+### Public production verification
+
+All six production checks returned HTTP 200 after deployment:
+
+- [Updated RBI article](https://www.credonomics.in/research/watch/rbi-final-money-mule-debit-hold-sop-july-2027) — contains the seven-calendar-day customer explanation window, seven-calendar-day bank decision period, conditional day-31 removal rule, five-year record retention and explicit Small Finance Bank / Urban Co-operative Bank text limitation.
+- [Research Watch hub](https://www.credonomics.in/research/watch) — updated article listed.
+- [November 2026 bulletin](https://www.credonomics.in/updates/2026-11) — updated article listed.
+- [Homepage](https://www.credonomics.in/) — updated Research Watch record present.
+- [Search results for money-mule](https://www.credonomics.in/search?q=money-mule) — updated article route present.
+- [Sitemap](https://www.credonomics.in/sitemap.xml) — canonical article route present.
+
+The article HTML contains the exact official RBI press-release, Amendment Directions index, all six final notification page URLs and the September draft link clearly labelled as historical comparison only. The four text-readable final notification pages were independently opened and checked; the Small Finance Bank and Urban Co-operative Bank pages remain linked but their detailed bodies were not extractable, so no timelines are claimed for those two categories.
+
+### Publication scope
+
+- Only the existing data-driven RBI Research Watch record was updated; the existing slug and article route were retained.
+- The shared data record feeds the homepage, Research Watch hub, November bulletin, search index and sitemap.
+- No card/fund page was relevant; no card/fund ranking, reward valuation or investment formula was changed.
+- No duplicate article was created.
 
 ## Safeguards
 
