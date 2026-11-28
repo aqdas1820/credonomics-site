@@ -13,7 +13,7 @@ export type WatchItem = {
 export const researchWatch: WatchItem[] = [
 {
   slug: "bandhan-nifty-commodities-index-fund-nfo-december-2026",
-  title: "Bandhan Nifty Commodities Index Fund NFO closes 3 December: Very High Risk and ₹1,000 minimum",
+  title: "Bandhan Nifty Commodities Index Fund NFO closes 3 December: Very High Risk and ₹1,000 lump-sum minimum",
   summary: "The 29 October KIM lists a 23 November–3 December NFO and an 11 December reopening. The scheme tracks the Nifty Commodities Index; both scheme and benchmark are Very High Risk, and 95–100% is allocated to index securities.",
   category: "Mutual funds",
   checkedAt: "2026-11-28",
@@ -27,7 +27,7 @@ export const researchWatch: WatchItem[] = [
   audience: "Readers comparing the upcoming Bandhan Nifty Commodities Index Fund NFO with broader equity index funds. This is factual scheme-document coverage, not an investment recommendation.",
   facts: [
     "The AMC's official NFO page and its 29 October 2026 KIM/SID list the NFO period as 23 November–3 December 2026. The KIM lists 11 December 2026 as the reopening date and also says continuous subscription and redemption will reopen within five business days from allotment. No separate public announcement date was established. Checked 28 November 2026.",
-    "The open-ended index scheme seeks to replicate the Nifty Commodities Index. Bandhan's AMC page describes the index as 30 companies across commodity-linked sectors including energy, metals, mining, power, construction materials and chemicals. The SID's normal allocation range is 95–100% in index securities and 0–5% in money-market and other liquid instruments.",
+    "The open-ended index scheme seeks to replicate the Nifty Commodities Index. Bandhan's AMC page describes the index as 30 companies across commodity-linked sectors including energy, metals, mining, power, construction materials and chemicals. The SID's normal allocation range is 95–100% in index securities and 0–5% in money-market and other liquid instruments. It also permits equity derivatives for hedging and non-hedging purposes, each subject to a limit of up to 20% of net assets and the stated conditions.",
     "The KIM's NFO-stage riskometers show Very High Risk for both the scheme and its benchmark. The KIM says the label is based on an internal assessment and may change after actual investments are made.",
     "The SID lists a minimum NFO lump-sum purchase of ₹1,000 and a SIP minimum of ₹100 with at least six instalments. It lists a ₹500 minimum for an STP. The stated exit load is nil.",
     "The SID says tracking error is not expected to exceed 2% per annum under normal circumstances, but may exceed that level in abnormal market conditions or around index rebalancing. After launch, tracking error is to be disclosed daily and tracking difference monthly.",
