@@ -70,7 +70,7 @@ Primary sources:
 - **Notice / announcement date:** 27 November 2026 (Notice Cum Addendum No. 91).
 - **Checked:** 28 November 2026.
 - **Effective time:** Vikram Dhawan ceased to be Key Personnel at close of business on 27 November 2026.
-- **Verified changes:** Vikram Dhawan resigned as Fund Manager - Commodities. The revised fund managers are Vinay Sharma, Saif Mukamad and Sushil Budhia (with the stated overseas-investment roles retained) for Multi Asset Allocation Fund; Saif Mukamad for Silver ETF and ETF Gold BeES; and Sushil Budhia, Shirish Guthe and Saif Mukamad for Multi-Asset Omni FoF.
+- **Verified changes:** Vikram Dhawan resigned as Fund Manager - Commodities. The revised fund managers are Vinay Sharma, Saif Mukadam and Sushil Budhia (with the stated overseas-investment roles retained) for Multi Asset Allocation Fund; Saif Mukadam for Silver ETF and ETF Gold BeES; and Sushil Budhia, Shirish Guthe and Saif Mukadam for Multi-Asset Omni FoF.
 - **Limitations:** This is a manager-responsibility update, not a new investment strategy or performance statement. The notice says all other SID/KIM/SAI provisions remain unchanged. No special exit window, fee change, riskometer change or expected-return conclusion is inferred.
 
 Primary sources:
