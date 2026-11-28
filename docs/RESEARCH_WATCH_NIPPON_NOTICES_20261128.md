@@ -91,7 +91,61 @@ The current Research Watch records and issuer sources were re-read for IDFC Indi
 
 ## Validation and deployment
 
-Pending Vercel preview, existing unit tests, TypeScript, production build, merge, production deployment and public verification. The final evidence will be appended here after those checks. A READY deployment alone will not be treated as proof that public pages, source links, search and sitemap are visible.
+### GitHub
+
+- Exact pre-edit main SHA: `a076691b7c44ab97211deafae7303f2e5dfff0f2`.
+- Feature branch: `research-watch/nippon-mutual-fund-notices-20261128-1918`.
+- Rollback branch from the exact pre-edit SHA: `backup/pre-nippon-mutual-fund-notices-20261128-1918`.
+- Content PR [#219](https://github.com/aqdas1820/credonomics-site/pull/219) merged successfully.
+- Merge commit / current main SHA at content release: `1fcd37024f4fccf8a97ba1768d925114eb51bafa`.
+- Content PR changed only `app/data/research-watch.ts` and this release-evidence document. No navigation edit was needed because the existing navigation already links Research Watch and the November bulletin.
+
+### Vercel
+
+- Preview deployment: [`dpl_xutrcsM9zZLbUT5Yx86dTVx4zBw9`](https://vercel.com/aqdasshaikh1820-9566s-projects/credonomics-site/xutrcsM9zZLbUT5Yx86dTVx4zBw9) — **READY**, deployed preview commit `056a5c8b3e6af40dd535e53c2cf5b1f570d87fe5`.
+- Production deployment: [`dpl_9rUG6eMedJTLVEmeChWorTrwsLyX`](https://vercel.com/aqdasshaikh1820-9566s-projects/credonomics-site/9rUG6eMedJTLVEmeChWorTrwsLyX) — **READY**, deployed commit `1fcd37024f4fccf8a97ba1768d925114eb51bafa`, matching main.
+- Vercel reports both `www.credonomics.in` and `credonomics.in` aliases assigned to the production deployment.
+
+### Build checks
+
+The existing Vercel `prebuild` and production build completed:
+
+- Unit tests: **177/177 passed** across **29/29 test files**.
+- TypeScript: `tsc --noEmit --pretty false` passed.
+- IPO dashboard generator: **41** records.
+- Search-index generator: **167** CredoNomics entries (four more than the previous 163-entry build).
+- Static generation: **373/373** pages completed.
+- Next.js production build: completed; deployment reached READY.
+- Non-blocking existing warnings: Autoprefixer mixed-support values, React Hook dependency warnings, `<img>` optimization warnings, and the existing edge-runtime/static-generation notice. No build error was reported.
+
+### Public delivery — not confirmed
+
+The independent public reader did not confirm the new content despite the READY deployment and assigned aliases:
+
+- `/research/watch` loaded but still showed the prior snapshot beginning with Bandhan and quant NFOs; a search of the fetched page found no “Nippon India”.
+- `/updates/2026-11` loaded but likewise contained no “Nippon India”.
+- `/mutual-funds` and the homepage loaded but showed the prior Research Watch snapshot and no “Nippon India”.
+- All four new article routes returned **Internal Error / inaccessible** through the public reader.
+- Public `/search?q=Nippon` and `/sitemap.xml` returned **Internal Error / inaccessible**.
+- Query-string cache-bust attempts for the hub, bulletin, new article routes, search and sitemap also failed.
+- The Vercel preview URL was not accessible through the public reader.
+
+The build generated the 167-entry search index and 373 static pages, but this does not prove public delivery. The production aliases are assigned, yet the public page snapshot remains stale and the new routes/search/sitemap could not be independently fetched. **Do not describe the four articles as publicly live-confirmed.** No DNS, cache, routing, middleware, firewall, infrastructure or project configuration was changed; the delivery mismatch is left as a blocker for investigation outside this content-only release.
+
+### Source-link verification
+
+The official source documents were opened/rechecked during this run:
+
+- Nippon India Notice Cum Addendum No. 89 (25 November 2026): https://mf.nipponindiaim.com/InvestorServices/Addenda/suspension-of-subscription-in-IDCW-final.pdf
+- Nippon India Notice Cum Addendum No. 90 (27 November 2026): https://mf.nipponindiaim.com/InvestorServices/Addenda/90-Merger-Crisil-IBX-Dec-26-with-NI-9-12-index.pdf
+- Nippon India letter to unitholders (23 November 2026): https://mf.nipponindiaim.com/InvestorServices/Addenda/Letter-to-Unit-holder-Merger-Crisil-IBX-Dec-26-with-NI-9-12-index.pdf
+- Nippon India Notice Cum Addendum No. 88 (23 November 2026): https://mf.nipponindiaim.com/InvestorServices/Addenda/88-NFO-close-and-reopen-date-change.pdf
+- Nippon India Notice Cum Addendum No. 91 (27 November 2026): https://mf.nipponindiaim.com/InvestorServices/Addenda/91-Resignation-of-fund-manager-and-fund-management-responsibilities.pdf
+- NSE circular 1866/2026 (25 November 2026): https://nsearchives.nseindia.com/content/circulars/NMF77584.pdf
+- Nippon India official product note for the June 2037 SDL index fund: https://mf.nipponindiaim.com/FundsAndPerformance/ProductNotes/Product-Note-NipponIndia-CRISIL-IBX-SDL-June-2037-Index-Fund.pdf
+- Nippon India official Notice/Addendum register: https://mf.nipponindiaim.com/investor-service/quick-links/notice-addendum/
+
+The 24 October batch was re-read against current issuer files and official documents. IDFC IndiGo still lists 1 BluChip per ₹100 international spend and zero forex markup; the 15 November Amex MITC remains current with separate credit-balance refund-request and eligible due-date-adjustment clauses; HDFC Notice 1370 still has a 6 November 3 pm exit deadline and 9 November effective date with pledge/freeze/lock-in exceptions; Tata Neu HDFC's current claim PDF still states the 25 November manual-claim start, 100-NeuCoin minimum and up to three successful requests daily; SBM's consolidated MITC lists 5% (₹50 minimum/₹1,000 maximum), but the older ₹299 retrieval discrepancy and effective date remain unresolved. No blanket refund eligibility, devaluation or ranking change is inferred.
 
 ## Safeguards
 
