@@ -12,6 +12,41 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
 {
+  slug: "nippon-india-fund-manager-changes-november-2026",
+  title: "Nippon India changes fund-management responsibilities in four schemes after commodities manager resigns",
+  summary: "Notice Cum Addendum No. 91 dated 27 November records Vikram Dhawan's resignation and revised manager lists for Multi Asset Allocation Fund, Silver ETF, ETF Gold BeES and Multi-Asset Omni FoF. The notice does not announce other scheme-term changes.",
+  category: "Mutual funds",
+  checkedAt: "2026-11-28",
+  publishedAt: "2026-11-28",
+  announcementDate: "2026-11-27",
+  eventDate: "2026-11-27",
+  dateLabel: "Fund-management change effective at close of business",
+  source: "https://mf.nipponindiaim.com/InvestorServices/Addenda/91-Resignation-of-fund-manager-and-fund-management-responsibilities.pdf",
+  sourceLabel: "Nippon India Mutual Fund Notice Cum Addendum No. 91 dated 27 November 2026",
+  sourceLocation: "PDF page 1: resignation, effective time and revised fund-management responsibility tables for four schemes.",
+  audience: "Existing investors in Nippon India Multi Asset Allocation Fund, Nippon India Silver ETF, Nippon India ETF Gold BeES and Nippon India Multi-Asset Omni FoF.",
+  facts: [
+    "Nippon Life India Asset Management's Notice Cum Addendum No. 91 is dated 27 November 2026. It records the resignation of Vikram Dhawan, Fund Manager - Commodities, who ceased to be Key Personnel at close of business on 27 November 2026. Checked 28 November 2026.",
+    "The notice revises fund-management responsibilities for four schemes: Nippon India Multi Asset Allocation Fund; Nippon India Silver ETF; Nippon India ETF Gold BeES; and Nippon India Multi-Asset Omni FoF.",
+    "For Nippon India Multi Asset Allocation Fund, the revised manager list is Vinay Sharma, Saif Mukamad, Sushil Budhia, Kinjal Desai (Overseas Investment) and Amber Singhania (Assistant Fund Manager - Overseas Investments). Vikram Dhawan is removed from the list.",
+    "For Nippon India Silver ETF and Nippon India ETF Gold BeES, the revised fund manager is Saif Mukamad.",
+    "For Nippon India Multi-Asset Omni FoF, the revised fund managers are Sushil Budhia, Shirish Guthe and Saif Mukamad.",
+    "This notice records a resignation and reassignment of fund-management responsibilities. It does not announce a change to the schemes' investment objectives, asset-allocation limits, fees or exit-load terms; the addendum says all other SID/KIM/SAI provisions remain unchanged."
+  ],
+  actions: [
+    "If you hold one of the four named schemes, compare the current fund-manager list in the latest SID/KIM and the next factsheet with the revised names in Notice Cum Addendum No. 91.",
+    "Do not infer a change in investment strategy, expected returns, risk level or portfolio quality from the manager change alone. Review the scheme's current portfolio and documents separately.",
+    "The notice does not state a special exit window or transaction deadline. Do not assume one exists because of this fund-manager change."
+  ],
+  limits: "Checked 28 November 2026. Notice and announcement date: 27 November 2026. Vikram Dhawan ceased to be Key Personnel at close of business on 27 November. The revised responsibility lists apply to four named schemes only. The notice says all other SID/KIM/SAI provisions remain unchanged. No performance, portfolio-quality, riskometer, fee or exit-option inference is made.",
+  additionalSources: [
+    {
+      url: "https://mf.nipponindiaim.com/investor-service/quick-links/notice-addendum/",
+      label: "Nippon India Mutual Fund official Notice and Addendum register"
+    }
+  ]
+},
+{
   slug: "nippon-india-idcw-fresh-subscription-suspension-december-2026",
   title: "Nippon India suspends fresh IDCW-option subscriptions in 28 schemes from 2 December",
   summary: "A 25 November addendum stops fresh and additional lump sums, switch-ins, new SIP/STP registrations and SIP amount changes under the IDCW option of 28 named schemes. Existing SIPs and STPs registered before the effective date continue.",
