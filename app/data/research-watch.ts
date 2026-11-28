@@ -12,6 +12,82 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
 {
+  slug: "bandhan-nifty-commodities-index-fund-nfo-december-2026",
+  title: "Bandhan Nifty Commodities Index Fund NFO closes 3 December: Very High Risk and ₹1,000 minimum",
+  summary: "The 29 October KIM lists a 23 November–3 December NFO and an 11 December reopening. The scheme tracks the Nifty Commodities Index; both scheme and benchmark are Very High Risk, and 95–100% is allocated to index securities.",
+  category: "Mutual funds",
+  checkedAt: "2026-11-28",
+  publishedAt: "2026-11-28",
+  eventDate: "2026-12-03",
+  dateLabel: "NFO closes (check the AMC's current cut-off)",
+  statusLabel: "Limited-time offer",
+  source: "https://storage.googleapis.com/nonprod-static-assets-121to59kaawfgfi7bol/2026/11/612644cf-kim-bandhan-nifty-commodities-index-fund.pdf",
+  sourceLabel: "Bandhan Mutual Fund Key Information Memorandum dated 29 October 2026",
+  sourceLocation: "KIM page 1: scheme and benchmark riskometers, NFO dates and reopening; pages 4–5: minimum purchase, SIP and exit-load terms. SID pages 4–5: minimums and 95–100% index allocation; page 26: tracking-error expectations; page 54: tracking-error and tracking-difference disclosure.",
+  audience: "Readers comparing the upcoming Bandhan Nifty Commodities Index Fund NFO with broader equity index funds. This is factual scheme-document coverage, not an investment recommendation.",
+  facts: [
+    "The AMC's official NFO page and its 29 October 2026 KIM/SID list the NFO period as 23 November–3 December 2026. The KIM lists 11 December 2026 as the reopening date and also says continuous subscription and redemption will reopen within five business days from allotment. No separate public announcement date was established. Checked 28 November 2026.",
+    "The open-ended index scheme seeks to replicate the Nifty Commodities Index. Bandhan's AMC page describes the index as 30 companies across commodity-linked sectors including energy, metals, mining, power, construction materials and chemicals. The SID's normal allocation range is 95–100% in index securities and 0–5% in money-market and other liquid instruments.",
+    "The KIM's NFO-stage riskometers show Very High Risk for both the scheme and its benchmark. The KIM says the label is based on an internal assessment and may change after actual investments are made.",
+    "The SID lists a minimum NFO lump-sum purchase of ₹1,000 and a SIP minimum of ₹100 with at least six instalments. It lists a ₹500 minimum for an STP. The stated exit load is nil.",
+    "The SID says tracking error is not expected to exceed 2% per annum under normal circumstances, but may exceed that level in abnormal market conditions or around index rebalancing. After launch, tracking error is to be disclosed daily and tracking difference monthly.",
+    "The KIM states that the units offered have not been approved or recommended by SEBI and that SEBI has not certified the accuracy or adequacy of the KIM. The scheme does not assure or guarantee returns.",
+    "The ₹10 NFO unit offer price is not evidence that the scheme is cheap or undervalued. A new scheme has no live performance record at launch."
+  ],
+  actions: [
+    "Read the current KIM and SID and check the AMC NFO page for any later addendum before relying on the 3 December closing date or the listed 11 December reopening date. The documents do not establish a universal platform cut-off time.",
+    "Understand that the index is concentrated in commodity-linked businesses and that the scheme is labelled Very High Risk at the NFO stage. Do not treat it as a substitute for a diversified all-market portfolio.",
+    "Check the minimum that applies to the transaction: the SID lists ₹1,000 for a lump sum, ₹100 for a SIP with at least six instalments, and ₹500 for an STP.",
+    "After the scheme launches, review its actual daily TER, portfolio and tracking-error disclosures. The NFO documents do not provide a live performance history.",
+    "Do not use the ₹10 offer price as a valuation shortcut or treat the scheme's stated objective as a return promise."
+  ],
+  limits: "Checked 28 November 2026. The KIM and SID are dated 29 October 2026; the NFO is listed for 23 November–3 December and the KIM lists 11 December as the reopening date, subject to the within-five-business-days-from-allotment wording. A separate announcement date was not established. Both NFO-stage riskometers are Very High Risk but may change after actual investments. The scheme has no performance history at launch, tracking error is possible, and returns are not guaranteed. The SID directs investors to the AMC's current TER disclosure for actual expenses; no current TER is inferred. The KIM says SEBI has not approved or recommended the units or certified the document. No investment recommendation or ranking change is made.",
+  additionalSources: [
+    { url: "https://bandhanmutual.com/nfo/bandhan-nifty-commodities-index-fund/", label: "Bandhan Mutual Fund: official NFO page, sector description, 30-company index summary and riskometer" },
+    { url: "https://storage.googleapis.com/nonprod-static-assets-121to59kaawfgfi7bol/2026/11/b0fe4012-sid-bandhan-nifty-commodities-index-fund.pdf", label: "Bandhan Nifty Commodities Index Fund Scheme Information Document dated 29 October 2026" },
+    { url: "https://bandhanmutual.com/statutory-disclosures/total-expense-ratio", label: "Bandhan Mutual Fund: current daily and historical total expense ratio disclosures" }
+  ]
+},
+{
+  slug: "quant-nifty-next-50-index-fund-nfo-december-2026",
+  title: "quant Nifty Next 50 Index Fund NFO closes 7 December: Very High Risk and ₹5,000 minimum",
+  summary: "The 20 November KIM/SID lists a 25 November–7 December NFO. Both scheme and benchmark are Very High Risk; the minimum initial purchase is ₹5,000, additional purchase is ₹1,000 and the stated exit load is nil.",
+  category: "Mutual funds",
+  checkedAt: "2026-11-28",
+  publishedAt: "2026-11-28",
+  eventDate: "2026-12-07",
+  dateLabel: "NFO closes (check the AMC's current cut-off)",
+  statusLabel: "Limited-time offer",
+  source: "https://www.quantmutual.com/Admin/SIDPdf/KIM_quant_Nifty_Next_50_Index_Fund.pdf",
+  sourceLabel: "quant Mutual Fund Key Information Memorandum dated 20 November 2026",
+  sourceLocation: "KIM pages 1–2: scheme, benchmark, NFO dates and riskometers; pages 12–14: minimum purchases, exit load and expenses; page 3: tracking-error expectation. SID pages 1–2 independently match the scheme, NFO dates and risk labels.",
+  audience: "Readers comparing the quant Nifty Next 50 Index Fund NFO with other equity index funds. This is factual scheme-document coverage, not an investment recommendation.",
+  facts: [
+    "The current AMC downloads page lists the scheme's KIM and SID. Both are dated 20 November 2026 and state an NFO period of 25 November–7 December 2026. The KIM says the scheme will reopen for continuous sale and repurchase within five business days from allotment; it does not give a fixed calendar reopening date. Checked 28 November 2026.",
+    "The scheme is an open-ended passive index fund seeking to track the Nifty Next 50 Total Return Index before expenses, subject to tracking error. The KIM identifies the same index as its benchmark.",
+    "The NFO-stage riskometers show Very High Risk for both the scheme and benchmark. The KIM says this internal NFO-stage label may change after actual investments are made.",
+    "The KIM lists a minimum initial purchase of ₹5,000 and a minimum additional purchase of ₹1,000. It does not state a SIP minimum in the checked KIM, so no SIP amount is asserted here.",
+    "The KIM lists no entry load and nil exit load for both the NFO and continuous offer as at the document date. It says the AMC/Trustee may modify the exit-load structure prospectively under the SEBI Mutual Fund Regulations.",
+    "The KIM states a maximum Base Expense Ratio of up to 0.90% per annum. This is not the same as a confirmed current TER: brokerage, transaction costs and statutory levies may also apply, and the AMC says actual TER details will be available from the first NAV date.",
+    "The KIM says the AMC will endeavour to keep tracking error within 2% per annum under normal circumstances, but it may exceed that level in abnormal market conditions or during index rebalancing. Daily tracking-error and monthly tracking-difference disclosures are specified.",
+    "The scheme is new and has no performance history at launch. The KIM/SID state that SEBI has not approved or recommended the units or certified the accuracy or adequacy of the offer documents. The ₹10 NFO unit price is not a valuation signal."
+  ],
+  actions: [
+    "Check the current AMC downloads page and any later addendum before relying on the 7 December closing date. The KIM does not establish a universal platform cut-off time.",
+    "Read the Very High Risk labels and understand that an index fund can still experience substantial equity-market volatility. Passive tracking does not remove market risk or tracking error.",
+    "Check the transaction minimum: the KIM lists ₹5,000 for the initial purchase and ₹1,000 for an additional purchase. Do not assume a SIP minimum that the checked KIM does not state.",
+    "After launch, compare the actual TER, daily tracking error and monthly tracking difference with the index. Treat the 0.90% figure as the maximum Base Expense Ratio stated in the KIM, not as the actual charge.",
+    "Do not treat the ₹10 NFO unit price as evidence of cheapness or the scheme objective as a return guarantee."
+  ],
+  limits: "Checked 28 November 2026. The KIM and SID are dated 20 November 2026; the NFO is listed for 25 November–7 December. The reopening is stated as within five business days from allotment, not a fixed calendar date. No separate announcement date is asserted. Both NFO-stage riskometers are Very High Risk and may change after actual investments. The new scheme has no performance record. The KIM's up-to-0.90% figure is a maximum Base Expense Ratio, not a current TER; actual expenses can include brokerage, transaction costs and statutory levies. The KIM lists nil exit load at the date checked but permits prospective changes under the stated regulations. No SIP minimum is inferred. No investment recommendation or ranking change is made.",
+  additionalSources: [
+    { url: "https://www.quantmutual.com/downloads/kim", label: "quant Mutual Fund: current SID/KIM download index" },
+    { url: "https://quantmutual.com/Admin/SIDPdf/SID_quant_Nifty_Next_50_Index_Fund.pdf", label: "quant Nifty Next 50 Index Fund Scheme Information Document dated 20 November 2026" },
+    { url: "https://www.quantmutual.com/Admin/Pdf/quant_Nifty_Next_50_Index_Fund_-_NFO_Presentation.pdf", label: "quant Mutual Fund: NFO presentation dated November 2026" },
+    { url: "https://www.quantmutual.com/statutory-disclosures", label: "quant Mutual Fund: statutory disclosures and actual TER information" }
+  ]
+},
+{
   slug: 'rbi-final-money-mule-debit-hold-sop-july-2027',
   title: 'RBI issues final bank SOP for suspected money-mule debit holds; default start 1 July 2027',
   summary: "RBI issued six final KYC amendment directions on 27 November for banks' procedures on temporary debit holds linked to suspected money-mule activity and cyber-enabled fraud. The default commencement is 1 July 2027, although a bank may implement earlier; detailed final customer timelines are not asserted here.",
