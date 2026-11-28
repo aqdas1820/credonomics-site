@@ -28,9 +28,9 @@ export const researchWatch: WatchItem[] = [
   facts: [
     "Nippon Life India Asset Management's Notice Cum Addendum No. 91 is dated 27 November 2026. It records the resignation of Vikram Dhawan, Fund Manager - Commodities, who ceased to be Key Personnel at close of business on 27 November 2026. Checked 28 November 2026.",
     "The notice revises fund-management responsibilities for four schemes: Nippon India Multi Asset Allocation Fund; Nippon India Silver ETF; Nippon India ETF Gold BeES; and Nippon India Multi-Asset Omni FoF.",
-    "For Nippon India Multi Asset Allocation Fund, the revised manager list is Vinay Sharma, Saif Mukamad, Sushil Budhia, Kinjal Desai (Overseas Investment) and Amber Singhania (Assistant Fund Manager - Overseas Investments). Vikram Dhawan is removed from the list.",
-    "For Nippon India Silver ETF and Nippon India ETF Gold BeES, the revised fund manager is Saif Mukamad.",
-    "For Nippon India Multi-Asset Omni FoF, the revised fund managers are Sushil Budhia, Shirish Guthe and Saif Mukamad.",
+    "For Nippon India Multi Asset Allocation Fund, the revised manager list is Vinay Sharma, Saif Mukadam, Sushil Budhia, Kinjal Desai (Overseas Investment) and Amber Singhania (Assistant Fund Manager - Overseas Investments). Vikram Dhawan is removed from the list.",
+    "For Nippon India Silver ETF and Nippon India ETF Gold BeES, the revised fund manager is Saif Mukadam.",
+    "For Nippon India Multi-Asset Omni FoF, the revised fund managers are Sushil Budhia, Shirish Guthe and Saif Mukadam.",
     "This notice records a resignation and reassignment of fund-management responsibilities. It does not announce a change to the schemes' investment objectives, asset-allocation limits, fees or exit-load terms; the addendum says all other SID/KIM/SAI provisions remain unchanged."
   ],
   actions: [
