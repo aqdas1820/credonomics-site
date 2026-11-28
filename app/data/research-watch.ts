@@ -84,7 +84,7 @@ export const researchWatch: WatchItem[] = [
   limits: "Checked 28 November 2026. Board approvals: 22–23 July 2026; SEBI no-objection: 13 November; public Notice Cum Addendum No. 90: 27 November. Positive-consent and surviving-scheme exit period: 2–31 December, ending at 3:00 pm IST on 31 December. Merger effective after close of business on 31 December or next business day if needed. The merging scheme's unitholders must positively consent to continue; non-consenting units are to be redeemed at applicable NAV. The surviving scheme's holders have a separate optional no-exit-load window; no action is treated as consent. Pledged/encumbered units have additional release conditions. No individual redemption value, payment date beyond the notice's three-working-day statement, tax result or investment recommendation is inferred.",
   additionalSources: [
     {
-      url: "https://mf.nipponindiaim/InvestorServices/Addenda/Letter-to-Unit-holder-Merger-Crisil-IBX-Dec-26-with-NI-9-12-index.pdf",
+      url: "https://mf.nipponindiaim.com/InvestorServices/Addenda/Letter-to-Unit-holder-Merger-Crisil-IBX-Dec-26-with-NI-9-12-index.pdf",
       label: "Nippon India letter to unitholders dated 23 November 2026"
     },
     {
@@ -125,7 +125,7 @@ export const researchWatch: WatchItem[] = [
   limits: "Checked 28 November 2026. AMC addendum date: 23 November; NSE operational circular date: 25 November. Revised NFO close: 30 November; NSE allotment date: 3 December; AMC says reopening no later than 4 December. The 1:00 am on 1 December clear-funds deadline applies specifically to NSE MF Invest. No BSE-platform operational cut-off is asserted here. The AMC product note is dated before the extension and its original 26 November close date is superseded by Addendum No. 88. Scheme risk labels are NFO-stage labels. No return, capital protection, tax result or investment recommendation is inferred.",
   additionalSources: [
     {
-      url: "https://mf.nipponindiaim/FundsAndPerformance/ProductNotes/Product-Note-NipponIndia-CRISIL-IBX-SDL-June-2037-Index-Fund.pdf",
+      url: "https://mf.nipponindiaim.com/FundsAndPerformance/ProductNotes/Product-Note-NipponIndia-CRISIL-IBX-SDL-June-2037-Index-Fund.pdf",
       label: "Nippon India official product note: scheme objective, index maturity, risk labels, allocation and minimum application"
     },
     {
