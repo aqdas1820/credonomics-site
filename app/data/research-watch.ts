@@ -12,6 +12,168 @@ export type WatchItem = {
 /** Editorial snapshots. Future notices do not change the ranking engine before their effective dates. */
 export const researchWatch: WatchItem[] = [
 {
+  slug: "nippon-india-fund-manager-changes-november-2026",
+  title: "Nippon India changes fund-management responsibilities in four schemes after commodities manager resigns",
+  summary: "Notice Cum Addendum No. 91 dated 27 November records Vikram Dhawan's resignation and revised manager lists for Multi Asset Allocation Fund, Silver ETF, ETF Gold BeES and Multi-Asset Omni FoF. The notice does not announce other scheme-term changes.",
+  category: "Mutual funds",
+  checkedAt: "2026-11-28",
+  publishedAt: "2026-11-28",
+  announcementDate: "2026-11-27",
+  eventDate: "2026-11-27",
+  dateLabel: "Fund-management change effective at close of business",
+  source: "https://mf.nipponindiaim.com/InvestorServices/Addenda/91-Resignation-of-fund-manager-and-fund-management-responsibilities.pdf",
+  sourceLabel: "Nippon India Mutual Fund Notice Cum Addendum No. 91 dated 27 November 2026",
+  sourceLocation: "PDF page 1: resignation, effective time and revised fund-management responsibility tables for four schemes.",
+  audience: "Existing investors in Nippon India Multi Asset Allocation Fund, Nippon India Silver ETF, Nippon India ETF Gold BeES and Nippon India Multi-Asset Omni FoF.",
+  facts: [
+    "Nippon Life India Asset Management's Notice Cum Addendum No. 91 is dated 27 November 2026. It records the resignation of Vikram Dhawan, Fund Manager - Commodities, who ceased to be Key Personnel at close of business on 27 November 2026. Checked 28 November 2026.",
+    "The notice revises fund-management responsibilities for four schemes: Nippon India Multi Asset Allocation Fund; Nippon India Silver ETF; Nippon India ETF Gold BeES; and Nippon India Multi-Asset Omni FoF.",
+    "For Nippon India Multi Asset Allocation Fund, the revised manager list is Vinay Sharma, Saif Mukadam, Sushil Budhia, Kinjal Desai (Overseas Investment) and Amber Singhania (Assistant Fund Manager - Overseas Investments). Vikram Dhawan is removed from the list.",
+    "For Nippon India Silver ETF and Nippon India ETF Gold BeES, the revised fund manager is Saif Mukadam.",
+    "For Nippon India Multi-Asset Omni FoF, the revised fund managers are Sushil Budhia, Shirish Guthe and Saif Mukadam.",
+    "This notice records a resignation and reassignment of fund-management responsibilities. It does not announce a change to the schemes' investment objectives, asset-allocation limits, fees or exit-load terms; the addendum says all other SID/KIM/SAI provisions remain unchanged."
+  ],
+  actions: [
+    "If you hold one of the four named schemes, compare the current fund-manager list in the latest SID/KIM and the next factsheet with the revised names in Notice Cum Addendum No. 91.",
+    "Do not infer a change in investment strategy, expected returns, risk level or portfolio quality from the manager change alone. Review the scheme's current portfolio and documents separately.",
+    "The notice does not state a special exit window or transaction deadline. Do not assume one exists because of this fund-manager change."
+  ],
+  limits: "Checked 28 November 2026. Notice and announcement date: 27 November 2026. Vikram Dhawan ceased to be Key Personnel at close of business on 27 November. The revised responsibility lists apply to four named schemes only. The notice says all other SID/KIM/SAI provisions remain unchanged. No performance, portfolio-quality, riskometer, fee or exit-option inference is made.",
+  additionalSources: [
+    {
+      url: "https://mf.nipponindiaim.com/investor-service/quick-links/notice-addendum/",
+      label: "Nippon India Mutual Fund official Notice and Addendum register"
+    }
+  ]
+},
+{
+  slug: "nippon-india-idcw-fresh-subscription-suspension-december-2026",
+  title: "Nippon India suspends fresh IDCW-option subscriptions in 28 schemes from 2 December",
+  summary: "A 25 November addendum stops fresh and additional lump sums, switch-ins, new SIP/STP registrations and SIP amount changes under the IDCW option of 28 named schemes. Existing SIPs and STPs registered before the effective date continue.",
+  category: "Mutual funds",
+  checkedAt: "2026-11-28",
+  publishedAt: "2026-11-28",
+  announcementDate: "2026-11-25",
+  eventDate: "2026-12-02",
+  dateLabel: "Fresh IDCW-option restrictions effective",
+  statusLabel: "Subscription restrictions",
+  source: "https://mf.nipponindiaim.com/InvestorServices/Addenda/suspension-of-subscription-in-IDCW-final.pdf",
+  sourceLabel: "Nippon India Mutual Fund Notice Cum Addendum No. 89 dated 25 November 2026",
+  sourceLocation: "PDF page 1: effective date, 28-scheme list, restricted transaction types, existing SIP/STP treatment, 3 pm transaction cut-off and regulatory-contribution exception.",
+  audience: "Existing and prospective investors using the IDCW option of any of the 28 Nippon India schemes named in the notice. The restriction is option- and scheme-specific, not a closure of every Nippon India scheme.",
+  facts: [
+    "Nippon Life India Asset Management's Notice Cum Addendum No. 89 is dated 25 November 2026. It suspends fresh subscriptions under the IDCW option of the listed schemes with effect from 2 December 2026, until further notice. Checked 28 November 2026.",
+    "From 2 December, the notice says fresh or additional lump-sum investments, switch-ins, new SIP registrations, new STP registrations, and SIP amount-modification or Step-Up requests will not be accepted in the IDCW option of the listed schemes. It does not announce a blanket suspension of all transactions in every option of those schemes.",
+    "Transactions in the affected IDCW options received and time-stamped on or before 3:00 pm on 1 December 2026 are to be accepted and processed at the applicable NAV. This is the cut-off stated in the AMC notice; investors should also confirm any earlier operational cut-off imposed by their transaction platform.",
+    "SIPs and STPs registered before 2 December will continue under the respective scheme option, according to the scheme documents. The notice does not state that existing SIPs or STPs are automatically cancelled. It does not make a separate statement about existing SWPs.",
+    "The 28 schemes named are: Nippon India Arbitrage Fund; Nippon India Index Fund - Nifty 50 Plan; Nippon India Index Fund - BSE Sensex Plan; Nippon India Nifty Smallcap 250 Index Fund; Nippon India Nifty Alpha Low Volatility 30 Index Fund; Nippon India Nifty Bank Index Fund; Nippon India Nifty IT Index Fund; Nippon India Nifty 500 Equal Weight Index Fund; Nippon India Nifty 500 Momentum 50 Index Fund; Nippon India Nifty 500 Low Volatility 50 Index Fund; Nippon India Nifty 500 Quality 50 Index Fund; Nippon India BSE Sensex Next 30 Index Fund; Nippon India Nifty India Manufacturing Index Fund; Nippon India Nifty Midcap 150 Index Fund; Nippon India Nifty 50 Value 20 Index Fund; Nippon India Nifty Auto Index Fund; Nippon India Nifty Realty Index Fund; Nippon India CRISIL-IBX Financial Services 9-12 Months Debt Index Fund; Nippon India CRISIL-IBX Financial Services 3-6 Months Debt Index Fund; Nippon India Nifty AAA CPSE Bond Plus SDL - Apr 2027 Maturity 60:40 Index Fund; Nippon India CRISIL - IBX AAA Financial Services - Dec 2026 Index Fund; Nippon India CRISIL - IBX AAA Financial Services - Jan 2028 Index Fund; Nippon India Nifty SDL Plus G-Sec - Jun 2028 Maturity 70:30 Index Fund; Nippon India Nifty G-Sec Jun 2036 Maturity Index Fund; Nippon India Nifty SDL Plus G-Sec - Jun 2029 Maturity 70:30 Index Fund; Nippon India Nifty G-Sec Sep 2027 Maturity Index Fund; Nippon India Nifty G-Sec Oct 2028 Maturity Index Fund; and Nippon India Nifty Next 50 Junior BeES FOF.",
+    "The addendum exempts investments mandated by regulatory requirements, including designated-employee alignment-of-interest contributions and mandatory AMC contributions to its schemes. The exemption is not a general exception for ordinary investor transactions."
+  ],
+  actions: [
+    "Check the exact scheme, plan and IDCW option before placing a transaction. If a fresh or additional lump sum, switch-in, new SIP/STP, SIP amount modification or Step-Up is intended, review the AMC notice before 2 December and confirm the platform's processing cut-off.",
+    "If an affected IDCW-option transaction is to be submitted before the change, the AMC notice says it must be received and time-stamped by 3:00 pm on 1 December. Do not assume a platform will accept it until that time; platform cut-offs can be earlier.",
+    "Existing SIPs and STPs registered before 2 December are stated to continue. Check the current scheme statement and AMC service channel if you want to cancel or change a registration; do not assume it has stopped automatically.",
+    "Do not apply this notice to every Nippon India scheme or to every option. The addendum names 28 schemes and specifically restricts their IDCW options."
+  ],
+  limits: "Checked 28 November 2026. Announcement/addendum date: 25 November 2026. Effective date: 2 December 2026. This is a restriction on fresh transactions in the IDCW option of the 28 named schemes, not a blanket closure of all Nippon India schemes or all plan options. Existing SIPs and STPs registered before the effective date continue. No separate rule for existing SWPs is stated. Transactions time-stamped by 3:00 pm on 1 December are accepted at applicable NAV under the notice; platform cut-offs may be earlier. Regulatory-mandated investments are exempt. No redemption, refund, tax or return outcome is inferred.",
+  additionalSources: [
+    {
+      url: "https://mf.nipponindiaim.com/investor-service/quick-links/notice-addendum/",
+      label: "Nippon India Mutual Fund official Notice and Addendum register"
+    }
+  ]
+},
+{
+  slug: "nippon-india-crisil-ibx-aaa-dec-2026-index-fund-merger-december-2026",
+  title: "Nippon India merges its Dec 2026 AAA Financial Services index fund: consent or exit window ends 31 December",
+  summary: "Notice Cum Addendum No. 90 dated 27 November merges the Dec 2026 target-maturity index fund into the Financial Services 9-12 Months Debt Index Fund. Merging-scheme holders need positive consent to continue; surviving-scheme holders receive a separate no-exit-load exit window.",
+  category: "Mutual funds",
+  checkedAt: "2026-11-28",
+  publishedAt: "2026-11-28",
+  announcementDate: "2026-11-27",
+  eventDate: "2026-12-31",
+  dateLabel: "Merger effective after close; consent and exit window ends at 3 pm",
+  statusLabel: "Limited-time offer",
+  source: "https://mf.nipponindiaim.com/InvestorServices/Addenda/90-Merger-Crisil-IBX-Dec-26-with-NI-9-12-index.pdf",
+  sourceLabel: "Nippon India Mutual Fund Notice Cum Addendum No. 90 dated 27 November 2026",
+  sourceLocation: "PDF pages 1–4: merging and surviving schemes, consequences, positive-consent period, surviving-scheme exit option, effective date, systematic-plan treatment, lien/encumbrance exceptions and tax section.",
+  audience: "Existing unitholders of Nippon India CRISIL - IBX AAA Financial Services - Dec 2026 Index Fund (the merging scheme) and Nippon India CRISIL-IBX Financial Services 9-12 Months Debt Index Fund (the surviving scheme).",
+  facts: [
+    "Nippon Life India Asset Management's Notice Cum Addendum No. 90 is dated 27 November 2026. The AMC and trustee boards approved the proposal on 22 and 23 July 2026 respectively; SEBI communicated its no-objection on 13 November 2026. The merger notice is the 27 November announcement checked for this update.",
+    "The merging scheme is Nippon India CRISIL - IBX AAA Financial Services - Dec 2026 Index Fund. It is proposed to merge into Nippon India CRISIL-IBX Financial Services 9-12 Months Debt Index Fund, the surviving scheme. The notice describes this as a change in fundamental attributes. It says the surviving scheme's features will not change after the merger.",
+    "For holders of the merging scheme who want to continue in the surviving scheme, the AMC requires positive consent between 2 December and 31 December 2026, up to 3:00 pm on 31 December. Units are to be allotted in the surviving scheme at its NAV on the effective date. Only free units are considered for the merger.",
+    "If a merging-scheme holder does not submit positive consent by 3:00 pm on 31 December, the notice treats the holder as not agreeing to the merger. No action is required to receive redemption: the investment is to be redeemed at the applicable NAV on the maturity/effective date, with proceeds remitted within three working days after that date. This is a scheme-specific merger provision, not a general redemption promise.",
+    "Existing holders of the surviving scheme receive a separate 30-day exit option without exit load from 2 December through 31 December 2026, up to 3:00 pm on the final day. A surviving-scheme holder who does not redeem by the deadline is deemed to have consented to the changes and continues in that scheme.",
+    "For merging-scheme holders who positively consent and continue, existing SIP/STP/SWP registrations are stated to continue under the corresponding plan/option of the surviving scheme from the effective date. Holders who do not want future systematic transactions must apply to cancel those registrations.",
+    "The merger takes effect after close of business on 31 December 2026, or on the next business day if 31 December is a non-business day. The notice says the merging scheme's index matures on 31 December 2026.",
+    "Units that are pledged or otherwise encumbered have special restrictions. The notice says lien/pledge release is required before the relevant exit or merger processing; holders with demat units should coordinate with their depository participant and verify the required release steps with the AMC/RTA.",
+    "The addendum has a separate tax section distinguishing merger treatment from an investor-initiated redemption/switch during the exit period. Individual tax consequences depend on acquisition dates, holding periods and investor status; this article does not calculate or promise an individual's tax result."
+  ],
+  actions: [
+    "If you hold the merging scheme, read Notice Cum Addendum No. 90 and decide whether to provide positive consent to continue in the surviving scheme. The stated deadline is 3:00 pm on 31 December 2026. If you do not consent, the notice provides for redemption at the applicable NAV on the effective date.",
+    "If you hold the surviving scheme, note the separate no-exit-load window from 2 December to 31 December, up to 3:00 pm on the final day. If you take no action, the notice says you are deemed to consent to the changes.",
+    "If you have SIP, STP or SWP registrations in the merging scheme, check whether you want them to continue under the surviving scheme. The notice says continuing registrations carry over; cancel them if you do not want future transactions.",
+    "If units are pledged, lien-marked or otherwise encumbered, contact the depository participant/AMC/RTA early. The notice imposes release requirements and does not promise that encumbered units can be processed like free units.",
+    "Read the tax section of the notice and seek individual tax advice before choosing a redemption or switch. Do not assume that an investor-initiated exit has the same treatment as the scheme merger."
+  ],
+  limits: "Checked 28 November 2026. Board approvals: 22–23 July 2026; SEBI no-objection: 13 November; public Notice Cum Addendum No. 90: 27 November. Positive-consent and surviving-scheme exit period: 2–31 December, ending at 3:00 pm IST on 31 December. Merger effective after close of business on 31 December or next business day if needed. The merging scheme's unitholders must positively consent to continue; non-consenting units are to be redeemed at applicable NAV. The surviving scheme's holders have a separate optional no-exit-load window; no action is treated as consent. Pledged/encumbered units have additional release conditions. No individual redemption value, payment date beyond the notice's three-working-day statement, tax result or investment recommendation is inferred.",
+  additionalSources: [
+    {
+      url: "https://mf.nipponindiaim.com/InvestorServices/Addenda/Letter-to-Unit-holder-Merger-Crisil-IBX-Dec-26-with-NI-9-12-index.pdf",
+      label: "Nippon India letter to unitholders dated 23 November 2026"
+    },
+    {
+      url: "https://mf.nipponindiaim.com/investor-service/quick-links/notice-addendum/",
+      label: "Nippon India Mutual Fund official Notice and Addendum register"
+    }
+  ]
+},
+{
+  slug: "nippon-india-crisil-ibx-sdl-june-2037-nfo-extension-november-2026",
+  title: "Nippon India CRISIL-IBX SDL June 2037 NFO extended to 30 November; reopening by 4 December",
+  summary: "Nippon India's 23 November addendum extends the NFO close from 26 to 30 November and moves the reopening deadline to 4 December. NSE's 25 November circular separately sets the revised allotment date and NSE-platform funds deadline.",
+  category: "Mutual funds",
+  checkedAt: "2026-11-28",
+  publishedAt: "2026-11-28",
+  announcementDate: "2026-11-23",
+  eventDate: "2026-11-30",
+  dateLabel: "Revised NFO closing date",
+  statusLabel: "Limited-time offer",
+  source: "https://mf.nipponindiaim.com/InvestorServices/Addenda/88-NFO-close-and-reopen-date-change.pdf",
+  sourceLabel: "Nippon India Mutual Fund Notice Cum Addendum No. 88 dated 23 November 2026",
+  sourceLocation: "PDF page 1: revised NFO close and reopening dates. The original AMC product note supplies the scheme objective, risk labels, asset allocation, minimum application and exit load; the NSE circular supplies the NSE-platform allotment and clear-funds deadline.",
+  audience: "Readers who were checking the Nippon India CRISIL - IBX SDL - June 2037 Index Fund NFO, especially investors using the NSE MF Invest platform. This is a date correction, not an investment recommendation.",
+  facts: [
+    "Nippon India Mutual Fund Notice Cum Addendum No. 88 is dated 23 November 2026. It changes the NFO closing date from 26 November to 30 November 2026 and changes the date by which the scheme reopens for continuous sale and repurchase from 2 December to no later than 4 December. Checked 28 November 2026.",
+    "The NSE's circular dated 25 November 2026 (NSE/NMFTM/77584, circular 1866/2026) confirms the revised NFO close date of 30 November and allotment date of 3 December. For transactions on the NSE MF Invest platform, clear funds through any payment mode must be received in the designated Clearing Corporation account on or before 1:00 am on 1 December 2026.",
+    "The AMC product note describes the scheme as an open-ended target-maturity index fund tracking the CRISIL - IBX SDL Index - June 2037. The index covers State Development Loan securities maturing from 1 July 2036 to 30 June 2037 and has a target index maturity of 30 June 2037.",
+    "The AMC product note lists a Moderate riskometer for both the scheme and benchmark and a Potential Risk Class of A-III: relatively high interest-rate risk and relatively low credit risk. These are the NFO-stage labels and may change after actual investments are made.",
+    "The product note lists 95–100% in instruments representing the underlying SDL index and 0–5% in cash, cash equivalents and money-market instruments. It lists a ₹1,000 minimum NFO application and nil exit load.",
+    "The AMC product note explicitly says the scheme is neither capital protected nor a guaranteed-return product. A target maturity date, sovereign-issued SDL holdings and a Moderate riskometer do not remove market, interest-rate, liquidity or tracking-error risks."
+  ],
+  actions: [
+    "If considering this NFO, use the revised 30 November closing date in the AMC addendum, not the original 26 November date in the older product note. Confirm the live status and platform cut-off before submitting a transaction.",
+    "For transactions through NSE MF Invest, the NSE circular requires clear funds to reach the designated Clearing Corporation account by 1:00 am on 1 December. This is an NSE-platform deadline, not a universal cut-off for every distributor or platform.",
+    "Review the scheme's relatively high interest-rate-risk classification, target index maturity in June 2037, tracking-error exposure and lack of capital protection/guaranteed returns before making any decision.",
+    "Check the AMC's latest addenda and the transaction platform for any further date or operational update. Do not treat the original product-note dates as current after the 23 November addendum."
+  ],
+  limits: "Checked 28 November 2026. AMC addendum date: 23 November; NSE operational circular date: 25 November. Revised NFO close: 30 November; NSE allotment date: 3 December; AMC says reopening no later than 4 December. The 1:00 am on 1 December clear-funds deadline applies specifically to NSE MF Invest. No BSE-platform operational cut-off is asserted here. The AMC product note is dated before the extension and its original 26 November close date is superseded by Addendum No. 88. Scheme risk labels are NFO-stage labels. No return, capital protection, tax result or investment recommendation is inferred.",
+  additionalSources: [
+    {
+      url: "https://mf.nipponindiaim.com/FundsAndPerformance/ProductNotes/Product-Note-NipponIndia-CRISIL-IBX-SDL-June-2037-Index-Fund.pdf",
+      label: "Nippon India official product note: scheme objective, index maturity, risk labels, allocation and minimum application"
+    },
+    {
+      url: "https://nsearchives.nseindia.com/content/circulars/NMF77584.pdf",
+      label: "NSE circular 1866/2026 dated 25 November 2026: revised allotment date and NSE-platform funds deadline"
+    },
+    {
+      url: "https://mf.nipponindiaim.com/investor-service/quick-links/notice-addendum/",
+      label: "Nippon India Mutual Fund official Notice and Addendum register"
+    }
+  ]
+},
+{
   slug: "bandhan-nifty-commodities-index-fund-nfo-december-2026",
   title: "Bandhan Nifty Commodities Index Fund NFO closes 3 December: Very High Risk and ₹1,000 lump-sum minimum",
   summary: "The 29 October KIM lists a 23 November–3 December NFO and an 11 December reopening. The scheme tracks the Nifty Commodities Index; both scheme and benchmark are Very High Risk, with 95–100% in index-linked securities and derivatives.",
